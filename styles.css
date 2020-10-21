@@ -6,3 +6,19 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+    background: linear-gradient(#78a7c6 0%, #f7e4bf 100%);
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.hidden {
+    display: none !important;
+}
