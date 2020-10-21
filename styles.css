@@ -1,7 +1,20 @@
-font-family: 'Quicksand', sans-serif;
+/* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
-black - #000000;
+black - #000000; */
+
+// all - alignment, font
+// background - image or gradient
+// heading - font, size, color, emojis
+// section 1 -
+//   title - size, color
+//   box - size, color, border
+//     radio buttons - how?, font size, font color, font italics, spacing, padding
+//     confirm button - size, color, border, font size, font color, padding, pointer
+// section 2 -
+//   box - size, color, border
+//     meditation icon - size, padding
+//     message - font size, font color, line wrap?
