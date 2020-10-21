@@ -6,3 +6,27 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+body {
+  background: linear-gradient(#134d71, #8c9fac, #f7e4bf) no-repeat center fixed;
+  background-size: cover;
+}
+
+header {
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  font-size: 1em;
+}
+
+#bell {
+  height: 20em;
+  width: 20em;
+}
