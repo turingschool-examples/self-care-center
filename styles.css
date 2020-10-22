@@ -31,7 +31,7 @@ html {
 }
 
 input {
-  font-style:italic; 
+  font-style:italic;
   float: inherit;
   margin-right: 20px;
   margin-left: 20px;
@@ -64,12 +64,16 @@ div {
 }
 
 #message-display {
+  margin: auto;
   width: 800px;
   height: 100px;
 }
 
 #lil-human {
-  padding: 15px;
-  width: 100px;
-  height: 70px;
+  padding: 20px;
+  width: 120px;
+  height: 75px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  alignt: center;
 }

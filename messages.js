@@ -7,7 +7,7 @@ var affirmations = [
   "I have the freedom & power to create the life I desire.",
   "I choose to be kind to myself and love myself unconditionally.",
   "My possibilities are endless.",
-  "I am worthy of my dreams."
+  "I am worthy of my dreams.",
   "I am enough.",
   "I deserve to be healthy and feel good.",
   "I am full of energy and vitality and my mind is calm and peaceful.",
