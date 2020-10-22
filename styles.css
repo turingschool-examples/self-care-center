@@ -85,3 +85,8 @@ main {
 .hidden {
     display: none!important;
 }
+
+.say-display {
+    font-family: 'Quicksand', sans-serif;
+    padding-top: 15%;
+}
