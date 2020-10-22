@@ -6,16 +6,33 @@
   </head>
   <body>
     <h1>✨ Self Care Center ✨</h1>
+
     <section>
-      <h2>Which type of message?</h2>
-      <div>
-        <input type="radio">affirmation</input>
-        <input type="radio">mantra</input>
-        <button>Recieve Message</button>
-      </div>
+        <h2>Which type of message?</h2>
+
+
+      <article id="top-box">
+
+        <form id="radio-buttons">
+          <input type="radio" id="affirmation-button" name="message-choice" value="affirmation">
+          <label for="affirmation">affirmation</label>
+
+          <input type="radio" id="mantra-button" name="message-choice" value="mantra">
+          <label for="mantra" id="mantra-label">mantra</label>
+        </form>
+
+        <div>
+          <button id="get-message">Receive Message</button>
+        </div>
+      </article>
+
+
     </section>
-    <section>
-      <h1>🧘🏽‍♀️🧘🏿‍♂️</h1>
+
+    <section id="bottom-box">
+      <img src="./assets/meditate.svg" id="medIcon" alt="meditation icon"></img>
+    </section>
+    <script type="text/javascript" src="messages.js"></script>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
