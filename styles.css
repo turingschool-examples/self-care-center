@@ -45,24 +45,36 @@ h1, h2{
     margin-top: 4.5em;
 }
 form {
-    height: 8em;
+    height: auto;
     width: 45em;
     text-align: center;
     background-color: azure;
     border-radius: 15px;
     box-shadow: 0px 0px 31px -5px grey;
 }
-input {
+.affirmation, .mantra {
     margin: 1em 0.5em 1em 2em;
     font-size: 1.5em;
     transform: scale(2);
-    
+    cursor: pointer;
 }
 label {
     margin-right: 3em;
     font-size: 1.7em;
     font-style: italic;
 }
+/* ~ personalize form ~ */
+.personalize label{
+    font-size: 1.2em;
+    font-style: normal;
+    margin: 0em;
+}
+.personalize input{
+    font-size: 1em;
+    margin-right: 2em;
+}
+
+/* ~ buttons ~ */
 button {
     font-family: 'Quicksand', sans-serif;
     background-color: #134d71;
