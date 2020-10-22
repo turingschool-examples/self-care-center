@@ -1,20 +1,87 @@
 /* font-family: 'Quicksand', sans-serif;
-COLORS
+
 light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
 black - #000000; */
 
-// all - alignment, font
-// background - image or gradient
-// heading - font, size, color, emojis
-// section 1 -
-//   title - size, color
-//   box - size, color, border
-//     radio buttons - how?, font size, font color, font italics, spacing, padding
-//     confirm button - size, color, border, font size, font color, padding, pointer
-// section 2 -
-//   box - size, color, border
-//     meditation icon - size, padding
-//     message - font size, font color, line wrap?
+*{
+  font-family: 'Quicksand', sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body{
+  background: linear-gradient(#134d71, #78a7c6, #f7e4bf) fixed;
+  display: flex;
+}
+
+h1{
+  color: #ffffff;
+  text-align: center;
+  margin: 40px
+}
+
+h2{
+  text-align: center;
+  color: #ffffff;
+  margin-top: 50px
+}
+
+#top-box{
+  display: flex;
+  justify-content: space-around;
+  height: 90px;
+  width: 500px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.radio-button {
+  border: solid 2px red;
+  color: #000000;
+  /* position: relative; */
+}
+
+label {
+  position: relative;
+  padding-left: 10px;
+  /* moves button away from word */
+  margin-right: 120px;
+  /* moves buttons away from each other */
+  }
+
+#mantra-label {
+  margin: 0px;
+}
+
+#get-message{
+  color: #ffffff;
+  background: #134d71;
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#bottom-box{
+  background: #ffffff;
+  height: auto;
+  width: 75%;
+  border-radius: 10px;
+  margin: 100px
+}
+
+#icon{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 8%;
+  width: 8%;
+  padding: 30px;
+  border-radius: 10px;
+}
