@@ -10,16 +10,20 @@
 <body>
   <h1>✨Self-Care Center✨</h1>
   <h2>Which type of message?</h2>
-  <section>
-    <input type="radio" id="affirmation"><label for="affirmation">affirmation</label>
-    <input type="radio" name="mantra"><label for="mantra">mantra</label>
-    <button id="recieveMessageButton">Recieve Message</button>
-  </section>
+  <div class="forChoice">
 
-  <section>
+    <div class="affimationAlign"> <input type="radio" id="affirmation"><label for="affirmation">affirmation</label>
+    </div>
+
+    <div class="mantraAlign"> <input type="radio" name="mantra"><label for="mantra">mantra</label></div>
+
+    <button id="recieveMessageButton">Recieve Message</button>
+  </div>
+
+  <div class="forMessage">
     <img src="assets/meditate.svg" alt="meditation bell" class="">
     <p id="message" class=""> </p>
-  </section>
+  </div>
 
   <script type="text/javascript" src="main.js"></script>
 </body>
