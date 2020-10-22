@@ -1,3 +1,89 @@
+//query selectors
+
+var affirmationButton = document.querySelector('.affirmation');
+var mantraButton = document.querySelector('.mantra');
+var receiveMessageButton = document.querySelector('.receive-message');
+var clearMessageButton = document.querySelector('.clear-message');
+var messageText = document.querySelector('.message-text');
+var image = document.querySelector('.image');
+var nameInput = document.querySelector('.your-name');
+var messageInput = document.querySelector('.personal-message');
+var personalButton = document.querySelector('.personal-button')
+var personalForm = document.querySelector('.personalize');
+
+//event listeners
+
+receiveMessageButton.addEventListener('click', returnMessage);
+personalButton.addEventListener('click', showForm)
+
+
+//event handlers
+
+function randomIndex(array) {
+    return Math.floor(Math.random() * array.length);
+};
+
+function personalizeMessage() {
+    if(nameInput.value){
+        messageText.innerText = nameInput.value + ", " + messageInput.value;
+    }else{
+        messageText.innerText = messageInput.value;
+    }
+}
+
+function returnAffirmation() {
+    if(nameInput.value){
+        messageText.innerText = nameInput.value + ", " + affirmations[randomIndex(affirmations)];
+    }else{
+        messageText.innerText = affirmations[randomIndex(affirmations)]; 
+    }
+    // receiveMessageButton.classList.add('hidden');
+    // clearMessageButton.classList.remove('hidden');
+    // personalButton.classList.add('hidden'); 
+}
+function returnMantra() {
+    if(nameInput.value){
+        messageText.innerText = nameInput.value + ", " + mantras[randomIndex(mantras)];
+    }else{
+        messageText.innerText = mantras[randomIndex(mantras)];
+    }
+};
+
+
+function returnMessage() {
+    event.preventDefault();
+    image.classList.add('hidden');
+    messageText.classList.remove('hidden');
+    if (!affirmationButton.checked && !mantraButton.checked && !messageInput.value){
+        alert('Please select a message type!')
+        messageText.innerText = 'Please select "affirmation" OR "mantra"!'
+    }else if(affirmationButton.checked) {
+        returnAffirmation();
+    }else if(mantraButton.checked){
+        returnMantra();
+    }else if(messageInput){
+        personalizeMessage()
+    }
+    receiveMessageButton.classList.add('hidden');
+    clearMessageButton.classList.remove('hidden');
+    personalButton.classList.add('hidden');
+    affirmationButton.checked = false;
+    mantraButton.checked = false;
+};
+
+function showForm() {
+    event.preventDefault();
+    personalForm.classList.remove('hidden');
+    personalButton.classList.add('hidden');
+
+}
+
+//pseudo
+//when a user selects a message type, that information should be passed to a function that iterates through it's corresponding array and returns an element.
+//the value of the innerText of the H2 element (.message) in the message container should be reassigned to the value that is returned from the array
+//when the 'receive message' button is clicked the hidden class needs to be applied to the image, and the class hidden needs to be removed from the message.
+
+// arrays 
 var affirmations = ["I forgive myself and set myself free.", 
 "I believe I can be all that I want to be.", 
 "I am in the process of becoming the best version of myself.",
@@ -24,49 +110,3 @@ var mantras = ["Breathing in, I send myself love. Breathing out, I send love to 
 "The only constant is change.",
 "Onward and upward.",
 "I am the sky, the rest is weather."];
-
-//query selectors
-
-var affirmationButton = document.querySelector('.affirmation');
-var mantraButton = document.querySelector('.mantra');
-var receiveMessageButton = document.querySelector('.receive-message');
-var clearMessageButton = document.querySelector('.clear-message');
-var messageText = document.querySelector('.message-text');
-var image = document.querySelector('.image');
-
-
-//event listeners
-
-receiveMessageButton.addEventListener('click', returnMessage);
-// mantraButton.addEventListener('click', unclickAffirmation);
-
-//event handlers
-
-function randomIndex(array) {
-    return Math.floor(Math.random() * array.length);
-};
-
-function returnMessage() {
-    event.preventDefault();
-    image.classList.add('hidden');
-    messageText.classList.remove('hidden');
-    if (!affirmationButton.checked && !mantraButton.checked){
-        alert('Please select a message type!')
-        messageText.innerText = 'Please select "affirmation" OR "mantra"!'
-    }else if (affirmationButton.checked) {
-        messageText.innerText = affirmations[randomIndex(affirmations)];
-        receiveMessageButton.classList.add('hidden');
-        clearMessageButton.classList.remove('hidden');   
-    }else if (mantraButton.checked) {
-        messageText.innerText = mantras[randomIndex(mantras)];
-        receiveMessageButton.classList.add('hidden');
-        clearMessageButton.classList.remove('hidden');
-    };
-    affirmationButton.checked = false;
-    mantraButton.checked = false;
-};
-
-//pseudo
-//when a user selects a message type, that information should be passed to a function that iterates through it's corresponding array and returns an element.
-//the value of the innerText of the H2 element (.message) in the message container should be reassigned to the value that is returned from the array
-//when the 'receive message' button is clicked the hidden class needs to be applied to the image, and the class hidden needs to be removed from the message.
