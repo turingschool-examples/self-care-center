@@ -8,15 +8,17 @@
   </head>
   <header>&#x2728; Self Care Center &#x2728;</header>
   <body>
-    <section>
-      <h1>Which type of message</h1>
+    <h1>Which type of message?</h1>
+    <section class="user-container">
       <div id="button-container">
-        <input type="radio" name="message-type-button" vale="affirmation" class="radio-button">affirmation
-        <input type="radio" name="message-type-button" vale="mantra" class="radio-button">mantra
+        <input type="radio" name="message-type-button" vale="affirmation"><label>affirmation</label>
+        <input type="radio" name="message-type-button" vale="mantra" id="radio-button"><label>mantra</label>
       </div>
-      <button>Recieve Messages</button></div>
+      <div>
+        <button id="recieve-message">Recieve Message</button>
+      </div>
     </section>
-    <section>
+    <section class="show-message">
       <div>
         <img id="bell" src="./assets/meditate.svg">
       </div>
