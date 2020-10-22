@@ -8,7 +8,7 @@ black - #000000;
 */
 
 html {
-    background: linear-gradient(#134d71, #f7e4bf);
+    background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
     height: 100%;
 }
 
@@ -47,7 +47,8 @@ main {
 .submit {
     background-color: #134d71;
     color: #ffffff;
-    width: 60%;
+    font-family: 'Quicksand', sans-serif;
+    width: 40%;
     align-self: center;
     border-radius: 5px;
 }
