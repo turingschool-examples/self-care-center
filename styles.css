@@ -4,5 +4,10 @@ light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
-black - #000000;
-*/
+black - #000000; */
+
+.box {
+  width: 98.85vw;
+  height: 97.7vh;
+  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+}
