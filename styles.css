@@ -8,27 +8,39 @@ black - #000000;
 */
 * {
   font-family: 'Quicksand', sans-serif;
-  text-align: center;
 }
 
 h1,
 h2 {
   color: #ffffff;
-}
-
-#recieveMessageButton {
-  display: block;
+  text-align: center;
 }
 
 body {
   background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
-section {
+.forChoice {
   border: 1px solid #134d71;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.affirmationAlign,
+.mantraAlign {}
+
+#recieveMessageButton {
+  color: #ffffff;
+  background-color: #134d71;
+  border-radius: 5px;
+  flex-direction: column;
+}
+
+/* space-around? */
 img {
   width: 5%;
 }
