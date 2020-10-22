@@ -37,7 +37,7 @@ var image = document.querySelector('.image');
 //event listeners
 
 receiveMessageButton.addEventListener('click', returnMessage);
-mantraButton.addEventListener('click', unclickAffirmation);
+// mantraButton.addEventListener('click', unclickAffirmation);
 
 //event handlers
 
@@ -49,7 +49,10 @@ function returnMessage() {
     event.preventDefault();
     image.classList.add('hidden');
     messageText.classList.remove('hidden');
-    if (affirmationButton.checked) {
+    if (!affirmationButton.checked && !mantraButton.checked){
+        alert('Please select a message type!')
+        messageText.innerText = 'Please select "affirmation" OR "mantra"!'
+    }else if (affirmationButton.checked) {
         messageText.innerText = affirmations[randomIndex(affirmations)];   
     }else if (mantraButton.checked) {
         messageText.innerText = mantras[randomIndex(mantras)];
