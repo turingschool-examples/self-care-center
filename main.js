@@ -30,6 +30,7 @@ var mantras = ["Breathing in, I send myself love. Breathing out, I send love to 
 var affirmationButton = document.querySelector('.affirmation');
 var mantraButton = document.querySelector('.mantra');
 var receiveMessageButton = document.querySelector('.receive-message');
+var clearMessageButton = document.querySelector('.clear-message');
 var messageText = document.querySelector('.message-text');
 var image = document.querySelector('.image');
 
@@ -53,9 +54,13 @@ function returnMessage() {
         alert('Please select a message type!')
         messageText.innerText = 'Please select "affirmation" OR "mantra"!'
     }else if (affirmationButton.checked) {
-        messageText.innerText = affirmations[randomIndex(affirmations)];   
+        messageText.innerText = affirmations[randomIndex(affirmations)];
+        receiveMessageButton.classList.add('hidden');
+        clearMessageButton.classList.remove('hidden');   
     }else if (mantraButton.checked) {
         messageText.innerText = mantras[randomIndex(mantras)];
+        receiveMessageButton.classList.add('hidden');
+        clearMessageButton.classList.remove('hidden');
     };
     affirmationButton.checked = false;
     mantraButton.checked = false;
