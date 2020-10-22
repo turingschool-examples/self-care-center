@@ -103,6 +103,7 @@ button {
 
 @media screen and (max-width: 300px) {
     body{
-      background-color: tan;
+        background-size: cover;
+        background-color: tan;
     }
   }
