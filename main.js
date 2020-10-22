@@ -37,10 +37,8 @@ function returnAffirmation() {
     }else{
         messageText.innerText = affirmations[randomIndex(affirmations)]; 
     }
-    // receiveMessageButton.classList.add('hidden');
-    // clearMessageButton.classList.remove('hidden');
-    // personalButton.classList.add('hidden'); 
 }
+
 function returnMantra() {
     if(nameInput.value){
         messageText.innerText = nameInput.value + ", " + mantras[randomIndex(mantras)];
@@ -49,13 +47,14 @@ function returnMantra() {
     }
 };
 
-
 function returnMessage() {
     event.preventDefault();
     image.classList.add('hidden');
     messageText.classList.remove('hidden');
+    affirmationButton.disabled = true;
+    mantraButton.disabled = true;
     if (!affirmationButton.checked && !mantraButton.checked && !messageInput.value){
-        alert('Please select a message type!')
+        // alert('Please select a message type!')
         messageText.innerText = 'Please select "affirmation" OR "mantra"!'
     }else if(affirmationButton.checked) {
         returnAffirmation();
