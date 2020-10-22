@@ -6,3 +6,29 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+* {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: #ffffff;
+}
+
+#recieveMessageButton {
+  display: block;
+}
+
+body {
+  background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+}
+
+section {
+  border: 1px solid #134d71;
+  border-radius: 5px;
+}
+
+img {
+  width: 5%;
+}
