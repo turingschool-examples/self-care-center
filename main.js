@@ -11,11 +11,15 @@ var messageInput = document.querySelector('.personal-message');
 var personalButton = document.querySelector('.personal-button')
 var personalForm = document.querySelector('.personalize');
 
+var saveMessageButton = document.querySelector('.save-message');
+var saveAffirmationButton = document.querySelector('.mini-affirmation')
+var saveMantraButton = document.querySelector('.mini-mantra');
+
 //event listeners
 
 receiveMessageButton.addEventListener('click', returnMessage);
 personalButton.addEventListener('click', showForm)
-
+saveMessageButton.addEventListener('click', saveMessage);
 
 //event handlers
 
@@ -70,10 +74,24 @@ function returnMessage() {
     mantraButton.checked = false;
 };
 
+function saveMessage() {
+    if (!saveAffirmationButton.checked && !saveMantraButton.checked){
+        alert('Is this message an "affirmation" OR a "mantra"?')
+    }
+    else if (saveAffirmationButton.checked){
+        affirmations.push(messageInput.value);
+    }else if (saveMantraButton.checked){
+        mantras.push(messageInput.value)
+    }
+    returnMessage();
+    console.log(mantras)
+}
+
 function showForm() {
     event.preventDefault();
     personalForm.classList.remove('hidden');
     personalButton.classList.add('hidden');
+    saveMessageButton.classList.remove('hidden');
 
 }
 
