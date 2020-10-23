@@ -16,6 +16,14 @@ html {
   background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf );
 }
 
+body {
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
 .text {
   color: #ffffff;
   text-align: center;
@@ -51,29 +59,31 @@ input {
 
 .box {
   margin: auto;
+  margin-bottom: 100px;
   background-color: #ffffff;
-  padding: 20px;
+  padding: 30px;
   width: 500px;
   height: 60px;
   border-radius: 10px;
   text-align: center;
 }
 
-div {
-  padding: 125px;
-}
+
 
 #message-display {
   margin: auto;
+  padding: 10px;
   width: 800px;
-  height: 100px;
+  height: 150px;
+}
+
+#display-message {
+  font-size: 120%;
+  
 }
 
 #lil-human {
-  padding: 20px;
+  margin: 35px;
   width: 120px;
   height: 75px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  alignt: center;
 }
