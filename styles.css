@@ -5,6 +5,30 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000; */
 
+// make text scale with page width
+// make white boxes scale with page width
+// well now it sounds easy
+
+/* extra large screen */
+@media screen and (device-pixel-ratio: 0.8){
+
+}
+
+/* desktop screen */
+@media screen and (device-pixel-ratio: 1){
+
+}
+
+/* tablet screen */
+@media screen and (device-pixel-ratio: 1.5){
+
+}
+
+/* mobile screen */
+@media screen and (device-pixel-ratio: 2){
+
+}
+
 .hidden {
   display: none!important;
 }
@@ -24,20 +48,27 @@ body{
 h1{
   color: #ffffff;
   text-align: center;
-  margin: 40px
+  margin: 40px;
+  font-size: 4vw;
+}
+
+#top-half {
+  width: 60%;
+  height: 70%;
 }
 
 h2{
   text-align: center;
   color: #ffffff;
-  margin-top: 50px
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+  font-size: 3vw;
 }
 
 #top-box{
   display: flex;
   justify-content: space-around;
-  height: 90px;
-  width: 500px;
   background-color: #ffffff;
   border-radius: 10px;
   padding: 10px;
@@ -54,10 +85,15 @@ label {
   /* moves button away from word */
   margin-right: 120px;
   /* moves buttons away from each other */
+  font-size: 2vw;
   }
 
 #mantra-label {
   margin: 0px;
+}
+
+#get-message-button {
+  margin-top: 3%;
 }
 
 #get-message{
@@ -68,6 +104,7 @@ label {
   padding-right: 30px;
   padding-top: 5px;
   padding-bottom: 5px;
+  font-size: 2vw;
 }
 
 #bottom-box{
@@ -75,8 +112,9 @@ label {
   justify-content: center;
   align-items: center;
   background: #ffffff;
-  height: 100px;
-  width: 550px;
+  width: 70%;
+  height: auto;
+  max-height: 200px;
   border-radius: 10px;
   margin: 100px
 }
@@ -84,6 +122,10 @@ label {
 .message-text{
   text-align:center;
   vertical-align: middle;
+  width: 70%;
+  max-height: 100px;
+  background: #ffffff;
+  font-size: 2vw;
 }
 
 #medIcon{
@@ -91,7 +133,7 @@ label {
   margin-left: auto;
   margin-right: auto;
   height: 50%;
-  width: auto;
   padding: 30px;
   border-radius: 10px;
+  max-width: 10%;
 }
