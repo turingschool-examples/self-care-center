@@ -58,7 +58,6 @@ function returnMessage() {
     affirmationButton.disabled = true;
     mantraButton.disabled = true;
     if (!affirmationButton.checked && !mantraButton.checked && !messageInput.value){
-        // alert('Please select a message type!')
         messageText.innerText = 'Please select "affirmation" OR "mantra"!'
     }else if(affirmationButton.checked) {
         returnAffirmation();
@@ -79,13 +78,30 @@ function saveMessage() {
         alert('Is this message an "affirmation" OR a "mantra"?')
     }
     else if (saveAffirmationButton.checked){
-        affirmations.push(messageInput.value);
+        saveAffirmation();
     }else if (saveMantraButton.checked){
-        mantras.push(messageInput.value)
-    }
+            saveMantra();
+        };
+    if (savedMessages[savedMessages.length-1] !== messageInput.value){
+        savedMessages.push(messageInput.value)
+    }   
     returnMessage();
-    console.log(mantras)
+    // console.log(savedMessages)
+    // console.log(mantras)
+    // console.log(affirmations)
 }
+
+function saveMantra(){
+    if (mantras[mantras.length-1] !== messageInput.value){
+    mantras.push(messageInput.value)
+    }
+};
+
+function saveAffirmation(){
+    if (affirmations[affirmations.length-1] !== messageInput.value){
+    affirmations.push(messageInput.value)
+    }
+};
 
 function showForm() {
     event.preventDefault();
@@ -101,6 +117,8 @@ function showForm() {
 //when the 'receive message' button is clicked the hidden class needs to be applied to the image, and the class hidden needs to be removed from the message.
 
 // arrays 
+var savedMessages = [];
+
 var affirmations = ["I forgive myself and set myself free.", 
 "I believe I can be all that I want to be.", 
 "I am in the process of becoming the best version of myself.",
