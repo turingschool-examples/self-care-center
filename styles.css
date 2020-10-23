@@ -38,11 +38,20 @@ body {
   padding-bottom: 10px;
 }
 
-input {
-  font-style:italic;
-  float: inherit;
+#affirmation-button {
+  margin-left: 100px;
+}
+
+#affirmation {
+
+}
+
+#mantra-button {
   margin-right: 20px;
-  margin-left: 20px;
+}
+
+#mantra {
+
 }
 
 #get-message {
@@ -79,7 +88,7 @@ input {
 
 #display-message {
   font-size: 120%;
-  
+
 }
 
 #lil-human {
