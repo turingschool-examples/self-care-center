@@ -1,52 +1,76 @@
-* {
+
+
+body {
   display: flex;
+  align: right;
   align-items: center;
-  margin: auto;
   flex-direction: column;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
   font-family: 'Quicksand', sans-serif;
 }
 
-body {
-  width: 450px;
-  height: 800px;
-  align: right;
-  background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
-}
-
-h2 {
+h1 {
+  margin-bottom: 5%;
   background: transparent;
   color: #ffffff;
 }
 
-h4 {
+h2 {
+  margin-bottom: 1%;
   background: transparent;
   color: #ffffff;
 }
 
 section {
-  background: white;
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
   border-radius: 7px;
+  font-style: italic;
 }
 
 button {
+  display: table-cell;
+  height: 30%;
+  width: 40%;
   background: #134d71;
   border-radius: 5px;
   color: #ffffff;
 }
 
-p {
-  background: #ffffff;
-}
-
-.input {
-  height: 13%;
-  width: 40%;
+.message-selection {
+  display: table;
+  justify-content: center;
+  height: 10%;
+  width: 30%;
+  margin: 0%;
+  text-align: center;
 }
 
 .display {
-  align-self: center;
+  display: flex;
+  align-items: center;
+  margin: 5%;
   height: 20%;
-  width: 100%;
+  width: 50%;
+}
+
+.radio-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-style: italic;
+}
+
+.meditation-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+  width: 80%;
 }
 
 
