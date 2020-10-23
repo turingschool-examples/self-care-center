@@ -28,56 +28,56 @@ body {
   color: #ffffff;
   text-align: center;
   margin: auto;
-  padding-top: 40px;
+  padding-top: 50px;
   font-size: 200%;
 }
 
 #prompt {
-  font-size: 120%;
+  font-size: 140%;
   padding-top: 100px;
   padding-bottom: 10px;
 }
 
 #affirmation-button {
-  margin-left: 100px;
+  margin-right: 10px;
 }
 
 #affirmation {
-
+  font-style: italic;
+  margin-right: 150px;
+  font-size: 120%
 }
 
 #mantra-button {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 #mantra {
-
+  font-style: italic;
+  font-size: 120%
 }
 
 #get-message {
   background-color: #134d71;
-  opacity: .88;
   color: #ffffff;
-  font-size: 100%;
+  font-size: 120%;
   border-radius: 4px;
-  margin-top: 25px;
+  margin-top: 15px;
   margin-bottom: 15px;
-  width: 175px;
-  height: 25px;
+  width: 200px;
+  height: 30px;
 }
 
 .box {
   margin: auto;
   margin-bottom: 100px;
   background-color: #ffffff;
-  padding: 30px;
-  width: 500px;
+  padding: 20px;
+  width: 525px;
   height: 60px;
   border-radius: 10px;
   text-align: center;
 }
-
-
 
 #message-display {
   margin: auto;
@@ -93,7 +93,6 @@ p  {
   align: center;
   padding: 40px;
 }
-
 
 #lil-human {
   margin: 35px;
