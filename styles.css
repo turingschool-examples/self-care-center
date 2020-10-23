@@ -86,10 +86,14 @@ body {
   height: 150px;
 }
 
-#display-message {
-  font-size: 120%;
-
+p  {
+  margin: auto;
+  font-style: normal;
+  font-size: 30px;
+  align: center;
+  padding: 40px;
 }
+
 
 #lil-human {
   margin: 35px;
