@@ -15,7 +15,8 @@ body {
 }
 body {
     font-family: 'Quicksand', sans-serif;
-    background: linear-gradient(#134d71 40%, #f7e4bf 100%);
+    background: rgb(19,77,113);
+    background: linear-gradient(rgba(19,77,113,1) 0%, rgba(120,167,198,1) 60%, rgba(247,228,191,1) 100%);
     background-size: 100%, 100vh;
     background-repeat: no-repeat;
     background-position: right;
@@ -114,10 +115,6 @@ button {
 }
 
 @media screen and (max-width: 600px) {
-    body{
-        /* background-size: cover; */
-        background: #134d71;
-    }
     h1{
         font-size: 2rem;
     }
@@ -128,7 +125,6 @@ button {
         margin: 1em 0em 1em 1em;
         font-size: 1em;
         transform: scale(1);
-        cursor: pointer;
     }
     label {
         font-size: 1em;
