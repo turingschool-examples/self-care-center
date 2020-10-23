@@ -4,7 +4,7 @@ var mantraButton = document.querySelector("#mantra-button")
 var getMessageButton = document.querySelector("#get-message")
 
 var meditateIcon = document.querySelector("#medIcon")
-var bottomBox = document.querySelector("#bottom-box")
+var bottomBox = document.querySelector("#bottom-text")
 
 getMessageButton.addEventListener("click", getMessageType)
 
