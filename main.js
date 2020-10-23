@@ -1,9 +1,10 @@
-var selectMantra = document.querySelector("#mantra");
-var selectAffirmation = document.querySelector("#affirmation");
+var selectMantra = document.querySelector("#mantra-button");
+var selectAffirmation = document.querySelector("#affirmation-button");
 var submitButton = document.querySelector("#get-message");
 var messageDisplay = document.querySelector('#message-display');
 
 submitButton.addEventListener('click', displayMessage);
+
 
 
 function getRandomIndex(array) {
@@ -21,10 +22,10 @@ function chooseAffirmation() {
 };
 
 function displayMessage() {
-  if(selectMantra.value = "mantra"){
-    chooseMantra();
+  event.preventDefault();
+  if(selectMantra.checked === true){
+    return chooseMantra();
+  } else {
+    return chooseAffirmation();
   }
-  if(selectAffirmation.value = "affirmation") {
-    chooseAffirmation();
-  } //Messages are displaying, but not staying toggle/hidden image. And research  
 };
