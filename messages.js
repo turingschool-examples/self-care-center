@@ -17,3 +17,11 @@ var mantraText = [
   "Tell the truth and love everyone.",
   "I am free from sadness."
 ]
+
+var userAffText = [
+
+]
+
+var userManText = [
+
+]

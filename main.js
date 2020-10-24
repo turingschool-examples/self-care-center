@@ -2,12 +2,38 @@ var affirmationRadioButton = document.querySelector("#affirmation-button")
 var mantraRadioButton = document.querySelector("#mantra-button")
 var getMessageButton = document.querySelector("#get-message")
 var clearMessageButton = document.querySelector("#clear-message")
+var openFormButton = document.querySelector("#open-form")
+var closeFormButton = document.querySelector("#close-form")
+var userAffirmationRadioButton = document.querySelector("#user-affirmation-button")
+var userMantraRadioButton = document.querySelector("#user-mantra-button")
+var submitUserMessageButton = document.querySelector("#submit-form")
+var cancelFormButton = document.querySelector("cancel-form")
 
 var meditateIcon = document.querySelector("#medIcon")
 var bottomBoxContent = document.querySelector("#bottom-box")
 
 getMessageButton.addEventListener("click", getMessageType)
 clearMessageButton.addEventListener("click", resetForm)
+openFormButton.addEventListener("click", openUserMessageForm)
+// closeFormButton.addEventListener("click", closeUserMessageForm)
+// submitUserMessageButton.addEventListener("click", submitUserMessage)
+// cancelFormButton.addEventListener("click", closeUserMessageForm)
+
+function openUserMessageForm() {
+  document.querySelector("#user-message-form").classList.remove("hidden")
+  // remove .hidden from #user-message-form
+  // hide top-half and bottom-half
+}
+
+function submitUserMessage() {
+  // close form
+  // grab textbox input
+  // .push to user array
+}
+
+function closeUserMessageForm() {
+  // hide form (use for close and cancel buttons)
+}
 
 function resetForm(messageTypeForm) {
   var messageTypeForm = document.querySelector("#message-type")

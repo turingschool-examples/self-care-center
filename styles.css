@@ -169,6 +169,124 @@ h2{
   max-width: 15%;
 }
 
+#pop-up{
+  display: flex;
+  justify-content: center;
+}
+
+#open-form{
+  color: #ffffff;
+  background: #134d71;
+  border: solid 2px #134d71;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 1.8vw;
+  margin-top: 5%;
+}
+
+#open-form:hover {
+  color: #000000;
+  background: #f7e4bf;
+  border: solid 2px #78a7c6;
+}
+
+#open-form:focus {
+  outline: none;
+}
+
+#user-message-form {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container{
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  margin-top: 5%
+}
+
+#form-h2{
+  color: #000000;
+  font-size: 3vw;
+  margin-top: 10%;
+}
+
+#user-input-radio-buttons {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 5%
+}
+
+#user-message-input {
+  margin-top: 3%;
+  width: 75%;
+  padding: 2%;
+}
+
+#user-message-input:focus {
+  outline: none;
+}
+
+#user-form-buttons {
+  margin-bottom: 10%;
+}
+
+#submit-form {
+  color: #ffffff;
+  background: #134d71;
+  border: solid 2px #134d71;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 1.8vw;
+  margin-top: 5%;
+}
+
+#submit-form:hover {
+  color: #000000;
+  background: #f7e4bf;
+  border: solid 2px #78a7c6;
+}
+
+#submit-form:focus {
+  outline: none;
+}
+
+#cancel-form {
+  color: #ffffff;
+  background: #134d71;
+  border: solid 2px #134d71;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 1.8vw;
+  margin-top: 5%;
+}
+
+#cancel-form:hover {
+  color: #000000;
+  background: #f7e4bf;
+  border: solid 2px #78a7c6;
+}
+
+#cancel-form:focus {
+  outline: none;
+}
+
 /* mobile screen */
 @media only screen and (max-width: 600px){
   h1 {
@@ -232,13 +350,13 @@ h2{
     margin: 5%;
   }
   #bottom-half {
-    margin-top: 10%;
+    margin-top: 3%;
   }
   #top-box{
     margin-top: 10%;
   }
   #top-half{
-    margin-top: 10%;
+    margin-top: 1%;
   }
   #affirmation-button{
     width: 15px;
