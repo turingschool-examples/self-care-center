@@ -27,3 +27,20 @@ var affirmations = ["I forgive myself and set myself free.",
 "Every day I am getting healthier and stronger.",
 "I honor my body by trusting the signals that it sends me.",
 "I manifest perfect health by making smart choices."]
+
+
+var messageToBeViewed = undefined
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+function getRandomMantra() {
+  var randomMantra = mantras[getRandomIndex(mantras)];
+  messageToBeViewed = randomMantra;
+}
+
+function getRandomAffirmation() {
+  var randomAffirmation = affirmations[getRandomIndex(affirmations)];
+  messageToBeViewed = randomAffirmation;
+}
