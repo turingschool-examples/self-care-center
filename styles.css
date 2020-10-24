@@ -1,24 +1,80 @@
-/* font-family: 'Quicksand', sans-serif;
+/*
 COLORS
 light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
 black - #000000; */
-
+* {
+  font-family: 'Quicksand', sans-serif;
+  margin: auto;
+  text-align: center;
+}
 
 body {
-  background: navy blue;
+    background: linear-gradient(#134d71, #78a7c6, #f7e4bf) no-repeat;
+}
+
+h1 {
+  color: #ffffff;
+  margin-top: 100px;
+}
+
+h3 {
+  margin-top: 100px;
+  margin-bottom: 10px;
+  color: #ffffff
+}
+
+.message-selection {
+  background-color: #ffffff;
+  height: 60%;
+  width: 40%;
+  border-radius: 5px;
+  margin-left: 30%
 }
 
 button {
-  background: navy blue;
-  border: none;
-  border-radius: 10px;
-  color: pink;
+  background-color: #134d71;
+  color: #ffffff;
+  border-radius: 3px;
+  border: #134d71;
+  width: 180px;
+  height: 25px;
+  margin-top:10px;
+  margin-bottom: 10px;
 }
 
-button: hover {
-  background: white;
-  text: navy blue;
+button:hover {
+  background-color: #78a7c6;
+  border-radius: 5px;
+  border: #134d71;
+  cursor: pointer;
 }
+
+.receive-message: hover {
+  background: #ffffff;
+  text: #134d71;
+}
+.generated-message {
+  background-color: #ffffff;
+  height: 30%;
+  width: 60%;
+  margin-top: 150px;
+  margin-bottom: 300px;
+  margin-left: 20%;
+  border-radius: 5px;
+}
+
+#choice {
+
+}
+img {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Can I use flexbox instead of using the margins?
+Is there a better way to make the background go the full length of the page instead of at the end of generate-message?
+Couldn't get button hover status to be white background w/ dark blue border for some odd reason..
+How do I add space inbetween two radio buttons without adding space between the button and the word? other than &nbsp;&nbsp;

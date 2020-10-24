@@ -7,21 +7,27 @@
 </head>
 <body>
   <header>
-    <h1>✨Self Care Center✨</h1>
+    <h1>✨<b>Self Care Center</b>✨</h1>
   </header>
-  <section class="message-selection">
-    <h2>Which type of message?</h1>
-    <input type="radio" id="affirmation" value="affirmation">
-    <label for="affirmation">affirmation</label><br>
-    <input type="radio" id="mantra" value="mantra">
-    <label for="mantra">mantra</label><br>
-    <button class="receive-message">Receive Message</button>
-  </section>
-  <!-- <section class="generated-message"
-    <img src="assets/meditate.svg" alt="meditation icon">
+    <h3>Which type of message?</h2>
+      <form class="message-selection">
+        <input type="radio" id="choice" value="affirmation" checked><i>affirmation </i>
+        <input type="radio" id="choice" value="mantra"><i>mantra</i><br>
+        <button class="receive-message">Receive Message</button>
+      </form>
+  <section class="generated-message">
+    <img src="assets/meditate.svg" alt="meditation icon" width=10% height=10%/>
     <p class="generated-message-text"></p>
-  </section> -->
-
+  </section>
   <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
+
+<!-- <form action="login" method="POST">
+  <fieldset>
+    <legend>Login Form:</legend>
+    Username: <input type="text" name="user_name">
+    Password: <input type="password" name="user_password">
+    <input type="submit" value="Login">
+  </fieldset>
+</form> -->
