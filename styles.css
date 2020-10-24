@@ -73,28 +73,51 @@ h2{
   position: relative;
   margin-right: 20%;
   font-size: 2vw;
+  font-style: italic;
 }
 
 #mantra-label {
   position: relative;
   font-size: 2vw;
   margin: 0%;
+  font-style: italic;
 }
 
 #get-message-button {
   align-self: center;
-  margin-top: 3%;
 }
 
 #get-message{
   color: #ffffff;
   background: #134d71;
+  border: solid 2px #134d71;
   border-radius: 5px;
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 2vw;
+}
+
+#get-message:hover {
+  color: #000000;
+  background: #f7e4bf;
+  border: solid 2px #78a7c6;
+  border-radius: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 2vw;
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#message-type {
+  margin-bottom: 3%
 }
 
 #bottom-half {
@@ -123,7 +146,7 @@ h2{
   width: 70%;
   max-height: 100px;
   background: #ffffff;
-  font-size: 2.5vw;
+  font-size: 2vw;
 }
 
 .clear-message-text{
@@ -135,11 +158,34 @@ h2{
   font-size: 2vw;
 }
 
+#reset-button {
+  color: #ffffff;
+  background: #134d71;
+  border: solid 2px #134d71;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 1.5vw;
+}
+
+#reset-button:hover {
+  color: #000000;
+  background: #f7e4bf;
+  border: solid 2px #78a7c6;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 1.5vw;
+}
+
 #medIcon{
   display: block;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
   max-width: 15%;
-  /* max-height: 100px; */
 }
