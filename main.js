@@ -43,7 +43,7 @@ function getRandomIndex(arrayName) {
 }
 
 function selectMessage() {
-  if(document.getElementById("affirmation").checked){
+  if(document.getElementById('affirmation').checked){
     return affirmations[getRandomIndex(affirmations)]
   } else {
     return mantras[getRandomIndex(mantras)]
@@ -51,5 +51,5 @@ function selectMessage() {
 }
 
 function displayMessage() {
-  messageDisplay.innerHTML = `<p>${selectMessage()}</p>`
+  messageDisplay.innerHTML = `<p class="message">${selectMessage()}</p>`
 }
