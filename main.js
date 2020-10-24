@@ -15,7 +15,6 @@ var bottomBoxContent = document.querySelector("#bottom-box")
 getMessageButton.addEventListener("click", getMessageType)
 clearMessageButton.addEventListener("click", resetForm)
 openFormButton.addEventListener("click", openUserMessageForm)
-// closeFormButton.addEventListener("click", closeUserMessageForm)
 submitUserMessageButton.addEventListener("click", submitUserMessage)
 cancelFormButton.addEventListener("click", closeUserMessageForm)
 
@@ -35,13 +34,16 @@ function submitUserMessage() {
     userManText.push(userMessage)
   } else {
     alert("Please choose a message type.")
+    return
   }
   if (!userMessage) {
     alert("Please enter message text.")
-  } // make it not close the form after these alerts
+    return
+  }
   document.querySelector("#user-message-form").classList.add("hidden")
   document.querySelector("#top-half").classList.remove("hidden")
   document.querySelector("#bottom-half").classList.remove("hidden")
+  displayMessage(userMessage)
 }
 
 function closeUserMessageForm() {
@@ -66,9 +68,9 @@ function getMessageType() {
   var isMantraChecked = document.querySelector("#mantra-button").checked;
   var isAffirmChecked = document.querySelector("#affirmation-button").checked;
   if (isAffirmChecked) {
-    var messageText = getRandom(affText)
+    var messageText = getRandom(affText.concat(userAffText))
   } else if (isMantraChecked) {
-    var messageText = getRandom(mantraText)
+    var messageText = getRandom(mantraText.concat(userManText))
   }
   if (!isMantraChecked && !isAffirmChecked) {
     alert("Please choose a message type.")
