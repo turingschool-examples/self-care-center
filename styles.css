@@ -51,13 +51,15 @@ input {
 }
 
 .message-display {
+  color: #000000;
   margin-top: 80px;
+  height: 120px;
   width: 700px;
 }
 
 .logo{
-  max-height: 8%;
-  max-width: 8%;
+  max-height: 45%;
+  max-width: 45%;
   padding: 30px;
 }
 

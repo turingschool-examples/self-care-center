@@ -1,5 +1,7 @@
 var recieveMessageButton = document.querySelector('button')
 
+var messageDisplay = document.querySelector('.message-display')
+
 var affirmations = [
 'I forgive myself and set myself free.',
 'I believe I can be all that I want to be.',
@@ -34,18 +36,20 @@ var mantras = [
 'I am the sky, the rest is weather.'
 ]
 
-recieveMessageButton.addEventHandler('click', function() {
-
-})
+recieveMessageButton.addEventListener('click', displayMessage)
 
 function getRandomIndex(arrayName) {
-  return return Math.floor(Math.random() * arrayName.length)
+  return Math.floor(Math.random() * arrayName.length)
 }
 
 function selectMessage() {
-
+  if(document.getElementById("affirmation").checked){
+    return affirmations[getRandomIndex(affirmations)]
+  } else {
+    return mantras[getRandomIndex(mantras)]
+  }
 }
 
 function displayMessage() {
-  
+  messageDisplay.innerHTML = `<p>${selectMessage()}</p>`
 }
