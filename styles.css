@@ -5,6 +5,18 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000; */
 
+/* desktop screen */
+@media screen and (device-pixel-ratio: 1){
+}
+
+/* tablet screen */
+@media screen and (device-pixel-ratio: 1.5){
+}
+
+/* mobile screen */
+@media screen and (device-pixel-ratio: 2){
+}
+
 .hidden {
   display: none!important;
 }
@@ -24,74 +36,156 @@ body{
 h1{
   color: #ffffff;
   text-align: center;
-  margin: 40px
+  margin: 3%;
+  font-size: 4vw;
+}
+
+#top-half {
+  width: 60%;
+  height: 70%;
 }
 
 h2{
   text-align: center;
   color: #ffffff;
-  margin-top: 50px
+  /* margin-top: 5%; */
+  margin-right: 5%;
+  margin-left: 5%;
+  font-size: 3vw;
 }
 
 #top-box{
   display: flex;
   justify-content: space-around;
-  height: 90px;
-  width: 500px;
+  align-items: stretch;
   background-color: #ffffff;
   border-radius: 10px;
-  padding: 10px;
+  padding: 5%;
 }
 
-.radio-button {
-  border: solid 2px red;
-  color: #000000;
+#radio-buttons {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
-label {
+#affirmation-label {
   position: relative;
-  padding-left: 10px;
-  /* moves button away from word */
-  margin-right: 120px;
-  /* moves buttons away from each other */
-  }
+  margin-right: 20%;
+  font-size: 2vw;
+  font-style: italic;
+}
 
 #mantra-label {
-  margin: 0px;
+  position: relative;
+  font-size: 2vw;
+  margin: 0%;
+  font-style: italic;
+}
+
+#get-message-button {
+  align-self: center;
 }
 
 #get-message{
   color: #ffffff;
   background: #134d71;
+  border: solid 2px #134d71;
   border-radius: 5px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
   padding-top: 5px;
   padding-bottom: 5px;
+  font-size: 2vw;
+}
+
+#get-message:hover {
+  color: #000000;
+  background: #f7e4bf;
+  border: solid 2px #78a7c6;
+  border-radius: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 2vw;
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#message-type {
+  margin-bottom: 3%
+}
+
+#bottom-half {
+  display: flex;
+  width: 70%;
+  min-height: 100px;
+  justify-content: space-around;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: .1%;
+  margin-top: 3%;
 }
 
 #bottom-box{
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #ffffff;
-  height: 100px;
-  width: 550px;
-  border-radius: 10px;
-  margin: 100px
+  width: 70%;
+  height: auto;
+  max-height: 200px;
 }
 
 .message-text{
   text-align:center;
   vertical-align: middle;
+  width: 70%;
+  max-height: 100px;
+  background: #ffffff;
+  font-size: 2vw;
+}
+
+.clear-message-text{
+  text-align:center;
+  vertical-align: middle;
+  width: 70%;
+  max-height: 100px;
+  background: #ffffff;
+  font-size: 2vw;
+}
+
+#reset-button {
+  color: #ffffff;
+  background: #134d71;
+  border: solid 2px #134d71;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 1.5vw;
+}
+
+#reset-button:hover {
+  color: #000000;
+  background: #f7e4bf;
+  border: solid 2px #78a7c6;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 1.5vw;
 }
 
 #medIcon{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 50%;
-  width: auto;
-  padding: 30px;
   border-radius: 10px;
+  max-width: 15%;
 }
