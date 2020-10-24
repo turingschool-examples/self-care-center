@@ -16,6 +16,9 @@ function resetForm(messageTypeForm) {
   bottomBoxContent.innerHTML = `<img src="./assets/meditate.svg" id="medIcon" alt="meditation icon"></img>`
   clearMessageButton.classList.add("hidden")
   getMessageButton.classList.remove("disabled")
+  getMessageButton.disabled = false
+  affirmationRadioButton.disabled = false
+  mantraRadioButton.disabled = false
 }
 
 function getMessageType() {
@@ -45,4 +48,7 @@ function displayMessage(showThisMessage) {
   clearMessageButton.innerHTML = `<button type="button" id="reset-button">Reset</button>`
   clearMessageButton.classList.remove("hidden")
   getMessageButton.classList.add("disabled")
+  getMessageButton.disabled = true
+  mantraRadioButton.disabled = true
+  affirmationRadioButton.disabled = true
 }
