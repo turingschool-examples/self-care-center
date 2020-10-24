@@ -84,19 +84,28 @@ main {
     padding-top: 10%;
 }
 
+.clear {
+    width: 20%;
+    align-self: center;
+    background-color: #134d71;
+    color: #ffffff;
+    border-radius: 70%;
+}
+
 .buddha {
     width: 10em;
     height: 10em;
     align-self: center;
     padding: 10px;
-    animation: slide 3s ease-in-out 2 alternate none;
+    /* animation: slide 3s ease-in-out 2 alternate none; */
 }
 
-@keyframes slide {
+
+/* @keyframes slide {
     frome {
         transform: translateX(0%);
     }
     to {
         transform: translateX(100%);
     }
-}
+} */

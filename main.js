@@ -36,10 +36,13 @@ var messagePad = document.querySelector('.message-pad');
 var radios = document.getElementsByName('care-choice');
 var sayDisplay = document.querySelector('.say-display')
 var buddha = document.querySelector('.buddha')
+var clearOut = document.querySelector('.clear')
 
-var buddhaBounce = new AnimationEvent(animationstart, { animationName: slide })
+// var buddhaBounce = new AnimationEvent(animationstart, { animationName: slide })
 
 typeBox.addEventListener('submit', insertSaying);
+
+clearOut.addEventListener('click', clearBox)
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
@@ -59,7 +62,10 @@ function insertSaying() {
     }
 }
 
-
+function clearBox() {
+    sayDisplay.innerText = '';
+    buddha.style.display = 'initial';
+}
 
 
 // console.log(radios[i].value);
