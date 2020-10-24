@@ -2,7 +2,6 @@
 
 body {
   display: flex;
-  align: right;
   align-items: center;
   flex-direction: column;
   margin: auto;
@@ -39,6 +38,7 @@ button {
   background: #134d71;
   border-radius: 5px;
   color: #ffffff;
+  margin: auto;
 }
 
 .message-selection {
@@ -59,10 +59,16 @@ button {
 }
 
 .radio-buttons {
+  /*Need text closer to radio button */
   display: flex;
-  align-items: center;
   justify-content: space-around;
   font-style: italic;
+}
+
+.affirmation
+.mantra {
+  display: flex;
+  justify-content: center;
 }
 
 .meditation-image {
