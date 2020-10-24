@@ -11,11 +11,15 @@ var messageInput = document.querySelector('.personal-message');
 var personalButton = document.querySelector('.personal-button')
 var personalForm = document.querySelector('.personalize');
 
+var saveMessageButton = document.querySelector('.save-message');
+var saveAffirmationButton = document.querySelector('.mini-affirmation')
+var saveMantraButton = document.querySelector('.mini-mantra');
+
 //event listeners
 
 receiveMessageButton.addEventListener('click', returnMessage);
 personalButton.addEventListener('click', showForm)
-
+saveMessageButton.addEventListener('click', saveMessage);
 
 //event handlers
 
@@ -54,7 +58,6 @@ function returnMessage() {
     affirmationButton.disabled = true;
     mantraButton.disabled = true;
     if (!affirmationButton.checked && !mantraButton.checked && !messageInput.value){
-        // alert('Please select a message type!')
         messageText.innerText = 'Please select "affirmation" OR "mantra"!'
     }else if(affirmationButton.checked) {
         returnAffirmation();
@@ -70,10 +73,41 @@ function returnMessage() {
     mantraButton.checked = false;
 };
 
+function saveMessage() {
+    if (!saveAffirmationButton.checked && !saveMantraButton.checked){
+        alert('Is this message an "affirmation" OR a "mantra"?')
+    }
+    else if (saveAffirmationButton.checked){
+        saveAffirmation();
+    }else if (saveMantraButton.checked){
+            saveMantra();
+        };
+    if (savedMessages[savedMessages.length-1] !== messageInput.value){
+        savedMessages.push(messageInput.value)
+    }   
+    returnMessage();
+    // console.log(savedMessages)
+    // console.log(mantras)
+    // console.log(affirmations)
+}
+
+function saveMantra(){
+    if (mantras[mantras.length-1] !== messageInput.value){
+    mantras.push(messageInput.value)
+    }
+};
+
+function saveAffirmation(){
+    if (affirmations[affirmations.length-1] !== messageInput.value){
+    affirmations.push(messageInput.value)
+    }
+};
+
 function showForm() {
     event.preventDefault();
     personalForm.classList.remove('hidden');
     personalButton.classList.add('hidden');
+    saveMessageButton.classList.remove('hidden');
 
 }
 
@@ -83,6 +117,8 @@ function showForm() {
 //when the 'receive message' button is clicked the hidden class needs to be applied to the image, and the class hidden needs to be removed from the message.
 
 // arrays 
+var savedMessages = [];
+
 var affirmations = ["I forgive myself and set myself free.", 
 "I believe I can be all that I want to be.", 
 "I am in the process of becoming the best version of myself.",
