@@ -6,11 +6,19 @@ html {
   text-align: center;
 }
 
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
 header {
   padding: 20px;
 }
 
 section {
+  justify-content: center;
   margin-top: 20px;
   padding: 20px;
 }
@@ -23,7 +31,6 @@ section {
 article {
   background: #ffffff;
   border-radius: 8px;
-  display: block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -51,14 +58,23 @@ input {
 }
 
 .message-display {
+  align-items: center;
+  display: flex;
+  color: #000000;
+  justify-content: center;
   margin-top: 80px;
+  height: 120px;
   width: 700px;
 }
 
 .logo{
-  max-height: 8%;
-  max-width: 8%;
+  max-height: 45%;
+  max-width: 45%;
   padding: 30px;
+}
+
+.message {
+
 }
 
 
