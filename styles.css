@@ -4,5 +4,21 @@ light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
-black - #000000;
-*/
+black - #000000; */
+
+
+body {
+  background: navy blue;
+}
+
+button {
+  background: navy blue;
+  border: none;
+  border-radius: 10px;
+  color: pink;
+}
+
+button: hover {
+  background: white;
+  text: navy blue;
+}
