@@ -37,6 +37,8 @@ var radios = document.getElementsByName('care-choice');
 var sayDisplay = document.querySelector('.say-display')
 var buddha = document.querySelector('.buddha')
 
+var buddhaBounce = new AnimationEvent(animationstart, { animationName: slide })
+
 typeBox.addEventListener('submit', insertSaying);
 
 function getRandomIndex(array) {

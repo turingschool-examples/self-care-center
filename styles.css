@@ -75,18 +75,28 @@ main {
     justify-content: center;
 }
 
-.buddha {
-    width: 10em;
-    height: 10em;
-    align-self: center;
-    padding: 10px
-}
-
 .hidden {
     display: none!important;
 }
 
 .say-display {
     font-family: 'Quicksand', sans-serif;
-    padding-top: 15%;
+    padding-top: 10%;
+}
+
+.buddha {
+    width: 10em;
+    height: 10em;
+    align-self: center;
+    padding: 10px;
+    animation: slide 3s ease-in-out 2 alternate none;
+}
+
+@keyframes slide {
+    frome {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
+    }
 }
