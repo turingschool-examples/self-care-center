@@ -12,7 +12,7 @@
     <h1>✨Self Care Center✨</h1>
     <h2 class="subtitle">Which type of message?</h2>
     <div class="container">
-      <form action="">
+      <form class="form" action="">
         <!-- RADIO BUTTONS -->
         <section class="button-section">
           <input type="radio" class="affirmation" name="message" value="affirmation">
@@ -27,6 +27,7 @@
           <label for="personal-message">Your Message</label>
           <input type="text" class="personal-message" name="personal-message" placeholder="" value="">
           <section class="mini-button-section">
+            <p>Is this message a 'affirmation' or 'mantra'?</p>
             <input type="radio" class="mini-affirmation" name="message-type" value="mini-affirmation">
             <label for="mini-affirmation">affirmation</label>
             <input type="radio" class="mini-mantra" name="message-type" value="mini-mantra">
@@ -36,9 +37,17 @@
         <!-- BUTTON SECTION -->
         <button class="receive-message">Receive Message</button>
         <button class="personal-button">Customize</button>
+        <button class="show-messages">See All Messages</button>
         <button class="clear-message hidden">Clear Message</button>
         <button class="save-message hidden">Save Message</button>
       </form>
+      <!-- DISPLAY ALL AREA -->
+      <section class="show-all hidden">
+        <button class="show-affirmations">See all affirmations!</button>
+        <button class="show-mantras">See all mantras!</button>
+        <button class="show-saved">See all saved messages!</button>
+        <p class="array-display hidden"></p>
+      </section>
       <!-- MESSAGE FORM -->
       <section class="message-item">
         <img class="image" src="./assets/meditate.svg" alt="Person meditating with waves radiating from them">

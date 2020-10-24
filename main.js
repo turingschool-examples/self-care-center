@@ -15,11 +15,23 @@ var saveMessageButton = document.querySelector('.save-message');
 var saveAffirmationButton = document.querySelector('.mini-affirmation')
 var saveMantraButton = document.querySelector('.mini-mantra');
 
+var showAllSection = document.querySelector('.show-all')
+var showAllButton = document.querySelector('.show-messages');
+var form = document.querySelector('.form');
+var showAffirmationsButton = document.querySelector('.show-affirmations');
+var showMantrasButton = document.querySelector('.show-mantras');
+var showSavedButton = document.querySelector('.show-saved');
+var arrayDisplay = document.querySelector('.array-display')
+
+
 //event listeners
 
 receiveMessageButton.addEventListener('click', returnMessage);
 personalButton.addEventListener('click', showForm)
 saveMessageButton.addEventListener('click', saveMessage);
+showAllButton.addEventListener('click', showAllMessages);
+showAffirmationsButton.addEventListener('click', showAffirmations);
+showMantrasButton.addEventListener('click', showMantras);
 
 //event handlers
 
@@ -92,13 +104,13 @@ function saveMessage() {
 }
 
 function saveMantra(){
-    if (mantras[mantras.length-1] !== messageInput.value){
+    if (!mantras.includes(messageInput.value)){
     mantras.push(messageInput.value)
     }
 };
 
 function saveAffirmation(){
-    if (affirmations[affirmations.length-1] !== messageInput.value){
+    if (!affirmations.includes(messageInput.value)){
     affirmations.push(messageInput.value)
     }
 };
@@ -108,7 +120,19 @@ function showForm() {
     personalForm.classList.remove('hidden');
     personalButton.classList.add('hidden');
     saveMessageButton.classList.remove('hidden');
+    showAllButton.classList.add('hidden');
+}
 
+function showAllMessages() {
+    event.preventDefault();
+    showAllSection.classList.remove('hidden');
+    form.classList.add('hidden');
+}
+
+function showAffirmations(){
+    event.preventDefault();
+    arrayDisplay.classList.toggle('hidden')
+    arrayDisplay.innerText = 
 }
 
 //pseudo

@@ -1,8 +1,3 @@
-Table of contents. (allows you to see summary of your readme file without scrolling + quick navigation)
-Logo - makes your readme and whole project more professional
-
-🌱 Your README is just a copy/paste of the project spec. You want your README to show off that project that you made, not the one that was assigned to you. Next time, be sure to include contributors, technologies used, instructions for running and viewing the project, deploy link (gh-pages), images/GIFs if necessary, future additions, etc.
-
 ### SELF CARE CENTER:
 
 ## Table of Contents
