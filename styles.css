@@ -5,18 +5,6 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000; */
 
-/* desktop screen */
-@media screen and (device-pixel-ratio: 1){
-}
-
-/* tablet screen */
-@media screen and (device-pixel-ratio: 1.5){
-}
-
-/* mobile screen */
-@media screen and (device-pixel-ratio: 2){
-}
-
 .hidden {
   display: none!important;
 }
@@ -48,7 +36,6 @@ h1{
 h2{
   text-align: center;
   color: #ffffff;
-  /* margin-top: 5%; */
   margin-right: 5%;
   margin-left: 5%;
   font-size: 3vw;
@@ -68,6 +55,12 @@ h2{
   width: 100%;
   text-align: center;
 }
+
+/* work on this next */
+/* #affirmation-button{
+  width: 50px;
+  height: 50px;
+} */
 
 #affirmation-label {
   position: relative;
@@ -188,4 +181,122 @@ h2{
   margin-right: auto;
   border-radius: 10px;
   max-width: 15%;
+}
+
+/* mobile screen */
+@media only screen and (max-width: 600px){
+  h1 {
+    font-size: 6vw;
+    margin-top: 30%;
+  }
+  h2{
+    font-size: 4vw;
+  }
+  #affirmation-label {
+    font-size: 3.5vw;
+    margin-right: 10%;
+  }
+  #mantra-label {
+    font-size: 3.5vw;
+  }
+  #get-message{
+    font-size: 3vw;
+  }
+  .message-text{
+    font-size: 4vw;
+  }
+  #reset-button {
+    font-size: 3vw;
+  }
+  #bottom-half {
+    margin-top: 20%;
+  }
+  #top-box{
+    margin-top: 15%;
+  }
+  #top-half{
+    margin-top: 30%;
+  }
+}
+
+/* tablet screen */
+@media only screen and (min-width: 768px){
+  h1 {
+    font-size: 6vw;
+    margin-top: 10%;
+  }
+  h2{
+    font-size: 4vw;
+  }
+  #affirmation-label {
+    font-size: 3.5vw;
+    margin-right: 10%;
+  }
+  #mantra-label {
+    font-size: 3.5vw;
+  }
+  #get-message{
+    font-size: 3vw;
+  }
+  .message-text{
+    font-size: 4vw;
+  }
+  #reset-button {
+    font-size: 3vw;
+    margin: 5%;
+  }
+  #bottom-half {
+    margin-top: 10%;
+  }
+  #top-box{
+    margin-top: 10%;
+  }
+  #top-half{
+    margin-top: 10%;
+  }
+}
+
+/* desktop screen */
+@media only screen and (min-width: 992px){
+}
+
+/* very large screen */
+@media only screen and (min-width: 1200px){
+  @media only screen and (min-width: 768px){
+    h1 {
+      font-size: 6vw;
+      margin-top: 0%;
+      margin-bottom: 0%
+    }
+    h2{
+      font-size: 4vw;
+    }
+    #affirmation-label {
+      font-size: 3.5vw;
+      margin-right: 10%;
+    }
+    #mantra-label {
+      font-size: 3.5vw;
+    }
+    #get-message{
+      font-size: 3vw;
+    }
+    .message-text{
+      font-size: 4vw;
+    }
+    #reset-button {
+      font-size: 3vw;
+      margin: 5%;
+    }
+    #bottom-half {
+      margin-top: 5%;
+    }
+    #top-box{
+      margin-top: 0;
+    }
+    #top-half{
+      margin-top: 0;
+    }
+  }
+=======
 }
