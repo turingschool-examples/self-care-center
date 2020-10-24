@@ -19,9 +19,13 @@ var mantraText = [
 ]
 
 var userAffText = [
-
+  "aff user message 1",
+  "aff user message 2",
+  "aff user message 3",
 ]
 
 var userManText = [
-
+  "man user message 1",
+  "man user message 2",
+  "man user message 3",
 ]
