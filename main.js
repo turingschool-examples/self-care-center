@@ -1,3 +1,5 @@
+var recieveMessageButton = document.querySelector('button')
+
 var affirmations = [
 'I forgive myself and set myself free.',
 'I believe I can be all that I want to be.',
@@ -31,3 +33,19 @@ var mantras = [
 'Onward and upward.',
 'I am the sky, the rest is weather.'
 ]
+
+recieveMessageButton.addEventHandler('click', function() {
+
+})
+
+function getRandomIndex(arrayName) {
+  return return Math.floor(Math.random() * arrayName.length)
+}
+
+function selectMessage() {
+
+}
+
+function displayMessage() {
+  
+}
