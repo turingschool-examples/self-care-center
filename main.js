@@ -42,6 +42,14 @@ function getRandomIndex(arrayName) {
   return Math.floor(Math.random() * arrayName.length)
 }
 
+function validateSelection() {
+  if (!document.getElementById('affirmation').checked && !document.getElementById('mantra').checked) {
+    alert('Please select a message to recieve')
+    return false
+  }
+  return true
+}
+
 function selectMessage() {
   if(document.getElementById('affirmation').checked){
     return affirmations[getRandomIndex(affirmations)]
@@ -51,5 +59,7 @@ function selectMessage() {
 }
 
 function displayMessage() {
-  messageDisplay.innerHTML = `<p class="message">${selectMessage()}</p>`
+  if (validateSelection()){
+    messageDisplay.innerHTML = `<p class="message">${selectMessage()}</p>`  
+  }
 }
