@@ -1,8 +1,8 @@
 var affirmationRadio = document.querySelector(".affirmation");
 var mantraRadio = document.querySelector(".mantra");
 var receiveMessageButton = document.querySelector(".receive-message");
-var messageDisplayBox = document.querySelector(".display")
-var meditationImage = document.querySelector(".meditation-image")
+var messageDisplayBox = document.querySelector(".display");
+var meditationImage = document.querySelector(".meditation-image");
 
 var affirmations = [
   "I forgive myself and set myself free.",
@@ -36,45 +36,44 @@ var mantras = [
   "Onward and upward.",
   "I am the sky, the rest is weather.",
 ];
+// var currentAffirmation;
+// var currentMantra;
 
-affirmationRadio.addEventListener('click', generateAffirmationMessage);
-mantraRadio.addEventListener('click', generateMantraMessage);
-receiveMessageButton.addEventListener('click', displayMessage)
-// messageDisplayBox.addEventListener()
+affirmationRadio.addEventListener('click', displayMessage);
+mantraRadio.addEventListener('click', displayMessage);
+receiveMessageButton.addEventListener('click', displayMessage);
+
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-function generateAffirmationMessage() {
-  var currentAffirmation = affirmations[getRandomIndex(affirmations)];
-  console.log(currentAffirmation);
-}
-
-function generateMantraMessage() {
-  var currentMantra = mantras[getRandomIndex(mantras)];
-  console.log(currentMantra);
-}
+// function generateMessage() {
+//   // currentAffirmation = affirmations[getRandomIndex(affirmations)];
+//   // currentMantra = mantras[getRandomIndex(mantras)];
+//   // console.log(currentAffirmation);
+//   // console.log(currentMantra);
+// }
 
 function displayMessage() {
-  // meditationImage.classList.toggle(".meditation-image")
+/*
+currently only affirmation is populating
+need mantra to enter when selected via radio
+
+attempted to create both local and global variables for the current message
+still populating only the affirmation array
+*/
   if (affirmationRadio) {
-    messageDisplayBox.innerHTML = generateAffirmationMessage();
+    var currentAffirmation = affirmations[getRandomIndex(affirmations)];
+    messageDisplayBox.innerHTML = currentAffirmation;
+    console.log(currentAffirmation);
   } else if (mantraRadio) {
-    messageDisplayBox.innerHTML = generateMantraMessage();
+    var currentMantra = mantras[getRandomIndex(mantras)];
+    messageDisplayBox.innerHTML = currentMantra;
+    console.log(currentMantra);
   }
 }
 
 /*
-generateAffirmationMessage
-randomly select the affirmation from the array of quotes given in the prompt
-
-generateMantraMessage
-randomly select the mantra from the array of quotes given in the prompt
-
-displayMessage
-remove the bell image
-display the generated message from the selection of the radio buttons
-will likely have to create new class in CSS for text display
 
 */
