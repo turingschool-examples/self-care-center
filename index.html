@@ -6,14 +6,20 @@
   </head>
   <body>
     <section class="main-page">
-      <h1 class="page-title">✨Self Care Center ✨<h1/>
-      <h3 class="message-box-heading">What type of message?<h3>
+      <section class="headers">
+        <h1 class="page-title">✨Self Care Center ✨<h1/>
+        <h3 class="message-box-heading">What type of message?<h3>
+      </section>
       <article class="message-choice-box">
         <div>
-          <input type="radio" name="message">
-          <label>affirmation</label>
-          <input type="radio" name="message">
-          <label>mantra</label>
+          <label for="affirmation">
+            <input type="radio" name="message" id="affirmation">
+            affirmation
+          </label>
+          <label for="mantra">
+            <input type="radio" name="message" id="mantra">
+            mantra
+          </label>
         </div>
         <button class="recieve-message">Recieve Message</button>
       </article>
