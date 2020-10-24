@@ -24,7 +24,7 @@ body{
 h1{
   color: #ffffff;
   text-align: center;
-  margin: 3%;
+  margin: 2%;
   font-size: 4vw;
 }
 
@@ -207,7 +207,7 @@ h2{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 150%;
   height: 100%;
   border-radius: 10px;
   margin-top: 5%
@@ -215,8 +215,8 @@ h2{
 
 #form-h2{
   color: #000000;
-  font-size: 3vw;
-  margin-top: 10%;
+  font-size: 2vw;
+  margin-top: 5%;
 }
 
 #user-input-radio-buttons {
@@ -225,6 +225,18 @@ h2{
   text-align: center;
   font-style: italic;
   margin-bottom: 5%
+}
+
+#user-affirmation-label {
+  position: relative;
+  margin-right: 20%;
+  font-size: 2vw;
+}
+
+#user-mantra-label {
+  position: relative;
+  font-size: 2vw;
+  margin: 0%;
 }
 
 #user-message-input {
