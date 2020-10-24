@@ -6,10 +6,10 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
-
 body {
   background: linear-gradient(180deg, #134d71, #78a7c6, #f7e4bf);
   font-family: 'Quicksand', sans-serif;
+  min-height: 100vh;
 }
 
 section {
@@ -18,4 +18,41 @@ section {
 
 .headers {
   color: #ffffff;
+  padding: 1%
+}
+
+.message-choice-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding-top: 2%;
+  padding-bottom:2%;
+  width: 40%;
+  margin: auto;
+  margin-bottom: 10%;
+  height: 20%;
+}
+
+.get-message {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 10%;
+    height: 20%;
+}
+
+img {
+  width: 100px;
+  length: 100px;
+}
+
+button{
+  margin-top: 5%
+}
+
+label {
+  padding-right: 10%;
+  padding-left: 5%
 }
