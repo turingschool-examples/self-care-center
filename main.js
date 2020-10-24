@@ -129,11 +129,35 @@ function showAllMessages() {
     form.classList.add('hidden');
 }
 
+// function showMessage(type){
+
+//     if (type === 'affirmations'){
+//         showAffirmations();
+//     }else if (type === 'mantras'){
+//         showMantras();
+//     }
+// }
 function showAffirmations(){
     event.preventDefault();
-    arrayDisplay.classList.toggle('hidden')
-    arrayDisplay.innerText = 
-}
+    arrayDisplay.classList.toggle('hidden');
+    showAffirmationsButton.innerText = "Hide Affirmations"
+    arrayDisplay.innerHTML = "";
+    for (var i = 0; i < affirmations.length; i++){
+        arrayDisplay.innerHTML += `<p class="array-display">${affirmations[i]}</p>`
+    }
+}    
+
+function showMantras(){
+    event.preventDefault();
+    arrayDisplay.classList.toggle('hidden');
+    showMantrasButton.innerText = "Hide Mantras"
+    arrayDisplay.innerHTML = "";
+    for (var i = 0; i < mantras.length; i++){
+        arrayDisplay.innerHTML += `<p class="array-display">${mantras[i]}</p>`
+    }
+}  
+
+
 
 //pseudo
 //when a user selects a message type, that information should be passed to a function that iterates through it's corresponding array and returns an element.
