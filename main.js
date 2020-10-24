@@ -64,7 +64,7 @@ function returnMessage() {
     }else if(mantraButton.checked){
         returnMantra();
     }else if(messageInput){
-        personalizeMessage()
+        personalizeMessage();
     }
     receiveMessageButton.classList.add('hidden');
     clearMessageButton.classList.remove('hidden');
