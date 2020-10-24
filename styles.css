@@ -51,13 +51,13 @@ black - #000000; */
   flex-direction: row;
 }
 
-.left {
+.radio-left {
   border-radius: 25px;
   height: 25px;
   width: 25px;
 }
 
-.right {
+.radio-right {
   border-radius: 25px;
   height: 25px;
   width: 25px;
