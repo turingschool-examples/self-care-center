@@ -38,11 +38,9 @@ var sayDisplay = document.querySelector('.say-display')
 var buddha = document.querySelector('.buddha')
 var clearOut = document.querySelector('.clear')
 
-// var buddhaBounce = new AnimationEvent(animationstart, { animationName: slide })
+// var buddhaBounce = new AnimationEvent('animationstart ', { animationName: slide })
 
 typeBox.addEventListener('submit', insertSaying);
-
-// typeBox.addEventListener('change', disableButton);
 
 clearOut.addEventListener('click', clearBox);
 
@@ -78,6 +76,3 @@ function clearBox() {
 //         clearOut.disabled = true;
 //     }
 // };
-// console.log(radios[i].value);
-// arrayToUse = radios[i].value;
-// sayDisplay.innerText = arrayToUse[getRandomIndex(arrayToUse)]
