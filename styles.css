@@ -85,7 +85,9 @@ main {
 }
 
 .clear {
-    width: 20%;
+    width: 30%;
+    height: 10%;
+    font-family: 'Quicksand', sans-serif;
     align-self: center;
     background-color: #134d71;
     color: #ffffff;
