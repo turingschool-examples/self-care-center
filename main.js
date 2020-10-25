@@ -1,4 +1,5 @@
-var recieveMessageButton = document.querySelector('button')
+var recieveMessageButton = document.querySelector('.recieve')
+var deleteMessageButton = document.querySelector('.delete')
 
 var messageDisplay = document.querySelector('.message-display')
 
