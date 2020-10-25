@@ -1,7 +1,16 @@
+class Display {
+  constructor(message) {
+    this.message = message
+    this.logosrc = "assets/meditate.svg"
+  }
+}
+
 var recieveMessageButton = document.querySelector('.recieve')
 var deleteMessageButton = document.querySelector('.delete')
 
 var messageDisplay = document.querySelector('.message-display')
+
+var currentDisplay = new Display()
 
 var affirmations = [
 'I forgive myself and set myself free.',
@@ -37,7 +46,9 @@ var mantras = [
 'I am the sky, the rest is weather.'
 ]
 
-recieveMessageButton.addEventListener('click', displayMessage)
+recieveMessageButton.addEventListener('click', recieveMessage)
+
+deleteMessageButton.addEventListener('click', deleteMessage)
 
 function getRandomIndex(arrayName) {
   return Math.floor(Math.random() * arrayName.length)
@@ -45,22 +56,42 @@ function getRandomIndex(arrayName) {
 
 function validateSelection() {
   if (!document.getElementById('affirmation').checked && !document.getElementById('mantra').checked) {
-    alert('Please select a message to recieve')
+    alert('Set your intention by selecting a type of message to recieve.')
     return false
   }
   return true
 }
 
-function selectMessage() {
-  if(document.getElementById('affirmation').checked){
-    return affirmations[getRandomIndex(affirmations)]
+function recieveMessage() {
+  if (validateSelection()) {
+    if(document.getElementById('affirmation').checked){
+      currentDisplay = new Display(affirmations[getRandomIndex(affirmations)])
+    } else {
+      currentDisplay = new Display(mantras[getRandomIndex(mantras)])
+    }
+  }
+  updateDisplay()
+}
+
+function updateDisplay() {
+  if (!currentDisplay.message) {
+    messageDisplay.innerHTML = `<img class="logo" src=${currentDisplay.logosrc}>`
   } else {
-    return mantras[getRandomIndex(mantras)]
+    messageDisplay.innerHTML = `<p class="message">${currentDisplay.message}</p>`
   }
 }
 
-function displayMessage() {
-  if (validateSelection()){
-    messageDisplay.innerHTML = `<p class="message">${selectMessage()}</p>`  
+function validateDelete() {
+  if (!currentDisplay.message) {
+    alert('You are already tabula rasa.')
+    return false
   }
+  return true
+}
+
+function deleteMessage() {
+  if (validateDelete()){
+    currentDisplay = new Display()
+  }
+  updateDisplay()
 }
