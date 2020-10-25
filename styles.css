@@ -21,6 +21,7 @@ h2 {
 
 h2 {
     margin-top: 15%;
+    margin-bottom: 5%;
 }
 
 main {
@@ -75,13 +76,40 @@ main {
     justify-content: center;
 }
 
+.hidden {
+    display: none!important;
+}
+
+.say-display {
+    font-family: 'Quicksand', sans-serif;
+    padding-top: 10%;
+}
+
+.clear {
+    width: 30%;
+    height: 10%;
+    font-family: 'Quicksand', sans-serif;
+    align-self: center;
+    background-color: #134d71;
+    color: #ffffff;
+    border-radius: 70%;
+    margin-top: 5%;
+}
+
 .buddha {
     width: 10em;
     height: 10em;
     align-self: center;
-    padding: 10px
+    padding: 10px;
+    /* animation: slide 3s ease-in-out 2 alternate none; */
 }
 
-.hide {
-    display: none;
-}
+
+/* @keyframes slide {
+    frome {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+} */
