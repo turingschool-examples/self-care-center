@@ -42,7 +42,9 @@ var clearOut = document.querySelector('.clear')
 
 typeBox.addEventListener('submit', insertSaying);
 
-clearOut.addEventListener('click', clearBox)
+// typeBox.addEventListener('change', disableButton);
+
+clearOut.addEventListener('click', clearBox);
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
@@ -51,6 +53,7 @@ function getRandomIndex(array) {
 function insertSaying() {
     event.preventDefault();
     buddha.style.display = 'none';
+    clearOut.disabled = false;
     for (var i = 0; i < radios.length; i++) {
         if (radios[i].checked === true) {
             if (radios[i].value == 'affirmations') {
@@ -60,14 +63,21 @@ function insertSaying() {
             }
         }
     }
-}
+};
 
 function clearBox() {
     sayDisplay.innerText = '';
     buddha.style.display = 'initial';
-}
+    clearOut.disabled = true;
+};
 
-
+// function disableButton() {
+//     if (event.target.checked) {
+//         clearOut.disabled = false;
+//     } else {
+//         clearOut.disabled = true;
+//     }
+// };
 // console.log(radios[i].value);
 // arrayToUse = radios[i].value;
 // sayDisplay.innerText = arrayToUse[getRandomIndex(arrayToUse)]
