@@ -6,3 +6,75 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+html {
+    background: linear-gradient(#134d71, #8c9fac, #f7e4bf) no-repeat center fixed;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.boxes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.top-box {
+    margin-top: 150px;
+    height: 12em;
+    width: 35em;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    padding-left: 30px;
+}
+
+.bottom-box {
+    margin-top: 150px;
+    height: 12em;
+    width: 35em;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    padding-left: 30px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.receive-message-button {
+    background-color: #134d71;
+    font-family: 'Quicksand', sans-serif;
+    width: 200px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.zenIcon {
+    height: 5em;
+    width: 5em;
+    display: block;
+    margin: auto;
+}
