@@ -16,6 +16,10 @@ section {
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
+
 .headers {
   color: #ffffff;
   padding: 1%
@@ -50,7 +54,7 @@ section {
 
 img {
   width: 100px;
-  length: 100px;
+  height: 100px;
 }
 
 button {
