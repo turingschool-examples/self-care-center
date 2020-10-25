@@ -14,8 +14,13 @@ function getRandomIndex(array) {
     return array[randomIndex]
 }
 
+function hideZen() {
+    zen.classList.add('hidden');
+}
+
+
 function showMessage() {
-    hideMe()
+    hideZen()
     var mantra = getRandomIndex(mantras)
     var affirmation = getRandomIndex(affirmations)
     if (selects[0].checked) {
