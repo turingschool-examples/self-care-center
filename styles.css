@@ -73,6 +73,14 @@ img {
   margin-top: 10px;
 }
 
+.hidden {
+    display: none;
+}
+
+p {
+  margin-top: 55px;
+}
+
 /* Can I use flexbox instead of using the margins?
 Is there a better way to make the background go the full length of the page instead of at the end of generate-message?
 Couldn't get button hover status to be white background w/ dark blue border for some odd reason..
