@@ -8,11 +8,21 @@
     <main class="box">
       <h1 class="self-care">✨ Self Care Center ✨</h1>
       <h2 class="message-type">Which type of message?</h2>
-      <section class="message-box">
-        <form>
-          <input type="radio" class="left">
-          <input type="radio" class="right">
-        </form>
+      <form class="message-choice">
+        <article id="submission-form">
+          <div>
+            <input type="radio" id="radio-left" name="message-select" value="radio-left">
+            <label for="affirmation">affirmation</label>
+          </div>
+          <div>
+            <input type="radio" id="radio-right" name="message-select" value="radio-right">
+            <label for="mantra">mantra</label>
+          </div>
+        </article>
+        <button type="submit" id="receive-message">Receive Message</button>
+      </form>
+      <section id="message-return">
+        <img class="bell" src="./assets/meditate.svg" alt="Image of bell being rung with sound waves">
       </section>
     </main>
     <script type="text/javascript" src="main.js"></script>
