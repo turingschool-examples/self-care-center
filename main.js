@@ -40,9 +40,13 @@ var mantras = ["Breathing in, I send myself love.",
 recieveMessageButton.addEventListener("click", showMessage)
 
 function showMessage() {
-  meditationImage.classList.add("hidden");
+  if (mantra.checked === false && affirmation.checked === false) {
+    alert("If you want to display a message, choose a choice below.")
+  }
+  else { meditationImage.classList.add("hidden");
   displayedMessage.classList.remove("hidden");
   grabMessage();
+  }
 };
 
 function getRandomIndex(array) {
