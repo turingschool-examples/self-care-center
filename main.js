@@ -1,6 +1,7 @@
-var affirmationButton = document.querySelector();
-var mantraButton = document.querySelector();
-var receiveMessageButton = document.querySelector();
+var affirmationButton = document.querySelector('#affirmation');
+var mantraButton = document.querySelector('#mantra');
+var receiveMessageButton = document.querySelector('.receive-message');
+var generatedMessageText = document.querySelector('.generated-message-text');
 
 var affirmations = [
   "I forgive myself and set myself free.",
@@ -34,12 +35,19 @@ var mantras = [
   "Onward and upward.",
   "I am the sky, the rest is weather."
 ];
+
 receiveMessageButton.addeventListener('click', generateMessage);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
-// function generateMessage() {
-//   if(input.value === )
-// }
+function generateMessage() {
+  if(input.value === "affirmations") {
+    generatedMessageText.push(getRandomIndex(affirmations));
+  } else if(input.value === "mantras") {
+    generatedMessageText.push(getRandomIndex(mantras));
+  }
+}
+
+//toggle off image, toggle on quote
