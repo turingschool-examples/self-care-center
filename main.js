@@ -2,6 +2,8 @@ var affirmationButton = document.querySelector('#affirmation');
 var mantraButton = document.querySelector('#mantra');
 var receiveMessageButton = document.querySelector('.receive-message');
 var generatedMessageText = document.querySelector('.generated-message-text');
+var meditationIcon = document.querySelector('.meditation-icon');
+var choice = document.querySelector('.message-selection');
 
 var affirmations = [
   "I forgive myself and set myself free.",
@@ -36,18 +38,30 @@ var mantras = [
   "I am the sky, the rest is weather."
 ];
 
-receiveMessageButton.addeventListener('click', generateMessage);
+var savedAffirmations = [];
+var savedMantras = [];
+var currentAffirmation;
+var currentMantra;
+
+//eventlisteners
+receiveMessageButton.addEventListener('click', generateMessage);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
-function generateMessage() {
-  if(input.value === "affirmations") {
-    generatedMessageText.push(getRandomIndex(affirmations));
-  } else if(input.value === "mantras") {
-    generatedMessageText.push(getRandomIndex(mantras));
-  }
+function hideImage() {
+  meditationIcon.classList.add('hidden');
+  generatedMessageText.classList.remove('hidden');
 }
 
-//toggle off image, toggle on quote
+function generateMessage() {
+  event.preventDefault();
+  hideImage();
+  for (i=0; i<choice.length; i++);
+  if (affirmationButton.checked) {
+    generatedMessageText.innerText = affirmations[getRandomIndex(affirmations)];
+  } else if (mantraButton.checked) {
+    generatedMessageText.innerText = mantras[getRandomIndex(mantras)];
+  }
+}

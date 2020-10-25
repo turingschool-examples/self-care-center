@@ -5,6 +5,10 @@ light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
 black - #000000; */
+html {
+  width: 100%;
+  height: 100%;
+}
 * {
   font-family: 'Quicksand', sans-serif;
   margin: auto;
@@ -13,25 +17,30 @@ black - #000000; */
 
 body {
     background: linear-gradient(#134d71, #78a7c6, #f7e4bf) no-repeat;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-h1 {
+h1, h3 {
   color: #ffffff;
-  margin-top: 100px;
 }
 
 h3 {
-  margin-top: 100px;
-  margin-bottom: 10px;
-  color: #ffffff
+  margin-top: -100px;
 }
 
 .message-selection {
   background-color: #ffffff;
-  height: 60%;
-  width: 40%;
+  height: 80px;
+  width: 400px;
   border-radius: 5px;
-  margin-left: 30%
+}
+#mantra {
+  margin-left: 100px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 button {
@@ -41,38 +50,27 @@ button {
   border: #134d71;
   width: 180px;
   height: 25px;
-  margin-top:10px;
-  margin-bottom: 10px;
 }
 
 button:hover {
   background-color: #78a7c6;
-  border-radius: 5px;
-  border: #134d71;
+  text: #134d71;
   cursor: pointer;
 }
 
-.receive-message: hover {
-  background: #ffffff;
-  text: #134d71;
-}
 .generated-message {
   background-color: #ffffff;
-  height: 30%;
+  height: 15%;
   width: 60%;
-  margin-top: 150px;
-  margin-bottom: 300px;
-  margin-left: 20%;
   border-radius: 5px;
 }
 
 #choice {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
 }
 img {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 10px;
 }
 
 /* Can I use flexbox instead of using the margins?

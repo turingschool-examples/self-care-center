@@ -7,16 +7,18 @@
 </head>
 <body>
   <header>
-    <h1>✨<b>Self Care Center</b>✨</h1>
+    <h1>✨ <b>Self Care Center</b> ✨</h1>
   </header>
-    <h3>Which type of message?</h2>
+  <section class="select-message-section">
+    <h3>Which type of message?</h3>
       <form class="message-selection">
-        <input type="radio" name="choice" id="affirmation" value="affirmation" checked><i>affirmation </i>
+        <input type="radio" name="choice" id="affirmation" value="affirmation" checked><i>affirmation</i>
         <input type="radio" name="choice" id="mantra" value="mantra"><i>mantra</i><br>
         <button class="receive-message">Receive Message</button>
       </form>
+  </section>
   <section class="generated-message">
-    <img src="assets/meditate.svg" alt="meditation icon" width=10% height=10%/>
+    <img class="meditation-icon" src="assets/meditate.svg" alt="meditation icon" width=70% height=70%/>
     <p class="generated-message-text"></p>
   </section>
   <script type="text/javascript" src="main.js"></script>
