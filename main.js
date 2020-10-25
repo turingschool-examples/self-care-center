@@ -1,6 +1,8 @@
 var recieveMessageButton = document.querySelector(".recieve-message");
 var meditationImage = document.querySelector(".meditate-img");
-var displayedMessage = document.querySelector(".recieved-message")
+var displayedMessage = document.querySelector(".recieved-message");
+var affirmation = document.querySelector("#affirmation");
+var mantra = document.querySelector("#mantra");
 
 var affirmations = ["I forgive myself and set myself free.",
 "I believe I can be all that I want to be.",
@@ -40,5 +42,18 @@ recieveMessageButton.addEventListener("click", showMessage)
 function showMessage() {
   meditationImage.classList.add("hidden");
   displayedMessage.classList.remove("hidden");
+  grabMessage();
+};
 
-}
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+};
+
+function grabMessage (){
+  if (mantra.checked) {
+    displayedMessage.innerText = `${mantras[getRandomIndex(mantras)]}`
+  }
+  else if (affirmation.checked){
+    displayedMessage.innerText = `${affirmations[getRandomIndex(affirmations)]}`
+  }
+};
