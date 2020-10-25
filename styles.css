@@ -21,15 +21,20 @@ section {
   padding: 1%
 }
 
+.page-title {
+    margin-bottom: 10%;
+    font-size: x-large;
+}
+
 .message-choice-box {
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding-top: 2%;
-  padding-bottom:2%;
-  width: 40%;
-  margin: auto;
-  margin-bottom: 10%;
-  height: 20%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 9%;
+    height: 20%;
 }
 
 .get-message {
@@ -48,11 +53,21 @@ img {
   length: 100px;
 }
 
-button{
-  margin-top: 5%
+button {
+    margin-top: 2%;
+    border-radius: 5px;
+    background-color: #134d71;
+    color: #ffffff;
+    width: 30%;
+    font-family: 'Quicksand';
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: medium;
 }
 
 label {
-  padding-right: 10%;
-  padding-left: 5%
+    padding-right: 15%;
+    padding-left: 15%;
+    font-style: italic;
+    font-size: large;
 }
