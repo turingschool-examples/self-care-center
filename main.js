@@ -39,14 +39,14 @@ var buddha = document.querySelector('.buddha')
 var clearOut = document.querySelector('.clear')
 var favSaying = document.querySelector('.favorite');
 var displayedSaying = document.querySelector('.displayed-saying')
-var favorites = [];
+var favoritesArray = [];
 // var buddhaBounce = new AnimationEvent('animationstart ', { animationName: slide })
 
 typeBox.addEventListener('submit', insertSaying);
 
 clearOut.addEventListener('click', clearBox);
 
-favSaying.addEventListener('click', addToFavorites)
+sayDisplay.addEventListener('click', addToFavorites);
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
@@ -56,16 +56,28 @@ function insertSaying() {
     event.preventDefault();
     buddha.style.display = 'none';
     clearOut.disabled = false;
+
     for (var i = 0; i < radios.length; i++) {
         if (radios[i].checked === true) {
             if (radios[i].value == 'affirmations') {
-                sayDisplay.innerHTML = `<p class="displayed-saying">${affirmations[getRandomIndex(affirmations)]}</p><button class="favorite">Fav Me!</button>`
+                makeAffirmation();
             } else if (radios[i].value == 'mantras') {
-                sayDisplay.innerHTML = `<p class="displayed-saying">${mantras[getRandomIndex(mantras)]}</p><button class="favorite">Fav Me!</button>`
+                makeMantra();
             }
         }
     }
 };
+
+function makeMantra() {
+    var newMantra = `<p class="displayed-saying">${mantras[getRandomIndex(mantras)]}</p><button class="favorite" type='button'>Fav Me!</button>`;
+    sayDisplay.innerHTML = newMantra;
+}
+}
+
+function makeAffirmation() {
+    var newAffirmation = `<p class="displayed-saying">${affirmations[getRandomIndex(affirmations)]}</p><button class="favorite">Fav Me!</button>`;
+    sayDisplay.innerHTML = newAffirmation;
+}
 
 function clearBox() {
     sayDisplay.innerText = '';
@@ -82,5 +94,17 @@ function clearBox() {
 // };
 
 function addToFavorites(event) {
-    favorites.push(displayedSaying.value);
-}
+    if (event.target.matches('.favorite ')) {
+        favoritesArray.push(displayedSaying.innerHTML);
+        console.log(displayedSaying);
+    }
+};
+
+// function createListener() {
+//     if (favSaying) {
+//         favSaying.addEventListener('click', addToFavorites)
+//         console.log("HEY");
+//     } else {
+//         console.log("NO");
+//     }
+// }
