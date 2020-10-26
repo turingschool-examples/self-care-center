@@ -18,36 +18,48 @@ body {
 
 h1 {
     font-family: 'Quicksand', sans-serif;
-    font-weight: 700;
-    font-size: 36px;
+    font-weight: 1.5em;
+    font-size: 2em;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
 }
 
 h2 {
     font-family: 'Quicksand', sans-serif;
-    font-weight: 700;
-    font-size: 30px;
-}
-
-.boxes {
+    font-weight: 150px;
+    font-size: 1.5em;
+    color: #FFFFFF;
+    margin-bottom: 1%;
+    margin-top: 7%;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .top-box {
-    margin-top: 150px;
-    height: 12em;
-    width: 35em;
+    height: 8em;
+    width: 25em;
     background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: space-around;
-    padding-left: 30px;
+    align-content: center;
+}
+
+.boxes {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: -12%;
+    font-style: italic;
+    font-size: 1.1em;
 }
 
 .bottom-box {
-    margin-top: 150px;
+    margin-top: 15%;
     height: 12em;
     width: 35em;
     background-color: #FFFFFF;
@@ -67,9 +79,12 @@ h2 {
 .receive-message-button {
     background-color: #134d71;
     font-family: 'Quicksand', sans-serif;
-    width: 200px;
+    width: 40%;
     padding: 10px;
-    margin-top: 20px;
+    margin-bottom: -12%;
+    color: #FFFFFF;
+    border-radius: .5em;
+    margin-inline-start: 20;
 }
 
 .zenIcon {
@@ -81,4 +96,29 @@ h2 {
 
 .hidden {
     display: none;
+}
+
+.replace {
+    color: black;
+    font-size: 1.1em;
+    justify-content: center;
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.center,
+.bottom-center {
+    display: flex;
+    justify-content: center;
+}
+
+.clear-message-button {
+    background-color: #134d71;
+    font-family: 'Quicksand', sans-serif;
+    width: 40%;
+    padding: 10px;
+    margin-bottom: -12%;
+    color: #FFFFFF;
+    border-radius: .5em;
+    margin-inline-start: 60%;
 }
