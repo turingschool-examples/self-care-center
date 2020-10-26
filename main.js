@@ -42,6 +42,7 @@ var displayedSaying = document.querySelector('.displayed-saying');
 var favGallery = document.querySelector('.fav-gallery');
 var viewGallery = document.querySelector('.view-favorites');
 var mainPage = document.querySelector('.main-page');
+var backToMain = document.querySelector('.back-to-main');
 var favoritesArray = [];
 sayingToSave = '';
 // var buddhaBounce = new AnimationEvent('animationstart ', { animationName: slide })
@@ -53,6 +54,7 @@ clearOut.addEventListener('click', clearBox);
 sayDisplay.addEventListener('click', addToFavorites);
 
 viewGallery.addEventListener('click', goToGallery);
+backToMain.addEventListener('click', goHome);
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
@@ -88,9 +90,8 @@ function makeAffirmation() {
 }
 
 function goToGallery() {
-    console.log("HEY");
-    mainPage.classList.add('hidden');
-    favGallery.classList.remove('hidden');
+    hide(mainPage);
+    show(favGallery)
 
 }
 
@@ -116,6 +117,18 @@ function addToFavorites(event) {
     }
 };
 
+function goHome() {
+    show(mainPage);
+    hide(favGallery);
+};
+
+function hide(thingToHide) {
+    thingToHide.classList.add('hidden');
+};
+
+function show(thingToShow) {
+    thingToShow.classList.remove('hidden');
+};
 // function createListener() {
 //     if (favSaying) {
 //         favSaying.addEventListener('click', addToFavorites)

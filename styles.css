@@ -40,9 +40,9 @@ main {
 .type-box {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 50%;
-    height: 8em;
+    height: 20em;
     border-radius: 10px;
     background-color: #ffffff;
     align-self: center;
@@ -57,13 +57,16 @@ main {
     width: 40%;
     align-self: center;
     border-radius: 5px;
+    margin-bottom: 5%;
 }
 
 .radio-pad {
     display: flex;
+    height: 4em;
     justify-content: space-around;
     font-family: 'Quicksand', sans-serif;
     font-style: italic;
+    padding: 5%;
 }
 
 .care-choice {
@@ -138,6 +141,16 @@ main {
 
 .saved-saying {
     font-family: 'Quicksand', sans-serif;
+}
+
+.back-to-main {
+    background-color: #134d71;
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    width: 40%;
+    align-self: center;
+    border-radius: 5px;
+    margin-top: 5%;
 }
 
 .buddha {
