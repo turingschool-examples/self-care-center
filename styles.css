@@ -56,11 +56,6 @@ label {
   top: 10px;
 }
 
-.button-wrapper {
-  position: relative;
-  bottom: 5px;
-}
-
 .message-display {
   align-items: center;
   display: flex;
