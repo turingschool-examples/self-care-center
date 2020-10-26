@@ -73,12 +73,17 @@ main {
     margin-right: 5 px;
 }
 
+.displayed-saying {
+    padding: 5%;
+}
+
 .message-pad {
     background-color: #ffffff;
     width: 80%;
     height: 14em;
     align-self: center;
-    margin-top: 10%;
+    margin-top: 5%;
+    padding: 5%;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -91,8 +96,8 @@ main {
 .say-display {
     display: flex;
     font-family: 'Quicksand', sans-serif;
-    padding-top: 10%;
     flex-direction: column;
+    justify-content: center;
 }
 
 .clear {
@@ -139,17 +144,20 @@ main {
     margin-top: 5%;
 }
 
-.saved-saying {
+.saved-sayings {
     font-family: 'Quicksand', sans-serif;
+    border: 40px solid #134d71;
+    border-style: dashed dashed ridge none;
+    padding: 3%;
 }
 
-.back-to-main {
+#back-to-home {
     background-color: #134d71;
     color: #ffffff;
     font-family: 'Quicksand', sans-serif;
     width: 40%;
-    align-self: center;
-    border-radius: 5px;
+    display: flex;
+    justify-content: center;
     margin-top: 5%;
 }
 
@@ -157,9 +165,15 @@ main {
     background-color: #134d71;
     color: #ffffff;
     font-family: 'Quicksand', sans-serif;
-    width: 30%;
-    height: 15%;
-    border-radius: 5;
+    width: 60%;
+    height: 20%;
+    border-radius: 5px;
+    page-break-after: 1%;
+}
+
+.home-button-space {
+    display: flex;
+    justify-content: center;
 }
 
 .buddha {

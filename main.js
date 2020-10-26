@@ -42,7 +42,8 @@ var displayedSaying = document.querySelector('.displayed-saying');
 var favGallery = document.querySelector('.fav-gallery');
 var viewGallery = document.querySelector('.view-favorites');
 var mainPage = document.querySelector('.main-page');
-var backToMain = document.querySelector('.back-to-main');
+var backToMain = document.querySelector('#back-to-home');
+var homeButtonSpace = document.querySelector('.home-button-space');
 var favoritesArray = [];
 sayingToSave = '';
 // var buddhaBounce = new AnimationEvent('animationstart ', { animationName: slide })
@@ -55,7 +56,7 @@ sayDisplay.addEventListener('click', addToFavorites);
 
 viewGallery.addEventListener('click', goToGallery);
 
-backToMain.addEventListener('click', goHome);
+// favGallery.addEventListener('click', goHome);
 
 favGallery.addEventListener('click', deleteSaying);
 
@@ -109,29 +110,38 @@ function addToFavorites(event) {
 
 function deleteSaying(event) {
     console.log(event.target);
-    for (var i = 0; i < favoritesArray.length; i++) {
-        if (event.target.id == favoritesArray[i].id) {
-            favoritesArray.splice(i, 1);
+    if (event.target.classList.contains('delete-saying')) {
+        for (var i = 0; i < favoritesArray.length; i++) {
+            if (event.target.id == favoritesArray[i].id) {
+                favoritesArray.splice(i, 1);
+            }
         }
+        favGallery.innerHTML = '<div class="home-button-space"><button id="back-to-home" type="button">Back To Main</button></div>';
+        goToGallery();
+    } else if (event.target.id === 'back-to-home') {
+        goHome();
     }
-    goToGallery();
-};
+}
 
 function goToGallery() {
     builtGallery = '';
+    favGallery.innerHTML = '<div class="home-button-space"><button id="back-to-home" type="button">Back To Main</button></div>';
     for (var i = 0; i < favoritesArray.length; i++) {
         var quoteToDisplay = `<p class="saved-sayings">${favoritesArray[i].quote}</p><button class="delete-saying" type="button" id="${favoritesArray[i].id}"
-        ">Remove Me From Favorites (For Now)</button>`;
+        ">Remove (For Now)</button>`;
         builtGallery += quoteToDisplay;
     };
-    favGallery.innerHTML = builtGallery;
+    favGallery.insertAdjacentHTML('afterbegin', builtGallery);
     hide(mainPage);
-    show(favGallery)
-};
+    show(favGallery);
+}
 
 function goHome() {
+    // if (event.target.id === 'back-to-home') {
     show(mainPage);
     hide(favGallery);
+    // }
+
 };
 
 function hide(thingToHide) {
