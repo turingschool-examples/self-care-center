@@ -6,30 +6,34 @@
   <title>Self Care Center</title>
 </head>
 <body>
-  <header>
-    <h1>✨ <b>Self Care Center</b> ✨</h1>
-  </header>
-  <section class="select-message-section">
-    <h3>Which type of message?</h3>
-      <form class="message-selection">
-        <input type="radio" name="choice" id="affirmation" value="affirmation" checked><i>affirmation</i>
-        <input type="radio" name="choice" id="mantra" value="mantra"><i>mantra</i><br>
-        <button class="receive-message">Receive Message</button>
+  <main class="main hidden">
+    <section class="select-message-section">
+      <header>
+        <h1>✨ <b>Self Care Center</b> ✨</h1>
+        <h2><em>Welcome to your inner-calm, </em></h2>
+      </header>
+      <h3>Which type of message?</h3>
+        <form class="message-selection">
+          <input type="radio" name="choice" id="affirmation" value="affirmation" checked><i>affirmation</i>
+          <input type="radio" name="choice" id="mantra" value="mantra"><i>mantra</i><br>
+          <button class="receive-message">Receive Message</button>
+        </form>
+    </section>
+    <section class="generated-message">
+      <img class="meditation-icon" src="assets/meditate.svg" alt="meditation icon"/>
+      <p class="generated-message-text"></p>
+    </section>
+  </main>
+  <section class="login-form">
+      <form>
+        <h2>Login</h2>
+        <label for="first-name">First Name</label>
+        <input type="text" name="first-name" id="first-name" placeholder="First Name">
+        <label for="last-name">Last Name</label>
+          <input type="text" name="last-name" id="last-name" placeholder="Last Name">
+        <button class="login-submit">Submit</button>
       </form>
   </section>
-  <section class="generated-message">
-    <img class="meditation-icon" src="assets/meditate.svg" alt="meditation icon" width=70% height=70%/>
-    <p class="generated-message-text"></p>
-    <button class="save-message"
-  </section>
   <script type="text/javascript" src="main.js"></script>
-  <!-- <form action="login" method="POST">
-    <fieldset>
-      <legend>Login Form:</legend>
-      First Name: <input type="text" name="first_name">
-      Last Name: <input type="text" name="last_name">
-      <input type="submit" value="Login">
-    </fieldset> -->
-  </form>
 </body>
 </html>

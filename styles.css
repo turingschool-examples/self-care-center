@@ -9,26 +9,76 @@ html {
   width: 100%;
   height: 100%;
 }
+
 * {
   font-family: 'Quicksand', sans-serif;
   margin: auto;
-  text-align: center;
 }
+
+/*~~~~~~~ LOGIN SECTION ~~~~~~~*/
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: white;
+  margin: 0 30% 0 30%;
+}
+
+.login-form h2 {
+  margin-bottom: 30px;
+}
+
+.login-form form {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.login-form input {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.login-form .divider {
+  border-bottom: 1px solid black;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 400px;
+}
+
+/*~~~~~~~~~ MAIN PAGE ~~~~~~~*/
 
 body {
     background: linear-gradient(#134d71, #78a7c6, #f7e4bf) no-repeat;
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
-h1, h3 {
+h1, h2, h3 {
   color: #ffffff;
+  text-align: center;
 }
 
-h3 {
-  margin-top: -100px;
+h1 {
+  margin-bottom: 50px;
+}
+
+h2, h3 {
+  margin-bottom: 15px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-message-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
 }
 
 .message-selection {
@@ -36,7 +86,10 @@ h3 {
   height: 80px;
   width: 400px;
   border-radius: 5px;
+  text-align: center;
+
 }
+
 #mantra {
   margin-left: 100px;
   margin-top: 10px;
@@ -60,28 +113,25 @@ button:hover {
 
 .generated-message {
   background-color: #ffffff;
-  height: 15%;
+  height: 150px;
   width: 60%;
   border-radius: 5px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-#choice {
-  /* margin-top: 20px;
-  margin-bottom: 20px; */
-}
-img {
-  margin-top: 10px;
+.meditation-icon {
+  margin-top: 30px;
+  height: 100px;
+  width: 100px;
 }
 
 .hidden {
-    display: none;
+    display: none!important;
 }
 
 p {
   margin-top: 55px;
 }
-
-/* Can I use flexbox instead of using the margins?
-Is there a better way to make the background go the full length of the page instead of at the end of generate-message?
-Couldn't get button hover status to be white background w/ dark blue border for some odd reason..
-How do I add space inbetween two radio buttons without adding space between the button and the word? other than &nbsp;&nbsp;

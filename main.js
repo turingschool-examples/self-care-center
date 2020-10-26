@@ -4,6 +4,16 @@ var receiveMessageButton = document.querySelector('.receive-message');
 var generatedMessageText = document.querySelector('.generated-message-text');
 var meditationIcon = document.querySelector('.meditation-icon');
 var choice = document.querySelector('.message-selection');
+var messageSection = document.querySelector('.select-message-section');
+var generatedMessageSection = document.querySelector('.generated-message');
+var personalizedMessageLocation = document.querySelector('.welcoming-area');
+var main = document.querySelector('.main')
+//login form
+var loginForm = document.querySelector('.login-form');
+var loginSubmitButton = document.querySelector('.login-submit');
+var firstName = document.querySelector('.first-name');
+var lastName = document.querySelector('.last-name');
+var firstNameLocation = document.querySelector('.welcoming-area');
 
 var affirmations = [
   "I forgive myself and set myself free.",
@@ -37,23 +47,44 @@ var mantras = [
   "Onward and upward.",
   "I am the sky, the rest is weather."
 ];
-
-var savedAffirmations = [];
-var savedMantras = [];
-var currentAffirmation;
-var currentMantra;
+//
+// var currentAffirmation;
+// var currentMantra;
+// var firstName;
 
 //eventlisteners
+// window.addEventListener('load', showLogin);
+loginSubmitButton.addEventListener('click', generatePersonalizedWelcome);
 receiveMessageButton.addEventListener('click', generateMessage);
 
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
-};
+// function showLogin() {
+//   loginForm.classList.remove('hidden');
+//   messageSection.classList.add('hidden');
+//   generatedMessageSection.classList.add('hidden');
+// }
+
+//thinking I don't really need showLogin function
+
+function hideLogin() {
+  loginForm.classList.add('hidden');
+  main.classList.remove('hidden');
+}
+
+function generatePersonalizedWelcome() {
+  event.preventDefault();
+  hideLogin();
+  var firstName = firstName.innerText;
+  firstNameLocation.push(`Welcome to your new inner-calm, ${firstName}!`);
+}
 
 function hideImage() {
   meditationIcon.classList.add('hidden');
   generatedMessageText.classList.remove('hidden');
 }
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+};
 
 function generateMessage() {
   event.preventDefault();
