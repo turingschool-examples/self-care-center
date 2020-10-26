@@ -28,6 +28,7 @@ var affirmations = ["I forgive myself and set myself free.",
 "I honor my body by trusting the signals that it sends me.",
 "I manifest perfect health by making smart choices."]
 
+feature/show-message-to-user
 var messageSubmissionForm = document.querySelector("form");
 
 messageSubmissionForm.addEventListener('submit', sayingAndDisplaying);
@@ -49,16 +50,28 @@ function sayingAndDisplaying(event) {
   }
 }
 
+
+var messageToBeViewed = undefined
+ main
+
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
 function getRandomMantra() {
   var randomMantra = mantras[getRandomIndex(mantras)];
+ feature/show-message-to-user
   return randomMantra;
+
+  messageToBeViewed = randomMantra;
+ main
 }
 
 function getRandomAffirmation() {
   var randomAffirmation = affirmations[getRandomIndex(affirmations)];
+ feature/show-message-to-user
   return randomAffirmation;
+
+  messageToBeViewed = randomAffirmation;
+ main
 }

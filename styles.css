@@ -17,6 +17,7 @@ black - #000000; */
 
 .self-care {
   margin: 3.5%;
+ feature/show-message-to-user
   font-family: 'Quicksand', sans-serif;
   font-size: 200%;
   color: #ffffff;
@@ -30,6 +31,21 @@ black - #000000; */
   margin-top: 3%;
 }
 
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 200%;
+  color: #ffffff;
+  /* justify-content: center; */
+}
+
+.message-type {
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  font-size: 150%;
+  margin-top: 3%;
+}
+
+ main
 .message-choice {
   display: flex;
   flex-direction: column;
@@ -54,6 +70,7 @@ black - #000000; */
 #radio-right {
 }
 
+ feature/show-message-to-user
 .message-align {
   display: flex;
   flex-direction: column;
@@ -61,6 +78,8 @@ black - #000000; */
   align-self: center;
 }
 
+
+ main
 #receive-message {
   display:flex;
   justify-content: center;
