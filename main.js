@@ -23,35 +23,40 @@ openFormButton.addEventListener("click", openUserMessageForm)
 submitUserMessageButton.addEventListener("click", submitUserMessage)
 cancelFormButton.addEventListener("click", closeUserMessageForm)
 
-function addToFavorites(message) {
-  message.favorite = true
+function addToFavorites(currentMessage) {
+  currentMessage.favorite = true
   resetForm()
   hideButton.classList.add("hidden")
   favoriteButton.classList.add("hidden")
 }
 
-function hideMessage(newMessage) {
-  newMessage.hide = true
-  // this is not affecting this.hide
-  // but if i un-comment-out this.hide in the constructor
-  // that will reset it to false every time the constructor runs
-  // which is every time the createMessageClass function runs
-  // which is
-  // oh, it's not being run
+function hideMessage(currentMessage) {
+  currentMessage.hide = true
   resetForm()
   hideButton.classList.add("hidden")
   favoriteButton.classList.add("hidden")
 }
 
-function createMessageClass(newMessage) { // do i have to pass anything here
+function combineTexts(type) {
+  if (type === "affirmation") {
+    var allAffs = allMessages.defaultAffs.concat(allMessages.userAffs)
+    this.messageText = allAffs[Math.floor(Math.random() * allAffs.length)]
+  } else if (type === "mantra") {
+    var allMantras = allMessages.defaultMantras.concat(allMessages.userMantras)
+    this.messageText = allMantras[Math.floor(Math.random() * allMantras.length)]
+  }
+}
+
+
+// at least now i'm getting an undefined instead of an [object object]
+function createMessageClass(newMessage) {
   if (document.querySelector("#affirmation-button").checked) {
+    var newMessage = new Messages("affirmation").messageText
     combineTexts("affirmation")
-    var newMessage = new Messages("affirmation")
-    // newMessage.type = "affirmation"
     displayMessage(newMessage)
   } else if (document.querySelector("#mantra-button").checked) {
-    var newMessage = new Messages("mantra")
-    // newMessage.type = "mantra"
+    var newMessage = new Messages("mantra").messageText
+    combineTexts("mantra")
     displayMessage(newMessage)
   }
 }
@@ -126,6 +131,7 @@ function getRandomMessage(array) {
 }
 
 function displayMessage(showThisMessage) {
+  showThisMessage = this.messageText
   meditateIcon.classList.toggle("hidden")
   bottomBoxContent.classList.add("message-text")
   bottomBoxContent.innerHTML = showThisMessage

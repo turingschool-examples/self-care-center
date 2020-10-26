@@ -1,17 +1,8 @@
 class Messages {
   constructor(type) {
     this.type = type;
-    // this.messageText = ""; // i want this to run combineTexts
-  }
-}
-
-function combineTexts(type) {
-  if (this.type === "affirmation") {
-    var chooseFrom = allMessages.defaultAffs.concat(allMessages.userAffs)[Math.floor(Math.random() * chooseFrom)]
-    // this.messageText = chooseFrom
-  } else {
-    var chooseFrom = allMessages.defaultMantras.concat(allMessages.userMantras)[Math.floor(Math.random() * chooseFrom)]
-    // this.messageText = chooseFrom
+    this.favorite = false;
+    this.hide = false;
   }
 }
 
