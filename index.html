@@ -8,37 +8,47 @@
 </head>
 
 <body>
-    <h1>✨ Self Care Center ✨</h1>
-    <h2>Which type of message?</h2>
-    <div class="center">
-        <div class="top-box">
-            <form>
-                <div class="boxes">
-                    <div>
-                        <input type="radio" name="choice" id="mantra" value="mantra">
-                        <label>mantra</label>
+
+    <section class="login-form">
+        <form>
+            <label for="name">Add Your Name To Begin</label>
+            <input type="text" name="name" id="name-input" onfocus="this.value=''">
+            <button class="login-button"> Let's Get Started</button>
+        </form>
+    </section>
+
+    <div class="main-page">
+        <h1>✨ Self Care Center ✨</h1>
+        <h2>Which type of message?</h2>
+        <div class="center">
+            <div class="top-box">
+                <form>
+                    <div class="boxes">
+                        <div>
+                            <input type="radio" name="choice" id="mantra" value="mantra">
+                            <label>mantra</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="choice" id="affirmation" value="affirmation">
+                            <label>affirmation</label>
+                        </div>
                     </div>
-                    <div>
-                        <input type="radio" name="choice" id="affirmation" value="affirmation">
-                        <label>affirmation</label>
-                    </div>
-                </div>
-            </form>
-            <button class="receive-message-button">Receive Message</button>
-            <button class="clear-message-button">Clear Message </button>
-        </div>
-    </div>
-    <div class="bottom-center">
-        <div class="bottom-box">
-            <div>
-                <p class="replace"></p>
+                </form>
+                <button class="receive-message-button">Receive Message</button>
+                <button class="clear-message-button">Clear Message </button>
             </div>
-            <img class="zenIcon" src="./assets/meditate.svg">
-            <div class="message-container hidden"></div>
         </div>
-    </div>
-    <div>
-        <!-- <p class="item" id="replace"></p> -->
+        <div class="bottom-center">
+            <div class="bottom-box">
+                <div>
+                    <!-- <p class="replace"></p> -->
+                </div>
+                <img class="zenIcon" src="./assets/meditate.svg">
+                <div class="message-container hidden"></div>
+            </div>
+        </div>
+        <div>
+        </div>
     </div>
     <script type="text/javascript " src="data.js "></script>
     <script type="text/javascript " src="main.js "></script>

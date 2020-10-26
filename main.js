@@ -3,7 +3,12 @@ var zen = document.querySelector('.zenIcon');
 var returnMessage = document.querySelector('.replace');
 var receiveBtn = document.querySelector('.receive-message-button');
 var clearBtn = document.querySelector('.clear-message-button');
-var messageContainer = document.querySelector('message-container');
+var sectionLogin = document.querySelector('.login-page');
+var sectionMain = document.querySelector(".main-page");
+
+// var hideMainPage = document.querySelector(".hide-main");
+// var loginPage = document.querySelector(".login");
+
 
 if (selects[0].checked === false || selects[1].checked === false) {
     receiveBtn.disabled = true;
@@ -12,6 +17,7 @@ for (var i = 0; i < selects.length; i++) {
     selects[i].addEventListener('input', enableReceiveButton)
 }
 
+window.addEventListener('load', hideMain)
 receiveBtn.addEventListener('click', showMessage)
 clearBtn.addEventListener('click', clearMessage)
 
@@ -44,3 +50,12 @@ function clearMessage() {
     zen.classList.remove('hidden')
 
 }
+
+
+function hideMain() {
+    sectionMain.classList.add('hidden')
+}
+// showLogin() {
+//     hideMainPage.classList.add("hidden")
+//     loginPage.classList.remove("hidden")
+// }

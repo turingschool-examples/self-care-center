@@ -122,3 +122,30 @@ h2 {
     border-radius: .5em;
     margin-inline-start: 60%;
 }
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.login-form form {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.login-form input {
+    display: block;
+    margin-bottom: 20px;
+    width: 40%;
+}
+
+.login-form button {
+    background-color: #134d71;
+    font-family: 'Quicksand', sans-serif;
+    width: 40%;
+    padding: 10px;
+    color: #FFFFFF;
+}
