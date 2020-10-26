@@ -48,26 +48,62 @@ function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 }
 
-function insertSaying() {
-    event.preventDefault();
-    buddha.style.display = 'none';
-    clearOut.disabled = false;
-    for (var i = 0; i < radios.length; i++) {
-        if (radios[i].checked === true) {
-            if (radios[i].value == 'affirmations') {
-                sayDisplay.innerText = affirmations[getRandomIndex(affirmations)]
-            } else if (radios[i].value == 'mantras') {
-                sayDisplay.innerText = mantras[getRandomIndex(mantras)]
-            }
-        }
+function insertSaying(/* You're going to need to pass in the event here. */) {
+  event.preventDefault(); // This line will blow up.
+  buddha.style.display = 'none';
+  clearOut.disabled = false;
+  /**
+   * So, how does this loop make you feel? Sometimes we'll use the term
+   * "code smell."  We've got a loop. That's fine. In that loop, we have
+   * a conditional and then another conditional inside of that conditional.
+   * The term we use to describe what's going on is "cyclomatic complexity."
+   * Basically, there are a bunch of ways that logic could play out.
+   */
+  for (var i = 0; i < radios.length; i++) {
+    /**
+     * Here, you could just do `radios[i].checked` since that value will
+     * already be `true` or `false`, right? Even better, we can just opt
+     * out of this iteration if it's *not* true.
+     *
+     * You could do something like:
+     *
+     * if (!radios[i].checked) { continue };
+     *
+     * This will skip you to the next turn of the loop.
+     */
+    if (radios[i].checked === true) {
+      /**
+       * These two are super similar and we *could* figure out clever ways
+       * to do it dynamically with a single line of code, but it's probably
+       * not worth it at this moment.
+       *
+       * This is more personal preference than advice, but I might do
+       * something like:
+       *
+       * const text = {
+       *   affirmations() { return affirmations[getRandomIndex(affirmations)] },
+       *   mantras() { return mantras[getRandomIndex(mantras)] },
+       * };
+       *
+       * sayDisplay.innerText = text[radios[i].value]();
+       *
+       * This might be overkill, but like let's say the code grew, you could just
+       * add more options to that object and not have more `else-if` statements.
+       */
+      if (radios[i].value === 'affirmations') {
+        sayDisplay.innerText = affirmations[getRandomIndex(affirmations)];
+      } else if (radios[i].value === 'mantras') {
+        sayDisplay.innerText = mantras[getRandomIndex(mantras)];
+      }
     }
-};
+  }
+}
 
 function clearBox() {
-    sayDisplay.innerText = '';
-    buddha.style.display = 'initial';
-    clearOut.disabled = true;
-};
+  sayDisplay.innerText = '';
+  buddha.style.display = 'initial';
+  clearOut.disabled = true;
+}
 
 // function disableButton() {
 //     if (event.target.checked) {
