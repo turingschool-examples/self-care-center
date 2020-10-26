@@ -103,7 +103,7 @@ function clearBox() {
 // };
 
 function addToFavorites(event) {
-    if (event.target.matches('.favorite ')) {
+    if (event.target.matches('.favorite ') && (!favoritesArray.includes(sayingToSave))) {
         favoritesArray.push(sayingToSave);
     }
 };

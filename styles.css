@@ -12,6 +12,10 @@ html {
     height: 100%;
 }
 
+h1 {
+    margin-bottom: 15%;
+}
+
 h1,
 h2 {
     font-family: 'Quicksand', sans-serif;
@@ -75,15 +79,17 @@ main {
 
 .displayed-saying {
     padding: 5%;
+    width: 100%;
+    font-size: 1.5em;
 }
 
 .message-pad {
     background-color: #ffffff;
     width: 80%;
-    height: 14em;
+    height: 8em;
     align-self: center;
     margin-top: 5%;
-    padding: 5%;
+    padding: 5em;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -102,7 +108,6 @@ main {
 
 .clear {
     width: 30%;
-    height: 10%;
     font-family: 'Quicksand', sans-serif;
     align-self: center;
     background-color: #134d71;
