@@ -63,11 +63,19 @@ h2{
   font-style: italic;
 }
 
+#affirmation-label:hover{
+  font-style: normal;
+}
+
 #mantra-label {
   position: relative;
   font-size: 2vw;
   margin: 0%;
   font-style: italic;
+}
+
+#mantra-label:hover{
+  font-style: normal;
 }
 
 #get-message-button {
@@ -143,6 +151,11 @@ h2{
   font-size: 2vw;
 }
 
+#clear-message {
+  display: flex;
+  flex-direction: row;
+}
+
 #reset-button {
   color: #ffffff;
   background: #134d71;
@@ -161,8 +174,40 @@ h2{
   border: solid 2px #78a7c6;
 }
 
+#favorite-button {
+  background: none;
+  border: none;
+  font-size: 2vw;
+}
+
+#favorite-button:focus {
+  outline: none;
+}
+
+#favorite-button:hover {
+  background: #f7e4bf;
+  border-radius: 5px;
+}
+
+#hide-button {
+  background: none;
+  border: none;
+  font-size: 2vw;
+}
+
+#hide-button:focus {
+  outline: none;
+}
+
+#hide-button:hover {
+  background: #f7e4bf;
+  border-radius: 5px;
+}
+
 #medIcon{
   display: block;
+  margin-top: 5%;
+  margin-bottom: 5%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
@@ -233,10 +278,18 @@ h2{
   font-size: 2vw;
 }
 
+#user-affirmation-label:hover{
+  font-style: normal;
+}
+
 #user-mantra-label {
   position: relative;
   font-size: 2vw;
   margin: 0%;
+}
+
+#user-mantra-label:hover{
+  font-style: normal;
 }
 
 #user-message-input {
@@ -303,7 +356,7 @@ h2{
 @media only screen and (max-width: 600px){
   h1 {
     font-size: 6vw;
-    margin-top: 30%;
+    margin-top: 10%;
   }
   h2{
     font-size: 4vw;
@@ -325,13 +378,13 @@ h2{
     font-size: 3vw;
   }
   #bottom-half {
-    margin-top: 20%;
+    margin-top: 10%;
   }
   #top-box{
-    margin-top: 15%;
+    margin-top: 5%;
   }
   #top-half{
-    margin-top: 30%;
+    margin-top: 5%;
   }
 }
 
@@ -382,11 +435,52 @@ h2{
 
 /* desktop screen */
 @media only screen and (min-width: 992px){
+  h1 {
+    font-size: 6vw;
+    margin-top: 5%;
+    margin-bottom: 0%
+  }
+  h2{
+    font-size: 4vw;
+  }
+  #affirmation-label {
+    font-size: 3.5vw;
+    margin-right: 10%;
+  }
+  #mantra-label {
+    font-size: 3.5vw;
+  }
+  #get-message{
+    font-size: 3vw;
+  }
+  .message-text{
+    font-size: 4vw;
+  }
+  #reset-button {
+    font-size: 3vw;
+    margin: 5%;
+  }
+  #bottom-half {
+    margin-top: 5%;
+  }
+  #top-box{
+    margin-top: 0;
+  }
+  #top-half{
+    margin-top: 0;
+  }
+  #affirmation-button{
+    width: 20px;
+    height: 20px;
+  }
+  #mantra-button{
+    width: 20px;
+    height: 20px;
+  }
 }
 
 /* very large screen */
 @media only screen and (min-width: 1200px){
-  @media only screen and (min-width: 768px){
     h1 {
       font-size: 6vw;
       margin-top: 0%;
@@ -430,4 +524,3 @@ h2{
       height: 20px;
     }
   }
-}

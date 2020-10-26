@@ -8,20 +8,53 @@ var userAffirmationRadioButton = document.querySelector("#user-affirmation-butto
 var userMantraRadioButton = document.querySelector("#user-mantra-button")
 var submitUserMessageButton = document.querySelector("#submit-form")
 var cancelFormButton = document.querySelector("#cancel-form")
+var favoriteButton = document.querySelector("#favorite-button")
+var hideButton = document.querySelector("#hide-button")
 
 var meditateIcon = document.querySelector("#medIcon")
 var bottomBoxContent = document.querySelector("#bottom-box")
 
-getMessageButton.addEventListener("click", getMessageType)
+// getMessageButton.addEventListener("click", getMessageType)
+getMessageButton.addEventListener("click", createMessageClass)
+favoriteButton.addEventListener("click", addToFavorites)
+hideButton.addEventListener("click", hideMessage)
 clearMessageButton.addEventListener("click", resetForm)
 openFormButton.addEventListener("click", openUserMessageForm)
 submitUserMessageButton.addEventListener("click", submitUserMessage)
 cancelFormButton.addEventListener("click", closeUserMessageForm)
 
-function openUserMessageForm() {
-  document.querySelector("#user-message-form").classList.remove("hidden")
-  document.querySelector("#top-half").classList.add("hidden")
-  document.querySelector("#bottom-half").classList.add("hidden")
+function addToFavorites(message) {
+  message.favorite = true
+  resetForm()
+  hideButton.classList.add("hidden")
+  favoriteButton.classList.add("hidden")
+}
+
+function hideMessage(newMessage) {
+  newMessage.hide = true
+  // this is not affecting this.hide
+  // but if i un-comment-out this.hide in the constructor
+  // that will reset it to false every time the constructor runs
+  // which is every time the createMessageClass function runs
+  // which is
+  // oh, it's not being run
+  resetForm()
+  hideButton.classList.add("hidden")
+  favoriteButton.classList.add("hidden")
+}
+
+function createMessageClass(messageText) {
+  var isMantraChecked = document.querySelector("#mantra-button").checked;
+  var isAffirmChecked = document.querySelector("#affirmation-button").checked;
+  if (isAffirmChecked && messageText.hide === false) {
+    // set this.type to affirmation
+    var messageText = getRandomMessage(combinedText)
+    var newMessage = new Messages("affirmation")
+  } else if (isMantraChecked && messageText.hide === false) {
+    // set this.type mantra
+    var messageText = getRandomMessage(combinedText)
+    var newMessage = new Messages("mantra")
+  }
 }
 
 function submitUserMessage() {
@@ -46,6 +79,16 @@ function submitUserMessage() {
   displayMessage(userMessage)
 }
 
+function openUserMessageForm() {
+  document.querySelector("#user-message-form").classList.remove("hidden")
+  document.querySelector("#top-half").classList.add("hidden")
+  document.querySelector("#bottom-half").classList.add("hidden")
+  openFormButton.classList.add("hidden")
+  document.querySelector("#user-message-input").value = ""
+  document.querySelector("#user-mantra-button").checked = false
+  document.querySelector("#user-affirmation-button").checked = false
+}
+
 function closeUserMessageForm() {
   document.querySelector("#user-message-form").classList.add("hidden")
   document.querySelector("#top-half").classList.remove("hidden")
@@ -68,16 +111,16 @@ function getMessageType() {
   var isMantraChecked = document.querySelector("#mantra-button").checked;
   var isAffirmChecked = document.querySelector("#affirmation-button").checked;
   if (isAffirmChecked) {
-    var messageText = getRandom(affText.concat(userAffText))
+    var messageText = getRandomMessage(affText.concat(userAffText))
   } else if (isMantraChecked) {
-    var messageText = getRandom(mantraText.concat(userManText))
+    var messageText = getRandomMessage(mantraText.concat(userManText))
   }
   if (!isMantraChecked && !isAffirmChecked) {
     alert("Please choose a message type.")
   }
 }
 
-function getRandom(array) {
+function getRandomMessage(array) {
   var position = Math.floor(Math.random() * array.length);
   var showThisMessage = array[position]
   displayMessage(showThisMessage)
@@ -88,8 +131,12 @@ function displayMessage(showThisMessage) {
   bottomBoxContent.classList.add("message-text")
   bottomBoxContent.innerHTML = showThisMessage
   clearMessageButton.classList.add("clear-message-text")
+  // how to make clickable area only on the button
+  // even though the button doesn't exist until i put it in here
   clearMessageButton.innerHTML = `<button type="button" id="reset-button">Reset</button>`
   clearMessageButton.classList.remove("hidden")
+  favoriteButton.classList.remove("hidden")
+  hideButton.classList.remove("hidden")
   getMessageButton.classList.add("disabled")
   getMessageButton.disabled = true
   mantraRadioButton.disabled = true
