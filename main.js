@@ -29,44 +29,65 @@ var affirmations = ["I forgive myself and set myself free.",
 "I manifest perfect health by making smart choices."]
 
 var messageSubmissionForm = document.querySelector("form");
-
-messageSubmissionForm.addEventListener('submit', sayingAndDisplaying);
-
 var messageReturn = document.querySelector("#message-return");
-
 var messageSelect = document.getElementsByName("message-select");
+messageSubmissionForm.addEventListener('submit', sayingAndDisplaying);
+var messageToBeViewed = undefined;
+var previouslyViewedMantras = [];
+var previouslyViewedAffirmations = [];
 
 function sayingAndDisplaying(event) {
   event.preventDefault();
   for (var i = 0; i < messageSelect.length; i++) {
     if (messageSelect[i].checked === true) {
       if (messageSelect[i].value === "radio-left") {
-         messageReturn.innerHTML = `<p class="message-align">${getRandomAffirmation()}</p>`;
+         messageReturn.innerHTML = `<p class="message-align">${getRandomPhrase(affirmations)}</p>`;
+         takeFromPhrasesAndGiveToViewedPhrases(affirmations, previouslyViewedAffirmations);
+         resetPhrases(affirmations, previouslyViewedAffirmations);
+         console.log(affirmations, previouslyViewedAffirmations);
       } else if (messageSelect[i].value === "radio-right") {
-         messageReturn.innerHTML = `<p class="message-align">${getRandomMantra()}</p>`;
+         messageReturn.innerHTML = `<p class="message-align">${getRandomPhrase(mantras)}</p>`;
+         takeFromPhrasesAndGiveToViewedPhrases(mantras, previouslyViewedMantras);
+         resetPhrases(mantras, previouslyViewedMantras);
+         console.log(mantras, previouslyViewedMantras);
       }
     }
   }
 }
 
+function takeFromPhrasesAndGiveToViewedPhrases(phrases, viewedPhrases) {
+  if (phrases.includes(messageToBeViewed)) {
+    viewedPhrases.push(messageToBeViewed);
+    phrases.splice(phrases.indexOf(messageToBeViewed), 1);
+  }
+}
 
-var messageToBeViewed = undefined
- main
+//arguments to be passed in the function call below would be mantras and previouslyViewedMantras,
+//or affirmations and previouslyViewedAffirmations
+function resetPhrases(phrases, viewedPhrases) {
+  if (phrases.length === 0) {
+    phrases = viewedPhrases;
+  }
+}
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-function getRandomMantra() {
-  var randomMantra = mantras[getRandomIndex(mantras)];
-  return randomMantra;
-  messageToBeViewed = randomMantra;
+function getRandomPhrase(sayings) {
+  var randomSaying = sayings[getRandomIndex(sayings)];
+  messageToBeViewed = randomSaying;
+  return randomSaying;
 }
 
-function getRandomAffirmation() {
-  var randomAffirmation = affirmations[getRandomIndex(affirmations)];
-  return randomAffirmation;
-
-  messageToBeViewed = randomAffirmation;
-
-}
+// function getRandomMantra() {
+//   var randomMantra = mantras[getRandomIndex(mantras)];
+//   messageToBeViewed = randomMantra;
+//   return randomMantra;
+// }
+//
+// function getRandomAffirmation() {
+//   var randomAffirmation = affirmations[getRandomIndex(affirmations)];
+//   messageToBeViewed = randomAffirmation;
+//   return randomAffirmation;
+// }
