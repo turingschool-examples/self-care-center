@@ -43,13 +43,13 @@ function sayingAndDisplaying(event) {
       if (messageSelect[i].value === "radio-left") {
          messageReturn.innerHTML = `<p class="message-align">${getRandomPhrase(affirmations)}</p>`;
          takeFromPhrasesAndGiveToViewedPhrases(affirmations, previouslyViewedAffirmations);
-         resetPhrases(affirmations, previouslyViewedAffirmations);
-         console.log(affirmations, previouslyViewedAffirmations);
-      } else if (messageSelect[i].value === "radio-right") {
+        // resetPhrases(affirmations, previouslyViewedAffirmations);
+         console.log(affirmations.length, previouslyViewedAffirmations);
+       } else if (messageSelect[i].value === "radio-right") {
          messageReturn.innerHTML = `<p class="message-align">${getRandomPhrase(mantras)}</p>`;
          takeFromPhrasesAndGiveToViewedPhrases(mantras, previouslyViewedMantras);
-         resetPhrases(mantras, previouslyViewedMantras);
-         console.log(mantras, previouslyViewedMantras);
+        // resetPhrases(mantras, previouslyViewedMantras);
+         console.log(mantras.length, previouslyViewedMantras);
       }
     }
   }
@@ -59,19 +59,26 @@ function takeFromPhrasesAndGiveToViewedPhrases(phrases, viewedPhrases) {
   if (phrases.includes(messageToBeViewed)) {
     viewedPhrases.push(messageToBeViewed);
     phrases.splice(phrases.indexOf(messageToBeViewed), 1);
+    if (!phrases.length) {
+      for (var i = 0; i < viewedPhrases.length; i++) {
+        phrases.push(viewedPhrases[i]);
+      }
+      viewedPhrases.splice(0);
+      // also as part of this conditional, an alert should be displayed as such: `Your ${phrases} will now begin to repeat`
+    }
   }
 }
 
 //arguments to be passed in the function call below would be mantras and previouslyViewedMantras,
 //or affirmations and previouslyViewedAffirmations
-function resetPhrases(phrases, viewedPhrases) {
-  if (phrases.length === 0) {
-    phrases = viewedPhrases;
-  }
-}
+// function resetPhrases(phrases, viewedPhrases) {
+//   if (phrases.length === 0) {
+//     phrases = viewedPhrases;
+//   }
+//}
 
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
+function getRandomIndex(phrase) {
+  return Math.floor(Math.random() * phrase.length);
 }
 
 function getRandomPhrase(sayings) {
