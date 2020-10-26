@@ -81,14 +81,25 @@ main {
 }
 
 .say-display {
+    display: flex;
     font-family: 'Quicksand', sans-serif;
     padding-top: 10%;
+    flex-direction: column;
 }
 
 .clear {
     width: 30%;
     height: 10%;
     font-family: 'Quicksand', sans-serif;
+    align-self: center;
+    background-color: #134d71;
+    color: #ffffff;
+    border-radius: 70%;
+    margin-top: 5%;
+}
+
+.favorite {
+    display: flex;
     align-self: center;
     background-color: #134d71;
     color: #ffffff;

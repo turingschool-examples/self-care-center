@@ -34,15 +34,19 @@ var mantra = document.querySelector('#mantra');
 var typeBox = document.querySelector('.type-box');
 var messagePad = document.querySelector('.message-pad');
 var radios = document.getElementsByName('care-choice');
-var sayDisplay = document.querySelector('.say-display')
+var sayDisplay = document.querySelector('.say-display');
 var buddha = document.querySelector('.buddha')
 var clearOut = document.querySelector('.clear')
-
+var favSaying = document.querySelector('.favorite');
+var displayedSaying = document.querySelector('.displayed-saying')
+var favorites = [];
 // var buddhaBounce = new AnimationEvent('animationstart ', { animationName: slide })
 
 typeBox.addEventListener('submit', insertSaying);
 
 clearOut.addEventListener('click', clearBox);
+
+favSaying.addEventListener('click', addToFavorites)
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
@@ -55,9 +59,9 @@ function insertSaying() {
     for (var i = 0; i < radios.length; i++) {
         if (radios[i].checked === true) {
             if (radios[i].value == 'affirmations') {
-                sayDisplay.innerText = affirmations[getRandomIndex(affirmations)]
+                sayDisplay.innerHTML = `<p class="displayed-saying">${affirmations[getRandomIndex(affirmations)]}</p><button class="favorite">Fav Me!</button>`
             } else if (radios[i].value == 'mantras') {
-                sayDisplay.innerText = mantras[getRandomIndex(mantras)]
+                sayDisplay.innerHTML = `<p class="displayed-saying">${mantras[getRandomIndex(mantras)]}</p><button class="favorite">Fav Me!</button>`
             }
         }
     }
@@ -76,3 +80,7 @@ function clearBox() {
 //         clearOut.disabled = true;
 //     }
 // };
+
+function addToFavorites(event) {
+    favorites.push(displayedSaying.value);
+}
