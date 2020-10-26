@@ -77,16 +77,16 @@ function insertSaying() {
 };
 
 function makeMantra() {
-    var newMantra = `${mantras[getRandomIndex(mantras)]}`;
-    sayDisplay.innerHTML = `<p class="displayed-saying">${newMantra}</p><button class="favorite" type="button">Fav Me!</button>`;
-    return newMantra;
+    newSaying = new Saying(`${mantras[getRandomIndex(mantras)]}`, 'mantra');
+    sayDisplay.innerHTML = `<p class="displayed-saying">${newSaying.quote}</p><button class="favorite" type="button">Fav Me!</button>`;
+    return newSaying;
 }
 
 
 function makeAffirmation() {
-    var newAffirmation = `${affirmations[getRandomIndex(affirmations)]}`;
-    sayDisplay.innerHTML = `<p class="displayed-saying">${newAffirmation}</p><button class="favorite" type="button">Fav Me!</button>`;
-    return newAffirmation;
+    newSaying = new Saying(`${affirmations[getRandomIndex(affirmations)]}`, 'affirmation');
+    sayDisplay.innerHTML = `<p class="displayed-saying">${newSaying.quote}</p><button class="favorite" type="button">Fav Me!</button>`;
+    return newSaying;
 }
 
 function goToGallery() {
@@ -112,7 +112,7 @@ function clearBox() {
 function addToFavorites(event) {
     if (event.target.matches('.favorite ')) {
         favoritesArray.push(sayingToSave);
-        favGallery.insertAdjacentHTML('afterbegin', `<p class="saved-sayings">${sayingToSave}</p><button class="delete-saying" type="button">Remove Me From Favorites (For Now)</p>`);
+        favGallery.insertAdjacentHTML('afterbegin', `<p class="saved-sayings">${sayingToSave.quote}</p><button class="delete-saying" type="button">Remove Me From Favorites (For Now)</p>`);
         console.log(sayingToSave);
     }
 };
