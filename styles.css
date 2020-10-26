@@ -43,7 +43,7 @@ h1, h2{
     position: relative;
     margin-top: 4.5em;
 }
-form {
+form, .show-all {
     height: auto;
     width: 45%;
     text-align: center;

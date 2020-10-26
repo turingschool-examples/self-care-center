@@ -15,11 +15,23 @@ var saveMessageButton = document.querySelector('.save-message');
 var saveAffirmationButton = document.querySelector('.mini-affirmation')
 var saveMantraButton = document.querySelector('.mini-mantra');
 
+var showAllSection = document.querySelector('.show-all')
+var showAllButton = document.querySelector('.show-messages');
+var form = document.querySelector('.form');
+var showAffirmationsButton = document.querySelector('.show-affirmations');
+var showMantrasButton = document.querySelector('.show-mantras');
+var showSavedButton = document.querySelector('.show-saved');
+var arrayDisplay = document.querySelector('.array-display')
+
+
 //event listeners
 
 receiveMessageButton.addEventListener('click', returnMessage);
 personalButton.addEventListener('click', showForm)
 saveMessageButton.addEventListener('click', saveMessage);
+showAllButton.addEventListener('click', showAllMessages);
+showAffirmationsButton.addEventListener('click', showAffirmations);
+showMantrasButton.addEventListener('click', showMantras);
 
 //event handlers
 
@@ -64,7 +76,7 @@ function returnMessage() {
     }else if(mantraButton.checked){
         returnMantra();
     }else if(messageInput){
-        personalizeMessage()
+        personalizeMessage();
     }
     receiveMessageButton.classList.add('hidden');
     clearMessageButton.classList.remove('hidden');
@@ -92,13 +104,13 @@ function saveMessage() {
 }
 
 function saveMantra(){
-    if (mantras[mantras.length-1] !== messageInput.value){
+    if (!mantras.includes(messageInput.value)){
     mantras.push(messageInput.value)
     }
 };
 
 function saveAffirmation(){
-    if (affirmations[affirmations.length-1] !== messageInput.value){
+    if (!affirmations.includes(messageInput.value)){
     affirmations.push(messageInput.value)
     }
 };
@@ -108,8 +120,44 @@ function showForm() {
     personalForm.classList.remove('hidden');
     personalButton.classList.add('hidden');
     saveMessageButton.classList.remove('hidden');
-
+    showAllButton.classList.add('hidden');
 }
+
+function showAllMessages() {
+    event.preventDefault();
+    showAllSection.classList.remove('hidden');
+    form.classList.add('hidden');
+}
+
+// function showMessage(type){
+
+//     if (type === 'affirmations'){
+//         showAffirmations();
+//     }else if (type === 'mantras'){
+//         showMantras();
+//     }
+// }
+function showAffirmations(){
+    event.preventDefault();
+    arrayDisplay.classList.toggle('hidden');
+    showAffirmationsButton.innerText = "Hide Affirmations"
+    arrayDisplay.innerHTML = "";
+    for (var i = 0; i < affirmations.length; i++){
+        arrayDisplay.innerHTML += `<p class="array-display">${affirmations[i]}</p>`
+    }
+}    
+
+function showMantras(){
+    event.preventDefault();
+    arrayDisplay.classList.toggle('hidden');
+    showMantrasButton.innerText = "Hide Mantras"
+    arrayDisplay.innerHTML = "";
+    for (var i = 0; i < mantras.length; i++){
+        arrayDisplay.innerHTML += `<p class="array-display">${mantras[i]}</p>`
+    }
+}  
+
+
 
 //pseudo
 //when a user selects a message type, that information should be passed to a function that iterates through it's corresponding array and returns an element.
