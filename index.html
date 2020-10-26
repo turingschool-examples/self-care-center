@@ -8,29 +8,32 @@
 
 <body>
     <h1>✨ Self Care Center ✨</h1>
-    <h2>What type of message?</h2>
+
     <main>
-        <form class="type-box">
-            <article class="radio-pad">
-                <div>
-                    <input type="radio" id="affirmation" name="care-choice" value="affirmations" checked></input>
-                    <label for="affirmation">affirmation</label>
-                </div>
-                <div>
-                    <input type="radio" id="mantra" name="care-choice" value="mantras"></input>
-                    <label for="mantra">mantra</label>
-                </div>
-            </article>
-            <button type="submit" class="submit">Receive Message</button>
-        </form>
-        <section class="message-pad">
-            <img class="buddha" src=" ./assets/meditate.svg " alt="Buddha Man Sam ">
-            <p class="say-display"></p>
-        </section>
-        <button class="clear" type="button" disabled>Clear</button>
-        <button class="view-favorites" type="button">View Favorites</button>
-        <section>
-            <p class="fav-gallery hidden"></p>
+        <div class="main-page">
+            <h2>What type of message?</h2>
+            <form class="type-box">
+                <article class="radio-pad">
+                    <div>
+                        <input type="radio" id="affirmation" name="care-choice" value="affirmations" checked></input>
+                        <label for="affirmation">affirmation</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="mantra" name="care-choice" value="mantras"></input>
+                        <label for="mantra">mantra</label>
+                    </div>
+                </article>
+                <button type="submit" class="submit">Receive Message</button>
+            </form>
+            <section class="message-pad">
+                <img class="buddha" src=" ./assets/meditate.svg " alt="Buddha Man Sam ">
+                <p class="say-display"></p>
+            </section>
+            <button class="clear" type="button" disabled>Clear</button>
+            <button class="view-favorites" type="button">View Favorites</button>
+        </div>
+        <section class="fav-gallery hidden">
+            <button>Back To Main</button>
         </section>
     </main>
     <script type="text/javascript " src="main.js "></script>

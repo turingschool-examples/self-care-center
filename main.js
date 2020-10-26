@@ -41,6 +41,7 @@ var favSaying = document.querySelector('.favorite');
 var displayedSaying = document.querySelector('.displayed-saying');
 var favGallery = document.querySelector('.fav-gallery');
 var viewGallery = document.querySelector('.view-favorites');
+var mainPage = document.querySelector('.main-page');
 var favoritesArray = [];
 sayingToSave = '';
 // var buddhaBounce = new AnimationEvent('animationstart ', { animationName: slide })
@@ -87,8 +88,9 @@ function makeAffirmation() {
 }
 
 function goToGallery() {
-    favGallery.classList.remove('.hidden');
-    typeBox.classList.add('.hidden');
+    console.log("HEY");
+    mainPage.classList.add('hidden');
+    favGallery.classList.remove('hidden');
 
 }
 
@@ -109,7 +111,7 @@ function clearBox() {
 function addToFavorites(event) {
     if (event.target.matches('.favorite ')) {
         favoritesArray.push(sayingToSave);
-        favGallery.innerText += sayingToSave;
+        favGallery.insertAdjacentHTML('afterbegin', `<p class="saved-sayings">${sayingToSave}</p>`);
         console.log(sayingToSave);
     }
 };

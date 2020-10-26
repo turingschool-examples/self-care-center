@@ -25,6 +25,11 @@ h2 {
 }
 
 main {
+    display: flex;
+    justify-content: center;
+}
+
+.main-page {
     width: 100%;
     height: 30em;
     display: flex;
@@ -35,7 +40,7 @@ main {
 .type-box {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 50%;
     height: 8em;
     border-radius: 10px;
@@ -107,6 +112,19 @@ main {
     margin-top: 5%;
 }
 
+.fav-gallery {
+    width: 40%;
+    height: 40%;
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
 .view-favorites {
     width: 30%;
     height: 10%;
@@ -116,6 +134,10 @@ main {
     color: #ffffff;
     border-radius: 70%;
     margin-top: 5%;
+}
+
+.saved-saying {
+    font-family: 'Quicksand', sans-serif;
 }
 
 .buddha {
