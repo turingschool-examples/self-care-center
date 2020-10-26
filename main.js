@@ -28,8 +28,30 @@ var affirmations = ["I forgive myself and set myself free.",
 "I honor my body by trusting the signals that it sends me.",
 "I manifest perfect health by making smart choices."]
 
+var messageSubmissionForm = document.querySelector("form");
+
+messageSubmissionForm.addEventListener('submit', sayingAndDisplaying);
+
+var messageReturn = document.querySelector("#message-return");
+
+var messageSelect = document.getElementsByName("message-select");
+
+function sayingAndDisplaying(event) {
+  event.preventDefault();
+  for (var i = 0; i < messageSelect.length; i++) {
+    if (messageSelect[i].checked === true) {
+      if (messageSelect[i].value === "radio-left") {
+         messageReturn.innerHTML = `<p class="message-align">${getRandomAffirmation()}</p>`;
+      } else if (messageSelect[i].value === "radio-right") {
+         messageReturn.innerHTML = `<p class="message-align">${getRandomMantra()}</p>`;
+      }
+    }
+  }
+}
+
 
 var messageToBeViewed = undefined
+ main
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -37,10 +59,14 @@ function getRandomIndex(array) {
 
 function getRandomMantra() {
   var randomMantra = mantras[getRandomIndex(mantras)];
+  return randomMantra;
   messageToBeViewed = randomMantra;
 }
 
 function getRandomAffirmation() {
   var randomAffirmation = affirmations[getRandomIndex(affirmations)];
+  return randomAffirmation;
+
   messageToBeViewed = randomAffirmation;
+
 }
