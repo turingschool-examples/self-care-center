@@ -54,7 +54,10 @@ clearOut.addEventListener('click', clearBox);
 sayDisplay.addEventListener('click', addToFavorites);
 
 viewGallery.addEventListener('click', goToGallery);
+
 backToMain.addEventListener('click', goHome);
+
+favGallery.addEventListener('click', deleteSaying);
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
@@ -64,7 +67,6 @@ function insertSaying() {
     event.preventDefault();
     buddha.style.display = 'none';
     clearOut.disabled = false;
-
     for (var i = 0; i < radios.length; i++) {
         if (radios[i].checked === true) {
             if (radios[i].value == 'affirmations') {
@@ -83,11 +85,7 @@ function makeSaying(type) {
 }
 
 
-function goToGallery() {
-    hide(mainPage);
-    show(favGallery)
 
-}
 
 function clearBox() {
     sayDisplay.innerText = '';
@@ -106,10 +104,33 @@ function clearBox() {
 function addToFavorites(event) {
     if (event.target.matches('.favorite ')) {
         favoritesArray.push(sayingToSave);
-        favGallery.insertAdjacentHTML('afterbegin', `<p class="saved-sayings">${sayingToSave.quote}</p><button class="delete-saying" type="button">Remove Me From Favorites (For Now)</p>`);
-        console.log(sayingToSave);
+        // favGallery.insertAdjacentHTML('afterbegin', `<p class="saved-sayings">${sayingToSave.quote}</p><button class="delete-saying" type="button" id="${sayingToSave.id}"
+        //     ">Remove Me From Favorites (For Now)</button>`);
+        // console.log(sayingToSave);
     }
 };
+
+function deleteSaying(event) {
+    console.log(event.target);
+    for (var i = 0; i < favoritesArray.length; i++) {
+        if (event.target.id == favoritesArray[i].id) {
+            favoritesArray.splice(i, 1);
+        }
+    }
+
+}
+
+function goToGallery() {
+    builtGallery = '';
+    for (var i = 0; i < favoritesArray.length; i++) {
+        var quoteToDisplay = `<p class="saved-sayings">${favoritesArray[i].quote}</p><button class="delete-saying" type="button" id="${favoritesArray[i].id}"
+        ">Remove Me From Favorites (For Now)</button>`;
+        builtGallery += quoteToDisplay;
+    };
+    favGallery.innerHTML = builtGallery;
+    hide(mainPage);
+    show(favGallery)
+}
 
 function goHome() {
     show(mainPage);
