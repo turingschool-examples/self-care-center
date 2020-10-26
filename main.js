@@ -112,7 +112,7 @@ function clearBox() {
 function addToFavorites(event) {
     if (event.target.matches('.favorite ')) {
         favoritesArray.push(sayingToSave);
-        favGallery.insertAdjacentHTML('afterbegin', `<p class="saved-sayings">${sayingToSave}</p>`);
+        favGallery.insertAdjacentHTML('afterbegin', `<p class="saved-sayings">${sayingToSave}</p><button class="delete-saying" type="button">Remove Me From Favorites (For Now)</p>`);
         console.log(sayingToSave);
     }
 };
