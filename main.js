@@ -104,9 +104,6 @@ function clearBox() {
 function addToFavorites(event) {
     if (event.target.matches('.favorite ')) {
         favoritesArray.push(sayingToSave);
-        // favGallery.insertAdjacentHTML('afterbegin', `<p class="saved-sayings">${sayingToSave.quote}</p><button class="delete-saying" type="button" id="${sayingToSave.id}"
-        //     ">Remove Me From Favorites (For Now)</button>`);
-        // console.log(sayingToSave);
     }
 };
 
@@ -117,8 +114,8 @@ function deleteSaying(event) {
             favoritesArray.splice(i, 1);
         }
     }
-
-}
+    goToGallery();
+};
 
 function goToGallery() {
     builtGallery = '';
@@ -130,7 +127,7 @@ function goToGallery() {
     favGallery.innerHTML = builtGallery;
     hide(mainPage);
     show(favGallery)
-}
+};
 
 function goHome() {
     show(mainPage);
