@@ -40,6 +40,7 @@ var clearOut = document.querySelector('.clear')
 var favSaying = document.querySelector('.favorite');
 var displayedSaying = document.querySelector('.displayed-saying')
 var favoritesArray = [];
+sayingToSave = '';
 // var buddhaBounce = new AnimationEvent('animationstart ', { animationName: slide })
 
 typeBox.addEventListener('submit', insertSaying);
@@ -60,23 +61,25 @@ function insertSaying() {
     for (var i = 0; i < radios.length; i++) {
         if (radios[i].checked === true) {
             if (radios[i].value == 'affirmations') {
-                makeAffirmation();
+                sayingToSave = makeAffirmation();
             } else if (radios[i].value == 'mantras') {
-                makeMantra();
+                sayingToSave = makeMantra();
             }
         }
     }
 };
 
 function makeMantra() {
-    var newMantra = `<p class="displayed-saying">${mantras[getRandomIndex(mantras)]}</p><button class="favorite" type='button'>Fav Me!</button>`;
-    sayDisplay.innerHTML = newMantra;
-}
+    var newMantra = `${mantras[getRandomIndex(mantras)]}`;
+    sayDisplay.innerHTML = `<p class="displayed-saying">${newMantra}</p><button class="favorite" type='button'>Fav Me!</button>`;
+    return newMantra;
 }
 
+
 function makeAffirmation() {
-    var newAffirmation = `<p class="displayed-saying">${affirmations[getRandomIndex(affirmations)]}</p><button class="favorite">Fav Me!</button>`;
-    sayDisplay.innerHTML = newAffirmation;
+    var newAffirmation = `${affirmations[getRandomIndex(affirmations)]}`;
+    sayDisplay.innerHTML = ` <p class="displayed-saying">${newAffirmation}< /p><button class="favorite">Fav Me!</button > `;
+    return newAffirmation;
 }
 
 function clearBox() {
@@ -95,8 +98,8 @@ function clearBox() {
 
 function addToFavorites(event) {
     if (event.target.matches('.favorite ')) {
-        favoritesArray.push(displayedSaying.innerHTML);
-        console.log(displayedSaying);
+        favoritesArray.push(sayingToSave);
+        console.log(sayingToSave);
     }
 };
 
