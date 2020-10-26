@@ -45,9 +45,7 @@ function showMessage() {
   if (mantra.checked === false && affirmation.checked === false) {
     alert("If you want to display a message, choose a choice below.")
   }
-  else { meditationImage.classList.add("hidden");
-  displayedMessage.classList.remove("hidden");
-  clearButton.classList.remove("hidden");
+  else { showMessageClearButton();
   grabMessage();
   }
 };
@@ -66,7 +64,17 @@ function grabMessage (){
 };
 
 function clearMessage() {
+showImage();
+};
+
+function showMessageClearButton() {
+  meditationImage.classList.add("hidden");
+  displayedMessage.classList.remove("hidden");
+  clearButton.classList.remove("hidden");
+};
+
+function showImage() {
   meditationImage.classList.remove("hidden");
   displayedMessage.classList.add("hidden");
   clearButton.classList.add("hidden");
-};
+}
