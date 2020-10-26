@@ -1,12 +1,14 @@
-var selects = document.querySelectorAll('.select');
+var selects = document.querySelectorAll('input[type="radio"]');
 var zen = document.querySelector('.zenIcon');
-var returnMessage = document.querySelector('.message-suggestion');
+var returnMessage = document.querySelector('.replace');
 var receiveBtn = document.querySelector('.receive-message-button');
+var messageContainer = document.querySelector('message-container');
+
 
 receiveBtn.addEventListener('click', showMessage)
 
 for (var i = 0; i < selects.length; i++) {
-    selects[i].addEventListener('input', showMessage)
+    selects[i].addEventListener('input', enableReceiveButton)
 }
 
 function getRandomIndex(array) {
@@ -15,13 +17,24 @@ function getRandomIndex(array) {
 }
 
 function showMessage() {
-    hideMe()
     var mantra = getRandomIndex(mantras)
     var affirmation = getRandomIndex(affirmations)
     if (selects[0].checked) {
-        returnMessage.innerHTML = `${mantra}`
+        returnMessage.innerText = `${mantra}`
+    } else if (selects[1].checked) {
+        returnMessage.innerText = `${affirmation}`
     }
-    if (selects[1].checked) {
-        returnMessage.innerHTML = `${affirmation}`
-    }
+    zen.classList.add('hidden');
+
 }
+
+function enableReceiveButton() {
+    receiveBtn.removeAttribute('disabled')
+}
+
+function uncheckRadios() {
+    selects[0].checked = false
+    selects[1].checked = false
+}
+
+uncheckRadios()
