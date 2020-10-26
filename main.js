@@ -38,7 +38,9 @@ var sayDisplay = document.querySelector('.say-display');
 var buddha = document.querySelector('.buddha')
 var clearOut = document.querySelector('.clear')
 var favSaying = document.querySelector('.favorite');
-var displayedSaying = document.querySelector('.displayed-saying')
+var displayedSaying = document.querySelector('.displayed-saying');
+var favGallery = document.querySelector('.fav-gallery');
+var viewGallery = document.querySelector('.view-favorites');
 var favoritesArray = [];
 sayingToSave = '';
 // var buddhaBounce = new AnimationEvent('animationstart ', { animationName: slide })
@@ -48,6 +50,8 @@ typeBox.addEventListener('submit', insertSaying);
 clearOut.addEventListener('click', clearBox);
 
 sayDisplay.addEventListener('click', addToFavorites);
+
+viewGallery.addEventListener('click', goToGallery);
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
@@ -71,15 +75,21 @@ function insertSaying() {
 
 function makeMantra() {
     var newMantra = `${mantras[getRandomIndex(mantras)]}`;
-    sayDisplay.innerHTML = `<p class="displayed-saying">${newMantra}</p><button class="favorite" type='button'>Fav Me!</button>`;
+    sayDisplay.innerHTML = `<p class="displayed-saying">${newMantra}</p><button class="favorite" type="button">Fav Me!</button>`;
     return newMantra;
 }
 
 
 function makeAffirmation() {
     var newAffirmation = `${affirmations[getRandomIndex(affirmations)]}`;
-    sayDisplay.innerHTML = ` <p class="displayed-saying">${newAffirmation}< /p><button class="favorite">Fav Me!</button > `;
+    sayDisplay.innerHTML = `<p class="displayed-saying">${newAffirmation}</p><button class="favorite" type="button">Fav Me!</button>`;
     return newAffirmation;
+}
+
+function goToGallery() {
+    favGallery.classList.remove('.hidden');
+    typeBox.classList.add('.hidden');
+
 }
 
 function clearBox() {
@@ -99,6 +109,7 @@ function clearBox() {
 function addToFavorites(event) {
     if (event.target.matches('.favorite ')) {
         favoritesArray.push(sayingToSave);
+        favGallery.innerText += sayingToSave;
         console.log(sayingToSave);
     }
 };

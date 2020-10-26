@@ -107,6 +107,17 @@ main {
     margin-top: 5%;
 }
 
+.view-favorites {
+    width: 30%;
+    height: 10%;
+    font-family: 'Quicksand', sans-serif;
+    align-self: center;
+    background-color: #134d71;
+    color: #ffffff;
+    border-radius: 70%;
+    margin-top: 5%;
+}
+
 .buddha {
     width: 10em;
     height: 10em;
