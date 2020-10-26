@@ -68,26 +68,20 @@ function insertSaying() {
     for (var i = 0; i < radios.length; i++) {
         if (radios[i].checked === true) {
             if (radios[i].value == 'affirmations') {
-                sayingToSave = makeAffirmation();
+                sayingToSave = makeSaying(affirmations);
             } else if (radios[i].value == 'mantras') {
-                sayingToSave = makeMantra();
+                sayingToSave = makeSaying(mantras);
             }
         }
     }
 };
 
-function makeMantra() {
-    newSaying = new Saying(`${mantras[getRandomIndex(mantras)]}`, 'mantra');
+function makeSaying(type) {
+    newSaying = new Saying(`${type[getRandomIndex(type)]}`, type);
     sayDisplay.innerHTML = `<p class="displayed-saying">${newSaying.quote}</p><button class="favorite" type="button">Fav Me!</button>`;
     return newSaying;
 }
 
-
-function makeAffirmation() {
-    newSaying = new Saying(`${affirmations[getRandomIndex(affirmations)]}`, 'affirmation');
-    sayDisplay.innerHTML = `<p class="displayed-saying">${newSaying.quote}</p><button class="favorite" type="button">Fav Me!</button>`;
-    return newSaying;
-}
 
 function goToGallery() {
     hide(mainPage);
