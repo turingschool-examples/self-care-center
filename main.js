@@ -43,17 +43,16 @@ function hideMessage(newMessage) {
   favoriteButton.classList.add("hidden")
 }
 
-function createMessageClass(messageText) {
-  var isMantraChecked = document.querySelector("#mantra-button").checked;
-  var isAffirmChecked = document.querySelector("#affirmation-button").checked;
-  if (isAffirmChecked && messageText.hide === false) {
-    // set this.type to affirmation
-    var messageText = getRandomMessage(combinedText)
+function createMessageClass(newMessage) { // do i have to pass anything here
+  if (document.querySelector("#affirmation-button").checked) {
+    combineTexts("affirmation")
     var newMessage = new Messages("affirmation")
-  } else if (isMantraChecked && messageText.hide === false) {
-    // set this.type mantra
-    var messageText = getRandomMessage(combinedText)
+    // newMessage.type = "affirmation"
+    displayMessage(newMessage)
+  } else if (document.querySelector("#mantra-button").checked) {
     var newMessage = new Messages("mantra")
+    // newMessage.type = "mantra"
+    displayMessage(newMessage)
   }
 }
 
@@ -107,18 +106,18 @@ function resetForm(messageTypeForm) {
   mantraRadioButton.disabled = false
 }
 
-function getMessageType() {
-  var isMantraChecked = document.querySelector("#mantra-button").checked;
-  var isAffirmChecked = document.querySelector("#affirmation-button").checked;
-  if (isAffirmChecked) {
-    var messageText = getRandomMessage(affText.concat(userAffText))
-  } else if (isMantraChecked) {
-    var messageText = getRandomMessage(mantraText.concat(userManText))
-  }
-  if (!isMantraChecked && !isAffirmChecked) {
-    alert("Please choose a message type.")
-  }
-}
+// function getMessageType() {
+//   var isMantraChecked = document.querySelector("#mantra-button").checked;
+//   var isAffirmChecked = document.querySelector("#affirmation-button").checked;
+//   if (isAffirmChecked) {
+//     var messageText = getRandomMessage(affText.concat(userAffText))
+//   } else if (isMantraChecked) {
+//     var messageText = getRandomMessage(mantraText.concat(userManText))
+//   }
+//   if (!isMantraChecked && !isAffirmChecked) {
+//     alert("Please choose a message type.")
+//   }
+// }
 
 function getRandomMessage(array) {
   var position = Math.floor(Math.random() * array.length);
