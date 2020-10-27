@@ -80,12 +80,19 @@ darkModeButton.addEventListener("click", toggleDarkMode);
 
 messageDisplay.addEventListener("click", displayAuthor);
 
-recieveMessageButton.addEventListener("click", function(event) {
+recieveMessageButton.addEventListener("click", updateAndDisplayMessage);
+
+function updateAndDisplayMessage() {
   var selectedMessageType = new FormData(chooseMessageForm);
   var output = "";
   for (const entry of selectedMessageType) {
     output = entry[1];
   };
+  updateCurrentMessage(output)
+  displayMessage();
+}
+
+function updateCurrentMessage(output) {
   if(output === "mantra") {
     currentPoster = mantras[getRandomIndex(mantras)];
     currentAuthor = affirmationsAuthors[getRandomIndex(mantras)];
@@ -93,11 +100,10 @@ recieveMessageButton.addEventListener("click", function(event) {
     currentPoster = affirmations[getRandomIndex(affirmations)];
     currentAuthor = mantrasAuthors[getRandomIndex(affirmations)];
   } else if(output === "tough love") {
-  currentPoster = toughies[getRandomIndex(toughies)];
-  currentAuthor = toughiesAuthors[getRandomIndex(toughies)];
+    currentPoster = toughies[getRandomIndex(toughies)];
+    currentAuthor = toughiesAuthors[getRandomIndex(toughies)];
   }
-  displayMessage();
-}, false);
+}
 
 function displayMessage() {
   messageDisplay.innerHTML = `<p>${currentPoster}</p>`;
@@ -109,11 +115,15 @@ function displayAuthor() {
 }
 
 function toggleDarkMode() {
+  toggleDarkModeButtonLabel();
   darkModeButton.classList.toggle('lightmode-button');
   recieveMessageButton.classList.toggle('receive-message-dark');
   messageDisplay.classList.toggle('box-dark');
   chooseMessageForm.classList.toggle('box-dark');
   page.classList.toggle('html-dark');
+}
+
+function toggleDarkModeButtonLabel() {
   if(darkModeButton.innerText === "Dark Mode") {
     darkModeButton.innerText = "Light Mode";
   } else {
