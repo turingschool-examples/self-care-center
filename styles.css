@@ -1,4 +1,4 @@
-/* font-family: 'Quicksand', sans-serif;
+        /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
 light-blue - #78a7c6;
@@ -6,149 +6,149 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
-
-html {
-    background: linear-gradient(#134d71, #8c9fac, #f7e4bf) no-repeat center fixed;
-    height: 100%;
-}
-
-body {
-    margin: 0;
-}
-
-h1 {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 1.5em;
-    font-size: 2em;
-    color: #FFFFFF;
-    display: flex;
-    justify-content: center;
-}
-
-h2 {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 150px;
-    font-size: 1.5em;
-    color: #FFFFFF;
-    margin-bottom: 1%;
-    margin-top: 7%;
-    display: flex;
-    justify-content: center;
-}
-
-.top-box {
-    height: 8em;
-    width: 25em;
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-}
-
-.boxes {
-    justify-content: space-around;
-    flex-wrap: wrap;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    font-family: 'Quicksand', sans-serif;
-    margin-top: -12%;
-    font-style: italic;
-    font-size: 1.1em;
-}
-
-.bottom-box {
-    margin-top: 15%;
-    height: 12em;
-    width: 35em;
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: space-around;
-    padding-left: 30px;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.receive-message-button {
-    background-color: #134d71;
-    font-family: 'Quicksand', sans-serif;
-    width: 40%;
-    padding: 10px;
-    margin-bottom: -12%;
-    color: #FFFFFF;
-    border-radius: .5em;
-    margin-inline-start: 20;
-}
-
-.zenIcon {
-    height: 5em;
-    width: 5em;
-    display: block;
-    margin: auto;
-}
-
-.hidden {
-    display: none;
-}
-
-.replace {
-    color: black;
-    font-size: 1.1em;
-    justify-content: center;
-    display: flex;
-    font-family: 'Quicksand', sans-serif;
-}
-
-.center,
-.bottom-center {
-    display: flex;
-    justify-content: center;
-}
-
-.clear-message-button {
-    background-color: #134d71;
-    font-family: 'Quicksand', sans-serif;
-    width: 40%;
-    padding: 10px;
-    margin-bottom: -12%;
-    color: #FFFFFF;
-    border-radius: .5em;
-    margin-inline-start: 60%;
-}
-
-.main-login {
-    height: 100vh;
-}
-
-.main-login form {
-    align-content: center;
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-}
-
-.main-login input {
-    display: block;
-    margin-bottom: 20px;
-    width: 40%;
-}
-
-.main-login button {
-    background-color: #134d71;
-    font-family: 'Quicksand', sans-serif;
-    width: 40%;
-    padding: 10px;
-    color: #FFFFFF;
-}
-
-label {
-    font-family: 'Quicksand', sans-serif;
-    color: black;
-}
+        
+        html {
+            background: linear-gradient(#134d71, #8c9fac, #f7e4bf) no-repeat center fixed;
+            height: 100%;
+        }
+        
+        body {
+            margin: 0;
+        }
+        
+        h1 {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 1.5em;
+            font-size: 2em;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+        }
+        
+        h2 {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 150px;
+            font-size: 1.5em;
+            color: #FFFFFF;
+            margin-bottom: 1%;
+            margin-top: 7%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .top-box {
+            height: 8em;
+            width: 25em;
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+        
+        .boxes {
+            justify-content: space-around;
+            flex-wrap: wrap;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            font-family: 'Quicksand', sans-serif;
+            margin-top: -12%;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+        
+        .bottom-box {
+            margin-top: 15%;
+            height: 12em;
+            width: 35em;
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: space-around;
+            padding-left: 30px;
+        }
+        
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .receive-message-button {
+            background-color: #134d71;
+            font-family: 'Quicksand', sans-serif;
+            width: 40%;
+            padding: 10px;
+            margin-bottom: -12%;
+            color: #FFFFFF;
+            border-radius: .5em;
+            margin-inline-start: 20;
+        }
+        
+        .zenIcon {
+            height: 5em;
+            width: 5em;
+            display: block;
+            margin: auto;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .replace {
+            color: black;
+            font-size: 1.1em;
+            justify-content: center;
+            display: flex;
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        .center,
+        .bottom-center {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .clear-message-button {
+            background-color: #134d71;
+            font-family: 'Quicksand', sans-serif;
+            width: 40%;
+            padding: 10px;
+            margin-bottom: -12%;
+            color: #FFFFFF;
+            border-radius: .5em;
+            margin-inline-start: 60%;
+        }
+        
+        .main-login {
+            height: 100vh;
+        }
+        
+        .main-login form {
+            align-content: center;
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+        }
+        
+        .main-login input {
+            display: block;
+            margin-bottom: 20px;
+            width: 40%;
+        }
+        
+        .main-login button {
+            background-color: #134d71;
+            font-family: 'Quicksand', sans-serif;
+            width: 40%;
+            padding: 10px;
+            color: #FFFFFF;
+        }
+        
+        label {
+            font-family: 'Quicksand', sans-serif;
+            color: black;
+        }
