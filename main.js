@@ -1,8 +1,9 @@
 
 var recieveMessageButton = document.querySelector('#receive-message');
 var chooseMessageForm = document.querySelector('form');
-var messageDisplay = document.querySelector('#message-box');
 var darkModeButton = document.querySelector('#darkmode-button');
+
+var messageDisplay = document.querySelector('#message-box');
 var page = document.querySelector('html');
 
 
@@ -17,7 +18,13 @@ var affirmations = [
 ]
 
 var affirmationsAuthors = [
-  "Søren Kierkegaard","Jean-Paul Sartre","Epicurus","Seneca the Younger","Gottfried Leibniz", "G.W.F. Hegel", "Rene Descartes"
+  "Søren Kierkegaard",
+  "Jean-Paul Sartre",
+  "Epicurus",
+  "Seneca the Younger",
+  "Gottfried Leibniz",
+  "G.W.F. Hegel",
+  "Rene Descartes"
 ]
 
 var mantras = [
@@ -25,29 +32,45 @@ var mantras = [
   "In everything, there is a share of everything.",
   "I can control my passions and emotions if I can understand their nature.",
   "Life must be understood backward. But it must be lived forward.",
-  "No one's knowledge here can go beyond one's experience",
-  "Entities should not be multiplied unnecessarily."
+  "My knowledge here cannot go beyond my experience",
+  "Entities should not be multiplied unnecessarily.",
   "To be is to be perceived.",
   "Whereof one cannot speak, thereof one must be silent.",
 ]
 
-var mantraAuthors = [
-"William of Ockham"
+var mantrasAuthors = [
+  "St. Augustine",
+  "Anaxagoras",
+  "Spinoza",
+  "Søren Kierkegaard",
+  "John Locke",
+  "William of Ockham",
+  "George Berkeley",
+  "Ludwig Wittgenstein"
 ]
 
 var toughies = [
   "The life of man (in a state of nature) is solitary, poor, nasty, brutish, and short.",
   "He who thinks great thoughts, often makes great errors.",
   "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
-  "Only one man ever understood me, and he didn’t understand me."
+  "Only one man ever understood me, and he didn’t understand me.",
   "Things alter for the worse spontaneously, if they be not altered for the better designedly.",
   "I should never die for my beliefs because I might be wrong",
   "I don’t know why we are here, but I’m pretty sure it is not in order to enjoy ourselves"
 ]
 
 var toughiesAuthors = [
-
+  "Thomas Hobbes",
+  "Martin Heidegger",
+  "Aristotle",
+  "G.W.F. Hegel",
+  "Francis Bacon",
+  "Bertrand Russell",
+  "Ludwig Wittgenstein"
 ]
+
+var currentMessage = "";
+var currentAuthor = "";
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -55,23 +78,35 @@ function getRandomIndex(array) {
 
 darkModeButton.addEventListener("click", toggleDarkMode);
 
+messageDisplay.addEventListener("click", displayAuthor);
+
 recieveMessageButton.addEventListener("click", function(event) {
   var selectedMessageType = new FormData(chooseMessageForm);
   var output = "";
   for (const entry of selectedMessageType) {
     output = entry[1];
   };
-  console.log(output);
   if(output === "mantra") {
-    messageDisplay.innerText = mantras[getRandomIndex(mantras)];
+    currentPoster = mantras[getRandomIndex(mantras)];
+    currentAuthor = affirmationsAuthors[getRandomIndex(mantras)];
   } else if(output === "affirmation") {
-    messageDisplay.innerText = affirmations[getRandomIndex(affirmations)];
+    currentPoster = affirmations[getRandomIndex(affirmations)];
+    currentAuthor = mantrasAuthors[getRandomIndex(affirmations)];
   } else if(output === "tough love") {
-  messageDisplay.innerText = toughies[getRandomIndex(toughies)];
-}
+  currentPoster = toughies[getRandomIndex(toughies)];
+  currentAuthor = toughiesAuthors[getRandomIndex(toughies)];
+  }
+  displayMessage();
 }, false);
 
+function displayMessage() {
+  messageDisplay.innerHTML = `<p>${currentPoster}</p>`;
+}
 
+function displayAuthor() {
+ messageDisplay.innerHTML =
+ `<p>${currentPoster}</p> <h3 id="author"> - ${currentAuthor}<h3>`;
+}
 
 function toggleDarkMode() {
   darkModeButton.classList.toggle('lightmode-button');
@@ -84,5 +119,4 @@ function toggleDarkMode() {
   } else {
     darkModeButton.innerText = "Dark Mode";
   }
-  ;
 }
