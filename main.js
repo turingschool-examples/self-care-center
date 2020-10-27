@@ -3,8 +3,14 @@ var zen = document.querySelector('.zenIcon');
 var returnMessage = document.querySelector('.replace');
 var receiveBtn = document.querySelector('.receive-message-button');
 var clearBtn = document.querySelector('.clear-message-button');
-var sectionLogin = document.querySelector('.login-page');
-var sectionMain = document.querySelector(".main-page");
+var startBtn = document.querySelector(".start-button");
+var sectionHome = document.querySelector(".main-login");
+var sectionLanding = document.querySelector(".message-landing");
+var returnGreeting = document.querySelector(".greeting")
+
+// var sectionMain = document.querySelector(".main-page");
+
+
 
 // var hideMainPage = document.querySelector(".hide-main");
 // var loginPage = document.querySelector(".login");
@@ -17,9 +23,10 @@ for (var i = 0; i < selects.length; i++) {
     selects[i].addEventListener('input', enableReceiveButton)
 }
 
-window.addEventListener('load', hideMain)
+window.addEventListener('load', hideMessageLanding)
 receiveBtn.addEventListener('click', showMessage)
 clearBtn.addEventListener('click', clearMessage)
+startBtn.addEventListener('click', showMain)
 
 
 function getRandomIndex(array) {
@@ -52,10 +59,16 @@ function clearMessage() {
 }
 
 
-function hideMain() {
-    sectionMain.classList.add('hidden')
+function hideMessageLanding() {
+    sectionLanding.classList.add('hidden')
+
 }
-// showLogin() {
-//     hideMainPage.classList.add("hidden")
-//     loginPage.classList.remove("hidden")
-// }
+
+
+
+function showMain() {
+    var inputVal = document.getElementById("my-input").value;
+    sectionLanding.classList.remove('hidden');
+    returnGreeting.innerText = `Nice to see you  ${inputVal}.`
+    sectionHome.classList.add("hidden");
+}

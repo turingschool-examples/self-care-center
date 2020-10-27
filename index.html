@@ -9,16 +9,18 @@
 
 <body>
 
-    <section class="login-form">
+    <section class="main-login">
+        <h1>✨ Self Care Center ✨</h1>
         <form>
-            <label for="name">Add Your Name To Begin</label>
-            <input type="text" name="name" id="name-input" onfocus="this.value=''">
-            <button class="login-button"> Let's Get Started</button>
+            <label>Enter Your Name To Begin:</label>
+            <input type="text" id="my-input" onfocus="this.value=''">
+            <button type="button" class="start-button"> Let's Get Started</button>
         </form>
     </section>
+    <!-- <div class="main-page"> -->
 
-    <div class="main-page">
-        <h1>✨ Self Care Center ✨</h1>
+    <section class="message-landing hidden">
+        <h1 class="greeting"> </h1>
         <h2>Which type of message?</h2>
         <div class="center">
             <div class="top-box">
@@ -34,6 +36,7 @@
                         </div>
                     </div>
                 </form>
+                <!-- add type to buttons below? -->
                 <button class="receive-message-button">Receive Message</button>
                 <button class="clear-message-button">Clear Message </button>
             </div>
@@ -41,7 +44,7 @@
         <div class="bottom-center">
             <div class="bottom-box">
                 <div>
-                    <!-- <p class="replace"></p> -->
+                    <p class="replace"></p>
                 </div>
                 <img class="zenIcon" src="./assets/meditate.svg">
                 <div class="message-container hidden"></div>
@@ -49,7 +52,8 @@
         </div>
         <div>
         </div>
-    </div>
+    </section>
+    <!-- </div> -->
     <script type="text/javascript " src="data.js "></script>
     <script type="text/javascript " src="main.js "></script>
 </body>
