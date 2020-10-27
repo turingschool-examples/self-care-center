@@ -122,3 +122,33 @@ h2 {
     border-radius: .5em;
     margin-inline-start: 60%;
 }
+
+.main-login {
+    height: 100vh;
+}
+
+.main-login form {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.main-login input {
+    display: block;
+    margin-bottom: 20px;
+    width: 40%;
+}
+
+.main-login button {
+    background-color: #134d71;
+    font-family: 'Quicksand', sans-serif;
+    width: 40%;
+    padding: 10px;
+    color: #FFFFFF;
+}
+
+label {
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+}
