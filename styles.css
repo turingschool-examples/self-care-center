@@ -37,6 +37,10 @@ html {
   font-style: italic;
 }
 
+.box:nth-child(1) {
+  margin-bottom: 10%;
+}
+
 .box:nth-child(3) {
   height: 80px;
   width: 520px;
@@ -58,7 +62,25 @@ html {
   background: #134d71;
   border-radius:5px;
   color: #ffffff;
-  font-size: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+  font-weight: lighter;
+  font-size: 95%;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#dark-lightmode {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRvMf5eh3UhXzV7umOMPK_jVoOAhtolbGO3-Q&usqp=CAU');
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-weight: bolder;
+  font-style: oblique;
+  font-size: 80%;
+  white-space: normal;
 }
