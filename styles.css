@@ -79,7 +79,7 @@ html {
   height: 80px;
   width: 80px;
   border-radius: 50%;
-  color: #ffffff;
+  color: #f7e4bf;
   font-weight: bolder;
   font-style: oblique;
   font-size: 80%;
@@ -98,11 +98,11 @@ html {
 
 .receive-message-dark {
   background: #134d71 !important;
-  color: #78a7c6 !important;
+  color: #f7e4bf !important;
 }
 
 
 .lightmode-button {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQqT4fukdN9LPDB20yhNSbV48EAwfTzIT00WA&usqp=CAU') !important;
-  color: #000000 !important;
+  color: #134d71 !important;
 }
