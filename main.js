@@ -7,37 +7,46 @@ var page = document.querySelector('html');
 
 
 var affirmations = [
-  "I forgive myself and set myself free.",
-  "I believe I can be all that I want to be.",
-  "I am in the process of becoming the best version of myself.",
-  "I have the freedom & power to create the life I desire.",
-  "I choose to be kind to myself and love myself unconditionally.",
-  "My possibilities are endless.",
-  "I am worthy of my dreams.",
-  "I am enough.",
-  "I deserve to be healthy and feel good.",
-  "I am full of energy and vitality and my mind is calm and peaceful.",
-  "Every day I am getting healthier and stronger.",
-  "I honor my body by trusting the signals that it sends me.",
-  "I manifest perfect health by making smart choices."
+  "The function of prayer is not to influence God, but rather to change the nature of the one who prays",
+  "[I] am condemned to be free",
+  "The greater the difficulty, the more glory in surmounting it.",
+  "Even while they teach, men learn.",
+  "We live in the best of all possible worlds.",
+  "What is rational is actual and what is actual is rational",
+  "I think therefore I am",
+]
+
+var affirmationsAuthors = [
+  "Søren Kierkegaard","Jean-Paul Sartre","Epicurus","Seneca the Younger","Gottfried Leibniz", "G.W.F. Hegel", "Rene Descartes"
 ]
 
 var mantras = [
-  "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.",
-  "Don’t let yesterday take up too much of today.",
-  "Every day is a second chance.",
-  "Tell the truth and love everyone.",
-  "I am free from sadness.",
-  "I am enough.",
-  "In the beginning it is you, in the middle it is you and in the end it is you.",
-  "I love myself.",
-  "I am present now.",
-  "Inhale the future, exhale the past.",
-  "This too shall pass.",
-  "Yesterday is not today.",
-  "The only constant is change.",
-  "Onward and upward.",
-  "I am the sky, the rest is weather."
+  "We are too weak to discover the truth by reason alone.",
+  "In everything, there is a share of everything.",
+  "I can control my passions and emotions if I can understand their nature.",
+  "Life must be understood backward. But it must be lived forward.",
+  "No one's knowledge here can go beyond one's experience",
+  "Entities should not be multiplied unnecessarily."
+  "To be is to be perceived.",
+  "Whereof one cannot speak, thereof one must be silent.",
+]
+
+var mantraAuthors = [
+"William of Ockham"
+]
+
+var toughies = [
+  "The life of man (in a state of nature) is solitary, poor, nasty, brutish, and short.",
+  "He who thinks great thoughts, often makes great errors.",
+  "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+  "Only one man ever understood me, and he didn’t understand me."
+  "Things alter for the worse spontaneously, if they be not altered for the better designedly.",
+  "I should never die for my beliefs because I might be wrong",
+  "I don’t know why we are here, but I’m pretty sure it is not in order to enjoy ourselves"
+]
+
+var toughiesAuthors = [
+
 ]
 
 function getRandomIndex(array) {
@@ -52,13 +61,17 @@ recieveMessageButton.addEventListener("click", function(event) {
   for (const entry of selectedMessageType) {
     output = entry[1];
   };
+  console.log(output);
   if(output === "mantra") {
-    console.log(output);
     messageDisplay.innerText = mantras[getRandomIndex(mantras)];
   } else if(output === "affirmation") {
     messageDisplay.innerText = affirmations[getRandomIndex(affirmations)];
-  }
+  } else if(output === "tough love") {
+  messageDisplay.innerText = toughies[getRandomIndex(toughies)];
+}
 }, false);
+
+
 
 function toggleDarkMode() {
   darkModeButton.classList.toggle('lightmode-button');
@@ -66,4 +79,10 @@ function toggleDarkMode() {
   messageDisplay.classList.toggle('box-dark');
   chooseMessageForm.classList.toggle('box-dark');
   page.classList.toggle('html-dark');
+  if(darkModeButton.innerText === "Dark Mode") {
+    darkModeButton.innerText = "Light Mode";
+  } else {
+    darkModeButton.innerText = "Dark Mode";
+  }
+  ;
 }
