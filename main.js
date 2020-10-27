@@ -42,20 +42,16 @@ function sayingAndDisplaying(event) {
     if (messageSelect[i].checked === true) {
       if (messageSelect[i].value === "radio-left") {
          messageReturn.innerHTML = `<p class="message-align">${getRandomPhrase(affirmations)}</p>`;
-         takeFromPhrasesAndGiveToViewedPhrases(affirmations, previouslyViewedAffirmations);
-        // resetPhrases(affirmations, previouslyViewedAffirmations);
-         console.log(affirmations.length, previouslyViewedAffirmations);
+         noRepeatingMessagesUntilAllAreViewed(affirmations, previouslyViewedAffirmations);
        } else if (messageSelect[i].value === "radio-right") {
          messageReturn.innerHTML = `<p class="message-align">${getRandomPhrase(mantras)}</p>`;
-         takeFromPhrasesAndGiveToViewedPhrases(mantras, previouslyViewedMantras);
-        // resetPhrases(mantras, previouslyViewedMantras);
-         console.log(mantras.length, previouslyViewedMantras);
+         noRepeatingMessagesUntilAllAreViewed(mantras, previouslyViewedMantras);
       }
     }
   }
 }
 
-function takeFromPhrasesAndGiveToViewedPhrases(phrases, viewedPhrases) {
+function noRepeatingMessagesUntilAllAreViewed(phrases, viewedPhrases) {
   if (phrases.includes(messageToBeViewed)) {
     viewedPhrases.push(messageToBeViewed);
     phrases.splice(phrases.indexOf(messageToBeViewed), 1);
@@ -63,19 +59,11 @@ function takeFromPhrasesAndGiveToViewedPhrases(phrases, viewedPhrases) {
       for (var i = 0; i < viewedPhrases.length; i++) {
         phrases.push(viewedPhrases[i]);
       }
+      window.alert('This category of messages has been exhausted and will now begin to repeat.');
       viewedPhrases.splice(0);
-      // also as part of this conditional, an alert should be displayed as such: `Your ${phrases} will now begin to repeat`
     }
   }
 }
-
-//arguments to be passed in the function call below would be mantras and previouslyViewedMantras,
-//or affirmations and previouslyViewedAffirmations
-// function resetPhrases(phrases, viewedPhrases) {
-//   if (phrases.length === 0) {
-//     phrases = viewedPhrases;
-//   }
-//}
 
 function getRandomIndex(phrase) {
   return Math.floor(Math.random() * phrase.length);
@@ -86,15 +74,3 @@ function getRandomPhrase(sayings) {
   messageToBeViewed = randomSaying;
   return randomSaying;
 }
-
-// function getRandomMantra() {
-//   var randomMantra = mantras[getRandomIndex(mantras)];
-//   messageToBeViewed = randomMantra;
-//   return randomMantra;
-// }
-//
-// function getRandomAffirmation() {
-//   var randomAffirmation = affirmations[getRandomIndex(affirmations)];
-//   messageToBeViewed = randomAffirmation;
-//   return randomAffirmation;
-// }
