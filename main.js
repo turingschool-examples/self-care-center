@@ -1,9 +1,9 @@
 
-var affirmationButton = document.querySelector('#affirmation');
-var mantraButton = document.querySelector('#mantra');
 var recieveMessageButton = document.querySelector('#receive-message');
 var chooseMessageForm = document.querySelector('form');
 var messageDisplay = document.querySelector('#message-box');
+var darkModeButton = document.querySelector('#darkmode-button');
+var page = document.querySelector('html');
 
 
 var affirmations = [
@@ -44,6 +44,8 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
+darkModeButton.addEventListener("click", toggleDarkMode);
+
 recieveMessageButton.addEventListener("click", function(event) {
   var selectedMessageType = new FormData(chooseMessageForm);
   var output = "";
@@ -57,3 +59,11 @@ recieveMessageButton.addEventListener("click", function(event) {
     messageDisplay.innerText = affirmations[getRandomIndex(affirmations)];
   }
 }, false);
+
+function toggleDarkMode() {
+  darkModeButton.classList.toggle('lightmode-button');
+  recieveMessageButton.classList.toggle('receive-message-dark');
+  messageDisplay.classList.toggle('box-dark');
+  chooseMessageForm.classList.toggle('box-dark');
+  page.classList.toggle('html-dark');
+}

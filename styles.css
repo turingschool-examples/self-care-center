@@ -56,6 +56,7 @@ html {
   color:#000000;
   margin: 80px;
   font-size: 130%;
+  padding: 30px;
 }
 
 #receive-message {
@@ -73,7 +74,7 @@ html {
   justify-content: flex-end;
 }
 
-#dark-lightmode {
+#darkmode-button {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRvMf5eh3UhXzV7umOMPK_jVoOAhtolbGO3-Q&usqp=CAU');
   height: 80px;
   width: 80px;
@@ -83,4 +84,25 @@ html {
   font-style: oblique;
   font-size: 80%;
   white-space: normal;
+}
+
+.html-dark {
+  background: linear-gradient(#000000, #134d71);
+  color: #f7e4bf;
+}
+
+.box-dark {
+  background: #134d71 !important;
+  color:#f7e4bf !important;
+}
+
+.receive-message-dark {
+  background: #134d71 !important;
+  color: #78a7c6 !important;
+}
+
+
+.lightmode-button {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQqT4fukdN9LPDB20yhNSbV48EAwfTzIT00WA&usqp=CAU') !important;
+  color: #000000 !important;
 }
