@@ -4,5 +4,16 @@ light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
-black - #000000;
-*/
+black - #000000; */
+.header {
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  color: white;
+  font-size: 4em;
+  text-align: center;
+  padding-top: 10px 50px 20px;
+  padding-bottom: 10px 50px 20px;
+}
+
+.gradient {
+  background:linear-gradient(#134d71, #78a7c6, #f7e4bf);
+}
