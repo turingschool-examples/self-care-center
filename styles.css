@@ -6,3 +6,30 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+body {
+  font-family: 'Quicksand', sans-serif;
+  vertical-align: middle;
+}
+div {
+
+}
+
+h1 {
+}
+
+.type-input {
+
+}
+
+.message-display {
+
+}
+
+#bell {
+  height: 50px;
+  width: 40px;
+}
+
+#receive-message {
+
+}
