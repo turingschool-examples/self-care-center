@@ -6,3 +6,23 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+h1, h3, button {
+  font-family: 'Quicksand', sans-serif;
+}
+
+label {
+  font-family: 'Quicksand', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+#home {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+}
