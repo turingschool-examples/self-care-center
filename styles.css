@@ -7,17 +7,54 @@ white - #ffffff;
 black - #000000;
 */
 
-h1, h3, button {
+h1, h2, button {
   font-family: 'Quicksand', sans-serif;
+}
+
+h1, h2, main {
+  text-align: center;
+}
+
+h1, h2 {
+  color: #ffffff;
+}
+
+h2{
+  margin-top: 150px;
+}
+
+.choose-message {
+  background-color: #ffffff;
+  margin:10px 425px 100px 425px;
+  padding: 40px 0 40px 0;
+  border-radius: 7px;
+}
+
+button {
+  color: #000000;
 }
 
 label {
   font-family: 'Quicksand', sans-serif;
+  font-style: italic;
 }
 
-html {
-    height: 100%;
+
+.image {
+  align-content: center;
+  display: inline block;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  max-width: 25px;
+  max-height: 25px;
 }
+
+
+
+
+
 
 #home {
   height: 100%;
