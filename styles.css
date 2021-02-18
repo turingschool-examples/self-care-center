@@ -6,3 +6,74 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+body {
+  background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+/* top half */
+h1 {
+  text-align: center;
+  padding-top: 15px;
+  margin-bottom: 70px;
+}
+
+ .typeOfMessage {
+  display: flex;
+  font-style: italic;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+
+  margin: auto;
+  margin-bottom: 100px;
+  width: 540px;
+  length: 150px;
+  padding-bottom: 100px;
+  background-color: white;
+  color: black;
+}
+
+h2 {
+  text-align: center;
+}
+
+div .affirmation {
+}
+
+.receiveMessage {
+  display: flex;
+  align-self: flex-end;
+  background-color: #134d71;
+  color: white;
+
+}
+
+/* bottom half */
+
+.messageBox {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  margin: auto;
+  width: 700px;
+  length: 400px;
+  padding-top: 75px;
+  background-color: white;
+  color: black;
+}
+
+.meditateImg {
+  display: flex;
+  max-width: 12%;
+  height: auto;
+}
+
+.hidden {
+  display: none;
+}
