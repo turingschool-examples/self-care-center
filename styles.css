@@ -19,7 +19,7 @@ header {
     margin-bottom: 75px;
 }
 
-h2 {
+h3 {
     margin-bottom: 10px;
 }
 
@@ -27,9 +27,9 @@ h2 {
     background: white;
     color: black;
     width: 550px;
-    height: 100px;
+    height: 90px;
     border: solid;
-    border-color: black;
+    border-color: white;
     border-radius: 6px;
     margin-left: auto;
     margin-right: auto;
@@ -38,7 +38,7 @@ h2 {
 .radio-selectors {
     height: 30px;
     width: 65%;
-    margin: 15px auto 10px auto;
+    margin: 15px auto 13px auto;
     font-style: oblique;
 }
 
@@ -52,4 +52,13 @@ h2 {
 
 .mantra-selector {
     float: right;
+}
+
+button {
+    background: #134d71;
+    border: solid;
+    border-radius: 6px;
+    padding: 3.5px 26px;
+    font-family: inherit;
+    color: white;
 }
