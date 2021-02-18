@@ -34,3 +34,22 @@ h2 {
     margin-left: auto;
     margin-right: auto;
 }
+
+.radio-selectors {
+    height: 30px;
+    width: 65%;
+    margin: 15px auto 10px auto;
+    font-style: oblique;
+}
+
+.radio-selectors input {
+    margin-right: 10px;
+}
+
+.affirmation-selector {
+    float: left;
+}
+
+.mantra-selector {
+    float: right;
+}
