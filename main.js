@@ -49,5 +49,7 @@ function displayMessage() {
     message.innerText = mantras[getRandomIndex(mantras)];
   } else if (affButton.checked) {
     message.innerText = affirmations[getRandomIndex(affirmations)];
+  } else {
+    return;
   } bellIcon.classList.add('hidden');
 }
