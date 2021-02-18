@@ -35,12 +35,18 @@ var messages = {
 };
 
 // Selectors
-
+var messageBox = document.querySelector("span");
+var messageRadios = document.querySelectorAll("input");
+var receiveMessageButton = document.querySelector("button");
 
 // Event Listeners
-
+receiveMessageButton.addEventListener("click", displayMessage);
 
 // Event Handlers/Helper Functions
+function displayMessage() {
+    messageBox.innerText = getRandomMessage(messages[getSelection()]);
+}
+
 function getRandomMessage(messageArray) {
     return messageArray[getRandomIndex(messageArray)];
 }
@@ -49,4 +55,12 @@ function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 }
 
-console.log(getRandomMessage(messages.affirmations));
+function getSelection() {
+    var selection;
+
+    for (var i = 0; i < messageRadios.length; i++) {
+        selection = messageRadios[i].value;
+    }
+
+    return selection;
+}

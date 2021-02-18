@@ -23,7 +23,7 @@ h3 {
     margin-bottom: 8px;
 }
 
-.selection-box, .message-box {
+.selection-box, .message-section {
     background: white;
     color: black;
     border: solid;
@@ -65,7 +65,7 @@ button {
     color: white;
 }
 
-.message-box {
+.message-section {
     height: 120px;
     width: 700px;
     margin-left: auto;
