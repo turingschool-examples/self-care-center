@@ -1,3 +1,54 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(to bottom, #134d71 0%, #78a7c6 50%, #f7e4bf 100%);
+  background-repeat: no-repeat;
+}
+
+main {
+  min-height: 100vh;
+}
+
+h1, h2 {
+  color: #ffffff;
+  text-align: center;
+}
+
+.message-form {
+  background-color: #ffffff;
+  height: 8vh;
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  margin: 0 auto
+}
+
+.message-button {
+  color: #ffffff;
+  background-color: #134d71;
+  border-radius: 4px;
+}
+
+.message-display {
+  background-color: #ffffff;
+  height: 15vh;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  margin: 0 auto;
+}
+
+.message-display img {
+  height: 50px;
+}
+
+
+
+
+
+
+
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
