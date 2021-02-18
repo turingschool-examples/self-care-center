@@ -34,3 +34,19 @@ var messages = {
     ]
 };
 
+// Selectors
+
+
+// Event Listeners
+
+
+// Event Handlers/Helper Functions
+function getRandomMessage(messageArray) {
+    return messageArray[getRandomIndex(messageArray)];
+}
+
+function getRandomIndex(array) {
+    return Math.floor(Math.random() * array.length);
+}
+
+console.log(getRandomMessage(messages.affirmations));
