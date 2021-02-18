@@ -5,9 +5,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="main-page">
+    <div class="login-page">
+      <h1 id=login-prompt>&#10024 Enter your name for a personalized self-care message &#10024</h1>
+      <input id="login-box" type="text" value="What is your name?"></input>
+      <button id="login-button">Submit</button>
+    </div>
+    <div class="main-page hidden">
       <h1 id="self-care-header">&#10024
-Self Care Center &#10024</h1>
+        Self Care Center &#10024</h1>
+      <h2 id="welcome-message"></h2
       <h2 id="message-query">Which type of message?</h2>
       <section class="type-input" id="type-input">
         <form>
