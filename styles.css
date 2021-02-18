@@ -16,7 +16,14 @@ body {
   color: #ffffff;
   text-align: center;
   margin-top: 100px;
+}
 
+.message-box {
+  background-color: #ffffff;
+  height: 100px;
+  width: 500px;
+  margin: auto;
+  border-radius: 10px;
 }
 
 /* font-family: 'Quicksand', sans-serif;
