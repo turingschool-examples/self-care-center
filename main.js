@@ -43,14 +43,18 @@ var affirmations = [
   "I manifest perfect health by making smart choices.",
 ]
 
+nameInput.addEventListener('click', removeDefault);
 loginButton.addEventListener('click', enterSite);
 receiveMsgBtn.addEventListener('click', displayMessage);
 
+function removeDefault() {
+  nameInput.value = "";
+}
 function enterSite() {
   var name = nameInput.value;
   mainPage.classList.remove('hidden');
   loginPage.classList.add('hidden');
-  welcomeMsg.innerText = `Welcome, ${name}`;
+  welcomeMsg.innerText = `Hello, ${name}. Click below for some inspiration...`;
 }
 
 function getRandomIndex(array) {
@@ -58,13 +62,13 @@ function getRandomIndex(array) {
 }
 
 function displayMessage() {
-  console.log("buttonclicked");
   if (mantraButton.checked) {
     message.innerText = mantras[getRandomIndex(mantras)];
   } else if (affButton.checked) {
     message.innerText = affirmations[getRandomIndex(affirmations)];
   } else {
     return;
-  } console.log("Bye bell");
+  }
+
   bellIcon.classList.add('hidden');
 }
