@@ -38,13 +38,21 @@ var messages = {
 var messageBox = document.querySelector("span");
 var messageRadios = document.querySelectorAll("input");
 var receiveMessageButton = document.querySelector("button");
+var bellImage = document.querySelector("img");
 
 // Event Listeners
 receiveMessageButton.addEventListener("click", displayMessage);
 
 // Event Handlers/Helper Functions
 function displayMessage() {
+    toggleBell();
     messageBox.innerText = getRandomMessage(messages[getSelection()]);
+}
+
+function toggleBell() {
+    if (!(bellImage.classList.contains("hidden"))) {
+        bellImage.classList.toggle("hidden");
+    }
 }
 
 function getRandomMessage(messageArray) {
@@ -59,7 +67,9 @@ function getSelection() {
     var selection;
 
     for (var i = 0; i < messageRadios.length; i++) {
-        selection = messageRadios[i].value;
+        if (messageRadios[i].checked) {
+            selection = messageRadios[i].value;
+        }
     }
 
     return selection;

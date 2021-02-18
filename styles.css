@@ -78,3 +78,7 @@ button {
 img {
     width: 8%;
 }
+
+.hidden {
+    display: none;
+}
