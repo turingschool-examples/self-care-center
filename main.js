@@ -1,6 +1,6 @@
 var mantraButton = document.querySelector('#mantra');
 var affButton = document.querySelector('#affirmation');
-var receiveMsgBtn =  document.querySelector('.button');
+var receiveMsgBtn =  document.querySelector('#receive-message');
 var message = document.querySelector('#message');
 var bellIcon = document.querySelector('#bell');
 var loginButton = document.querySelector('#login-button');
@@ -58,11 +58,13 @@ function getRandomIndex(array) {
 }
 
 function displayMessage() {
+  console.log("buttonclicked");
   if (mantraButton.checked) {
     message.innerText = mantras[getRandomIndex(mantras)];
   } else if (affButton.checked) {
     message.innerText = affirmations[getRandomIndex(affirmations)];
   } else {
     return;
-  } bellIcon.classList.add('hidden');
+  } console.log("Bye bell");
+  bellIcon.classList.add('hidden');
 }
