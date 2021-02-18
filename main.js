@@ -3,6 +3,11 @@ var affButton = document.querySelector('#affirmation');
 var receiveMsgBtn =  document.querySelector('.button');
 var message = document.querySelector('#message');
 var bellIcon = document.querySelector('#bell');
+var loginButton = document.querySelector('#login-button');
+var name = document.querySelector('#login-box');
+var mainPage = document.querySelector('.main-page');
+var loginPage = document.querySelector('.login-page');
+var welcomeMsg = document.querySelector('#welcome-message');
 
 var mantras = [
   "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.",
@@ -38,7 +43,14 @@ var affirmations = [
   "I manifest perfect health by making smart choices.",
 ]
 
+loginButton.addEventListener('click', enterSite);
 receiveMsgBtn.addEventListener('click', displayMessage);
+
+function enterSite() {
+  mainPage.classList.remove('hidden');
+  loginPage.classList.add('hidden');
+  welcome.innerHTML = `Welcome, ${name.value}`;
+}
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
