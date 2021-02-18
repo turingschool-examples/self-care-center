@@ -4,7 +4,7 @@ var receiveMsgBtn =  document.querySelector('.button');
 var message = document.querySelector('#message');
 var bellIcon = document.querySelector('#bell');
 var loginButton = document.querySelector('#login-button');
-var name = document.querySelector('#login-box');
+var nameInput = document.querySelector('#login-box');
 var mainPage = document.querySelector('.main-page');
 var loginPage = document.querySelector('.login-page');
 var welcomeMsg = document.querySelector('#welcome-message');
@@ -47,9 +47,10 @@ loginButton.addEventListener('click', enterSite);
 receiveMsgBtn.addEventListener('click', displayMessage);
 
 function enterSite() {
+  var name = nameInput.value;
   mainPage.classList.remove('hidden');
   loginPage.classList.add('hidden');
-  welcome.innerHTML = `Welcome, ${name.value}`;
+  welcomeMsg.innerText = `Welcome, ${name}`;
 }
 
 function getRandomIndex(array) {
