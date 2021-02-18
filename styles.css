@@ -25,27 +25,42 @@ div {
 }
 
 h1 {
-
+padding-top: 15px;
 }
 
 h2 {
-
+padding-top: 120px;
+font-size: 100%;
 }
 
 .type-input {
 color: black;
 font-style: italic;
+border-radius: 4px;
+background-color: white;
+/* margin-top: 2px; */
+margin-left: 350px;
+margin-right: 350px;
+padding-top: 20px;
+padding-bottom: 10px;
 }
 
 .message-display {
-
+border-radius: 4px;
+background-color: white;
+margin-top: 100px;
+margin-left: 245px;
+margin-right: 245px;
+padding-top: 15px;
+padding-bottom: 5px;
 }
 
 #bell {
-  height: 50px;
-  width: 40px;
+  height: 65px;
+  width: 50px;
 }
 
-#receive-message {
-
+button {
+  background-color: #134d71
+  color: white;
 }
