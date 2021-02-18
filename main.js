@@ -1,3 +1,13 @@
+// targeted elements
+// buttons
+var affirmationRadio = document.querySelector(".affirmation");
+var mantraRadio = document.querySelector(".mantra");
+var recieveMessageBut = document.querySelector(".receiveMessage");
+
+var messageSend = document.querySelector("h3");
+var meditateImg = document.querySelector("img");
+
+// arrays
 var affirmations = ["I forgive myself and set myself free.",
 "I believe I can be all that I want to be.",
 "I am in the process of becoming the best version of myself.",
@@ -28,4 +38,43 @@ var mantras = ["Breathing in, I send myself love. Breathing out, I send love to 
 "Onward and upward.",
 "I am the sky, the rest is weather."]
 
-console.log(mantras);
+
+// event listeners
+recieveMessageBut.addEventListener("click", receiveMessage);
+
+
+
+//functions
+
+function receiveMessage() {
+  meditateImg.classList.add("hidden");
+  messageSend.classList.remove("hidden");
+  if (mantraRadio.checked) {
+    messageSend.innerText = mantras[getRandomIndex(mantras)];
+  } else if (affirmationRadio.checked) {
+  messageSend.innerText = affirmations[getRandomIndex(affirmations)];
+  }
+}
+
+
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function randomAffirmation() {
+  //   affirmations[getRandomIndex(affirmations)];
+  // }
