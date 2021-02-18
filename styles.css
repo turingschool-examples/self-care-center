@@ -26,11 +26,12 @@ div {
 
 h1 {
 padding-top: 15px;
+font-size: 30px;
 }
 
 h2 {
 padding-top: 120px;
-font-size: 100%;
+font-size: 21px;
 }
 
 .type-input {
@@ -42,7 +43,7 @@ background-color: white;
 margin-left: 350px;
 margin-right: 350px;
 padding-top: 20px;
-padding-bottom: 10px;
+padding-bottom: 5px;
 }
 
 .message-display {
@@ -60,7 +61,37 @@ padding-bottom: 5px;
   width: 50px;
 }
 
-button {
-  background-color: #134d71
+.button {
+  border-radius: 4px;
+  background-color: #134d71;
   color: white;
+  padding-top: 1px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  width: 175px;
+  height: 26px;
+  font-size: 15px;
 }
+
+label {
+  /* margin-left: 50px;
+  margin-right: 100px; */
+
+}
+
+#mantra {
+  margin-left: 110px;
+  margin-right: 5px;
+  margin-bottom: 25px;
+}
+
+
+#affirmation {
+  margin left: 5px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+}
+
+/* #aff-label {
+  margin-left: 100px;
+} */
