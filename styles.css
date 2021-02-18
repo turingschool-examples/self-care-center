@@ -6,6 +6,32 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
-body {
+html {
   background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  background-repeat: no-repeat;
+  min-height: 100%;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+.message-question {
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  margin-top: 120px; 
+}
+
+.selections {
+  text-align: center;
+  margin-left: 300px;
+  margin-right: 300px;
+  background-color: #ffffff;
+}
+
+.header {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 80px;
 }
