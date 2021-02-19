@@ -30,11 +30,10 @@ var mantras = [
   "Onward and upward.",
   "I am the sky, the rest is weather."
 ];
-var affirmationBtn = document.querySelector('.affirmationButton');
-var mantraBtn = document.querySelector('.mantraButton');
-var messageSection = document.querySelector('svg');
-var receiveMessageBtn = document.querySelector('button');
-var meditationImage = document.querySelector('.meditation-icon');
+var affirmationBtn = document.querySelector('.affirmation-button');
+var mantraBtn = document.querySelector('.mantra-button');
+var receiveMessageBtn = document.querySelector('.receive-message');
+var meditationImage = document.querySelector('svg');
 var messageReturn = document.querySelector('h3');
 
 
