@@ -29,7 +29,18 @@ h2 {
   margin-bottom: 0.7%;
 }
 
-#message-choice-box {
+.receive-message-button {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #134d71;
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+  margin-top: 1%;
+}
+
+#message-choice-div {
   font-family: 'Quicksand', sans-serif;
   font-style: italic;
   font-size: 19px;
