@@ -29,17 +29,26 @@ margin-left: 400px;
 margin-right: 400px;
 }
 
+form {
+  font-style: italic
+}
+
+input[type="radio"]{
+  margin: 0 20px 0 90px;
+}
+
 .circle-wrapper {
-display: flex;
-justify-content: center;
-align-items: center;
+padding-bottom: 15px;
 }
 
 .lower-btn {
 align-self: center;
-padding: 15px;
+padding: 25px;
 padding-top: 5px;
 padding-bottom: 5px;
+background-color: #134d71;
+color: #ffffff;
+border-radius: 5px;
 }
 
 .two {
