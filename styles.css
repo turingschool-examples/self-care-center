@@ -61,6 +61,15 @@ margin-left: 200px;
 margin-right: 200px;
 padding: 50px;
 }
+
+image {
+content: 10px;
+}
+
+html {
+background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+height: 100%;
+}
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
