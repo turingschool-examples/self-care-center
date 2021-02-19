@@ -6,7 +6,9 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
-
+/* *{
+  border: 1px solid black;
+} */
 h1, h2, button, label {
   font-family: 'Quicksand', sans-serif;
 }
@@ -37,6 +39,7 @@ label {
   border-radius: 7px;
   width: 550px;
   height: 15px;
+  /* display: flex; */
 }
 
 
@@ -69,20 +72,21 @@ button {
 }
 
 svg {
-  height: 60pt;
-  width: 50pt;
+  height: 40pt;
+  justify-content: center;
 }
 
 section {
-  align-content: center;
-  display: inline block;
   background-color: #ffffff;
   margin-top: 200px;
   margin-left: auto;
   margin-right: auto;
+  padding: 500px;
+  display: flex;
   justify-content: center;
   width: 50%;
   padding: 0px;
+  border-radius: 4px;
 }
 
 
