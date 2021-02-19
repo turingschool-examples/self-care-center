@@ -39,7 +39,12 @@ align-items: center;
 padding: 20px;
 margin-left: 400px;
 margin-right: 400px;
+}
 
+.circle-wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
 }
 /* font-family: 'Quicksand', sans-serif;
 COLORS
