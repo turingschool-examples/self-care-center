@@ -47,6 +47,7 @@ recieveMessageBut.addEventListener("click", receiveMessage);
 //functions
 
 function receiveMessage() {
+  if (mantraRadio.checked === true || affirmationRadio.checked === true) {
   meditateImg.classList.add("hidden");
   messageSend.classList.remove("hidden");
   if (mantraRadio.checked) {
@@ -55,6 +56,7 @@ function receiveMessage() {
   messageSend.innerText = affirmations[getRandomIndex(affirmations)];
   }
 }
+};
 
 
 
