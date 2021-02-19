@@ -4,5 +4,42 @@ light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
-black - #000000;
-*/
+black - #000000; */
+
+
+html {
+  height: 100%;
+  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+}
+
+body {
+  height: auto;
+  position: relative;
+}
+
+h2 {
+  margin-top: 6%;
+  padding: 0;
+}
+
+.main-font-style {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+#main-lower-div {
+  width: 860px;
+  height: 160px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#meditation-icon {
+  vertical-align: middle;
+  max-width: 50%;
+  max-height: 50%;
+  position: relative;
+  margin: 4.5%;
+}
