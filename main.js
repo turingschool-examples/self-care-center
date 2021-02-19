@@ -1,6 +1,8 @@
 var selectMantra = document.querySelector('.mantra-select');
 var selectAffirmation = document.querySelector('.affirmation-select');
 var recieveMessageBtn = document.querySelector('.receive-message');
+var returnMessage = document.querySelector('.returnMessage');
+var meditateImg = document.querySelector('.meditateImg');
 
 recieveMessageBtn.addEventListener('click', fetchMessage);
 
@@ -37,6 +39,15 @@ var mantras = [
   'I am the sky, the rest is weather.'
 ]
 
-function fetchMessage() {
+function getRandomIndex(array) {
+  var randomIndex =  Math.floor(Math.random() * array.length);
+  return randomIndex;
+}
 
+function fetchMessage() {
+  if (message-type = mantra) {
+    var message = getRandomIndex(mantras);
+    meditateImg.classList.remove('meditateImg');
+    returnMessage.innerHTML = <p>[message]</p>;
+  }
 }
