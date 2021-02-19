@@ -1,8 +1,26 @@
+/* ~~~~~~ Main Page ~~~~~~~*/
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+}
+
+h3 {
+  color: #ffffff;
+  text-align: center;
+  padding: 5px;
+  margin-top: 80px;
+  margin-bottom: 10px;
+}
+
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
-black - #000000;
-*/
+black - #000000; */
