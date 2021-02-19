@@ -7,7 +7,7 @@ white - #ffffff;
 black - #000000;
 */
 
-h1, h2, button {
+h1, h2, button, label {
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -23,36 +23,67 @@ h2{
   margin-top: 150px;
 }
 
-.choose-message {
-  background-color: #ffffff;
-  margin:10px 425px 100px 425px;
-  padding: 40px 0 40px 0;
-  border-radius: 7px;
-}
-
-button {
-  color: #000000;
-}
-
 label {
-  font-family: 'Quicksand', sans-serif;
   font-style: italic;
 }
 
 
-.image {
-  align-content: center;
-  display: inline block;
+
+.choose-message {
   background-color: #ffffff;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  max-width: 25px;
-  max-height: 25px;
+  margin: auto;
+  justify-content: flex-end;
+  padding: 40px 0;
+  border-radius: 7px;
+  width: 550px;
+  height: 15px;
 }
 
 
+.affirmationButton {
+  float: left;
+  width: 30%;
+}
+.mantraButton {
+  float: right;
+  width: 30%;
+}
 
+.affirmation .mantra {
+    padding: 15px;
+    display: inline-block;
+    font-size: 16px;
+    justify-content: space-between;
+  }
+
+
+button {
+  color: #ffffff;
+  background: #134d71;
+  display: block;
+  font-family: 'Quicksand', sans-serif;
+  margin: auto;
+  padding: 0px 40px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+svg {
+  height: 60pt;
+  width: 50pt;
+}
+
+section {
+  align-content: center;
+  display: inline block;
+  background-color: #ffffff;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  width: 50%;
+  padding: 0px;
+}
 
 
 
