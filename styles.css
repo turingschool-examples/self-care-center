@@ -1,0 +1,53 @@
+* {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+              /*dark-blue | light-blue | light-yellow*/
+}
+/*~~~~~~~~~~~~~~~~~~~~~`Heading Section`~~~~~~~~~~~~~~~~~~~~~~~*/
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+.heading {
+  flex-direction: column;
+  margin-top: 3.3%;
+}
+.headers {
+  align-self: center;
+  color: #ffffff;
+}
+h1 {
+  font-size: 42.5px;
+}
+h2 {
+  font-size: 32px;
+  margin-top: 135px;
+}
+/*~~~~~~~~~~~~~~~~~~~~~`Form Section`~~~~~~~~~~~~~~~~~~~~~~~*/
+ul{
+  list-style-type: none;
+  background: white;
+}
+.form{
+
+}
+/*~~~~~~~~~~~~~~~~~~~~~`Bell Section`~~~~~~~~~~~~~~~~~~~~~~~*/
+.bell-icon{
+background: white;
+
+}
+
+
+/*
+.display-messages {
+  margin-bottom: 15px;
+  padding: 4px 12px;
+  border-left: 6px solid #4CAF50;
+  border-right: 6px solid #4CAF50;
+}
+*/
