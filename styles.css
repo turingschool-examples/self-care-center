@@ -53,6 +53,14 @@ padding: 15px;
 padding-top: 5px;
 padding-bottom: 5px;
 }
+
+.two {
+margin-top: 80px;
+margin-bottom: 80px;
+margin-left: 200px;
+margin-right: 200px;
+padding: 50px;
+}
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
