@@ -3,6 +3,7 @@
 var affirmationRadio = document.querySelector(".affirmation");
 var mantraRadio = document.querySelector(".mantra");
 var recieveMessageBut = document.querySelector(".receiveMessage");
+var clearBut = document.querySelector(".clear");
 
 var messageSend = document.querySelector("h3");
 var meditateImg = document.querySelector("img");
@@ -42,7 +43,7 @@ var mantras = ["Breathing in, I send myself love. Breathing out, I send love to 
 // event listeners
 recieveMessageBut.addEventListener("click", receiveMessage);
 
-
+clearBut.addEventListener("click", clearMessage);
 
 //functions
 
@@ -58,12 +59,16 @@ function receiveMessage() {
 }
 };
 
-
+function clearMessage() {
+  if (messageSend.innerText != "") {
+    meditateImg.classList.remove("hidden");
+    messageSend.classList.add("hidden");
+  }
+};
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
-
 
 
 
