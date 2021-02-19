@@ -46,6 +46,13 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
+
+.lower-btn {
+align-self: center;
+padding: 15px;
+padding-top: 5px;
+padding-bottom: 5px;
+}
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
