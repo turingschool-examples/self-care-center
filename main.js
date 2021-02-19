@@ -30,18 +30,29 @@ var mantras = [
   "Onward and upward.",
   "I am the sky, the rest is weather."
 ];
-var affirmationBtn = document.querySelector('#affirmation');
-var mantraBtn = document.querySeletor('#mantra');
+var affirmationBtn = document.querySelector('.affirmationButton');
+var mantraBtn = document.querySelector('.mantraButton');
+var messageSection = document.querySelector('svg');
+var receiveMessageBtn = document.querySelector('button');
+var meditationImage = document.querySelector('.meditation-icon');
+var messageReturn = document.querySelector('h3');
 
-var receiveMessageBtn = document.querySelector('#receiveMessage')
-// affirmationBtn.addEventListener()
-receiveMessageBtn.addEventListener('click', displayMessage)
+
+receiveMessageBtn.addEventListener('click', displayMessage);
 
 
-function displayMessage() {
-//hide meditation icon and replace it with text from message
-}
+
+
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 //
+function displayMessage() {
+  meditationImage.classList.add('hidden');
+  if (affirmationBtn.checked) {
+    messageReturn.innerText = "hello";
+  }
+//if input === affirmation, return random affirmation message
+//if input === mantra, return random mantra message
+//replace with text from array
+}
