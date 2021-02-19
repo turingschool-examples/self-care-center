@@ -28,6 +28,19 @@ margin: 20px;
 .circle.on {
 background: black;
 }
+
+.inner-wrapper {
+background: #ffffff;
+border-radius: 15px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+padding: 20px;
+margin-left: 400px;
+margin-right: 400px;
+
+}
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
