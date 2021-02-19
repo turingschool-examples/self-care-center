@@ -15,6 +15,7 @@ h1, h2, button, label {
 
 h1, h2, main {
   text-align: center;
+  color: #ffffff;
 }
 
 h1, h2 {
@@ -29,69 +30,57 @@ label {
   font-style: italic;
 }
 
-
-
-.choose-message {
+main {
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
-  margin: auto;
-  justify-content: flex-end;
-  padding: 40px 0;
   border-radius: 7px;
   width: 550px;
+  margin: auto;
+  padding: 40px 0;
   height: 15px;
-  /* display: flex; */
 }
 
-
-.affirmationButton {
-  float: left;
-  width: 30%;
-}
-.mantraButton {
-  float: right;
-  width: 30%;
+.radio-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  color: black;
 }
 
-.affirmation .mantra {
-    padding: 15px;
-    display: inline-block;
-    font-size: 16px;
-    justify-content: space-between;
-  }
-
-
-button {
+.receive-message {
+  display: flex;
+  justify-content: center;
   color: #ffffff;
   background: #134d71;
-  display: block;
   font-family: 'Quicksand', sans-serif;
-  margin: auto;
-  padding: 0px 40px;
-  font-size: 14px;
-  border-radius: 4px;
+  width: 180px;
 }
 
 .meditation-icon {
-  height: 40pt;
+  height: 10pt;
   justify-content: center;
 }
 
-section {
-  background-color: #ffffff;
-  margin-top: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 500px;
+.message-display {
   display: flex;
   justify-content: center;
-  width: 50%;
-  padding: 0px;
-  border-radius: 4px;
+  background-color: #ffffff;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  width: 80%;
+  border-radius: 7px;
+}
+
+svg {
+  height: 60px;
+  width: 60px;
 }
 
 
-
-#home {
+.home {
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;
