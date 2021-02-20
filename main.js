@@ -52,7 +52,7 @@ backToMainButton.addEventListener('click', showForm);
 viewFavoritesButton.addEventListener('click', showForm);
 viewFavoritesButton.addEventListener('click', displayMessage);
 favoriteMessageGrid.addEventListener('click', decideToDelete);
-//deleteButton.addEventListener('click', deleteMessage);
+deleteButton.addEventListener('click', deleteMessage);
 
 function showMessage () {
   var randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)];
@@ -87,11 +87,3 @@ function displayMessage() {
     <h4 class="great-message">${currentMessage}</h4>
   `;
 }
-
-function decideToDelete() {
-  event.target.classList.add('highlight');
-}
-// function deleteMessage() {
-//   .remove();
-//   savedMessages.splice(, 1);
-// }
