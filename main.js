@@ -50,6 +50,19 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
+function showRandomMessage() {
+  var randomAffirmation = affirmations[getRandomIndex(affirmations)];
+  var randomMantra = mantras[getRandomIndex(mantras)];
+  for (var i = 0; i < messageInput.length; i++) {
+      if (messageInput[0].checked) {
+      messageDisplayBox.innerText = randomAffirmation;
+    } else if (messageInput[1].checked) {
+      messageDisplayBox.innerText = randomMantra;
+    }
+      meditationImage.classList.toggle('hidden');
+      messageDisplayBox.classList.toggle('hidden');
+  }
+};
 
 //   currentPoster = new Poster(randomImage, randomTitle, randomQuote);
 //   displayCurrentPoster();
