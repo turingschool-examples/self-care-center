@@ -39,6 +39,7 @@ var choiceButtons = document.querySelectorAll('input[name="choice"]');
 var favoriteMessageButton = document.querySelector('.favorite-button');
 var favoriteMessageForm = document.querySelector('.favorite-message');
 var mainPage = document.querySelector('.main-page');
+var backToMain = document.querySelector('.back-to-main');
 
 receiveMessageButton.addEventListener('click', showMessage);
 favoriteMessageButton.addEventListener('click', showForm);
