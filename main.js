@@ -36,6 +36,7 @@ var mantraButton = document.querySelector('#mantra');
 var messagePlaceholder = document.querySelector('#placeholder');
 var buddha = document.querySelector('img');
 var choiceButtons = document.querySelectorAll('input[name="choice"]');
+var favoriteMessageButton = document.querySelector('.favorite-button');
 
 receiveMessageButton.addEventListener('click', showMessage);
 
@@ -48,5 +49,5 @@ function showMessage () {
   } else if(choiceButtons[1].checked) {
       messagePlaceholder.innerText = randomMantra;
   }
-  }
+}
 }
