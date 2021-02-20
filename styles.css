@@ -24,10 +24,10 @@ img {
   border-style: solid;
   color: #ffffff;
   border-radius: 3px;
-  height: 28px;
+  height: 25px;
   width: 225px;
-  margin-left: 845px;
-  margin-top: 0px;
+  /* margin-left: 500px; */
+  margin-top: 5px;
 }
 
 .receive-message {
@@ -77,9 +77,13 @@ img {
   border-radius: 10px;
 }
 
+p {
+  text-align: center;
+  margin-top: 5px;
+}
 
 button {
-  align-self: center;
+  /* align-self: center; */
   background-color: #134d71;
   border-color: #134d71;
   border-style: solid;
@@ -87,7 +91,7 @@ button {
   border-radius: 3px;
   height: 25px;
   width: 700px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 };
 
 
