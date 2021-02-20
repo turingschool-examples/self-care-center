@@ -54,7 +54,8 @@ main {
   color: #ffffff;
   background: #134d71;
   font-family: 'Quicksand', sans-serif;
-  width: 180px;
+  margin-left: 120pt;
+  margin-right: 120pt;
 }
 
 .meditation-icon {

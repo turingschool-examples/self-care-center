@@ -30,28 +30,41 @@ var mantras = [
   "Onward and upward.",
   "I am the sky, the rest is weather."
 ];
-var affirmationBtn = document.querySelector('.affirmation-button');
-var mantraBtn = document.querySelector('.mantra-button');
+var affirmationBtn = document.querySelector('.affirmation');
+var mantraBtn = document.querySelector('.mantra');
 var receiveMessageBtn = document.querySelector('.receive-message');
 var meditationImage = document.querySelector('svg');
 var messageReturn = document.querySelector('h3');
-
+var randomAffirmation = affirmations[getRandomIndex(affirmations)];
+var randomMantra = mantras[getRandomIndex(mantras)];
 
 receiveMessageBtn.addEventListener('click', displayMessage);
 
-
-
+// var affirmationChecked = document.getElementById('affirmation').checked;
+// var mantraChecked = document.getElementById('mantra').checked;
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 //
-function displayMessage() {
+function displayMessage() {//add a feature that it will only work if one of the radio btns are picked
   meditationImage.classList.add('hidden');
-  if (affirmationBtn.checked) {
-    messageReturn.innerText = "hello";
-  }
-//if input === affirmation, return random affirmation message
-//if input === mantra, return random mantra message
-//replace with text from array
+  messageReturn.classList.remove('hidden');
+  console.log(randomAffirmation);
+  // if (affirmationBtn.checked === true) {
+    messageReturn.innerText = randomAffirmation;
+
+  // } else if (mantraBtn.checked === true) {
+  //   messageReturn.innerText = randomMantra;
+  // }
 }
+
+
+
+
+// function check() {
+//   document.getElementById("red").checked = true;
+// }
+// function uncheck() {
+//   document.getElementById("red").checked = false;
+// }
