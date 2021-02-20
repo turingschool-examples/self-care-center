@@ -40,32 +40,18 @@ var randomMantra = mantras[getRandomIndex(mantras)];
 
 receiveMessageBtn.addEventListener('click', displayMessage);
 
-// var affirmationChecked = document.getElementById('affirmation').checked;
-// var mantraChecked = document.getElementById('mantra').checked;
-
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
-//
+
 function displayMessage() {
   if (affirmationBtn.checked === true || mantraBtn.checked === true) {
   meditationImage.classList.add('hidden');
   messageReturn.classList.remove('hidden');
-}  if (affirmationBtn.checked === true) {
-    messageReturn.innerText = randomAffirmation;
-    } else if (mantraBtn.checked === true) {
-    messageReturn.innerText = randomMantra;
+  } if (affirmationBtn.checked === true) {
+  messageReturn.innerText = randomAffirmation;
+
+  } else if (mantraBtn.checked === true) {
+  messageReturn.innerText = randomMantra;
   }
 }
-
-
-
-
-
-// Use checked property of the radio button to check if the radio button is checked.
-// function check() {
-//   document.getElementById("red").checked = true;
-// }
-// function uncheck() {
-//   document.getElementById("red").checked = false;
-// }
