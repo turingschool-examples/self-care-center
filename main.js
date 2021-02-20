@@ -36,3 +36,5 @@ var mantraButton = document.querySelector('#mantra');
 var messagePlaceholder = document.querySelector('#placeholder');
 var buddha = document.querySelector('img');
 var choiceButtons = document.querySelectorAll('input[name="choice"]');
+
+receiveMessageButton.addEventListener('click', showMessage);
