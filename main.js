@@ -30,29 +30,42 @@ var mantras = [
   "Onward and upward.",
   "I am the sky, the rest is weather."
 ];
-var affirmationBtn = document.querySelector('.affirmationButton');
-var mantraBtn = document.querySelector('.mantraButton');
-var messageSection = document.querySelector('svg');
-var receiveMessageBtn = document.querySelector('button');
-var meditationImage = document.querySelector('.meditation-icon');
+var affirmationBtn = document.querySelector('.affirmation');
+var mantraBtn = document.querySelector('.mantra');
+var receiveMessageBtn = document.querySelector('.receive-message');
+var meditationImage = document.querySelector('svg');
 var messageReturn = document.querySelector('h3');
-
+var randomAffirmation = affirmations[getRandomIndex(affirmations)];
+var randomMantra = mantras[getRandomIndex(mantras)];
 
 receiveMessageBtn.addEventListener('click', displayMessage);
 
-
-
+// var affirmationChecked = document.getElementById('affirmation').checked;
+// var mantraChecked = document.getElementById('mantra').checked;
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 //
 function displayMessage() {
+  if (affirmationBtn.checked === true || mantraBtn.checked === true) {
   meditationImage.classList.add('hidden');
-  if (affirmationBtn.checked) {
-    messageReturn.innerText = "hello";
+  messageReturn.classList.remove('hidden');
+}  if (affirmationBtn.checked === true) {
+    messageReturn.innerText = randomAffirmation;
+    } else if (mantraBtn.checked === true) {
+    messageReturn.innerText = randomMantra;
   }
-//if input === affirmation, return random affirmation message
-//if input === mantra, return random mantra message
-//replace with text from array
 }
+
+
+
+
+
+// Use checked property of the radio button to check if the radio button is checked.
+// function check() {
+//   document.getElementById("red").checked = true;
+// }
+// function uncheck() {
+//   document.getElementById("red").checked = false;
+// }
