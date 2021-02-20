@@ -3,9 +3,12 @@ var recieveMessageBtn = document.querySelector('.receive-message');
 var returnMessage = document.querySelector('.returnMessage');
 
 var meditateImg = document.querySelector('.meditateImg');
-var returnMessage =document.querySelector()
+var affirmationBtn = document.getElementById('#affirmation');
+var mantraBtn = document.getElementById('#mantra');
+var randomAffirmation = getRandomIndex(affirmations);
+var randomMantra = getRandomIndex(mantras);
 
-recieveMessageBtn.addEventListener('click', getRadioSelection);
+recieveMessageBtn.addEventListener('click', displayMessage);
 
 var affirmations = [
   'I forgive myself and set myself free.',
@@ -42,22 +45,9 @@ var mantras = [
 
 function getRandomIndex(array) {
   var randomIndex =  Math.floor(Math.random() * array.length);
-  return randomIndex;
+  return array[randomIndex];
 }
 
-function getRadioSelection() {
-  var selectValue;
-  for (var radio of radioSelect) {
-    if (radio.checked) {
-      selectValue = radio.value;
-      return selectValue;
-    }
-  }
-}
-
-function fetchMessage() {
-  var userSelect = getRadioSelection();
-  var randomIndex = getRandomIndex();
-  meditateImg.classList.add('hidden');
-
+function displayMessage() {
+  if (mantraBtn === input[])
 }
