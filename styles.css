@@ -53,7 +53,7 @@ border-radius: 5px;
 
 .two {
 margin-top: 80px;
-margin-bottom: 80px;
+margin-bottom: 40px;
 margin-left: 200px;
 margin-right: 200px;
 padding: 50px;
@@ -71,6 +71,14 @@ height: 100%;
 .hidden {
   display: none!important;
 }
+
+.favorite-button {
+  background-color: #134d71;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+
 
 /* ~~~~~~ Favorite Message Section ~~~~~~~*/
 
