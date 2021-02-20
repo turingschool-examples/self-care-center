@@ -65,6 +65,7 @@ function showMessage () {
 
 function showButton() {
   favoriteMessageButton.classList.remove('hidden');
+  viewFavoritesButton.classList.remove('hidden');
 }
 
 function showForm() {
