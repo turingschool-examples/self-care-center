@@ -63,7 +63,7 @@ input[type='radio'] {
   width: 26px;
 }
 
-.msg-btn {
+.msg-btn,.clear-btn {
   display: flex;
   justify-content: center;
   background-color: #134d71;
@@ -75,6 +75,9 @@ input[type='radio'] {
   font-size: 23px;
 }
 .btn{
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
   padding-bottom: 15px;
 }
 
