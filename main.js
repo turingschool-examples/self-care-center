@@ -37,35 +37,42 @@ var meditationImage = document.querySelector('svg');
 var messageReturn = document.querySelector('h3');
 var randomAffirmation = affirmations[getRandomIndex(affirmations)];
 var randomMantra = mantras[getRandomIndex(mantras)];
+var deleteMessageBtn = document.querySelector('.delete-message')
+
 
 receiveMessageBtn.addEventListener('click', displayMessage);
-
-// var affirmationChecked = document.getElementById('affirmation').checked;
-// var mantraChecked = document.getElementById('mantra').checked;
+deleteMessageBtn.addEventListener('click', deleteMessage)
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
-//
+
 function displayMessage() {
   if (affirmationBtn.checked === true || mantraBtn.checked === true) {
-  meditationImage.classList.add('hidden');
-  messageReturn.classList.remove('hidden');
-}  if (affirmationBtn.checked === true) {
+    meditationImage.classList.add('hidden');
+    messageReturn.classList.remove('hidden');
+  }
+  if (affirmationBtn.checked === true) {
     messageReturn.innerText = randomAffirmation;
-    } else if (mantraBtn.checked === true) {
+  } else if (mantraBtn.checked === true) {
     messageReturn.innerText = randomMantra;
   }
 }
 
-
-
-
-
-// Use checked property of the radio button to check if the radio button is checked.
-// function check() {
-//   document.getElementById("red").checked = true;
-// }
-// function uncheck() {
-//   document.getElementById("red").checked = false;
-// }
+function deleteMessage() {
+  if (affirmationBtn.checked === true) {
+    for (var i = 0; i < affirmations.length; i++) {
+      if (affirmations[i] === randomAffirmation) {
+        affirmations.splice(i, 1);
+        alert("You won't see this affirmation again!");
+      }
+    }
+  } else if (mantraBtn.checked === true) {
+    for (var i = 0; i < mantras.length; i++) {
+      if (mantras[i] === randomMantra) {
+        mantras.splice(i, 1);
+        alert("You won't see this mantra again!");
+      }
+    }
+  }
+}
