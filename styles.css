@@ -3,7 +3,8 @@
   font-family: 'Quicksand', sans-serif;
 }
 
-h1 {
+h1,
+h2 {
   color: #ffffff;
   text-align: center;
   padding: 10px;
@@ -86,7 +87,11 @@ height: 100%;
 }
 
 /* ~~~~~~ Favorite Message Section ~~~~~~~*/
-
+.back-to-main {
+  background-color: #134d71;
+  color: #ffffff;
+  border-radius: 5px;
+}
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
