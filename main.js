@@ -51,3 +51,10 @@ function displayRandomMantra() {
   var randomMantra = mantras[randomMantraIndex];
   writeMessageToPage(randomMantra);
 }
+
+function writeMessageToPage(message) {
+  var markup = `
+    <p>${message}</p>
+  `;
+  messageDisplay.innerHTML = markup;
+}
