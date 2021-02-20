@@ -8,11 +8,66 @@ black - #000000;
 */
 h1 {
   text-align:center;
+  padding-top: 30px;
 }
 p {
   text-align:center;
+  margin-top: 85px;
+
 }
 body {
+
   background: linear-gradient(#134d71,#78a7c6,#f7e4bf);
   font-family:Quicksand;
+  color: #ffffff;
+}
+html, body {
+  margin: 0;
+  height: 100%;
+}
+.self-care {
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 40%;
+  margin: auto;
+  height: 15%;
+  /* margin-top:85px; */
+
+
+}
+form {
+  display: flex;
+  justify-content: space-around;
+  color: black;
+  height: 45px;
+
+}
+.self-care .receive-message{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+button {
+  background-color: #134d71;
+  border-radius: 3px;
+  color: #ffffff;
+}
+img {
+  max-width: 15%;
+  height: auto;
+  /* display: flex;
+  justify-content: center; */
+}
+.image {
+  background: #ffffff;
+  border-radius: 10px;
+  width: 65%;
+  height: 15%;
+  margin:auto;
+  margin-top: 85px;
+  display: flex;
+  justify-content: center;
+}
+section {
+
 }

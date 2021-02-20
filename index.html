@@ -4,18 +4,35 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
-  <body
+  <body>
 
     <section>
       <h1> ✨Self Care Center✨</h1>
-        <p> Which type of message? </p>
+      <p> Which type of message? </p>
         <div class="self-care">
-          <p> affirmation </p>
-          <p> mantras </p>
+          <form>
+          <div>
+            <input type="radio" id="affirmation" value= "affirmation">
+            <label for="affirmation">affirmation</label>
+          </div>
 
+          <!-- <p> affirmation </p> -->
+          <div>
+            <input type="radio" id="mantras" value="mantras">
+            <label for="mantras">mantras</label>
+          </div>
+        </form>
+
+          <div class="receive-message">
+            <button>Receive Message</button>
+          </div>
+        </div>
+
+        <div class="image">
+          <img src="assets/meditate.svg" alt="image bell">
         </div>
     </section>
-    
+
     <script type="text/javascript" src="main.js"></script>
 
   </body>
