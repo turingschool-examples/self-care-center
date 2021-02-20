@@ -1,47 +1,87 @@
 * {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
+  padding: 0;
 }
 
 html {
   height: 100%;
   background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
-              /*dark-blue | light-blue | light-yellow*/
+  /*dark-blue | light-blue | light-yellow*/
 }
-/*~~~~~~~~~~~~~~~~~~~~~`Heading Section`~~~~~~~~~~~~~~~~~~~~~~~*/
+
 .flex-container {
   display: flex;
-  justify-content: center;
 }
+
+/*~~~~~~~~~~~~~~~~~~~~~`Heading Section`~~~~~~~~~~~~~~~~~~~~~~~*/
 .heading {
   flex-direction: column;
-  margin-top: 3.3%;
+  margin-top: 3.5%;
 }
+
 .headers {
   align-self: center;
   color: #ffffff;
 }
+
 h1 {
   font-size: 42.5px;
 }
+
 h2 {
   font-size: 32px;
   margin-top: 135px;
+  margin-bottom: 15px;
 }
+
 /*~~~~~~~~~~~~~~~~~~~~~`Form Section`~~~~~~~~~~~~~~~~~~~~~~~*/
-ul{
-  list-style-type: none;
+.message {
   background: white;
+  margin-left: 560px;
+  margin-right: 560px;
+  height: 145px;
+  border-radius: 15px;
+  flex-direction: column;
+  align-items: center;
 }
-.form{
 
+input[type='radio'] {
+  height: 26px;
+  width: 26px;
 }
+
+.msg-btn {
+  display: flex;
+  justify-content: center;
+  background-color: #134d71;
+  color: #ffffff;
+  width: 100px;
+  padding: 4px 20px;
+  width: 250px;
+  border-radius: 10px;
+  font-size: 23px;
+}
+
+.lables {
+  display: flex;
+  width: 650px;
+  padding: 29px;
+  justify-content: space-around;
+  font-size: 1.5em;
+  font-style: italic;
+}
+
 /*~~~~~~~~~~~~~~~~~~~~~`Bell Section`~~~~~~~~~~~~~~~~~~~~~~~*/
-.bell-icon{
-background: white;
-
+.bell {
+  background: white;
+  margin: 8% 20%;
+  height: 205px;
+  border-radius: 15px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-
 
 /*
 .display-messages {

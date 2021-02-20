@@ -12,22 +12,22 @@
     <h2 class="headers">Which type of message?</h2>
   </header>
 
-  <form class="flex-container form">
-    <ul>
-      <li>
-        <input class="affirmation" type="radio">
-        <label for="affirmation">affirmation</label>
-        <input class="mantra" type="radio">
-        <label for="mantra">mantra</label>
-      </li>
-      <li>
-        <button class="receive-msg-btn">Receive Message</button>
-      </li>
-    </ul>
-  </form>
+  <section class="flex-container message">
+    <div class="lables">
+      <label class="affirmation" for="affirmation">
+        <input type="radio"><span>affirmation</span>
+      </label>
+      <label class="mantra" for="mantra">
+        <input type="radio"><span>mantra</span>
+      </label>
+    </div>
+    <div class="btn">
+      <button class="msg-btn">Receive Message</button>
+    </div>
+  </section>
 
   <section class="flex-container bell">
-    <img class="bell-icon" src="assets/meditate.svg" alt="meditate" height="100px" width="200px;">
+    <img class="bell-icon" src="assets/meditate.svg" alt="meditate" height="110px" width="210px;">
   </section>
 
   <script type="text/javascript" src="main.js"></script>
