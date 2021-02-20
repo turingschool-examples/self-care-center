@@ -42,6 +42,7 @@ var mainPage = document.querySelector('.main-page');
 var backToMainButton = document.querySelector('.back-to-main');
 var favoriteMessageGrid = document.querySelector('.favorite-message-grid');
 var viewFavoritesButton = document.querySelector('.view-favorites');
+var deleteButton = document.querySelector('.delete-message');
 var savedMessages = [];
 var currentMessage;
 
