@@ -51,7 +51,8 @@ favoriteMessageButton.addEventListener('click', saveFavoriteMessage);
 backToMainButton.addEventListener('click', showForm);
 viewFavoritesButton.addEventListener('click', showForm);
 viewFavoritesButton.addEventListener('click', displayMessage);
-deleteButton.addEventListener('click', deleteMessage);
+favoriteMessageGrid.addEventListener('click', decideToDelete);
+//deleteButton.addEventListener('click', deleteMessage);
 
 function showMessage () {
   var randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)];
@@ -82,7 +83,15 @@ function saveFavoriteMessage() {
 }
 
 function displayMessage() {
-  favoriteMessageGrid.innerHTML = `
-    <h4>${savedMessages}</h4>
+  favoriteMessageGrid.innerHTML += `
+    <h4 class="great-message">${currentMessage}</h4>
   `;
 }
+
+function decideToDelete() {
+  event.target.classList.add('highlight');
+}
+// function deleteMessage() {
+//   .remove();
+//   savedMessages.splice(, 1);
+// }
