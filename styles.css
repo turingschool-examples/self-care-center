@@ -87,6 +87,27 @@ height: 100%;
 }
 
 /* ~~~~~~ Favorite Message Section ~~~~~~~*/
+
+.favorite-message-grid {
+  background: #ffffff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.main-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
 .back-to-main {
   background-color: #134d71;
   color: #ffffff;
