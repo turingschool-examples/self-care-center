@@ -47,7 +47,6 @@ var currentMessage;
 
 receiveMessageButton.addEventListener('click', showMessage);
 favoriteMessageButton.addEventListener('click', showForm);
-favoriteMessageButton.addEventListener('click', saveFavoriteMessage);
 backToMainButton.addEventListener('click', showForm);
 
 function showMessage () {
@@ -66,17 +65,9 @@ function showMessage () {
 
 function showButton() {
   favoriteMessageButton.classList.remove('hidden');
-  viewFavoritesButton.classList.remove('hidden');
 }
 
 function showForm() {
     mainPage.classList.toggle('hidden');
     favoriteMessageForm.classList.toggle('hidden');
-}
-
-function saveFavoriteMessage() {
-  savedMessages.push(currentMessage);
-  favoriteMessageGrid.innerHTML = `
-  <h4>${savedMessages}</h4>
-  `;
 }
