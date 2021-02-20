@@ -31,3 +31,4 @@ var affirmations = [
   'I manifest perfect health by making smart choices.'
 ];
 var receiveMessageButton = document.querySelector('.lower-btn');
+var affirmButton = document.querySelector('#affirm');
