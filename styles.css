@@ -13,7 +13,9 @@ html {
 .flex-container {
   display: flex;
 }
-
+.hidden {
+  display: none!important;
+}
 /*~~~~~~~~~~~~~~~~~~~~~`Heading Section`~~~~~~~~~~~~~~~~~~~~~~~*/
 .heading {
   flex-direction: column;
@@ -86,12 +88,7 @@ input[type='radio'] {
   flex-direction: column;
   align-items: center;
 }
-
-/*
-.display-messages {
-  margin-bottom: 15px;
-  padding: 4px 12px;
-  border-left: 6px solid #4CAF50;
-  border-right: 6px solid #4CAF50;
+.show-msg{
+  font-size: 25px;
 }
-*/
+/*~~~~~~~~~~~~~~~~~~~~~`JS Section`~~~~~~~~~~~~~~~~~~~~~~~*/
