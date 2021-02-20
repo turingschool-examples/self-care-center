@@ -56,14 +56,17 @@ var currentMsg;
 
 // SECTIONS
 var bellDisplay = document.querySelector('.image');
-var msgDisplay = document.querySelector('.messageDisplay');
-var message = document.querySelector('.displayedMsg');
+var positiveDisplay = document.querySelector('.quote');
+var positivity = document.querySelector('.text');
 
 // BUTTONS
-var receiveMessage = document.getElementById('receive');
-
+// var affirmButton = document.querySelector('.affirm-button');
+// var mantraButton = document.querySelector('.mantra-button');
+var submitButton = document.querySelector('.msgButton');
+var radioButton = document.forms['form'].elements['pick'];
 // EVENT LISTENERS
-receiveMessage.addEventListener('click', displayRandomMsg);
+
+submitButton.addEventListener('click', displayRandomMsg);
 
 // FUNCTIONS AND EVENT HANDLERS
 function getRandomIndex(array) {
@@ -73,9 +76,37 @@ function getRandomIndex(array) {
 // Need to differentiate between affirmation and mantra radio
 // button selections - event listener?
 function displayRandomMsg() {
-  bellDisplay.classList.toggle('hidden');
-  msgDisplay.classList.remove('hidden');
-  currentMsg = mantras[getRandomIndex(mantras)];
-  message.innerText = currentMsg;
-  return currentMsg;
-}
+for (var i = 0; i < radioButton.length; i++) {
+  if (pick[i].value === 'mantras') {
+    event.preventDefault(event);
+    var randomMsg = mantras[getRandomIndex(mantras)];
+    positivity.innerText = randomMsg;
+    bellDisplay.classList.toggle('hidden');
+    positiveDisplay.classList.toggle('hidden');
+  } else {
+    event.preventDefault(event);
+    var randomMsg = affirmations[getRandomIndex(affirmations)];
+    positivity.innerText = randomMsg;
+    bellDisplay.classList.toggle('hidden');
+    positiveDisplay.classList.toggle('hidden');
+  }
+ }
+};
+
+//  MANTRAS RANDOM
+// function displayRandomMsg() {
+//   event.preventDefault(event);
+//   var randomMsg = mantras[getRandomIndex(mantras)];
+//   positivity.innerText = randomMsg;
+//   bellDisplay.classList.toggle('hidden');
+//   positiveDisplay.classList.toggle('hidden');
+// };
+//
+//  AFFIRMATIONS RANDOM
+// function displayRandomMsg() {
+//   event.preventDefault(event);
+//   var randomMsg = affirmations[getRandomIndex(affirmations)];
+//   positivity.innerText = randomMsg;
+//   bellDisplay.classList.toggle('hidden');
+//   positiveDisplay.classList.toggle('hidden');
+// };
