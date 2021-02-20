@@ -6,9 +6,9 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
-/* *{
+* {
   border: 1px solid black;
-} */
+}
 h1, h2, button, label, h3 {
   font-family: 'Quicksand', sans-serif;
 }
@@ -99,7 +99,6 @@ svg {
   color: #ffffff;
   background: #134d71;
   font-family: 'Quicksand', sans-serif;
-
 }
 
 .hidden {

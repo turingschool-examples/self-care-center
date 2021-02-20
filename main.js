@@ -37,8 +37,11 @@ var meditationImage = document.querySelector('svg');
 var messageReturn = document.querySelector('h3');
 var randomAffirmation = affirmations[getRandomIndex(affirmations)];
 var randomMantra = mantras[getRandomIndex(mantras)];
+var deleteMessageBtn = document.querySelector('.delete-message')
+
 
 receiveMessageBtn.addEventListener('click', displayMessage);
+deleteMessageBtn.addEventListener('click', deleteMessage)
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -46,12 +49,30 @@ function getRandomIndex(array) {
 
 function displayMessage() {
   if (affirmationBtn.checked === true || mantraBtn.checked === true) {
-  meditationImage.classList.add('hidden');
-  messageReturn.classList.remove('hidden');
-  } if (affirmationBtn.checked === true) {
-  messageReturn.innerText = randomAffirmation;
-
+    meditationImage.classList.add('hidden');
+    messageReturn.classList.remove('hidden');
+  }
+  if (affirmationBtn.checked === true) {
+    messageReturn.innerText = randomAffirmation;
   } else if (mantraBtn.checked === true) {
-  messageReturn.innerText = randomMantra;
+    messageReturn.innerText = randomMantra;
+  }
+}
+
+function deleteMessage() {
+  if (affirmationBtn.checked === true) {
+    for (var i = 0; i < affirmations.length; i++) {
+      if (affirmations[i] === randomAffirmation) {
+        affirmations.splice(i, 1);
+        alert("You won't see this affirmation again!");
+      }
+    }
+  } else if (mantraBtn.checked === true) {
+    for (var i = 0; i < mantras.length; i++) {
+      if (mantras[i] === randomMantra) {
+        mantras.splice(i, 1);
+        alert("You won't see this mantra again!");
+      }
+    }
   }
 }
