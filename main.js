@@ -41,6 +41,7 @@ var favoriteMessageForm = document.querySelector('.favorite-message');
 var mainPage = document.querySelector('.main-page');
 
 receiveMessageButton.addEventListener('click', showMessage);
+favoriteMessageButton.addEventListener('click', showForm);
 
 function showMessage () {
   var randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)];
