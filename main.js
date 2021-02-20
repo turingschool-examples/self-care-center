@@ -40,6 +40,7 @@ var favoriteMessageButton = document.querySelector('.favorite-button');
 var favoriteMessageForm = document.querySelector('.favorite-message');
 var mainPage = document.querySelector('.main-page');
 var backToMainButton = document.querySelector('.back-to-main');
+var savedMessages = [];
 
 receiveMessageButton.addEventListener('click', showMessage);
 favoriteMessageButton.addEventListener('click', showForm);
