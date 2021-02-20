@@ -33,3 +33,4 @@ var affirmations = [
 var receiveMessageButton = document.querySelector('.lower-btn');
 var affirmButton = document.querySelector('#affirm');
 var mantraButton = document.querySelector('#mantra');
+var messagePlaceholder = document.querySelector('#placeholder');
