@@ -38,3 +38,15 @@ var buddha = document.querySelector('img');
 var choiceButtons = document.querySelectorAll('input[name="choice"]');
 
 receiveMessageButton.addEventListener('click', showMessage);
+
+function showMessage () {
+  var randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)];
+  var randomMantra = mantras[Math.floor(Math.random() * mantras.length)];
+  for(var i = 0; i < choiceButtons.length; i++) {
+    if(choiceButtons[0].checked) {
+      messagePlaceholder.innerText = randomAffirmation;
+  } else if(choiceButtons[1].checked) {
+      messagePlaceholder.innerText = randomMantra;
+  }
+  }
+}
