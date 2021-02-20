@@ -1,5 +1,6 @@
 //👇🏼variables + querySelectors
 var receiveMessageButton = document.querySelector('.receive-message');
+var clearMessageButton = document.querySelector('.clear-message')
 var messageInput = document.getElementsByName('message-input');
 var messageDisplayBox = document.querySelector('.message-display-box')
 var meditationImage = document.querySelector('src');
@@ -42,6 +43,8 @@ var mantras = [
 //✨event listeners
 receiveMessageButton.addEventListener('click', showRandomMessage);
 
+clearMessageButton.addEventListener('click', clearMessage);
+
 
 
 
@@ -59,10 +62,17 @@ function showRandomMessage() {
     } else if (messageInput[1].checked) {
       messageDisplayBox.innerText = randomMantra;
     }
-      meditationImage.classList.toggle('hidden');
-      messageDisplayBox.classList.toggle('hidden');
+    messageDisplayBox.classList.toggle('hidden');
+    meditationImage.classList.toggle('hidden');
   }
 };
+
+function clearMessage() {
+  messageDisplayBox.innerText = '';
+  meditationImage.classList.toggle('hidden');
+  messageDisplayBox.classList.toggle('hidden');
+
+}
 
 //   currentPoster = new Poster(randomImage, randomTitle, randomQuote);
 //   displayCurrentPoster();

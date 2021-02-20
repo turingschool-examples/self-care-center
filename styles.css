@@ -17,6 +17,9 @@ img {
   width: 60px;
 }
 
+.hidden {
+  display: none;
+}
 .message-type {
   color: #ffffff;
   text-align: center;
