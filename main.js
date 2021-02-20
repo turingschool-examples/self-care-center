@@ -51,6 +51,7 @@ function displayMessage() {
   if (affirmationBtn.checked === true || mantraBtn.checked === true) {
     meditationImage.classList.add('hidden');
     messageReturn.classList.remove('hidden');
+    deleteMessageBtn.classList.remove('hidden');
   }
   if (affirmationBtn.checked === true) {
     messageReturn.innerText = randomAffirmation;
