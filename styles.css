@@ -73,7 +73,8 @@ height: 100%;
   display: none!important;
 }
 
-.favorite-button {
+.favorite-button,
+.view-favorites {
   background-color: #134d71;
   color: #ffffff;
   border-radius: 5px;
@@ -84,8 +85,7 @@ height: 100%;
 
 .outer-wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
