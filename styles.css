@@ -27,8 +27,8 @@ img {
 .message-type-box {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-content: center;
+  justify-content: space-around;
+  align-content: space-around;
   background-color: #ffffff;
   height: 100px;
   width: 500px;
@@ -49,8 +49,7 @@ img {
   border-radius: 10px;
 }
 
-
-.receive-message {
+button {
   background-color: #134d71;
   border-color: #134d71;
   border-style: solid;
@@ -61,11 +60,6 @@ img {
   margin-top: 65px
 };
 
-
-input[type='radio'] {
-  height: 26px;
-  width: 26px;
-}
 
 
 /* font-family: 'Quicksand', sans-serif;
