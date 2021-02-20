@@ -38,14 +38,24 @@ h2 {
 /*~~~~~~~~~~~~~~~~~~~~~`Form Section`~~~~~~~~~~~~~~~~~~~~~~~*/
 .message {
   background: white;
-  margin-left: 560px;
-  margin-right: 560px;
+  margin-left: 30%;
+  margin-right: 30%;
   height: 145px;
   border-radius: 15px;
   flex-direction: column;
   align-items: center;
 }
-
+.lables {
+  display: flex;
+  margin: auto;
+  width: 70%;
+  justify-content: space-around;
+  font-size: 1.5em;
+  font-style: italic;
+}
+.affirm{
+  margin-left: 40%;
+}
 input[type='radio'] {
   height: 26px;
   width: 26px;
@@ -57,25 +67,19 @@ input[type='radio'] {
   background-color: #134d71;
   color: #ffffff;
   width: 100px;
-  padding: 4px 20px;
+  padding: 3px 15px;
   width: 250px;
   border-radius: 10px;
   font-size: 23px;
 }
-
-.lables {
-  display: flex;
-  width: 650px;
-  padding: 29px;
-  justify-content: space-around;
-  font-size: 1.5em;
-  font-style: italic;
+.btn{
+  padding-bottom: 15px;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~`Bell Section`~~~~~~~~~~~~~~~~~~~~~~~*/
 .bell {
   background: white;
-  margin: 8% 20%;
+  margin: 8% 22%;
   height: 205px;
   border-radius: 15px;
   justify-content: center;
