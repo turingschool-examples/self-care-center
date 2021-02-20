@@ -15,8 +15,6 @@ body {
 img {
   height: 60px;
   width: 60px;
-  margin-left: 275px;
-  margin-top: 30px;
 }
 
 .message-type {
@@ -39,6 +37,9 @@ img {
 }
 
 .message-display-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #ffffff;
   height: 125px;
   width: 600px;
