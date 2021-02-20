@@ -46,8 +46,14 @@ function showMessage () {
   for(var i = 0; i < choiceButtons.length; i++) {
     if(choiceButtons[0].checked) {
       messagePlaceholder.innerText = randomAffirmation;
+      showButton();
   } else if(choiceButtons[1].checked) {
       messagePlaceholder.innerText = randomMantra;
+      showButton();
   }
 }
+}
+
+function showButton() {
+  favoriteMessageButton.classList.remove('hidden');
 }
