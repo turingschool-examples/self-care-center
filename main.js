@@ -5,10 +5,6 @@ var returnMessage = document.querySelector('.returnMessage');
 var meditateImg = document.querySelector('.meditateImg');
 var affirmationBtn = document.getElementById('#affirmation');
 var mantraBtn = document.getElementById('#mantra');
-var randomAffirmation = getRandomIndex(affirmations);
-var randomMantra = getRandomIndex(mantras);
-
-recieveMessageBtn.addEventListener('click', displayMessage);
 
 var affirmations = [
   'I forgive myself and set myself free.',
@@ -43,11 +39,18 @@ var mantras = [
   'I am the sky, the rest is weather.'
 ]
 
+var randomAffirmation = getRandomIndex(affirmations);
+var randomMantra = getRandomIndex(mantras);
+
+recieveMessageBtn.addEventListener('click', displayMessage);
+
 function getRandomIndex(array) {
   var randomIndex =  Math.floor(Math.random() * array.length);
   return array[randomIndex];
 }
 
 function displayMessage() {
-  if (mantraBtn === input[])
+  if (mantraBtn === input.value) {
+
+  }
 }
