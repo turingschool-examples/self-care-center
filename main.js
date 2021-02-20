@@ -30,3 +30,4 @@ var affirmations = [
   'I honor my body by trusting the signals that it sends me.',
   'I manifest perfect health by making smart choices.'
 ];
+var receiveMessageButton = document.querySelector('.lower-btn');
