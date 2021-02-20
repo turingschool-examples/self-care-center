@@ -79,3 +79,9 @@ function showForm() {
 function saveFavoriteMessage() {
   savedMessages.push(currentMessage);
 }
+
+function displayMessage() {
+  favoriteMessageGrid.innerHTML = `
+    <h4>${savedMessages}</h4>
+  `;
+}
