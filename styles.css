@@ -29,7 +29,7 @@ h2 {
   width: 50%;
   text-align: center;
   color: #ffffff;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 img {
@@ -65,7 +65,8 @@ img {
   padding-right: 20px
 }
 
-.receive-message-btn {
+.receive-message-btn,
+.delete-message-btn {
   background-color: #134d71;
   color: #ffffff;
   margin-top: 20px;
@@ -75,5 +76,5 @@ img {
 }
 
 .hidden {
-  display: none; 
+  display: none;
 }
