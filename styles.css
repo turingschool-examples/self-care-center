@@ -6,3 +6,9 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+.heading {
+  color: #ffffff;
+  margin-top: 5%;
+  font-size: 300%;
+}
