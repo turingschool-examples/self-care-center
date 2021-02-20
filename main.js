@@ -46,7 +46,7 @@ var savedMessages = [];
 var currentMessage;
 
 receiveMessageButton.addEventListener('click', showMessage);
-favoriteMessageButton.addEventListener('click', showForm);
+favoriteMessageButton.addEventListener('click', saveFavoriteMessage);
 backToMainButton.addEventListener('click', showForm);
 
 function showMessage () {
@@ -71,4 +71,8 @@ function showButton() {
 function showForm() {
     mainPage.classList.toggle('hidden');
     favoriteMessageForm.classList.toggle('hidden');
+}
+
+function saveFavoriteMessage() {
+  savedMessages.push(currentMessage);
 }
