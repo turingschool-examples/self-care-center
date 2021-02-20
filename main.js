@@ -40,3 +40,14 @@ receiveButton.addEventListener("click", showMessage);
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
+
+function displayRandomAffirmation() {
+  var randomAffirmationIndex = getRandomIndex(affirmations);
+  var randomAffirmation = affirmations[randomAffirmationIndex];
+  writeMessageToPage(randomAffirmation);
+}
+function displayRandomMantra() {
+  var randomMantraIndex = getRandomIndex(mantras);
+  var randomMantra = mantras[randomMantraIndex];
+  writeMessageToPage(randomMantra);
+}
