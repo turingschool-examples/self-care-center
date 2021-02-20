@@ -41,10 +41,13 @@ var favoriteMessageForm = document.querySelector('.favorite-message');
 var mainPage = document.querySelector('.main-page');
 var backToMainButton = document.querySelector('.back-to-main');
 var favoriteMessageGrid = document.querySelector('.favorite-message-grid');
+var viewFavoritesButton = document.querySelector('.view-favorites');
 var savedMessages = [];
+var currentMessage;
 
 receiveMessageButton.addEventListener('click', showMessage);
 favoriteMessageButton.addEventListener('click', showForm);
+favoriteMessageButton.addEventListener('click', saveFavoriteMessage);
 backToMainButton.addEventListener('click', showForm);
 
 function showMessage () {
@@ -52,10 +55,10 @@ function showMessage () {
   var randomMantra = mantras[Math.floor(Math.random() * mantras.length)];
   for(var i = 0; i < choiceButtons.length; i++) {
     if(choiceButtons[0].checked) {
-      messagePlaceholder.innerText = randomAffirmation;
+      currentMessage = messagePlaceholder.innerText = randomAffirmation;
       showButton();
   } else if(choiceButtons[1].checked) {
-      messagePlaceholder.innerText = randomMantra;
+      currentMessage = messagePlaceholder.innerText = randomMantra;
       showButton();
   }
 }
@@ -63,9 +66,17 @@ function showMessage () {
 
 function showButton() {
   favoriteMessageButton.classList.remove('hidden');
+  viewFavoritesButton.classList.remove('hidden');
 }
 
 function showForm() {
     mainPage.classList.toggle('hidden');
     favoriteMessageForm.classList.toggle('hidden');
+}
+
+function saveFavoriteMessage() {
+  savedMessages.push(currentMessage);
+  favoriteMessageGrid.innerHTML = `
+  <h4>${savedMessages}</h4>
+  `;
 }
