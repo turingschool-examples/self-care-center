@@ -1,10 +1,10 @@
 var radioSelect = document.querySelectorAll('input[name="message-type"]');
-var recieveMessageBtn = document.querySelector('.receive-message');
-var returnMessage = document.querySelector('.returnMessage');
+var recieveMessageBtn = document.querySelector('.receive-message-btn');
+var returnMessage = document.querySelector('h3');
 
 var meditateImg = document.querySelector('.meditateImg');
-var affirmationBtn = document.getElementById('#affirmation');
-var mantraBtn = document.getElementById('#mantra');
+var affirmationRadio = document.getElementById('#affirmation');
+var mantraRadio = document.getElementById('#mantra');
 
 var affirmations = [
   'I forgive myself and set myself free.',
@@ -49,8 +49,14 @@ function getRandomIndex(array) {
   return array[randomIndex];
 }
 
-function displayMessage() {
-  if (mantraBtn === input.value) {
-
+function displayMessage () {
+  if (mantraRadio.checked  || affirmationRadio.checked) {
+    meditateImg.classList.add('hidden');
+    returnMessage.classList.remove('hidden');
+  }
+  if (mantraRadio.checked) {
+    returnMessage.innerHTML = randomMantra;
+  } else if (affirmationRadio.checked) {
+    returnMessage.innerHTML = randomAffirmation;
   }
 }
