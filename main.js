@@ -51,6 +51,7 @@ favoriteMessageButton.addEventListener('click', saveFavoriteMessage);
 backToMainButton.addEventListener('click', showForm);
 viewFavoritesButton.addEventListener('click', showForm);
 viewFavoritesButton.addEventListener('click', displayMessage);
+deleteButton.addEventListener('click', deleteMessage);
 
 function showMessage () {
   var randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)];
