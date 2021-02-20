@@ -6,3 +6,13 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+h1 {
+  text-align:center;
+}
+p {
+  text-align:center;
+}
+body {
+  background: linear-gradient(#134d71,#78a7c6,#f7e4bf);
+  font-family:Quicksand;
+}
