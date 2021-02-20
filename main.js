@@ -1,8 +1,7 @@
-//query selector variables
+var radioButtons = document.querySelectorAll(".message-input");
+var receiveButton = document.querySelector(".message-button");
+var messageDisplay = document.querySelector(".message-display");
 
-
-
-//arrays of messages
 var affirmations = [
 "I forgive myself and set myself free.",
 "I believe I can be all that I want to be.",
@@ -35,11 +34,3 @@ var mantras = [
 "Onward and upward.",
 "I am the sky, the rest is weather."
 ];
-
-
-//event listeners
-
-
-
-
-//functions/event handlers
