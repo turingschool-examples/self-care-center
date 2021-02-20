@@ -58,3 +58,16 @@ function writeMessageToPage(message) {
   `;
   messageDisplay.innerHTML = markup;
 }
+
+function showMessage() {
+  event.preventDefault();
+  for (var radioButton of radioButtons) {
+    if (radioButton.checked) {
+      if (radioButton.value === "affirmation") {
+        displayRandomAffirmation();
+      } else {
+        displayRandomMantra();
+      }
+    }
+  }
+}
