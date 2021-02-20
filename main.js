@@ -38,14 +38,13 @@ var mantras = [
 ];
 
 
-
-
 //✨event listeners
-receiveMessageButton.addEventListener('click', showRandomMessage);
+receiveMessageButton.addEventListener('click', function () {
+  showRandomMessage();
+  toggleImage();
+});
 
 clearMessageButton.addEventListener('click', clearMessage);
-
-
 
 
 //🌼functions
@@ -61,19 +60,23 @@ function showRandomMessage() {
       messageDisplayBox.innerText = randomAffirmation;
     } else if (messageInput[1].checked) {
       messageDisplayBox.innerText = randomMantra;
+    } else {
+      alert('Oops! You forgot to choose a message!');
     }
-    messageDisplayBox.classList.toggle('hidden');
-    meditationImage.classList.toggle('hidden');
   }
 };
 
 function clearMessage() {
-  messageDisplayBox.innerText = '';
-  meditationImage.classList.toggle('hidden');
-  messageDisplayBox.classList.toggle('hidden');
+    if (!messageDisplayBox.innerText) {
+        clearMessageButton.disabled = true;
+    } else {
+      clearMessageButton.disabled = false;
+      messageDisplayBox.innerText = '';
+      return meditationImage.classList.remove('hidden');
+  }
+};
 
-}
-
-//   currentPoster = new Poster(randomImage, randomTitle, randomQuote);
-//   displayCurrentPoster();
-// };
+function toggleImage() {
+  messageDisplayBox.classList.add('hidden');
+  meditationImage.classList.remove('hidden');
+};
