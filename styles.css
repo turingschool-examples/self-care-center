@@ -18,6 +18,10 @@ h3 {
   margin-bottom: 10px;
 }
 
+.highlight{
+  background: red;
+}
+
 .inner-wrapper {
 background: #ffffff;
 border-radius: 15px;
@@ -94,11 +98,10 @@ height: 100%;
 .favorite-message-grid {
   background: #ffffff;
   border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
   margin-left: 200px;
   margin-right: 200px;
 }
