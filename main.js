@@ -63,7 +63,7 @@ var positivity = document.querySelector('.text');
 // var affirmButton = document.querySelector('.affirm-button');
 // var mantraButton = document.querySelector('.mantra-button');
 var submitButton = document.querySelector('.msgButton');
-var radioButton = document.forms['form'].elements['pick'];
+// var radioButton = document.forms['form'].elements['pick'];
 // EVENT LISTENERS
 
 submitButton.addEventListener('click', displayRandomMsg);
@@ -75,9 +75,11 @@ function getRandomIndex(array) {
 
 // Need to differentiate between affirmation and mantra radio
 // button selections - event listener?
+
+// YOUTUBE WALKTHOUGH
 function displayRandomMsg() {
-for (var i = 0; i < radioButton.length; i++) {
-  if (pick[i].value === 'mantras') {
+  var radioButton = document.querySelector("input[type='radio']:checked");
+  if (radioButton.checked.value === 'mantra') {
     event.preventDefault(event);
     var randomMsg = mantras[getRandomIndex(mantras)];
     positivity.innerText = randomMsg;
@@ -90,8 +92,31 @@ for (var i = 0; i < radioButton.length; i++) {
     bellDisplay.classList.toggle('hidden');
     positiveDisplay.classList.toggle('hidden');
   }
- }
 };
+
+
+
+
+
+
+
+
+// function displayRandomMsg() {
+//  // for (var i = 0; i < radioButton.length; i++)
+//    if (pick[i].value === 'mantra') {
+    // event.preventDefault(event);
+    // var randomMsg = mantras[getRandomIndex(mantras)];
+    // positivity.innerText = randomMsg;
+    // bellDisplay.classList.toggle('hidden');
+    // positiveDisplay.classList.toggle('hidden');
+//  } else {
+    // event.preventDefault(event);
+    // var randomMsg = affirmations[getRandomIndex(affirmations)];
+    // positivity.innerText = randomMsg;
+    // bellDisplay.classList.toggle('hidden');
+    // positiveDisplay.classList.toggle('hidden');
+//   }
+// };
 
 //  MANTRAS RANDOM
 // function displayRandomMsg() {
