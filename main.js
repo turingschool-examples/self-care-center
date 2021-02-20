@@ -38,6 +38,7 @@ var buddha = document.querySelector('img');
 var choiceButtons = document.querySelectorAll('input[name="choice"]');
 var favoriteMessageButton = document.querySelector('.favorite-button');
 var favoriteMessageForm = document.querySelector('.favorite-message');
+var mainPage = document.querySelector('.main-page');
 
 receiveMessageButton.addEventListener('click', showMessage);
 
