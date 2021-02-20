@@ -47,21 +47,22 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 //
-function displayMessage() {//add a feature that it will only work if one of the radio btns are picked
+function displayMessage() {
+  if (affirmationBtn.checked === true || mantraBtn.checked === true) {
   meditationImage.classList.add('hidden');
   messageReturn.classList.remove('hidden');
-  console.log(randomAffirmation);
-  // if (affirmationBtn.checked === true) {
+}  if (affirmationBtn.checked === true) {
     messageReturn.innerText = randomAffirmation;
-
-  // } else if (mantraBtn.checked === true) {
-  //   messageReturn.innerText = randomMantra;
-  // }
+    } else if (mantraBtn.checked === true) {
+    messageReturn.innerText = randomMantra;
+  }
 }
 
 
 
 
+
+// Use checked property of the radio button to check if the radio button is checked.
 // function check() {
 //   document.getElementById("red").checked = true;
 // }
