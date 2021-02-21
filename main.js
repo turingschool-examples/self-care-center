@@ -13,7 +13,6 @@ var affirmations = [
   "I honor my body by trusting the signals that it sends me.",
   "I manifest perfect health by making smart choices."
 ];
-
 var mantras = [
   "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.",
   "Don’t let yesterday take up too much of today.",
@@ -31,12 +30,12 @@ var mantras = [
   "Onward and upward.",
   "I am the sky, the rest is weather."
 ];
+var message = "";
 
 var affirmation = document.querySelector(".affirmation");
 var mantra = document.querySelector(".mantra");
 var button = document.querySelector(".button");
 var deleteButton = document.querySelector(".delete");
-var message = "";
 var messageDisplay = document.querySelector(".message");
 var img = document.querySelector(".yellow-meditate");
 
