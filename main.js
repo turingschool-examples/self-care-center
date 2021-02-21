@@ -85,6 +85,5 @@ function saveFavoriteMessage() {
 }
 
 function deleteMessage() {
-  document.getElementsByClassName('great-message highlight').remove();
-  savedMessages.splice(document.getElementsByClassName('great-message highlight'), 1);
+  
 }
