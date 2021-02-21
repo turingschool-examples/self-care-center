@@ -1,3 +1,4 @@
+feature/add-javascript
 var getAffirmation = document.querySelector("#affirmations");
 var getMantra = document.querySelector("#mantras");
 var button = document.querySelector("button");
@@ -108,3 +109,4 @@ function getQuote(array) {
 
 
 }
+ main
