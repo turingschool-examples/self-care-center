@@ -58,4 +58,5 @@ function getMantra() {
 
 function displayMessage() {
   messageDisplay.innerText = message;
+  img.classList.add("hidden");
 }
