@@ -47,3 +47,15 @@ button.addEventListener("click", displayMessage);
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
+
+function getAffirmation() {
+  message = affirmations[getRandomIndex(affirmations)];
+}
+
+function getMantra() {
+  message = mantras[getRandomIndex(affirmations)];
+}
+
+function displayMessage() {
+  messageDisplay.innerText = message;
+}
