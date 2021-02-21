@@ -91,6 +91,7 @@ input[type='radio'] {
   font-size: 50px;
   background: white;
   border:none;
+  outline: none;
 }
 .view-favMsg-btn{
   width: 120px;
