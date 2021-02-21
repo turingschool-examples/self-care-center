@@ -1,12 +1,14 @@
 # Project: *Self Care Center*
 
 ### Table of Content
-- [Contributor](##Contributor)
+- [Contributor](#contr)
 - [Technologies used](## Technologies used)
 - [Instructions for Running Project](## Instructions for Running Project)
 - [Deploy Link](## Deploy Link)
 - [Overview](## Overview)
 - [Future Additions](## Future Additions)
+
+<a name="contr"></a>
 ## Contributor
 [Ashish Malla](https://github.com/asiisii)
 
