@@ -77,7 +77,7 @@ button.onclick = function () {
   }
    getQuote(selected);
 }
-// getAffirmation.addEventListener("click",getQuote);
+
 
 
 function getRandomIndex(array) {
