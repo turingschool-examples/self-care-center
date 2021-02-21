@@ -63,6 +63,7 @@ body {
   padding: 8px 25px;
   width: 225px;
   font-size: 20px;
+  outline: none;
 }
 
 .select {
@@ -95,4 +96,14 @@ body {
 input[type='radio'] {
   height: 23px;
   width: 23px;
+}
+
+
+.message {
+  font-size: 32px;
+  padding-top: 7.3%;
+}
+
+.hidden {
+  display: none!important;
 }
