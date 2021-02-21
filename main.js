@@ -3,7 +3,10 @@ var receiveMessageButton = document.querySelector('.receive-message');
 var clearMessageButton = document.querySelector('.clear-message')
 var messageInput = document.getElementsByName('message-input');
 var messageDisplayBox = document.querySelector('.message-display-box')
-var meditationImage = document.querySelector('src');
+var meditationImage = document.querySelector('.meditationImage');
+var messageText = document.querySelector('.message-text');
+var affirmation = document.getElementById('affirmations');
+var mantra = document.getElementById('mantras');
 var affirmations = [
   'I forgive myself and set myself free.',
   'I believe I can be all that I want to be.',
@@ -39,44 +42,34 @@ var mantras = [
 
 
 //✨event listeners
-receiveMessageButton.addEventListener('click', function () {
-  showRandomMessage();
-  toggleImage();
-});
-
+receiveMessageButton.addEventListener('click', getrandomMessage);
 clearMessageButton.addEventListener('click', clearMessage);
 
 
+
 //🌼functions
+function toggleImage(display, hide) {
+  display.classList.remove('hidden');
+  hide.classList.add('hidden');
+};
+
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
-function showRandomMessage() {
+function getrandomMessage() {
+  clearMessageButton.classList.remove('hidden');
   var randomAffirmation = affirmations[getRandomIndex(affirmations)];
   var randomMantra = mantras[getRandomIndex(mantras)];
-  for (var i = 0; i < messageInput.length; i++) {
-      if (messageInput[0].checked) {
-      messageDisplayBox.innerText = randomAffirmation;
-    } else if (messageInput[1].checked) {
-      messageDisplayBox.innerText = randomMantra;
-    } else {
-      alert('Oops! You forgot to choose a message!');
-    }
+  if (affirmation.checked) {
+    messageText.innerText = randomAffirmation;
+  } else if (mantra.checked) {
+    messageText.innerText = randomMantra;
   }
+  toggleImage(messageText, meditationImage);
 };
 
 function clearMessage() {
-    if (!messageDisplayBox.innerText) {
-        clearMessageButton.disabled = true;
-    } else {
-      clearMessageButton.disabled = false;
-      messageDisplayBox.innerText = '';
-      return meditationImage.classList.remove('hidden');
-  }
-};
-
-function toggleImage() {
-  messageDisplayBox.classList.add('hidden');
-  meditationImage.classList.remove('hidden');
-};
+  messageText.innerText = '';
+  clearMessageButton.classList.add('hidden');
+}
