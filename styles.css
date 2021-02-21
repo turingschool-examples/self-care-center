@@ -26,3 +26,28 @@ body {
   color: #ffffff;
   font-size: 190%;
 }
+
+.affirmation {
+  cursor: pointer;
+  margin-top: 3%;
+  font-size: 100%;
+  font-style: italic;
+}
+
+.affirmation-label {
+  font-style: italic;
+  font-size: 150%;
+}
+
+.mantra {
+  cursor: pointer;
+  margin-top: 3%;
+  margin-left: 18%;
+  font-size: 100%;
+  font-style: italic;
+}
+
+.mantra-label {
+  font-style: italic;
+  font-size: 150%;
+}
