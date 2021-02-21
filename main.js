@@ -14,8 +14,6 @@ var bellSection  = document.querySelector('.bell');
 var favSection  = document.querySelector('.fav-lists');
 
 
-
-
 var affirmations = [
   'I am love. I am purpose. I was made with divine intention.', 'I don’t sweat the small stuff.', 'I can. I will. End of story.', 'I am adventurous. I overcome fears by following my dreams.', 'I feed my spirit. I train my body. I focus my mind. It’s my time.', 'I am in charge of how I feel and today I am choosing happiness.', 'I will not compare myself to strangers on the Internet.', 'I am choosing and not waiting to be chosen.', 'I am enough.', 'I am whole.', 'I have the power to create change.', 'I let go of all that no longer serves me.', 'I refuse to give up because I haven’t tried all possible ways.'
 ];
@@ -25,6 +23,7 @@ var mantras = [
 // var viewedMsg = [];
 var favSavedMsg = [];
 var currentMsg;
+var index = Date.now();
 
 var msgBtn = document.querySelector('.msg-btn');
 var clearBtn = document.querySelector('.clear-btn');
@@ -57,7 +56,6 @@ function clearMsg(){
   showMsg.innerText = "";
   favBtn.classList.add('hidden');
   viewFavBtn.classList.add('hidden');
-  // msgBtn.disabled = false;
   clearPage();
 }
 function getRandomAffirm(){
@@ -86,13 +84,14 @@ function displayMsg(){
   }
 }
 
-
 function favoriteMsg(){
   if(!favSavedMsg.includes(currentMsg)){
     favBtn.innerText = "♥️";
-    // viewedMsg.push(currentMsg);
-
-    favSavedMsg.push(currentMsg);
+    favSavedMsg.push({
+      id: Date.now(),
+      message: currentMsg,}
+    );
+    console.log("favID",favSavedMsg[0].id);
     makeMiniFavMsgList();
 
   }else{
@@ -102,28 +101,29 @@ function favoriteMsg(){
 }
 // && !viewedMsg.includes(currentMsg)
 
-
-
 function makeMiniFavMsgList() {
   viewFavMsg.innerHTML = '';
   for (var i = 0; i < favSavedMsg.length; i++) {
+    console.log("index", favSavedMsg[0].id);
     viewFavMsg.innerHTML +=
     `
-      <div class='new-fav-msg'>
-        <p>${favSavedMsg[i]}</p>
-        <button class='delete-fav-msg-btn'>Delete</button>
+      <div class='new-fav-msg' >
+        <p >${favSavedMsg[i].message} </p>
+        <button class='delete-fav-msg-btn' id=${favSavedMsg[i].id}>Delete</button>
       </div>
     `
   }
 }
-
-function deleteFavMsg(){
-  // var index = favSavedMsg.indexOf();
-  // if(index > -1){
-  //   favSavedMsg.splice(index, 1);
-  // }makeMiniFavMsgList();
+function deleteFavMsg(event){
+  var storeId = parseInt(event.target.id);
+  console.log("storeId",storeId);
+  for (var i = 0; i < favSavedMsg.length; i++) {
+    if(storeId === favSavedMsg[i].id){
+      favSavedMsg.splice(i,1);
+    }
+  }
+  makeMiniFavMsgList();
 }
-
 function openFavList(){
   favSection.classList.remove('hidden');
   headingSection.classList.add('hidden');
