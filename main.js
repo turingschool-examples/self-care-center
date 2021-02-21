@@ -1,8 +1,12 @@
 //👇🏼variables + querySelectors
 var receiveMessageButton = document.querySelector('.receive-message');
+var clearMessageButton = document.querySelector('.clear-message')
 var messageInput = document.getElementsByName('message-input');
 var messageDisplayBox = document.querySelector('.message-display-box')
-var meditationImage = document.querySelector('src');
+var meditationImage = document.querySelector('.meditation-image');
+var messageText = document.querySelector('.message-text');
+var affirmation = document.getElementById('affirmations');
+var mantra = document.getElementById('mantras');
 var affirmations = [
   'I forgive myself and set myself free.',
   'I believe I can be all that I want to be.',
@@ -37,33 +41,37 @@ var mantras = [
 ];
 
 
-
-
 //✨event listeners
-receiveMessageButton.addEventListener('click', showRandomMessage);
-
+receiveMessageButton.addEventListener('click', getrandomMessage);
+clearMessageButton.addEventListener('click', clearMessage);
 
 
 
 //🌼functions
+function displayHide(display, hide) {
+  display.classList.remove('hidden');
+  hide.classList.add('hidden');
+};
+
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
-function showRandomMessage() {
-  var randomAffirmation = affirmations[getRandomIndex(affirmations)];
-  var randomMantra = mantras[getRandomIndex(mantras)];
-  for (var i = 0; i < messageInput.length; i++) {
-      if (messageInput[0].checked) {
-      messageDisplayBox.innerText = randomAffirmation;
-    } else if (messageInput[1].checked) {
-      messageDisplayBox.innerText = randomMantra;
-    }
-      meditationImage.classList.toggle('hidden');
-      messageDisplayBox.classList.toggle('hidden');
+function getrandomMessage() {
+  clearMessageButton.classList.remove('hidden');
+  if (affirmation.checked) {
+    messageText.innerText = affirmations[getRandomIndex(affirmations)];
+    displayHide(messageText, meditationImage);
+  } else if (mantra.checked) {
+    messageText.innerText = mantras[getRandomIndex(mantras)];
+    displayHide(messageText, meditationImage);
+  } else {
+    clearMessageButton.classList.add('hidden');
+    alert('Oops! You forgot to select a message type!')
   }
 };
 
-//   currentPoster = new Poster(randomImage, randomTitle, randomQuote);
-//   displayCurrentPoster();
-// };
+function clearMessage() {
+  displayHide(meditationImage, messageText);
+  clearMessageButton.classList.add('hidden');
+}
