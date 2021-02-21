@@ -6,3 +6,93 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+body {
+  background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  background-attachment: fixed;
+  text-align: center;
+  font-family: sans-serif;
+  font-Family: Quicksand;
+}
+
+.heading {
+  color: #ffffff;
+  margin-top: 5%;
+  font-size: 300%;
+}
+
+.question {
+  margin-top: 100px;
+  color: #ffffff;
+  font-size: 190%;
+}
+
+.affirmation {
+  cursor: pointer;
+  margin-top: 3%;
+  font-size: 100%;
+  font-style: italic;
+}
+
+.affirmation-label {
+  font-style: italic;
+  font-size: 150%;
+}
+
+.mantra {
+  cursor: pointer;
+  margin-top: 3%;
+  margin-left: 18%;
+  font-size: 100%;
+  font-style: italic;
+}
+
+.mantra-label {
+  font-style: italic;
+  font-size: 150%;
+}
+
+.button {
+  cursor: pointer;
+  background-color: #134d71;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 2.5%;
+  margin-bottom: 2%;
+  padding: 8px 25px;
+  width: 225px;
+  font-size: 20px;
+}
+
+.select {
+  background-color: #ffffff;
+  border-radius: 25px;
+  border-radius: 10px;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 150px;
+  height: 120px;
+}
+
+.display {
+  background-color: #ffffff;
+  border-radius: 25px;
+  border-radius: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 150px;
+  height: 200px;
+}
+
+.yellow-meditate {
+  max-width:9%;
+  height: auto;
+  margin-top: 4%;
+  margin-bottom: 7%;
+}
+
+input[type='radio'] {
+  height: 23px;
+  width: 23px;
+}
