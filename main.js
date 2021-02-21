@@ -32,9 +32,13 @@ var mantras = [
   "I am the sky, the rest is weather."
 ];
 
-var affirmation = document.querySelector(.affirmation);
-var mantra = document.querySelector(.mantra);
-var button = document.querySelector(.button);
+var affirmation = document.querySelector(".affirmation");
+var mantra = document.querySelector(".mantra");
+var button = document.querySelector(".button");
+
+var message = "";
+var messageDisplay = document.querySelector(".message");
+var img = document.querySelector(".yellow-meditate");
 
 affirmation.addEventListener("click", getAffirmation);
 mantra.addEventListener("click", getMantra);
