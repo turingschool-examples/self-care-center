@@ -84,3 +84,10 @@ body {
   margin-bottom: 150px;
   height: 200px;
 }
+
+.yellow-meditate {
+  max-width:9%;
+  height: auto;
+  margin-top: 4%;
+  margin-bottom: 7%;
+}
