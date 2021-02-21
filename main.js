@@ -35,7 +35,7 @@ var mantras = [
 var affirmation = document.querySelector(".affirmation");
 var mantra = document.querySelector(".mantra");
 var button = document.querySelector(".button");
-
+var deleteButton = document.querySelector(".delete");
 var message = "";
 var messageDisplay = document.querySelector(".message");
 var img = document.querySelector(".yellow-meditate");
@@ -43,6 +43,7 @@ var img = document.querySelector(".yellow-meditate");
 affirmation.addEventListener("click", getAffirmation);
 mantra.addEventListener("click", getMantra);
 button.addEventListener("click", displayMessage);
+deleteButton.addEventListener("click", deleteMessage);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
