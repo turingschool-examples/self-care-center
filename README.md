@@ -1,6 +1,6 @@
 # Project: *Self Care Center*
 
-### Table of Content
+### Table of Contents
 - [Contributor](##Contributor)
 - [Technologies used](## Technologies used)
 - [Instructions for Running Project](## Instructions for Running Project)
