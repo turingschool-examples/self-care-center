@@ -50,7 +50,6 @@ receiveMessageButton.addEventListener('click', showMessage);
 favoriteMessageButton.addEventListener('click', saveFavoriteMessage);
 backToMainButton.addEventListener('click', showForm);
 viewFavoritesButton.addEventListener('click', showForm);
-viewFavoritesButton.addEventListener('click', displayMessage);
 favoriteMessageGrid.addEventListener('click', decideToDelete);
 deleteButton.addEventListener('click', deleteMessage);
 
@@ -80,10 +79,15 @@ function showForm() {
 
 function saveFavoriteMessage() {
   savedMessages.push(currentMessage);
+  favoriteMessageGrid.innerHTML += `
+  <h4 class="great-message">${currentMessage}</h4>
+`
 }
 
-function displayMessage() {
-  favoriteMessageGrid.innerHTML += `
-    <h4 class="great-message">${currentMessage}</h4>
-  `;
+function decideToDelete() {
+  event.target.classList.add('highlight');
+}
+function deleteMessage() {
+  document.getElementsByClassName('great-message highlight').remove();
+  savedMessages.splice(document.getElementsByClassName('great-message highlight'), 1);
 }
