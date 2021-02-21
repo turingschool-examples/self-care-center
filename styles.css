@@ -91,3 +91,8 @@ body {
   margin-top: 4%;
   margin-bottom: 7%;
 }
+
+input[type='radio'] {
+  height: 23px;
+  width: 23px;
+}
