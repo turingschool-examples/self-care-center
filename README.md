@@ -1,9 +1,16 @@
 # Project: *Self Care Center*
 
+### Table of Content
+- [Contributor](##Contributor)
+- [Technologies used](## Technologies used)
+- [Instructions for Running Project](## Instructions for Running Project)
+- [Deploy Link](## Deploy Link)
+- [Overview](## Overview)
+- [Future Additions](## Future Additions)
 ## Contributor
 [Ashish Malla](https://github.com/asiisii)
 
-## Technologies & languages used:
+## Technologies used:
 - GitHub
 - Terminal
 - Atom
