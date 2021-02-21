@@ -66,6 +66,20 @@ body {
   outline: none;
 }
 
+.delete {
+  cursor: pointer;
+  background-color: #134d71;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 2.5%;
+  margin-bottom: 2%;
+  padding: 8px 25px;
+  width: 225px;
+  font-size: 20px;
+  outline: none;
+}
+
 .select {
   background-color: #ffffff;
   border-radius: 25px;
