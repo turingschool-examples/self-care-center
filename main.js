@@ -13,7 +13,6 @@ var affirmations = [
   "I honor my body by trusting the signals that it sends me.",
   "I manifest perfect health by making smart choices."
 ];
-
 var mantras = [
   "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.",
   "Don’t let yesterday take up too much of today.",
@@ -31,18 +30,19 @@ var mantras = [
   "Onward and upward.",
   "I am the sky, the rest is weather."
 ];
+var message = "";
 
 var affirmation = document.querySelector(".affirmation");
 var mantra = document.querySelector(".mantra");
 var button = document.querySelector(".button");
-
-var message = "";
+var deleteButton = document.querySelector(".delete");
 var messageDisplay = document.querySelector(".message");
 var img = document.querySelector(".yellow-meditate");
 
 affirmation.addEventListener("click", getAffirmation);
 mantra.addEventListener("click", getMantra);
 button.addEventListener("click", displayMessage);
+deleteButton.addEventListener("click", deleteMessage);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -50,13 +50,23 @@ function getRandomIndex(array) {
 
 function getAffirmation() {
   message = affirmations[getRandomIndex(affirmations)];
+  button.classList.remove("hidden");
 }
 
 function getMantra() {
   message = mantras[getRandomIndex(affirmations)];
+  button.classList.remove("hidden");
 }
 
 function displayMessage() {
   messageDisplay.innerText = message;
   img.classList.add("hidden");
+  deleteButton.classList.remove("hidden");
+  messageDisplay.classList.remove("hidden");
+}
+
+function deleteMessage() {
+  messageDisplay.classList.add("hidden");
+  deleteButton.classList.add("hidden");
+  img.classList.remove("hidden");
 }
