@@ -6,9 +6,9 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
-* {
+/* * {
   border: 1px solid black;
-}
+} */
 h1, h2, button, label, h3 {
   font-family: 'Quicksand', sans-serif;
 }
@@ -41,8 +41,6 @@ main {
   border-radius: 7px;
   width: 550px;
   margin: auto;
-  padding: 40px 0;
-  height: 15px;
 }
 
 .radio-buttons {
@@ -50,6 +48,7 @@ main {
   justify-content: space-around;
   align-items: flex-start;
   color: black;
+  padding: 1rem;
 }
 
 .receive-message {
@@ -60,6 +59,7 @@ main {
   font-family: 'Quicksand', sans-serif;
   margin-left: 120pt;
   margin-right: 120pt;
+  margin-bottom: 20pt;
 }
 
 .meditation-icon {
