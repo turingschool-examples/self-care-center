@@ -39,3 +39,7 @@ var button = document.querySelector(.button);
 affirmation.addEventListener("click", getAffirmation);
 mantra.addEventListener("click", getMantra);
 button.addEventListener("click", displayMessage);
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
