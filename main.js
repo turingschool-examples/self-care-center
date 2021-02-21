@@ -52,14 +52,22 @@ function getRandomIndex(array) {
 function getAffirmation() {
   message = affirmations[getRandomIndex(affirmations)];
   button.classList.remove("hidden");
+  deleteButton.classList.remove("hidden");
 }
 
 function getMantra() {
   message = mantras[getRandomIndex(affirmations)];
   button.classList.remove("hidden");
+  deleteButton.classList.remove("hidden");
 }
 
 function displayMessage() {
   messageDisplay.innerText = message;
   img.classList.add("hidden");
+}
+
+function deleteMessage() {
+  messageDisplay.classList.add("hidden");
+  deleteButton.classList.add("hidden");
+  img.classList.remove("hidden");
 }
