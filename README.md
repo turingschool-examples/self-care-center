@@ -26,7 +26,8 @@ How can I care for myself? One way is with affirmations and mantras!
 Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
 Mantras are repetitive phrases that are repeated again and again during mindfulness practices.
 In this solo project for Turing Software & Design School, I built an app that lets user view different mantra and affirmations. If the user wants to favorite it, they can click on the favorite(❤️) and to view their saved messages they can click on `View ❤️` . For better understanding please watch the attached gif.
-<img src="https://media.giphy.com/media/hd8ec6ShNJKbqOKWOj/giphy.gif" height="500px" width="100px">
+
+<img src="https://media.giphy.com/media/hd8ec6ShNJKbqOKWOj/giphy.gif" height="500px" width="200px">
 
 ## Future Additions
 
