@@ -50,10 +50,12 @@ function getRandomIndex(array) {
 
 function getAffirmation() {
   message = affirmations[getRandomIndex(affirmations)];
+  button.classList.remove("hidden");
 }
 
 function getMantra() {
   message = mantras[getRandomIndex(affirmations)];
+  button.classList.remove("hidden");
 }
 
 function displayMessage() {
