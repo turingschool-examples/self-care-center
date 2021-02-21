@@ -80,13 +80,11 @@ function showForm() {
 function saveFavoriteMessage() {
   savedMessages.push(currentMessage);
   favoriteMessageGrid.innerHTML += `
+  <input type="radio" name="choice" value="currentMessage">
   <h4 class="great-message">${currentMessage}</h4>
 `
 }
 
-function decideToDelete() {
-  event.target.classList.add('highlight');
-}
 function deleteMessage() {
   document.getElementsByClassName('great-message highlight').remove();
   savedMessages.splice(document.getElementsByClassName('great-message highlight'), 1);
