@@ -3,7 +3,7 @@ var receiveMessageButton = document.querySelector('.receive-message');
 var clearMessageButton = document.querySelector('.clear-message')
 var messageInput = document.getElementsByName('message-input');
 var messageDisplayBox = document.querySelector('.message-display-box')
-var meditationImage = document.querySelector('.meditationImage');
+var meditationImage = document.querySelector('.meditation-image');
 var messageText = document.querySelector('.message-text');
 var affirmation = document.getElementById('affirmations');
 var mantra = document.getElementById('mantras');
@@ -48,7 +48,7 @@ clearMessageButton.addEventListener('click', clearMessage);
 
 
 //🌼functions
-function toggleImage(display, hide) {
+function displayHide(display, hide) {
   display.classList.remove('hidden');
   hide.classList.add('hidden');
 };
@@ -59,17 +59,19 @@ function getRandomIndex(array) {
 
 function getrandomMessage() {
   clearMessageButton.classList.remove('hidden');
-  var randomAffirmation = affirmations[getRandomIndex(affirmations)];
-  var randomMantra = mantras[getRandomIndex(mantras)];
   if (affirmation.checked) {
-    messageText.innerText = randomAffirmation;
+    messageText.innerText = affirmations[getRandomIndex(affirmations)];
+    displayHide(messageText, meditationImage);
   } else if (mantra.checked) {
-    messageText.innerText = randomMantra;
+    messageText.innerText = mantras[getRandomIndex(mantras)];
+    displayHide(messageText, meditationImage);
+  } else {
+    clearMessageButton.classList.add('hidden');
+    alert('Oops! You forgot to select a message type!')
   }
-  toggleImage(messageText, meditationImage);
 };
 
 function clearMessage() {
-  messageText.innerText = '';
+  displayHide(meditationImage, messageText);
   clearMessageButton.classList.add('hidden');
 }
