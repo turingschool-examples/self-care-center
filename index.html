@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-  
-    <script type="text/javascript" src="main.js"></script>
-  </body>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="home">
+  <h1>✨ Self Care Center ✨</h1>
+  <h2>Which type of message?</h2>
+  <main class="choose-message">
+    <section class="radio-buttons">
+      <div class="affirmation-button">
+        <input type="radio" class="affirmation" name="choice" value="affirmation" id="affirmation">
+        <label for="affirmation">affirmation</label>
+      </div>
+      <div class="mantra-button">
+        <input type="radio" class="mantra" name="choice" value="mantra" id="mantra">
+        <label for="mantra">mantra</label>
+      </div>
+    </section>
+    <button class="receive-message">Receive Message</button>
+  </main>
+  <section class="message-display">
+    <h3 class="hidden"></h3>
+    <img src="./assets/meditate.svg" alt="cartoon person meditating"/>
+  </section>
+  <section class="delete-message-button">
+    <button class="delete-message hidden">Don't Show Me This Again</button>
+  </section>
+  <script type="text/javascript" src="main.js"></script>
+</body>
 </html>
