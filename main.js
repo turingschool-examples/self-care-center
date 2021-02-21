@@ -40,21 +40,25 @@ var randomMantra;
 var deleteMessageBtn = document.querySelector('.delete-message')
 
 
-receiveMessageBtn.addEventListener('click', displayMessage);
+receiveMessageBtn.addEventListener('click', receiveMessage);
 deleteMessageBtn.addEventListener('click', deleteMessage)
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-function displayMessage() {
-  randomAffirmation = affirmations[getRandomIndex(affirmations)];
-  randomMantra = mantras[getRandomIndex(mantras)]
+function changeScreenDisplay() {
   if (affirmationBtn.checked || mantraBtn.checked) {
     meditationImage.classList.add('hidden');
     messageReturn.classList.remove('hidden');
     deleteMessageBtn.classList.remove('hidden');
   }
+}
+
+function receiveMessage() {
+  randomAffirmation = affirmations[getRandomIndex(affirmations)];
+  randomMantra = mantras[getRandomIndex(mantras)]
+  changeScreenDisplay();
   if (affirmationBtn.checked) {
     messageReturn.innerText = randomAffirmation;
   } else if (mantraBtn.checked) {
@@ -62,20 +66,24 @@ function displayMessage() {
   }
 }
 
+function arrayIteration(array) {
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] === messageReturn.innerText) {
+      array.splice(i, 1);
+    }
+  }
+}
+
+function alertMessage(type) {
+  alert(`You won't see this ${type} again!`)
+}
+
 function deleteMessage() {
   if (affirmationBtn.checked) {
-    for (var i = 0; i < affirmations.length; i++) {
-      if (affirmations[i] === randomAffirmation) {
-        affirmations.splice(i, 1);
-        alert("You won't see this affirmation again!");
-      }
-    }
+    arrayIteration(affirmations);
+    alertMessage("affirmation");
   } else if (mantraBtn.checked) {
-    for (var i = 0; i < mantras.length; i++) {
-      if (mantras[i] === randomMantra) {
-        mantras.splice(i, 1);
-        alert("You won't see this mantra again!");
-      }
-    }
+    arrayIteration(mantras);
+    alertMessage("mantra");
   }
 }
