@@ -111,8 +111,8 @@ input[type='radio'] {
 }
 .view-fav{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-row-gap: 40px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-row-gap: 90px;
 }
 .new-fav-msg {
   display: flex;
