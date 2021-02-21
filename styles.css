@@ -3,13 +3,11 @@
   margin: 0;
   padding: 0;
 }
-
 html {
   height: 100%;
   background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
   /*dark-blue | light-blue | light-yellow*/
 }
-
 .flex-container {
   display: flex;
 }
@@ -21,22 +19,18 @@ html {
   flex-direction: column;
   margin-top: 3.5%;
 }
-
 .headers {
   align-self: center;
   color: #ffffff;
 }
-
 h1 {
   font-size: 42.5px;
 }
-
 h2 {
   font-size: 32px;
   margin-top: 135px;
   margin-bottom: 15px;
 }
-
 /*~~~~~~~~~~~~~~~~~~~~~`Form Section`~~~~~~~~~~~~~~~~~~~~~~~*/
 .message {
   background: white;
@@ -62,8 +56,7 @@ input[type='radio'] {
   height: 26px;
   width: 26px;
 }
-
-.msg-btn,.clear-btn {
+.msg-btn,.clear-btn{
   display: flex;
   justify-content: center;
   background-color: #134d71;
@@ -80,7 +73,6 @@ input[type='radio'] {
   justify-content: space-around;
   padding-bottom: 15px;
 }
-
 /*~~~~~~~~~~~~~~~~~~~~~`Bell Section`~~~~~~~~~~~~~~~~~~~~~~~*/
 .bell {
   background: white;
@@ -95,3 +87,71 @@ input[type='radio'] {
   font-size: 25px;
 }
 /*~~~~~~~~~~~~~~~~~~~~~`JS Section`~~~~~~~~~~~~~~~~~~~~~~~*/
+.fav-btn{
+  font-size: 50px;
+  background: white;
+  border:none;
+}
+.view-favMsg-btn{
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background-color: #134d71;
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 23px;
+}
+.fav-lists{
+  display: flex;
+  flex-direction: column;
+  /* height: 100%; */
+  /* justify-content: space-between; */
+}
+.view-fav{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 40px;
+}
+.new-fav-msg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(#f7e4bf,#78a7c6 );
+  border-radius: 10px;
+  width: 50%;
+  height: 70%;
+  margin: 10px auto;
+  padding: 35px;
+  font-size: 20px;
+}
+.delete-fav-msg-btn{
+  background-color: #134d71;
+  color: #ffffff;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  font-size: 15px;
+}
+.favMsgListPage{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: #ffffff;
+  font-size: 42.5px;
+  margin-bottom: 5%;
+}
+.go-back{
+  background-color: #134d71;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 5%;
+  margin: 15% 0%;
+  padding: 15px 20px;
+  font-size: 15px;
+}
