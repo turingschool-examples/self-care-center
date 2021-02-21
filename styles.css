@@ -72,7 +72,71 @@ label {
   height: 20px;
 }
 
+.default-placeholder-image{
+  width: 75px;
+  height: auto;
+  border: 3px;
+  border-color: red;
+  border-style: solid;
+}
 
+.hidden {
+  display: none!important;
+}
+
+.message-display-box-background{
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  width: 850px;
+  display: flex;
+
+}
+
+
+.receive-message{
+  background-color: #134d71;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 13px;
+  height: 30px;
+  width: 175px;
+  border: 3px;
+  border-color: red;
+  border-style: solid;
+  white-space: nowrap;
+  margin-top: 30px;
+}
+
+
+.select-type-box {
+  padding: 150px;
+  border: 3px;
+  border-color: red;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-type-box-background {
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  justify-content: center;
+  width: 500px;
+  border: 3px;
+  border-color: red;
+  border-style: solid;
+  margin: 0px;
+
+}
 
 
 
