@@ -1,24 +1,34 @@
-# Self Care Center
+# Project: *Self Care Center*
+
+## Contributor
+[Ashish Malla](https://github.com/asiisii)
+
+## Technologies & languages used:
+- GitHub
+- Terminal
+- Atom
+- Google's Dev Tools
+- JavaScript
+- HTML
+- CSS
+
+## Instructions for Running Project
+1. Clone this [repository.](https://github.com/asiisii/self-care-center.git)
+2. `cd` into the repository in your terminal.
+3. Then `open index.html` in your terminal to view it on your browser.
+
+## Deploy Link
+Find the site [here!](https://asiisii.github.io/self-care-center/)
+
 ## Overview
+
 How can I care for myself? One way is with affirmations and mantras!
 Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are repetive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
+Mantras are repetitive phrases that are repeated again and again during mindfulness practices.
+In this solo project for Turing Software & Design School, I built an app that lets user view different mantra and affirmations. If the user wants to favorite it, they can click on the favorite(❤️) and to view their saved messages they can click on `View ❤️` . For better understanding please watch the attached gif.
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+<img src="https://media.giphy.com/media/xVoMqnpV0huezngjk3/giphy.gif" height="300px" width="500px">
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html). 
+## Future Additions
 
-## Learning Goals
-
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
-
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
-
+I would like to add an option for user to add their own message and play calm background music while they're on this website.
