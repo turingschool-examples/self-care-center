@@ -44,9 +44,6 @@ var mantras = [
 
 var currentDisplayType;
 
-var randomAffirmation = getRandomIndex(affirmations);
-var randomMantra = getRandomIndex(mantras);
-
 recieveMessageBtn.addEventListener('click', displayMessage);
 deleteMessageBtn.addEventListener('click', deleteMessage);
 
@@ -66,10 +63,10 @@ function displayMessage () {
     alert('Please select a message type you would like to receive!');
   }
   if (mantraRadio.checked) {
-    returnMessage.innerHTML = randomMantra;
+    returnMessage.innerHTML = getRandomIndex(mantras);
     currentDisplayType = 'mantra';
   } else if (affirmationRadio.checked) {
-    returnMessage.innerHTML = randomAffirmation;
+    returnMessage.innerHTML = getRandomIndex(affirmations);
     currentDisplayType = 'affirmation';
   }
 
