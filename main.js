@@ -76,7 +76,6 @@ function deleteMessage() {
   if (currentDisplayType === 'affirmation') {
     var messageIndex = affirmations.indexOf(returnMessage.innerText);
     affirmations.splice(messageIndex, 1);
-
   } else {
     var messageIndex = mantras.indexOf(returnMessage.innerText);
     mantras.splice(messageIndex, 1);
