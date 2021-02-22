@@ -42,13 +42,14 @@ var mantras = [
   'I am the sky, the rest is weather.'
 ]
 
+var currentDisplayType;
+
 var randomAffirmation = getRandomIndex(affirmations);
 var randomMantra = getRandomIndex(mantras);
 
 recieveMessageBtn.addEventListener('click', displayMessage);
-deleteMessageBtn.addEventListener('click', function deleteAlert() {
-  alert('Are you sure you want to delete this message?')
-});
+deleteMessageBtn.addEventListener('click', deleteMessage);
+
 
 function getRandomIndex(array) {
   var randomIndex =  Math.floor(Math.random() * array.length);
@@ -66,7 +67,27 @@ function displayMessage () {
   }
   if (mantraRadio.checked) {
     returnMessage.innerHTML = randomMantra;
+    currentDisplayType = 'mantra';
   } else if (affirmationRadio.checked) {
     returnMessage.innerHTML = randomAffirmation;
+    currentDisplayType = 'affirmation';
+  }
+
+}
+function deleteMessage() {
+  event.preventDefault();
+  if (currentDisplayType === 'affirmation') {
+    var messageIndex = affirmations.indexOf(returnMessage.innerText);
+    affirmations.splice(messageIndex, 1);
+
+  } else {
+    var messageIndex = mantras.indexOf(returnMessage.innerText);
+    mantras.splice(messageIndex, 1);
+  }
+  deleteMessageBtn.classList.add('hidden');
+  meditateImg.classList.remove('hidden');
+  returnMessage.classList.add('hidden');
+  if (affirmations.length === 0 || mantras.length === 0) {
+    recieveMessageBtn.classList.add('hidden');
   }
 }
