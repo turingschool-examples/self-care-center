@@ -6,7 +6,10 @@ Mantras are repetitive phrases that are repeated again and again during mindfuln
 
 Once on page, you'll find a prompt asking the user if they would like to receive a random affirmation or mantra to be displayed.  Once the user selects the which message they would like to receive, just click the receive message button to see a positive and encouraging message!  
 
+![welcome page](https://frontend.turing.io/projects/module-1/assets/self-care-center/self-care-0.png)
+
 If you decide you don't like the affirmation or mantra that is displayed, you'll see a 'Delete this message' button appear below the 'Receive message' button that will delete the current message displayed from ever being displayed again!  We only want messages that speak to you, the user!
+
 
 In the unlikely circumstance that you, the user, decides to delete all of the affirmations or mantras that are provided, the receive message button will not be displayed and my site will have failed to impart any positive self-empowerment.
 
