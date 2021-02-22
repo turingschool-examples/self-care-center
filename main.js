@@ -46,6 +46,9 @@ var randomAffirmation = getRandomIndex(affirmations);
 var randomMantra = getRandomIndex(mantras);
 
 recieveMessageBtn.addEventListener('click', displayMessage);
+deleteMessageBtn.addEventListener('click', function deleteAlert() {
+  alert('Are you sure you want to delete this message?')
+});
 
 function getRandomIndex(array) {
   var randomIndex =  Math.floor(Math.random() * array.length);
