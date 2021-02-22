@@ -43,11 +43,11 @@ var backToMainButton = document.querySelector('.back-to-main');
 var favoriteMessageGrid = document.querySelector('.favorite-message-grid');
 var viewFavoritesButton = document.querySelector('.view-favorites');
 var deleteButton = document.querySelector('.delete-message');
-//var chooseMessageButton = document.querySelectorAll('input[name="feelings"]');
+
+var selectedMessage;
 var savedMessages = [];
 var favoriteIndex = 0;
 var currentMessage;
-var selectedId;
 class Message {
   constructor(identification, message) {
     this.id = identification;
@@ -87,23 +87,27 @@ function showForm() {
 
 function saveFavoriteMessage() {
   var newMessage = new Message (favoriteIndex, currentMessage)
+  if(!savedMessages.includes(newMessage.message)) {
   savedMessages.push(newMessage);
   favoriteIndex++;
   favoriteMessageGrid.innerHTML += `
   <section class="display-message">
-  <input type="radio" id=${newMessage.id} name="feelings" value="currentMessage" onclick="clicked(${newMessage.id})">
+  <input type="radio" id=${newMessage.id} class="radio-buttons" name="feelings" value="currentMessage" onclick="clicked(${newMessage.id})">
   <label class="great-message">${newMessage.message}</label>
   </section>
 `;
 }
+}
 
 function clicked(id) {
-  selectedId = id;
+  var chooseMessageButton = document.querySelectorAll('.radio-buttons');
+  for(var i = 0; chooseMessageButton.length; i++) {
+    if(chooseMessageButton[i].checked) {
+      selectedMessage = chooseMessageButton[i];
+    }
+  }
 }
 
 function deleteMessage() {
-  for(var i = 0; i < savedMessages.length; i++) {
-    if(savedMessages[i].id === selectedId) {
-      savedMessages.splice();
-    }
+  selectedMessage.parentNode.remove();
 }
