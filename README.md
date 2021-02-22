@@ -2,23 +2,19 @@
 ## Overview
 How can I care for myself? One way is with affirmations and mantras!
 Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are repetive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
+Mantras are repetitive phrases that are repeated again and again during mindfulness practices. On [this page](file:///Users/ericrabun/turing/mod1-projects/self-care-center/index.html?message-type=affirmation) you'll be able to access an assortment of postive affirmations and mantras to maintain a positive state of mind!
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+Once on page, you'll find a prompt asking the user if they would like to receive a random affirmation or mantra to be displayed.  Once the user selects the which message they would like to receive, just click the receive message button to see a positive and encouraging message!  
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html). 
+If you decide you don't like the affirmation or mantra that is displayed, you'll see a 'Delete this message' button appear below the 'Receive message' button that will delete the current message displayed from ever being displayed again!  We only want messages that speak to you, the user!
 
-## Learning Goals
+In the unlikely circumstance that you, the user, decides to delete all of the affirmations or mantras that are provided, the receive message button will not be displayed and my site will have failed to impart any positive self-empowerment.
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+## Future Additions
 
-## Setup
+- We are working on being allowing the user to add their favorite mantras or affirmations to the database, so they can be accessed in future use.  
+- Adding a 'favorite' button so you can star different mantras or affirmations that really speak to you!  We would add a each of your favorite messages to a list for you to be able to access anytime.
 
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
 
+## Thank you for checking out my page!
+ - I hope I was able to bring about some positive, self-empowerment to you day!
