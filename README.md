@@ -1,6 +1,8 @@
 # Project: *Self Care Center*
 
-### Table of Content
+
+### Table of Contents
+
 - [Contributor](#contr)
 - [Technologies used](#tech)
 - [Instructions for Running Project](#inst)
@@ -39,7 +41,7 @@ Affirmations are thoughts of positive self-empowerment, meant to assert your sel
 Mantras are repetitive phrases that are repeated again and again during mindfulness practices.
 In this solo project for Turing Software & Design School, I built an app that lets user view different mantra and affirmations. If the user wants to favorite it, they can click on the favorite(❤️) and to view their saved messages they can click on `View ❤️` . For better understanding please watch the attached gif.
 
-<img src="https://media.giphy.com/media/xVoMqnpV0huezngjk3/giphy.gif" height="300px" width="500px">
+<img src="https://media.giphy.com/media/xVoMqnpV0huezngjk3/giphy.gif" height="500" width="100%"/>
 
 <a name="fut"></a>
 ## Future Additions
