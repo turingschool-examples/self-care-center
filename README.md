@@ -1,24 +1,30 @@
 # Self Care Center
-## Overview
-How can I care for myself? One way is with affirmations and mantras!
-Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are repetive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+## Positive affirmation and mantra generator.
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html). 
+### A solo project by [Andrew Carlin](https://github.com/AndieDrew)
 
-## Learning Goals
+Self Care Center is a random affirmation and mantra generator that features the ability to generate a message type chosen by the user.
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+![Annotations](http://www.giphy.com/gifs/NoiVWxmeAW61NYyT2P)
 
-## Setup
+### Directions:
 
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
+1. Select the type of message you would like to appear, either an affirmation or mantra.
+2. Once a selection has been made, a Receive Message button will appear. Click the button to display the chosen message below.
+3. To display a new message, select the same or different message type, and click the Receive Message button again.
+4. To clear the message and return the image of the meditation icon, simply click the Clear button.
 
+### Technologies used:
+* HTML
+* CSS
+* Javascript
+* Git
+* Github
+* Atom
+
+### Future Additions:
+1. The ability for user to click a "Add Message" button that opens a form allowing them to chose the type of message they would like to add, and a text input where they can write the message with a submit button.
+2. A clickable heart shaped button below a displayed message that allows user to favorite a message saving it on a new page called "Favorites".
+
+Find this application on github pages [here](https://andiedrew.github.io/self-care-center/)
