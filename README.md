@@ -1,6 +1,8 @@
 # Project: *Self Care Center*
 
+
 ### Table of Contents
+
 - [Contributor](#contr)
 - [Technologies used](#tech)
 - [Instructions for Running Project](#inst)
