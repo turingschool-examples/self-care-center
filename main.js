@@ -1,13 +1,13 @@
 //👇🏼variables + querySelectors
-var receiveMessageButton = document.querySelector('.receive-message');
-var clearMessageButton = document.querySelector('.clear-message')
-var messageInput = document.getElementsByName('message-input');
-var messageDisplayBox = document.querySelector('.message-display-box')
-var meditationImage = document.querySelector('.meditation-image');
-var messageText = document.querySelector('.message-text');
-var affirmation = document.getElementById('affirmations');
-var mantra = document.getElementById('mantras');
-var affirmations = [
+const receiveMessageButton = document.querySelector('.receive-message');
+const clearMessageButton = document.querySelector('.clear-message')
+const messageInput = document.getElementsByName('message-input');
+const messageDisplayBox = document.querySelector('.message-display-box')
+const meditationImage = document.querySelector('.meditation-image');
+const messageText = document.querySelector('.message-text');
+const affirmation = document.getElementById('affirmations');
+const mantra = document.getElementById('mantras');
+const affirmations = [
   'I forgive myself and set myself free.',
   'I believe I can be all that I want to be.',
   'I am in the process of becoming the best version of myself.',
@@ -22,7 +22,7 @@ var affirmations = [
   'I honor my body by trusting the signals that it sends me.',
   'I manifest perfect health by making smart choices.'
 ];
-var mantras = [
+const mantras = [
 'Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.',
 'Don’t let yesterday take up too much of today.',
 'Every day is a second chance.',
