@@ -1,4 +1,3 @@
-//👇🏼variables + querySelectors
 const receiveMessageButton = document.querySelector('.receive-message');
 const clearMessageButton = document.querySelector('.clear-message')
 const messageInput = document.getElementsByName('message-input');
@@ -41,29 +40,27 @@ const mantras = [
 ];
 
 
-//✨event listeners
 receiveMessageButton.addEventListener('click', getrandomMessage);
+
 clearMessageButton.addEventListener('click', clearMessage);
 
 
-
-//🌼functions
-function displayHide(display, hide) {
+const displayHide = (display, hide) => {
   display.classList.remove('hidden');
   hide.classList.add('hidden');
 };
 
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
-};
+const getRandomIndex = array => Math.floor(Math.random() * array.length);
+
+const changeMessageText = type => messageText.innerText = type[getRandomIndex(type)];
 
 function getrandomMessage() {
   clearMessageButton.classList.remove('hidden');
   if (affirmation.checked) {
-    messageText.innerText = affirmations[getRandomIndex(affirmations)];
+    changeMessageText(affirmations);
     displayHide(messageText, meditationImage);
   } else if (mantra.checked) {
-    messageText.innerText = mantras[getRandomIndex(mantras)];
+    changeMessageText(mantras);
     displayHide(messageText, meditationImage);
   } else {
     clearMessageButton.classList.add('hidden');
@@ -74,4 +71,4 @@ function getrandomMessage() {
 function clearMessage() {
   displayHide(meditationImage, messageText);
   clearMessageButton.classList.add('hidden');
-}
+};
