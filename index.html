@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
     <h1>Self Care Center</h1>
-    </header>
+  </header>
+  <main>
+    <h2>Which type of message?</h2>
+    <section class=choose-message>
+      <form>
+        <fieldset>
+          <input type=radio>
+          </input>
+          <label>
+            affirmation
+          </label>
+          <input type=radio>
+          </input>
+          <label>
+            mantra
+          </label>
+          <br />
+          <input type="submit" value="Receive Message"> </input>
+        </fieldset>
+      </form>
+    </section>
+    <section class="display-message">
+      <img src="assets/meditate.svg">
+    </section>
+  </main>
+  <script type="text/javascript" src="main.js"></script>
+</body>
 
-    <div class=choose-message>
-      <span>Which type of message?</span>
-      <div class = "form">
-        <form><!--check this format. -->
-          <fieldset>
-            <input type=radio></input><label>affirmation</label>
-            <input type=radio></input><label>mantra</label>
-          </fieldset>
-        </form>
-      </div>
-      <div class="display-message"><!--photo goes here--></div>
-    </div>
-
-    <script type="text/javascript" src="main.js"></script>
-  </body>
 </html>
