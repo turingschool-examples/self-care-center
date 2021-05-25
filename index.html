@@ -7,10 +7,17 @@
   <body>
     <h1>Self Care Center</h1>
     <p>Which type of message?</p>
-      <section>
-        <p>affirmation</p>
-        <p>mantra</p>
+      <section class="message-type">
+        <input type="radio" id="affirmation" name="affirmation" value="affirmtion">
+        <label for="affirmation">Affirmation</label>
+        <input type="radio" id="mantra" name="mantra" value="mantra">
+        <label for="mantra">Mantra</label>
+      </section>
+      <section class="message-button">
         <button class="receive-message">Receive Message</button>
+      </section>
+      <section class="meditation-image-box">
+        <img src="./assets/meditate.svg" alt="mediation bell icon">
       </section>
     <script type="text/javascript" src="main.js"></script>
   </body>
