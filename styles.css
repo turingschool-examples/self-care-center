@@ -6,3 +6,32 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+html {
+  height:100%;
+  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+}
+
+#main-title {
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+#message-type {
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  text-align: center;
+  top: 20%;
+  left: 50%;
+}
+
+.radio-buttons {
+  border:1px solid black;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #000000;
+  font-style: italic;
+  
+  text-align: center;
+}
