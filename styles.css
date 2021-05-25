@@ -13,6 +13,7 @@ html {
 }
 
 body {
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   display: block;
   justify-content: center;
@@ -21,27 +22,62 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 
+
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  display: block;
+
+}
 
 h1 {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: bold;
   color: #ffffff;
 }
 
 .choose-message{
+  display: flex;
+  justify-content: center;
   text-align: center;
+  min-width: 320px;
+  height: 52px;
+}
 
+form {
+  width: 318px;
+  background-color: #ffffff;
+
+}
+
+label {
+  margin-right: 80px;
+  padding: 0px;
+  margin-top: 20px;
 }
 
 .display-message {
+  display: flex;
   background-color: #ffffff;
+  justify-content: center;
   text-align: center;
-  height:
-  width:
-
+  height: 90px;
+  min-width: 470px;
+  margin-top: 58px;
+  margin-left: 151px;
+  margin-right: 151px;
 }
 
 img {
-  height: 3em;
-  width: 3em;
+
+  padding: 14px 207px;
+  /* height: 3em;
+  width: 3em; */
+
 }
