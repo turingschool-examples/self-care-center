@@ -6,3 +6,54 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+html {
+  background-size: cover;
+  background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+}
+h1 {
+  color: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+h2 {
+  color: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+.option-box {
+  width: 50%;
+  height: 15px;
+  padding:30px;
+  border: 1px solid green;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+
+}
+.image-box {
+  width: 60%;
+  height: 30px ;
+  padding:30px;
+  border: 1px solid green;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+img {
+  width: 40px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+
+}
