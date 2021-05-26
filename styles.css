@@ -11,23 +11,27 @@ body {
   background-repeat:no-repeat;
   background-size: cover;
   height: 100vh;
-
+  margin: 20px;
 }
 
 h1 {
   display: block;
   text-align: center;
-  font-size: 1em;
+  font-size: 1.5em;
   color: #ffffff;
   font-family: 'Quicksand', sans-serif;
+  margin: 30px;
+  padding-top: 20px;
 }
 
 p {
-  font-size: .85em;
+  font-size: 1.1em;
   text-align: center;
   color: #ffffff;
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
+  margin:2px;
+  padding-top: 40px;
 }
 
 section.message-type {
@@ -36,10 +40,11 @@ section.message-type {
   font-size: .85em;
   font-style: italic;
   background-color: #ffffff;
-  padding: 3% 1%;
-  margin: 50px 250px;
-  border-radius: 5px
+  padding-top: 10px;
+  margin: 10px 250px 80px;
+  border-radius: 6px
 }
+
 
 
 section.message-button{
@@ -47,14 +52,18 @@ section.message-button{
 }
 
 button.receive-message {
-  margin: 20px;
-  padding: .5% 3%;
+  margin: 20px 0 8px;
+  padding: 4px 20px;
   border-style: none;
-  border-radius: 5px;
+  border-radius: 4px;
   text-align: center;
   color: #ffffff;
   background-color: #134d71;
   font-family: 'Quicksand', sans-serif;
+}
+
+.affirmation-label {
+  margin-right: 120px;
 }
 
 img {
@@ -64,5 +73,5 @@ img {
   width: 60px;
   background-color: #ffffff;
   padding: 3% 30%;
-  border-radius: 5px
+  border-radius: 6px
 }
