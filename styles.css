@@ -6,3 +6,52 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+body {
+  height:100vh;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  font-family: 'Quicksand', sans-serif;
+}
+
+.header-text {
+  color: white;
+}
+
+.decide-message-text {
+  text-align: center;
+  color: white;
+  padding-bottom: 4px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.select-message-box {
+  display: block;
+  background-color: white;
+  width: 30%;
+  height: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.affirmation-input {
+  margin-left: 60px;
+}
+
+.mantra-input{
+  /* margin-left: 250px; */
+  margin-left:
+}
+
+.receive-message-btn {
+  display: block;
+  color: white;
+  background-color: #134d71;
+
+  margin-left: auto;
+  margin-right: auto;
+}
