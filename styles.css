@@ -9,37 +9,36 @@ black - #000000;
 html {
   background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
-  display: flex;
-  display: block;
-  justify-content: center;
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-main {
-  display: flex;
-  /* justify-content: center; */
-  display: block;
-}
-
 h1 {
   color: #ffffff;
-  /* font-weight: bold; */
   text-align: center;
   margin-bottom: 40px;
   margin-top: 22px;
 }
 
+.sparkle {
+  height: 1em;
+  width: 1em;
+  padding: 0;
+}
+
 h2 {
-  /* font-weight: bold; */
   color: #ffffff;
   text-align: center;
+  font-size: 1em;
+  margin: 6px;
 }
 
 .choose-message {
@@ -50,17 +49,27 @@ h2 {
   height: 52px;
 }
 
+.form-container {
+  background-color: #ffffff;
+  border: solid white 1px;
+  border-radius: 10px;
+}
+
 form {
-  width: 318px;
+  height: 1em;
+  border-radius: 10px;
+  width: 370px;
   background-color: #ffffff;
   font-style: italic;
-  border-radius: 10px;
 }
 
 label {
   margin-right: 80px;
-  padding: 0px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  margin: 20px;
+  font-size: 10px;
+  padding-top: 3px;
+  padding-bottom: 6px;
 }
 
 .display-message {
@@ -70,14 +79,23 @@ label {
   text-align: center;
   height: 90px;
   min-width: 470px;
+  max-width: 800px;
   margin-top: 58px;
-  margin-left: 151px;
-  margin-right: 151px;
+  /* margin-left: 151px;
+  margin-right: 151px; */
   border-radius: 10px;
 }
 
+/* .img-container {
+  align-content: center;
+  justify-content: center;
+} */
 img {
   padding: 14px 207px;
-  /* height: 3em;
-  width: 3em; */
+  height: 3em;
+  width: 3em;
+}
+
+button {
+  margin: 0px;
 }
