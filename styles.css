@@ -49,3 +49,16 @@ html {
   margin: 10% 5%;
   padding: 2px 19px;
 }
+
+.message-center {
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+#meditation-graphic {
+  display: block;
+  height: 5%;
+  width: 5%;
+  margin: 0 auto;
+}
