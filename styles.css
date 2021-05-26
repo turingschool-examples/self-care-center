@@ -13,8 +13,15 @@ body, html {
   position: absolute;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 h1{
   font-size:30px;
+  margin-bottom: 80px;
 }
 
  h2 {
@@ -24,48 +31,53 @@ h1{
 .header, .which-method, .receive-message {
   font-family: "Quicksand", sans-sans-serif;
   color: white;
-  text-align: center;
-
 }
 
 div > label {
   font-family: "Quicksand", sans-serif;
-  margin: 5px 50px 5px 5px;
+  margin: 15px 60px 0px 0px;
+  padding-top: 10px;
+}
 
+.receive-message {
+margin-top: 100px;
 }
 
 div {
-  display: block;
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 15px;
-  width: 600px;
-  height: 60px;
+  padding-bottom: 5px;
+  width: 515px;
   text-align: center;
-  position: relative;
-  margin: auto;
+  margin-bottom: 100px;
+  align-items: center;
 }
+
  .display-box {
-   width: 900px;
+   width: 780px;
    height: 100px;
  }
 
+input {
+margin-left: 60px;
+}
+
 .receive-message {
   background-color:#134d71;
-  padding: 5px 35px;
+  padding: 5px 30px;
   margin: 5px;
+  margin-top: 10px;
   border-style: none;
-  border-radius: 10px;
-  text-align: center;
-
+  border-radius: 5px;
 }
 
 img {
   height: 80px;
   width: 80px;
-  padding: inherit;
+  padding-top: 5px;
 }
-#spacer1 {
-  height: 70px;
-  color: none;
+
+.hidden {
+  display: none;
 }
