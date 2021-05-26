@@ -15,35 +15,59 @@ h1 {
   color:#ffffff;
   font-family:'Quicksand', sans-serif;
   text-align: center;
+  margin: 40px, auto;
+  padding: 30px
 }
 
 h2 {
   color:#ffffff;
   font-family:'Quicksand', sans-serif;
+  font-size: 16pt;
   text-align: center;
+  padding-top: 50px;
 }
 
 form {
-  background-color:#ffffff
+  background-color:#ffffff;
+  width: 600px;
+  height: 100px;
+  border-radius: 8px;
+  margin: 0 auto;
+  padding-top: 8px;
+  text-align: center;
 }
 
 button, submit {
   font-family: 'Quicksand', sans-serif;
-  font-size: 18px;
-  border-radius: 15px;
+  font-size: 16px;
+  color:#ffffff;
+  background: #134d71;
+  border-radius: 5px;
+  display: block;
+  margin: 40px auto 5px auto;
+  padding: 2px 26px;
 }
+
 
 label {
   font-family:'Quicksand', sans-serif;
-  font-size:30px
+  font-size:20px;
+  margin: 0 auto;
+}
+#mantra {
+  margin: 0 0 0 100px;
 }
 
 section {
   background-color: #ffffff;
   border-radius: 8px;
+  width: 70%;
+  height: 5%;
+  margin: 100px auto 40px auto;
 }
 
 svg {
-  height: 4%;
-  width: 4%;
+  height: 8%;
+  width: 8%;
+
 }
