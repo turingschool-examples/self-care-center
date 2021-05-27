@@ -45,8 +45,6 @@ var currentMessage = '';
 // window.addEventListener('load', )
 receiveMessageButton.addEventListener('click', displayMessage);
 
-// console.log(mantras[getRandomIndex(mantras)]);
-
 //--------------------/functions/----------------------//
 function displayMessage() {
 
@@ -57,7 +55,6 @@ function displayMessage() {
     hideImage();
     viewMessage.innerText = `${affirmations[getRandomIndex(affirmations)]}`;
   }
-
 }
 
 function getRandomIndex(array) {
@@ -67,5 +64,4 @@ function getRandomIndex(array) {
 function hideImage() {
   bellImage.classList.add('hidden');
   viewMessage.classList.remove('hidden');
-  // viewMessage.innerText = `hello world`;
 }
