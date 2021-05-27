@@ -15,44 +15,11 @@ black - #000000;
 } */
 
 body {
-  color: #ffffff;
   background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
   background-attachment: fixed;
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-h1 {
- font-family:'Quicksand', sans-serif;
- font-size: 25px;
- text-align: center;
-}
-
-.message-question {
- font-family:'Quicksand', sans-serif;
- text-align: center;
-}
-
-.selection-section {
- font-family:'Quicksand', sans-serif;
- text-align: center;
- color: #000000;
-}
-
-.message-button {
- font-family:'Quicksand', sans-serif;
- text-align: center;
- color: #ffffff;
- background: #134d71;
- margin: 40px;
-}
-
-.meditation-image {
-  width: 50px;
-  height: 75px;
-  padding: 25px;
-  margin: 25px;
 }
 
 .center {
@@ -62,12 +29,57 @@ h1 {
   width: 50%;
 }
 
+h1 {
+ font-family:'Quicksand', sans-serif;
+ color: #ffffff;
+ font-size: 25px;
+ text-align: center;
+}
+
+.message-question {
+ font-family:'Quicksand', sans-serif;
+ color: #ffffff;
+ text-align: center;
+ margin-bottom: 10px;
+}
+
+.selection-section {
+ font-family:'Quicksand', sans-serif;
+ text-align: center;
+ color: #000000;
+ margin-top: 2px;
+}
+
+.radio-button1 {
+  margin: 10px 5px 0px 2px;
+}
+
+.radio-button2 {
+  margin: 10px 5px 0px 200px;
+}
+
+.message-button {
+ font-family:'Quicksand', sans-serif;
+ text-align: center;
+ color: #ffffff;
+ background: #134d71;
+ margin-top: 18px;
+ border-radius: 5px;
+ width: 175px;
+ margin-bottom: 5px;
+}
+
+.meditation-image {
+  height: 75px;
+  padding-top: 50px;
+}
+
 .selection-section {
   background: #ffffff;
   width: 600px;
   height: 75px;
   border-radius: 8px;
-  margin-top: 25px;
+  margin-top: 1px;
   margin-right:auto;
   margin-left:auto;
   margin-bottom: 50px;
