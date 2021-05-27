@@ -41,6 +41,10 @@ var bellImage = document.querySelector('img');
 var viewMessage = document.querySelector('.view-message-area');
 var addMessageButton = document.querySelector('.add-message');
 var createMessageForm = document.querySelector('.custom-message');
+var addMantraSelect = document.querySelector('#create-mantra');
+var addAffirmationSelect = document.querySelector('#create-affirmation');
+var submitButton = document.querySelector('.submit');
+var textInput = document.querySelector('.message-input');
 var currentMessage = '';
 
 //--------------------/event listeners/----------------------//
