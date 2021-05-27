@@ -50,7 +50,7 @@ form {
   text-align: center;
 }
 
-#choice1 {
+label {
   font-family:'Quicksand', sans-serif;
   font-size:20px;
   font-style: italic;
@@ -67,7 +67,7 @@ button, submit {
   padding: 2px 26px;
 }
 
-#mantra {
+#choice2 {
   margin: 0 0 0 100px;
 }
 
