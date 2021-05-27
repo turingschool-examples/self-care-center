@@ -8,17 +8,18 @@ black - #000000;
 */
 html {
   background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
-  height: 100%;
+  background-attachment: fixed;
+  /* height: 100%; */
   display: flex;
   justify-content: center;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
-  height: 100%;
+  /* height: 100%; */
   margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* background-repeat: no-repeat;
+  background-attachment: fixed; */
 }
 
 p {
@@ -69,7 +70,7 @@ form {
 }
 
 #submit,
-.submit {
+.favorite {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   height: 20px;
