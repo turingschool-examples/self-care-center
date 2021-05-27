@@ -13,12 +13,18 @@ html {
   justify-content: center;
 }
 
+
 body {
   font-family: 'Open Sans', sans-serif;
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 17px;
 }
 
 h1 {

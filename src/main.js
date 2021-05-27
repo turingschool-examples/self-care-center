@@ -1,29 +1,36 @@
 /*---------Query Selectors and global variables ---------------*/
-var message;
+var currentMessage;
 var favoriteMessages = [];
 
 var form = document.querySelector('form');
 var radio = form.elements['message-type'];
 var submit = document.getElementById("submit")
+var displayMessageSection = document.querySelector(".display-message");
 
 /*---------Event Listeners ---------------*/
 submit.addEventListener("click", displayMessage);
 
 
 /*---------Functions ---------------*/
-function displayMessage(e) {
-  e.preventDefault;
-  var message;
+function displayMessage() {
+  event.preventDefault();
   if (radio.value === 'affirmation') {
-    message = affirmations[getRandomIndex(affirmations)];
+    currentMessage = affirmations[getRandomIndex(affirmations)];
   } else if(radio.value === 'mantra'){
-    message = mantras[getRandomIndex(mantras)];
+    currentMessage = mantras[getRandomIndex(mantras)];
   }
 
-//create a div to put in the section and add a pargraph
+//create a div to put in the section and add a paragraph
+
+displayMessageSection.innerHTML = `<p>${currentMessage}</p>`
 //or update inner html here.
 
+//now call render to rerender the page.
 }
+
+// function renderMessage(){
+//
+// }
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
