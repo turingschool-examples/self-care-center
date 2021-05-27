@@ -63,8 +63,10 @@ function submitMessage(e) {
     displayForm();
   } else if (addAffirmationSelect.checked) {
     viewMessage.innerText = `${textInput.value}`;
+    affirmations.push(`${textInput.value}`);
   } else if (addMantraSelect.checked) {
     viewMessage.innerText = `${textInput.value}`;
+    mantras.push(`${textInput.value}`);
   }
 }
 
