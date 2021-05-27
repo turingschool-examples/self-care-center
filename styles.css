@@ -50,6 +50,12 @@ form {
   text-align: center;
 }
 
+#choice1 {
+  font-family:'Quicksand', sans-serif;
+  font-size:20px;
+  font-style: italic;
+  margin: 0 auto;}
+
 button, submit {
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
@@ -61,13 +67,6 @@ button, submit {
   padding: 2px 26px;
 }
 
-
-label {
-  font-family:'Quicksand', sans-serif;
-  font-size:20px;
-  font-style: italic;
-  margin: 0 auto;
-}
 #mantra {
   margin: 0 0 0 100px;
 }
