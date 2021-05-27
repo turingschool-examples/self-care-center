@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='styles.css'>
+    <link href='https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap' rel='stylesheet'>
   </head>
   <body>
     <main>
-      <h1 class="header">✨ Self Care Center ✨</h1>
-      <h2 class="which-method">Which type of message?</h2>
-      <div>
-        <input type="radio" id="affirmation">
-        <label for="affirmation">affirmation</label>
-        <input type="radio" id="mantra">
-        <label for="mantra">mantra</label>
+      <h1 class='header'>✨ Self Care Center ✨</h1>
+      <h2 class='which-method'>Which type of message?</h2>
+      <div class='choices'>
+        <input type='radio' name='rad1' value='affirmation' id=affirmation>
+        <label for='affirmation'>affirmation</label>
+        <input type='radio' name='rad1' value='mantra' id='mantra'>
+        <label for='mantra'>mantra</label>
         <br>
-        <button class="receive-message">Receive Message</button>
+        <button class='receive-message'>Receive Message</button>
       </div>
-      <div class="display-box">
-        <img src="./assets/meditate.svg" alt="tranquil ringing bell.">
+      <div class='display-box'>
+        <p class='view-message-area hidden'></p>
+        <img src='./assets/meditate.svg' alt='tranquil ringing bell.'>
       </div>
     </main>
 
-    <script type="text/javascript" src="main.js"></script>
+    <script type='text/javascript' src='main.js'></script>
   </body>
 </html>
