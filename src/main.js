@@ -9,13 +9,16 @@ var radio = form.elements['message-type'];
   // get the value of the radio button.
 
 function displayMessage() {
-    if (radio.value === 'affirmation') {
-      //pull from the
+  var message;
+  if (radio.value === 'affirmation') {
+    message = affirmations[getRandomIndex(affirmations)];
+  } else if(radio.value === 'mantra'){
+    message = mantras[getRandomIndex(mantras)];
+  }
+}
 
-    } else if(radio.value === 'mantra'){
-      
-    }
-
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
 }
 
 
