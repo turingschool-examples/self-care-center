@@ -19,18 +19,12 @@ function displayMessage() {
   } else if(radio.value === 'mantra'){
     currentMessage = mantras[getRandomIndex(mantras)];
   }
-
-//create a div to put in the section and add a paragraph
-
-displayMessageSection.innerHTML = `<p>${currentMessage}</p>`
-//or update inner html here.
-
-//now call render to rerender the page.
+  renderCurrentMessage();
 }
 
-// function renderMessage(){
-//
-// }
+function renderCurrentMessage(){
+  displayMessageSection.innerHTML = `<p>${currentMessage}</p>`
+}
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
