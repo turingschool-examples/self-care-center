@@ -26,7 +26,7 @@ function renderCurrentMessage(){
   displayMessageSection.innerHTML =
   `
   <p>${currentMessage}</p>
-  <button class="submit">Favorite</button>
+  <button class="submit"><3</button>
   `
 }
 

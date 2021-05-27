@@ -72,15 +72,22 @@ form {
 .submit {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  /* height and width */
-  /*font size*/
+  height: 20px;
+  width: 120px;
   background-color: #134d71
   font-color: #ffffff;
 }
 
-button {
-  margin: 0px;
+.submit {
+  margin-top: 31px;
+  height: 25px;
+  width: 25px;
+  margin-left: 5px;
 }
+
+/* button {
+  margin: 0px;
+} */
 
 label {
   margin-right: 80px;
