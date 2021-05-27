@@ -1,9 +1,13 @@
-// declared querySelectors
 // buttons
-var buttonAffirmation = document.getElementById('affirmation');
-var buttonMantra = document.getElementById('mantra');
+var buttonAffirmation = document.getElementById('choice1');
+var buttonMantra = document.getElementById('choice2');
 var buttonSubmit = document.querySelector('.submit');
-// global Variables
+
+// message return screen
+var messageDisplay = document.querySelector('section');
+var meditationImage = document.querySelector('svg');
+
+// global variables
 var affirmations = [
   'I forgive myself and set myself free.',
   'I believe I can be all that I want to be.',
@@ -40,17 +44,19 @@ var mantras = [
 // eventListeners
 
 buttonSubmit.addEventListener('click', returnRandomMessage);
+
 // functions and handlers
 
 function returnRandomMessage() {
+  event.preventDefault();
+  meditationImage.classList.add("hidden");
   if (buttonAffirmation.checked) {
-    buttonMantra.checked === false;
-    getRandomMessage(affirmations);
+    messageDisplay.innerText = affirmations[getRandomIndex(affirmations)];
   } else if (buttonMantra.checked) {
-    buttonAffirmation.checked === false;
-    getRandomMessage(mantras);
+    messageDisplay.innerText = mantras[getRandomIndex(mantras)];
   }
 }
 
-function getRandomMessage(messages) {
+function getRandomIndex(messages) {
   return Math.floor(Math.random() * messages.length);
+};
