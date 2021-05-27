@@ -4,17 +4,25 @@ var favoriteMessages = [];
 
 var form = document.querySelector('form');
 var radio = form.elements['message-type'];
+var submit = document.getElementById("submit")
 
-  // when the button is pressed
-  // get the value of the radio button.
+/*---------Event Listeners ---------------*/
+submit.addEventListener("click", displayMessage);
 
-function displayMessage() {
+
+/*---------Functions ---------------*/
+function displayMessage(e) {
+  e.preventDefault;
   var message;
   if (radio.value === 'affirmation') {
     message = affirmations[getRandomIndex(affirmations)];
   } else if(radio.value === 'mantra'){
     message = mantras[getRandomIndex(mantras)];
   }
+
+//create a div to put in the section and add a pargraph
+//or update inner html here.
+
 }
 
 function getRandomIndex(array) {
