@@ -48,13 +48,24 @@ label {
   font-style: italic;
   margin: 0 auto;}
 
-button, submit {
+.submit {
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
   color:#ffffff;
   background: #134d71;
   border-radius: 5px;
   display: block;
+  margin: 40px auto 5px auto;
+  padding: 2px 26px;
+}
+
+#clear {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  color:#ffffff;
+  background: #134d71;
+  border-radius: 5px;
+  display: none;
   margin: 40px auto 5px auto;
   padding: 2px 26px;
 }

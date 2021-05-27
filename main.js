@@ -2,6 +2,7 @@
 var buttonAffirmation = document.getElementById('choice1');
 var buttonMantra = document.getElementById('choice2');
 var buttonSubmit = document.querySelector('.submit');
+var buttonClear = document.getElementById('clear');
 
 // message return screen
 var messageDisplay = document.querySelector('section');
@@ -52,8 +53,10 @@ function returnRandomMessage() {
   meditationImage.classList.add("hidden");
   if (buttonAffirmation.checked) {
     messageDisplay.innerText = affirmations[getRandomIndex(affirmations)];
+    displayClearButton();
   } else if (buttonMantra.checked) {
     messageDisplay.innerText = mantras[getRandomIndex(mantras)];
+    displayClearButton();
   } else {
     messageDisplay.innerText = 'Please select your message type preference above ⬆.'
   }
@@ -62,3 +65,7 @@ function returnRandomMessage() {
 function getRandomIndex(messages) {
   return Math.floor(Math.random() * messages.length);
 };
+
+function displayClearButton () {
+  buttonClear.style.display="block";
+}
