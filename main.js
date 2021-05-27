@@ -5,6 +5,21 @@
     // radio button1, radio button 2, receive message button, meditation image,
     // display messsage
 var receiveMessageBtn = document.querySelector(".message-button");
-var affirmationButton = document.querySelector(".radio-button1");
-var mantraButton = document.querySelector(".radio-button2");
+var affirmationBtn = document.querySelector(".radio-button1");
+var mantraBtn = document.querySelector(".radio-button2");
 var image = document.querySelector(".meditation-image");
+var message = document.querySelector(".display-message");
+
+receiveMessageBtn.addEventListener("click", generateDisplayMessage);
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+function generateDisplayMessage() {
+  if (affirmationBtn.checked){
+// then return random index of affirmation array
+  getRandomIndex(affirmationArray);
+  //display to page (adding and removing hidden class, replace the innerText in the display message)
+  }
+}
