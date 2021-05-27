@@ -7,9 +7,10 @@ var radio = form.elements['message-type'];
 var submit = document.getElementById("submit")
 var displayMessageSection = document.querySelector(".display-message");
 var homePageSection = document.querySelector(".main-page")
-var favoritesSection = document.querySelector(".favorites-page")
+var favoritesPage = document.querySelector(".favorites-page")
 var viewFavoriteMessagesButton = document.querySelector(".view-saved");
 var homeButton = document.querySelector(".home-button");
+var messagesGrid = document.querySelector(".saved-messages-grid");
 
 
 
@@ -17,6 +18,9 @@ var homeButton = document.querySelector(".home-button");
 submit.addEventListener("click", displayMessage);
 viewFavoriteMessagesButton.addEventListener("click", showFavorites);
 homeButton.addEventListener("click", showHomePage);
+favoritesPage.addEventListener("dblclick", function(event) {
+  deleteFavoriteMessage(event);
+});
 
 
 
@@ -44,52 +48,67 @@ function renderCurrentMessage(){
 
 
 function favoriteAMessage() {
-    if (!favoriteMessages.length) {
-      favoriteMessages.push(new Message(currentMessage))
-    } else {
-    for (var i = 0; i < favoriteMessages.length; i ++) {
-        if (`favoriteMessages[i].messageText` !== currentMessage) {
-          favoriteMessages.push(new Message(currentMessage))
-      }
-      }
+  var newMessage = new Message(currentMessage);
+  favoriteMessages.push(newMessage);
+}
+
+//   if(favoriteMessages.length === 0 ) {
+//     var newMessage = new Message(currentMessage);
+//     favoriteMessages.push(newMessage);
+//     console.log(newMessage, favoriteMessages);
+//     // favoriteMessages.push(new Message(currentMessage))};
+//   } else if(favoriteMessages.length > 0) {
+//
+//         for (var i = 0; i < favoriteMessages.length; i ++) {
+//             if (`favoriteMessages[i].messageText` !== currentMessage) {
+//               var newMessage = new Message(currentMessage);
+//               favoriteMessages.push(newMessage);
+//               // favoriteMessages.push(new Message(currentMessage))
+//             }
+//         }
+//
+//   }
+// }
+// if (!favoriteMessages.length) {
+//   favoriteMessages.push(new Message(currentMessage))
+// } else {
+// for (var i = 0; i < favoriteMessages.length; i ++) {
+//     if (`favoriteMessages[i].messageText` !== currentMessage) {
+//       favoriteMessages.push(new Message(currentMessage))
+//   }
+//   }
+// }
+
+function renderFavorites() {
+
+  messagesGrid.innerHTML = '';
+
+  for (var i = 0; i < favoriteMessages.length; i++) {
+
+    messagesGrid.innerHTML +=
+
+    `
+    <section class="message-box" id="${favoriteMessages[i].id}">
+      <p class="favorite-message-paragraph">${favoriteMessages[i].messageText}<p>
+    </section>
+      `
     }
 }
 
-// When the “View Favorites” button is clicked, users should be taken to a new page that displays all of their favorite messages.
 
 function showFavorites() {
   homePageSection.classList.add('hidden');
-  favoritesSection.classList.remove('hidden');
-
+  favoritesPage.classList.remove('hidden');
   renderFavorites();
 }
 
 function showHomePage(){
   homePageSection.classList.remove('hidden');
-  favoritesSection.classList.add('hidden');
-}
-
-renderFavorites(){
-  for (var i = 0; i < favoriteMessages.length; i++) {
-  //using +=
-  //add this html with this class each time.
-  //first think how do you want to set it up?
-
-  savedCoversSection.innerHTML +=
-  `
-  <section class="mini-cover" id="${savedCovers.length}">
-    <img class="cover-image" src=${currentCovers[i].cover}>
-    <h2 class="cover-title">${currentCovers[i].title}</h2>
-    <h3 class="tagline">A tale of <span class="tagline-1">${currentCovers[i].tagline1}</span> and <span class="tagline-2">${currentCover.tagline2}</span></h3>
-  </section>
-  `
-}
-
+  favoritesPage.classList.add('hidden');
 }
 
 
 // Users should be able to remove a message from their list of favorites, by clicking a button.
-// As you add these new elements to the page, be sure to match the style of existing elements.
 
 
 

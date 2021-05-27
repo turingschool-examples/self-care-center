@@ -131,3 +131,27 @@ img {
 .hidden {
   display: none!important;
 }
+
+/*--- FAVORITE MESSAGES SECTION --*/
+.favorites-page {
+  padding: 30px;
+}
+
+.saved-messages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.message-box {
+  background: black;
+  color: white;
+  height: 340px;
+  padding: 25px;
+  width: 425px;
+}
+
+.favorite-message-paragraph {
+  text-decoration: underline;
+}
