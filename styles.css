@@ -4,5 +4,21 @@ light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
-black - #000000;
-*/
+black - #000000; */
+
+* {
+  border: 3px solid purple;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+}
+
+.saying-buttons {
+  display: flex;
+  flex-direction: row;
+}
