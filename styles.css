@@ -91,3 +91,7 @@ h1 {
   height: 200px;
   border-radius: 8px;
 }
+
+.hidden {
+  display: none;
+}

@@ -17,9 +17,25 @@ function getRandomIndex(array) {
 }
 
 function generateDisplayMessage() {
-  if (affirmationBtn.checked){
-// then return random index of affirmation array
-  getRandomIndex(affirmationArray);
-  //display to page (adding and removing hidden class, replace the innerText in the display message)
+
+  var affirmationMessage = affirmations[getRandomIndex(affirmations)];
+  var mantraMessage = mantras[getRandomIndex(mantras)];
+
+    if (affirmationBtn.checked) {
+      message.innerText = affirmationMessage;
+  } else if (mantraBtn.checked) {
+      message.innerText = mantraMessage;
+      console.log(message.innerText);
   }
+
+  hideImage();
+  unhideMessage();
+}
+
+function hideImage() {
+  image.classList.add('hidden');
+}
+
+function unhideMessage() {
+  message.classList.remove('hidden');
 }
