@@ -6,3 +6,38 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+body {
+  background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  height: auto;
+  width: 1000px
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+h3{
+  color: #ffffff;
+}
+
+label {
+  font-style: italic;
+}
+
+button {
+  color: #ffffff;
+  background: #134d71;
+  border: 2px solid #134d71;
+  border-radius: 5px;
+}
+
+
+img {
+  width: 10%
+}
