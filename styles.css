@@ -55,11 +55,11 @@ h1{
    padding-top: 5px;
  }
 
-.header, .which-method, .receive-message {
+.header, .which-method, .receive-message, .add-message {
   color: white;
 }
 
-.receive-message {
+.receive-message, .add-message {
   background-color:#134d71;
   padding: 5px 30px;
   margin: 5px;
