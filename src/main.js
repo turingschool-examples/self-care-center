@@ -31,38 +31,26 @@ function renderCurrentMessage(){
   <p>${currentMessage}</p>
   <button class="favorite"><3</button>
   `
-
-
   var favoriteButton = document.querySelector("button");
   favoriteButton.addEventListener("click", favoriteAMessage);
-
 }
 
 
 
-
-function favoriteAMessage(e) {
-  favoriteButton = document.querySelector(".favorite");
-  var messageDisplayed = e.target.closest('p');
-  favoriteMessages.push(new Message(messageDisplayed));
-  console.log("messageDisplayed", messageDisplayed);
-  console.log("favoriteMessages", favoriteMessages);
-
+function favoriteAMessage() {
+    if (!favoriteMessages.length) {
+      favoriteMessages.push(new Message(currentMessage))
+    } else {
+    for (var i = 0; i < favoriteMessages.length; i ++) {
+        if (`favoriteMessages[i].messageText` !== currentMessage) {
+          favoriteMessages.push(new Message(currentMessage))
+      }
+      }
+    }
 }
-
-
-
-//When the “Favorite” button is clicked, that message should be added to a new list of favorite messages.
-  //when the favorite button is clicked, add this current message to the array.
-    //put a query selector on the button within this method.
-
-      //querySelector(".favorite")
-    //have an event listner on that button
-
 
     //when press favorite, create a new message object and push that in if id and message doesn't match.
-    //put id in each html random id with id = Math.random()
-    //
+
 
 
 function getRandomIndex(array) {
