@@ -13,11 +13,6 @@ html {
 
 body {
   height: 100%;
-  border: 2px #ccc solid;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* align-content: center; */
 }
 
 h1 {
@@ -27,9 +22,6 @@ h1 {
   text-align: center;
   margin: 40px, auto;
   padding: 30px;
-
-
-
 }
 
 h2 {
@@ -50,7 +42,7 @@ form {
   text-align: center;
 }
 
-#choice1 {
+label {
   font-family:'Quicksand', sans-serif;
   font-size:20px;
   font-style: italic;
@@ -67,7 +59,7 @@ button, submit {
   padding: 2px 26px;
 }
 
-#mantra {
+#choice2 {
   margin: 0 0 0 100px;
 }
 
@@ -76,14 +68,17 @@ section {
   border-radius: 8px;
   display: flex;
   justify-content: center;
-  width: 50%;
-  height: 10%;
+  align-items: center;
+  width: 70%;
+  height: 15%;
   margin: 100px auto 40px auto;
+  font-size: 24px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 svg {
   height: 50%;
   width: 50%;
-  /* align-content: space-around; */
-
+  justify-content: center;
+  padding-top: 15px;
 }

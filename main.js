@@ -54,6 +54,8 @@ function returnRandomMessage() {
     messageDisplay.innerText = affirmations[getRandomIndex(affirmations)];
   } else if (buttonMantra.checked) {
     messageDisplay.innerText = mantras[getRandomIndex(mantras)];
+  } else {
+    messageDisplay.innerText = 'Please select your message type preference above ⬆.'
   }
 }
 
