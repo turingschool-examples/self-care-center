@@ -123,3 +123,7 @@ img {
 .viewSaved {
   justify-content: center;
 } */
+
+.hidden {
+  display: none!important;
+}

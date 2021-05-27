@@ -49,7 +49,17 @@ function favoriteAMessage() {
     }
 }
 
-    //when press favorite, create a new message object and push that in if id and message doesn't match.
+// When the “View Favorites” button is clicked, users should be taken to a new page that displays all of their favorite messages.
+
+function showFavorites() {
+  homePageSection.classList.add('hidden');
+  favoritesSection.classList.remove('hidden');
+}
+
+// Users should be able to navigate back to the main page by clicking a button.
+// Users should be able to remove a message from their list of favorites, by clicking a button.
+// As you add these new elements to the page, be sure to match the style of existing elements.
+
 
 
 
