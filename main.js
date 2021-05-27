@@ -40,6 +40,7 @@ var messageBox = document.querySelector('.display-box');
 var bellImage = document.querySelector('img');
 var viewMessage = document.querySelector('.view-message-area');
 var addMessageButton = document.querySelector('.add-message');
+var createMessageForm = document.querySelector('.custom-message');
 var currentMessage = '';
 
 //--------------------/event listeners/----------------------//
@@ -57,6 +58,12 @@ function displayMessage() {
     hideImage();
     viewMessage.innerText = `${affirmations[getRandomIndex(affirmations)]}`;
   }
+}
+
+function displayForm() {
+  hideImage();
+  viewMessage.innerText = ``;
+  createMessageForm.classList.remove('hidden');
 }
 
 function getRandomIndex(array) {
