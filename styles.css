@@ -69,12 +69,22 @@ label {
   margin: 40px auto 5px auto;
   padding: 2px 26px;
 }
+#favorite {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  color:#ffffff;
+  background: #134d71;
+  border-radius: 5px;
+  display: none;
+  margin: 40px auto 5px 30px;
+  padding: 2px 26px;
+}
 
 #choice2 {
   margin: 0 0 0 100px;
 }
 
-section {
+.message-display {
   background-color: #ffffff;
   border-radius: 8px;
   display: flex;

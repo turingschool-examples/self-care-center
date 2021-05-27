@@ -3,9 +3,10 @@ var buttonAffirmation = document.getElementById('choice1');
 var buttonMantra = document.getElementById('choice2');
 var buttonSubmit = document.querySelector('.submit');
 var buttonClear = document.getElementById('clear');
+var buttonFavorite = document.getElementById('favorite');
 
 // message return screen
-var messageDisplay = document.querySelector('section');
+var messageDisplay = document.querySelector('.message-display');
 var meditationImage = document.querySelector('svg');
 
 // global variables
@@ -53,10 +54,10 @@ function returnRandomMessage() {
   meditationImage.classList.add("hidden");
   if (buttonAffirmation.checked) {
     messageDisplay.innerText = affirmations[getRandomIndex(affirmations)];
-    displayClearButton();
+    displayAddionalButtons();
   } else if (buttonMantra.checked) {
     messageDisplay.innerText = mantras[getRandomIndex(mantras)];
-    displayClearButton();
+    displayAddionalButtons();
   } else {
     messageDisplay.innerText = 'Please select your message type preference above ⬆.'
   }
@@ -66,6 +67,7 @@ function getRandomIndex(messages) {
   return Math.floor(Math.random() * messages.length);
 };
 
-function displayClearButton () {
-  buttonClear.style.display="block";
+function displayAddionalButtons () {
+  buttonClear.style.display="inline-block";
+  buttonFavorite.style.display="inline-block";
 }
