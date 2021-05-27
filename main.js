@@ -39,11 +39,13 @@ var receiveMessageButton = document.querySelector('.receive-message');
 var messageBox = document.querySelector('.display-box');
 var bellImage = document.querySelector('img');
 var viewMessage = document.querySelector('.view-message-area');
+var addMessageButton = document.querySelector('.add-message');
 var currentMessage = '';
 
 //--------------------/event listeners/----------------------//
 // window.addEventListener('load', )
 receiveMessageButton.addEventListener('click', displayMessage);
+addMessageButton.addEventListener('click', displayForm);
 
 //--------------------/functions/----------------------//
 function displayMessage() {
