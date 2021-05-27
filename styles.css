@@ -13,7 +13,6 @@ html {
   justify-content: center;
 }
 
-
 body {
   font-family: 'Open Sans', sans-serif;
   height: 100%;
@@ -69,6 +68,20 @@ form {
   font-style: italic;
 }
 
+#submit,
+.submit {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  /* height and width */
+  /*font size*/
+  background-color: #134d71
+  font-color: #ffffff;
+}
+
+button {
+  margin: 0px;
+}
+
 label {
   margin-right: 80px;
   margin: 20px;
@@ -93,8 +106,4 @@ img {
   padding: 14px 207px;
   height: 3em;
   width: 3em;
-}
-
-button {
-  margin: 0px;
 }

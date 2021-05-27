@@ -23,7 +23,11 @@ function displayMessage() {
 }
 
 function renderCurrentMessage(){
-  displayMessageSection.innerHTML = `<p>${currentMessage}</p>`
+  displayMessageSection.innerHTML =
+  `
+  <p>${currentMessage}</p>
+  <button class="submit">Favorite</button>
+  `
 }
 
 function getRandomIndex(array) {
