@@ -1,3 +1,6 @@
+// page display
+var pageWelcome = document.querySelector('.welcome-page');
+
 // buttons
 var buttonAffirmation = document.getElementById('choice1');
 var buttonMantra = document.getElementById('choice2');
@@ -7,7 +10,8 @@ var buttonFavorite = document.getElementById('favorite');
 
 // message return screen
 var messageDisplay = document.querySelector('.message-display');
-var meditationImage = document.querySelector('svg');
+var meditationImage = document.querySelector('img');
+var returnMessage = document.getElementById('message-returned');
 
 // global variables
 var affirmations = [
@@ -24,11 +28,11 @@ var affirmations = [
   'Every day I am getting healthier and stronger.',
   'I honor my body by trsuting the signals that it sends me.',
   'I manifest perfect health by making smart choices.',
-]
+];
 var mantras = [
   'Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.',
   'Do not let yesterday take up too much of today.',
-  'Evey day is a second chance.',
+  'Every day is a second chance.',
   'Tell the truth and love everyone.',
   'I am free from sadness.',
   'I am enough.',
@@ -41,33 +45,43 @@ var mantras = [
   'The only constant is change.',
   'Onward and upward.',
   'I am the sky, the rest is weather.',
-]
+];
+var favorites = [];
 
 // eventListeners
 
 buttonSubmit.addEventListener('click', returnRandomMessage);
+buttonFavorite.addEventListener('click', storeFavoriteMessage);
 
 // functions and handlers
 
 function returnRandomMessage() {
   event.preventDefault();
   meditationImage.classList.add("hidden");
+  returnMessage.classList.remove("hidden");
   if (buttonAffirmation.checked) {
-    messageDisplay.innerText = affirmations[getRandomIndex(affirmations)];
+    returnMessage.innerText = affirmations[getRandomIndex(affirmations)];
     displayAddionalButtons();
   } else if (buttonMantra.checked) {
-    messageDisplay.innerText = mantras[getRandomIndex(mantras)];
+    returnMessage.innerText = mantras[getRandomIndex(mantras)];
     displayAddionalButtons();
   } else {
-    messageDisplay.innerText = 'Please select your message type preference above ⬆.'
+    returnMessage.innerText = 'Please select your message type preference above ⬆.'
   }
 }
-
-function getRandomIndex(messages) {
-  return Math.floor(Math.random() * messages.length);
-};
 
 function displayAddionalButtons () {
   buttonClear.style.display="inline-block";
   buttonFavorite.style.display="inline-block";
 }
+
+function storeFavoriteMessage() {
+  event.preventDefault();
+  favorites.push(returnMessage.innerText);
+  console.log(favorites);
+}
+
+
+function getRandomIndex(messages) {
+  return Math.floor(Math.random() * messages.length);
+};
