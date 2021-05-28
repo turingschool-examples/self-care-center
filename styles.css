@@ -6,20 +6,24 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+/* go back and seperate concerns */
+  /* ~~~~~ MAIN POSTER SECTION ~~~~~ */ /* ~~~~~ GLOBAL RULES ~~~~~ */
+
 html {
   background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
-  height: 100%;
+  background-attachment: fixed;
+  /* height: 100%; */
   display: flex;
   justify-content: center;
 }
 
-
 body {
   font-family: 'Open Sans', sans-serif;
-  height: 100%;
+  /* height: 100%; */
   margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* background-repeat: no-repeat;
+  background-attachment: fixed; */
 }
 
 p {
@@ -69,6 +73,27 @@ form {
   font-style: italic;
 }
 
+#submit,
+.favorite {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  height: 20px;
+  width: 120px;
+  background-color: #134d71
+  font-color: #ffffff;
+}
+
+.submit {
+  margin-top: 31px;
+  height: 25px;
+  width: 25px;
+  margin-left: 5px;
+}
+
+/* button {
+  margin: 0px;
+} */
+
 label {
   margin-right: 80px;
   margin: 20px;
@@ -95,6 +120,38 @@ img {
   width: 3em;
 }
 
-button {
-  margin: 0px;
+/* span {
+  display: flex;
+}
+
+.viewSaved {
+  justify-content: center;
+} */
+
+.hidden {
+  display: none!important;
+}
+
+/*--- FAVORITE MESSAGES SECTION --*/
+.favorites-page {
+  padding: 30px;
+}
+
+.saved-messages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.message-box {
+  background: black;
+  color: white;
+  height: 340px;
+  padding: 25px;
+  width: 425px;
+}
+
+.favorite-message-paragraph {
+  text-decoration: underline;
 }

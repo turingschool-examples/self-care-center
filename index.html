@@ -2,8 +2,10 @@
 <html lang="en">
 
 <head>
-<link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <title>Self Care Center</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -15,31 +17,45 @@
   </h1>
 </header>
 <main>
-  <h2>Which type of message?</h2>
-  <section class="choose-message">
-    <div class="form-container">
-      <form>
-        <input type="radio" name="message-type" value="affirmation">
-        </input>
-        <label>
-          affirmation
-        </label>
-        <input type="radio" name="message-type" value="mantra">
-        </input>
-        <label>
-          mantra
-        </label>
-        <br />
-        <input type="submit" value="Receive Message" id="submit"> </input>
-    </div>
-    </form>
+  <section class="main-page">
+    <!--put an article -->
+    <article class="choose-message">
+      <h2>Which type of message?</h2>
+      <div class="form-container">
+        <form>
+          <input type="radio" name="message-type" value="affirmation">
+          </input>
+          <label>
+            affirmation
+          </label>
+          <input type="radio" name="message-type" value="mantra">
+          </input>
+          <label>
+            mantra
+          </label>
+          <br />
+          <input type="submit" value="Receive Message" id="submit"> </input>
+      </div>
+      </form>
+      <!--put an article end tag -->
+    </article>
+    <!--took section tag out here to encompass all in one big section to hide -->
+    <article class="display-message">
+         <img src="assets/meditate.svg" />
+    </article>
+    <span>
+      <button class="view-saved">View Your Favorite Messages</button>
+    </span>
   </section>
-  <section class="display-message">
-       <img src="assets/meditate.svg" />
+  <section class="favorites-page hidden">
+    <h2> Your Favorite Posters </h2>
+    <article class="saved-messages-grid"></article>
+    <button class="home-button">Home</button>
   </section>
 </main>
 <script type="text/javascript" src="src/main.js"></script>
 <script src="src/data.js"></script>
+<script src="src/message.js"></script>
 </body>
 
 </html>
