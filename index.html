@@ -12,17 +12,21 @@
       </header>
       <article>
         <h3 class="question">Which type of message?</h3>
-        <form class = "message-selection">
-          <div class="affirmation-selection">
-            <input type="radio" class="mantra" name="message" value="mantra">mantra
-            <input type="radio" class="affirmation" name="message" value="affirmation">affirmation
-          </div>
-          <button class="receive-message">Receive Message</button>
+        <form class= "message-selection-box">
+          <section class="radio-buttons">
+            <div class="radio-button-selection">
+              <input type="radio" id="affirmation" name= highlight value="affirmation">affirmation
+              <input type="radio" id="mantra" name= highlight value="mantra">mantra
+            </div>
+          </section>
+          <section class="message-button">
+            <button class="receive-message">Receive Message</button>
+          </section>
         </form>
       </article>
-      <article class="display-message">
+      <article class="display-message-box">
+        <p class="hidden new-message">message-here</p>
         <img class="meditation-image" src="./assets/meditate.svg" alt="yellow meditating person" height="80" width="80">
-        <p> </p>
       </article>
     <main>
     <script type="text/javascript" src="main.js"></script>
