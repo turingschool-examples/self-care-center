@@ -30,6 +30,7 @@ function displayMessage() {
   } else if(radio.value === 'mantra'){
     currentMessage = mantras[getRandomIndex(mantras)];
   }
+
   renderCurrentMessage();
 }
 
