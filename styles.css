@@ -26,7 +26,7 @@ body {
   display:block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  /* width: 50%; */
 }
 
 h1 {
@@ -34,6 +34,8 @@ h1 {
  color: #ffffff;
  font-size: 25px;
  text-align: center;
+ margin-bottom: 85px;
+ margin-top: 30px;
 }
 
 .subhead {
@@ -48,6 +50,8 @@ h1 {
  text-align: center;
  color: #000000;
  margin-top: 2px;
+ width: 550px;
+ height: 85px;
 }
 
 .radio-button1 {
@@ -72,6 +76,11 @@ h1 {
 .meditation-image {
   height: 75px;
   padding-top: 50px;
+}
+
+.display-message{
+  font-family:'Quicksand', sans-serif;
+  text-align: center;
 }
 
 .selection-section {
