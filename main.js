@@ -9,8 +9,14 @@ var affirmationBtn = document.querySelector(".radio-button1");
 var mantraBtn = document.querySelector(".radio-button2");
 var image = document.querySelector(".meditation-image");
 var message = document.querySelector(".display-message");
+var loginBtn = document.querySelector(".login-button");
+var mainPage = document.querySelector(".main-page");
+var loginPage = document.querySelector(".login-page");
+var loginName = document.getElementById('login-field');
+var greeting = document.querySelector('.greeting');
 
 receiveMessageBtn.addEventListener("click", generateDisplayMessage);
+loginBtn.addEventListener("click", displayName)
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -32,10 +38,26 @@ function generateDisplayMessage() {
   unhideMessage();
 }
 
+function displayName() {
+  var username = loginName.value
+  //replace the inner text of greeting with new interpolated statement
+  greeting.innerText = `Hello, ${username}! Great job practicing self care today.`
+  unhideMainPage();
+  hideLoginPage();
+}
+
 function hideImage() {
   image.classList.add('hidden');
 }
 
 function unhideMessage() {
   message.classList.remove('hidden');
+}
+
+function unhideMainPage() {
+  mainPage.classList.remove('hidden');
+}
+
+function hideLoginPage() {
+  loginPage.classList.add('hidden');
 }
