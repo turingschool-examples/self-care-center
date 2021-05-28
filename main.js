@@ -79,8 +79,7 @@ function checkBoxes() {
     currentMessage = mantras[getRandomIndex(mantras)]
   } else if (affirmationCheck) {
     currentMessage = affirmations[getRandomIndex(affirmations)]
-  }
-  console.log('check box', currentMessage)
+}
 }
 
 checkBoxes();
