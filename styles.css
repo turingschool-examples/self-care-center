@@ -36,7 +36,7 @@ h1 {
  text-align: center;
 }
 
-.message-question {
+.subhead {
  font-family:'Quicksand', sans-serif;
  color: #ffffff;
  text-align: center;
@@ -94,4 +94,27 @@ h1 {
 
 .hidden {
   display: none;
+}
+
+.login-form {
+  background: #ffffff;
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+}
+
+.login-field {
+  font-family:'Quicksand', sans-serif;
+  margin: 20px
+}
+
+.login-button {
+  font-family:'Quicksand', sans-serif;
+  text-align: center;
+  color: #ffffff;
+  background: #134d71;
+  margin-top: 18px;
+  border-radius: 5px;
+  width: 175px;
+  margin-bottom: 5px;
 }
