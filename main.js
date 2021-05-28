@@ -49,13 +49,9 @@ receiveMessageBtn.addEventListener('click', displayQuote);
 
 //FUNCTIONS
 function displayQuote() {
-  // invoke getQuote() to make currentQuote the selected quote
   getQuote();
-  // add currentQuote to message box element in <p>
   message.innerText = currentQuote;
-    // make message box element visible
   quoteToDisplay.hidden = false;
-  // hide the meditator-img//
   welcomeIcon.hidden = true;
 }
 

@@ -18,9 +18,12 @@ body {
 
 h1, h3 {
   color: white;
+  margin: 50px auto;
 }
 
-
+h3 {
+  margin-bottom: 5px;
+}
 
 .container {
   background-color: white;
@@ -33,11 +36,14 @@ h1, h3 {
 }
 
 .options-window {
-  width: 40%;
+  width: 50%;
+  min-width: 401px;
 }
 
 .message-window {
-  width: 60%;
+  width: 70%;
+  min-width: 600px;
+  margin-top: 90px;
 }
 
 .small-image {
