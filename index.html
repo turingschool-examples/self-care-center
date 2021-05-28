@@ -6,18 +6,24 @@
   </head>
   <body>
     <header class="header-text">✨ Self Care Center ✨</header>
+
     <h6 class="decide-message-text">Which type of message?</h6>
-    <section class="select-message-box">
-      <div class="radio-btn-box">
-        <input class="affirmation-input" type=radio></input>
-        <label>affirmation</label>
-        <input class="mantra-input" type=radio></input>
-        <label>mantra</label>
+
+    <main class="main-box">
+      <div class="btn-container">
+        <section class="radio-btns">
+          <input type="radio" name="affirmation" class="affirmation-btn">
+          <label for="affirmation">affirmation</label>
+          <input type="radio" name="mantra" class="mantra-btn">
+          <label for="mantra">mantra</label>
+        </section>
+        <section class="receive-msg-btn">
+          <button type="button">Receive Message</button>
+        </section>
       </div>
-        <button class="receive-message-btn">Receive Message</button>
-    </section>
-    <section class="text-display-box">
-    </section>
+        <section class="display-msg-box"></section>
+    </main>
+
 
     <script type="text/javascript" src="main.js"></script>
   </body>
