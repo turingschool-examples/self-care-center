@@ -121,19 +121,7 @@ function showHomePage(){
   favoritesPage.classList.add('hidden');
 }
 
-
-// You are here, below !
-// Users should be able to remove a message from their list of favorites, by clicking a button.
-
 function deleteFavoriteMessage(e) {
-//when the button is clicked delete the whole section
-  //for loop ...e.target.closest('section').id ==== favoriteMessages[i].id {splice}
-  console.log(e);
-  console.log("event target" , e.target);
-  console.log(e.target.closest('section').id);
-  console.log(favoriteMessages);
-
-//now see line 93-95... need to add an event listener on each button.
 for (var i = 0; i < favoriteMessages.length; i++) {
     if (`${e.target.closest('section').id}` === `${favoriteMessages[i].id}`) {
       favoriteMessages.splice(i, 1);
@@ -142,9 +130,6 @@ for (var i = 0; i < favoriteMessages.length; i++) {
 
   renderFavorites();
 }
-
-
-
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
