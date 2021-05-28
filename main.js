@@ -38,6 +38,7 @@ var mantras = [
 var receiveMessageBtn = document.querySelector('.receive-message');
 var mantraBtn = document.querySelector('#mantra');
 var affirmationBtn = document.querySelector('#affirmation');
+var dontLikeMessageBtn = document.querySelector('.remove-message-from-array');
 
 var displayedMessage = document.querySelector('.new-message');
 var meditationImage = document.querySelector('.meditation-image');
@@ -47,7 +48,7 @@ var meditationImage = document.querySelector('.meditation-image');
 
 // event listeners go here 👇
 receiveMessageBtn.addEventListener('click', makeMessage);
-
+dontLikeMessageBtn.addEventListener('click', deleteMessage);
 
 
 
@@ -67,11 +68,49 @@ function makeMessage(e) {
   }
   hideMeditationImage()
   showMessage()
+  showDislikeButton()
 };
+
+function deleteMessage() {
+  var dislikeMessage = makeMessage.innerText
+
+  for (var i = 0; i < affirmations.length; i++) {
+    if (affirmations[i] === dislikeMessage) {
+    affirmations.splice(i, 1);
+    }
+  }
+  for (var i = 0; i < mantras.length; i++) {
+    if (mantras[i] === dislikeMessage) {
+    mantras.splice(i, 1);
+    }
+  }
+  showMeditationImage()
+  hideMessage()
+  hideDislikeButton()
+
+  alert(`We apologize for the phrase.  Peace be with you.`)
+};
+
+function showDislikeButton() {
+  dontLikeMessageBtn.classList.remove("hidden")
+};
+
+function hideDislikeButton() {
+  dontLikeMessageBtn.classList.add("hidden")
+};
+
 function showMessage() {
   displayedMessage.classList.remove("hidden")
-}
+};
+
+function hideMessage() {
+  displayedMessage.classList.add("hidden")
+};
+
+function showMeditationImage() {
+  meditationImage.classList.remove('hidden')
+};
 
 function hideMeditationImage() {
   meditationImage.classList.add('hidden')
-}
+};
