@@ -18,6 +18,9 @@ var messagesGrid = document.querySelector(".saved-messages-grid");
 submit.addEventListener("click", displayMessage);
 viewFavoriteMessagesButton.addEventListener("click", showFavorites);
 homeButton.addEventListener("click", showHomePage);
+favoritesPage.addEventListener("click", function(event) {
+  deleteFavoriteMessage(event)
+});
 
 
 
@@ -97,18 +100,8 @@ function renderFavorites() {
     </section>
       `
 
-
-
-
-      var deleteButton = document.querySelector(".delete-button");
-
-      deleteButton.addEventListener("click", function(event) {
-        deleteFavoriteMessage(event);
-      });
-
     }
 }
-
 
 function showFavorites() {
   homePageSection.classList.add('hidden');
@@ -130,6 +123,7 @@ for (var i = 0; i < favoriteMessages.length; i++) {
 
   renderFavorites();
 }
+
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
