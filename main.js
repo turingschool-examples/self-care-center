@@ -40,22 +40,38 @@ var savedQuotes = [];
 var selectAffirmation = document.getElementById('affirmation');
 var selectMantra = document.getElementById('mantra');
 var receiveMessageBtn = document.getElementById('receive-message');
+var message = document.getElementById('message');
+var welcomeIcon = document.getElementById('welcome');
+var quoteToDisplay = document.getElementById('quote');
 
-// event listeners
-// when the Recieve Message button is clicked, it will display the Quote (function pseudocode below)
+// EVENT LISTENERS
 receiveMessageBtn.addEventListener('click', displayQuote);
 
 //FUNCTIONS
 function displayQuote() {
   // invoke getQuote() to make currentQuote the selected quote
+  getQuote();
   // add currentQuote to message box element in <p>
+  message.innerText = currentQuote;
     // make message box element visible
+  quoteToDisplay.hidden = false;
   // hide the meditator-img//
+  welcomeIcon.hidden = true;
 }
 
 function getQuote() {
-  // if mantra/affirmation is selected
-    // generate a random number based on the the number mantras/affirmations available
-    // use random number to access a mantra/affirmations
-    // assign that quote as the value of current quote
+  if (selectAffirmation.checked) {
+    var randomIndex = getRandomNumber(affirmations);
+    currentQuote = affirmations[randomIndex];
+  } else if (selectMantra.checked) {
+    var randomIndex = getRandomNumber(mantras);
+    currentQuote = mantras[randomIndex];
+  } else {
+    currentQuote = "[Please make a selection]";
+  }
+}
+
+function getRandomNumber(array) {
+  var random = Math.floor(Math.random() * array.length);
+  return random;
 }
