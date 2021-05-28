@@ -18,9 +18,7 @@ var messagesGrid = document.querySelector(".saved-messages-grid");
 submit.addEventListener("click", displayMessage);
 viewFavoriteMessagesButton.addEventListener("click", showFavorites);
 homeButton.addEventListener("click", showHomePage);
-favoritesPage.addEventListener("dblclick", function(event) {
-  deleteFavoriteMessage(event);
-});
+
 
 
 
@@ -73,8 +71,12 @@ function favoriteAMessage() {
 //   favoriteMessages.push(new Message(currentMessage))
 // } else {
 // for (var i = 0; i < favoriteMessages.length; i ++) {
-//     if (`favoriteMessages[i].messageText` !== currentMessage) {
-//       favoriteMessages.push(new Message(currentMessage))
+//     if (`favoriteMessages[i].messageText` === currentMessage) {
+          //break; }
+
+//       favoriteMessages.push(new Message(currentMessage));
+
+//
 //   }
 //   }
 // }
@@ -90,8 +92,19 @@ function renderFavorites() {
     `
     <section class="message-box" id="${favoriteMessages[i].id}">
       <p class="favorite-message-paragraph">${favoriteMessages[i].messageText}<p>
+      <button class="delete-button">Delete</button>
     </section>
       `
+
+
+
+
+      var deleteButton = document.querySelector(".delete-button");
+
+      deleteButton.addEventListener("click", function(event) {
+        deleteFavoriteMessage(event);
+      });
+
     }
 }
 
@@ -108,7 +121,26 @@ function showHomePage(){
 }
 
 
+// You are here, below !
 // Users should be able to remove a message from their list of favorites, by clicking a button.
+
+function deleteFavoriteMessage(e) {
+//when the button is clicked delete the whole section
+  //for loop ...e.target.closest('section').id ==== favoriteMessages[i].id {splice}
+  console.log(e);
+  console.log("event target" , e.target);
+  console.log(e.target.closest('section').id);
+  console.log(favoriteMessages);
+
+//now see line 93-95... need to add an event listener on each button.
+for (var i = 0; i < favoriteMessages.length; i++) {
+    if (`${e.target.closest('section').id}` === `${favoriteMessages[i].id}`) {
+      favoriteMessages.splice(i, 1);
+    }
+  }
+
+  renderFavorites();
+}
 
 
 
