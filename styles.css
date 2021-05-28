@@ -9,7 +9,7 @@ black - #000000;
 html {
   position: fixed;
   width: 100%;
-  height: 100%
+  height: 100%;
   background-size: cover;
   background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
 }
@@ -30,9 +30,8 @@ h2 {
 }
 .option-box {
   width: 30%;
-  height: 15px;
+  height: 15%;
   padding:30px;
-  border: 1px solid green;
   border-radius: 10px;
   background-color: #ffffff;
   margin-top: 20px;
@@ -44,6 +43,9 @@ h2 {
   font-style: italic;
 }
 
+label {
+  padding-bottom: 5%;
+}
 
 .hidden {
     display: none;
@@ -58,9 +60,9 @@ h2 {
 
 .message-box {
   width: 60%;
-  height: 60px ;
+  height: 25%;
   padding:30px;
-  border: 1px solid green;
+  border: 1px;
   border-radius: 10px;
   background-color: #ffffff;
   margin-top: 200px;
