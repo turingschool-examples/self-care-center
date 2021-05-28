@@ -90,7 +90,7 @@ function displayAddionalButtons () {
 
 function storeFavoriteMessage() {
   event.preventDefault();
-  if (!savedFavorites.includes(newFavorite)) {
+  if (savedFavorites.id !== newFavorite.id) {
   savedFavorites.push(newFavorite);
   console.log(savedFavorites);
   buttonDisplayFavorites.style.display="inline-block";

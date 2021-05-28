@@ -32,7 +32,7 @@ h2 {
   padding-top: 50px;
 }
 
-form {
+.message-selection {
   background-color:#ffffff;
   width: 600px;
   height: 100px;
@@ -58,12 +58,13 @@ label {
   margin: 40px auto 5px auto;
   padding: 2px 26px;
 }
+
 .favorites-button {
   display: flex;
-  justify-content: center;
+  justify-content: center; */
   align-items: center;
   text-align: center;
-}
+ }
 
 #clear {
   font-family: 'Quicksand', sans-serif;
