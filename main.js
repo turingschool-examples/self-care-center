@@ -74,12 +74,14 @@ function messageRender() {
   // }
   // messageDisplay.innerText = messageHTML;
 }
+
 function checkBoxes() {
   if (mantraCheck.value) {
     currentMessage = mantras[getRandomIndex(mantras)]
   } else if (affirmationCheck) {
     currentMessage = affirmations[getRandomIndex(affirmations)]
-}
+  }
+  console.log('check box', currentMessage)
 }
 
 checkBoxes();
