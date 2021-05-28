@@ -7,6 +7,7 @@ var buttonMantra = document.getElementById('choice2');
 var buttonSubmit = document.querySelector('.submit');
 var buttonClear = document.getElementById('clear');
 var buttonFavorite = document.getElementById('favorite');
+var buttonDisplayFavorites = document.getElementById('display-favorites')
 
 // message return screen
 var messageDisplay = document.querySelector('.message-display');
@@ -46,7 +47,15 @@ var mantras = [
   'Onward and upward.',
   'I am the sky, the rest is weather.',
 ];
-var favorites = [];
+var savedFavorites = [];
+var newFavorite;
+class FavoriteQuotes{
+  constructor(type, quote) {
+    this.id = Date.now();
+    this.type = type;
+    this.quote = quote;
+  }
+}
 
 // eventListeners
 
@@ -61,9 +70,11 @@ function returnRandomMessage() {
   returnMessage.classList.remove("hidden");
   if (buttonAffirmation.checked) {
     returnMessage.innerText = affirmations[getRandomIndex(affirmations)];
+    newFavorite = new FavoriteQuotes('affirmation', returnMessage.innerText);
     displayAddionalButtons();
   } else if (buttonMantra.checked) {
     returnMessage.innerText = mantras[getRandomIndex(mantras)];
+    newFavorite = new FavoriteQuotes('mantra', returnMessage.innerText);
     displayAddionalButtons();
   } else {
     returnMessage.innerText = 'Please select your message type preference above ⬆.'
@@ -77,9 +88,12 @@ function displayAddionalButtons () {
 
 function storeFavoriteMessage() {
   event.preventDefault();
-  favorites.push(returnMessage.innerText);
-  console.log(favorites);
+  if (!savedFavorites.includes(newFavorite)) {
+  savedFavorites.push(newFavorite);
+  console.log(savedFavorites)
 }
+}
+
 
 
 function getRandomIndex(messages) {
