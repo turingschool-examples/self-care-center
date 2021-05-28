@@ -58,6 +58,12 @@ label {
   margin: 40px auto 5px auto;
   padding: 2px 26px;
 }
+.favorites-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 #clear {
   font-family: 'Quicksand', sans-serif;
@@ -66,7 +72,7 @@ label {
   background: #134d71;
   border-radius: 5px;
   display: none;
-  margin: 40px auto 5px auto;
+  margin: 60px auto 5px auto;
   padding: 2px 26px;
 }
 #favorite {
@@ -76,9 +82,10 @@ label {
   background: #134d71;
   border-radius: 5px;
   display: none;
-  margin: 40px auto 5px 30px;
-  padding: 2px 26px;
+  margin: 60px auto 5px 50px;
+  padding: 2px 28px;
 }
+
 #display-favorites {
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
@@ -86,8 +93,9 @@ label {
   background: #134d71;
   border-radius: 5px;
   display: none;
-  margin: 40px auto 5px 30px;
-  padding: 2px 26px;
+  padding: 2px 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 

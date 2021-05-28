@@ -1,5 +1,6 @@
 // page display
 var pageWelcome = document.querySelector('.welcome-page');
+var pageFavorites = document.querySelector('.favorites-page');
 
 // buttons
 var buttonAffirmation = document.getElementById('choice1');
@@ -61,8 +62,9 @@ class FavoriteQuotes{
 
 buttonSubmit.addEventListener('click', returnRandomMessage);
 buttonFavorite.addEventListener('click', storeFavoriteMessage);
+buttonDisplayFavorites.addEventListener('click', displayFavoritesPage)
 
-// functions and handlers
+// ~~~*Main Page Functionality*~~
 
 function returnRandomMessage() {
   event.preventDefault();
@@ -90,12 +92,18 @@ function storeFavoriteMessage() {
   event.preventDefault();
   if (!savedFavorites.includes(newFavorite)) {
   savedFavorites.push(newFavorite);
-  console.log(savedFavorites)
+  console.log(savedFavorites);
+  buttonDisplayFavorites.style.display="inline-block";
 }
 }
-
-
 
 function getRandomIndex(messages) {
   return Math.floor(Math.random() * messages.length);
 };
+
+
+// ~~~*Favorites Page Functionality*~~
+function displayFavoritesPage() {
+  pageWelcome.classList.add("hidden");
+  pageFavorites.classList.remove("hidden");
+}
