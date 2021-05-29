@@ -4,9 +4,9 @@
 feature/save-favorite-button
 [X] make save button in HTML with matching styles
 [x] button appears when Receive Message button is selected
-[ ] when button selected, the current quote is added to the savedQuotes data model (array)
-[ ] make View Favorites button
-[ ] button appears when save button is pressed
+[x] when button selected, the current quote is added to the savedQuotes data model (array)
+[x] make View Favorites button
+[x] button appears when save button is pressed
 
 feature/display-saved-quotes
 [x] make main page hide-able

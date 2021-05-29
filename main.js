@@ -36,7 +36,7 @@ var affirmations = [
 var currentQuote = "";
 var savedQuotes = [];
 
-// query selectors
+// selectors
 var selectAffirmation = document.getElementById('affirmation');
 var selectMantra = document.getElementById('mantra');
 var receiveMessageBtn = document.getElementById('receive-message');
@@ -44,11 +44,19 @@ var message = document.getElementById('message');
 var welcomeIcon = document.getElementById('welcome');
 var messageDisplay = document.getElementById('quote');
 var saveMessageBtn = document.getElementById('save-message');
+//create selector for view saved button
+var viewSavedBtn = document.getElementById('view-saved');
+//create a selector for the front page
+var frontPageView = document.getElementById('front-page');
+//create a saved message page selectors
+var favoritesView = document.getElementById('saved-page');
+
 
 // EVENT LISTENERS
 receiveMessageBtn.addEventListener('click', displayQuote);
-//create an event listener that saves a quote to the savedQuotes array
 saveMessageBtn.addEventListener('click', saveQuote);
+//create a listener that will switch to saved view when view saved is clicked
+viewSavedBtn.addEventListener('click', displayFavoritesPage);
 
 //FUNCTIONS
 function displayQuote() {
@@ -77,6 +85,14 @@ function getRandomNumber(array) {
 }
 
 function saveQuote() {
-  //save currentQuote to the savedQuotes array (the data model)
   savedQuotes.push(currentQuote);
+  //display the view saved button once quote is saved
+  viewSavedBtn.hidden = false;
+}
+
+function displayFavoritesPage() {
+  //hide the main page
+  frontPageView.hidden = true;
+  //display the saved page
+  favoritesView.hidden = false;
 }
