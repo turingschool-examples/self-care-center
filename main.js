@@ -1,6 +1,7 @@
 // page display
 var pageWelcome = document.querySelector('.welcome-page');
 var pageFavorites = document.querySelector('.favorites-page');
+var displayFavorites = document.querySelector('.saved-quotes');
 
 // buttons
 var buttonAffirmation = document.getElementById('choice1');
@@ -115,5 +116,5 @@ function saveUserFavorites() {
     quoteHTML +=
       `<p class="saved-quotes">${savedFavorites[i].quote}</p>`
     }
-  pageFavorites.innerHTML = quoteHTML;
+  displayFavorites.innerHTML = quoteHTML;
 }

@@ -131,6 +131,9 @@ img {
 
 .favorites-page {
   display: contents;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .saved-inspirations {
@@ -144,8 +147,6 @@ img {
 }
 
 .saved-quotes {
-  display: flex;
-  justify-content: center;
   color:#ffffff;
   font-family: 'Quicksand', sans-serif;
   font-size: 24px;
@@ -157,11 +158,9 @@ img {
   color:#ffffff;
   background: #134d71;
   border-radius: 5px;
-  display: none;
   padding: 2px 30px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  display: block;
+
+
 }
 .hidden {
   display: none;
