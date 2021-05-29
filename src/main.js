@@ -47,8 +47,6 @@ function renderCurrentMessage(){
   favoriteButton.addEventListener("click", favoriteAMessage);
 }
 
-
-
 function favoriteAMessage() {
   var match = false;
   if(favoriteMessages.length === 0){
