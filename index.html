@@ -12,17 +12,19 @@
     <main class="main-box">
       <div class="btn-container">
         <section class="radio-btns">
-          <input type="radio" name="affirmation" class="affirmation-btn">
+          <input type="radio" name="radio-select" value="affirmation" class="affirmation-btn" id="affirmation-input">
           <label for="affirmation">affirmation</label>
-          <input type="radio" name="mantra" class="mantra-btn">
+          <input type="radio" name="radio-select" value="mantra" class="mantra-btn" id="mantra-input">
           <label for="mantra">mantra</label>
         </section>
         <section class="receive-msg-btn">
-          <button type="button">Receive Message</button>
+          <button id="receiveBtn">Receive Message</button>
         </section>
       </div>
-        <section class="display-msg-box">
+        <section class="bell-icon-box" id='bell-box'>
           <img src="assets/meditate.svg" alt="meditation-icon">
+        </section>
+        <section id="message-display-box" class="message-box">
         </section>
     </main>
 
