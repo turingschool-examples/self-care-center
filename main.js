@@ -34,6 +34,7 @@ var affirmations = [
 ]
 
 // Query Selectors
+
 var affirmationBtn = document.getElementById('affirmation-input');
 var mantraBtn = document.getElementById('mantra-input');
 var receiveMessageBtn = document.getElementById('receiveBtn');
@@ -42,36 +43,33 @@ var messageDisplayBox = document.getElementById('message-display-box');
 
 
 // Event Listeners
-//on receieve button click, (see event handler)
+
 receiveMessageBtn.addEventListener('click', selectMessage);
 
-
 // Event Handlers
-//look at whether a mantra or affirmation has been selected
-//pull from array, display message in display message box.
-  // do I want to make a new section that displays the message and hide and unhide?
-  // or use inner.html
-
-//Steps:
-// on button click.
-// decide if mantra or affirmation was choosen
-  // if mantra, use random number function to choose random mantra.
-  // unhide display section and insert matra text
-  // if affirmation -
-  // use random number function to choose random affirmation from array
-  // unhide display secetion and insert affirmation text
 
   function selectMessage() {
     if (affirmationBtn.checked) {
-      return messageDisplayBox.innerHTLM += `<h3>${affirmations[getRandomIndex(affirmations)]};</h3>`
-    } //else if (input.value = "mantra") {
-    //   // return mantras[getRandomIndex(mantras)
-    // }
+      messageDisplayBox.innerText = "";
+      return messageDisplayBox.innerText += `${affirmations[getRandomIndex(affirmations)]}`
+    }
+    if (mantraBtn.checked) {
+      messageDisplayBox.innerText = "";
+      return messageDisplayBox.innerText += `${mantras[getRandomIndex(mantras)]}`
+    }
      else {
-      return "Please choose a mantra or affirmation";
+      messageDisplayBox.innerText = "";
+      return messageDisplayBox.innerText += "Please choose a mantra or affirmation";
     }
   }
 
   function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
+    return Math.floor(Math.random() * array.length);
   }
+
+  // Goal: hide the bellbox and unhide the message disaply box
+  // Input: click of the recieve message button.
+  // Output: only display the message display box, bell box hidden.
+  // Steps:
+    // on click, hide bell box,
+    // unhide show message box
