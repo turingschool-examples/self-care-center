@@ -159,9 +159,18 @@ img {
   background: #134d71;
   border-radius: 5px;
   padding: 2px 30px;
-
-
 }
+
+.deletion {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  color:#ffffff;
+  background: #134d71;
+  border-radius: 5px;
+  padding: 2px 30px;
+  margin-left: 20px;
+}
+
 .hidden {
   display: none;
 }

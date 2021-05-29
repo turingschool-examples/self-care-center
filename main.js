@@ -127,6 +127,7 @@ function saveUserFavorites() {
 
 function quoteSelection(evt) {
   unwantedQuote = evt.target;
+  unwantedQuote.style.color = '#f7e4bf';
   }
 
   function deleteQuote() {
