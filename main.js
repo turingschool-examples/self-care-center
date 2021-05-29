@@ -3,6 +3,8 @@ var pageWelcome = document.querySelector('.welcome-page');
 var pageFavorites = document.querySelector('.favorites-page');
 var displayFavorites = document.querySelector('.saved-quotes');
 
+var specificQuote = document.querySelector('.saved-quotes');
+
 // buttons
 var buttonAffirmation = document.getElementById('choice1');
 var buttonMantra = document.getElementById('choice2');
@@ -11,6 +13,7 @@ var buttonClear = document.getElementById('clear');
 var buttonFavorite = document.getElementById('favorite');
 var buttonDisplayFavorites = document.getElementById('display-favorites')
 var buttonReturn = document.querySelector('.return-to-welcome');
+var buttonDelete = document.querySelector('.deletion');
 
 // message return screen
 var messageDisplay = document.querySelector('.message-display');
@@ -52,6 +55,7 @@ var mantras = [
 ];
 var savedFavorites = [];
 var newFavorite;
+var unwantedQuote;
 class FavoriteQuotes {
   constructor(type, quote) {
     this.id = Date.now();
@@ -64,7 +68,9 @@ class FavoriteQuotes {
 
 buttonSubmit.addEventListener('click', returnRandomMessage);
 buttonFavorite.addEventListener('click', storeFavoriteMessage);
-buttonDisplayFavorites.addEventListener('click', displayFavoritesPage)
+buttonDisplayFavorites.addEventListener('click', displayFavoritesPage);
+specificQuote.addEventListener('click', quoteSelection);
+buttonDelete.addEventListener('click', deleteQuote);
 
 // ~~~*Main Page Functionality*~~
 
@@ -117,4 +123,18 @@ function saveUserFavorites() {
       `<p class="saved-quotes">${savedFavorites[i].quote}</p>`
     }
   displayFavorites.innerHTML = quoteHTML;
-}
+  }
+
+function quoteSelection(evt) {
+  unwantedQuote = evt.target;
+  }
+
+  function deleteQuote() {
+    event.preventDefault();
+    unwantedQuote.remove();
+    for (var i = 0; i < savedFavorites.length; i++) {
+      if (unwantedQuote.innerText === savedFavorites[i].quote) {
+        savedFavorites.splice(i, 1);
+      }
+    }
+  }
