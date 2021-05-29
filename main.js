@@ -42,17 +42,21 @@ var selectMantra = document.getElementById('mantra');
 var receiveMessageBtn = document.getElementById('receive-message');
 var message = document.getElementById('message');
 var welcomeIcon = document.getElementById('welcome');
-var quoteToDisplay = document.getElementById('quote');
+var messageDisplay = document.getElementById('quote');
+var saveMessageBtn = document.getElementById('save-message');
 
 // EVENT LISTENERS
 receiveMessageBtn.addEventListener('click', displayQuote);
+//create an event listener that saves a quote to the savedQuotes array
+saveMessageBtn.addEventListener('click', saveQuote);
 
 //FUNCTIONS
 function displayQuote() {
   getQuote();
   message.innerText = currentQuote;
-  quoteToDisplay.hidden = false;
+  messageDisplay.hidden = false;
   welcomeIcon.hidden = true;
+  saveMessageBtn.hidden = false;
 }
 
 function getQuote() {
@@ -70,4 +74,9 @@ function getQuote() {
 function getRandomNumber(array) {
   var random = Math.floor(Math.random() * array.length);
   return random;
+}
+
+function saveQuote() {
+  //save currentQuote to the savedQuotes array (the data model)
+  savedQuotes.push(currentQuote);
 }
