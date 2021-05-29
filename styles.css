@@ -8,7 +8,7 @@ black - #000000;
 */
 
 * {
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
 }
 
 body {
@@ -20,6 +20,10 @@ body {
   font-size: 16px;
 }
 
+.hidden {
+  display: none!important;
+}
+/* Main Page Section */
 .header-text {
   color: white;
   text-align: center;
