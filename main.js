@@ -32,10 +32,6 @@ mantras = [
 ];
 
 
-// eventLister added to check boxes, id Mantra will select a message from
-//the mantra data list. The id affirmations will select a message from the
-// affirmation list
-// Our Data model will be savedMessages. Our global varible will be currentMesage
 
 // Varibles
 var recieveBtn = document.querySelector('.recieve-message');
@@ -48,11 +44,12 @@ var uncheckedBox = document.getElementById('unchecked-box');
 var inputElement = document.querySelector('.circle-btn');
 var form = document.querySelector('form');
 var deleteMessageBtn = document.querySelector('.delete-message');
-var displayMessages = [];
+var displayedAffirmationMessages = [];
+var displayedMantraMessages = [];
 var currentMessage ="";
 
 recieveBtn.addEventListener('click', displayMessage);
-
+deleteMessageBtn.addEventListener('click', deleteMessage);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -61,22 +58,54 @@ function getRandomIndex(array) {
 var messageVar = "";
 
 function checkBoxes() {
-
-  var messageChoice = document.getElementsByName('message-choice');
+  var messageChoice = document.getElementsByName('message-choice'); // this choices b/w the affirmation or mantra box
   // var messageVar = "";
-  for (var i = 0; i<messageChoice.length; i++){
-    if(messageChoice[i].checked) {
-        messageVar = messageChoice[i].value;
-        console.log(messageVar);
-        }
-      }
-      if (messageVar === 'affirmation') {
-        currentMessage = affirmations[getRandomIndex(affirmations)];
-      } else {
-      currentMessage = mantras[getRandomIndex(mantras)];
-    }
-    messageDisplay.innerText = currentMessage
-};
+
+    for (var i = 0; i<messageChoice.length; i++){
+      if(messageChoice[i].checked) {
+          messageVar = messageChoice[i].value;
+          }
+
+          if (messageVar === 'affirmation') {
+            currentMessage = affirmations[getRandomIndex(affirmations)];
+
+              if (!displayedAffirmationMessages.includes(currentMessage)) {
+                console.log('current message before push', currentMessage)
+                displayedAffirmationMessages.push(currentMessage);
+                return messageDisplay.innerText = currentMessage
+              } else if (displayedAffirmationMessages.includes(currentMessage)) {
+                  if (displayedAffirmationMessages.length < affirmations.length) {
+                    currentMessage = affirmations[getRandomIndex(affirmations)];
+                    console.log('current message reassignment', currentMessage)
+                    displayedAffirmationMessages.push(currentMessage);
+                    return messageDisplay.innerText = ` hitting a double${currentMessage}`
+                  } else if (displayedAffirmationMessages.length >= affirmations.length) {
+                    displayedAffirmationMessages = [];
+                    console.log('should now be empty', displayedAffirmationMessages);
+                    currentMessage = 'Have displayed all the Affirmation Messages, restarting loop now.'
+                  }return messageDisplay.innerText = currentMessage;
+              }
+        } else if (messageVar === 'mantra') {
+            currentMessage = mantras[getRandomIndex(mantras)];
+            if (!displayedMantraMessages.includes(currentMessage)){
+                displayedMantraMessages.push(currentMessage);
+                return messageDisplay.innerText = currentMessage
+          } else if (displayedMantraMessages.includes(currentMessage)){
+                if (displayedMantraMessages.length < mantras.length) {
+                    currentMessage = mantras[getRandomIndex(mantras)];
+                    displayedMantraMessages.push(currentMessage);
+                    return messageDisplay.innerText = currentMessage;
+              } else if (displayedMantraMessages.length >= mantras.length) {
+                    displayedMantraMessages = [];
+                    currentMessage = 'Have displayed all the Mantra Messages, restarting loop now';
+                    return messageDisplay.innerText = currentMessage;
+                    }
+                  }
+                }
+            }
+      };
+
+
 
 function displayMessage(){
   messageDisplay.classList.remove("hidden");
@@ -84,20 +113,10 @@ function displayMessage(){
   bellImg.classList.add("hidden");
   checkBoxes();
 }
-// User can delete message
-//store the messages in the Data Model [displayMessages]
-// displayMessages = [mantras, affirmations]
-//create new button (on HTML & CSS)
-//will use a for loop to iterate through the messages to find the one it doesn't like and will splice it.
-//message will appear saying message was safely removed.
 
-deleteMessageBtn.addEventListener('click', deleteMessage);
+
 
 function deleteMessage(){
-console.log(currentMessage);
-console.log(messageVar);
-// console.log(affirmations, mantras)
-
   if (messageVar === 'affirmation') {
     for (var i = 0; i<affirmations.length; i++){
       if (affirmations[i].includes(currentMessage)) {
@@ -115,7 +134,7 @@ console.log(messageVar);
   }
   messageDisplay.innerText = `The message:
                             (${currentMessage})
-                            has been deleted`
+                            has been deleted`;
 }
 
 
