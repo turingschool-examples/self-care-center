@@ -39,33 +39,38 @@ var affirmationBtn = document.getElementById('affirmation-input');
 var mantraBtn = document.getElementById('mantra-input');
 var receiveMessageBtn = document.getElementById('receiveBtn');
 var bellIconBox = document.getElementById('bell-box');
-var messageDisplayBox = document.getElementById('message-display-box');
+var messageDisplayBox = document.querySelector('.message-box');
 
 
 // Event Listeners
 
-receiveMessageBtn.addEventListener('click', selectMessage);
+receiveMessageBtn.addEventListener('click', showMessage);
 
 // Event Handlers
+function showMessage() {
+  bellIconBox.classList.add('hidden');
+  messageDisplayBox.classList.remove('hidden');
+  selectMessage();
+}
 
-  function selectMessage() {
-    if (affirmationBtn.checked) {
-      messageDisplayBox.innerText = "";
-      return messageDisplayBox.innerText += `${affirmations[getRandomIndex(affirmations)]}`
-    }
-    if (mantraBtn.checked) {
-      messageDisplayBox.innerText = "";
-      return messageDisplayBox.innerText += `${mantras[getRandomIndex(mantras)]}`
-    }
-     else {
-      messageDisplayBox.innerText = "";
-      return messageDisplayBox.innerText += "Please choose a mantra or affirmation";
-    }
+function selectMessage() {
+  if (affirmationBtn.checked) {
+    messageDisplayBox.innerText = "";
+    return messageDisplayBox.innerText += `${affirmations[getRandomIndex(affirmations)]}`
   }
+  if (mantraBtn.checked) {
+    messageDisplayBox.innerText = "";
+    return messageDisplayBox.innerText += `${mantras[getRandomIndex(mantras)]}`
+  }
+  else {
+    messageDisplayBox.innerText = "";
+    return messageDisplayBox.innerText += "Please choose a mantra or affirmation";
+  }
+}
 
-  function getRandomIndex(array) {
-    return Math.floor(Math.random() * array.length);
-  }
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
 
   // Goal: hide the bellbox and unhide the message disaply box
   // Input: click of the recieve message button.

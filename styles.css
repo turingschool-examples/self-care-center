@@ -8,7 +8,7 @@ black - #000000;
 */
 
 * {
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
 }
 
 body {
@@ -20,6 +20,10 @@ body {
   font-size: 16px;
 }
 
+.hidden {
+  display: none!important;
+}
+/* Main Page Section */
 .header-text {
   color: white;
   text-align: center;
@@ -92,10 +96,13 @@ label {
 }
 
 .bell-icon-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   height: 22%;
+  margin-top: 18.3em;
   background-color: white;
-  margin-top: 18.3em
 }
 
 img {
@@ -104,8 +111,8 @@ img {
 }
 
 .message-box {
-  height: 20%;
-  width: 50%;
+  width: 100%;
+  height: 22%;
+  margin-top: 18.3em;
   background-color: white;
-  color: black;
 }
