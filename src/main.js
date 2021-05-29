@@ -11,6 +11,8 @@ var favoritesPage = document.querySelector(".favorites-page")
 var viewFavoriteMessagesButton = document.querySelector(".view-saved");
 var homeButton = document.querySelector(".home-button");
 var messagesGrid = document.querySelector(".saved-messages-grid");
+var displayMessageArticle = document.querySelector(".display-message");
+
 
 
 
@@ -22,7 +24,11 @@ favoritesPage.addEventListener("click", function(event) {
   deleteFavoriteMessage(event)
 });
 
-
+displayMessageArticle.addEventListener("click", function(e) {
+  if(e.target.nodeName === "BUTTON"){
+    favoriteAMessage()
+  }
+});
 
 
 /*---------Functions ---------------*/
@@ -43,8 +49,6 @@ function renderCurrentMessage(){
   <p>${currentMessage}</p>
   <button class="favorite"><3</button>
   `
-  var favoriteButton = document.querySelector("button");
-  favoriteButton.addEventListener("click", favoriteAMessage);
 }
 
 function favoriteAMessage() {
@@ -64,23 +68,16 @@ function favoriteAMessage() {
   }
 }
 
-
-
 function renderFavorites() {
-
   messagesGrid.innerHTML = '';
-
   for (var i = 0; i < favoriteMessages.length; i++) {
-
     messagesGrid.innerHTML +=
-
     `
     <section class="message-box" id="${favoriteMessages[i].id}">
       <p class="favorite-message-paragraph">${favoriteMessages[i].messageText}<p>
       <button class="delete-button">Delete</button>
     </section>
       `
-
     }
 }
 
@@ -104,7 +101,6 @@ for (var i = 0; i < favoriteMessages.length; i++) {
 
   renderFavorites();
 }
-
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
