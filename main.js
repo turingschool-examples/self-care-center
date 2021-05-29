@@ -1,4 +1,4 @@
-messageaffirmations = [
+affirmations = [
 "I forgive myself and set myself free.",
 "I believe I can be all that I want to be.",
 "I am in the process of becoming the best version of myself.",
@@ -44,7 +44,9 @@ var mantraCheck = document.getElementById('mantra');
 var bellImg = document.querySelector('.meditation-bell');
 var messageDisplay = document.querySelector('.print-message');
 var checkBoxesClass = document.querySelector('.checkbox');
-
+var uncheckedBox = document.getElementById('unchecked-box');
+var inputElement = document.querySelector('.circle-btn');
+var form = document.querySelector('form');
 var displayMessages = [];
 var currentMessage ="";
 
@@ -52,46 +54,32 @@ var currentMessage ="";
 function getRandomIndex(array) { // this is for getting a random mantra or affirmation
   return Math.floor(Math.random() * array.length);
 }
-function changeMessage(inputValue){
-   if (inputValue === "mantra"){
-     currentMessage = mantras[getRandomIndex(mantras)]
-   } else if (inputValue === "affirmations"){
-    currentMessage = affirmations[getRandomIndex(affirmations)]
-     }
-     displayMessages.push(currentMessage);
-   }
-
-
-// changeMessage('mantra');
-// changeMessage('affirmation')
-// console.log(currentMessage)
-// console.log('array', displayMessages)
-
-function messageRender() {
-  // var messageHTML = "";
-  // for (var i = 0; i < displayMessages.length; i++) {
-  //   messageHTML += `<p class = "print-message" > ${displayMessages[i]} </p>`
-  // }
-  // messageDisplay.innerText = messageHTML;
-}
 
 function checkBoxes() {
-  if (mantraCheck.value) {
-    currentMessage = mantras[getRandomIndex(mantras)]
-  } else if (affirmationCheck) {
-    currentMessage = affirmations[getRandomIndex(affirmations)]
-  }
-  console.log('check box', currentMessage)
-}
+  var messageChoice = document.getElementsByName('message-choice');
+  var messageVar = "";
+  for (var i = 0; i<messageChoice.length; i++){
+    if(messageChoice[i].checked) {
+        messageVar = messageChoice[i].value;
+        console.log(messageVar);
+        }
+      }
+      if (messageVar === 'affirmation') {
+        currentMessage = affirmations[getRandomIndex(affirmations)];
+      } else {
+      currentMessage = mantras[getRandomIndex(mantras)];
+    }
+    messageDisplay.innerText = currentMessage
+};
 
-checkBoxes();
 
 recieveBtn.addEventListener('click', displayMessage);
 //show message function
 function displayMessage(){
-messageDisplay.classList.remove("hidden");
-bellImg.classList.add("hidden");
-checkBoxes();
-messageDisplay.innerText = currentMessage;
-
+  messageDisplay.classList.remove("hidden");
+  bellImg.classList.add("hidden");
+  checkBoxes();
 }
+// function deleteMessage(){
+//
+// }
