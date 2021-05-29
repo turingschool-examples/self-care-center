@@ -47,17 +47,23 @@ var checkBoxesClass = document.querySelector('.checkbox');
 var uncheckedBox = document.getElementById('unchecked-box');
 var inputElement = document.querySelector('.circle-btn');
 var form = document.querySelector('form');
+var deleteMessageBtn = document.querySelector('.delete-message');
 var displayMessages = [];
 var currentMessage ="";
 
+recieveBtn.addEventListener('click', displayMessage);
 
-function getRandomIndex(array) { // this is for getting a random mantra or affirmation
+
+function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
+var messageVar = "";
+
 function checkBoxes() {
+
   var messageChoice = document.getElementsByName('message-choice');
-  var messageVar = "";
+  // var messageVar = "";
   for (var i = 0; i<messageChoice.length; i++){
     if(messageChoice[i].checked) {
         messageVar = messageChoice[i].value;
@@ -72,14 +78,58 @@ function checkBoxes() {
     messageDisplay.innerText = currentMessage
 };
 
-
-recieveBtn.addEventListener('click', displayMessage);
-//show message function
 function displayMessage(){
   messageDisplay.classList.remove("hidden");
+  deleteMessageBtn.classList.remove("hidden");
   bellImg.classList.add("hidden");
   checkBoxes();
 }
-// function deleteMessage(){
-//
-// }
+// User can delete message
+//store the messages in the Data Model [displayMessages]
+// displayMessages = [mantras, affirmations]
+//create new button (on HTML & CSS)
+//will use a for loop to iterate through the messages to find the one it doesn't like and will splice it.
+//message will appear saying message was safely removed.
+
+deleteMessageBtn.addEventListener('click', deleteMessage);
+
+function deleteMessage(){
+console.log(currentMessage);
+console.log(messageVar);
+// console.log(affirmations, mantras)
+
+  if (messageVar === 'affirmation') {
+    for (var i = 0; i<affirmations.length; i++){
+      if (affirmations[i].includes(currentMessage)) {
+        affirmations.splice(i, 1);
+        console.log('affirmations', affirmations)
+      }
+    }
+  } else if (messageVar === 'mantra') {
+      for (var i = 0; i<mantras.length; i++) {
+        if( mantras[i].includes(currentMessage)) {
+          mantras.splice(i, 1)
+          console.log('mantras', mantras);
+        }
+      }
+  }
+  messageDisplay.innerText = `The message:
+                            (${currentMessage})
+                            has been deleted`
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//ddd
