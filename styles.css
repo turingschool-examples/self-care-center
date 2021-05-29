@@ -7,6 +7,10 @@ white - #ffffff;
 black - #000000;
 */
 
+* {
+  /* border: 2px solid blue; */
+}
+
 body {
   height:100vh;
   margin: 0;
@@ -31,17 +35,17 @@ body {
   margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 7vh;
+  margin-top: 25vh;
   font-weight: bold;
   font-size: 0.9em
 }
 
 main {
   width: 75vw;
-  height: 50vh;
+  height: 30vh;
   border: solid;
   border-color: black;
-  margin: 5px auto auto auto;
+  margin: 0 auto auto auto;
 }
 
 .btn-container {
@@ -50,12 +54,13 @@ main {
   background-color: white;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 4px;
 }
 
 .radio-btns {
   width: 100%;
   height: 50%;
-  background-color: red;
+  background-color: white;
   display: block;
   padding-top: 2%
 }
@@ -65,7 +70,7 @@ main {
 }
 
 .mantra-btn {
-  margin-left: 25%
+  margin-left: 39%
 }
 
 label {
@@ -76,17 +81,24 @@ label {
 .receive-msg-btn {
   width: 100%;
   height: 50%;
-  background-color: blue;
+  background-color: white;
 }
 
 .receive-msg-btn button {
   display: block;
-  margin-left: 35%;
+  margin-left: 40%;
+  border-radius: 3px;
+  background-color: #134d71;
 }
 
 .display-msg-box {
   width: 100%;
   height: 22%;
   background-color: white;
-  margin-top: 18em
+  margin-top: 18.3em
+}
+
+img {
+  height: 50%;
+  width: 100%;
 }
