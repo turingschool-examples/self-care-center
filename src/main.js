@@ -53,7 +53,7 @@ function renderCurrentMessage(){
 
 function favoriteAMessage() {
   var match = false;
-  if(favoriteMessages.length === 0){
+  if(!favoriteMessages.length){
     favoriteMessages.push(new Message(currentMessage));
   } else {
     for (var i = 0; i < favoriteMessages.length; i ++) {
