@@ -3,9 +3,25 @@
   <head>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset ='utf-8' >
+    <title> ✨ Self-Care Center✨ </title>
   </head>
   <body>
-  
+    <h1>  ✨ Self Care Center  ✨ </h1>
+    <h2> Which type of message? </h2>
+    <section class='option-box'>
+      <form>
+        <input type="radio" name="message-choice" class='circle-btn' id="affirmation" checked="checked" value='affirmation'/> affirmation
+        <input type='radio' name="message-choice" class='circle-btn' id="mantra" value='mantra'/> mantra
+      </form>
+      <button class='recieve-message'>Recieve Message</button>
+    </section>
+    <section class="message-box">
+      <img class= "meditation-bell" src= "assets/meditate.svg" alt="meditation bell">
+      <p class = "print-message hidden" > Random Ass message </p>
+      <button class='delete-message hidden'>Delete Message</button>
+
+    </section>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
