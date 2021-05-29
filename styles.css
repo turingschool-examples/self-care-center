@@ -15,7 +15,7 @@ body {
   height: 100%;
 }
 
-h1 {
+.self-care-center {
   color:#ffffff;
   font-family:'Quicksand', sans-serif;
   font-size: 200%;
@@ -129,6 +129,40 @@ img {
   padding: 100px 200px;
 }
 
+.favorites-page {
+  display: contents;
+}
+
+.saved-inspirations {
+  color:#ffffff;
+  font-family:'Quicksand', sans-serif;
+  font-size: 200%;
+  text-align: center;
+  margin: 40px, auto;
+  padding: 30px;
+  display: block;
+}
+
+.saved-quotes {
+  display: flex;
+  justify-content: center;
+  color:#ffffff;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
+}
+
+.return-to-welcome {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  color:#ffffff;
+  background: #134d71;
+  border-radius: 5px;
+  display: none;
+  padding: 2px 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: block;
+}
 .hidden {
   display: none;
 }

@@ -9,6 +9,7 @@ var buttonSubmit = document.querySelector('.submit');
 var buttonClear = document.getElementById('clear');
 var buttonFavorite = document.getElementById('favorite');
 var buttonDisplayFavorites = document.getElementById('display-favorites')
+var buttonReturn = document.querySelector('.return-to-welcome');
 
 // message return screen
 var messageDisplay = document.querySelector('.message-display');
@@ -50,7 +51,7 @@ var mantras = [
 ];
 var savedFavorites = [];
 var newFavorite;
-class FavoriteQuotes{
+class FavoriteQuotes {
   constructor(type, quote) {
     this.id = Date.now();
     this.type = type;
@@ -90,12 +91,11 @@ function displayAddionalButtons () {
 
 function storeFavoriteMessage() {
   event.preventDefault();
-  if (savedFavorites.id !== newFavorite.id) {
-  savedFavorites.push(newFavorite);
-  console.log(savedFavorites);
   buttonDisplayFavorites.style.display="inline-block";
-}
-}
+  if (!savedFavorites.includes(newFavorite)) {
+        savedFavorites.push(newFavorite);
+    }
+  }
 
 function getRandomIndex(messages) {
   return Math.floor(Math.random() * messages.length);
@@ -106,4 +106,14 @@ function getRandomIndex(messages) {
 function displayFavoritesPage() {
   pageWelcome.classList.add("hidden");
   pageFavorites.classList.remove("hidden");
+  saveUserFavorites();
+}
+
+function saveUserFavorites() {
+  var quoteHTML = "";
+  for (var i = 0; i < savedFavorites.length; i++) {
+    quoteHTML +=
+      `<p class="saved-quotes">${savedFavorites[i].quote}</p>`
+    }
+  pageFavorites.innerHTML = quoteHTML;
 }
