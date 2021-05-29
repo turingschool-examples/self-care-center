@@ -18,6 +18,9 @@ var messagesGrid = document.querySelector(".saved-messages-grid");
 submit.addEventListener("click", displayMessage);
 viewFavoriteMessagesButton.addEventListener("click", showFavorites);
 homeButton.addEventListener("click", showHomePage);
+favoritesPage.addEventListener("click", function(event) {
+  deleteFavoriteMessage(event)
+});
 
 
 
@@ -44,43 +47,24 @@ function renderCurrentMessage(){
   favoriteButton.addEventListener("click", favoriteAMessage);
 }
 
-
-
 function favoriteAMessage() {
-  var newMessage = new Message(currentMessage);
-  favoriteMessages.push(newMessage);
+  var match = false;
+  if(favoriteMessages.length === 0){
+    favoriteMessages.push(new Message(currentMessage));
+  } else {
+    for (var i = 0; i < favoriteMessages.length; i ++) {
+        if (`${favoriteMessages[i].messageText}` === `${currentMessage}`) {
+          match = true;
+        }
+    }
+
+    if(match === false) {
+      favoriteMessages.push(new Message(currentMessage));
+    }
+  }
 }
 
-//   if(favoriteMessages.length === 0 ) {
-//     var newMessage = new Message(currentMessage);
-//     favoriteMessages.push(newMessage);
-//     console.log(newMessage, favoriteMessages);
-//     // favoriteMessages.push(new Message(currentMessage))};
-//   } else if(favoriteMessages.length > 0) {
-//
-//         for (var i = 0; i < favoriteMessages.length; i ++) {
-//             if (`favoriteMessages[i].messageText` !== currentMessage) {
-//               var newMessage = new Message(currentMessage);
-//               favoriteMessages.push(newMessage);
-//               // favoriteMessages.push(new Message(currentMessage))
-//             }
-//         }
-//
-//   }
-// }
-// if (!favoriteMessages.length) {
-//   favoriteMessages.push(new Message(currentMessage))
-// } else {
-// for (var i = 0; i < favoriteMessages.length; i ++) {
-//     if (`favoriteMessages[i].messageText` === currentMessage) {
-          //break; }
 
-//       favoriteMessages.push(new Message(currentMessage));
-
-//
-//   }
-//   }
-// }
 
 function renderFavorites() {
 
@@ -97,18 +81,8 @@ function renderFavorites() {
     </section>
       `
 
-
-
-
-      var deleteButton = document.querySelector(".delete-button");
-
-      deleteButton.addEventListener("click", function(event) {
-        deleteFavoriteMessage(event);
-      });
-
     }
 }
-
 
 function showFavorites() {
   homePageSection.classList.add('hidden');
@@ -130,6 +104,7 @@ for (var i = 0; i < favoriteMessages.length; i++) {
 
   renderFavorites();
 }
+
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
