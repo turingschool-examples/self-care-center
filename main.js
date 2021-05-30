@@ -40,11 +40,14 @@ var mantraBtn = document.getElementById('mantra-input');
 var receiveMessageBtn = document.getElementById('receiveBtn');
 var bellIconBox = document.getElementById('bell-box');
 var messageDisplayBox = document.querySelector('.message-box');
+var nameInput = document.getElementById('login-text');
+var loginBtn = document.getElementById('submit-btn');
 
 
 // Event Listeners
 
 receiveMessageBtn.addEventListener('click', showMessage);
+loginBtn.addEventListener('click' );
 
 // Event Handlers
 function showMessage() {
@@ -72,9 +75,4 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-  // Goal: hide the bellbox and unhide the message disaply box
-  // Input: click of the recieve message button.
-  // Output: only display the message display box, bell box hidden.
-  // Steps:
-    // on click, hide bell box,
-    // unhide show message box
+// Login Functions
