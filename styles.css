@@ -21,9 +21,6 @@ body, html {
   /* display: flex; */
   background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
   background-attachment: fixed;
-  /* height: 100%;
-  width: 100%;
-  margin: 0; */
 }
 
 h1 {
@@ -63,8 +60,11 @@ button {
   color: white;
   border-radius: 5px;
   padding: 5px 20px;
-  margin-left: 30%;
-  margin-right: 30%;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
 }
 
 .display-message {
