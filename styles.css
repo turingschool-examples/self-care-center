@@ -7,6 +7,10 @@ white - #ffffff;
 black - #000000;
 */
 
+.hidden {
+  display: none;
+}
+
 body {
   height: 100%;
   margin: 0;
@@ -20,11 +24,14 @@ body {
   text-align: center;
 }
 
+input {
+  color: black;
+}
+
 button {
   background-color: #134d71;
   color: white;
   border-radius: 5px;
-
 }
 
 h1 {
@@ -44,6 +51,18 @@ section {
   border-color: black;
   border-radius: 5px;
   display: inline-block;
+  color: black;
+}
+
+.message-selectors {
+  width: 300px;
+}
+
+.radio-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
 }
 
 .image {
