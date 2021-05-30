@@ -1,9 +1,6 @@
 // page display
 var pageWelcome = document.querySelector('.welcome-page');
 var pageFavorites = document.querySelector('.favorites-page');
-var displayFavorites = document.querySelector('.saved-quotes');
-
-var specificQuote = document.querySelector('.saved-quotes');
 
 // buttons
 var buttonAffirmation = document.getElementById('choice1');
@@ -11,14 +8,18 @@ var buttonMantra = document.getElementById('choice2');
 var buttonSubmit = document.querySelector('.submit');
 var buttonClear = document.getElementById('clear');
 var buttonFavorite = document.getElementById('favorite');
-var buttonDisplayFavorites = document.getElementById('display-favorites')
+var buttonViewFavorite = document.getElementById('view-favorite')
 var buttonReturn = document.querySelector('.return-to-welcome');
 var buttonDelete = document.querySelector('.deletion');
 
-// message return screen
+// welcome page message return screen
 var messageDisplay = document.querySelector('.message-display');
 var meditationImage = document.querySelector('img');
 var returnMessage = document.getElementById('message-returned');
+
+// favorites page quotes
+var specificQuote = document.querySelector('.saved-quotes');
+var displayFavorites = document.querySelector('.saved-quotes');
 
 // global variables
 var affirmations = [
@@ -33,7 +34,7 @@ var affirmations = [
   'I deserve to be healthy and feel good.',
   'I am full of energy and vitality and my mind is calm and peaceful.',
   'Every day I am getting healthier and stronger.',
-  'I honor my body by trsuting the signals that it sends me.',
+  'I honor my body by trusting the signals that it sends me.',
   'I manifest perfect health by making smart choices.',
 ];
 var mantras = [
@@ -56,19 +57,19 @@ var mantras = [
 var savedFavorites = [];
 var newFavorite;
 var unwantedQuote;
-class FavoriteQuotes {
+class FavoritedQuote {
   constructor(type, quote) {
     this.id = Date.now();
     this.type = type;
     this.quote = quote;
-  }
-}
+  };
+};
 
 // eventListeners
 
 buttonSubmit.addEventListener('click', returnRandomMessage);
-buttonFavorite.addEventListener('click', storeFavoriteMessage);
-buttonDisplayFavorites.addEventListener('click', displayFavoritesPage);
+buttonFavorite.addEventListener('click', addFavoriteMessage);
+buttonViewFavorite.addEventListener('click', displayFavoritesPage);
 specificQuote.addEventListener('click', quoteSelection);
 buttonDelete.addEventListener('click', deleteQuote);
 
@@ -80,29 +81,29 @@ function returnRandomMessage() {
   returnMessage.classList.remove("hidden");
   if (buttonAffirmation.checked) {
     returnMessage.innerText = affirmations[getRandomIndex(affirmations)];
-    newFavorite = new FavoriteQuotes('affirmation', returnMessage.innerText);
+    newFavorite = new FavoritedQuote('affirmation', returnMessage.innerText);
     displayAddionalButtons();
   } else if (buttonMantra.checked) {
     returnMessage.innerText = mantras[getRandomIndex(mantras)];
-    newFavorite = new FavoriteQuotes('mantra', returnMessage.innerText);
+    newFavorite = new FavoritedQuote('mantra', returnMessage.innerText);
     displayAddionalButtons();
   } else {
     returnMessage.innerText = 'Please select your message type preference above ⬆.'
-  }
-}
+  };
+};
 
 function displayAddionalButtons () {
-  buttonClear.style.display="inline-block";
-  buttonFavorite.style.display="inline-block";
-}
+  buttonClear.style.display = "inline-block";
+  buttonFavorite.style.display = "inline-block";
+};
 
-function storeFavoriteMessage() {
+function addFavoriteMessage() {
   event.preventDefault();
-  buttonDisplayFavorites.style.display="inline-block";
+  buttonViewFavorite.style.display = "inline-block";
   if (!savedFavorites.includes(newFavorite)) {
-        savedFavorites.push(newFavorite);
-    }
-  }
+      savedFavorites.push(newFavorite);
+  };
+};
 
 function getRandomIndex(messages) {
   return Math.floor(Math.random() * messages.length);
@@ -114,28 +115,27 @@ function displayFavoritesPage() {
   pageWelcome.classList.add("hidden");
   pageFavorites.classList.remove("hidden");
   saveUserFavorites();
-}
+};
 
 function saveUserFavorites() {
   var quoteHTML = "";
   for (var i = 0; i < savedFavorites.length; i++) {
-    quoteHTML +=
-      `<p class="saved-quotes">${savedFavorites[i].quote}</p>`
-    }
+    quoteHTML += `<p class="saved-quotes">${savedFavorites[i].quote}</p>`
+  };
   displayFavorites.innerHTML = quoteHTML;
-  }
+};
 
 function quoteSelection(evt) {
   unwantedQuote = evt.target;
   unwantedQuote.style.color = '#f7e4bf';
-  }
+};
 
-  function deleteQuote() {
-    event.preventDefault();
-    unwantedQuote.remove();
-    for (var i = 0; i < savedFavorites.length; i++) {
-      if (unwantedQuote.innerText === savedFavorites[i].quote) {
-        savedFavorites.splice(i, 1);
-      }
-    }
-  }
+function deleteQuote() {
+  event.preventDefault();
+  unwantedQuote.remove();
+  for (var i = 0; i < savedFavorites.length; i++) {
+    if (unwantedQuote.innerText === savedFavorites[i].quote) {
+      savedFavorites.splice(i, 1);
+    };
+  };
+};
