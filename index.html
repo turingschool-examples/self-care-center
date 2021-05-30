@@ -5,24 +5,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <h1 class="page-title"> ✨ Self Care Center ✨ </h1>
-    </header>
-    <section>
-      <section>
-        <h2 class="message-type">Which type of message?</h2>
-        <form class="message-box">
-          <input type="radio" id="affirmation" name="message" value="affirmation">
-          <label for="affirmation">affirmation</label>
-          <input type="radio" id="mantra" name="message" value="mantra">
-          <label for="mantra">mantra</label>
+    <h1>✨ Self Care Center ✨ </h1>
+    <h2>Which type of message?</h2>
+      <section class="mantra-affirmation-box">
+        <form class="click-one">
+          <div class="choose-affirmation">
+            <input type="radio" id="affirmation" name="message" value="affirmation">
+            <label for="affirmation">affirmation</label>
+          </div>
+          <div class="choose-mantra">
+            <input type="radio" id="mantra" name="message" value="mantra">
+            <label for="mantra">mantra</label>
+          </div>
         </form>
-        <button>Receive Message</button>
+          <div class="button">
+            <button class="receive-msg">Receive Message</button>
+          </div>
       </section>
       <section class="display-message">
         <img src="assets/meditate.svg" alt="Meditate bell">
       </section>
-    </section>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
