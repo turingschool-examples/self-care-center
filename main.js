@@ -42,12 +42,15 @@ var bellIconBox = document.getElementById('bell-box');
 var messageDisplayBox = document.querySelector('.message-box');
 var nameInput = document.getElementById('login-text');
 var loginBtn = document.getElementById('submit-btn');
+var welcomeMsg = document.getElementById('welcome-msg');
+var loginPage = document.querySelector('.login');
+var mainPage = document.querySelector('.main-Page');
 
 
 // Event Listeners
 
 receiveMessageBtn.addEventListener('click', showMessage);
-loginBtn.addEventListener('click' );
+loginBtn.addEventListener('click', displayMain);
 
 // Event Handlers
 function showMessage() {
@@ -76,3 +79,18 @@ function getRandomIndex(array) {
 }
 
 // Login Functions
+//goal: hide login screen, bring user to main page where their inputed
+//text is displayed in a welcome message on the screen
+
+//input: Login button click, user text input
+//output: hide login, show main; new message interpolated with text input.
+//steps:
+
+// on button click,
+// grab user text input
+// interpolate into the innertext of the h6 element
+
+function displayMain() {
+  loginPage.classList.add('hidden');
+  mainPage.classList.remove('hidden');
+}

@@ -71,7 +71,7 @@ label {
   margin-left: auto;
   margin-right: auto;
   border-radius: 4.5px;
-  border-style: none;
+  /* border-style: none; */
   padding: 1.2% 6% 1.2% 6%;
   background-color: #134d71;
   color: white;
