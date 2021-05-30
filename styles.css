@@ -1,8 +1,104 @@
-/* font-family: 'Quicksand', sans-serif;
-COLORS
-light-yellow - #f7e4bf;
-light-blue - #78a7c6;
-dark-blue - #134d71;
-white - #ffffff;
-black - #000000;
-*/
+body {
+  background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+  color: #ffffff;
+  padding: 10px
+}
+
+h2 {
+  font-size: 23px;
+  color: #ffffff;
+  margin-top: 70px;
+  margin-bottom: 10px;
+}
+
+section {
+  width: 560px;
+  height: 95px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.input-affirmation {
+  width: 19px;
+  height: 19px;
+}
+
+.label-affirmation {
+  font-size: 18px;
+  font-style: italic;
+  padding-left: 10px;
+  padding-right: 160px;
+}
+
+.input-mantra {
+  width: 19px;
+  height: 19px;
+}
+
+.label-mantra {
+  font-size: 18px;
+  font-style: italic;
+  padding-left: 10px;
+}
+
+.message-button {
+  color: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  background-color: #134d71;
+  border: none;
+  margin: 20px 40px 0px 10px;
+  padding: 4px 18px;
+  border-radius: 5px;
+}
+
+.clear-button {
+  color: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  background-color: #134d71;
+  border: none;
+  padding: 4px 18px;
+  border-radius: 5px;
+}
+
+article {
+  width: 830px;
+  height: 150px;
+  margin: 120px 300px 300px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+img {
+width: 70px;
+height: 85px;
+}
+
+p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  font-style: italic;
+  text-align: center;
+  margin: 20px;
+}
+
+.hidden {
+  display: none;
+}
