@@ -20,6 +20,11 @@ body {
   font-size: 16px;
 }
 
+label {
+  font-size: .8em;
+  font-style: italic;
+}
+
 .hidden {
   display: none!important;
 }
@@ -47,14 +52,14 @@ body {
 main {
   width: 75vw;
   height: 30vh;
-  border: solid;
-  border-color: red;
+  /* border: solid;
+  border-color: red; */
   margin: 0 auto auto auto;
 }
 
 .btn-container {
-  width: 55%;
-  height: 18%;
+  width: 50%;
+  height: 28%;
   background-color: white;
   margin-left: auto;
   margin-right: auto;
@@ -66,7 +71,8 @@ main {
   height: 50%;
   background-color: white;
   display: block;
-  padding-top: 2%
+  padding-top: 2%;
+  border-radius: 7px;
 }
 
 .affirmation-btn {
@@ -77,42 +83,51 @@ main {
   margin-left: 39%
 }
 
-label {
-  font-size: .8em;
-  font-style: italic;
-}
-
 .receive-msg-btn {
-  width: 100%;
-  height: 50%;
-  background-color: white;
-}
-
-.receive-msg-btn button {
-  display: block;
-  margin-left: 40%;
-  border-radius: 3px;
-  background-color: #134d71;
-}
-
-.bell-icon-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+  height: 70%;
+  background-color: white;
+  border-radius: 7px
+}
+
+.receive-msg-btn button {
+  margin-left: 36%;
+  border-radius: 3px;
+  border-style: none;
+  padding: 0.75% 4% 0.5% 4%;
+  background-color: #134d71;
+  color: white;
+}
+
+.display-box {
   width: 100%;
   height: 32%;
   margin-top: 8.3em;
   background-color: white;
 }
 
+.bell-icon-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 img {
-  height: 50%;
+  height: 65%;
   width: 100%;
 }
 
 .message-box {
   width: 100%;
-  height: 22%;
-  margin-top: 18.3em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   background-color: white;
 }
