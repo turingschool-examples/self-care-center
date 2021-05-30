@@ -47,6 +47,7 @@ var loginPage = document.querySelector('.login');
 var mainPage = document.querySelector('.main-Page');
 
 
+
 // Event Listeners
 
 receiveMessageBtn.addEventListener('click', showMessage);
@@ -93,4 +94,10 @@ function getRandomIndex(array) {
 function displayMain() {
   loginPage.classList.add('hidden');
   mainPage.classList.remove('hidden');
+  showGreeting();
+}
+
+function showGreeting() {
+  // welcomeMsg.innerText = ""
+  welcomeMsg.innerText = `Namaste, ${nameInput.value}. ☮`
 }
