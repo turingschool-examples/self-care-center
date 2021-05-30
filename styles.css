@@ -37,7 +37,7 @@ label {
   margin-bottom: 0.25%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 14vh;
+  margin-top: 11vh;
   font-weight: bold;
   font-size: 0.9em;
 }
@@ -82,6 +82,14 @@ label {
 /* ~~~~~~~~ Main Page Section ~~~~~~~~~~~~ */
 
 .header-text {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 6vh;
+  font-size: 1.2em
+}
+
+.welcome-message {
   color: white;
   text-align: center;
   font-weight: bold;
