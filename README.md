@@ -3,7 +3,7 @@
 
 Life can have its moments of challenge. When you need a pick-me-up, come visit the Self Care Center. There, you can chose between inspiring mantras or affirmations to bring clarity and light to your day. 
 
-!![Screen Shot 2021-05-30 at 11 40 44 AM](https://user-images.githubusercontent.com/78767067/120114326-eab69e80-c13b-11eb-8a0f-5f660982e34e.png)
+![Screen Shot 2021-05-30 at 11 40 44 AM](https://user-images.githubusercontent.com/78767067/120114326-eab69e80-c13b-11eb-8a0f-5f660982e34e.png)
 
 Each time you select "Receive Message", you will have a randomized quote returned to you. When one appears that truly speaks to you, you made add it to a list of Favorites by selecting the "Add Your Favorite" button. 
 ![Screen Shot 2021-05-30 at 11 41 46 AM](https://user-images.githubusercontent.com/78767067/120114358-13d72f00-c13c-11eb-8c3f-ff97d984edd6.png)
