@@ -1,5 +1,3 @@
-//Global Variables
-
 var mantras = [
   "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.",
   "Don’t let yesterday take up too much of today.",
@@ -33,8 +31,6 @@ var affirmations = [
   "I manifest perfect health by making smart choices."
 ]
 
-// Query Selectors
-
 var affirmationBtn = document.getElementById('affirmation-input');
 var mantraBtn = document.getElementById('mantra-input');
 var receiveMessageBtn = document.getElementById('receiveBtn');
@@ -47,13 +43,10 @@ var loginPage = document.querySelector('.login');
 var mainPage = document.querySelector('.main-Page');
 
 
-
-// Event Listeners
-
 receiveMessageBtn.addEventListener('click', showMessage);
 loginBtn.addEventListener('click', displayMain);
 
-// Event Handlers
+
 function showMessage() {
   bellIconBox.classList.add('hidden');
   messageDisplayBox.classList.remove('hidden');

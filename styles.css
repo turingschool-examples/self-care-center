@@ -6,6 +6,7 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
 /* ~~~~~~~~~ Global ~~~~~~~~~~ */
 
 * {
@@ -47,6 +48,7 @@ input {
 }
 
 /* ~~~~~~~~~ Login Page ~~~~~~~~~~~~~~ */
+
 .img-box {
   width: 10%;
   margin-left: auto;
