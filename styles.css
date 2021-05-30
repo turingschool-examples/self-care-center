@@ -26,6 +26,10 @@ label {
   font-style: italic;
 }
 
+input {
+  text-align: center;
+}
+
 .hidden {
   display: none!important;
 }
