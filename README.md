@@ -2,7 +2,7 @@
 ## Overview
 How can I care for myself? One way is with affirmations and mantras!
 Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
+Mantras are phrases that are repeated again and again during mindfulness practices. 
 
 
 ##  Contributors
