@@ -4,19 +4,25 @@ var mantraButton = document.querySelector('#mantra');
 var messageButton = document.querySelector('receive-message')
 
 
-
-
-
-
 // Event listeners
-messageButton.addEventListener('click', pullRandomImg);
+messageButton.addEventListener('click', pullRandomMessage);
 
 
 
 
 // Functions
-function pullRandomImg() {
+// Needs to check which radio button is selected when the
+// receive message bttn is clicked, then randomly select
+// a message from the appropriate array and display it.
+function pullRandomMessage() {
+  var randomAffirmation = Math.floor(Math.random()*affirmations.length);
+  var randomMantra = Math.floor(Math.random()*mantras.length);
 
+  if (messageButton && affirmationButton) {
+    return randomAffirmation;
+  } else if (messageButton && mantraButton) {
+      return randomMantra;
+  }
 }
 
 

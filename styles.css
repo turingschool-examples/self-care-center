@@ -21,6 +21,34 @@ body {
 }
 
 button {
-  background-color: #78a7c6;
+  background-color: #134d71;
+  color: white;
+  border-radius: 5px;
+
+}
+
+h1 {
+  padding: 10px 0px 60px 0px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  padding: 10px 100px 10px 100px;
+  margin: 0px 0px 100px 0px;
+  background-color: #FFFFFF;
+  border-color: black;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.image {
+  width: 60px;
+  height: 60px;
+  padding: 20px 200px 20px 200px;
   border-radius: 5px;
 }
