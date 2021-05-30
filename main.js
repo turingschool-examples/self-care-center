@@ -79,18 +79,6 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-// Login Functions
-//goal: hide login screen, bring user to main page where their inputed
-//text is displayed in a welcome message on the screen
-
-//input: Login button click, user text input
-//output: hide login, show main; new message interpolated with text input.
-//steps:
-
-// on button click,
-// grab user text input
-// interpolate into the innertext of the h6 element
-
 function displayMain() {
   loginPage.classList.add('hidden');
   mainPage.classList.remove('hidden');
@@ -98,6 +86,5 @@ function displayMain() {
 }
 
 function showGreeting() {
-  // welcomeMsg.innerText = ""
-  welcomeMsg.innerText = `Namaste, ${nameInput.value}. ☮`
+  welcomeMsg.innerText = `Namaste, ${nameInput.value} ☮`
 }
