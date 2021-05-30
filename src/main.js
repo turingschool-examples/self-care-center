@@ -21,7 +21,7 @@ submit.addEventListener("click", displayMessage);
 viewFavoriteMessagesButton.addEventListener("click", showFavorites);
 homeButton.addEventListener("click", showHomePage);
 favoritesPage.addEventListener("click", function(event) {
-  deleteFavoriteMessage(event)
+  deleteFavoriteMessage(event);
 });
 
 displayMessageArticle.addEventListener("click", function(e) {
@@ -38,6 +38,8 @@ function displayMessage() {
     currentMessage = affirmations[getRandomIndex(affirmations)];
   } else if(radio.value === 'mantra'){
     currentMessage = mantras[getRandomIndex(mantras)];
+  } else {
+    return;
   }
 
   renderCurrentMessage();
@@ -47,7 +49,7 @@ function renderCurrentMessage(){
   displayMessageSection.innerHTML =
   `
   <p>${currentMessage}</p>
-  <button class="favorite"><3</button>
+  <button class="favorite">&#128153;</button>
   `
 }
 
