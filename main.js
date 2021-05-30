@@ -86,5 +86,5 @@ function displayMain() {
 }
 
 function showGreeting() {
-  welcomeMsg.innerText = `Namaste, ${nameInput.value} ☮`
+  welcomeMsg.innerText = `☮ Namaste, ${nameInput.value} ☮`
 }
