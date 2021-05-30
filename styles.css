@@ -1,3 +1,5 @@
+/* access classes
+
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
@@ -6,3 +8,75 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+* {
+  font-family: 'Quicksand', sans-serif;
+  /* justify-content: center;
+  align-items: center; */
+  /* helps see separations in HTML (delete later) */
+  /* border: 2px solid white; */
+}
+
+body, html {
+  /* display: flex; */
+  background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  background-attachment: fixed;
+  /* height: 100%;
+  width: 100%;
+  margin: 0; */
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin: 40px 0px 80px
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  margin: 50px 0px 10px
+}
+
+section {
+  margin: auto
+}
+
+.mantra-affirmation-box {
+  height: 100px;
+  width: 500px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.click-one {
+  padding: 20px 90px;
+  margin: 5px 0px 0px;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 100px;
+  font-style: italic;
+}
+
+button {
+  background-color: #134d71;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.display-message {
+  display: flex;
+  height: 150px;
+  width: 700px;
+  background-color: white;
+  margin-top: 80px;
+  border-radius: 10px;
+}
+
+img {
+  height: 70px;
+  margin: auto;
+}
