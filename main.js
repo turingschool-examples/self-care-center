@@ -35,10 +35,12 @@ var mantras = [
 
 
 // query selector variables go here 👇
-var receiveMessageBtn = document.querySelector('.receive-message');
-var mantraBtn = document.querySelector('#mantra');
 var affirmationBtn = document.querySelector('#affirmation');
 var dontLikeMessageBtn = document.querySelector('.remove-message-from-array');
+var mantraBtn = document.querySelector('#mantra');
+var receiveMessageBtn = document.querySelector('.receive-message');
+
+
 
 var displayedMessage = document.querySelector('.new-message');
 var meditationImage = document.querySelector('.meditation-image');
@@ -47,17 +49,13 @@ var meditationImage = document.querySelector('.meditation-image');
 
 
 // event listeners go here 👇
-receiveMessageBtn.addEventListener('click', makeMessage);
 dontLikeMessageBtn.addEventListener('click', deleteMessage);
+receiveMessageBtn.addEventListener('click', makeMessage);
 
 
 
 
 // functions and event handlers go here 👇
-
-function randomMessage(array) {
-  return Math.floor(Math.random() * array.length)
-};
 
 function makeMessage(e) {
   e.preventDefault()
@@ -113,4 +111,8 @@ function showMeditationImage() {
 
 function hideMeditationImage() {
   meditationImage.classList.add('hidden')
+};
+
+function randomMessage(array) {
+  return Math.floor(Math.random() * array.length)
 };
