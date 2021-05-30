@@ -1,24 +1,18 @@
 # Self Care Center
-## Overview
-How can I care for myself? One way is with affirmations and mantras!
-Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are repetive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
+## Created by: Meg McBride
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+Life can have its moments of challenge. When you need a pick-me-up, come visit the Self Care Center. There, you can chose between inspiring mantras or affirmations to bring clarity and light to your day. 
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html). 
+!![Screen Shot 2021-05-30 at 11 40 44 AM](https://user-images.githubusercontent.com/78767067/120114326-eab69e80-c13b-11eb-8a0f-5f660982e34e.png)
 
-## Learning Goals
+Each time you select "Receive Message", you will have a randomized quote returned to you. When one appears that truly speaks to you, you made add it to a list of Favorites by selecting the "Add Your Favorite" button. 
+![Screen Shot 2021-05-30 at 11 41 46 AM](https://user-images.githubusercontent.com/78767067/120114358-13d72f00-c13c-11eb-8c3f-ff97d984edd6.png)
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+When you've accumulated a list of favorite quotes, select the "View Favorites" button to navigate to your Saved Inspirations!
 
-## Setup
+![Screen Shot 2021-05-30 at 11 42 56 AM](https://user-images.githubusercontent.com/78767067/120114375-30736700-c13c-11eb-80ed-02a04fa3f8a7.png)
 
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
+Should a quote no longer serve you with what you're looking for, simply click on the quote, it will change to a light yellow to confirm the selection, and then click on the "Delete Quote" button. *Voila!* At any time, you may also return to the Welcome Page by selecting the "Return" button.
+![Screen Shot 2021-05-30 at 11 44 06 AM](https://user-images.githubusercontent.com/78767067/120114415-5ef14200-c13c-11eb-84e6-f4e58f5bad19.png)
 
+We hope that this page will help to bring inspiration and joy to your day with helpful reminderes. Namaste!
