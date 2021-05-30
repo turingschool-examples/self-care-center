@@ -75,7 +75,6 @@ input {
   margin-right: auto;
   border: none;
   border-radius: 8px;
-  /* figure out how to center the input text */
 }
 
 .login-btn {
@@ -177,13 +176,13 @@ input {
   padding: 0.75% 4% 0.75% 4%;
   background-color: #134d71;
   color: white;
-  transition: background 1.5s ease,
-              all 1.25s ease 0s;
+  transition: background 1.0s ease,
+              all 0.75s ease 0s;
 }
 
 .receive-msg-btn button:hover {
   background-color: #78a7c6;
-  transform: scale(1.16);
+  transform: scale(1.1);
 }
 
 .display-box {
