@@ -1,11 +1,16 @@
 // Query selectors
 var affirmationButton = document.querySelector('#affirmation');
 var mantraButton = document.querySelector('#mantra');
-var messageButton = document.querySelector('receive-message')
-
-
+var messageButton = document.querySelector('.receive-message');
+var messageDisplay = document.querySelector('.message-display');
+var image = document.querySelector('.image');
+var message = document.querySelector('.message');
+var affirmation = document.getElementById('affirmation');
+var mantra = document.getElementById('mantra');
 // Event listeners
-messageButton.addEventListener('click', pullRandomMessage);
+messageButton.addEventListener("click", pullRandomMessage);
+affirmationButton.addEventListener("click",getAffirmationIndex);
+mantraButton.addEventListener("click",getMantraIndex);
 
 
 
@@ -15,15 +20,37 @@ messageButton.addEventListener('click', pullRandomMessage);
 // receive message bttn is clicked, then randomly select
 // a message from the appropriate array and display it.
 function pullRandomMessage() {
-  var randomAffirmation = Math.floor(Math.random()*affirmations.length);
-  var randomMantra = Math.floor(Math.random()*mantras.length);
-
-  if (messageButton && affirmationButton) {
-    return randomAffirmation;
-  } else if (messageButton && mantraButton) {
-      return randomMantra;
+  var randomMessage;
+  if(affirmation.checked){
+    // if (messageButton && affirmationButton) {
+    randomMessage = affirmations[getAffirmationIndex(affirmations)];
+    displayMessage(randomMessage)
+  } else if(mantra.checked){
+  // else if (messageButton && mantraButton) {
+    randomMessage = mantras[getMantraIndex(mantras)];
+    displayMessage(randomMessage)
   }
+  document.getElementById('affirmation').checked = false;
+  document.getElementById('mantra').checked = false;
+};
+
+function getAffirmationIndex(affirmations) {
+  document.getElementById('mantra').checked = false;
+  return Math.floor(Math.random()*affirmations.length);
 }
+
+function getMantraIndex(mantras) {
+  document.getElementById('affirmation').checked = false;
+  return Math.floor(Math.random()*mantras.length);
+}
+
+function displayMessage(selectedMessage) {
+  message.innerText = '';
+  image.classList.add('hidden');
+  message.classList.remove('hidden');
+  message.innerText += selectedMessage;
+}
+
 
 
 var affirmations = [

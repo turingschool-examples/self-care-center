@@ -10,15 +10,18 @@
 
    <h2>Which type of message?</h2>
 
-    <section>
-     <button class="receive-message">Receive Message</button>
-     <input id="affirmation" type="radio" value="affirmation">
+    <section class="message-selectors">
+     <div class="radio-buttons">
+     <input id="affirmation" type="radio" value="affirmation">affirmation</input>
+     <input id="mantra" type="radio" value="mantra">mantra</input>
+     </div>
      <br>
-     <input id="mantra" type="radio" value="mantra">
+     <button class="receive-message">Receive Message</button>
     </section>
     <br>
-    <section>
+    <section class='message-display'>
      <img class="image" src="assets/meditate.svg" alt="meditate image">
+     <p class="message hidden"></p>
     </section>
 
    <script type="text/javascript" src="main.js"></script>
