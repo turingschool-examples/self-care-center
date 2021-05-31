@@ -2,13 +2,23 @@
 ## Overview
 How can I care for myself? One way is with affirmations and mantras!
 Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are repetive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
+Mantras are phrases that are repeated again and again during mindfulness practices. 
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html). 
+##  Contributors
+Raquel Hill
 
-## Learning Goals
+## Tech Stack
+  * Javascript
+  * CSS
+  * HTML
+
+
+## Instructions for running and viewing projects
+As you navigate to the Self Care Center webpage, you are able to select an affirmation or mantra by utilizing a radio button. After making your selection, click the "show message" button and a mantra or affirmation will appear.  If you are displeased with the message you receive, you are able to delete the message permanently by clicking "delete" and the message will not appear again.  
+
+## Deploy Link
+[Please view my project](https://github.com/Raquelhill/self-care-center)
 
 - Gain experience building an application that utilizes HTML, CSS and JavaScript
 - Write HTML and CSS to match a provided comp
