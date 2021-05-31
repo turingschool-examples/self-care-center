@@ -7,11 +7,12 @@ var image = document.querySelector('.image');
 var message = document.querySelector('.message');
 var affirmation = document.getElementById('affirmation');
 var mantra = document.getElementById('mantra');
+var clearMessageButton = document.querySelector('.clear-message');
 // Event listeners
 messageButton.addEventListener("click", pullRandomMessage);
-affirmationButton.addEventListener("click",getAffirmationIndex);
-mantraButton.addEventListener("click",getMantraIndex);
-
+affirmationButton.addEventListener("click", getAffirmationIndex);
+mantraButton.addEventListener("click", getMantraIndex);
+clearMessageButton.addEventListener("click", clearMessage);
 
 
 
@@ -49,6 +50,11 @@ function displayMessage(selectedMessage) {
   image.classList.add('hidden');
   message.classList.remove('hidden');
   message.innerText += selectedMessage;
+}
+
+function clearMessage() {
+  message.classList.add('hidden');
+  image.classList.remove('hidden');
 }
 
 
