@@ -1,7 +1,4 @@
 /* access classes
-
-/* font-family: 'Quicksand', sans-serif;
-COLORS
 light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
@@ -55,7 +52,7 @@ section {
   font-style: italic;
 }
 
-button {
+.receive-msg {
   background-color: #134d71;
   color: white;
   border-radius: 5px;
@@ -68,12 +65,16 @@ button {
 }
 
 .display-message {
-  display: flex;
   height: 150px;
   width: 700px;
+  display: grid;
   background-color: white;
   margin-top: 80px;
   border-radius: 10px;
+}
+
+.display-message1 {
+  margin: auto;
 }
 
 img {
