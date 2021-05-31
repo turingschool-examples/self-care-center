@@ -1,4 +1,4 @@
-/* font-family: 'Quicksand', sans-serif;
+ /*font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
 light-blue - #78a7c6;
@@ -6,3 +6,72 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+.hidden {
+  display: none;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: : no-repeat;
+  background-attachment: fixed;
+  background-color: #134d71;
+  background-image: linear-gradient(180deg, #134d71 0%, #78a7c6 65%, #f7e4bf 100%);
+
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+input {
+  color: black;
+}
+
+button {
+  background-color: #134d71;
+  color: white;
+  border-radius: 5px;
+}
+
+.clear-message {
+  margin-top: 5px;
+}
+
+h1 {
+  padding: 10px 0px 60px 0px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  padding: 10px 100px 10px 100px;
+  margin: 0px 0px 100px 0px;
+  background-color: #FFFFFF;
+  border-color: black;
+  border-radius: 5px;
+  display: inline-block;
+  color: black;
+}
+
+.message-selectors {
+  width: 300px;
+}
+
+.radio-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.image {
+  width: 60px;
+  height: 60px;
+  padding: 20px 200px 20px 200px;
+  border-radius: 5px;
+}
