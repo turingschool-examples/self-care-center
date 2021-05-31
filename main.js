@@ -7,25 +7,17 @@ var displayBox = document.querySelector(".display-box")
 // event listeners
 receiveMsgBtn.addEventListener("click", showQuote)
 
-
-// add this for all random queries
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length)
 }
 
-// when user selects a message option and then clicks the "Receive Message"
-// button, the user sees a random message from list of possilbe messages
-
 function showQuote () {
   if (selectAffirmation.checked) {
-    // displayMsgBox.innerHTML = ""
-    displayBox.innerHTML = affirmations[getRandomIndex(affirmations)] 
+    displayBox.innerHTML = affirmations[getRandomIndex(affirmations)]
   } else {
     selectMantra.checked
     displayBox.innerHTML = mantras[getRandomIndex(mantras)]
   }
 }
-
-// when message appears, meditation icon disappears from message area
 
 // look at reset() built in method to reset page
