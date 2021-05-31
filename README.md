@@ -9,9 +9,9 @@ Mantras are phrases that are repeated again and again during mindfulness practic
 Raquel Hill
 
 ## Tech Stack
-  -Javascript
-  -CSS
-  -HTML
+  *Javascript
+  *CSS
+  *HTML
 
 
 ## Instructions for running and viewing projects
