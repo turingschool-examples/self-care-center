@@ -73,7 +73,8 @@ section {
   border-radius: 10px;
 }
 
-.display-message1 {
+.display-message {
+  display: grid;
   margin: auto;
 }
 
