@@ -18,8 +18,8 @@ var mantras = [
 'Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.',
 'Don’t let yesterday take up too much of today.',
 'Every day is a second chance.',
-'Tell the truth and love everyone.'
-'I am free from sadness.'
+'Tell the truth and love everyone.',
+'I am free from sadness.',
 'I am enough.',
 'In the beginning it is you, in the middle it is you and in the end it is you.',
 'I love myself.',
@@ -31,3 +31,43 @@ var mantras = [
 'Onward and upward.',
 'I am the sky, the rest is weather.'
 ];
+
+
+var messageButton = document.querySelector('#message-button');
+var selectAffirmation = document.querySelector('#affirmation');
+var selectMantra = document.querySelector('#mantra');
+var meditationImg = document.querySelector('.meditation-image');
+var mainPage = document.querySelector('#principle page');
+var quote = document.querySelector('#quote');
+var messageType;
+
+
+
+messageButton.addEventListener('click', getMessage);
+
+
+
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+
+function getMessage() {
+  var affirmationMessage = affirmations[getRandomIndex(affirmations)];
+  var mantraMessage = mantras[getRandomIndex(mantras)];
+
+  if (!selectAffirmation.checked && !selectMantra.checked) {
+    event.preventDefault(messageButton);
+  }
+  if (selectAffirmation.checked) {
+    displayMessage(affirmationMessage);
+  } else if (selectMantra.checked) {
+    displayMessage(mantraMessage);
+  }
+}
+
+function displayMessage(message) {
+  messageType = message;
+  quote.innerText = messageType;
+}
