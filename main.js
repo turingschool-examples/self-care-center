@@ -1,9 +1,8 @@
 // query selectors
 var receiveMsgBtn = document.querySelector(".receive-msg")
-// var mantraAffirmationBox = document.querySelector(".mantra-affirmation-box")
 var selectAffirmation = document.getElementById("affirmation")
 var selectMantra = document.getElementById("mantra")
-var displayMsgBox = document.querySelector(".display-message")
+var displayBox = document.querySelector(".display-box")
 
 // event listeners
 receiveMsgBtn.addEventListener("click", showQuote)
@@ -20,7 +19,10 @@ function getRandomIndex(array) {
 function showQuote () {
   if (selectAffirmation.checked) {
     // displayMsgBox.innerHTML = ""
-    displayMsgBox.innerHTML = affirmations[getRandomIndex(affirmations)];
+    displayBox.innerHTML = affirmations[getRandomIndex(affirmations)] 
+  } else {
+    selectMantra.checked
+    displayBox.innerHTML = mantras[getRandomIndex(mantras)]
   }
 }
 
