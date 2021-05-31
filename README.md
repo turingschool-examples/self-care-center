@@ -19,7 +19,6 @@ The spec for this project can be found [here](https://frontend.turing.io/project
 - JavaScript
     - Event Listeners
     - Event Handlers
-    - Event Bubbling
     - Query Selectors
 - HTML
 - CSS
