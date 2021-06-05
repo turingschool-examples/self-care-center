@@ -1,6 +1,8 @@
 html {
   height: 100%;
   background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  /* Because you're using the same font-family, I would suggest making it a global attribute that you apply the html
+  Also, check out attribute box-sizing in MDN  */
 }
 
 body {
@@ -60,6 +62,7 @@ label {
   text-align: center;
  }
 
+/* Like we spoke about, there's some great ways to refactor the code to create a separation of responsibility  */
 #clear {
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
@@ -171,6 +174,9 @@ img {
 .hidden {
   display: none;
 }
+
+/* I like how you included this. I would actually put this information at the top so that any developer coming in has this important styling infromation */
+
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;

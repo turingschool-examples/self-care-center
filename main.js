@@ -57,6 +57,7 @@ var mantras = [
 var savedFavorites = [];
 var newFavorite;
 var unwantedQuote;
+
 class FavoritedQuote {
   constructor(type, quote) {
     this.id = Date.now();
@@ -66,7 +67,6 @@ class FavoritedQuote {
 };
 
 // eventListeners
-
 buttonSubmit.addEventListener('click', returnRandomMessage);
 buttonFavorite.addEventListener('click', addFavoriteMessage);
 buttonViewFavorite.addEventListener('click', displayFavoritesPage);
@@ -79,6 +79,12 @@ function returnRandomMessage() {
   event.preventDefault();
   meditationImage.classList.add("hidden");
   returnMessage.classList.remove("hidden");
+  //could you use toggle instead of add/remove?
+
+  //To make this code more dynamic, see if you could have one condition that passes in a variable assigned depending on which radio is checked.
+  // You'll probably want to make a helper function that manages this logic
+  // And look into what it would mean to use querySelectorAll('input[type="radio"]')
+
   if (buttonAffirmation.checked) {
     returnMessage.innerText = affirmations[getRandomIndex(affirmations)];
     newFavorite = new FavoritedQuote('affirmation', returnMessage.innerText);
@@ -90,11 +96,15 @@ function returnRandomMessage() {
   } else {
     returnMessage.innerText = 'Please select your message type preference above ⬆.'
   };
+
 };
 
 function displayAddionalButtons () {
   buttonClear.style.display = "inline-block";
   buttonFavorite.style.display = "inline-block";
+  // Consider adding another class that's for when you want something to be inline-block styling and then you add/remove a certain class rather than trying to manipulate the css from the JS
+  // ie: you'd have one class that would be applied with a certain styling that's the default.
+  // when the user interacts with the favorites, you remove the default class and add the class that is set up in the your css for inline-block & other styling
 };
 
 function addFavoriteMessage() {
