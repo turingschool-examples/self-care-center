@@ -3,9 +3,39 @@
   <head>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <title>✨ Self Care Center</title>
   </head>
   <body>
-  
+    <section class="welcome-page">
+      <h1 class="self-care-center">✨ Self Care Center ✨</h1>
+      <h2>Which type of message?</h2>
+      <form class="message-selection">
+        <label> <input type="radio" id="choice1" name = "choice" value="affirmation">affirmation</label>
+        <label> <input type="radio" id="choice2" name = "choice" value="mantra">mantra</label>
+        <button class="submit" type="submit">Receive Message</button>
+        <button id="clear">Clear Space</button>
+        <button id="favorite">Add Your Favorite!</button>
+      </form>
+      <div class="favorites-button">
+        <button id="view-favorite">View Favorites</button>
+      </div>
+      <section class="message-display">
+        <img class="meditation-image" src="./assets/meditate.svg" alt="figure in lotus pose">
+        <p id="message-returned"></p>
+      </section>
+    </section>
+    <section class="favorites-page hidden">
+      <form class="saved-section">
+        <h2 class="saved-inspirations">✨Saved Inspirations✨</h2>
+        <article class="saved-quotes">
+          <p class="saved-quotes"></p>
+        </article>
+        <button class="return-to-welcome">Return</button>
+        <button class="deletion">Delete Quote</button>
+      </form>
+    </section>
+    <!-- Overall, I really like your structure. I would suggest asking yourself if utlizing the article tag would be beneficial compared to having nested sections.
+    I always like to ask myself: "I this element helping me style *only*?" if the answer is "yes" don't be afraid to use divs. If a user is using a screen-reader, they only care about if the content is affected by the elements you choose to use.-->
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
