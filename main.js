@@ -53,13 +53,13 @@ const mantras = [
     'Onward and upward.',
     'I am the sky, the rest is weather.',
 ];
-let savedFavorites = [];
+let savedFavorites;
 let newFavorite;
 let unwantedQuote;
 
 
 // eventListeners
-
+window.addEventListener('load', loadFavorites)
 buttonSubmit.addEventListener('click', event => {
     returnRandomMessage(event)
 });
@@ -71,6 +71,17 @@ buttonDelete.addEventListener('click', event => {
 });
 
 // ~~~*Main Page Functionality*~~
+
+function loadFavorites() {
+    let savedQuotes = JSON.parse(localStorage.getItem('saved quotes'));
+    if (savedQuotes) {
+        savedFavorites = savedQuotes
+        show(buttonViewFavorite);
+    } else {
+        savedFavorites = [];
+        hide(buttonViewFavorite);
+    }
+}
 
 function returnRandomMessage(event) {
     event.preventDefault();
@@ -105,17 +116,23 @@ function evaluateMessageChoice() {
     }
 }
 
+function getRandomIndex(messages) {
+    return Math.floor(Math.random() * messages.length);
+};
+
 function addFavoriteMessage(event) {
     event.preventDefault();
     show(buttonViewFavorite);
     if (!savedFavorites.includes(newFavorite)) {
         savedFavorites.push(newFavorite);
     };
+    saveToStorage();
 };
 
-function getRandomIndex(messages) {
-    return Math.floor(Math.random() * messages.length);
-};
+function saveToStorage() {
+    localStorage.setItem('saved quotes', JSON.stringify(savedFavorites));
+}
+
 
 
 // ~~~*Favorites Page Functionality*~~
@@ -141,6 +158,7 @@ function deleteQuote(event) {
     unwantedQuote.remove();
     const foundQuote = savedFavorites.indexOf(unwantedQuote.innerText);
     savedFavorites.splice(foundQuote, 1);
+    saveToStorage();
 }
 
 function hide(element) {
