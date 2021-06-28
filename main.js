@@ -75,7 +75,7 @@ buttonDelete.addEventListener('click', event => {
 function loadFavorites() {
     let savedQuotes = JSON.parse(localStorage.getItem('saved quotes'));
     if (savedQuotes) {
-        savedFavorites = savedQuotes
+        savedFavorites = savedQuotes;
         show(buttonViewFavorite);
     } else {
         savedFavorites = [];
