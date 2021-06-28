@@ -1,28 +1,27 @@
 // page display
-var pageWelcome = document.querySelector('.welcome-page');
-var pageFavorites = document.querySelector('.favorites-page');
+const pageWelcome = document.querySelector('.welcome-page');
+const pageFavorites = document.querySelector('.favorites-page');
 
 // buttons
-var buttonAffirmation = document.getElementById('choice1');
-var buttonMantra = document.getElementById('choice2');
-var buttonSubmit = document.querySelector('.submit');
-var buttonClear = document.getElementById('clear');
-var buttonFavorite = document.getElementById('favorite');
-var buttonViewFavorite = document.getElementById('view-favorite')
-var buttonReturn = document.querySelector('.return-to-welcome');
-var buttonDelete = document.querySelector('.deletion');
+const typeSelection = document.querySelectorAll('input[type="radio"]');
+const buttonSubmit = document.getElementById('submit');
+const buttonClear = document.getElementById('clear');
+const buttonFavorite = document.getElementById('favorite');
+const buttonViewFavorite = document.getElementById('view-favorite')
+const buttonReturn = document.getElementById('return-to-welcome');
+const buttonDelete = document.getElementById('deletion');
 
 // welcome page message return screen
-var messageDisplay = document.querySelector('.message-display');
-var meditationImage = document.querySelector('img');
-var returnMessage = document.getElementById('message-returned');
+const messageDisplay = document.querySelector('.message-display');
+const meditationImage = document.querySelector('img');
+const returnMessage = document.getElementById('message-returned');
 
 // favorites page quotes
-var specificQuote = document.querySelector('.saved-quotes');
-var displayFavorites = document.querySelector('.saved-quotes');
+const specificQuote = document.querySelector('.saved-quotes');
+const displayFavorites = document.querySelector('.saved-quotes');
 
 // global variables
-var affirmations = [
+const affirmations = [
     'I forgive myself and set myself free.',
     'I believe I can be all that I want to be.',
     'I am in the process of becoming the best version of myself.',
@@ -37,7 +36,7 @@ var affirmations = [
     'I honor my body by trusting the signals that it sends me.',
     'I manifest perfect health by making smart choices.',
 ];
-var mantras = [
+const mantras = [
     'Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.',
     'Do not let yesterday take up too much of today.',
     'Every day is a second chance.',
@@ -54,52 +53,61 @@ var mantras = [
     'Onward and upward.',
     'I am the sky, the rest is weather.',
 ];
-var savedFavorites = [];
-var newFavorite;
-var unwantedQuote;
-class FavoritedQuote {
-    constructor(type, quote) {
-        this.id = Date.now();
-        this.type = type;
-        this.quote = quote;
-    };
-};
+let savedFavorites = [];
+let newFavorite;
+let unwantedQuote;
+
 
 // eventListeners
 
-buttonSubmit.addEventListener('click', returnRandomMessage);
+buttonSubmit.addEventListener('click', event => {
+    returnRandomMessage(event)
+});
 buttonFavorite.addEventListener('click', addFavoriteMessage);
 buttonViewFavorite.addEventListener('click', displayFavoritesPage);
-specificQuote.addEventListener('click', quoteSelection);
-buttonDelete.addEventListener('click', deleteQuote);
+specificQuote.addEventListener('click', event => { quoteSelection(event) });
+buttonDelete.addEventListener('click', event => {
+    deleteQuote(event)
+});
 
 // ~~~*Main Page Functionality*~~
 
-function returnRandomMessage() {
+function returnRandomMessage(event) {
     event.preventDefault();
-    meditationImage.classList.add("hidden");
-    returnMessage.classList.remove("hidden");
-    if (buttonAffirmation.checked) {
-        returnMessage.innerText = affirmations[getRandomIndex(affirmations)];
-        newFavorite = new FavoritedQuote('affirmation', returnMessage.innerText);
-        displayAddionalButtons();
-    } else if (buttonMantra.checked) {
-        returnMessage.innerText = mantras[getRandomIndex(mantras)];
-        newFavorite = new FavoritedQuote('mantra', returnMessage.innerText);
-        displayAddionalButtons();
-    } else {
-        returnMessage.innerText = 'Please select your message type preference above ⬆.'
-    };
-};
+    hide(meditationImage);
+    let messageChoice = evaluateMessageChoice();
+    switch (messageChoice) {
+        case 'affirmations':
+            returnMessage.innerText = affirmations[getRandomIndex(affirmations)];
+            newFavorite = returnMessage.innerText;
+            displayAddionalButtons();
+            break;
+        case 'mantras':
+            returnMessage.innerText = mantras[getRandomIndex(mantras)];
+            newFavorite = returnMessage.innerText;
+            displayAddionalButtons();
+            break;
+        default:
+            returnMessage.innerText = 'Please select your message type preference above ⬆.'
+    }
+}
 
 function displayAddionalButtons() {
-    buttonClear.style.display = "inline-block";
-    buttonFavorite.style.display = "inline-block";
+    show(buttonClear);
+    show(buttonFavorite);
 };
 
-function addFavoriteMessage() {
+function evaluateMessageChoice() {
+    for (let i = 0; i < typeSelection.length; i++) {
+        if (typeSelection[i].checked) {
+            return typeSelection[i].defaultValue
+        }
+    }
+}
+
+function addFavoriteMessage(event) {
     event.preventDefault();
-    buttonViewFavorite.style.visibility = "visible";
+    show(buttonViewFavorite);
     if (!savedFavorites.includes(newFavorite)) {
         savedFavorites.push(newFavorite);
     };
@@ -112,30 +120,33 @@ function getRandomIndex(messages) {
 
 // ~~~*Favorites Page Functionality*~~
 function displayFavoritesPage() {
-    pageWelcome.classList.add("hidden");
-    pageFavorites.classList.remove("hidden");
+    hide(pageWelcome);
+    show(pageFavorites);
     saveUserFavorites();
 };
 
 function saveUserFavorites() {
-    var quoteHTML = "";
-    for (var i = 0; i < savedFavorites.length; i++) {
-        quoteHTML += `<p class="saved-quotes">${savedFavorites[i].quote}</p>`
-    };
+    let quoteHTML = "";
+    savedFavorites.forEach(element => quoteHTML += `<p class="saved-quotes">${element}</p>`)
     displayFavorites.innerHTML = quoteHTML;
 };
 
-function quoteSelection(evt) {
-    unwantedQuote = evt.target;
+function quoteSelection(event) {
+    unwantedQuote = event.target;
     unwantedQuote.style.color = '#f7e4bf';
 };
 
-function deleteQuote() {
+function deleteQuote(event) {
     event.preventDefault();
     unwantedQuote.remove();
-    for (var i = 0; i < savedFavorites.length; i++) {
-        if (unwantedQuote.innerText === savedFavorites[i].quote) {
-            savedFavorites.splice(i, 1);
-        };
-    };
-};
+    const foundQuote = savedFavorites.indexOf(unwantedQuote.innerText);
+    savedFavorites.splice(foundQuote, 1);
+}
+
+function hide(element) {
+    element.classList.add('hidden');
+}
+
+function show(element) {
+    element.classList.remove('hidden');
+}
