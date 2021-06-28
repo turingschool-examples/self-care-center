@@ -11,21 +11,21 @@
 
 <body>
     <section class="welcome-page">
-        <h1 class="self-care-center">✨ Self Care Center ✨</h1>
+        <h1>✨ Self Care Center ✨</h1>
         <h2>Which type of message?</h2>
         <form class="message-selection">
             <div class="radio-buttons">
-                <label> <input type="radio" class="first-choice" id="choice1" name = "choice" value="affirmation">affirmation</label>
-                <label> <input type="radio" id="choice2" name = "choice" value="mantra">mantra</label>
+                <label> <input type="radio" name = "choice" value="affirmations">affirmation</label>
+                <label> <input type="radio" name = "choice" value="mantras">mantra</label>
             </div>
-            <button class="submit" type="submit">Receive Message</button>
+            <button id="submit" type="submit">Receive Message</button>
             <div class="buttons">
                 <button class="hidden" id="clear">Clear the Space</button>
                 <button class="hidden" id="favorite">Add As Favorite!</button>
             </div>
         </form>
         <div class="favorites-button">
-            <button id="view-favorite">View Favorites</button>
+            <button class="hidden" id="view-favorite">View Favorites</button>
         </div>
         <section class="message-display">
             <img class="meditation-image" src="./assets/meditate.svg" alt="figure in lotus pose">
@@ -43,8 +43,8 @@
                 </p>
             </section>
             <div class="saved-buttons">
-                <button class="return-to-welcome">Return</button>
-                <button class="deletion">Delete Quote</button>
+                <button id="return-to-welcome">Return</button>
+                <button id="deletion">Delete Quote</button>
             </div>
         </form>
     </section>
