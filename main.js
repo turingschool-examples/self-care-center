@@ -99,7 +99,7 @@ function displayAddionalButtons() {
 
 function addFavoriteMessage() {
     event.preventDefault();
-    buttonViewFavorite.style.display = "inline-block";
+    buttonViewFavorite.style.visibility = "visible";
     if (!savedFavorites.includes(newFavorite)) {
         savedFavorites.push(newFavorite);
     };

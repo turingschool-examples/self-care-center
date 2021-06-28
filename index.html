@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <title>✨ Self Care Center</title>
@@ -13,12 +15,14 @@
         <h2>Which type of message?</h2>
         <form class="message-selection">
             <div class="radio-buttons">
-                <label> <input type="radio" id="choice1" name = "choice" value="affirmation">affirmation</label>
+                <label> <input type="radio" class="first-choice" id="choice1" name = "choice" value="affirmation">affirmation</label>
                 <label> <input type="radio" id="choice2" name = "choice" value="mantra">mantra</label>
             </div>
             <button class="submit" type="submit">Receive Message</button>
-            <button id="clear">Clear Space</button>
-            <button id="favorite">Add Your Favorite!</button>
+            <div class="buttons">
+                <button class="hidden" id="clear">Clear Space</button>
+                <button class="hidden" id="favorite">Add Your Favorite!</button>
+            </div>
         </form>
         <div class="favorites-button">
             <button id="view-favorite">View Favorites</button>
