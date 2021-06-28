@@ -133,7 +133,7 @@ function saveUserFavorites() {
 
 function quoteSelection(event) {
     unwantedQuote = event.target;
-    unwantedQuote.style.color = '#f7e4bf';
+    unwantedQuote.classList.add('selected-quote');
 };
 
 function deleteQuote(event) {
