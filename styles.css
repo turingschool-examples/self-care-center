@@ -66,14 +66,6 @@ label {
     margin: 0px 100px;
 }
 
-.submit {
-    font-size: 16px;
-    color: #ffffff;
-    background: #134d71;
-    border-radius: 5px;
-    padding: 2px 26px;
-}
-
 button {
     font-size: 16px;
     color: #ffffff;
@@ -89,7 +81,7 @@ button:hover {
     cursor: pointer;
 }
 
-#view-favorite {
+.favorites-button {
     visibility: hidden;
     padding: 2px 30px;
     margin-top: 20px;
@@ -113,7 +105,7 @@ img {
     padding: 30px 60px;
 }
 
-#message-returned hidden {
+.return-message hidden {
     justify-content: center;
     padding: 100px 200px;
 }
@@ -130,18 +122,23 @@ img {
     display: block;
 }
 
+.saved-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .saved-quotes {
     color: #ffffff;
     font-size: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
 }
 
-.saved-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.return-to-welcome {
+    margin-right: 20px;
 }
 
 .hidden {

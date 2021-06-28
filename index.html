@@ -20,8 +20,8 @@
             </div>
             <button class="submit" type="submit">Receive Message</button>
             <div class="buttons">
-                <button class="hidden" id="clear">Clear Space</button>
-                <button class="hidden" id="favorite">Add Your Favorite!</button>
+                <button class="hidden" id="clear">Clear the Space</button>
+                <button class="hidden" id="favorite">Add As Favorite!</button>
             </div>
         </form>
         <div class="favorites-button">
@@ -29,17 +29,19 @@
         </div>
         <section class="message-display">
             <img class="meditation-image" src="./assets/meditate.svg" alt="figure in lotus pose">
-            <p id="message-returned"></p>
+            <p class="return-message" id="message-returned"></p>
         </section>
     </section>
     <section class="favorites-page hidden">
         <form class="saved-section">
             <h2 class="saved-inspirations">✨Saved Inspirations✨</h2>
-            <article class="saved-quotes">
+            <section class="saved-quotes">
                 <p class="saved-quotes"></p>
-            </article>
-            <button class="return-to-welcome">Return</button>
-            <button class="deletion">Delete Quote</button>
+            </section>
+            <div class="saved-buttons">
+                <button class="return-to-welcome">Return</button>
+                <button class="deletion">Delete Quote</button>
+            </div>
         </form>
     </section>
     <script type="text/javascript" src="main.js"></script>
