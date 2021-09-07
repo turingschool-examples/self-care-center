@@ -6,3 +6,10 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+  color: #ffffff;
+}
