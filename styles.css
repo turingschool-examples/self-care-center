@@ -6,3 +6,20 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+:root {
+  --text-color: #000000;
+  --header-textbox-color: #ffffff;
+  --main-bg-color: #134d71;
+  --secondary-bg-color: #78a7c6;;
+  --tertiary-bg-color: #f7e4bf;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-image: linear-gradient(var(--main-bg-color), var(--secondary-bg-color), var(--tertiary-bg-color));
+  background-repeat: no-repeat;
+  background-position: center;
+}
