@@ -42,12 +42,13 @@ h1 {
 .message-selection {
   display: flex;
   flex-direction: column;
+  min-width: 40%;
 }
 
 .message-selection--container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-around;
   flex-wrap: wrap;
   background-color: var(--header-textbox-color);
@@ -57,18 +58,30 @@ h1 {
 
 .message-selection--inputs {
   padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0px 15px;
 }
 
 .messsage-selection--header {
   color: var(--header-textbox-color);
+  text-align: center;
 }
 
 .quote {
   background-color: var(--header-textbox-color);
   padding: 20px;
   border-radius: 12px;
-  min-width: 60%;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  align-items: center;
 }
 .quote--text {
   text-align: center;
+}
+.quote--icon {
+  padding: 30px;
+  width: 10%;
 }
