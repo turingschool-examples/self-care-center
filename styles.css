@@ -26,12 +26,17 @@ body {
   color: var(--text-color);
 }
 
+h1 {
+  color: var(--header-textbox-color)
+}
+
 .wrapper {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
   height: 100%;
+  min-height: 75vh;
 }
 
 .message-selection {
@@ -41,7 +46,29 @@ body {
 
 .message-selection--container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--header-textbox-color);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.message-selection--inputs {
+  padding: 20px;
+}
+
+.messsage-selection--header {
+  color: var(--header-textbox-color);
+}
+
+.quote {
+  background-color: var(--header-textbox-color);
+  padding: 20px;
+  border-radius: 12px;
+  min-width: 60%;
+}
+.quote--text {
+  text-align: center;
 }
