@@ -22,4 +22,22 @@ body {
   background-image: linear-gradient(var(--main-bg-color), var(--secondary-bg-color), var(--tertiary-bg-color));
   background-repeat: no-repeat;
   background-position: center;
+  font-family: 'Quicksand', sans-serif;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.message-selection {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-selection--container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
