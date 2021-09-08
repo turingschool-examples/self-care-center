@@ -5,12 +5,16 @@ var mantraInput = document.querySelector("#mantra-radio");
 var messageBox = document.querySelector(".quote");
 var messageIcon = document.querySelector(".quote--icon");
 var messageQuote = document.querySelector(".quote-text");
+var favoriteContainer = document.querySelector(".quote-button-list");
 var favoriteButton = document.querySelector("#favorite-button")
+var viewFavoritesButton = document.querySelector("#view-favorites")
 
 //Event listeners
 messageButton.addEventListener("click", displayQuote);
 
 var currentQuote = "";
+
+var favoriteQuotes = [];
 
 var mantras = [
   "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.",
@@ -57,7 +61,7 @@ function displayQuote() {
   currentQuote = randomArray(currentInput);
   if (!messageIcon.classList.contains("hidden")) {
     messageIcon.classList.add("hidden");
-    favoriteButton.classList.remove("hidden");
+    favoriteContainer.classList.remove("hidden");
     messageQuote.classList.remove("hidden");
   }
 
