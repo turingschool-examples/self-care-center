@@ -4,6 +4,8 @@ var affirmationInput = document.querySelector("#affirmation-radio");
 var mantraInput = document.querySelector("#mantra-radio");
 var messageBox = document.querySelector(".quote");
 var messageIcon = document.querySelector(".quote--icon");
+var messageQuote = document.querySelector(".quote-text");
+var favoriteButton = document.querySelector("#favorite-button")
 
 //Event listeners
 messageButton.addEventListener("click", displayQuote);
@@ -44,6 +46,7 @@ var affirmations = [
 "I manifest perfect health by making smart choices."
 ]
 
+
 function randomArray(array) {
   var currentIndex = Math.floor(Math.random() * array.length);
   return randArray = array[currentIndex];
@@ -54,9 +57,11 @@ function displayQuote() {
   currentQuote = randomArray(currentInput);
   if (!messageIcon.classList.contains("hidden")) {
     messageIcon.classList.add("hidden");
+    favoriteButton.classList.remove("hidden");
+    messageQuote.classList.remove("hidden");
   }
 
-  messageBox.innerText = currentQuote;
+  messageQuote.innerText = currentQuote;
 
 }
 
