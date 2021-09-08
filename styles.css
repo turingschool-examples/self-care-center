@@ -107,3 +107,10 @@ h1 {
 .hidden {
   display: none;
 }
+
+.favorites-item {
+  background-color: var(--header-textbox-color);
+  padding: 20px;
+  border-radius: 12px;
+  align-items: center;
+}

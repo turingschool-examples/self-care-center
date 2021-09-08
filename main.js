@@ -6,11 +6,14 @@ var messageBox = document.querySelector(".quote");
 var messageIcon = document.querySelector(".quote--icon");
 var messageQuote = document.querySelector(".quote-text");
 var favoriteContainer = document.querySelector(".quote-button-list");
-var favoriteButton = document.querySelector("#favorite-button")
-var viewFavoritesButton = document.querySelector("#view-favorites")
+var favoriteButton = document.querySelector("#favorite-button");
+var viewFavoritesButton = document.querySelector("#view-favorites");
+var inputSection = document.querySelector(".message-selection");
+var favoritesSection = document.querySelector(".favorites");
 
 //Event listeners
 messageButton.addEventListener("click", displayQuote);
+viewFavoritesButton.addEventListener("click", showFavorites);
 
 var currentQuote = "";
 
@@ -75,4 +78,14 @@ function checkInput() {
   } else if (mantraInput.checked) {
     return mantras
   }
+}
+
+function toggleVisibility(section) {
+  section.classList.toggle("hidden");
+}
+
+function showFavorites() {
+  toggleVisibility(messageBox);
+  toggleVisibility(inputSection);
+  toggleVisibility(favoritesSection);
 }
