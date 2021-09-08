@@ -27,3 +27,7 @@ var mantras = ['Breathing in, I send myself love. Breathing out, I send love to 
 'The only constant is change.',
 'Onward and upward.',
 'I am the sky, the rest is weather.']
+
+function getRandomMessage(array) {
+  return Math.floor(Math.random() * array.length);
+}
