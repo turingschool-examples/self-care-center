@@ -9,15 +9,12 @@ black - #000000;
 body {
   margin: 100px 100px;
   font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
   background-image: linear-gradient(#134d71, #f7e4bf);
   background-color: #134d71;
   height: 800px;
   background-size: cover;
   text-align: center;
-}
-
-.text {
-  color: #ffffff;
 }
 
 #question {
@@ -30,6 +27,7 @@ body {
   width: 500px;
   height: 100px;
   padding: 20px 50px 5px 50px;
+  margin: 0 auto;
   font-style: italic;
   align-content: center;
   color: #000000;
@@ -38,11 +36,16 @@ body {
 #second-box {
   background-color: #ffffff;
   border-radius: 10px;
-  height: 200px;
+  height: 180px;
+  width: 900px;
+  margin: 0 auto;
 }
 
-input {
-  padding: 50px 50px;
+#meditating-icon {
+  height: 80px;
+  width: 80px;
+  padding: 50px;
+  margin: 0 auto;
 }
 
 button {
