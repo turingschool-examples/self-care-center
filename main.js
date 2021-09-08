@@ -5,7 +5,10 @@ var mantraInput = document.querySelector("#mantra-radio");
 var messageBox = document.querySelector(".quote");
 var messageIcon = document.querySelector(".quote--icon");
 
-var currentQuote = {};
+//Event listeners
+messageButton.addEventListener("click", checkInput)
+
+var currentQuote = "";
 
 var mantras = [
   "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.",
@@ -44,4 +47,16 @@ var affirmations = [
 function randomArray(array) {
   var currentIndex = Math.floor(Math.random() * array.length);
   return randArray = array[currentIndex];
+}
+
+function displayQuote() {
+
+}
+
+function checkInput() {
+  if (affirmationInput.checked) {
+    return affirmations
+  } else if (mantraInput.checked) {
+    return mantras
+  }
 }
