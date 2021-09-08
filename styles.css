@@ -15,8 +15,12 @@ black - #000000; */
   width: 900px;
 }
 
-.h1 {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 12pt;
+.heading {
+  color: #ffffff;
+  text-align: center;
+}
 
+.question {
+  color: #ffffff;
+  text-align: center;
 }
