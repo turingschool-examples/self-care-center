@@ -1,3 +1,19 @@
+var affirmationRadio = document.getElementById('affirmation');
+var mantraRadio = document.getElementById('mantra');
+var choiceButton = document.querySelector('.receive-message');
+
+function hide(element) {
+  element.classList.add('hidden');
+}
+
+function show(element) {
+  element.classList.remove('hidden');
+}
+
+function getRandomMessage(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
 var affirmations = ['I forgive myself and set myself free.',
 'I believe I can be all that I want to be.',
 'I am in the process of becoming the best version of myself.',
@@ -27,7 +43,3 @@ var mantras = ['Breathing in, I send myself love. Breathing out, I send love to 
 'The only constant is change.',
 'Onward and upward.',
 'I am the sky, the rest is weather.']
-
-function getRandomMessage(array) {
-  return Math.floor(Math.random() * array.length);
-}
