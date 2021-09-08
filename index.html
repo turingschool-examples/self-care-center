@@ -7,17 +7,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="background-gradient">
-    <section class="main-page"
+<body class="background-gradient"
+    <section class="main-page">
       <h1 class="heading"> ✨Self Care Center✨ </h1>
       <h2 class="question">Which Type Of Message?</h2>
       <form class="affirmation-mantra-selection">
-          <input type="radio" name="choice1" value="affirmation">affirmation</input>
-          <input type="radio" name="choice2" value="mantra">mantra</input>
-      </form>
-      <br>
-        <button class="message-button"> Receive message</button>
+        <div class="radio-buttons">
+          <label> <input type="radio" name="option1" value="affirmation">affirmation</input></label>
+          <label> <input type="radio" name="option2" value="mantra">mantra</input></label>
+        </div>
+        <br>
+      <section class="receive-message-btn"
+        <button id="submit" type="submit"> Receive message</button>
       </section>
+      <section class="display-message">
+        <img class="self-care-image" src="./assets/meditate.svg" alt="meditating person">
+        <section>
+
+
+
+
+
           <script type="text/javascript" src="main.js"></script>
 </body>
 
