@@ -48,7 +48,7 @@ h1 {
 .message-selection--container {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
   background-color: var(--header-textbox-color);
@@ -69,6 +69,14 @@ h1 {
   text-align: center;
 }
 
+.message-selection--button {
+  color: var(--header-textbox-color);
+  background-color: var(--main-bg-color);
+  border-radius: 6px;
+  padding: 7px 20px;
+  border: none;
+}
+
 .quote {
   background-color: var(--header-textbox-color);
   padding: 20px;
@@ -83,5 +91,5 @@ h1 {
 }
 .quote--icon {
   padding: 30px;
-  width: 10%;
+  width: 80px;
 }
