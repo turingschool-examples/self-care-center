@@ -6,7 +6,7 @@ var messageBox = document.querySelector(".quote");
 var messageIcon = document.querySelector(".quote--icon");
 
 //Event listeners
-messageButton.addEventListener("click", checkInput)
+messageButton.addEventListener("click", displayQuote);
 
 var currentQuote = "";
 
@@ -50,6 +50,13 @@ function randomArray(array) {
 }
 
 function displayQuote() {
+  var currentInput = checkInput();
+  currentQuote = randomArray(currentInput);
+  if (!messageIcon.classList.contains("hidden")) {
+    messageIcon.classList.add("hidden");
+  }
+
+  messageBox.innerText = currentQuote;
 
 }
 

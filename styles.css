@@ -93,3 +93,7 @@ h1 {
   padding: 30px;
   width: 80px;
 }
+
+.hidden {
+  display: none;
+}
