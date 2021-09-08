@@ -8,11 +8,17 @@ light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
 black - #000000; */
+.receive-message-btn{
+  width:300px;
+  border:15px;
+  padding:50px;
+  margin:20px;
+}
 .background-gradient{
   background-image: linear-gradient(to bottom, #134d71, #78a7c6, #f7e4bf);
   background-repeat: no-repeat;
-  height: 900px;
-  width: 900px;
+  height: 800px;
+  width: 800px;
 }
 
 .heading {
