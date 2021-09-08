@@ -11,11 +11,13 @@ var backButton = document.querySelector("#view-main")
 var viewFavoritesButton = document.querySelector("#view-favorites");
 var inputSection = document.querySelector(".message-selection");
 var favoritesSection = document.querySelector(".favorites");
+var favoritesContainer = document.querySelector(".favorites-container");
 
 //Event listeners
 messageButton.addEventListener("click", displayQuote);
 backButton.addEventListener("click", returnToMain);
 viewFavoritesButton.addEventListener("click", showFavorites);
+favoriteButton.addEventListener("click", addFavorites);
 
 var currentQuote = "";
 
@@ -87,14 +89,29 @@ function toggleVisibility(section) {
 }
 
 function showFavorites() {
-  favoriteQuotes.push(currentQuote);
   toggleVisibility(messageBox);
   toggleVisibility(inputSection);
   toggleVisibility(favoritesSection);
+  populateFavorites();
+}
+
+function populateFavorites() {
+  for (var i = 0; i < favoriteQuotes.length; i++) {
+    var savedQuoteHTML = `<article class="favorites-item">${favoriteQuotes[i]}</article>`;
+    favoritesContainer.innerHTML += savedQuoteHTML;
+    console.log(favoriteQuotes[i]);
+  }
 }
 
 function returnToMain() {
   toggleVisibility(messageBox);
   toggleVisibility(inputSection);
   toggleVisibility(favoritesSection);
+  favoritesContainer.innerHTML = "";
+}
+
+function addFavorites() {
+  if (!favoriteQuotes.includes(currentQuote)) {
+    favoriteQuotes.push(currentQuote);
+  }
 }
