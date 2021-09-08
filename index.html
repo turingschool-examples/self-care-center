@@ -1,38 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <style>
-    body {
-      background-image: url(https://www.xmple.com/wallpaper/gradient-blue-linear-brown-1920x1080-c2-4682b4-d2b48c-a-90-f-14.svg);
-      }
-    h1 {text-align: center;}
-    h3 {text-align: center;}
-    ul {text-align: center;
-    font-family:sans-serif;
-    color:white;}
-    button {text-align: center;}
-    p {text-align: center;
-    border: 1px solid white
-    }}
-    img {
-      width: 10%;
-      height: 10%;
-    }
-    </style>
-    <h1 style="color:white;font-family:Quicksand">✨Self Care Center✨</h1>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <h3 style="color:white;font-family:Quicksand">Which type of message?</h3>
-    <ul class="box">
+
+<head>
+  <h1 style="text-align:center;color:white;font-family:'Quicksand', sans-serif">✨Self Care Center✨</h1>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h3 style="text-align: center;font-family:'Quicksand', sans-serif;color:white">Which type of message?</h3>
+  <div class="box">
+    <section>
       <input type="radio" id="affirmation" value="affirmation" name:"affirmation">
-      <label for="affirmation">Affirmation</label>
+      <label for="affirmation">affirmation</label>
       <input type="radio" id="Mantra" value="Mantra" name:"Mantra">
-      <label for="Mantra">Mantra</label><br>
+      <label for="Mantra">mantra</label><br>
       <button>Receive Message</button>
-    </ul>
-    <p><img src="assets/meditate.svg" width="200px" height="200px"  alt="meditate" /></p>
-    <script type="text/javascript" src="main.js"></script>
-  </body>
+    </section>
+  </div>
+  <section class="messages">
+    <img src="assets/meditate.svg" alt="meditate" />
+  </section>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+
 </html>
