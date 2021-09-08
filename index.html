@@ -11,15 +11,17 @@
   <h3 style="text-align: center;font-family:'Quicksand', sans-serif;color:white">Which type of message?</h3>
   <div class="box">
     <section>
-      <input type="radio" id="affirmation" value="affirmation" name:"affirmation">
-      <label for="affirmation">affirmation</label>
-      <input type="radio" id="Mantra" value="Mantra" name:"Mantra">
-      <label for="Mantra">mantra</label><br>
-      <button>Receive Message</button>
+      <input class="affirmation" type="radio" id="affirmation" name="choice">
+      <label>affirmation</label>
+      <input class="mantra" type="radio" id="Mantra" name="choice">
+      <label>mantra</label><br>
+      <button class="button">Receive Message</button>
+      <button class ="clear-button hidden">Clear</button>
     </section>
   </div>
   <section class="messages">
-    <img src="assets/meditate.svg" alt="meditate" />
+    <p class= "message-box hidden">test</p>
+    <img class="picture" src="assets/meditate.svg" alt="meditate" />
   </section>
   <script type="text/javascript" src="main.js"></script>
 </body>
