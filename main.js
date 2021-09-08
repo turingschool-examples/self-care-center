@@ -14,6 +14,7 @@ var favoritesSection = document.querySelector(".favorites");
 var favoritesContainer = document.querySelector(".favorites-container");
 
 //Event listeners
+window.addEventListener("load", checkLocalStorage);
 messageButton.addEventListener("click", displayQuote);
 backButton.addEventListener("click", returnToMain);
 viewFavoritesButton.addEventListener("click", showFavorites);
@@ -57,6 +58,15 @@ var affirmations = [
 "I manifest perfect health by making smart choices."
 ]
 
+function checkLocalStorage() {
+  console.log("function called");
+  if (!localStorage.getItem("localFavoriteQuotes")) {
+    console.log("localStorage is false");
+  } else {
+    favoriteQuotes = JSON.parse(window.localStorage.getItem("localFavoriteQuotes"));
+    console.log(favoriteQuotes);
+  }
+}
 
 function randomArray(array) {
   var currentIndex = Math.floor(Math.random() * array.length);
@@ -99,7 +109,6 @@ function populateFavorites() {
   for (var i = 0; i < favoriteQuotes.length; i++) {
     var savedQuoteHTML = `<article class="favorites-item">${favoriteQuotes[i]}</article>`;
     favoritesContainer.innerHTML += savedQuoteHTML;
-    console.log(favoriteQuotes[i]);
   }
 }
 
@@ -113,5 +122,6 @@ function returnToMain() {
 function addFavorites() {
   if (!favoriteQuotes.includes(currentQuote)) {
     favoriteQuotes.push(currentQuote);
+    window.localStorage.setItem("localFavoriteQuotes", JSON.stringify(favoriteQuotes));
   }
 }
