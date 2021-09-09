@@ -6,3 +6,83 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  background: linear-gradient( #134d71, #78a7c6, #f7e4bf);
+  font-family: 'Quicksand', sans-serif;
+  height: 100vh;
+  background-size: contain;
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.5em;
+  color: #ffffff;
+  padding-bottom: 2em;
+}
+
+form-container {
+  margin-top: 1em;
+}
+
+h2 {
+  margin: 0 0 .2em .5em;
+  color: #ffffff;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: #ffffff;
+  align-items: center;
+  width: 40em;
+  height: 7em;
+}
+
+.radio-container {
+  display:flex;
+  justify-content: space-around;
+  font-style: italic;
+  padding-top: 1.5em;
+  width: 95%;
+}
+
+.receive-button {
+  margin-top: 2em;
+  background-color: #134d71;
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  padding: .5em 2em;
+}
+
+.message-box {
+  background-color: #ffffff;
+  padding-top: 1em;
+  width: 60em;
+  height: 10em;
+  margin-top: 7em;
+  border-radius: 5px;
+}
+
+.message-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.image {
+  max-width: 70px;
+  padding-top: 2em;
+}
