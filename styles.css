@@ -1,8 +1,5 @@
 * {
   font-family: 'Quicksand', sans-serif;
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
 }
 
 /* COLORS
@@ -11,7 +8,11 @@ light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
 black - #000000; */
-
+.container{
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+}
 body{
   background-image: linear-gradient(to bottom, #134d71, #78a7c6, #f7e4bf);
   background-repeat: no-repeat;
@@ -44,6 +45,16 @@ label {
   border-radius: 4px;
   color: white;
 }
-img {
+.display-message {
+  text-align: center;
+  border-radius: 10px;
+  background: white;
+  width: 100vh;
+  height: 30vh;
 
+}
+.self-care-image{
+  align-items: flex-end;
+  width: 90px;
+  height:120px;
 }
