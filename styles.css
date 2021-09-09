@@ -19,11 +19,6 @@ body {
   align-items: center;
 }
 
-img {
-  height: 5%;
-  width: 5%;
-}
-
 .white-box {
   background-color: #ffffff;
   color: #000000;
@@ -80,4 +75,8 @@ button {
 
 input {
   cursor: pointer;
+}
+
+img {
+  width: 8%;
 }
