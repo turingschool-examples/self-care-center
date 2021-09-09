@@ -3,9 +3,25 @@
   <head>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <title>Self-Care Center</title
   </head>
   <body>
-  
+    <h1>✨ Self-Care Center ✨</h1>
+    <h2> Which type of message?</h2>
+    <section class="message-selector-box">
+      <!-- Buttons & Text need to be in div to display as inline-block. Receive button is left out because it should be display as block on separate line -->
+      <div class="type-selection">
+        <button type="button" class="affirmation-button js-affirmation"></button>
+        <p class="affirmation-text">affirmation</p>
+        <button type="button" class="mantra-button js-mantra"></button>
+        <p class="mantra-text">mantra</p>
+        <button type="button" class="receive-message-button js-receive">Receive Message</button>
+      </div>
+    </section>
+    <section class="message-box js-message">
+      <img class="js-person-icon" url="./assets/meditate.png" alt="bell person" srcset="./assets/meditate.svg">
+      <p class="message"></p>
+    </section>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
