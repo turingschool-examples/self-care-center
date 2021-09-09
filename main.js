@@ -1,5 +1,5 @@
 // Query selectors
-var messageButton = document.querySelector(".message-selection--button");
+var messageButton = document.querySelector(".message-form__button");
 var affirmationInput = document.querySelector("#affirmation-radio");
 var mantraInput = document.querySelector("#mantra-radio");
 var messageBox = document.querySelector(".quote");
@@ -9,7 +9,7 @@ var favoriteContainer = document.querySelector(".quote-button-list");
 var favoriteButton = document.querySelector("#favorite-button");
 var backButton = document.querySelector("#view-main")
 var viewFavoritesButton = document.querySelector("#view-favorites");
-var inputSection = document.querySelector(".message-selection");
+var inputSection = document.querySelector(".message-form");
 var favoritesSection = document.querySelector(".favorites");
 var favoritesContainer = document.querySelector(".favorites-container");
 
