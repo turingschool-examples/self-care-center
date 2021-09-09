@@ -1,8 +1,8 @@
 var affirmationBtn = document.getElementById('aff-btn');
-
-
-
-
+var mantraBtn = document.getElementById('mantra-btn');
+var receiveMsgBtn=document.querySelector('.receive-msg-btn');
+var selfCareImage=document.querySelector('.self-care-image');
+var messageBox=document.querySelector('.displayMessage');
 
 
 var affirmations =[
@@ -65,12 +65,22 @@ var mantras = [
 
 
 
+receiveMsgBtn.addEventListener('click', displayMessage);
 
 
+function displayMessage(){
+  var randomMantra = mantras[getRandomIndex(mantras)]
+  if (affirmationBtn.checked) {
+    selfCareImage.classList.add('hidden')
+    messageBox.innerText=randomMantra[i];
+  } else if (affirmationBtn.checked) {
+    var randomAffirmation = affirmations[getRandomIndex(affirmations)]
+    selfCareImage.classList.add('hidden')
+    messageBox.innerText= randomAffirmation;
+  }
+}
+ console.log(randomMantra);
 
-affirmationBtn.addEventListener('click', log);
-
-
-function log(){
-  console.log(affirmations[5]);
-};
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
