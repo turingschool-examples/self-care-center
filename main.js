@@ -71,10 +71,12 @@ receiveMsgBtn.addEventListener('click', displayMessage);
 
 function displayMessage(){
   if (mantraBtn.checked) {
-    selfCareImage.classList.add('hidden')
+    selfCareImage.classList.add('hidden');
+    messageBox.classList.remove('hidden');
     messageBox.innerText= `${randomMantra}`;
   } else if (affirmationBtn.checked) {
-    selfCareImage.classList.add('hidden')
+    selfCareImage.classList.add('hidden');
+    messageBox.classList.remove('hidden');
     messageBox.innerText= `${randomAffirmation}`;
   }
 }
