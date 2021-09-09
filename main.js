@@ -105,9 +105,9 @@ function showFavorites() {
 
 function populateFavorites() {
   for (var i = 0; i < favoriteQuotes.length; i++) {
-    var savedQuoteHTML = `<article class="favorites-item">
+    var savedQuoteHTML = `<article class="favorites__quote">
     <p>${favoriteQuotes[i]}</p>
-    <button type="button" data-index="${i}" class="favorite-delete">x</button>
+    <button type="button" data-index="${i}" class="favorites__delete-btn">x</button>
     </article>`;
     favoritesContainer.innerHTML += savedQuoteHTML;
   }

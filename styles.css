@@ -113,7 +113,7 @@ body {
   align-items: center;
 }
 
-.favorites-item {
+.favorites__quote {
   background-color: var(--header-textbox-color);
   padding: 20px;
   border-radius: 12px;
@@ -124,7 +124,7 @@ body {
   justify-content: space-between;
 }
 
-.favorite-delete {
+.favorites__delete-btn {
   color: var(--header-textbox-color);
   background-color: var(--main-bg-color);
   border-radius: 60px;
