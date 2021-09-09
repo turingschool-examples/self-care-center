@@ -28,18 +28,22 @@ h3 {
 }
 
 .bottom-zen-block{
-    border-radius: 2px;
-    width: 500px;
-    height: 100px;
-    margin: 0;
+    border-radius: 25px;
+    width: 1000px;
+    height: 120px;
+    margin: auto;
     background-color: white;
+    margin-top: 190px;
 }
+
 
 .zen-figure {
     border-radius: 2px;
+    margin-top: 40px;
     width: 500px;
     height: 50px;
-    margin: 0;
+    margin-left: 220px;
+    
 }
 
 .hidden {
