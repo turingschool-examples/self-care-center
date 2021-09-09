@@ -62,18 +62,6 @@ var affirmations = [
 "I manifest perfect health by making smart choices."
 ]
 
-function checkLocalStorage() {
-  if (!localStorage.getItem("localFavoriteQuotes")) {
-  } else {
-    favoriteQuotes = JSON.parse(window.localStorage.getItem("localFavoriteQuotes"));
-  }
-}
-
-function randomArray(array) {
-  var currentIndex = Math.floor(Math.random() * array.length);
-  return randArray = array[currentIndex];
-}
-
 function displayQuote() {
   var currentInput = checkInput();
   currentQuote = randomArray(currentInput);
@@ -84,7 +72,49 @@ function displayQuote() {
   }
 
   messageQuote.innerText = currentQuote;
+}
 
+function returnToMain() {
+  toggleVisibility(quoteSection);
+  toggleVisibility(inputSection);
+  toggleVisibility(favoritesSection);
+  clearFavoritesHTML();
+}
+
+function showFavorites() {
+  toggleVisibility(quoteSection);
+  toggleVisibility(inputSection);
+  toggleVisibility(favoritesSection);
+  populateFavorites();
+}
+
+function addFavorites() {
+  if (!favoriteQuotes.includes(currentQuote)) {
+    favoriteQuotes.push(currentQuote);
+    refreshLocalStorage();
+  }
+}
+
+function deleteFavorites(event) {
+  var selectedItemIndex = parseInt(event.target.dataset.index, 10)
+  if (!isNaN(selectedItemIndex)) {
+    favoriteQuotes.splice(selectedItemIndex, 1);
+    refreshLocalStorage();
+    clearFavoritesHTML()
+    populateFavorites();
+  }
+}
+
+function checkLocalStorage() {
+  if (!localStorage.getItem("localFavoriteQuotes")) {
+  } else {
+    favoriteQuotes = JSON.parse(window.localStorage.getItem("localFavoriteQuotes"));
+  }
+}
+
+function randomArray(array) {
+  var currentIndex = Math.floor(Math.random() * array.length);
+  return randArray = array[currentIndex];
 }
 
 function checkInput() {
@@ -99,13 +129,6 @@ function toggleVisibility(section) {
   section.classList.toggle("hidden");
 }
 
-function showFavorites() {
-  toggleVisibility(quoteSection);
-  toggleVisibility(inputSection);
-  toggleVisibility(favoritesSection);
-  populateFavorites();
-}
-
 function populateFavorites() {
   for (var i = 0; i < favoriteQuotes.length; i++) {
     var savedQuoteHTML = `<article class="favorites__quote">
@@ -116,29 +139,8 @@ function populateFavorites() {
   }
 }
 
-function deleteFavorites(event) {
-  var selectedItemIndex = parseInt(event.target.dataset.index, 10)
-  console.log(selectedItemIndex);
-  if (!isNaN(selectedItemIndex)) {
-    favoriteQuotes.splice(selectedItemIndex, 1);
-    refreshLocalStorage();
+function clearFavoritesHTML() {
     favoritesContainer.innerHTML = "";
-    populateFavorites();
-  }
-}
-
-function returnToMain() {
-  toggleVisibility(quoteSection);
-  toggleVisibility(inputSection);
-  toggleVisibility(favoritesSection);
-  favoritesContainer.innerHTML = "";
-}
-
-function addFavorites() {
-  if (!favoriteQuotes.includes(currentQuote)) {
-    favoriteQuotes.push(currentQuote);
-    refreshLocalStorage();
-  }
 }
 
 function refreshLocalStorage() {
