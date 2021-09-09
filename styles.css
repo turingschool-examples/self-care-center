@@ -34,6 +34,8 @@ body {
 }
 
 #second-box {
+  color: #000000;
+  font-size: 150%;
   background-color: #ffffff;
   border-radius: 10px;
   height: 180px;
