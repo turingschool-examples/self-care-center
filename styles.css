@@ -46,6 +46,14 @@ img {
   padding-bottom: 3%;
 }
 
+.middle-grouping {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5%;
+}
+
 button {
   background-color: #134d71;
   color: #ffffff;
