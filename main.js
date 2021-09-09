@@ -1,3 +1,15 @@
+// Query Selectors
+var affirmationButton = document.querySelector('.js-affirmation');
+var mantraButton = document.querySelector('.js-mantra');
+var receiveMessage = document.querySelector('.js-receive');
+var personIcon = document.querySelector('.js-person-icon');
+var messageBox = document.querySelector('.message-box');
+
+// Event Listeners
+affirmationButton.addEventListener('click', selectAffirmation);
+mantraButton.addEventListener('click', selectMantra);
+receiveMessage.addEventListener('click', displayMessage);
+
 // Global Variables
 var affirmations = [
   'I forgive myself and set myself free.',
@@ -31,3 +43,31 @@ var mantras = [
   'Onward and upward.',
   'I am the sky, the rest is weather.'
 ];
+
+// Functions & Event Handlers
+function getRandomMessage(type) {
+  var index = Math.floor(Math.random() * type.length);
+  return type[index];
+}
+
+function selectAffirmation() {
+  if (!mantraButton.classList.contains('selected')) {
+    affirmationButton.classList.add('selected');
+  }
+}
+
+function selectMantra() {
+  if (!affirmationButton.classList.contains('selected')) {
+    mantraButton.classList.add('selected');
+  }
+}
+
+function displayMessage() {
+  // personIcon.classList.add('hidden');
+  if (affirmationButton.classList.contains('selected')) {
+    var randomMessage = getRandomMessage(affirmations);
+  } else if (mantraButton.classList.contains('selected')) {
+    var randomMessage = getRandomMessage(mantras);
+  }
+  messageBox.innerHTML = `<p>${randomMessage}</p>`;
+}
