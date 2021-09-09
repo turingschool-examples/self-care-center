@@ -6,37 +6,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <title>Self Care Center</title>
   </head>
+  <!-- head & body is the parent -->
   <body>
+    <!-- section is child to the body -->
+    <!-- flexbox on parent section below and should apply to the bottom stuff sans the divs in the div -->
+    <!-- maybe put form into a section on its own ? affects parent and child but reapply to grandparent?-->
     <section class="self-care-center">
-      <section class="home-view">
-        <div>
-          <h1 class="self-care-title" id="self-care-title">✨Self Care Center✨</h1>
-        </div>
-        <div>
-          <h3 class="message-type-question" id="message-type-question">What type of message?</h3>
-        <div>
+      <div class="home-view">
+        <!-- if have more than 1 element of the same type, grab it by class -->
+        <h1 class="self-care-title" id="self-care-title">✨Self Care Center✨</h1>
+      </div>
+      <h3 class="message-type-question" id="message-type-question">What type of message?</h3>
+      <!-- add flexbox to form-->
+      <form>
+      <!-- add one div per section, how to get radio buttons side by side and apart?-->
           <p class="select-type-form" id="select-type-form"></p>
-          <ul><input type="radio" class="affirmation"
+        <div>
+          <input type="radio" class="affirmation"
           name="affirmation" value="affirmation-array">
-          <label for="affirmation">affirmation</label></ul>
+          <label for="affirmation">affirmation</label>
         </div>
         <div>
-          <ul><input type="radio" class="mantra"
+          <input type="radio" class="mantra"
           name="mantra" value="mantra-array">
-          <label for="mantra">mantra</label></ul>
+          <label for="mantra">mantra</label>
         </div>
-        <button class="receieve-message" id="receieve-message">Recieve Message</button>
+      </form>
+      <button class="receieve-message" id="receieve-message">Recieve Message</button>
       <div class="bottom-zen-block">
-        <img class="zen-figure" src="assets/meditate.svg" alt="zen -figure"
+        <img class="zen-figure" src="assets/meditate.svg" alt="zen -figure">
       </div>
     </section>
+    <!-- add flexbox to section -->
     <section class="hidden quote-blocks">
-      <div class="affirmations">INSERT AFFIRMATIONS TEXT HERE</div>
-      <div class="mantras">INSERT MANTRAS TEXT HERE</div>
-
-
+      <p class="affirmations">INSERT AFFIRMATIONS TEXT HERE</p>
+      <p class="mantras">INSERT MANTRAS TEXT HERE</p>
+      <!-- //innerText -- do I need a paragraph? -->
     </section>
-    
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
