@@ -9,17 +9,15 @@
     <h1>✨ Self-Care Center ✨</h1>
     <h2> Which type of message?</h2>
     <section class="message-selector-box">
-      <div class="type-selection">
-        <button type="button" class="affirmation-button js-affirmation"></button>
+        <button type="button" id="js-affirmation"></button>
         <p class="affirmation-text">affirmation</p>
-        <button type="button" class="mantra-button js-mantra"></button>
-        <p class="mantra-text">mantra</p>
-        <button type="button" class="receive-message-button js-receive">Receive Message</button>
-      </div>
+        <button type="button" id="js-mantra"></button>
+        <p>mantra</p>
+        <button type="button" class="receive-message-button" id="js-receive">Receive Message</button>
     </section>
-    <section class="message-box js-message">
-      <img class="person-icon js-person-icon" url="./assets/meditate.png" alt="bell person" srcset="./assets/meditate.svg">
-      <!-- <p class="message js-message"></p> -->
+    <section class="message-box" id="js-message-box">
+      <img class="person-icon" id="js-person-icon" url="./assets/meditate.png" alt="bell person" srcset="./assets/meditate.svg">
+      <p class="message" id="js-message"></p>
     </section>
     <script type="text/javascript" src="main.js"></script>
   </body>

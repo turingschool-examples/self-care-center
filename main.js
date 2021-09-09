@@ -1,13 +1,19 @@
 // Query Selectors
-var affirmationButton = document.querySelector('.js-affirmation');
-var mantraButton = document.querySelector('.js-mantra');
-var receiveMessage = document.querySelector('.js-receive');
-var personIcon = document.querySelector('.js-person-icon');
-var messageBox = document.querySelector('.message-box');
+// CHANGE THESE TO IDS IN HTML
+var affirmationButton = document.querySelector('#js-affirmation');
+var mantraButton = document.querySelector('#js-mantra');
+var receiveMessage = document.querySelector('#js-receive');
+var messageBox = document.querySelector('#js-message-box');
+var personIcon = document.querySelector('#js-person-icon');
+var message = document.querySelector('#js-message');
 
 // Event Listeners
-affirmationButton.addEventListener('click', selectAffirmation);
-mantraButton.addEventListener('click', selectMantra);
+affirmationButton.addEventListener('click', function() {
+  selectType(affirmationButton, mantraButton);
+});
+mantraButton.addEventListener('click', function() {
+  selectType(mantraButton, affirmationButton);
+});
 receiveMessage.addEventListener('click', displayMessage);
 
 // Global Variables
@@ -45,29 +51,28 @@ var mantras = [
 ];
 
 // Functions & Event Handlers
-function getRandomMessage(type) {
-  var index = Math.floor(Math.random() * type.length);
-  return type[index];
+function getRandomMessage(messageType) {
+  var index = Math.floor(Math.random() * messageType.length);
+  return messageType[index];
 }
 
-function selectAffirmation() {
-  if (!mantraButton.classList.contains('selected')) {
-    affirmationButton.classList.add('selected');
-  }
-}
-
-function selectMantra() {
-  if (!affirmationButton.classList.contains('selected')) {
-    mantraButton.classList.add('selected');
+function selectType(selected, unselected) {
+  if (!unselected.classList.contains('selected')) {
+    selected.classList.add('selected');
+  } else {
+    unselected.classList.remove('selected');
+    selected.classList.add('selected');
+    personIcon.classList.remove('hidden');
+    message.innerText = '';
   }
 }
 
 function displayMessage() {
-  // personIcon.classList.add('hidden');
+  personIcon.classList.add('hidden');
   if (affirmationButton.classList.contains('selected')) {
     var randomMessage = getRandomMessage(affirmations);
   } else if (mantraButton.classList.contains('selected')) {
     var randomMessage = getRandomMessage(mantras);
   }
-  messageBox.innerHTML = `<p>${randomMessage}</p>`;
+  message.innerText = randomMessage;
 }

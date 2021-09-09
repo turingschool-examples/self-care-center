@@ -7,12 +7,9 @@
   margin: auto;
 }
 
-html {
-  height: 100%;
-  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
-}
-
 body {
+  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  height: 100vh;
   padding-top: 30px;
   font-size: 20px;
 }
@@ -32,7 +29,7 @@ section {
 }
 
 button {
-  height: 16px;
+  height: 15px;
   border-radius: 50%;
 }
 
@@ -48,6 +45,7 @@ p {
   background-color: #0175FF;
   border: 3px solid white;
   box-shadow: 0 0 3px 1px #0175FF;
+  height: 16px;
 }
 
 .hidden {
@@ -67,6 +65,7 @@ p {
   display: inline-block;
 }
 
+/* Convert to flex styling with container? */
 .affirmation-text {
   margin-right: 120px;
 }
@@ -87,14 +86,19 @@ p {
 
 /* ~~~~~ MESSAGE DISPLAY SECTION ~~~~~ */
 .message-box {
-  height: 200px;
+  height: 20%;
   width: 60%;
   color: #000000;
   font-size: 26px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .person-icon {
-  margin: 0;
+  height: 120%;
 }
+
+/* .message {
+  padding: 25px;
+} */
