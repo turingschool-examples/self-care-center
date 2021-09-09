@@ -24,6 +24,7 @@ viewFavoritesButton.addEventListener("click", showFavorites);
 favoriteButton.addEventListener("click", addFavorites);
 favoritesContainer.addEventListener("click", deleteFavorites)
 
+// Global variables 
 var currentQuote = "";
 
 var favoriteQuotes = [];
