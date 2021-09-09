@@ -14,9 +14,9 @@ html {
 body {
     background: linear-gradient(#134d71, #78a7c6, #f7e4bf); 
     background-size: 100vh;
-    margin: 0;
-    font-family: 'Quicksand', sans-serif;
     color: #ffffff; 
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
 }
 
 h1 {
@@ -26,10 +26,13 @@ h1 {
 }
 
 h3 {
+    display: flex;
+    justify-content: space-evenly;
     font-size: 20px;
 }
 
 .bottom-zen-block{
+    display: flex;
     border-radius: 25px;
     width: 1000px;
     height: 120px;
@@ -45,7 +48,6 @@ h3 {
     width: 500px;
     height: 50px;
     margin-left: 220px;
-    
 }
 
 .hidden {
