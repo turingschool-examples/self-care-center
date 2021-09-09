@@ -8,6 +8,11 @@ light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
 black - #000000; */
+.text {
+  width: 50%;
+  height: 90px;
+}
+
 .box,
 div > .box {
   background-color: white;
@@ -26,13 +31,12 @@ body{
 .heading,
 .question{
   color: #ffffff;
-  margin-left:50%;
+  margin-left:65%;
   width:50%;
-  padding-bottom:30px;
 }
 
-.heading{
-  padding-top:10px;
+.question{
+  margin-left: 50%;
 }
 
 /* mantra and affirmation btns*/
@@ -43,14 +47,17 @@ body{
   margin: auto;
   padding-top: 30px;
 }
-
+#aff-btn{
+  padding-left: 30px;
+  padding-right: 30px;
+}
 label {
   font-style: italic;
 }
 .receive-msg-btn {
   background: #134d71;
   font-family: "Quicksand";
-  width:auto;
+  width:50%;
   border-radius: 4px;
   color: white;
   padding:5px;
