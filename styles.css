@@ -1,11 +1,10 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  font-family: "Quicksand", sans-serif;
-  margin: auto;
-  text-align: center;
+* {
+  font-family: 'Quicksand', sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
+
 /* COLORS
 light-yellow - #f7e4bf;
 light-blue - #78a7c6;
@@ -13,26 +12,38 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000; */
 
-.receive-message-btn {
-  background-color: white;
-  width:300px;
-  border-radius:12px;
-  padding:50px;
-  margin:20px;
-}
-.background-gradient{
+body{
   background-image: linear-gradient(to bottom, #134d71, #78a7c6, #f7e4bf);
   background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vh;
+  height: 800px;
+  width: 800px;
 }
-
-.heading {
+/* selfcare and message type */
+.msg {
   color: #ffffff;
   text-align: center;
 }
-
-.question {
-  color: #ffffff;
+/* mantra and affirmation btns*/
+.input-msg {
   text-align: center;
+  background:white;
+  width: 80vh;
+  height: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+}
+
+label {
+  font-style: italic;
+}
+.receive-msg-btn {
+  background: #134d71;
+  font-family: "Quicksand";
+  width:auto;
+  border-radius: 4px;
+  color: white;
+}
+img {
+
 }
