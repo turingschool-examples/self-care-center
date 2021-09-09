@@ -6,3 +6,14 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+body {
+  background: rgb(19,77,113);
+  background: linear-gradient(180deg, rgba(19,77,113,1) 0%, rgba(120,167,198,1) 50%, rgba(247,228,191,1) 100%);
+  background-repeat: no-repeat;
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
