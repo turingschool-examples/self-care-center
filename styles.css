@@ -39,6 +39,7 @@ body {
 .question {
   color:#ffffff;
   text-align: center;
+  margin-top: 75px;
 }
 
 
@@ -46,7 +47,7 @@ body {
   background: #ffffff;
   border-radius: 10px;
   width: 400px;
-  height: 50px;
+  height: 70px;
   text-align: center;
   margin: auto;
   padding: 20px;
@@ -55,20 +56,27 @@ body {
 
 .message-reveal {
   background: #ffffff;
-  width: 600px;
-  height: 100px;
-  margin: 30px auto 30px;
+  width: 800px;
+  height: 200px;
+  margin: 70px auto 30px;
   text-align: center;
-  padding-top: 60px;
+  vertical-align: middle;
+  padding-top: 40px;
   border-radius: 10px;
+  font-size: 40px;
 
 }
 
 .receiveBtn {
   background-color: #134d71;
   color: white;
-  border-radius: 6px;
+  border-radius: 4px;
   margin-top: 20px;
+  padding: 8px 30px;
+  font-family: Quicksand;
+}
 
-
+.radioInput {
+  margin: 0 30px;
+  padding: 0 20px;
 }
