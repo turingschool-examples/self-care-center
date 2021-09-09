@@ -3,7 +3,7 @@ var mantra = document.querySelector('#mantra');
 
 var receiveMsgBtn = document.querySelector('#receive-message-btn');
 var meditatingIcon = document.querySelector('#meditating-icon');
-var messageBox = document.querySelector('#second-box');
+var messageBox = document.querySelector('#message-box');
 
 receiveMsgBtn.addEventListener('click', showRandomMessage);
 
@@ -48,9 +48,7 @@ function getRandomIndex(array) {
 function showRandomMessage() {
   if (affirmation.checked === true) {
     messageBox.innerText = affirmations[getRandomIndex(affirmations)];
-    //use getRandomINdex function to show random affirmation
   } else if (mantra.checked === true) {
     messageBox.innerText = mantras[getRandomIndex(mantras)];
-    //use getRandomIndex function to show random mantra
   }
 };
