@@ -20,7 +20,9 @@ body {
 }
 
 h1 {
+    display: flex;
     font-size: 30px;
+    justify-content: space-evenly;
 }
 
 h3 {
