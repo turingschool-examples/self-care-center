@@ -8,10 +8,13 @@ light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
 black - #000000; */
-.container{
-  display:flex;
-  flex-direction: column;
-  align-content: center;
+.box,
+div > .box {
+  background-color: white;
+  border-radius: 4px;
+  width:50%;
+  height:50%;
+  margin-left: 50%;
 }
 body{
   background-image: linear-gradient(to bottom, #134d71, #78a7c6, #f7e4bf);
@@ -19,20 +22,26 @@ body{
   height: 800px;
   width: 800px;
 }
-/* selfcare and message type */
-.msg {
+/* selfcare and which type message*/
+.heading,
+.question{
   color: #ffffff;
-  text-align: center;
+  margin-left:50%;
+  width:50%;
+  padding-bottom:30px;
 }
+
+.heading{
+  padding-top:10px;
+}
+
 /* mantra and affirmation btns*/
 .input-msg {
   text-align: center;
-  background:white;
-  width: 80vh;
-  height: 10vh;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 4px;
+  width: 50%;
+  height: 100px;
+  margin: auto;
+  padding-top: 30px;
 }
 
 label {
@@ -44,8 +53,10 @@ label {
   width:auto;
   border-radius: 4px;
   color: white;
+  padding:5px;
+  margin: 10px;
 }
-.display-message {
+.display-message{
   text-align: center;
   border-radius: 10px;
   background: white;
@@ -53,12 +64,16 @@ label {
   height: 30vh;
 
 }
-.self-care-image{
-  align-items: flex-end;
-  width: 90px;
-  height:120px;
+img {
+  height: 100px;
+  width: 100px;
+  margin-top: 50px;
 }
 
+.box {
+  background-color: white;
+  border-radius: 15px;
+}
 .hidden {
   display: none!important;
 }
