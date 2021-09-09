@@ -21,35 +21,71 @@ body {
 
 h1 {
     display: flex;
-    font-size: 30px;
+    font-size: 40px;
     justify-content: space-evenly;
 }
 
-h3 {
+h2 {
     display: flex;
     justify-content: space-evenly;
-    font-size: 20px;
+    font-size: 30px;
+    margin-top: 90px
 }
 
 .bottom-zen-block{
     display: flex;
-    border-radius: 25px;
-    width: 1000px;
-    height: 120px;
+    border-radius: 20px;
+    width: 800px;
+    height: 140px;
     margin: auto;
-    background-color: white;
-    margin-top: 190px;
+    background-color: #ffffff;
+    margin-top: 130px;
+}
+.pick-type-form {
+    display: flex;
+    border-radius: 8px;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 490px;
+    height: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left:500px;
 }
 
+.select-type-form {
+    margin-right: 75px;
+    margin-left: 75px;
+}
+
+.affirmation, .mantra{
+    color: black;
+    font-style: italic;
+    margin-right: 20px;
+}
+
+.receieve-message { 
+    margin-right: 12px;
+    border-radius: 4px;
+    background-color: #134d71;
+    color: #ffffff;
+    width: 185px;
+    height: 25px;
+    padding: 0;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+}
 
 .zen-figure {
     border-radius: 2px;
-    margin-top: 40px;
-    width: 500px;
-    height: 50px;
-    margin-left: 220px;
+    margin-top: 37px;
+    width: 530px;
+    height: 64px;
+    margin-left: 150px;
 }
 
 .hidden {
     display: none;
 }
+
+/* style the form within here for the different pieces */

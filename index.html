@@ -11,39 +11,41 @@
     <!-- section is child to the body -->
     <!-- flexbox on parent section below and should apply to the bottom stuff sans the divs in the div -->
     <!-- maybe put form into a section on its own ? affects parent and child but reapply to grandparent?-->
-    <section class="self-care-center">
-      <div class="home-view">
+      <header class="self-care-center">
+      <!-- <div class="home-view"> -->
         <!-- if have more than 1 element of the same type, grab it by class -->
-        <h1 class="self-care-title" id="self-care-title">✨Self Care Center✨</h1>
-      </div>
-      <h3 class="message-type-question" id="message-type-question">What type of message?</h3>
+        <!-- use class until need id -->
+        <h1 class="self-care-title">✨Self Care Center✨</h1>
+      <!-- </div> -->
+      <!-- check on indentation on h2 -->
+      <!-- //do i need both class and id? see below -->
+      <!-- don't want to use class and id same name (use ids sparingly) -->
+        <h2 class="message-type-question">What type of message?</h2>
       <!-- add flexbox to form-->
-      <form>
       <!-- add one div per section, how to get radio buttons side by side and apart?-->
-        <section class="select-type-form" id="select-type-form">
-        <div>
+      </header>
+    <!-- //style using the div below and then style sep within -->
+      <div class="pick-type-form"> 
+      <!-- //do i need both a class and id for form class and need unique names if so? -->
+        <form class="select-type-form" id="select-type-form">
           <input type="radio" class="affirmation"
-          name="affirmation" value="affirmation-array">
-          <label for="affirmation">affirmation</label>
-        </div>
-        <div>
+          name="affirmation" value="affirmation-array"/>
+          <label class="affirmation" for="affirmation">affirmation</label>
           <input type="radio" class="mantra"
-          name="mantra" value="mantra-array">
-          <label for="mantra">mantra</label>
-        </div>
-      </form>
-      </section>
-      <button class="receieve-message" id="receieve-message">Recieve Message</button>
+          name="mantra" value="mantra-array"/>
+          <label class="mantra" for="mantra">mantra</label>
+        </form>
+        <button class="receieve-message" id="receieve-message">Recieve Message</button>
+      </div>
       <div class="bottom-zen-block">
         <img class="zen-figure" src="assets/meditate.svg" alt="zen -figure">
-      </div>
-    </section>
     <!-- add flexbox to section -->
-    <section class="hidden quote-blocks">
-      <p class="affirmations">INSERT AFFIRMATIONS TEXT HERE</p>
-      <p class="mantras">INSERT MANTRAS TEXT HERE</p>
+    <!-- <section class="hidden quote-blocks"> -->
+        <!-- <p class="affirmations">INSERT AFFIRMATIONS TEXT HERE</p>
+        <p class="mantras">INSERT MANTRAS TEXT HERE</p> -->
+      </div>
       <!-- //innerText -- do I need a paragraph? -->
-    </section>
+    <!-- </section> -->
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
