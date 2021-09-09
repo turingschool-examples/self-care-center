@@ -92,13 +92,13 @@ body {
 .quote--text {
   text-align: center;
 }
-.quote--icon {
+.quote__icon {
   padding: 30px;
   width: 80px;
 }
 
 
-.quote-button {
+.quote__button {
   color: var(--header-textbox-color);
   background-color: var(--main-bg-color);
   border-radius: 6px;
