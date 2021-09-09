@@ -1,17 +1,20 @@
 // Query selectors
-var messageButton = document.querySelector(".message-form__button");
-var affirmationInput = document.querySelector("#affirmation-radio");
-var mantraInput = document.querySelector("#mantra-radio");
-var messageBox = document.querySelector(".quote");
+// Sections & Elements
+var inputSection = document.querySelector(".message-form");
+var favoritesSection = document.querySelector(".favorites");
+var quoteSection = document.querySelector(".quote");
+var favoritesContainer = document.querySelector(".favorites-container");
+var favoriteContainer = document.querySelector(".quote__button-container");
 var messageIcon = document.querySelector(".quote__icon");
 var messageQuote = document.querySelector(".quote__text");
-var favoriteContainer = document.querySelector(".quote__button-container");
+
+// Buttons & Inputs
 var favoriteButton = document.querySelector("#favorite-button");
 var backButton = document.querySelector("#view-main")
 var viewFavoritesButton = document.querySelector("#view-favorites");
-var inputSection = document.querySelector(".message-form");
-var favoritesSection = document.querySelector(".favorites");
-var favoritesContainer = document.querySelector(".favorites-container");
+var messageButton = document.querySelector(".message-form__button");
+var affirmationInput = document.querySelector("#affirmation-radio");
+var mantraInput = document.querySelector("#mantra-radio");
 
 //Event listeners
 window.addEventListener("load", checkLocalStorage);
@@ -75,9 +78,9 @@ function displayQuote() {
   var currentInput = checkInput();
   currentQuote = randomArray(currentInput);
   if (!messageIcon.classList.contains("hidden")) {
-    messageIcon.classList.add("hidden");
-    favoriteContainer.classList.remove("hidden");
-    messageQuote.classList.remove("hidden");
+    toggleVisibility(messageIcon);
+    toggleVisibility(favoriteContainer);
+    toggleVisibility(messageQuote);
   }
 
   messageQuote.innerText = currentQuote;
@@ -97,7 +100,7 @@ function toggleVisibility(section) {
 }
 
 function showFavorites() {
-  toggleVisibility(messageBox);
+  toggleVisibility(quoteSection);
   toggleVisibility(inputSection);
   toggleVisibility(favoritesSection);
   populateFavorites();
@@ -125,7 +128,7 @@ function deleteFavorites(event) {
 }
 
 function returnToMain() {
-  toggleVisibility(messageBox);
+  toggleVisibility(quoteSection);
   toggleVisibility(inputSection);
   toggleVisibility(favoritesSection);
   favoritesContainer.innerHTML = "";
