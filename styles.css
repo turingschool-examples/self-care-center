@@ -19,3 +19,21 @@ body {
     color: #ffffff; 
 }
 
+h1 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.zen-figure {
+    border-radius: 2px;
+    width: 200px;
+    height: 200px;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+  }
