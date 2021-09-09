@@ -39,7 +39,7 @@ var messageBox = document.querySelector("p")
 var clearButton = document.querySelector(".clear-button")
 
 clearButton.addEventListener('click', hideChoice);
-showMessageButton.addEventListener('click', showChoice); 
+showMessageButton.addEventListener('click', showChoice);
 
 function showChoice() {
   if (affirmationRadio.checked) {
