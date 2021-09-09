@@ -6,15 +6,22 @@
   </head>
   <body>
     <h1>&#10024; Self Care Center &#10024;</h1>
+
     <main>
       <h2> What type of message? </h2>
-      <form>
-        <selector>
-          <option class="affirmation"> affirmation </option>
-          <option class="mantra"> mantra </option>
-        </selector>
+      <section class="choose message">
+        <form>
+          <input type="radio" id="affirmation" name="message" value="affirmation">
+          <label for="affirmation"> affirmation </label>
+          <input type="radio" id="mantra" name="message" value="mantra">
+          <label for="mantra"> mantra </label>
+        </form>
         <button class="receive message"> receive message </button>
-      </form>
+      </section>
+
+      <section class="display">
+        
+      </section>
     </main>
 
     <script type="text/javascript" src="main.js"></script>
