@@ -2,7 +2,7 @@ var affirmationBtn = document.getElementById('aff-btn');
 var mantraBtn = document.getElementById('mantra-btn');
 var receiveMsgBtn=document.querySelector('.receive-msg-btn');
 var selfCareImage=document.querySelector('.self-care-image');
-var messageBox=document.querySelector('.displayMessage');
+var messageBox=document.querySelector('.display-message');
 
 
 var affirmations =[
@@ -62,24 +62,22 @@ var mantras = [
 
 "I am the sky, the rest is weather."];
 
-
+var randomMantra = mantras[getRandomIndex(mantras)];
+var randomAffirmation = affirmations[getRandomIndex(affirmations)];
 
 
 receiveMsgBtn.addEventListener('click', displayMessage);
 
 
 function displayMessage(){
-  var randomMantra = mantras[getRandomIndex(mantras)]
-  if (affirmationBtn.checked) {
+  if (mantraBtn.checked) {
     selfCareImage.classList.add('hidden')
-    messageBox.innerText=randomMantra[i];
+    messageBox.innerText= `${randomMantra}`;
   } else if (affirmationBtn.checked) {
-    var randomAffirmation = affirmations[getRandomIndex(affirmations)]
     selfCareImage.classList.add('hidden')
-    messageBox.innerText= randomAffirmation;
+    messageBox.innerText= `${randomAffirmation}`;
   }
 }
- console.log(randomMantra);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
