@@ -36,13 +36,14 @@ var revieveMessageBTN = document.querySelector("#receieve-message");
 var messageBox = document.querySelector("#message-box");
 
 
-revieveMessageBTN.addEventListener('click', displayMessage);
+revieveMessageBTN.addEventListener('click', displaySelectedMessage);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length)
 }
 
-function displayMessage() {
+function displaySelectedMessage() {
+    console.log("checking")
     if (affirmationBTN.checked) {
          messageBox.innerText = affirmations[getRandomIndex(affirmations)];
     } else if (mantraBTN.checked) { 
