@@ -1,20 +1,15 @@
 // Query Selectors
-// CHANGE THESE TO IDS IN HTML
-var affirmationButton = document.querySelector('#js-affirmation');
-var mantraButton = document.querySelector('#js-mantra');
 var receiveMessage = document.querySelector('#js-receive');
 var messageBox = document.querySelector('#js-message-box');
 var personIcon = document.querySelector('#js-person-icon');
 var message = document.querySelector('#js-message');
+var clearButton;
+var affirmationButton = document.querySelector('#affirmation');
+var mantraButton = document.querySelector('#mantra');
 
 // Event Listeners
-affirmationButton.addEventListener('click', function() {
-  selectType(affirmationButton, mantraButton);
-});
-mantraButton.addEventListener('click', function() {
-  selectType(mantraButton, affirmationButton);
-});
-receiveMessage.addEventListener('click', displayMessage);
+affirmationButton.addEventListener('click', enableReceive);
+mantraButton.addEventListener('click', enableReceive);
 
 // Global Variables
 var affirmations = [
@@ -56,23 +51,32 @@ function getRandomMessage(messageType) {
   return messageType[index];
 }
 
-function selectType(selected, unselected) {
-  if (!unselected.classList.contains('selected')) {
-    selected.classList.add('selected');
-  } else {
-    unselected.classList.remove('selected');
-    selected.classList.add('selected');
-    personIcon.classList.remove('hidden');
-    message.innerText = '';
-  }
+function enableReceive() {
+  receiveMessage.addEventListener('click', displayMessage);
 }
 
 function displayMessage() {
-  personIcon.classList.add('hidden');
-  if (affirmationButton.classList.contains('selected')) {
+  if (affirmationButton.checked) {
     var randomMessage = getRandomMessage(affirmations);
-  } else if (mantraButton.classList.contains('selected')) {
+  } else if (mantraButton.checked){
     var randomMessage = getRandomMessage(mantras);
   }
+  personIcon.classList.add('hidden');
+  displayClear();
   message.innerText = randomMessage;
+}
+
+function displayClear() {
+  clearButton = document.querySelector('#js-clear');
+  clearButton.addEventListener('click', resetPage);
+  clearButton.classList.remove('hidden');
+}
+
+function resetPage() {
+  receiveMessage.removeEventListener('click', displayMessage);
+  personIcon.classList.remove('hidden');
+  clearButton.classList.add('hidden');
+  message.innerText = '';
+  affirmationButton.checked = false;
+  mantraButton.checked = false;
 }
