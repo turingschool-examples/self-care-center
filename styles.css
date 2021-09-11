@@ -29,8 +29,8 @@ body {
 }
 
 input {
-  margin: 0 0 0 130px;
-  }
+  margin: 0 -1% 0 29%;
+}
 
 button {
   background-color: #134d71;
@@ -49,6 +49,7 @@ button:hover {
   background-color:#78a7c6;
   cursor: pointer;
 }
+
 .messages {
   background-color: white;
   width: 800px;
@@ -76,3 +77,10 @@ img {
 .hidden {
   display: none!important;
 }
+.affirmation {
+  margin-left: auto;
+}
+.error-message {
+  color: red;
+}
+  )
