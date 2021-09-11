@@ -14,60 +14,72 @@ body {
   font-family: 'Quicksand', sans-serif;
   position: center;
   text-align: center;
-
 }
 
-#title {
+h1 {
   color: #ffffff;
-}
-
-
-form {
-  background: #ffffff;
-  border-radius: 25px;
-  font-style: italic;
-  height: 150px;
-  margin-left: 500px;
-  margin-right: 500px;
-  /* border: 2px black solid; */
-
+  padding-top: 3%;
 }
 
 h2 {
   color: #ffffff;
-  padding-top: 200px;
+  padding-top: 3%;
  }
+
+form {
+  background: #ffffff;
+  border-radius: 15px;
+  font-style: italic;
+  height: 120px;
+  margin-left: 30%;
+  margin-right: 30%;
+  position: auto;
+  /* border: 2px black solid; */
+}
 
 .radio-area {
-  padding-top: 50px
+  padding-top: 5%;
  }
 
+ label {
+   padding-right: 10%;
+   position: relative;
+ }
 
 button {
   background-color: #134d71;
   border-radius: 5px;
   color: #ffffff;
   font-family: 'Quicksand', sans-serif;
-  margin-top: 30px;
-  padding: 5px 20px 5px 20px;
-  position: auto;
+  margin-top: 5%;
+  padding: 3px 20px 3px 20px;
 }
 
 .bottom-section {
   background: #ffffff;
-  border-radius: 25px;
-  height: 260px;
-  margin-top: 200px;
-  margin-left: 200px;
-  margin-right: 200px;
-  position: center;
+  border-radius: 15px;
+  height: 150px;
+  margin-top: 8%;
+  margin-left: 15%;
+  margin-right: 15%;
+  /* border: 2px black solid; */
 }
 
 img {
-  margin-top: 20px;
-  height: 75%;
-  width: 75%
+  margin-top: 3%;
+  height: 55%;
+  width: 55%
+
 }
+
+.context{
+margin-top: 6%;
+font-stretch: expanded;
+font-size: 25px;
+/* border: 2px black solid; */
+
+}
+
 
 .hidden {
   display: none!important;
