@@ -34,20 +34,35 @@ var affirmationBTN = document.querySelector("#affirmation");
 var mantraBTN = document.querySelector("#mantra");
 var revieveMessageBTN = document.querySelector("#receieve-message");
 var messageBox = document.querySelector("#message-box");
+var dislikeBTN = document.querySelector("#dislike-message-btn");
 
 
 revieveMessageBTN.addEventListener('click', displaySelectedMessage);
+dislikeBTN.addEventListener('click', removeDislikedMessage);
+
+
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length)
 }
 
 function displaySelectedMessage() {
-    if (affirmationBTN.checked) {
-         messageBox.innerText = affirmations[getRandomIndex(affirmations)];
-    } if (mantraBTN.checked) { 
-         messageBox.innerText = mantras[getRandomIndex(mantras)];
-
-    }
+     if (affirmationBTN.checked) {
+     messageBox.innerText = affirmations[getRandomIndex(affirmations)];
+     } if (mantraBTN.checked) { 
+     messageBox.innerText = mantras[getRandomIndex(mantras)];
+     }
+     dislikeBTN.classList.remove('hidden');
 };
 
+
+function removeDislikedMessage(){
+//if user clicks this button then two things need to happen
+//need to remove item from the array
+//likely using the splice method
+//a for loop checking the length of the array may be helpful
+//the array can be searched and if the offending message then matches 
+//the item will be removed with splice
+//could a new message then be prompted it in its place?
+//or rather implement the display function after again?
+};
