@@ -8,55 +8,70 @@ light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
 black - #000000; */
-.container{
-  display:flex;
-  flex-direction: column;
-  align-content: center;
+.text {
+  width: 50%;
+  height: 90px;
 }
+
+img {
+  height: 70px;
+  width: 70px;
+  margin-left: 50px;
+}
+
 body{
   background-image: linear-gradient(to bottom, #134d71, #78a7c6, #f7e4bf);
+  background-attachment: fixed;
   background-repeat: no-repeat;
   height: 800px;
   width: 800px;
 }
-/* selfcare and message type */
-.msg {
+/* selfcare and which type message*/
+.heading,
+.question{
   color: #ffffff;
-  text-align: center;
-}
-/* mantra and affirmation btns*/
-.input-msg {
-  text-align: center;
-  background:white;
-  width: 80vh;
-  height: 10vh;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 4px;
+  margin-left:65%;
+  width:50%;
 }
 
+
+/* mantra and affirmation btns*/
+.input-msg {
+  background-color: white;
+  text-align: center;
+  width: 52%;
+  height: 55px;
+  margin-left: 55%;
+  padding: 30px;
+  border-radius: 9px;
+}
+
+#aff-btn{
+  padding-left: 30px;
+  padding-right: 30px;
+}
 label {
   font-style: italic;
 }
 .receive-msg-btn {
   background: #134d71;
   font-family: "Quicksand";
-  width:auto;
+  width:50%;
   border-radius: 4px;
   color: white;
+  padding:5px;
+  margin: 10px;
+  padding-bottom: 10px;
 }
-.display-message {
-  text-align: center;
-  border-radius: 10px;
-  background: white;
-  width: 100vh;
-  height: 30vh;
 
-}
-.self-care-image{
-  align-items: flex-end;
-  width: 90px;
-  height:120px;
+.display-message {
+  background-color: red;
+  text-align:center;
+  width: 90%;
+  height: 50%;
+  margin-left: 50%;
+  margin-top: 80px;
+  border-radius: 9px;
 }
 
 .hidden {
