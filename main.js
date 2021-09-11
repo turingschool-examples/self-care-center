@@ -35,11 +35,16 @@ var affirmationRadio = document.querySelector(".affirmation");
 var mantraRadio = document.querySelector(".mantra");
 var showMessageButton = document.querySelector(".button");
 var meditateImage = document.querySelector(".picture");
-var messageBox = document.querySelector("p")
-var clearButton = document.querySelector(".clear-button")
+var messageBox = document.querySelector(".message-box");
+var clearButton = document.querySelector(".clear-button");
+var errorMessage = document.querySelector(".error-message");
 
 clearButton.addEventListener('click', hideChoice);
-showMessageButton.addEventListener('click', showChoice);
+showMessageButton.addEventListener('click', function(){
+  showChoice();
+  showError();
+  hideError ();
+});
 
 function showChoice() {
   if (affirmationRadio.checked) {
@@ -69,4 +74,15 @@ function toggleImage() {
   meditateImage.classList.add('hidden');
   messageBox.classList.remove('hidden');
   clearButton.classList.remove('hidden');
+}
+
+function showError (){
+  if (affirmationRadio.checked === false && mantraRadio.checked === false) {
+      errorMessage.classList.remove('hidden')
+  }
+}
+function hideError (){
+  if (affirmationRadio.checked || mantraRadio.checked){
+    errorMessage.classList.add('hidden');
+  }
 }
