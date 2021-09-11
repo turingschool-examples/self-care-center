@@ -13,28 +13,29 @@ black - #000000; */
   height: 90px;
 }
 
-img {
-  height: 70px;
-  width: 70px;
-  margin-left: 50px;
-}
-
 body{
   background-image: linear-gradient(to bottom, #134d71, #78a7c6, #f7e4bf);
   background-attachment: fixed;
   background-repeat: no-repeat;
   height: 800px;
   width: 800px;
+  text-align: center;
 }
 /* selfcare and which type message*/
 .heading,
 .question{
   color: #ffffff;
-  margin-left:65%;
-  width:50%;
 }
 
+.heading{
+  width: 50%;
+  margin-left:auto;
+}
 
+.question{
+  width:60%;
+  margin-left:auto;
+}
 /* mantra and affirmation btns*/
 .input-msg {
   background-color: white;
@@ -53,7 +54,7 @@ body{
 label {
   font-style: italic;
 }
-.receive-msg-btn {
+#receive-msg-btn {
   background: #134d71;
   font-family: "Quicksand";
   width:50%;
@@ -76,4 +77,10 @@ label {
 
 .hidden {
   display: none!important;
+}
+
+img {
+  height: 70px;
+  width: 70px;
+  margin-left: 50px;
 }
