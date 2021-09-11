@@ -48,5 +48,14 @@ function toggle(hide, show) {
   show.classList.remove('hidden');
 }
 
-
+function displayMessage(event) {
+  event.preventDefault()
+  if (radioAffirmation.checked) {
+    message.innerText = affirmations[getRandomIndex(affirmations)]
+    toggle(image, message);
+  } else if (radioMantra.checked) {
+    message.innerText = mantras[getRandomIndex(mantras)]
+    toggle(image, message);
+  } 
+}
 
