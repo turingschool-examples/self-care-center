@@ -40,10 +40,10 @@ var clearButton = document.querySelector(".clear-button");
 var errorMessage = document.querySelector(".error-message");
 
 clearButton.addEventListener('click', hideChoice);
-showMessageButton.addEventListener('click', function(){
+showMessageButton.addEventListener('click', function() {
   showChoice();
   showError();
-  hideError ();
+  hideError();
 });
 
 function showChoice() {
@@ -76,13 +76,14 @@ function toggleImage() {
   clearButton.classList.remove('hidden');
 }
 
-function showError (){
+function showError() {
   if (affirmationRadio.checked === false && mantraRadio.checked === false) {
-      errorMessage.classList.remove('hidden')
+    errorMessage.classList.remove('hidden')
   }
 }
-function hideError (){
-  if (affirmationRadio.checked || mantraRadio.checked){
+
+function hideError() {
+  if (affirmationRadio.checked || mantraRadio.checked) {
     errorMessage.classList.add('hidden');
   }
 }
