@@ -89,6 +89,25 @@ h2 {
     font-family: 'Quicksand', sans-serif;
 }
 
+.dislike-button {
+    display: flex;
+    margin-right: 12px;
+    border-radius: 4px;
+    background-color: #134d71;
+    color: #ffffff;
+    width: 200px;
+    height: 35px;
+    padding: 0;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-end;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 635px;
+}
+
 .zen-figure {
     border-radius: 2px;
     margin-top: 37px;

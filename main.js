@@ -47,5 +47,7 @@ function displaySelectedMessage() {
          messageBox.innerText = affirmations[getRandomIndex(affirmations)];
     } if (mantraBTN.checked) { 
          messageBox.innerText = mantras[getRandomIndex(mantras)];
+
     }
 };
+
