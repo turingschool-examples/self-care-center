@@ -89,17 +89,19 @@ function displayMessage() {
 
 function displayWelcomePage(event) {
   event.preventDefault();
-  deleteBtn.classList.add('hidden');
+  hideDeleteBtn()
 }
 
 function deleteMessage() {
-  if (messageBox.innerText){
+  if (mantraBtn.checked) {
     var randomMantra = mantras[getRandomIndex(mantras)];
+    removeCurrentMantra(randomMantra);
     alert("Message Deleted");
     messageBox.classList.add('hidden');
     selfCareImage.classList.remove('hidden');
-  } else if (!messageBox.innerText) {
+  } else if (affirmationBtn.checked) {
     var randomAffirmation = affirmations[getRandomIndex(affirmations)]
+    removeCurrentAffirmation(randomAffirmation);
     deleteBtn.classList.add('hidden');
   }
 }
@@ -120,6 +122,22 @@ function displayAffirmation(){
     deleteBtn.classList.remove('hidden');
 }
 
+function removeCurrentAffirmation(randomAffirmation){
+  console.log(randomAffirmation);
+  for (var i =0; i < affirmations.length; i ++){
+    if (affirmations[i] === randomAffirmation){
+      affirmations.splice(i, 1);
+    }
+  }
+}
+
+function removeCurrentMantra(randomMantra){
+  for (var i = 0; i <mantras.length; i ++){
+    if( mantras[i] === randomMantra){
+      mantras.splice(i, 1);
+    }
+  }
+}
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }

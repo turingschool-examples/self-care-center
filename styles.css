@@ -68,11 +68,12 @@ label {
   padding-bottom: 10px;
 }
 
-.display-message {
+div > p {
   background-color: red;
   text-align:center;
   width: 50%;
   height: 20%;
+  margin: auto;
   border-radius: 9px;
 }
 
