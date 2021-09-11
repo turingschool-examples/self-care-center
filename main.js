@@ -11,13 +11,15 @@ function displayMessage() {
   if (affirmationRadio.checked) {
     hide(peacePicture);
     show(message);
-    var affirmation = affirmations[getRandomMessage(affirmations)];
-    message.innerText = affirmation;
-    removeMessages(affirmation, affirmations);
+    var affirmationMessage = affirmations[getRandomMessage(affirmations)];
+    message.innerText = `✨${affirmationMessage}✨`;
+    removeMessages(affirmationMessage, affirmations);
   }else if (mantraRadio.checked) {
     hide(peacePicture);
     show(message);
-    message.innerText = mantras[getRandomMessage(mantras)];
+    var mantraMessage = mantras[getRandomMessage(mantras)];
+    message.innerText = `✨${mantraMessage}✨`;
+    removeMessages(mantraMessage, mantras);
   }else {
     window.alert("A Mantra or Affirmation wasn't selected")
   }
@@ -25,9 +27,12 @@ function displayMessage() {
 
 function removeMessages(message, messageList) {
   for (var i = 0; i < messageList.length; i++) {
-    if (array.includes(message)) {
-      array.splice(i, 1);
+    if (message === messageList[i]) {
+      messageList.splice(i, 1);
     }
+  }
+  if (messageList.length < 1) {
+    window.alert('All messages are removed, refresh page to start again');
   }
 }
 
