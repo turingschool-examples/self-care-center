@@ -34,11 +34,11 @@ var affirmationBTN = document.querySelector("#affirmation");
 var mantraBTN = document.querySelector("#mantra");
 var revieveMessageBTN = document.querySelector("#receieve-message");
 var messageBox = document.querySelector("#message-box");
-var dislikeBTN = document.querySelector("#dislike-message-btn");
+var clearMessageBTN = document.querySelector("#clear-btn");
 
 
 revieveMessageBTN.addEventListener('click', displaySelectedMessage);
-dislikeBTN.addEventListener('click', removeDislikedMessage);
+// clearMessageBTN.addEventListener('click', removeDisplayedMessage);
 
 
 
@@ -46,52 +46,22 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length)
 }
 
-function displaySelectedMessage() {
+function checkButtonSelected() {
      if (affirmationBTN.checked) {
-     messageBox.innerText = affirmations[getRandomIndex(affirmations)];
-     } if (mantraBTN.checked) { 
-     messageBox.innerText = mantras[getRandomIndex(mantras)];
-     }
-     dislikeBTN.classList.remove('hidden');
-};
-
-function removeDislikedMessage(){
-     if (dislikeBTN.checked) {
-
+          return affirmations[getRandomIndex(affirmations)];
+     } else if (mantraBTN.checked) {
+          return mantras[getRandomIndex(mantras)];
      }
 }
 
-
-for(var i = arr.length - 1; i >= 0; i--) {
-     if(arr[i] === name) {
-        arr.splice(i, 1);
+function displaySelectedMessage(event) {
+     event.preventDefault()
+     var message = checkButtonSelected()
+     if (affirmationBTN.checked) {
+     messageBox.innerText = affirmations[getRandomIndex(affirmations)];
+     } else if (mantraBTN.checked) { 
+     messageBox.innerText = mantras[getRandomIndex(mantras)];
      }
- }
-// function removeMenuItem(restaurantName, menuItem, type) {
-//      for (var i = 0; i < restaurantName.menus[type].length; i++) {
-//          if (menuItem === restaurantName.menus[type][i].name) { 
-//            restaurantName.menus[type].splice(i, 1);
-//              return `No one is eating our ${menuItem} - it has been removed from the ${type} menu!`
-//          }
+     clearMessageBTN.classList.remove('hidden');
+};
 
-// function removeDislikedMessage(){
-//      if (dislikeBTN.checked) {
-//           for (var i = 0; affirmations.length; i++) {
-//                if (affirmation[i] === affirmation.length[i])
-//           } affirmations[i]
-          //check the array for that particular string
-          //remove that string
-          //return a new array without it
-          //window alert that message has been removed
-     
-//if user clicks this button then two things need to happen
-//need to remove item from the array
-//likely using the splice method
-//a for loop checking the length of the array may be helpful
-//the array can be searched and if the offending message then matches 
-//the item will be removed with splice
-//could a new message then be prompted it in its place?
-//or rather implement the display function after again?
-//window.alert()?
-//array.splice(index, 1)
-// };
