@@ -54,8 +54,7 @@ function checkButtonSelected() {
      }
 }
 
-function displaySelectedMessage(event) {
-     event.preventDefault()
+function displaySelectedMessage() {
      var message = checkButtonSelected()
      if (affirmationBTN.checked) {
      messageBox.innerText = affirmations[getRandomIndex(affirmations)];
