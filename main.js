@@ -1,10 +1,39 @@
 var affirmationRadio = document.getElementById('affirmation');
 var mantraRadio = document.getElementById('mantra');
 var choiceButton = document.querySelector('.receive-message');
+var peacePicture = document.querySelector('.inner-peace-picture');
+var message = document.querySelector('.message');
+
+choiceButton.addEventListener('click', displayMessage);
+
+function displayMessage() {
+  event.preventDefault();
+  if (affirmationRadio.checked) {
+    hide(peacePicture);
+    show(message);
+    var affirmation = affirmations[getRandomMessage(affirmations)];
+    message.innerText = affirmation;
+    removeMessages(affirmation, affirmations);
+  }else if (mantraRadio.checked) {
+    hide(peacePicture);
+    show(message);
+    message.innerText = mantras[getRandomMessage(mantras)];
+  }else {
+    window.alert("A Mantra or Affirmation wasn't selected")
+  }
+}
+
+function removeMessages(message, messageList) {
+  for (var i = 0; i < messageList.length; i++) {
+    if (array.includes(message)) {
+      array.splice(i, 1);
+    }
+  }
+}
 
 function hide(element) {
   element.classList.add('hidden');
-}
+};
 
 function show(element) {
   element.classList.remove('hidden');
