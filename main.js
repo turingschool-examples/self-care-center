@@ -18,6 +18,7 @@ var clearButton;
 affirmationButton.addEventListener('click', enableReceive);
 mantraButton.addEventListener('click', enableReceive);
 showMainButton.addEventListener('click', resetPage);
+favMsgGrid.addEventListener('dblclick', deleteMessage);
 
 // Global Variables
 var affirmations = [
@@ -52,7 +53,8 @@ var mantras = [
   'Onward and upward.',
   'I am the sky, the rest is weather.'
 ];
-favoritedMessages = [];
+var favoritedMessages = [];
+var seenMessages = [];
 var currentMessage;
 
 // Functions & Event Handlers
@@ -149,8 +151,18 @@ function makeFavMsgGrid() {
   favMsgGrid.innerHTML = '';
   for (var i = 0; i < favoritedMessages.length; i++) {
     favMsgGrid.innerHTML += `
-    <article class="mini-message">
+    <article class="mini-message" id="${i}">
     <p>${favoritedMessages[i]}</p>
     `
   }
+}
+
+function deleteMessage() {
+  var messageToDelete = event.target.innerText;
+  for (var i = 0; i < favoritedMessages.length; i++) {
+    if (messageToDelete === favoritedMessages[i]) {
+      favoritedMessages.splice(i, 1);
+    }
+  }
+  makeFavMsgGrid();
 }
