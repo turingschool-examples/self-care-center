@@ -89,12 +89,12 @@ h2 {
     font-family: 'Quicksand', sans-serif;
 }
 
-.dislike-button {
+.clear-button {
     display: flex;
     margin-right: 12px;
     border-radius: 4px;
-    background-color: #134d71;
-    color: #ffffff;
+    background-color: #f7e4bf;
+    color: #134d71;
     width: 200px;
     height: 35px;
     padding: 0;
