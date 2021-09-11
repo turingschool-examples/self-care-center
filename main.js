@@ -43,5 +43,10 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length)
 }
 
+function toggle(hide, show) {
+  hide.classList.add('hidden');
+  show.classList.remove('hidden');
+}
+
 
 
