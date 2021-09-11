@@ -45,7 +45,7 @@ function getRandomIndex(array) {
 function displaySelectedMessage() {
     if (affirmationBTN.checked) {
          messageBox.innerText = affirmations[getRandomIndex(affirmations)];
-    } else if (mantraBTN.checked) { 
+    } if (mantraBTN.checked) { 
          messageBox.innerText = mantras[getRandomIndex(mantras)];
     }
 };
