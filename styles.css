@@ -13,14 +13,13 @@ black - #000000; */
   height: 90px;
 }
 
-.box,
-div > .box {
-  background-color: white;
-  border-radius: 4px;
-  width:50%;
-  height:50%;
-  margin-left: 50%;
+img {
+  height: 70px;
+  width: 70px;
+  /* margin-top: 50px; */
+  margin-left: 50px;
 }
+
 body{
   background-image: linear-gradient(to bottom, #134d71, #78a7c6, #f7e4bf);
   background-repeat: no-repeat;
@@ -35,17 +34,16 @@ body{
   width:50%;
 }
 
-.question{
-  margin-left: 50%;
-}
 
 /* mantra and affirmation btns*/
 .input-msg {
+  background-color: white;
   text-align: center;
   width: 50%;
-  height: 100px;
-  margin: auto;
-  padding-top: 30px;
+  height: 50%;
+  margin-left: 50%;
+  padding: 30px;
+  border-radius: 9px;
 }
 #aff-btn{
   padding-left: 30px;
@@ -62,25 +60,19 @@ label {
   color: white;
   padding:5px;
   margin: 10px;
-}
-.display-message{
-  text-align: center;
-  border-radius: 10px;
-  background: white;
-  width: 100vh;
-  height: 30vh;
-
-}
-img {
-  height: 100px;
-  width: 100px;
-  margin-top: 50px;
+  padding-bottom: 10px;
 }
 
-.box {
+.display-message {
   background-color: white;
-  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  height: 50%;
+  margin-left: 50%;
+  padding: 30px;
+  border-radius: 9px;
 }
+
 .hidden {
   display: none!important;
 }
