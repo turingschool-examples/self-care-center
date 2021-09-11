@@ -3,7 +3,7 @@ var mantraBtn = document.getElementById('mantra-btn');
 var receiveMsgBtn=document.querySelector('.receive-msg-btn');
 var selfCareImage=document.querySelector('.self-care-image');
 var messageBox=document.querySelector('.display-message');
-
+var deleteBtn = document.querySelector('.delete-button')
 
 var affirmations =[
 "I forgive myself and set myself free.",
@@ -73,11 +73,11 @@ function displayMessage(){
   if (mantraBtn.checked) {
     selfCareImage.classList.add('hidden');
     messageBox.classList.remove('hidden');
-    messageBox.innerText= `${randomMantra}`;
+    messageBox.innerText = `${randomMantra}`;
   } else if (affirmationBtn.checked) {
     selfCareImage.classList.add('hidden');
     messageBox.classList.remove('hidden');
-    messageBox.innerText= `${randomAffirmation}`;
+    messageBox.innerText = `${randomAffirmation}`;
   }
 }
 

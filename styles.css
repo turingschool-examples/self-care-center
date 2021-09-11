@@ -16,12 +16,12 @@ black - #000000; */
 img {
   height: 70px;
   width: 70px;
-  /* margin-top: 50px; */
   margin-left: 50px;
 }
 
 body{
   background-image: linear-gradient(to bottom, #134d71, #78a7c6, #f7e4bf);
+  background-attachment: fixed;
   background-repeat: no-repeat;
   height: 800px;
   width: 800px;
@@ -39,12 +39,13 @@ body{
 .input-msg {
   background-color: white;
   text-align: center;
-  width: 50%;
-  height: 50%;
-  margin-left: 50%;
+  width: 52%;
+  height: 55px;
+  margin-left: 55%;
   padding: 30px;
   border-radius: 9px;
 }
+
 #aff-btn{
   padding-left: 30px;
   padding-right: 30px;
@@ -64,12 +65,12 @@ label {
 }
 
 .display-message {
-  background-color: white;
-  text-align: center;
+  background-color: red;
+  text-align:center;
   width: 90%;
   height: 50%;
   margin-left: 50%;
-  padding: 30px;
+  margin-top: 80px;
   border-radius: 9px;
 }
 
