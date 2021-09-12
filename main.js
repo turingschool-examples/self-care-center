@@ -31,6 +31,7 @@ var mantras = ["Breathing in, I send myself love. Breathing out, I send love to 
 ]
 
 var receiveButton = document.querySelector(".display-button");
+var clearButton = document.querySelector(".clear-button")
 var image = document.querySelector(".mediation-pic")
 var quote = document.querySelector(".context")
 
@@ -40,7 +41,7 @@ function getRandomIndex(array){
   return Math.floor(Math.random() * array.length);
 };
 
-function giveTypeOfQuote(){
+function selectTypeOfQuote(){
   if (document.getElementById("affirmationQ").checked){
     quote.innerText = affirmations[getRandomIndex(affirmations)];
   } else {
@@ -48,10 +49,21 @@ function giveTypeOfQuote(){
   }
 }
 
+function showError(){
+  alert("ERROR! Please select either affirrmation or mantra!")
+}
+
+function showClearButton(){
+  clearButton.classList.remove("hidden");
+}
+
 function showQuotes(){
   if (document.getElementById("affirmationQ").checked || document.getElementById("mantraQ").checked){
     image.classList.add("hidden");
     quote.classList.remove("hidden");
-    giveTypeOfQuote();
-    }
+    showClearButton();
+    selectTypeOfQuote();
+  } else {
+    showError();
+  }
 }
