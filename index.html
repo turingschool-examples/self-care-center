@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <title>Self Care Center</title>
   </head>
   <body>
-  
+      <header class="self-care-center">
+        <h1 class="self-care-title">✨Self Care Center✨</h1>
+      </header>
+      <main> 
+        <h2>What type of message?</h2>
+        <div class="pick-type-form"> 
+          <form class="select-type-form" id="select-type-form">
+            <input type="radio" id="affirmation"
+            name="checkedMessage" value="affirmation-array"/>
+            <label class="affirmation" for="affirmation">affirmation</label>
+            <input type="radio" id="mantra"
+            name="checkedMessage" value="mantra-array"/>
+            <label class="mantra" for="mantra">mantra</label>
+          </form>
+          <button class="receieve-message" id="receieve-message">Recieve Message</button>
+        </div>
+        <div class="bottom-zen-block" id="message-box">
+          <img class="zen-figure" src="assets/meditate.svg" alt="zen -figure">
+        </div>
+        <button class="hidden clear-button" id="clear-btn">CLEAR</button>
+    </main>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
