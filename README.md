@@ -4,7 +4,9 @@
 Solo Care Center will be my 2nd solo project. In this project, I build an application using HTML, CSS and JavaScript to return either affirmations or mantras to continue positive thinking.
 *Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.*
 *Mantras are repetive phrases that are repeated again and again during mindfulness practices.*
-I build my application by starting to fill out all basic elements in HTML, then creating the style in CSS and functionality in JavaScript. From this project, I learn there is so much more to learn about HTML and CSS. I barely have scratched the surface.
+I build my application by starting to fill out all basic elements in HTML, then creating the style in CSS and functionality in JavaScript. From this project, I came to appreciate there is so much more to learn about HTML and CSS. 
+
+#### [My Gituhub](https://github.com/tanyazhuge)
 
 #### Technologies:
 Google
