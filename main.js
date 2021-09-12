@@ -52,16 +52,17 @@ function checkButtonSelected() {
           return affirmations[getRandomIndex(affirmations)];
      } else if (mantraBTN.checked) {
           return mantras[getRandomIndex(mantras)];
+     } else {
+
      }
 };
 
 function displaySelectedMessage(event) {
      event.preventDefault()
-     var message = checkButtonSelected()
+     if (affirmationBTN.checked === true || mantraBTN.checked === true) {
+     clearMessageBTN.classList.remove('hidden') 
+     } var message = checkButtonSelected()
      messageBox.innerText = message;
-     if (affirmationBTN.checked || mantraBTN.checked) {
-          return clearMessageBTN.classList.remove('hidden') 
-     } 
 };
 
 
