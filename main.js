@@ -45,7 +45,6 @@ revieveMessageBTN.addEventListener('click', displaySelectedMessage);
 
 
 //FUNCTIONS 👇
-
 function checkButtonSelected() {
      if (affirmationBTN.checked) {
           return affirmations[getRandomIndex(affirmations)];
