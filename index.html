@@ -2,25 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <title> Self Care Center </title>
   </head>
   <body>
-    <header>
+    <section class = "intro">
       <h1> ✨ Self Care Center ✨ </h1>
+    </section>
+    <section class = "select-message-form">
       <h3> Which type of message? </h3>
+    <form class = "form-display radio-container">
       <div>
-        <input type="radio" id="affirmations" name="reload_mode" value="affirmations">
-        <label for="affirmation">Affirmation</label>
-        <input type="radio" id="mantras" name="reload_mode" value="mantras">
-        <label for="mantras">Mantra</label><br>
-      </div>
-      <div class="button-container">
-      <button type="button" name="receive-message-button" id="receive-message-button">Receive Message</button>
-    </div>
-        <img src = "assets/meditate.svg" alt= "Meditating person">
-      <script type="text/javascript" src="main.js"></script>
+       <input type="radio" id="affirmations" name="radio-button" value="affirmations">
+       <label for="affirmation">Affirmation</label>
+       <input type="radio" id="mantras" name="radio-button" value="mantras">
+       <label for="mantras">Mantra</label>
+     </div>
+  <button class="receive-message" id="receive-message-button">Receive Message</button>
+</form>
+</section>
+<section class = "message-box"
+      <img class = "meditating-img" src = "assets/meditate.svg" alt= "Meditating person">
+      <p class = "hide-message-text"</p>
+</section>
+  <button class= "clear-msg hidden">Clear Message</button>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
