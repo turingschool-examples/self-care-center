@@ -34,18 +34,33 @@ var affirmationBTN = document.querySelector("#affirmation");
 var mantraBTN = document.querySelector("#mantra");
 var revieveMessageBTN = document.querySelector("#receieve-message");
 var messageBox = document.querySelector("#message-box");
+var clearMessageBTN = document.querySelector("#clear-btn");
 
 
 revieveMessageBTN.addEventListener('click', displaySelectedMessage);
+// clearMessageBTN.addEventListener('click', removeDisplayedMessage);
+
+
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length)
 }
 
+function checkButtonSelected() {
+     if (affirmationBTN.checked) {
+          return affirmations[getRandomIndex(affirmations)];
+     } else if (mantraBTN.checked) {
+          return mantras[getRandomIndex(mantras)];
+     }
+}
+
 function displaySelectedMessage() {
-    if (affirmationBTN.checked) {
-         messageBox.innerText = affirmations[getRandomIndex(affirmations)];
-    } else if (mantraBTN.checked) { 
-         messageBox.innerText = mantras[getRandomIndex(mantras)];
-    }
+     var message = checkButtonSelected()
+     if (affirmationBTN.checked) {
+     messageBox.innerText = affirmations[getRandomIndex(affirmations)];
+     } else if (mantraBTN.checked) { 
+     messageBox.innerText = mantras[getRandomIndex(mantras)];
+     }
+     clearMessageBTN.classList.remove('hidden');
 };
+
