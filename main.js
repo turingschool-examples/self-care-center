@@ -1,3 +1,4 @@
+//ARRAYS 👇
 var affirmations = [
 "I forgive myself and set myself free.",
 "I believe I can be all that I want to be.",
@@ -30,45 +31,48 @@ var mantras = [
 "Onward and upward.",
 "I am the sky, the rest is weather."];
 
+//QUERY SELECTORS 👇
 var affirmationBTN = document.querySelector("#affirmation");
-var mantraBTN = document.querySelector("#mantra");
-var revieveMessageBTN = document.querySelector("#receieve-message");
-var messageBox = document.querySelector("#message-box");
 var clearMessageBTN = document.querySelector("#clear-btn");
+var mantraBTN = document.querySelector("#mantra");
+var messageBox = document.querySelector("#message-box");
+var revieveMessageBTN = document.querySelector("#receieve-message");
 var zenFigure = document.querySelector(".zen-figure");
 
-
-revieveMessageBTN.addEventListener('click', displaySelectedMessage);
+//EVENT LISTENERS 👇
 clearMessageBTN.addEventListener('click', removeDisplayedMessage);
+revieveMessageBTN.addEventListener('click', displaySelectedMessage);
 
 
-
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length)
-}
+//FUNCTIONS 👇
 
 function checkButtonSelected() {
      if (affirmationBTN.checked) {
           return affirmations[getRandomIndex(affirmations)];
      } else if (mantraBTN.checked) {
           return mantras[getRandomIndex(mantras)];
-     } else {
-
-     }
-};
+     } else showAlert()
+          return displaySelectedMessage()
+}; 
 
 function displaySelectedMessage(event) {
      event.preventDefault()
-     if (affirmationBTN.checked === true || mantraBTN.checked === true) {
-     clearMessageBTN.classList.remove('hidden') 
-     } var message = checkButtonSelected()
+     var message = checkButtonSelected()
      messageBox.innerText = message;
+     clearMessageBTN.classList.remove('hidden') 
 };
 
+function getRandomIndex(array) {
+     return Math.floor(Math.random() * array.length)
+};
 
 function removeDisplayedMessage(event) {
-zenFigure.classList.remove('hidden');
-clearMessageBTN.classList.add('hidden');
-location.reload()
+     zenFigure.classList.remove('hidden');
+     clearMessageBTN.classList.add('hidden');
+     location.reload()
+};
+
+function showAlert() {
+     alert('Please select a message type!');
 };
 
