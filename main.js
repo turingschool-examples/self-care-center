@@ -35,10 +35,11 @@ var mantraBTN = document.querySelector("#mantra");
 var revieveMessageBTN = document.querySelector("#receieve-message");
 var messageBox = document.querySelector("#message-box");
 var clearMessageBTN = document.querySelector("#clear-btn");
+var zenFigure = document.querySelector(".zen-figure");
 
 
 revieveMessageBTN.addEventListener('click', displaySelectedMessage);
-// clearMessageBTN.addEventListener('click', removeDisplayedMessage);
+clearMessageBTN.addEventListener('click', removeDisplayedMessage);
 
 
 
@@ -52,15 +53,21 @@ function checkButtonSelected() {
      } else if (mantraBTN.checked) {
           return mantras[getRandomIndex(mantras)];
      }
-}
+};
 
-function displaySelectedMessage() {
+function displaySelectedMessage(event) {
+     event.preventDefault()
      var message = checkButtonSelected()
-     if (affirmationBTN.checked) {
-     messageBox.innerText = affirmations[getRandomIndex(affirmations)];
-     } else if (mantraBTN.checked) { 
-     messageBox.innerText = mantras[getRandomIndex(mantras)];
-     }
-     clearMessageBTN.classList.remove('hidden');
+     messageBox.innerText = message;
+     if (affirmationBTN.checked || mantraBTN.checked) {
+          return clearMessageBTN.classList.remove('hidden') 
+     } 
+};
+
+
+function removeDisplayedMessage(event) {
+zenFigure.classList.remove('hidden');
+clearMessageBTN.classList.add('hidden');
+location.reload()
 };
 
