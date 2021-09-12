@@ -31,8 +31,10 @@ var mantras = ["Breathing in, I send myself love. Breathing out, I send love to 
 ]
 
 // querySelectors
+//button selectors
 var receiveButton = document.querySelector(".display-button");
 var clearButton = document.querySelector(".clear-button");
+// element selectors
 var image = document.querySelector(".mediation-pic");
 var quote = document.querySelector(".quote-area");
 
