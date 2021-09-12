@@ -1,5 +1,5 @@
 # "Self Care Center" Solo Project (2108)
-[Our project can be found here!](https://delilahrois.github.io/hang-in-there/)
+[Our project can be found here!](file:///Users/susannacarey/turing/mod_1/self-care-center/index.html)
 
 ## Abstract
 	Self Care Center will allow users to:
