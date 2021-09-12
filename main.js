@@ -32,9 +32,9 @@ var mantras = ["Breathing in, I send myself love. Breathing out, I send love to 
 
 // querySelectors
 var receiveButton = document.querySelector(".display-button");
-var clearButton = document.querySelector(".clear-button")
-var image = document.querySelector(".mediation-pic")
-var quote = document.querySelector(".context")
+var clearButton = document.querySelector(".clear-button");
+var image = document.querySelector(".mediation-pic");
+var quote = document.querySelector(".quote-area");
 
 // eventListener
 receiveButton.addEventListener("click", showQuote);
@@ -75,5 +75,5 @@ function showQuote(){
 function clearQuote(){
   quote.classList.add("hidden");
   image.classList.remove("hidden");
-  clearButton.classList.add("hidden")
-}
+  clearButton.classList.add("hidden");
+};
