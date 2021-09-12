@@ -30,13 +30,17 @@ var mantras = ["Breathing in, I send myself love. Breathing out, I send love to 
 "I am the sky, the rest is weather.",
 ]
 
+// querySelectors
 var receiveButton = document.querySelector(".display-button");
 var clearButton = document.querySelector(".clear-button")
 var image = document.querySelector(".mediation-pic")
 var quote = document.querySelector(".context")
 
-receiveButton.addEventListener("click", showQuotes);
+// eventListener
+receiveButton.addEventListener("click", showQuote);
+clearButton.addEventListener("click", clearQuote);
 
+// functions
 function getRandomIndex(array){
   return Math.floor(Math.random() * array.length);
 };
@@ -47,17 +51,17 @@ function selectTypeOfQuote(){
   } else {
     quote.innerText = mantras[getRandomIndex(mantras)];
   }
-}
+};
 
 function showError(){
-  alert("ERROR! Please select either affirrmation or mantra!")
-}
+  alert("ERROR! Please select either affirrmation or mantra!");
+};
 
 function showClearButton(){
   clearButton.classList.remove("hidden");
-}
+};
 
-function showQuotes(){
+function showQuote(){
   if (document.getElementById("affirmationQ").checked || document.getElementById("mantraQ").checked){
     image.classList.add("hidden");
     quote.classList.remove("hidden");
@@ -66,4 +70,10 @@ function showQuotes(){
   } else {
     showError();
   }
+};
+
+function clearQuote(){
+  quote.classList.add("hidden");
+  image.classList.remove("hidden");
+  clearButton.classList.add("hidden")
 }
