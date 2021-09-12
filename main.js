@@ -48,21 +48,29 @@ var img = document.querySelector('img');
 //random message
 var randomMessage = document.querySelector('.random-message');
 
-//event listeners
-receiveButton.addEventListener('click', showMessage);
+//loading animation
+var animation = document.querySelector('.loader');
 
+//event listeners
+receiveButton.addEventListener('click', function(){
+  if(affirmRadioButton.checked || mantraRadioButton.checked){
+    runAnimation();
+    setTimeout(showMessage, 2000);
+  }
+});
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
 function display(array, index){
-  img.classList.add('hidden');
   randomMessage.innerText = array[index];
   randomMessage.classList.remove('hidden');
 }
 
 function showMessage(){
+  animation.classList.add('hidden');
+
   var randomAffirmIndex = getRandomIndex(affirmations);
   var randomMantraIndex = getRandomIndex(mantras);
 
@@ -74,6 +82,11 @@ function showMessage(){
   }
 }
 
+function runAnimation(){
+  img.classList.add('hidden');
+  randomMessage.classList.add('hidden');
+  animation.classList.remove('hidden');
+}
 
 
 

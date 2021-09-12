@@ -31,6 +31,11 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color:#78a7c6;
+  transform: translateY(-2px);
+}
+
 .message-option{
   font-family: "Quicksand", sans-serif;
   font-style: italic;
@@ -76,6 +81,7 @@ button {
   font-weight: normal;
   text-align: center;
   padding: 30px;
+  animation: fadeIn linear 2s;
 }
 
 .hidden {
@@ -87,6 +93,49 @@ img {
   width: 70px;
   height: auto;
 }
+
+/* loading animation */
+.loader {
+  height: 50px;
+  transform-origin: bottom center;
+  animation: rotate 3s linear infinite;
+  margin-top: 25px;
+}
+
+.circle {
+  display: inline-block;
+  background-color: #f7e4bf;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: grow 2.5s linear infinite;
+  margin: -10px;
+}
+
+.circle:nth-child(2) {
+  background-color: #78a7c6;
+  animation-delay: 0.75s;
+}
+
+@keyframes rotate {
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes grow {
+  50%{
+    transform: scale(1);
+  }
+}
+
+/* text animation */
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
 
 @media only screen and (max-width: 640px) {
   .divider{
