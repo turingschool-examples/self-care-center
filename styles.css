@@ -6,6 +6,7 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
 body{
   background: rgb(19,77,113);
   background: linear-gradient(180deg, rgba(19,77,113,1) 0%, rgba(120,167,198,1) 50%, rgba(247,228,191,1) 100%) fixed;
@@ -18,11 +19,6 @@ body{
   color: white;
 }
 
-.message-option{
-  font-family: "Quicksand", sans-serif;
-  font-style: italic;
-}
-
 button {
   font-family: "Quicksand", sans-serif;
   display: block;
@@ -32,13 +28,22 @@ button {
   border-radius: 5px;
   color: white;
   padding: 10px 20px;
-
+  cursor: pointer;
 }
 
-.question{
+.message-option{
+  font-family: "Quicksand", sans-serif;
+  font-style: italic;
+}
+
+.sub-header{
   font-family: "Quicksand", sans-serif;
   text-align: center;
   color: white;
+}
+
+.divider{
+  height: 90px;
 }
 
 .container{
@@ -49,10 +54,6 @@ button {
   height: 100px;
   margin: auto;
   color: black;
-}
-
-.divider{
-  height: 90px;
 }
 
 .large{
@@ -73,7 +74,8 @@ button {
   font-family: "Quicksand", sans-serif;
   font-size: 20px;
   font-weight: normal;
-  padding-top: 35px;
+  text-align: center;
+  padding: 30px;
 }
 
 .hidden {
@@ -84,5 +86,28 @@ img {
   display: block;
   width: 70px;
   height: auto;
-  /* margin: auto; */
+}
+
+@media only screen and (max-width: 640px) {
+  .divider{
+    height: 30px;
+  }
+
+  .container{
+    width: 80%;
+    height: 100px;
+  }
+
+  .large{
+    width: 90%;
+    height: 200px;
+  }
+
+  button {
+    padding: 10px 20px;
+  }
+
+  .random-message {
+    padding-top: 50px;
+  }
 }
