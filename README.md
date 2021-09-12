@@ -7,7 +7,7 @@ Solo Care Center will be my 2nd solo project. In this project, I build an applic
 
 I build my application by starting to fill out all basic elements in HTML, then creating the style in CSS and functionality in JavaScript. From this project, I came to appreciate there is so much more to learn about HTML and CSS.
 
-#### [Tanya's Gituhub](https://github.com/tanyazhuge)
+#### [Tanya's GitHub](https://github.com/tanyazhuge)
 
 #### Resources:
 - Google
@@ -21,3 +21,5 @@ Please take a look at my application [here](https://tanyazhuge.github.io/self-ca
 
 ##### Main Page of application
 <img width="969" alt="Screen Shot 2021-09-12 at 13 58 23" src="https://user-images.githubusercontent.com/87670195/133002594-626d3f06-5c61-4e25-9776-fd793766b333.png">
+
+#### Live life to the fullest, and focus on the positive. -Matt Cameron #### 
