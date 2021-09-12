@@ -30,28 +30,50 @@ var mantras = ["Breathing in, I send myself love. Breathing out, I send love to 
 "I am the sky, the rest is weather.",
 ]
 
+// querySelectors
 var receiveButton = document.querySelector(".display-button");
+var clearButton = document.querySelector(".clear-button")
 var image = document.querySelector(".mediation-pic")
 var quote = document.querySelector(".context")
 
-receiveButton.addEventListener("click", showQuotes);
+// eventListener
+receiveButton.addEventListener("click", showQuote);
+clearButton.addEventListener("click", clearQuote);
 
+// functions
 function getRandomIndex(array){
   return Math.floor(Math.random() * array.length);
 };
 
-function giveTypeOfQuote(){
+function selectTypeOfQuote(){
   if (document.getElementById("affirmationQ").checked){
     quote.innerText = affirmations[getRandomIndex(affirmations)];
   } else {
     quote.innerText = mantras[getRandomIndex(mantras)];
   }
-}
+};
 
-function showQuotes(){
+function showError(){
+  alert("ERROR! Please select either affirrmation or mantra!");
+};
+
+function showClearButton(){
+  clearButton.classList.remove("hidden");
+};
+
+function showQuote(){
   if (document.getElementById("affirmationQ").checked || document.getElementById("mantraQ").checked){
     image.classList.add("hidden");
     quote.classList.remove("hidden");
-    giveTypeOfQuote();
-    }
+    showClearButton();
+    selectTypeOfQuote();
+  } else {
+    showError();
+  }
+};
+
+function clearQuote(){
+  quote.classList.add("hidden");
+  image.classList.remove("hidden");
+  clearButton.classList.add("hidden")
 }
