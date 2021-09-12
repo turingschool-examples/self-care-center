@@ -51,14 +51,14 @@ function checkButtonSelected() {
      } else if (mantraBTN.checked) {
           return mantras[getRandomIndex(mantras)];
      } else showAlert()
-          return displaySelectedMessage()
+          return displaySelectedMessage();
 }; 
 
 function displaySelectedMessage(event) {
      event.preventDefault()
      var message = checkButtonSelected()
      messageBox.innerText = message;
-     clearMessageBTN.classList.remove('hidden') 
+     clearMessageBTN.classList.remove('hidden');
 };
 
 function getRandomIndex(array) {
