@@ -6,3 +6,176 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+body {
+  background: linear-gradient(180deg, rgba(19,77,113,1) 0%, rgba(120,167,198,1) 50%, rgba(247,228,191,1) 100%) fixed;
+}
+
+.affirm-gradient {
+  background: linear-gradient(0deg, #DCE9F5, #6595DA) fixed;
+  animation: backgroundAnimation 10s ease infinite;
+}
+
+.mantra-gradient {
+  background: linear-gradient(0deg, #f7e4bf, #11A797) fixed;
+  animation: backgroundAnimation 10s ease infinite;
+}
+
+.title {
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  margin-top: 60px;
+  color: white;
+}
+
+button {
+  font-family: "Quicksand", sans-serif;
+  display: block;
+  margin: auto;
+  background: #134d71;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color:#78a7c6;
+  transform: translateY(-2px);
+}
+
+.message-option {
+  font-family: "Quicksand", sans-serif;
+  font-style: italic;
+}
+
+.sub-header {
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  color: white;
+}
+
+.divider {
+  height: 60px;
+}
+
+.large-divider {
+  height:90px;
+}
+
+.container {
+  background-color: white;
+  /* justify-content: space-evenly; */
+  border-radius: 10px;
+  width: 40%;
+  height: 100px;
+  margin: auto;
+  color: black;
+}
+
+.large {
+  width: 60%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.radio-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.random-message {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+  padding: 30px;
+  animation: fadeIn linear 2s;
+}
+
+.hidden {
+  display: none;
+}
+
+img {
+  display: block;
+  width: 70px;
+  height: auto;
+}
+
+/* loading animation */
+.loader {
+  height: 50px;
+  transform-origin: bottom center;
+  animation: rotate 3s linear infinite;
+  margin-top: 25px;
+}
+
+.circle {
+  display: inline-block;
+  background-color: #f7e4bf;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: grow 2.5s linear infinite;
+  margin: -10px;
+}
+
+.circle:nth-child(2) {
+  background-color: #78a7c6;
+  animation-delay: 0.75s;
+}
+
+@keyframes rotate {
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes grow {
+  50%{
+    transform: scale(1);
+  }
+}
+
+/* text animation */
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@keyframes backgroundAnimation {
+  0%{background-position:50% 0%}
+  50%{background-position: 51% 100%}
+  100%{background-position:50% 0%}
+}
+
+
+@media only screen and (max-width: 640px) {
+  .divider{
+    height: 30px;
+  }
+
+  .container {
+    width: 80%;
+    height: 100px;
+  }
+
+  .large {
+    width: 90%;
+    height: 200px;
+  }
+
+  button {
+    padding: 10px 20px;
+  }
+
+  .random-message {
+    padding-top: 50px;
+  }
+}
