@@ -51,7 +51,10 @@ var randomMessage = document.querySelector('.random-message');
 //loading animation
 var animation = document.querySelector('.loader');
 
-//event listeners
+//background
+var background = document.querySelector('body');
+
+//⬇️ event listeners⬇️
 receiveButton.addEventListener('click', function(){
   if(affirmRadioButton.checked || mantraRadioButton.checked){
     runAnimation();
@@ -75,9 +78,13 @@ function showMessage(){
   var randomMantraIndex = getRandomIndex(mantras);
 
   if(affirmRadioButton.checked){
+    background.classList.remove('mantra-gradient');
+    background.classList.add('affirm-gradient');
     display(affirmations, randomAffirmIndex);
   }
   if(mantraRadioButton.checked){
+    background.classList.remove('affirm-gradient');
+    background.classList.add('mantra-gradient');
     display(mantras, randomMantraIndex);
   }
 }

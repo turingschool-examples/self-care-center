@@ -7,12 +7,21 @@ white - #ffffff;
 black - #000000;
 */
 
-body{
-  background: rgb(19,77,113);
+body {
   background: linear-gradient(180deg, rgba(19,77,113,1) 0%, rgba(120,167,198,1) 50%, rgba(247,228,191,1) 100%) fixed;
 }
 
-.title{
+.affirm-gradient {
+  background: linear-gradient(0deg, #DCE9F5, #6595DA) fixed;
+  animation: backgroundAnimation 10s ease infinite;
+}
+
+.mantra-gradient {
+  background: linear-gradient(0deg, #f7e4bf, #11A797) fixed;
+  animation: backgroundAnimation 10s ease infinite;
+}
+
+.title {
   font-family: "Quicksand", sans-serif;
   text-align: center;
   margin-top: 60px;
@@ -36,22 +45,26 @@ button:hover {
   transform: translateY(-2px);
 }
 
-.message-option{
+.message-option {
   font-family: "Quicksand", sans-serif;
   font-style: italic;
 }
 
-.sub-header{
+.sub-header {
   font-family: "Quicksand", sans-serif;
   text-align: center;
   color: white;
 }
 
-.divider{
-  height: 90px;
+.divider {
+  height: 60px;
 }
 
-.container{
+.large-divider {
+  height:90px;
+}
+
+.container {
   background-color: white;
   /* justify-content: space-evenly; */
   border-radius: 10px;
@@ -61,14 +74,14 @@ button:hover {
   color: black;
 }
 
-.large{
+.large {
   width: 60%;
   height: 150px;
   display: flex;
   justify-content: center;
 }
 
-.radio-buttons{
+.radio-buttons {
   display: flex;
   justify-content: space-evenly;
   padding-top: 15px;
@@ -136,18 +149,24 @@ img {
   100% {opacity:1;}
 }
 
+@keyframes backgroundAnimation {
+  0%{background-position:50% 0%}
+  50%{background-position: 51% 100%}
+  100%{background-position:50% 0%}
+}
+
 
 @media only screen and (max-width: 640px) {
   .divider{
     height: 30px;
   }
 
-  .container{
+  .container {
     width: 80%;
     height: 100px;
   }
 
-  .large{
+  .large {
     width: 90%;
     height: 200px;
   }
