@@ -22,6 +22,13 @@ favMsgGrid.addEventListener('dblclick', deleteMessage);
 
 // Global Variables
 var affirmations = [
+  // '1',
+  // '2',
+  // '3',
+  // '4',
+  // '5',
+  // '6',
+  // '7',
   'I forgive myself and set myself free.',
   'I believe I can be all that I want to be.',
   'I am in the process of becoming the best version of myself.',
@@ -54,7 +61,8 @@ var mantras = [
   'I am the sky, the rest is weather.'
 ];
 var favoritedMessages = [];
-var seenMessages = [];
+var seenAffirmations = [];
+var seenMantras = [];
 var currentMessage;
 
 // Functions & Event Handlers
@@ -83,18 +91,44 @@ function getRandomIndex(messageType) {
 function generateMessage() {
   if (affirmationButton.checked) {
     currentMessage = getRandomIndex(affirmations);
+    noRepeats(affirmations, seenAffirmations);
   } else if (mantraButton.checked){
     currentMessage = getRandomIndex(mantras);
+    noRepeats(mantras, seenMantras)
   }
   return currentMessage;
 }
 
+function noRepeats(messageType, seenArray) {
+  if (seenArray.length !== messageType.length) {
+    if (seenArray.includes(currentMessage)) {
+      generateMessage();
+    } else {
+      seenArray.push(currentMessage);
+    }
+  } else {
+    currentMessage = resetNoRepeats(messageType);
+  }
+}
+
+function resetNoRepeats(messageType) {
+  if (messageType === affirmations) {
+    seenAffirmations = [currentMessage];
+    var viewedAll = 'affirmations';
+  } else {
+    seenMantras = [currentMessage];
+    var viewedAll = 'mantras';
+  }
+  likeButton.classList.add('hidden');
+  return `You have viewed all ${viewedAll}. You will now start seeing repeats.`;
+}
+
 function displayMessage() {
+  enableFavorite();
+  changeHidden([personImage], [likeButton, messageDisplay]);
   message.innerText = generateMessage();
-  changeHidden([personImage], [messageDisplay]);
   displayClearButton();
   displayViewFavsButton();
-  enableFavorite();
   likeButton.classList.remove('pink');
   if (favoritedMessages.includes(currentMessage)) {
     likeButton.classList.add('pink');
