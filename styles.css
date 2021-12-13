@@ -1,8 +1,14 @@
-/* font-family: 'Quicksand', sans-serif;
-COLORS
-light-yellow - #f7e4bf;
-light-blue - #78a7c6;
-dark-blue - #134d71;
-white - #ffffff;
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  width: 100%;
+  background: linear-gradient(to bottom, #134d71, #78a7c6, #f7e4bf), fixed;
+  text-align: center;
+}
+
+
 black - #000000;
-*/
