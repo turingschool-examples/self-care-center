@@ -9,11 +9,18 @@ body {
   width: 100%;
   background: linear-gradient(to bottom, #134d71, #78a7c6, #f7e4bf), fixed;
   text-align: center;
+}
 
+button {
+  background: #134d71;
 }
 
 .heading {
   padding: 10px;
 }
 
-black - #000000;
+.box {
+  background: #ffffff;
+  font-style: italic;
+  color: #000000;
+}
