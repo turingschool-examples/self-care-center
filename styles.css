@@ -24,6 +24,7 @@ button {
 }
 
 .box {
+  padding: 5px;
   background: #ffffff;
   font-style: italic;
   color: #000000;
