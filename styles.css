@@ -12,7 +12,11 @@ body {
 }
 
 button {
+  display: inline-block;
   background: #134d71;
+  color: #ffffff;
+  width: 180px;
+  border-radius: 4px;
 }
 
 .heading {
@@ -23,4 +27,5 @@ button {
   background: #ffffff;
   font-style: italic;
   color: #000000;
+  border-radius: 8px;
 }
