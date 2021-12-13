@@ -3,13 +3,17 @@ html {
 }
 
 body {
+  box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
   color: #ffffff;
   width: 100%;
   background: linear-gradient(to bottom, #134d71, #78a7c6, #f7e4bf), fixed;
   text-align: center;
-  margin: auto;
+
 }
 
+.heading {
+  padding: 10px;
+}
 
 black - #000000;
