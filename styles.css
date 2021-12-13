@@ -8,6 +8,7 @@ body {
   width: 100%;
   background: linear-gradient(to bottom, #134d71, #78a7c6, #f7e4bf), fixed;
   text-align: center;
+  margin: auto;
 }
 
 
