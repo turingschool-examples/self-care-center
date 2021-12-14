@@ -6,3 +6,99 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+
+/* ------ GLOBAL RULES ------- */
+
+* {
+    /* border: 2px solid red; */
+    margin: 0px;
+    padding: 0px;
+}
+
+.hidden {
+    display: none!important;
+  }
+
+/* ------- RULES FOR THE BODY OF THE PAGE --------- */
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.header,
+.sub-header {
+    color: white;
+}
+
+.header {
+    margin-top: 10px;
+}
+
+.sub-header {
+    margin-top: 100px;
+}
+
+.message-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    width: 50%;
+    height: 12%;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 90px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+label {
+    font-style: italic;
+    margin-right: 20px;
+    margin-left: 0px;
+}
+
+input {
+    margin-left: 60px;
+}
+
+#affirmation {
+    margin-left: 10px;
+}
+
+.message-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: 20%;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+img {
+    height: 50%;
+}
+
+#receive-button {
+    width: 28%;
+    background-color: #134d71;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #134d71;
+}
