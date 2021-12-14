@@ -6,3 +6,73 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+body {
+    background-image:linear-gradient(#134d71,#78a7c6,#f7e4bf);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 8%;
+}
+
+h2 {
+    text-align: center;
+    color: #ffffff
+}
+
+#main-selector {
+    background-color: #ffffff;
+    text-align: center;
+    border: 0px solid #000000;
+    border-radius: 5px;
+    padding: 13px;
+    width: 45%;
+    height: 30%;
+    margin: auto;
+    font-style: italic;
+    
+}
+
+.left-radio {
+    
+}
+
+.right-radio {
+    
+}
+
+#recieve-button {
+    background-color: #134d71;
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 5px;
+    padding: 3px 25px;
+    border: 0px
+}
+
+.option-select {
+    display: flex;
+    justify-content: space-around;
+}
+
+#image-wrapper {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 65%;
+    padding-block: 3%;
+    margin:auto;
+    margin-top: 8%;
+}
+
+#meditation-img {
+    width: 10%
+}
