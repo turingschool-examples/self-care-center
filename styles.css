@@ -38,6 +38,8 @@ label {
   background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
 }
 
 #selection {
@@ -69,4 +71,5 @@ label {
   border-radius: 8px;
   width: 180px;
   height: 30px;
+  margin: auto;
 }
