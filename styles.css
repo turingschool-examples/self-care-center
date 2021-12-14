@@ -6,3 +6,81 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+h1 {
+  margin-bottom: 100px;
+}
+
+h1, h2 {
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+section {
+  background: white;
+  border-radius: 10px;
+  padding: 6px;
+}
+
+form {
+  padding: 4px;
+}
+
+#radio-btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+label {
+  font-family: 'Quicksand', sans-serif;
+  font-style: italic;
+}
+
+.background {
+  background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+#selection {
+  width: 570px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+#message {
+  width: 900px;
+  height: 150px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+#meditate-icon {
+  width: 80px;
+  display: block;
+  margin: auto;
+}
+
+#receive-btn {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  background: #134d71;
+  color: white;
+  display: block;
+  border: 0;
+  border-radius: 6px;
+  width: 180px;
+  height: 28px;
+  margin: auto;
+  margin-top: 15px;
+}
+
+#affirmation, #mantra {
+  margin-top: 8px;
+}
