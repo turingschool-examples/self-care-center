@@ -4,5 +4,23 @@ light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
-black - #000000;
-*/
+black - #000000; */
+
+* {
+  /* box-sizing: border-box; */
+  font-family: 'Quicksand', sans-serif;
+  margin: auto;
+  text-align: center;
+  background-color: #134d71;
+  color: white;
+}
+
+.radioButtons {
+  background-color: white;
+  color: black;
+}
+
+.button {
+  background-color: #134d71;
+  color: white;
+}
