@@ -29,18 +29,27 @@ form {
   padding: 10px;
 }
 
+label {
+  font-family: 'Quicksand', sans-serif;
+  font-style: italic;
+}
+
 .background {
   background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
-#message {
-  
+#selection {
+  width: 600px;
+  margin: auto;
+  text-align: center;
 }
 
-#selection {
-
+#message {
+  width: 1000px;
+  margin: auto;
+  text-align: center;
 }
 
 #meditate-icon {
@@ -48,4 +57,16 @@ form {
   display: block;
   margin: auto;
   padding: 50px;
+}
+
+#receive-btn {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  background: #134d71;
+  color: white;
+  display: block;
+  border: 0;
+  border-radius: 8px;
+  width: 180px;
+  height: 30px;
 }
