@@ -8,13 +8,10 @@ black - #000000;
 */
 
 h1 {
-  font-family: 'Quicksand', sans-serif;
-  color: #ffffff;
-  text-align: center;
   margin-bottom: 100px;
 }
 
-h2 {
+h1, h2 {
   font-family: 'Quicksand', sans-serif;
   color: #ffffff;
   text-align: center;
@@ -23,11 +20,16 @@ h2 {
 section {
   background: white;
   border-radius: 10px;
-  padding: 10px;
+  padding: 6px;
 }
 
 form {
-  padding: 10px;
+  padding: 4px;
+}
+
+#radio-btns {
+  display: flex;
+  justify-content: space-around;
 }
 
 label {
@@ -44,7 +46,7 @@ label {
 }
 
 #selection {
-  width: 600px;
+  width: 570px;
   margin: auto;
   text-align: center;
   margin-bottom: 100px;
@@ -72,8 +74,13 @@ label {
   color: white;
   display: block;
   border: 0;
-  border-radius: 8px;
+  border-radius: 6px;
   width: 180px;
-  height: 30px;
+  height: 28px;
   margin: auto;
+  margin-top: 15px;
+}
+
+#affirmation, #mantra {
+  margin-top: 8px;
 }
