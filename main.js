@@ -1,6 +1,7 @@
 var receiveMessage = document.querySelector('.receive-button');
 var radioAffirmation = document.querySelector('#affirmation');
 var radioMantra = document.querySelector('#mantra');
+var message = "";
 
 var affirmations = [
   "I forgive myself and set myself free.",
@@ -38,13 +39,20 @@ var mantras = [
 
 receiveMessage.addEventListener('click', function() {
   getMessage();
-})
+});
 
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
+
+
 function getMessage() {
-  var message;
+  if (document.getElementById(radioAffirmation).checked === true) {
+    message = affirmations[getRandomIndex(affirmations)];
+  } else if (document.getElementById(radioMantra).checked === true) {
+    message = mantras[getRandomIndex(mantras)];
+  }
+  console.log(message);
 }

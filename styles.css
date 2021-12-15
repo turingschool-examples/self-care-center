@@ -58,3 +58,8 @@ form {
   border: 5px;
   padding: 60px;
   width: 45%
+}
+
+.hidden {
+  display: none!important;
+}
