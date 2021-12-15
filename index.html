@@ -11,11 +11,11 @@
       <form>
         <div id="radio-btns">
           <div>
-            <input type="radio" id="affirmation" value="affirmation">
+            <input type="radio" name="pickMsg" id="affirmation" value="affirmation">
             <label for="affirmation">affirmation</label>
         </div>
           <div>
-            <input type="radio" id="mantra" value="mantra">
+            <input type="radio" name="pickMsg" id="mantra" value="mantra">
             <label for="affirmation">mantra</label>
           </div>
         </div>
@@ -24,7 +24,7 @@
     </section>
     <section id="message">
       <img src="assets/meditate.svg" id="meditate-icon">
-      <p id="msg"></p>
+      <p class="hidden" id="msg">This is my message.</p>
     </section>
     <script type="text/javascript" src="main.js"></script>
   </body>

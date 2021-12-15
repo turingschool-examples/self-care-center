@@ -84,3 +84,7 @@ label {
 #affirmation, #mantra {
   margin-top: 8px;
 }
+
+.hidden {
+  display: none;
+}
