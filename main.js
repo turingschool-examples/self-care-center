@@ -36,3 +36,9 @@ var mantras = [
   "Onward and upward.",
   "I am the sky, the rest is weather."
 ];
+
+receiveMsgButton.addEventListener('click', getMessage);
+
+function getRandomIndex(array) {
+  return array[Math.floor(Math.random * array.length)];
+}
