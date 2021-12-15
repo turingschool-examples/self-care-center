@@ -51,6 +51,20 @@ function getRandomMessage(array) {
     return Math.floor(Math.random() * array.length)
 };
 
+
+function receiveAffirmation() {
+    showMessage(yourMessage);
+    hideImage(meditationImage);
+    yourMessage.innerText = affirmations[getRandomMessage(affirmations)];
+};
+
+function receiveMantra() {
+    showMessage(yourMessage);
+    hideImage(meditationImage);
+    yourMessage.innerText = mantras[getRandomMessage(mantras)];
+};
+
+
 function showMessage(selectorVariable) {
     selectorVariable.classList.remove('hidden')
 };
