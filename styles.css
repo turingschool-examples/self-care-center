@@ -62,17 +62,21 @@ h2 {
     justify-content: space-around;
 }
 
-#image-wrapper {
+#display-section {
     display: flex;
     justify-content: center;
     border-radius: 10px;
     background-color: #ffffff;
     width: 65%;
-    padding-block: 3%;
+    padding: 3%;
     margin:auto;
     margin-top: 8%;
 }
 
 #meditation-img {
-    width: 10%
+    width: 75px
+}
+
+.hidden {
+    display:none;
 }
