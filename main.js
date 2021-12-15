@@ -1,6 +1,7 @@
 // Selector Variables here:
 
-
+var meditationImage = document.querySelector('.meditation-img');
+var yourMessage = document.querySelector('.your-message');
 
 
 
@@ -49,5 +50,14 @@ var mantras = [
 function getRandomMessage(array) {
     return Math.floor(Math.random() * array.length)
 };
+
+function showMessage(selectorVariable) {
+    selectorVariable.classList.remove('hidden')
+};
+
+function hideImage(selectorVariable) {
+    selectorVariable.classList.add('hidden')
+};
+
 
 
