@@ -11,17 +11,14 @@ body {
   text-align: center;
 }
 
-/* button {
-  display: inline-block;
-  background: #134d71;
-  color: #ffffff;
-  width: 180px;
-  border-radius: 4px;
-} */
-
 form {
   display: flex;
   justify-content: center;
+}
+
+.spacing {
+  /* padding: 100px; */
+  margin: 100px;
 }
 
 .receive-button {
@@ -51,4 +48,10 @@ form {
 .radio-container {
   display: flex;
   justify-content: space-evenly;
-}<
+}
+
+.meditate-box {
+  font-style: normal;
+  border: 5px;
+  padding: 60px;
+  width: 45%
