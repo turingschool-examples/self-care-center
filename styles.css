@@ -91,6 +91,8 @@ input {
 
 img {
     height: 50%;
+    margin-left: 320px;
+    margin-right: 0px;
 }
 
 #receive-button {
@@ -101,4 +103,21 @@ img {
     border-radius: 3px;
     border-style: solid;
     border-color: #134d71;
+}
+
+#clear-button {
+    width: 11%;
+    background-color: #134d71;
+    opacity: 0.5;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #134d71;
+    margin-left: 200px;
+    margin-top: 80px;
+}
+
+.your-message {
+    margin-left: 250px;
 }

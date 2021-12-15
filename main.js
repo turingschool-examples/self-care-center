@@ -72,14 +72,23 @@ function pickAMessage() {
 function receiveAffirmation() {
     showMessage(yourMessage);
     hideImage(meditationImage);
+    disableReceiveBtn();
     yourMessage.innerText = affirmations[getRandomMessage(affirmations)];
+
 };
 
 function receiveMantra() {
     showMessage(yourMessage);
     hideImage(meditationImage);
+    disableReceiveBtn();
     yourMessage.innerText = mantras[getRandomMessage(mantras)];
 };
+
+
+function disableReceiveBtn() {
+    messageButton.disabled = true;
+}
+
 
 function showMessage(selectorVariable) {
     selectorVariable.classList.remove('hidden')
@@ -92,7 +101,7 @@ function hideImage(selectorVariable) {
 
 
 /* ERROR HANDLING 
-1. need to make the Receive Message button disabled or hidden if
+1. DONE need to make the Receive Message button disabled or hidden if
     a radio button is not selected.
 
 2. Create a clear message button (maybe down in the
