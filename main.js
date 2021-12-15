@@ -1,9 +1,14 @@
 // query selector variables go here👇
+var radioAffirmation = document.querySelector('.radio-affirmation');
+var radioMantra = document.querySelector('.radio-mantra')
+var receiveMessageButton = document.querySelector('.receive-message');
 
 
 
 // event listeners go here👇
-
+radioAffirmation.addEventListener('click', affirmationContent);
+radioMantra.addEventListener('click', mantraContent);
+receiveMessageButton.addEventListener('click', displayMessage);
 
 
 //data👇
