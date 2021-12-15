@@ -95,7 +95,6 @@ function clearMessage() {
     hideItem(yourMessage);
     showItem(meditationImage);
     hideItem(clearButton);
-    disableReceiveBtn()
     clearRadio();
 };
 
@@ -104,18 +103,6 @@ function clearRadio() {
     mantraRadio.checked = false;
 };
 
-// function showReceiveBtn() {
-//     if (affirmationRadio.checked || mantraRadio.checked) {
-//         showItem(messageButton);
-//     }
-// };
-
-// function disableReceiveBtn() {
-//     if (!affirmationRadio.checked || mantraRadio.checked) {
-//         messageButton.disabled = true;
-//     }
-// };
-
 function showItem(selectorVariable) {
     selectorVariable.classList.remove('hidden')
 };
@@ -123,9 +110,3 @@ function showItem(selectorVariable) {
 function hideItem(selectorVariable) {
     selectorVariable.classList.add('hidden')
 };
-
-
-
-
-// receive message always visible but disabled if radio buttons not 
-// selected.

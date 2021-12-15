@@ -115,9 +115,8 @@ img {
 }
 
 #clear-button {
-    width: 11%;
+    width: 13%;
     background-color: #134d71;
-    /* opacity: 0.5; */
     color: white;
     font-family: 'Quicksand', sans-serif;
     border-radius: 3px;
