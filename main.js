@@ -37,7 +37,10 @@ var mantras = [
   "I am the sky, the rest is weather."
 ];
 
-receiveMsgButton.addEventListener('click', getMessage);
+receiveMsgButton.addEventListener('click', function() {
+  getMessage();
+  toggleIcon();
+});
 
 function getRandomIndex(array) {
   return array[Math.floor(Math.random() * array.length)];
@@ -48,13 +51,12 @@ function getMessage() {
     message.innerText = getRandomIndex(affirmations);
   }
   if (mantraSelect.checked) {
-    getRandomIndex(mantras);
+    message.innerText = getRandomIndex(mantras);
   }
-  toggleIcon();
 };
 
 function toggleIcon() {
   event.preventDefault();
-  icon.classList.toggle('hidden');
-  message.classList.toggle('hidden');
+  icon.classList.add('hidden');
+  message.classList.remove('hidden');
 };
