@@ -1,13 +1,15 @@
-// Selector Variables here:
+// Selector Variables here ⛷
 
 var meditationImage = document.querySelector('.meditation-img');
 var yourMessage = document.querySelector('.your-message');
 var messageButton = document.querySelector('#receive-button');
 var affirmationRadio = document.querySelector('#affirmation');
 var mantraRadio = document.querySelector('#mantra');
+var clearButton = document.querySelector('.clear-btn');
 
 
-// Data here:
+// Data here ⛷
+
 var affirmations = [
     "I forgive myself and set myself free.",
     "I believe I can be all that I want to be.",
@@ -41,13 +43,15 @@ var mantras = [
     "I am the sky, the rest is weather."
 ];
 
-// Event Listeners here:
+// Event Listeners here ⛷
 
-
+affirmationRadio.addEventListener('click', enableReceiveBtn);
+mantraRadio.addEventListener('click', enableReceiveBtn);
 messageButton.addEventListener('click', pickAMessage);
+clearButton.addEventListener('click', clearMessage);
 
 
-// Event handlers/functions here:
+// Event handlers/functions here ⛷
 
 function getRandomMessage(array) {
     return Math.floor(Math.random() * array.length)
@@ -61,25 +65,48 @@ function pickAMessage() {
     }
 };
 
+function enableReceiveBtn() {
+    messageButton.disabled = false;
+}
+
+function disableReceiveBtn() {
+    messageButton.disabled = true;
+};
+
 function receiveAffirmation() {
-    showMessage(yourMessage);
-    hideImage(meditationImage);
+    showItem(yourMessage);
+    hideItem(meditationImage);
+    showItem(clearButton);
+    disableReceiveBtn()
+    clearRadio();
     yourMessage.innerText = affirmations[getRandomMessage(affirmations)];
 };
 
 function receiveMantra() {
-    showMessage(yourMessage);
-    hideImage(meditationImage);
+    showItem(yourMessage);
+    hideItem(meditationImage);
+    showItem(clearButton);
+    disableReceiveBtn()
+    clearRadio();
     yourMessage.innerText = mantras[getRandomMessage(mantras)];
 };
 
-function showMessage(selectorVariable) {
+function clearMessage() {
+    hideItem(yourMessage);
+    showItem(meditationImage);
+    hideItem(clearButton);
+    clearRadio();
+};
+
+function clearRadio() {
+    affirmationRadio.checked = false;
+    mantraRadio.checked = false;
+};
+
+function showItem(selectorVariable) {
     selectorVariable.classList.remove('hidden')
 };
 
-function hideImage(selectorVariable) {
+function hideItem(selectorVariable) {
     selectorVariable.classList.add('hidden')
 };
-
-
-

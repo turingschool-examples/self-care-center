@@ -9,17 +9,18 @@
     <h3 class="sub-header">Which type of message?</h3>
     <form class="message-form" id="message-choice">
       <div class="form-controls">
-        <input type="radio" id="affirmation" name="affirmation" value="affirmation">
+        <input type="radio" id="affirmation" name="message" value="affirmation">
         <label for="affirmation">affirmation</label>
-        <input type="radio" id="mantra" name="mantra" value="mantra">
+        <input type="radio" id="mantra" name="message" value="mantra">
         <label for="mantra">mantra</label>
       </div>
-      <button type="button" name="receive-button" id="receive-button">Receive Message</button>
+      <button type="button" name="receive-button" class="receive-btn" id="receive-button" disabled>Receive Message</button>
     </form>
     <section class="message-center" id="message">
       <img class="meditation-img" src="assets/meditate.svg" />
       <h3 class="your-message hidden">Your Message</h3>
     </section>
+    <button type="button" name="clear-button" class="clear-btn hidden" id="clear-button">Clear Message</button>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
