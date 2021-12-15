@@ -69,11 +69,15 @@ function enableReceiveBtn() {
     messageButton.disabled = false;
 }
 
+function disableReceiveBtn() {
+    messageButton.disabled = true;
+};
+
 function receiveAffirmation() {
     showItem(yourMessage);
     hideItem(meditationImage);
     showItem(clearButton);
-    // disableReceiveBtn();
+    disableReceiveBtn()
     clearRadio();
     yourMessage.innerText = affirmations[getRandomMessage(affirmations)];
 };
@@ -82,7 +86,7 @@ function receiveMantra() {
     showItem(yourMessage);
     hideItem(meditationImage);
     showItem(clearButton);
-    // disableReceiveBtn();
+    disableReceiveBtn()
     clearRadio();
     yourMessage.innerText = mantras[getRandomMessage(mantras)];
 };
@@ -91,6 +95,7 @@ function clearMessage() {
     hideItem(yourMessage);
     showItem(meditationImage);
     hideItem(clearButton);
+    disableReceiveBtn()
     clearRadio();
 };
 
