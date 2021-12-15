@@ -48,7 +48,6 @@ label {
 #selection {
   width: 570px;
   margin: auto;
-  text-align: center;
   margin-bottom: 100px;
 }
 
@@ -56,14 +55,11 @@ label {
   width: 900px;
   height: 150px;
   margin: auto;
-  text-align: center;
   display: flex;
-  align-items: center;
 }
 
 #meditate-icon {
   width: 80px;
-  display: block;
   margin: auto;
 }
 
@@ -81,10 +77,18 @@ label {
   margin-top: 15px;
 }
 
-#affirmation, #mantra {
+#affirmations, #mantras {
   margin-top: 8px;
 }
 
 .hidden {
   display: none;
+  visibility: hidden;
+}
+
+#msg {
+  align-self: center;
+  margin: auto;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
 }
