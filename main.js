@@ -43,7 +43,8 @@ var mantras = [
 
 // Event Listeners here:
 
-
+affirmationRadio.addEventListener('click', showReceiveBtn);
+mantraRadio.addEventListener('click', showReceiveBtn);
 messageButton.addEventListener('click', pickAMessage);
 
 
@@ -52,6 +53,13 @@ messageButton.addEventListener('click', pickAMessage);
 function getRandomMessage(array) {
     return Math.floor(Math.random() * array.length)
 };
+
+
+function showReceiveBtn () {
+    if (affirmationRadio.checked || mantraRadio.checked) {
+        showMessage(messageButton);
+    }
+}
 
 function pickAMessage() {
     if (affirmationRadio.checked) {
@@ -82,4 +90,17 @@ function hideImage(selectorVariable) {
 };
 
 
+
+/* ERROR HANDLING 
+1. need to make the Receive Message button disabled or hidden if
+    a radio button is not selected.
+
+2. Create a clear message button (maybe down in the
+    message display?) that will clear the message and reveal the
+    meditation icon again
+
+3. The clear button should be hidden if there is no message and
+    should be hidden once again when the meditation icon appears
+
+ */
 
