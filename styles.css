@@ -49,6 +49,10 @@ form {
   justify-content: space-evenly;
 }
 
+.radio-container input {
+  clip: auto;
+}
+
 .meditate-box {
   font-style: normal;
   border: 5px;

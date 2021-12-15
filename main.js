@@ -1,3 +1,7 @@
+var receiveMessage = document.querySelector('.receive-button');
+var radioAffirmation = document.querySelector('#affirmation');
+var radioMantra = document.querySelector('#mantra');
+
 var affirmations = [
   "I forgive myself and set myself free.",
   "I believe I can be all that I want to be.",
@@ -30,4 +34,17 @@ var mantras = [
   "The only constant is change.",
   "Onward and upward.",
   "I am the sky, the rest is weather."
-]
+];
+
+receiveMessage.addEventListener('click', function() {
+  getMessage();
+})
+
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+function getMessage() {
+  var message;
+}
