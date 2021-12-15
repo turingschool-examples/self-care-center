@@ -1,5 +1,5 @@
-var affirmationSelect = document.getElementById('affirmation');
-var mantraSelect = document.getElementById('mantra');
+var affirmationSelect = document.getElementById('affirmations');
+var mantraSelect = document.getElementById('mantras');
 var receiveMsgButton = document.getElementById('receive-btn');
 var icon = document.getElementById('meditate-icon');
 var message = document.getElementById('msg');
@@ -40,5 +40,21 @@ var mantras = [
 receiveMsgButton.addEventListener('click', getMessage);
 
 function getRandomIndex(array) {
-  return array[Math.floor(Math.random * array.length)];
-}
+  return array[Math.floor(Math.random() * array.length)];
+};
+
+function getMessage() {
+  if (affirmationSelect.checked) {
+    message.innerText = getRandomIndex(affirmations);
+  }
+  if (mantraSelect.checked) {
+    getRandomIndex(mantras);
+  }
+  toggleIcon();
+};
+
+function toggleIcon() {
+  event.preventDefault();
+  icon.classList.toggle('hidden');
+  message.classList.toggle('hidden');
+};
