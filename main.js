@@ -5,6 +5,7 @@ var yourMessage = document.querySelector('.your-message');
 var messageButton = document.querySelector('#receive-button');
 var affirmationRadio = document.querySelector('#affirmation');
 var mantraRadio = document.querySelector('#mantra');
+var clearButton = document.querySelector('.clear-btn');
 
 
 // Data here:
@@ -46,6 +47,7 @@ var mantras = [
 affirmationRadio.addEventListener('click', showReceiveBtn);
 mantraRadio.addEventListener('click', showReceiveBtn);
 messageButton.addEventListener('click', pickAMessage);
+clearButton.addEventListener('click', clearMessage);
 
 
 // Event handlers/functions here:
@@ -53,13 +55,6 @@ messageButton.addEventListener('click', pickAMessage);
 function getRandomMessage(array) {
     return Math.floor(Math.random() * array.length)
 };
-
-
-function showReceiveBtn () {
-    if (affirmationRadio.checked || mantraRadio.checked) {
-        showMessage(messageButton);
-    }
-}
 
 function pickAMessage() {
     if (affirmationRadio.checked) {
@@ -70,31 +65,46 @@ function pickAMessage() {
 };
 
 function receiveAffirmation() {
-    showMessage(yourMessage);
-    hideImage(meditationImage);
+    showItem(yourMessage);
+    hideItem(meditationImage);
+    showItem(clearButton);
     disableReceiveBtn();
     yourMessage.innerText = affirmations[getRandomMessage(affirmations)];
 
 };
 
 function receiveMantra() {
-    showMessage(yourMessage);
-    hideImage(meditationImage);
+    showItem(yourMessage);
+    hideItem(meditationImage);
+    showItem(clearButton);
     disableReceiveBtn();
     yourMessage.innerText = mantras[getRandomMessage(mantras)];
 };
 
+function clearMessage() {
+    hideItem(yourMessage);
+    showItem(meditationImage);
+    hideItem(clearButton);
+    hideItem(messageButton);
+    affirmationRadio.checked = false;
+    mantraRadio.checked = false;
+};
+
+function showReceiveBtn() {
+    if (affirmationRadio.checked || mantraRadio.checked) {
+        showItem(messageButton);
+    }
+};
 
 function disableReceiveBtn() {
     messageButton.disabled = true;
-}
+};
 
-
-function showMessage(selectorVariable) {
+function showItem(selectorVariable) {
     selectorVariable.classList.remove('hidden')
 };
 
-function hideImage(selectorVariable) {
+function hideItem(selectorVariable) {
     selectorVariable.classList.add('hidden')
 };
 
