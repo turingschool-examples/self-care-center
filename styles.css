@@ -94,6 +94,10 @@ p {
   height: auto;
 }
 
+.display{
+width: 40vw;  
+}
+
 .radio-buttons{
   /* display: flex;
   flex-direction: row; */
