@@ -47,3 +47,21 @@ var mantras = [
 ];
 
 // functions and event handlers go here👇
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+function affirmationContent() {
+  affirmations.innerText = affirmations[getRandomIndex(affirmations)
+  mantras.innerText = mantras[getRandomIndex(mantras)];
+}
+
+function mantraContent() {
+
+}
+
+function displayMessage() {
+    // event.preventDefault();
+    // affirmations.innerText = affirmation.value;
+    // mantras.innerText = quoteBox.value;
+}
