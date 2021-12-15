@@ -60,3 +60,12 @@ function toggleIcon() {
   icon.classList.add('hidden');
   message.classList.remove('hidden');
 };
+
+function alertMsg() {
+  if (affirmationSelect.checked) {
+    window.alert("You've received all of the affirmations. You will now begin seeing repeats.");
+  }
+  if (mantraSelect.checked) {
+    window.alert("You've received all of the mantras. You will now begin seeing repeats.");
+  }
+};
