@@ -2,7 +2,9 @@
 
 var meditationImage = document.querySelector('.meditation-img');
 var yourMessage = document.querySelector('.your-message');
-
+var messageButton = document.querySelector('#receive-button');
+var affirmationRadio = document.querySelector('#affirmation');
+var mantraRadio = document.querySelector('#mantra');
 
 
 // Data here:
@@ -42,7 +44,7 @@ var mantras = [
 // Event Listeners here:
 
 
-
+messageButton.addEventListener('click', pickAMessage);
 
 
 // Event handlers/functions here:
@@ -51,6 +53,13 @@ function getRandomMessage(array) {
     return Math.floor(Math.random() * array.length)
 };
 
+function pickAMessage() {
+    if (affirmationRadio.checked) {
+        receiveAffirmation();
+    } else if (mantraRadio.checked) {
+        receiveMantra();
+    }
+};
 
 function receiveAffirmation() {
     showMessage(yourMessage);
@@ -63,7 +72,6 @@ function receiveMantra() {
     hideImage(meditationImage);
     yourMessage.innerText = mantras[getRandomMessage(mantras)];
 };
-
 
 function showMessage(selectorVariable) {
     selectorVariable.classList.remove('hidden')
