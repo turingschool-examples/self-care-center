@@ -1,4 +1,4 @@
-// Selector Variables here:
+// Selector Variables here ⛷
 
 var meditationImage = document.querySelector('.meditation-img');
 var yourMessage = document.querySelector('.your-message');
@@ -8,7 +8,8 @@ var mantraRadio = document.querySelector('#mantra');
 var clearButton = document.querySelector('.clear-btn');
 
 
-// Data here:
+// Data here ⛷
+
 var affirmations = [
     "I forgive myself and set myself free.",
     "I believe I can be all that I want to be.",
@@ -42,7 +43,7 @@ var mantras = [
     "I am the sky, the rest is weather."
 ];
 
-// Event Listeners here:
+// Event Listeners here ⛷
 
 affirmationRadio.addEventListener('click', showReceiveBtn);
 mantraRadio.addEventListener('click', showReceiveBtn);
@@ -50,7 +51,7 @@ messageButton.addEventListener('click', pickAMessage);
 clearButton.addEventListener('click', clearMessage);
 
 
-// Event handlers/functions here:
+// Event handlers/functions here ⛷
 
 function getRandomMessage(array) {
     return Math.floor(Math.random() * array.length)
@@ -117,16 +118,4 @@ function hideItem(selectorVariable) {
 
 
 
-/* ERROR HANDLING 
-1. DONE need to make the Receive Message button disabled or hidden if
-    a radio button is not selected.
-
-2. Create a clear message button (maybe down in the
-    message display?) that will clear the message and reveal the
-    meditation icon again
-
-3. The clear button should be hidden if there is no message and
-    should be hidden once again when the meditation icon appears
-
- */
 
