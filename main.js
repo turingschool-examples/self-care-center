@@ -1,3 +1,9 @@
+var affirmationSelect = document.getElementById('affirmation');
+var mantraSelect = document.getElementById('mantra');
+var receiveMsgButton = document.getElementById('receive-btn');
+var icon = document.getElementById('meditate-icon');
+var message = document.getElementById('msg');
+
 var affirmations = [
   "I forgive myself and set myself free.",
   "I believe I can be all that I want to be.",
