@@ -45,8 +45,8 @@ var mantras = [
 
 // Event Listeners here ⛷
 
-affirmationRadio.addEventListener('click', showReceiveBtn);
-mantraRadio.addEventListener('click', showReceiveBtn);
+affirmationRadio.addEventListener('click', enableReceiveBtn);
+mantraRadio.addEventListener('click', enableReceiveBtn);
 messageButton.addEventListener('click', pickAMessage);
 clearButton.addEventListener('click', clearMessage);
 
@@ -65,11 +65,15 @@ function pickAMessage() {
     }
 };
 
+function enableReceiveBtn() {
+    messageButton.disabled = false;
+}
+
 function receiveAffirmation() {
     showItem(yourMessage);
     hideItem(meditationImage);
     showItem(clearButton);
-    disableReceiveBtn();
+    // disableReceiveBtn();
     clearRadio();
     yourMessage.innerText = affirmations[getRandomMessage(affirmations)];
 };
@@ -78,7 +82,7 @@ function receiveMantra() {
     showItem(yourMessage);
     hideItem(meditationImage);
     showItem(clearButton);
-    disableReceiveBtn();
+    // disableReceiveBtn();
     clearRadio();
     yourMessage.innerText = mantras[getRandomMessage(mantras)];
 };
@@ -87,7 +91,6 @@ function clearMessage() {
     hideItem(yourMessage);
     showItem(meditationImage);
     hideItem(clearButton);
-    hideItem(messageButton);
     clearRadio();
 };
 
@@ -96,17 +99,17 @@ function clearRadio() {
     mantraRadio.checked = false;
 };
 
-function showReceiveBtn() {
-    if (affirmationRadio.checked || mantraRadio.checked) {
-        showItem(messageButton);
-    }
-};
+// function showReceiveBtn() {
+//     if (affirmationRadio.checked || mantraRadio.checked) {
+//         showItem(messageButton);
+//     }
+// };
 
-function disableReceiveBtn() {
-    if (!affirmationRadio.checked || mantraRadio.checked) {
-        messageButton.disabled = true;
-    }
-};
+// function disableReceiveBtn() {
+//     if (!affirmationRadio.checked || mantraRadio.checked) {
+//         messageButton.disabled = true;
+//     }
+// };
 
 function showItem(selectorVariable) {
     selectorVariable.classList.remove('hidden')
@@ -119,3 +122,5 @@ function hideItem(selectorVariable) {
 
 
 
+// receive message always visible but disabled if radio buttons not 
+// selected.
