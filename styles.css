@@ -63,7 +63,7 @@ h3 {
 }
 /*
 .radio-buttons {
-  display: flex;
+  margin-
 }
 
 .radio-buttons1 {
@@ -106,3 +106,20 @@ svg * {
   flex-direction: column;
   align-items: center;
 }
+
+.hidden {
+  display: none!important;
+}
+
+/* .pop-up-message {
+  height: 50px;
+  width: 600px;
+  background-color:#ffffff;
+  color: #000000;
+  font-style: italic;
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  border-radius: 5px;
+  margin: 100px;
+} */
