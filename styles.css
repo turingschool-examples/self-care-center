@@ -54,7 +54,13 @@ h2 {
     font-family: 'Quicksand', sans-serif;
     border-radius: 5px;
     padding: 3px 25px;
-    border: 0px
+    border: 1px solid #134d71;
+}
+
+#recieve-button:hover {
+    background-color:rgb(161, 194, 194);
+    border: 1px solid #134d71;
+    
 }
 
 .option-select {
@@ -64,6 +70,8 @@ h2 {
 
 #display-section {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     border-radius: 10px;
     background-color: #ffffff;
@@ -75,6 +83,20 @@ h2 {
 
 #meditation-img {
     width: 75px
+}
+
+#clear-button {
+    padding-left: 3%;
+    padding-right: 3%;
+    margin: 1%;
+    background-color: rgb(198, 223, 223);
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 3px;
+    border: 1px  solid #134d71;
+}
+
+#clear-button:hover {
+    background-color: rgb(161, 194, 194) !important;
 }
 
 .hidden {

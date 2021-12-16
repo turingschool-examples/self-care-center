@@ -1,9 +1,10 @@
 // Query Selectors
 var displaySection = document.querySelector('#display-section');
-
+var randomizedOutput = document.querySelector('#randomized-output');
+var imgMeditation = document.querySelector('#meditation-img');
 //buttons
 var buttonRecieveMessage = document.querySelector('#recieve-button');
-
+var buttonClear = document.querySelector('#clear-button');
 // Data
 var affirmations = [
   'I forgive myself and set myself free.',
@@ -42,16 +43,23 @@ var mantras = [
 // Event Listeners
 buttonRecieveMessage.addEventListener('click', function (event) {
   event.preventDefault();
+  buttonClear.classList.remove('hidden');
+  imgMeditation.classList.add('hidden');
   var radioInput = document.querySelector(
     'input[name="affirmation-or-mantra"]:checked'
   );
+  
   if (radioInput.value === 'affirmation') {
-    displaySection.innerHTML = `<p>${
+    randomizedOutput.innerHTML = `<p>${
       affirmations[getRandomIndex(affirmations)]
     }</p>`;
   } else {
-    displaySection.innerHTML = `<p>${mantras[getRandomIndex(mantras)]}</p>`;
+    randomizedOutput.innerHTML = `<p>${mantras[getRandomIndex(mantras)]}</p>`;
   }
+});
+
+buttonClear.addEventListener('click', function() {
+
 });
 
 // Functions
