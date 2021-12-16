@@ -6,8 +6,6 @@ var meditateGuy = document.querySelector('.meditation-guy');
 var message = document.querySelector('.pop-up-message');
 
 // event listeners go here👇
-// radioAffirmation.addEventListener('click', affirmationContent);
-// radioMantra.addEventListener('click', mantraContent);
 receiveMessageButton.addEventListener('click', function(){
   radioSelectionChoice()
   displayMessage()
@@ -53,18 +51,11 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-// function affirmationContent() {
-//   affirmations.innerText = affirmations[getRandomIndex(affirmations)];
-// }
-//
-// function mantraContent() {
-//   mantras.innerText = mantras[getRandomIndex(mantras)];
-// }
-
 function radioSelectionChoice() {
     event.preventDefault();
     if (radioAffirmation.checked === true) {
-    message.innertext = affirmations[getRandomIndex(affirmations)];
+      console.log("hello")
+    message.innerText = affirmations[getRandomIndex(affirmations)];
     } else if (radioMantra.checked === true) {
     message.innerText = mantras[getRandomIndex(mantras)];
   }
