@@ -31,7 +31,7 @@ html {
   background-color: white;
   width: 50%;
   height: 90px;
-  border-radius: 5px;
+  border-radius: 8px;
   color: black;
 }
 
@@ -42,7 +42,7 @@ html {
   margin-top: 100px;
   width: 70%;
   height: 120px;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: white;
   color: black;
 }
@@ -70,8 +70,11 @@ html {
   background-color: #134d71;
   display: block;
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   color: white;
+  width: 35%;
+  border-radius: 5px;
+
 }
 
 
