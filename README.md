@@ -1,24 +1,44 @@
 # Self Care Center
-## Overview
-How can I care for myself? One way is with affirmations and mantras!
-Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are repetive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+<img width="1268" alt="Main page" src="https://user-images.githubusercontent.com/92049763/146444699-68106c52-c809-4587-b0f0-52c0c0bbb45f.png">
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html). 
+## Description
+My project is a random mantra and affirmation generator that supplies the user with a random mantra or affirmation message at the click of a button! Users can also clear their messages to start the process over and pick a different selection.
 
-## Learning Goals
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+## Technology Used
+JavaScript
 
-## Setup
+HTML
 
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
+CSS
 
+
+## Installation
+Users can access my site using the following link:
+
+[Self Care Center](https://maddielaw.github.io/self-care-center/)
+
+## Features
+My site has three main features:
+- Generate & display a random mantra
+- Generate & display a random affirmation
+- Clear the message
+
+### To Use
+Select between the mantra or affirmation button and click the Receive Message button to generate a random message in the field below!
+
+![Generate random message](https://media4.giphy.com/media/3KoiPEsK8O3wjIJY9K/giphy.gif?cid=790b76115dcd3cf810c1d59c31c267ad071efd1bc471b8a6&rid=giphy.gif&ct=g)
+
+
+## Future Additions
+- Create a "Favorite" option that allows users to favorite a mantra or affirmation and switch views to a Favorites page to view and delete them
+- Add local storage so users are able to revisit their Favorites page when returning to the site
+- Add functionality to never repeat a message
+- Add ability for users to add their own mantras or affirmations to the list
+
+
+## Credits
+[Maddie Law's GitHub](https://github.com/maddielaw)
+
+[Turing School of Software and Design's GitHub](https://github.com/turingschool-examples)
