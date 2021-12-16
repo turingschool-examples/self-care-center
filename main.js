@@ -13,7 +13,7 @@ msgButton.addEventListener('click', showMessage)
 function showMessage() {
   display.innerText = ''
   if(affirmation.checked) {
-    display.innerText = affirmations[getRandomIndex(affirmations)]
+    display.innerHTML = `<div class ="message"> ${affirmations[getRandomIndex(affirmations)]} </div>`
   }
   if(mantra.checked) {
     display.innerText = mantras[getRandomIndex(mantras)]

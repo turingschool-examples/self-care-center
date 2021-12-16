@@ -6,7 +6,7 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
-/* ################ Main Styles #################*/
+/* ############ Main Styles ############*/
 * {
   font-family: 'Quicksand', sans-serif;
 }
@@ -29,6 +29,15 @@ header {
   padding: 5vh;
   font-size: 4vh;
   font-weight: bold;
+  animation: fadeIn ease 5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }
 
 section {
@@ -59,10 +68,7 @@ p {
   margin-top: 10vh;
   margin-bottom: 0vh;
 }
-/* ################ Class Styles #################*/
-.msg-type{
-
-}
+/* ############ Class Styles ############*/
 
 .which-type {
   font-weight: bold;
@@ -77,6 +83,10 @@ p {
   padding: 2vh;
 }
 
+.msg-select:hover{
+  transform: translateY(1px);
+}
+
 .inputs{
   display: flex;
   justify-content: space-around;
@@ -89,16 +99,19 @@ p {
   justify-content: space-around;
 }
 
+.msg-button:hover{
+  color:#fffbef;
+}
+
 .icon{
   width: 10%;
   height: auto;
 }
 
 .display{
-width: 40vw;  
+  width: 40vw;
 }
 
-.radio-buttons{
-  /* display: flex;
-  flex-direction: row; */
+.message{
+  padding: 3vh;
 }
