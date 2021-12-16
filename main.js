@@ -1,17 +1,22 @@
 // query selector variables go here👇
-
-
+var radioAffirmation = document.querySelector('.radio-affirmation');
+var radioMantra = document.querySelector('.radio-mantra');
+var receiveMessageButton = document.querySelector('.receive-message');
+var meditateGuy = document.querySelector('.meditation-guy');
+var message = document.querySelector('.pop-up-message');
 
 // event listeners go here👇
-
-
+receiveMessageButton.addEventListener('click', function(){
+  radioSelectionChoice()
+  displayMessage()
+});
 
 //data👇
 var affirmations = [
   "I forgive myself and set myself free.",
   "I believe I can be all that I want to be.",
   "I am in the process of becoming the best version of myself.",
-  "I have the freedom & power to create the life I desire."
+  "I have the freedom & power to create the life I desire.",
   "I choose to be kind to myself and love myself unconditionally.",
   "My possibilities are endless.",
   "I am worthy of my dreams.",
@@ -42,3 +47,21 @@ var mantras = [
 ];
 
 // functions and event handlers go here👇
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+function radioSelectionChoice() {
+    event.preventDefault();
+    if (radioAffirmation.checked === true) {
+      console.log("hello")
+    message.innerText = affirmations[getRandomIndex(affirmations)];
+    } else if (radioMantra.checked === true) {
+    message.innerText = mantras[getRandomIndex(mantras)];
+  }
+}
+
+function displayMessage() {
+  meditateGuy.classList.add("hidden");
+  message.classList.remove("hidden");
+}
