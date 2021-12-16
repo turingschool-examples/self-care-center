@@ -3,14 +3,26 @@
   <head>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/meditate.svg">
   </head>
   <main>
     <h1>✨ Self Care Center ✨</h1>
     <h3>Which type of message?</h3>
-    <section>
-      <input type="radio">affirmation</input>
-      <input type="radio">mantra</input>
-      <button>Receive Message</button>
+    <section class="selection">
+      <div class="radio-choice">
+        <input name="choice" type="radio"></input>
+        <p>affirmation</p>
+      </div>
+      <div class="radio-choice">
+        <input name="radio-choice" type="radio"></input>
+        <p>mantra</p>
+      </div>
+      <div class="button">
+        <button>Receive Message</button>
+      </div>
+    </section>
+    <section class="mantra">
+      <img src="./assets/meditate.svg"/>
     </section>
     <script type="text/javascript" src="main.js"></script>
   </main>
