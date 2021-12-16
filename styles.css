@@ -7,11 +7,6 @@ white - #ffffff;
 black - #000000;
 */
 
-/* ~~~~~ GLOBAL RULES ~~~~~ */
-/* *,
-*:before,
-*:after */
-
 html {
   height: 100%;
   background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
@@ -36,9 +31,7 @@ h3 {
 
 .box {
   height: 30px;
-  margin: auto;
   width: 500px;
-  /* padding: 40px; */
   background-color:#ffffff;
   color: #000000;
   font-style: italic;
@@ -50,55 +43,33 @@ h3 {
 
 .receive-message {
   font-family: 'Quicksand', sans-serif;
-  display: block;
-  /* margin-bottom: 50px; */
   margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  radius: .2px;
   border-radius: 5px;
   background-color: #134d71;
   color: #ffffff;
   width: 150px;
 }
-/*
-.radio-buttons {
-  margin-
-}
-
-.radio-buttons1 {
-  display: flex;
-} */
 
 .bottom-box {
   height: 50px;
   width: 600px;
   background-color:#ffffff;
-  color: #000000;
-  font-style: italic;
-  font-size: 15px;
   padding-top: 10px;
   padding-bottom: 50px;
   border-radius: 5px;
   margin: 100px;
 }
 
-/* .radio-affirmation {
-  margin-left: 100px;
+.pop-up-message {
+  color: #000000;
+  font-style: italic;
+  font-size: 15px;
 }
-
-.radio-mantra {
-  margin-right: 100px;
-} */
 
 svg{
   width:50px;
   height:70px;
   padding: 10px;
-}
-svg * {
-  width:  100%;
-  height: 100%;
 }
 
 .wrapper {
@@ -110,16 +81,3 @@ svg * {
 .hidden {
   display: none!important;
 }
-
-/* .pop-up-message {
-  height: 50px;
-  width: 600px;
-  background-color:#ffffff;
-  color: #000000;
-  font-style: italic;
-  font-size: 15px;
-  padding-top: 10px;
-  padding-bottom: 50px;
-  border-radius: 5px;
-  margin: 100px;
-} */
