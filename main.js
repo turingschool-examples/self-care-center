@@ -1,7 +1,9 @@
 var receiveMessage = document.querySelector('.receive-button');
 var radioAffirmation = document.querySelector('#affirmation');
 var radioMantra = document.querySelector('#mantra');
-var message = "";
+var meditationBell = document.querySelector('#meditate-bell');
+var displayMessage = document.querySelector('#message-display')
+// var message = "";
 
 var affirmations = [
   "I forgive myself and set myself free.",
@@ -37,22 +39,22 @@ var mantras = [
   "I am the sky, the rest is weather."
 ];
 
-receiveMessage.addEventListener('click', function() {
-  getMessage();
-});
+receiveMessage.addEventListener('click', getMessage);
 
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
-}
+};
 
-
-
-function getMessage() {
-  if (document.getElementById(radioAffirmation).checked === true) {
-    message = affirmations[getRandomIndex(affirmations)];
-  } else if (document.getElementById(radioMantra).checked === true) {
-    message = mantras[getRandomIndex(mantras)];
+function getMessage(event) {
+  event.preventDefault();
+  if (radioAffirmation.checked) {
+    var message = affirmations[getRandomIndex(affirmations)];
+  } else if (radioMantra.checked) {
+    var message = mantras[getRandomIndex(mantras)];
   }
-  console.log(message);
+  
+  meditationBell.classList.toggle("hidden");
+  displayMessage.classList.toggle("hidden");
+  displayMessage.innerText = message;
 }

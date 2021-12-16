@@ -63,3 +63,7 @@ form {
 .hidden {
   display: none!important;
 }
+
+.message-display {
+  font-size: 1.5em;
+}
