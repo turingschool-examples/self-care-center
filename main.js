@@ -5,6 +5,7 @@ var imgMeditation = document.querySelector('#meditation-img');
 //buttons
 var buttonRecieveMessage = document.querySelector('#recieve-button');
 var buttonClear = document.querySelector('#clear-button');
+
 // Data
 var affirmations = [
   'I forgive myself and set myself free.',
@@ -45,6 +46,7 @@ buttonRecieveMessage.addEventListener('click', function (event) {
   event.preventDefault();
   buttonClear.classList.remove('hidden');
   imgMeditation.classList.add('hidden');
+  randomizedOutput.classList.remove('hidden');
   var radioInput = document.querySelector(
     'input[name="affirmation-or-mantra"]:checked'
   );
@@ -59,7 +61,9 @@ buttonRecieveMessage.addEventListener('click', function (event) {
 });
 
 buttonClear.addEventListener('click', function() {
-
+  buttonClear.classList.add('hidden');
+  imgMeditation.classList.remove('hidden');
+  randomizedOutput.classList.add('hidden');
 });
 
 // Functions
