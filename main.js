@@ -1,22 +1,24 @@
 // query selector variables go here👇
 var radioAffirmation = document.querySelector('.radio-affirmation');
-var radioMantra = document.querySelector('.radio-mantra')
+var radioMantra = document.querySelector('.radio-mantra');
 var receiveMessageButton = document.querySelector('.receive-message');
-
-
+var meditateGuy = document.querySelector('.meditation-guy');
+var message = document.querySelector('.pop-up-message');
 
 // event listeners go here👇
-radioAffirmation.addEventListener('click', affirmationContent);
-radioMantra.addEventListener('click', mantraContent);
-receiveMessageButton.addEventListener('click', displayMessage);
-
+// radioAffirmation.addEventListener('click', affirmationContent);
+// radioMantra.addEventListener('click', mantraContent);
+receiveMessageButton.addEventListener('click', function(){
+  radioSelectionChoice()
+  displayMessage()
+});
 
 //data👇
 var affirmations = [
   "I forgive myself and set myself free.",
   "I believe I can be all that I want to be.",
   "I am in the process of becoming the best version of myself.",
-  "I have the freedom & power to create the life I desire."
+  "I have the freedom & power to create the life I desire.",
   "I choose to be kind to myself and love myself unconditionally.",
   "My possibilities are endless.",
   "I am worthy of my dreams.",
@@ -51,17 +53,24 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-function affirmationContent() {
-  affirmations.innerText = affirmations[getRandomIndex(affirmations)
-  mantras.innerText = mantras[getRandomIndex(mantras)];
-}
+// function affirmationContent() {
+//   affirmations.innerText = affirmations[getRandomIndex(affirmations)];
+// }
+//
+// function mantraContent() {
+//   mantras.innerText = mantras[getRandomIndex(mantras)];
+// }
 
-function mantraContent() {
-
+function radioSelectionChoice() {
+    event.preventDefault();
+    if (radioAffirmation.checked === true) {
+    message.innertext = affirmations[getRandomIndex(affirmations)];
+    } else if (radioMantra.checked === true) {
+    message.innerText = mantras[getRandomIndex(mantras)];
+  }
 }
 
 function displayMessage() {
-    // event.preventDefault();
-    // affirmations.innerText = affirmation.value;
-    // mantras.innerText = quoteBox.value;
+  meditateGuy.classList.add("hidden");
+  message.classList.remove("hidden");
 }
