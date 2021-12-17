@@ -53,7 +53,16 @@ black - #000000; */
   text-align: center;
 margin-left: 38%
 }
-
+.clear-button {
+  display: block;
+  font-weight: light;
+  position: sticky;
+  border-radius: 6px;
+  color: white;
+  background-color: #134d71;
+  text-align: center;
+  margin-left: 43%
+}
 
 .box2 {
   width: 800px;
