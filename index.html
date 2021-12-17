@@ -7,32 +7,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <title>Self Care Center</title>
   </head>
-  <body class = "container">
+  <body>
 
     <h1 class = "heading">✨ Self Care Center ✨</h1>
-    <h2>Which type of message?</h2>
+    <h2 class = "welcome-msg hidden">No name</h2>
 
-    <section class="form-box">
-      <form action="index.html" method="post">
+    <section class = "message-page hidden">
+      <h2>Which type of message?</h2>
 
-        <div class="radio">
-          <input type="radio" id="affirmation" name="choice" value="affirmation">
-            <label for="choice-affirmation"> <i>affirmation</i> </label><br>
-        </div>
+      <section class="form-box">
+        <form action="index.html" method="post">
 
-        <div class="radio">
-          <input type="radio" id="mantra" name="choice" value="mantra">
-            <label for="choice-mantra"> <i>mantra</i> </label><br>
-        </div>
+          <div class="radio">
+            <input type="radio" id="affirmation" name="choice" value="affirmation">
+              <label for="choice-affirmation"> <i>affirmation</i> </label><br>
+          </div>
 
-        <!-- <input class="recieve-message-button" type="submit" value="Recieve Message"> -->
-        <button class="recieve-message-button">Recieve Message</button>
+          <div class="radio">
+            <input type="radio" id="mantra" name="choice" value="mantra">
+              <label for="choice-mantra"> <i>mantra</i> </label><br>
+          </div>
 
-      </form>
+          <!-- <input class="recieve-message-button" type="submit" value="Recieve Message"> -->
+          <button class="recieve-message-button">Recieve Message</button>
+
+        </form>
+      </section>
+
+
+
+      <section class="view-message-box">
+        <p class="view-message hidden"> </p>
+        <img class="img-meditate" src="./assets/meditate.svg" alt="">
+        <!-- <form action="index.html" method="post"> -->
+        <!-- </form> -->
+      </section>
+
+      <button class="delete-button hidden">Delete Message</button>
+
     </section>
 
-    <section class="view-message-box">
-      <p class="view-message"> <img class="img-meditate" src="./assets/meditate.svg" alt=""> </p>
+<!--  login page -->
+
+    <section class = "login-page">
+      <h2>Log in for a mood enhancement!</h2>
+
+      <form action="index.html" method="post">
+
+        <div>
+          <label class= "login" for="login"> <h3>Enter Name:</h3> </label><br>
+          <input type="text" id="login" name="login" placeholder="John Doe">
+        </div>
+
+        <button class="login-button">Log In!</button>
+
+      </form>
     </section>
 
     <script type="text/javascript" src="main.js"></script>

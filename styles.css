@@ -49,6 +49,7 @@ html {
 
 .view-message {
   vertical-align: middle;
+  display: block;
 }
 
 .hidden {
@@ -72,13 +73,43 @@ html {
   margin-top: 5px;
   margin-bottom: 4px;
   color: white;
-  width: 35%;
+  width: 155px;
   border-radius: 5px;
 
 }
 
+.login-button {
+  background-color: #134d71;
+  display: block;
+  margin-top: 15px;
+  color: white;
+  width: 155px;
+  border-radius: 5px;
 
+}
+
+.delete-button{
+  background-color: #134d71;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 4px;
+  color: white;
+  width: 155px;
+  border-radius: 5px;
+}
 
 .img-meditate {
   width: 7%;
+  vertical-align: middle;
+  display: block;
+
+}
+
+.login{
+  margin-top: 50px;
+  display: inline-block;
+}
+
+.welcome-msg{
+  margin-bottom: 30px;
 }

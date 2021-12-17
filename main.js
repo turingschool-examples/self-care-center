@@ -1,17 +1,17 @@
 var affirmations = [
-"I forgive myself and set myself free.",
-"I believe I can be all that I want to be.",
-"I am in the process of becoming the best version of myself.",
-"I have the freedom & power to create the life I desire.",
-"I choose to be kind to myself and love myself unconditionally.",
-"My possibilities are endless.",
-"I am worthy of my dreams.",
-"I am enough.",
-"I deserve to be healthy and feel good.",
-"I am full of energy and vitality and my mind is calm and peaceful.",
-"Every day I am getting healthier and stronger.",
-"I honor my body by trusting the signals that it sends me.",
-"I manifest perfect health by making smart choices."
+  "I forgive myself and set myself free.",
+  "I believe I can be all that I want to be.",
+  "I am in the process of becoming the best version of myself.",
+  "I have the freedom & power to create the life I desire.",
+  "I choose to be kind to myself and love myself unconditionally.",
+  "My possibilities are endless.",
+  "I am worthy of my dreams.",
+  "I am enough.",
+  "I deserve to be healthy and feel good.",
+  "I am full of energy and vitality and my mind is calm and peaceful.",
+  "Every day I am getting healthier and stronger.",
+  "I honor my body by trusting the signals that it sends me.",
+  "I manifest perfect health by making smart choices."
 ]
 
 var mantras = [
@@ -37,6 +37,7 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
+
 // -------------   Show random message     -----------
 
 
@@ -44,27 +45,118 @@ var viewMessageBox = document.querySelector(".view-message-box");
 var viewMessage = document.querySelector(".view-message");
 var recieveMessageButton = document.querySelector(".recieve-message-button");
 var radioInputs = document.querySelectorAll("input[name='choice']");
+var imgMeditate = document.querySelector(".img-meditate");
+
 recieveMessageButton.addEventListener('click', viewRandomMessage);
 
+var currentMantra;
+var currentAffirmation;
+var selectedValue;
 
 function viewRandomMessage() {
   event.preventDefault();
   viewMessageBox.classList.remove('hidden')
 
-  var selectedValue;
+  currentAffirmation = affirmations[getRandomIndex(affirmations)];
+  currentMantra = mantras[getRandomIndex(mantras)];
+
+
     for (var radioInput of radioInputs) {
         if (radioInput.checked) {
+
             selectedValue = radioInput.value;
+
+            viewMessage.classList.remove("hidden");
+            imgMeditate.classList.add("hidden");
       }
   }
 
+
   if (selectedValue === "affirmation"){
-    viewMessage.innerText = affirmations[getRandomIndex(affirmations)];
+    if(!affirmations.length){
+      viewMessage.innerText = "All affirmations have been deleted." ;
+      console.log("nothinggg is there")
+    }
+    else {
+      viewMessage.innerText = currentAffirmation ;
+      deleteButton.classList.remove("hidden");
+    console.log(currentAffirmation)
+    }
+
+
   }
   if (selectedValue === "mantra"){
-    viewMessage.innerText = mantras[getRandomIndex(mantras)];
+    if(!mantras.length){
+      viewMessage.innerText = "All mantras have been deleted." ;
+      console.log("nope")
+    }
+    else {
+      viewMessage.innerText = currentMantra;
+      deleteButton.classList.remove("hidden");
+      console.log(currentMantra)
+    }
+
   }
-  console.log(selectedValue)
+
 }
 
 // -------------   Show random message     -----------
+
+// -------------- Delete message -------------------
+var deleteButton = document.querySelector(".delete-button");
+
+deleteButton.addEventListener('click', deleteMessage);
+
+function deleteMessage(){
+  // event.preventDefault()
+
+  if (selectedValue === "affirmation"){
+
+    for (i in affirmations){
+      if (affirmations[i] === currentAffirmation){
+        affirmations.splice(i, 1);
+        console.log(currentAffirmation)
+        console.log(affirmations.length)
+      }
+    }
+  }
+
+  if (selectedValue === "mantra"){
+    for (i in mantras){
+      if (mantras[i] === currentMantra){
+          mantras.splice(i, 1);
+          console.log(currentMantra)
+          console.log(mantras.length)
+      }
+    }
+  }
+
+  imgMeditate.classList.remove("hidden");
+  viewMessage.classList.add("hidden");
+  deleteButton.classList.add("hidden");
+
+  alert("Message has been removed")
+
+}
+
+
+
+// -------------   Login page     -----------
+
+var loginButton = document.querySelector(".login-button");
+var messagePage = document.querySelector(".message-page");
+var loginPage = document.querySelector(".login-page");
+var welcomeMsg = document.querySelector(".welcome-msg");
+var nameInput = document.querySelector("#login");
+
+loginButton.addEventListener('click', login);
+
+function login(){
+  event.preventDefault();
+  welcomeMsg.innerText = "Prepare to be enlightened " + nameInput.value + " 😊";
+  messagePage.classList.remove("hidden");
+  welcomeMsg.classList.remove("hidden");
+  loginPage.classList.add("hidden");
+}
+
+// -------------   Login page     -----------
