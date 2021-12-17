@@ -48,22 +48,18 @@ var nameInput = document.querySelector('#name-input');
 receiveButton.addEventListener('click', generateMessage);
 affirmationButton.addEventListener('click', checkAffirmation);
 mantraButton.addEventListener('click', checkMantra);
-submitName.addEventListener('click', showGreetingPage);
+submitName.addEventListener('click', showMainPage);
 
 // Login page
-
-function showMainPage() {
-  mainPage.classList.toggle("hidden");
-}
 
 function hideLogin() {
   loginPage.classList.toggle("hidden");
 }
 
-function showGreetingPage() {
-  greetingPage.innerHTML += `
+function showMainPage() {
+  greetingBox.innerHTML += `
   <h2 class="greeting">Good day, ${nameInput.value}.</h2>`
-  greetingPage.classList.toggle("hidden");
+  mainPage.classList.toggle("hidden");
   hideLogin();
 }
 
