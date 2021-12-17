@@ -22,7 +22,7 @@ Users can choose between either mantras or affirmations and click "Receive Messa
 
 Users will have the ability to delete any message that they want to. The message will alert to the user that the message has been removed.
 
-!["view message page"](./assets/selfCareDelete.png)
+!["delete funciton"](./assets/selfCareDelete.png)
 ## Future Features:
 
 - User will be able to add their own message.
