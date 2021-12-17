@@ -1,12 +1,14 @@
-var recieveBtn = document.querySelector(.recieve-button)
-var affirmationBtn = document.querySelector(.recieve-button)
-var mantraBtn = document.querySelector(.recieve-button)
+//BUTTONS AND INPUTS **
+var recieveBtn = document.querySelector('#recieve-button')
+var radioAffirmation = document.querySelector('#radio-affirmation')
+var radioMantra = document.querySelector('#radio-mantra')
 
-var giveMantra = document.querySelector()
-var giveAffirmation = document.querySelector()
+//VARIABLES **
+var giveMantra = document.querySelector('#give-message')
+var giveAffirmation = document.querySelector('#give-message')
+var imageBuddha = document.querySelector('.buddha')
 
-
-
+//STORED DATA **
  affirmations = [
 'I forgive myself and set myself free.',
 'I believe I can be all that I want to be.',
@@ -20,7 +22,8 @@ var giveAffirmation = document.querySelector()
 'I am full of energy and vitality and my mind is calm and peaceful.',
 'Every day I am getting healthier and stronger.',
 'I honor my body by trusting the signals that it sends me.',
-'I manifest perfect health by making smart choices.']
+'I manifest perfect health by making smart choices.'
+]
 
 var mantras = [
 'Breathing in, I send myself love. Breathing out, I send love to someone else who needs it',
@@ -36,24 +39,31 @@ var mantras = [
 'Yesterday is not today.',
 'The only constant is change.',
 'Onward and upward.',
-'I am the sky, the rest is weather.']
+'I am the sky, the rest is weather.'
+]
 
 
-recieveBtn.eventListener('click', sendMessage);
+//EVENT LISTENERS HERE **
+recieveBtn.addEventListener('click', sendMessage)
 
-function displayRandomPoster(){
-    randoMantra = getRandomIndex(mantras)
-    randoAffirmation = getRandomIndex(affirmations)
+//FUNCTIONS AND HANDLERS **
+randoMantra = getRandomIndex(mantras)
+randoAffirmation = getRandomIndex(affirmations)
 
+function sendMessage(){
+hideTheBuddha()
+    if (radioMantra.checked){
     giveMantra.innerText = mantras[randoMantra]
+  }
+    if (radioAffirmation.checked) {
     giveAffirmation.innerText = affirmations[randoAffirmation]
+  }
 };
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 };
 
-
-function sendMessage(){
-
+function hideTheBuddha(){
+  imageBuddha.classList.add('hidden')
 }
