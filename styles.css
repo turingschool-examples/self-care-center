@@ -5,7 +5,7 @@ light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
-*/
+*/ 
 
 
 /* ------ GLOBAL RULES ------- */
@@ -123,4 +123,15 @@ img {
     border-style: solid;
     border-color: #134d71;
     margin-top: 20px;
+}
+
+#favorite-btn {
+    width: 13%;
+    background-color: #134d71;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #134d71;
+    margin-top: 10px;
 }
