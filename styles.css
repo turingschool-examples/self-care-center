@@ -68,7 +68,6 @@ body {
 
 .receive-message {
   margin: 0 auto;
-  /* margin-top: 60px; */
   background-color: #134d71;
   font-family: 'Quicksand';
   font-size: 16px;
@@ -81,6 +80,9 @@ body {
 }
 
 #message-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 170px;
   width: 800px;
   background-color: white;
@@ -90,5 +92,14 @@ body {
 }
 
 svg {
-  margin-top: 50px;
+  display: visible;
+}
+
+p {
+  /* animation: fadeIn linear 3s; */
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
