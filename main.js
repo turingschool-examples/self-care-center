@@ -45,7 +45,8 @@ var mantras = [
 
 //EVENT LISTENERS HERE **
 recieveBtn.addEventListener('click', sendMessage)
-
+radioAffirmation.addEventListener('click', showButton)
+radioMantra.addEventListener('click', showButton)
 //FUNCTIONS AND HANDLERS **
 randoMantra = getRandomIndex(mantras)
 randoAffirmation = getRandomIndex(affirmations)
@@ -63,7 +64,9 @@ hideTheBuddha()
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 };
-
+function showButton(){
+  recieveBtn.classList.remove('hidden')
+}
 function hideTheBuddha(){
   imageBuddha.classList.add('hidden')
 }
