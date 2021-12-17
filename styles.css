@@ -82,6 +82,10 @@ h3 {
   align-items: center;
 }
 
+.hidden {
+  display: none!important;
+}
+
 /* body {
   background-image: linear-gradient(#134d71, #134d71, #f7e4bf);
   height: 800px;

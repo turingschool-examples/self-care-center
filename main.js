@@ -1,3 +1,5 @@
+
+
 var mantras = [
   "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it."
   "Don’t let yesterday take up too much of today.",
@@ -31,3 +33,37 @@ var affirmations = [
   "I honor my body by trusting the signals that it sends me.",
   "I manifest perfect health by making smart choices.",
 ];
+
+// function getRandomAffirmation(array) {
+//   return Math.floor(Math.random() * affirmations.length);
+// }
+//
+// function getRandomMantra(array) {
+//   return Math.floor(Math.random() * mantras.length);
+// }
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+// var affirmationSelection = document.querySelector('affirmation');
+// var mantraSelection = document.querySelector('mantra');
+var buddha = document.querySelector('buddha-image');
+var receiveButton = document.querySelector('receive-message-button')
+
+
+yogaGuy.addEventListener()
+
+
+
+function hideBuddha() {
+  buddha.classList.add('hidden');
+}
+
+
+receiveMessageButton.eventListener('click', sendMessage);
+
+randomAffirmation = getRandomIndex(affirmations);
+randomMantra = getRandomIndex(mantras);
+
+function sendMessage() {}
