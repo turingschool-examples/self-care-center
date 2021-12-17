@@ -6,3 +6,137 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+html {
+  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  text-align: center;
+}
+
+.site-header {
+  font-family: 'Quicksand';
+  color: white;
+  font-weight: bold;
+  margin-top: 40px;
+  padding: 0px;
+}
+
+.question {
+  font-family: 'Quicksand';
+  color: white;
+  font-weight: bold;
+  margin-top: 110px;
+  margin-bottom: 10px;
+  padding: 0px;
+}
+
+#question-box {
+  height: 130px;
+  width: 600px;
+  background-color: white;
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-bottom: 75px;
+  padding: 0px;
+}
+
+.radio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  height: 60px;
+  width: 600px;
+}
+
+.radio-button {
+  font-family: 'Quicksand';
+  font-style: italic;
+  padding: 0px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 62px;
+}
+
+.receive-message {
+  margin: 0 auto;
+  background-color: #134d71;
+  font-family: 'Quicksand';
+  font-size: 16px;
+  color: white;
+  width: 200px;
+  height: 35px;
+  border-radius: 6px;
+  border: 0px;
+  padding: 0px;
+}
+
+#message-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 170px;
+  width: 800px;
+  background-color: white;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+svg {
+  display: visible;
+}
+
+p {
+  /* animation: fadeIn linear 3s; */
+}
+
+/* @keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;} */
+
+
+/* loginpage */
+
+.hidden {
+  display: none!important;
+}
+
+.form-popout {
+  height: 600px;
+  width: 300px;
+  background-color: white;
+  border-radius: 15px;
+  margin: 0 auto;
+  font-family: 'Quicksand';
+}
+
+.submit-name {
+  margin: 30px;
+  background-color: #134d71;
+  font-family: 'Quicksand';
+  font-size: 16px;
+  color: white;
+  width: 200px;
+  height: 35px;
+  border-radius: 6px;
+  border: 0px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: 300px;
+  margin: 0 auto;
+}
