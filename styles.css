@@ -99,7 +99,44 @@ p {
   /* animation: fadeIn linear 3s; */
 }
 
-@keyframes fadeIn {
+/* @keyframes fadeIn {
   0% {opacity:0;}
-  100% {opacity:1;}
+  100% {opacity:1;} */
+
+
+/* loginpage */
+
+.hidden {
+  display: none!important;
+}
+
+.form-popout {
+  height: 600px;
+  width: 300px;
+  background-color: white;
+  border-radius: 15px;
+  margin: 0 auto;
+  font-family: 'Quicksand';
+}
+
+.submit-name {
+  margin: 30px;
+  background-color: #134d71;
+  font-family: 'Quicksand';
+  font-size: 16px;
+  color: white;
+  width: 200px;
+  height: 35px;
+  border-radius: 6px;
+  border: 0px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: 300px;
+  margin: 0 auto;
 }
