@@ -1,8 +1,45 @@
-/* font-family: 'Quicksand', sans-serif;
-COLORS
+html {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  height:100%;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient( #134d71, #78a7c6, #f7e4bf);
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+h3 {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.input-box {
+  background: #ffffff;
+  color: #000000;
+  height: 100px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+/* COLORS
 light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
-white - #ffffff;
+white - ;#ffffff
 black - #000000;
 */
