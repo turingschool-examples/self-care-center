@@ -27,3 +27,49 @@ var mantras = ['Breathing in, I send myself love. Breathing out, I send love to 
 'The only constant is change.',
 'Onward and upward.',
 'I am the sky, the rest is weather.']
+
+// query selectors
+
+var receiveButton = document.querySelector('.receive-message');
+var messageBox = document.querySelector('#message-box');
+var newMessage = document.querySelector('p');
+var meditateIcon = document.querySelector('svg');
+var affirmationButton = document.querySelector('#affirmation-button');
+var mantraButton = document.querySelector('#mantra-button');
+
+// event listeners
+
+receiveButton.addEventListener('click', generateMessage);
+affirmationButton.addEventListener('click', checkAffirmation);
+mantraButton.addEventListener('click', checkMantra);
+
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+};
+
+function generateMessage() {
+  meditateIcon.style.display = "none";
+  if (mantraButton.checked) {
+    newMessage.innerText = mantras[getRandomIndex(mantras)];
+  } else if (affirmationButton.checked){
+    newMessage.innerText = affirmations[getRandomIndex(affirmations)];
+  }
+}
+
+function checkAffirmation() {
+  mantraButton.checked = false;
+  affirmationButton.checked = true;
+}
+
+function checkMantra() {
+  affirmationButton.checked = false;
+  mantraButton.checked = true;
+}
+// function generateMessage() {
+//   messageBox.innerHTML = ``;
+//   for (var i = 0; i < mantras.length; i++) {
+//     messageBox.innerHTML += `
+//     <p>${mantras[i].toString()}</p>`
+//   }
+// }
