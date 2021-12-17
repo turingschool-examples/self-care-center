@@ -2,12 +2,12 @@
 var recieveBtn = document.querySelector('#recieve-button')
 var radioAffirmation = document.querySelector('#radio-affirmation')
 var radioMantra = document.querySelector('#radio-mantra')
-
+var clearBtn = document.querySelector('.clear-button')
 //VARIABLES **
 var giveMantra = document.querySelector('#give-message')
 var giveAffirmation = document.querySelector('#give-message')
 var imageBuddha = document.querySelector('.buddha')
-
+var textBox = document.querySelector('.textbox')
 //STORED DATA **
  affirmations = [
 'I forgive myself and set myself free.',
@@ -47,12 +47,14 @@ var mantras = [
 recieveBtn.addEventListener('click', sendMessage)
 radioAffirmation.addEventListener('click', showButton)
 radioMantra.addEventListener('click', showButton)
+clearBtn.addEventListener('click', hideMessage)
 //FUNCTIONS AND HANDLERS **
 randoMantra = getRandomIndex(mantras)
 randoAffirmation = getRandomIndex(affirmations)
 
 function sendMessage(){
 hideTheBuddha()
+unhideClear()
     if (radioMantra.checked){
     giveMantra.innerText = mantras[randoMantra]
   }
@@ -64,9 +66,19 @@ hideTheBuddha()
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 };
+
 function showButton(){
   recieveBtn.classList.remove('hidden')
+  textBox.classList.add('hidden')
 }
 function hideTheBuddha(){
   imageBuddha.classList.add('hidden')
+}
+function unhideClear(){
+  clearBtn.classList.remove('hidden')
+}
+function hideMessage(){
+  textBox.classList.add('hidden')
+  imageBuddha.classList.remove('hidden')
+  clearBtn.classList.add('hidden')
 }
