@@ -16,14 +16,14 @@ black - #000000; */
   font-family: 'Quicksand', sans-serif;
   font-size: 38px;
   color: #ffffff;
-  /* margin-bottom: 5px; */
+  margin-bottom: 5px;
   text-align: center;
 }
 .main-text2 {
   font-family: 'Quicksand', sans-serif;
   font-size: 22px;
   color: #ffffff;
-  /* margin-bottom: 5px; */
+  margin-bottom: 5px;
   text-align: center;
 }
 .box1 {
@@ -72,5 +72,13 @@ margin-left: 38%
 image-orientation: center;
 height: 80%;
 width: auto;
+
+}
+.hidden {
+  display: none;
+  visibility: ;
+}
+#give-message{
+  font-size: 18px;
 
 }
