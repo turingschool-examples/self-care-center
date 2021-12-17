@@ -6,7 +6,9 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
-/* ############ Main Styles ############*/
+
+/*############ Main Styles ############*/
+
 * {
   font-family: 'Quicksand', sans-serif;
 }
@@ -20,6 +22,8 @@ html {
 }
 
 body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -30,14 +34,6 @@ header {
   font-size: 4vh;
   font-weight: bold;
   animation: fadeIn ease 5s;
-}
-@keyframes fadeIn {
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
 }
 
 section {
@@ -64,15 +60,26 @@ button {
   height: 4vh;
 }
 
+p, button, article, header {
+   overflow-wrap: break-word;
+}
+
 p {
   margin-top: 10vh;
   margin-bottom: 0vh;
 }
+
 /* ############ Class Styles ############*/
 
 .which-type {
   font-weight: bold;
   font-size: 3vh;
+}
+
+.clear-button{
+  width: 12vw;
+  height: 3vw;
+  border-style: solid;
 }
 
 .msg-select{
@@ -114,4 +121,8 @@ p {
 
 .message{
   padding: 3vh;
+}
+
+.hidden {
+  display: none;
 }
