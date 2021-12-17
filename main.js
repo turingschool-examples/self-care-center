@@ -36,13 +36,42 @@ var newMessage = document.querySelector('p');
 var meditateIcon = document.querySelector('svg');
 var affirmationButton = document.querySelector('#affirmation-button');
 var mantraButton = document.querySelector('#mantra-button');
+var submitName = document.querySelector('.submit-name');
+var mainPage = document.querySelector('.message-page');
+var loginPage = document.querySelector('.login-page');
+var greetingPage = document.querySelector('.greeting-page');
+var greetingBox = document.querySelector('.greeting-box');
+var nameInput = document.querySelector('#name-input');
 
 // event listeners
 
 receiveButton.addEventListener('click', generateMessage);
 affirmationButton.addEventListener('click', checkAffirmation);
 mantraButton.addEventListener('click', checkMantra);
+submitName.addEventListener('click', showGreetingPage);
 
+// Login page
+
+function showMainPage() {
+  mainPage.classList.toggle("hidden");
+}
+
+function hideLogin() {
+  loginPage.classList.toggle("hidden");
+}
+
+function showGreetingPage() {
+  greetingPage.innerHTML += `
+  <h2 class="greeting">Good day, ${nameInput.value}.</h2>`
+  greetingPage.classList.toggle("hidden");
+  hideLogin();
+}
+
+// Message page
+
+// function personalizedGreeting() {
+//   ****
+// }
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -66,6 +95,11 @@ function checkMantra() {
   affirmationButton.checked = false;
   mantraButton.checked = true;
 }
+
+
+
+
+
 // function generateMessage() {
 //   messageBox.innerHTML = ``;
 //   for (var i = 0; i < mantras.length; i++) {
