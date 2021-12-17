@@ -37,21 +37,44 @@ var mantras = [
   "I am the sky, the rest is weather."
 ];
 
+shownAffirmations = [];
+shownMantras = [];
+
 receiveMsgButton.addEventListener('click', function() {
   getMessage();
   toggleIcon();
 });
 
 function getRandomIndex(array) {
-  return array[Math.floor(Math.random() * array.length)];
+  return Math.floor(Math.random() * array.length);
 };
 
 function getMessage() {
   if (affirmationSelect.checked) {
-    message.innerText = getRandomIndex(affirmations);
+    if (affirmations.length) {
+      var index = getRandomIndex(affirmations);
+      message.innerText = affirmations[index];
+      shownAffirmations.push(affirmations[index]);
+      affirmations.splice(index, 1);
+    }
+    if (!affirmations.length) {
+      alertMsg();
+      affirmations = shownAffirmations.slice();
+      shownAffirmations = [];
+    }
   }
   if (mantraSelect.checked) {
-    message.innerText = getRandomIndex(mantras);
+    if (mantras.length) {
+      var index = getRandomIndex(mantras);
+      message.innerText = mantras[index];
+      shownMantras.push(mantras[index]);
+      mantras.splice(index, 1);
+    }
+    if (!mantras.length) {
+      alertMsg();
+      mantras = shownMantras.slice();
+      shownMantras = [];
+    }
   }
 };
 
@@ -59,4 +82,13 @@ function toggleIcon() {
   event.preventDefault();
   icon.classList.add('hidden');
   message.classList.remove('hidden');
+};
+
+function alertMsg() {
+  if (affirmationSelect.checked) {
+    window.alert("You've received all of the affirmations. You will now begin seeing repeats.");
+  }
+  if (mantraSelect.checked) {
+    window.alert("You've received all of the mantras. You will now begin seeing repeats.");
+  }
 };
