@@ -1,24 +1,38 @@
 # Self Care Center
 ## Overview
-How can I care for myself? One way is with affirmations and mantras!
-Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are repetive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+This website allows a user to log into an enlightening page that can populate either a mantra or an affirmation message!
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html). 
+The site allows users to:
+* Login with name
+* Populate random mantra or affirmation
+* Delete a mantra or affirmation
 
-## Learning Goals
+## Login Page
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+The site will allow users to input a name and click a login button that will bring them to the main page where they will be greeted with a personal greeting message.
 
-## Setup
+!["login page"](./assets/selfCareLoginPage.png)
+## View Random Message
 
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
+Users can choose between either mantras or affirmations and click "Receive Message" to have an enlightening message pop up.
 
+!["view message page"](./assets/selfCareMessagePage.png)
+## Delete Message
+
+Users will have the ability to delete any message that they want to. The message will alert to the user that the message has been removed.
+
+!["view message page"](./assets/selfCareDelete.png)
+## Future Features:
+
+- User will be able to add their own message.
+- User will be able to favorite a message.
+
+## Contributors:
+Jake Dunafon https://github.com/J-Dunny
+
+## Links:
+
+Deploy link: https://j-dunny.github.io/self-care-center/
+
+Repo link: https://github.com/J-Dunny/self-care-center
