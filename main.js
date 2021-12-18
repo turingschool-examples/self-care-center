@@ -10,10 +10,10 @@ var message = document.querySelector('.pop-up-message');
 var addMessageButton = document.querySelector('.add-message');
 var submitButton = document.querySelector('.submit-button');
 var customMessage = document.querySelector('#add-custom-message-input');
-var viewCustomMessage = document.querySelector('.view-custom-message')
+var viewCustomMessage = document.querySelector('.view-custom-message');
 
 //form
-var form = document.querySelector(".form")
+var form = document.querySelector(".form");
 var p = document.querySelector('p');
 
 // event listeners go here👇
@@ -21,7 +21,7 @@ receiveMessageButton.addEventListener('click', function(){
   radioSelectionChoice()
   displayMessage()
 });
-addMessageButton.addEventListener('click', showForm)
+addMessageButton.addEventListener('click', showForm);
 submitButton.addEventListener('click', displayCustomMessage);
 
 
@@ -78,7 +78,7 @@ function displayMessage() {
   meditateGuy.classList.add("hidden");
   message.classList.remove("hidden");
   viewCustomMessage.classList.add("hidden");
-  form.classList.add("hidden")
+  form.classList.add("hidden");
 }
 
 function showForm() {
@@ -91,7 +91,6 @@ function showForm() {
 function displayCustomMessage() {
   event.preventDefault()
   viewCustomMessage.classList.remove('hidden');
-  form.classList.add('hidden')
-  viewCustomMessage.innerText = customMessage.value
-  console.log("hello")
+  form.classList.add('hidden');
+  viewCustomMessage.innerText = customMessage.value;
 };
