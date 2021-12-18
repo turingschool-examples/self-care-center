@@ -66,10 +66,10 @@ function getRandomIndex(array) {
 };
 
 function radioSelectionChoice() {
-    event.preventDefault();
-    if (radioAffirmation.checked) {
+  event.preventDefault();
+  if (radioAffirmation.checked) {
     message.innerText = affirmations[getRandomIndex(affirmations)];
-    } else if (radioMantra.checked) {
+  } else if (radioMantra.checked) {
     message.innerText = mantras[getRandomIndex(mantras)];
   } else {
     alert('Please select a message type')
@@ -99,24 +99,3 @@ function displayCustomMessage() {
   form.classList.add('hidden');
   viewCustomMessage.innerText = customMessage.value;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function displayCustomMessage() {
-//   event.preventDefault();
-//   radioSelectionChoice();
-//   viewCustomMessage.classList.remove('hidden');
-//   form.classList.add('hidden');
-//   viewCustomMessage.innerText = customMessage.value;
-// };
