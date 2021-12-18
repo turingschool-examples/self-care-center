@@ -16,6 +16,18 @@ var viewCustomMessage = document.querySelector('.view-custom-message');
 var form = document.querySelector(".form");
 var p = document.querySelector('p');
 
+//add to Favorites
+var addToFavoritesButton = document.querySelector('.add-to-favorites')
+var viewFavoritesButton = document.querySelector('.view-favorites')
+// var favoriteMessagesGrid = document.querySelector('.favorite-messages-grid');
+
+
+var quoteArea = document.querySelector('.quote-area');
+var favoritesArea = document.querySelector('.favorite-area');
+var mainPage = document.querySelector('.main-page');
+var viewFavoritesPage = document.querySelector('.view-favorites');
+var backToMainPageButton = document.querySelector('.back');
+
 // event listeners go here👇
 receiveMessageButton.addEventListener('click', function(){
   radioSelectionChoice()
@@ -23,6 +35,8 @@ receiveMessageButton.addEventListener('click', function(){
 });
 addMessageButton.addEventListener('click', showForm);
 submitButton.addEventListener('click', displayCustomMessage);
+addToFavoritesButton.addEventListener('click', addToFavoriteList);
+viewFavoritesButton.addEventListener('click', viewFavorites);
 
 
 //data👇
@@ -60,6 +74,17 @@ var mantras = [
   "I am the sky, the rest is weather."
 ];
 
+class Message {
+  constructor(messages) {
+    this.id = Date.now();
+    this.message = messages;
+  }
+}
+var newQuote = new Message(currentQuote)
+
+var favoriteMessages = [];
+var currentQuote = ""
+
 // functions and event handlers go here👇
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -74,6 +99,8 @@ function radioSelectionChoice() {
   } else {
     alert('Please select a message type')
     customMessage.value = "";
+    addToFavoritesButton.classList.add('hidden');
+    viewFavoritesButton.classList.add("hidden");
     meditateGuy.classList.remove("hidden");
   }
 };
@@ -83,6 +110,8 @@ function displayMessage() {
   message.classList.remove("hidden");
   viewCustomMessage.classList.add("hidden");
   form.classList.add("hidden");
+  addToFavoritesButton.classList.remove('hidden');
+  viewFavoritesButton.classList.remove("hidden");
 };
 
 function showForm() {
@@ -97,5 +126,38 @@ function displayCustomMessage() {
   radioSelectionChoice();
   viewCustomMessage.classList.remove('hidden');
   form.classList.add('hidden');
+  addToFavoritesButton.classList.remove('hidden');
+  viewFavoritesButton.classList.remove("hidden");
   viewCustomMessage.innerText = customMessage.value;
 };
+
+// //will need to add this for quotes already in the arrays as well
+// function addToFavorites() {
+//   favMessages.push(viewCustomMessage.innerText);
+// }
+function hideMainPage() {
+  mainPage.classList.add('hidden');
+  viewFavoritesPage.classList.remove('hidden');
+}
+
+function showMainPage() {
+  mainPage.classList.remove('hidden');
+  viewFavoritesPage.classList.add('hidden');
+}
+
+function viewFavorites() {
+  favoritesArea.innerHTML = "";
+  for (i = 0; i < favoriteMessages.length; i++) {
+    favoritesArea.innerHTML += `
+    <ul class="favorite-area">${favoriteMessages[i]}</ul>
+    <li class="saved-mantras">${favoriteMessages[i]}</li>
+    </ul>`
+  }
+  hideMainPage();
+}
+
+function addToFavoriteList() {
+  event.preventDefault();
+  var newQuote = new Message(currentQuote)
+  favoriteMessages.push(newQuote.innerText);
+}
