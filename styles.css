@@ -24,12 +24,12 @@ header {
   font-weight: bold;
 }
 
-h3 {
+.which-type {
   padding-top: 75px;
   font-size: 20px;
 }
 
-.box {
+.box-1 {
   height: 30px;
   width: 500px;
   background-color:#ffffff;
@@ -50,14 +50,24 @@ h3 {
   width: 150px;
 }
 
-.bottom-box {
+.add-message {
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 30px;
+  border-radius: 5px;
+  background-color: #134d71;
+  color: #ffffff;
+  width: 150px;
+}
+
+.box-2 {
   height: 50px;
   width: 600px;
   background-color:#ffffff;
   padding-top: 10px;
   padding-bottom: 50px;
   border-radius: 5px;
-  margin: 100px;
+  margin-top: 100px;
+  margin-bottom: 5px;
 }
 
 .pop-up-message {
@@ -67,7 +77,7 @@ h3 {
   font-size: 15px;
 }
 
-svg{
+svg {
   width:50px;
   height:70px;
   padding: 10px;
@@ -81,4 +91,17 @@ svg{
 
 .hidden {
   display: none!important;
+}
+
+.inputs {
+  justify-content: space-around;
+  display: flex;
+}
+
+.form {
+  color: #000000
+}
+
+.view-custom-message {
+  color: #000000
 }
