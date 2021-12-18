@@ -108,11 +108,41 @@ header {
 .view-custom-message {
   font-style: italic;
   font-size: 15px;
-  margin-top: 35px;
+  margin-top: 5px;
   color: #000000
 }
 
 .submit-button {
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 5px;
+  background-color: #134d71;
+  color: #ffffff;
+}
+
+.view-favorites {
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 5px;
+  background-color: #134d71;
+  color: #ffffff;
+  justify-content: space-between;
+  display: inline-block;
+}
+
+.add-to-favorites {
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 5px;
+  background-color: #134d71;
+  color: #ffffff;
+  justify-content: space-between;
+  display: inline-block;
+}
+
+.favorites-heading {
+  text-align: center;
+  color: #000000;
+}
+
+.back-to-main-button {
   font-family: 'Quicksand', sans-serif;
   border-radius: 5px;
   background-color: #134d71;
