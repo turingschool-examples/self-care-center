@@ -5,7 +5,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
+    <section class="main-page">
     <header class="self-care-center">✨Self Care Center✨</header>
+    </section>
     <main>
       <h3 class="which-type">Which type of message?</h3>
       <div class="wrapper">
@@ -36,6 +38,15 @@
           <p class="view-custom-message hidden"></p>
         </div>
       </div>
+      <button class="add-to-favorites hidden" type="button">Add To Favorites</button>
+      <button class="view-favorites hidden" type="button">View Favorites</button>
+      <section class="view-favorites hidden">
+        <h1 class="favorites-heading">❤️Favorites❤️<h1>
+          <ul class="favorite-area">
+            <li class="saved-mantras"></li>
+          </ul>
+          <button class="back-to-main-button">Back to Main Page</button>
+      </section>
     </main>
     <script type="text/javascript" src="main.js"></script>
   </body>
