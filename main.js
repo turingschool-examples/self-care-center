@@ -5,11 +5,25 @@ var receiveMessageButton = document.querySelector('.receive-message');
 var meditateGuy = document.querySelector('.meditation-guy');
 var message = document.querySelector('.pop-up-message');
 
+
+//CYOA new:
+var addMessageButton = document.querySelector('.add-message');
+var submitButton = document.querySelector('.submit-button');
+var customMessage = document.querySelector('#add-custom-message-input');
+var viewCustomMessage = document.querySelector('.view-custom-message')
+
+//form
+var form = document.querySelector(".form")
+var p = document.querySelector('p');
+
 // event listeners go here👇
 receiveMessageButton.addEventListener('click', function(){
   radioSelectionChoice()
   displayMessage()
 });
+addMessageButton.addEventListener('click', showForm)
+submitButton.addEventListener('click', displayCustomMessage);
+
 
 //data👇
 var affirmations = [
@@ -53,10 +67,9 @@ function getRandomIndex(array) {
 
 function radioSelectionChoice() {
     event.preventDefault();
-    if (radioAffirmation.checked === true) {
-      console.log("hello")
+    if (radioAffirmation.checked) {
     message.innerText = affirmations[getRandomIndex(affirmations)];
-    } else if (radioMantra.checked === true) {
+    } else if (radioMantra.checked) {
     message.innerText = mantras[getRandomIndex(mantras)];
   }
 }
@@ -64,4 +77,21 @@ function radioSelectionChoice() {
 function displayMessage() {
   meditateGuy.classList.add("hidden");
   message.classList.remove("hidden");
+  viewCustomMessage.classList.add("hidden");
+  form.classList.add("hidden")
 }
+
+function showForm() {
+  meditateGuy.classList.add("hidden");
+  form.classList.remove("hidden");
+  p.classList.add("hidden");
+  message.classList.add('hidden');
+}
+
+function displayCustomMessage() {
+  event.preventDefault()
+  viewCustomMessage.classList.remove('hidden');
+  form.classList.add('hidden')
+  viewCustomMessage.innerText = customMessage.value
+  console.log("hello")
+};
