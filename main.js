@@ -63,7 +63,7 @@ var mantras = [
 // functions and event handlers go here👇
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
-}
+};
 
 function radioSelectionChoice() {
     event.preventDefault();
@@ -71,26 +71,52 @@ function radioSelectionChoice() {
     message.innerText = affirmations[getRandomIndex(affirmations)];
     } else if (radioMantra.checked) {
     message.innerText = mantras[getRandomIndex(mantras)];
+  } else {
+    alert('Please select a message type')
+    customMessage.value = "";
+    meditateGuy.classList.remove("hidden");
   }
-}
+};
 
 function displayMessage() {
   meditateGuy.classList.add("hidden");
   message.classList.remove("hidden");
   viewCustomMessage.classList.add("hidden");
   form.classList.add("hidden");
-}
+};
 
 function showForm() {
   meditateGuy.classList.add("hidden");
   form.classList.remove("hidden");
   p.classList.add("hidden");
   message.classList.add('hidden');
-}
+};
 
 function displayCustomMessage() {
-  event.preventDefault()
+  event.preventDefault();
+  radioSelectionChoice();
   viewCustomMessage.classList.remove('hidden');
   form.classList.add('hidden');
   viewCustomMessage.innerText = customMessage.value;
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function displayCustomMessage() {
+//   event.preventDefault();
+//   radioSelectionChoice();
+//   viewCustomMessage.classList.remove('hidden');
+//   form.classList.add('hidden');
+//   viewCustomMessage.innerText = customMessage.value;
+// };
