@@ -39,10 +39,7 @@ label {
 
 .background {
   background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
   background-attachment: fixed;
-  margin: 0;
 }
 
 #selection {
@@ -96,4 +93,33 @@ label {
   margin: auto;
   font-family: 'Quicksand', sans-serif;
   font-size: 18px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  #selection {
+    width: 456px;
+  }
+  #message {
+    width: 720px;
+  }
+}
+
+@media (max-width: 767px) {
+  #selection {
+    width: 400px;
+  }
+  #message {
+    width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  #selection {
+    width: 400px;
+  }
+  #message {
+    width: 400px;
+    height: 200px;
+  }
 }
