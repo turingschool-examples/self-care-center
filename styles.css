@@ -99,9 +99,22 @@ svg {
 }
 
 .form {
+  font-style: italic;
+  font-size: 15px;
+  margin-top: 20px;
   color: #000000
 }
 
 .view-custom-message {
+  font-style: italic;
+  font-size: 15px;
+  margin-top: 35px;
   color: #000000
+}
+
+.submit-button {
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 5px;
+  background-color: #134d71;
+  color: #ffffff;
 }
