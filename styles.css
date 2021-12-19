@@ -79,7 +79,13 @@ p {
 .clear-button{
   width: 12vw;
   height: 3vw;
+  opacity: 65%;
   border-style: solid;
+}
+
+.clear-button-align{
+    display: flex;
+    justify-content: flex-end;
 }
 
 .msg-select{
