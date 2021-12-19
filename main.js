@@ -53,13 +53,13 @@ randoMantra = getRandomIndex(mantras)
 randoAffirmation = getRandomIndex(affirmations)
 
 function sendMessage(){
-hideTheBuddha()
-unhideClear()
-unHideText()
-    if (radioMantra.checked){
+    hideTheBuddha()
+    unhideClear()
+    unHideText()
+  if (radioMantra.checked){
     giveMantra.innerText = mantras[randoMantra]
   }
-    if (radioAffirmation.checked) {
+  if (radioAffirmation.checked) {
     giveAffirmation.innerText = affirmations[randoAffirmation]
   }
 };
@@ -69,23 +69,18 @@ function getRandomIndex(array) {
 };
 //(un)HIDE FUNCTIONS ***
 function showButton(){
-  recieveBtn.classList.remove('hidden')
-  if (textBox.classlist.includes('hidden')){
-  textBox.classList.remove('hidden')
-  }
+    recieveBtn.classList.remove('hidden')
+    textBox.classList.add('hidden')
 }
 function hideTheBuddha(){
-  imageBuddha.classList.add('hidden')
+    imageBuddha.classList.add('hidden')
 }
 function unHideText(){
-  textBox.classList.remove('hidden')
-
+    textBox.classList.remove('hidden')
 }
 function unhideClear(){
-  clearBtn.classList.remove('hidden')
+    clearBtn.classList.remove('hidden')
 }
 function hideMessage(){
-  textBox.classList.add('hidden')
-  imageBuddha.classList.remove('hidden')
-  clearBtn.classList.add('hidden')
+    location.reload()
 }
