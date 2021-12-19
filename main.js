@@ -22,24 +22,41 @@ var recieveMessageButton = document.querySelector('.recieve-button');
 var radioButtonSelection = document.querySelectorAll('input[name="message-type"]');
 var shownMessageBox = document.querySelector('.shown-message-box');
 var meditateIcon = document.querySelector('.meditate-icon');
-// var selection;
+var clearButton = document.querySelector('.clear');
 
 
 
 recieveMessageButton.addEventListener('click', function(){
-  hideIcon();
-  doSomething();
+  getError();
 });
+
+clearButton.addEventListener('click', clearMessage);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
 function hideIcon() {
-  meditateIcon.classList.toggle('hidden')
-
+  meditateIcon.classList.toggle('hidden');
   }
 
+function showClearButton() {
+  clearButton.classList.toggle('hidden');
+}
+
+function clearRadioSelection() {
+  for (var i = 0; i < radioButtonSelection.length; i++) {
+    if (radioButtonSelection[i].checked) {
+      radioButtonSelection[i].checked = false
+    }
+  }
+}
+
+function clearMessage() {
+  shownMessageBox.innerText = '';
+  meditateIcon.classList.toggle('hidden');
+  clearRadioSelection();
+}
 // console.log(selection);
 
 function getSelection() {
@@ -48,10 +65,21 @@ function getSelection() {
       var selection = radioButtonSelection[i].value
     }
   }
-  return selection.toString();
+  return selection;
+}
+
+function getError() {
+  if (!getSelection()) {
+    alert('Error, please select a message type');
+  }
+  else {
+    doSomething();
+  }
 }
 
 function doSomething () {
+  hideIcon();
+  showClearButton();
   if (getSelection() === 'affirmation') {
     var x = getRandomIndex(affirmations);
     console.log(affirmations[x]);
