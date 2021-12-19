@@ -8,9 +8,13 @@ var giveMantra = document.querySelector('#give-message')
 var giveAffirmation = document.querySelector('#give-message')
 var imageBuddha = document.querySelector('.buddha')
 var textBox = document.querySelector('.textbox')
+
+// Pseudocode for add own message FUNCTIONS
+// Add variables for drop down, input form, submit button.
+
 //STORED DATA **
  affirmations = [
-'I forgive myself and set myself free.',
+'I forgive myself and set myself free.', 'banana',
 'I believe I can be all that I want to be.',
 'I am in the process of becoming the best version of myself.',
 'I have the freedom & power to create the life I desire.',
@@ -26,7 +30,7 @@ var textBox = document.querySelector('.textbox')
 ]
 
 var mantras = [
-'Breathing in, I send myself love. Breathing out, I send love to someone else who needs it',
+'Breathing in, I send myself love. Breathing out, I send love to someone else who needs it', 'pineapple',
 'Dont let yesterday take up too much of today.',
 'Every day is a second chance.',
 'Tell the truth and love everyone.',
@@ -48,6 +52,8 @@ recieveBtn.addEventListener('click', sendMessage)
 radioAffirmation.addEventListener('click', showButton)
 radioMantra.addEventListener('click', showButton)
 clearBtn.addEventListener('click', hideMessage)
+// submit button LISTENER
+
 //FUNCTIONS AND HANDLERS **
 randoMantra = getRandomIndex(mantras)
 randoAffirmation = getRandomIndex(affirmations)
@@ -62,12 +68,18 @@ function sendMessage(){
   if (radioAffirmation.checked) {
     giveAffirmation.innerText = affirmations[randoAffirmation]
   }
+  // if statement for add own message.
 };
+
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
+
 };
 //(un)HIDE FUNCTIONS ***
+// un-hide submit when drop down choice made
+// unhide form when hover over message
+// hide inputs when submitted. 
 function showButton(){
     recieveBtn.classList.remove('hidden')
     textBox.classList.add('hidden')
