@@ -46,12 +46,16 @@ h3 {
 fieldset {
   background: #ffffff;
   border: 0;
+  height: 80%;
+  width: 80%;
+  display: flex;
+  font-style: italic;
 }
 
 .input {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-around; */
+  justify-content: space-around;
 }
 
 button {
@@ -60,8 +64,10 @@ button {
   border: 2px solid #134d71;
   border-radius: 5px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 40px;
 }
 
 .shown-message-box {
@@ -71,7 +77,8 @@ button {
   height: 200px;
   width: 700px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
 
