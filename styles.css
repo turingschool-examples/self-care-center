@@ -50,12 +50,21 @@ fieldset {
   width: 80%;
   display: flex;
   font-style: italic;
+  flex-direction: column;
 }
 
-.input {
+.radio-button {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  align-content: flex-start;
+  justify-content: space-evenly;
+}
+
+.clickable-button {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-content: flex-end;
 }
 
 button {
@@ -63,10 +72,6 @@ button {
   color: #ffffff;
   border: 2px solid #134d71;
   border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 40px;
 }
 
