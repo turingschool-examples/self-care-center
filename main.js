@@ -18,12 +18,48 @@ var mantras = ['Breathing in, I send myself love. Breathing out, I send love to 
 'This too shall pass.', 'Yesterday is not today.', 'The only constant is change.',
 'Onward and upward.', 'I am the sky, the rest is weather.'];
 
-var reveiveMessageButton = document.querySelector(#recieve-button);
-var radioButtonSelect = document.querySelectorAll('input[name="message-type"]');
-var shownMessageBox = document.querySelector('.shown-message-box')
+var recieveMessageButton = document.querySelector('.recieve-button');
+var radioButtonSelection = document.querySelectorAll('input[name="message-type"]');
+var shownMessageBox = document.querySelector('.shown-message-box');
+var meditateIcon = document.querySelector('.meditate-icon');
+// var selection;
 
 
+
+recieveMessageButton.addEventListener('click', function(){
+  hideIcon();
+  doSomething();
+});
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
+
+function hideIcon() {
+  meditateIcon.classList.toggle('hidden')
+
+  }
+
+// console.log(selection);
+
+function getSelection() {
+  for (var i = 0; i < radioButtonSelection.length; i++) {
+    if (radioButtonSelection[i].checked) {
+      var selection = radioButtonSelection[i].value
+    }
+  }
+  return selection.toString();
+}
+
+function doSomething () {
+  if (getSelection() === 'affirmation') {
+    var x = getRandomIndex(affirmations);
+    console.log(affirmations[x]);
+    shownMessageBox.innerText = `${affirmations[x]}`;
+  }
+  if (getSelection() === 'mantra') {
+    var y = getRandomIndex(mantras);
+    shownMessageBox.innerText = `${mantras[y]}`;
+    console.log(mantras[y]);
+  }
+}
