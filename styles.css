@@ -14,13 +14,11 @@ black - #000000; */
 }
 .forms {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   /* justify-content: space-between; */
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
-  padding-right:
   font-style:oblique;
-  margin: 6px;
   font-weight: bold;
 
 }
@@ -48,6 +46,7 @@ black - #000000; */
 .box1 {
   display: flex;
   justify-content: center;
+  box-sizing: content-box;
   width: 500px;
   height: 70px;
   border-radius: 6px;
@@ -91,6 +90,7 @@ black - #000000; */
 .box2 {
   display: flex;
   justify-content: center;
+  box-sizing: content-box;
   width: 800px;
   height: 110px;
   border-radius: 8px;
