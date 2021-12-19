@@ -2,12 +2,12 @@
 
 var meditationImage = document.querySelector('.meditation-img');
 var yourMessage = document.querySelector('.your-message');
-
 var messageButton = document.querySelector('#receive-button');
 var affirmationRadio = document.querySelector('#affirmation');
 var mantraRadio = document.querySelector('#mantra');
 var clearButton = document.querySelector('.clear-btn');
 var favoriteButton = document.querySelector('.favorite-btn');
+var starButton = document.querySelector('.star-btn');
 
 
 // Data here ⛷
@@ -69,6 +69,7 @@ function pickAMessage() {
     } else if (mantraRadio.checked) {
         receiveMantra();
     }
+    showStar();
 };
 
 function enableReceiveBtn() {
@@ -113,6 +114,7 @@ function clearMessage() {
     hideItem(yourMessage);
     showItem(meditationImage);
     hideItem(clearButton);
+    hideItem(starButton);
     clearRadio();
 };
 
@@ -130,44 +132,43 @@ function hideItem(selectorVariable) {
 };
 
 
-
-
+function showStar() {
+    if (currentMessage.isFavorited) {
+        showItem(starButton);
+    }
+};
 
 function favoriteMessage() {
+    removeFavorite();
     if (!currentMessage.isFavorited) {
         currentMessage.isFavorited = true;
         favoriteMessages.push(currentMessage);
     } 
+    showStar();
+}        
+
+function removeFavorite() {
+    for (i = 0; i < favoriteMessages.length; i ++) {
+        if (favoriteMessages.includes(currentMessage)) {
+            currentMessage.isFavorited = false;
+            favoriteMessages.splice(i, 1)
+        }
+    }
 }
 
 
+/* TO DO
 
+- find way to get star to hang out without impacting my message
 
-/* Favorite Messages CYOA ~~~~~
+- find way to remove favorite with same button
 
-- re structure the affirmations & mantra arrays into arrays
-of objects, each with a text, isFavorited, and id property
+- create view favorites button
 
-- create favorite button (image of star inside an invisible button)
+- create function to move user to favorites page where the contents
+of the favoriteMessages array is displayed
 
-- when user clicks favorite button (only if isFavorited === false)
-    * the isFavorited status of the object should change to true
-    * the message should be pushed to either the Mantra or Affirmations favorite array
-    * IF ISFAVORITED === TRUE -> 
-        - then the button should not be yellow
-        - ifFavorited status should change to false
-        - the message should be spliced from the Mantra or Affirmations fave array
-
-~~~~~
-
-- create View Favorites button
-
-- create a new HTML section for saved posters view (separate sections for mantras vs
-    affirmations??)
-
-
-
-
+- have button to bring user back to main
 
 
 

@@ -78,8 +78,7 @@ input {
     margin-left: 15px;
 }
 
-.message-center,
-.meditation-img-and-message {
+.message-center {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,7 +90,7 @@ input {
 }
 
 .meditation-img {
-    height: 300%;
+    height: 50%;
 }
 
 #receive-button {
@@ -126,22 +125,29 @@ input {
     margin-top: 20px;
 }
 
-.meditation-img-and-message {
-    justify-content: center;
-    margin-right: 50px;
-}
-
-.favorite-btn-container {
+.star-btn-container {
     display: flex;
+    margin-right: 0px;
 }
 
 #favorite-btn {
-    width: 100%;
+    width: 13%;
+    background-color: #134d71;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #134d71;
+    margin-top: 20px;
+}
+
+#star-btn {
+    width: 10%;
     font-size: 25px;
     background-color: transparent;
     border-style: none;
-    margin-top: 10px;
+    margin-bottom: 50px;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-right: 50px;
+    margin-right: 150px;
 }
