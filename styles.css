@@ -116,12 +116,13 @@ p {
 }
 
 .display{
-  width: 40vw;
+  width: 75vw;
 }
 
 .message{
   padding: 3vh;
 }
+
 
 .hidden {
   display: none;
