@@ -51,8 +51,7 @@ fieldset {
 .input {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+  /* justify-content: space-around; */
 }
 
 #recieve-button {
@@ -63,6 +62,25 @@ fieldset {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.shown-message-box {
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  height: 200px;
+  width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  height: 100px;
+}
+
+.hidden {
+  display: none!important;
 }
 /* COLORS
 light-yellow - #f7e4bf;
