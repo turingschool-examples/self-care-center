@@ -96,6 +96,25 @@ label {
   text-align: center;
 }
 
+#loading {
+  width: 25px;
+  height: 25px;
+  background-color: #134d71;
+  border-radius: 50%;
+  margin: auto;
+  animation: pulse 0.75s infinite ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
 @media (max-width: 1024px) {
   #selection {
     width: 456px;
