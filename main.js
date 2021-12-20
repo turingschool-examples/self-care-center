@@ -17,17 +17,16 @@ var form = document.querySelector(".form");
 var p = document.querySelector('p');
 
 //add to Favorites
-var addToFavoritesButton = document.querySelector('.add-to-favorites')
-var viewFavoritesButton = document.querySelector('.view-favorites')
-// var favoriteMessagesGrid = document.querySelector('.favorite-messages-grid');
+var addToFavoritesButton = document.querySelector('.add-to-favorites');
+var viewFavoritesButton = document.querySelector('.view-favorites');
 
 
 var quoteArea = document.querySelector('.quote-area');
 var favoritesArea = document.querySelector('.favorite-area');
 var mainPage = document.querySelector('.main-page');
 var viewFavoritesPage = document.querySelector('.view-favorites-page');
-var backToMainPageButton = document.querySelector('.back');
-var orderedList = document.querySelector('.saved-quotes')
+var backToMainPageButton = document.querySelector('.back-to-main-button');
+var orderedList = document.querySelector('.saved-quotes');
 
 // event listeners go here👇
 receiveMessageButton.addEventListener('click', function(){
@@ -38,7 +37,7 @@ addMessageButton.addEventListener('click', showForm);
 submitButton.addEventListener('click', displayCustomMessage);
 addToFavoritesButton.addEventListener('click', addToFavoriteList);
 viewFavoritesButton.addEventListener('click', viewFavorites);
-
+backToMainPageButton.addEventListener('click', showMainPage);
 
 //data👇
 var affirmations = [
@@ -129,23 +128,21 @@ function hideMainPage() {
   viewFavoritesPage.classList.remove('hidden');
 }
 
-// function showMainPage() {
-//   mainPage.classList.remove('hidden');
-//   viewFavoritesPage.classList.add('hidden');
-// }
+function showMainPage() {
+  viewFavoritesPage.classList.add('hidden');
+  mainPage.classList.remove('hidden');
+}
 
 function viewFavorites() {
   hideMainPage();
   viewFavoritesPage.classList.remove('hidden');
-  for (var i =0; i < favoriteMessages.length; i++) {
+  for (var i = 0; i < favoriteMessages.length; i++) {
     orderedList.innerHTML += "<li>" + favoriteMessages[i]+ "</li>";
   }
 }
 
 function addToFavoriteList() {
   event.preventDefault();
-  if (!favoriteMessages.includes(message.innerHTML))
+  if (!favoriteMessages.includes(message.innerText))
   favoriteMessages.push(message.innerText)
-  // affirmations = new Message(currentQuote)
-  // favoriteMessages.push(newQuote.innerText);
 }
