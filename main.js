@@ -23,6 +23,7 @@ var radioButtonSelection = document.querySelectorAll('input[name="message-type"]
 var shownMessageBox = document.querySelector('.shown-message-box');
 var meditateIcon = document.querySelector('.meditate-icon');
 var clearButton = document.querySelector('.clear');
+var currentMessage = [];
 recieveMessageButton.addEventListener('click', getOutput);
 clearButton.addEventListener('click', clearMessage);
 
@@ -69,25 +70,30 @@ function getSelection() {
   }
   return selection;
 }
+function showCurrentMessage() {
+  getCurrentMessage();
+  shownMessageBox.innerText = `${currentMessage}`;
+}
 
 function getOutput() {
   if (!getSelection()) {
     alert('Error, please select a message type');
   }
   else {
-    getAffirmationOrMantra();
+    showCurrentMessage();
   }
 }
 
-function getAffirmationOrMantra() {
+function getCurrentMessage() {
   hideIcon();
   showClearButton();
   if (getSelection() === 'affirmation') {
     var randomAffirmationsIndex = getRandomIndex(affirmations);
-    shownMessageBox.innerText = `${affirmations[randomAffirmationsIndex]}`;
+    currentMessage.push(affirmations[randomAffirmationsIndex])
   }
   if (getSelection() === 'mantra') {
     var randomMantrasIndex = getRandomIndex(mantras);
-    shownMessageBox.innerText = `${mantras[randomMantrasIndex]}`;
+    currentMessage.push(mantras[randomMantrasIndex]);
   }
+  return currentMessage;
 }
