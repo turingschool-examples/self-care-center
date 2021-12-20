@@ -33,7 +33,7 @@ black - #000000; */
 }
 .submit {
   border-radius: 8px;
-  margin-left: 366px;
+  /* margin-left: 366px; */
   padding-left: 10px;
   padding-right: 10px;
   background-color: #134d71;
@@ -126,7 +126,9 @@ black - #000000; */
   background-color: #134d71;
 
 }
-
+.input {
+  margin-left: 310px;
+}
 .box2 {
   width: 800px;
   height: 110px;
