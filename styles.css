@@ -139,7 +139,12 @@ header {
 
 .favorites-heading {
   text-align: center;
-  color: #000000;
+  color: #ffffff;
+}
+
+.favorite-area {
+  text-align: center;
+  display: inline-block;
 }
 
 .back-to-main-button {
