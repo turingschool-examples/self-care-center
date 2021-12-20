@@ -11,7 +11,7 @@ var textBox = document.querySelector('.textbox')
 
 // Pseudocode for add own message FUNCTIONS
 // Add variables for drop down, input form, submit button.
-
+var hereBtn = document.querySelector('click', )
 //STORED DATA **
  affirmations = [
 'I forgive myself and set myself free.', 'banana',
@@ -79,7 +79,7 @@ function getRandomIndex(array) {
 //(un)HIDE FUNCTIONS ***
 // un-hide submit when drop down choice made
 // unhide form when hover over message
-// hide inputs when submitted. 
+// hide inputs when submitted.
 function showButton(){
     recieveBtn.classList.remove('hidden')
     textBox.classList.add('hidden')
