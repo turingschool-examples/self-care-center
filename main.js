@@ -26,9 +26,7 @@ var clearButton = document.querySelector('.clear');
 
 
 
-recieveMessageButton.addEventListener('click', function(){
-  getError();
-});
+recieveMessageButton.addEventListener('click', getOutput);
 
 clearButton.addEventListener('click', clearMessage);
 
@@ -77,7 +75,7 @@ function getSelection() {
   return selection;
 }
 
-function getError() {
+function getOutput() {
   if (!getSelection()) {
     alert('Error, please select a message type');
   }
