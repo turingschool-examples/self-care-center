@@ -37,11 +37,19 @@ function getRandomIndex(array) {
 };
 
 function hideIcon() {
-  meditateIcon.classList.toggle('hidden');
+  meditateIcon.classList.add('hidden');
   }
 
 function showClearButton() {
-  clearButton.classList.toggle('hidden');
+  clearButton.classList.remove('hidden');
+}
+
+function hideClearButton() {
+  clearButton.classList.add('hidden');
+}
+
+function showIcon() {
+  meditateIcon.classList.remove('hidden');
 }
 
 function clearRadioSelection() {
@@ -54,7 +62,8 @@ function clearRadioSelection() {
 
 function clearMessage() {
   shownMessageBox.innerText = '';
-  meditateIcon.classList.toggle('hidden');
+  showIcon();
+  hideClearButton();
   clearRadioSelection();
 }
 // console.log(selection);
