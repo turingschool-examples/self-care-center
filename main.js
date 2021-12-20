@@ -24,6 +24,7 @@ var shownMessageBox = document.querySelector('.shown-message-box');
 var meditateIcon = document.querySelector('.meditate-icon');
 var clearButton = document.querySelector('.clear');
 var currentMessage = [];
+recieveMessageButton.addEventListener('click', getCurrentMessage);
 recieveMessageButton.addEventListener('click', getOutput);
 clearButton.addEventListener('click', clearMessage);
 
@@ -56,7 +57,7 @@ function clearRadioSelection() {
 }
 
 function clearMessage() {
-  shownMessageBox.innerText = '';
+  clearCurrentMessage();
   showIcon();
   hideClearButton();
   clearRadioSelection();
@@ -70,8 +71,8 @@ function getSelection() {
   }
   return selection;
 }
+
 function showCurrentMessage() {
-  getCurrentMessage();
   shownMessageBox.innerText = `${currentMessage}`;
 }
 
@@ -96,4 +97,9 @@ function getCurrentMessage() {
     currentMessage.push(mantras[randomMantrasIndex]);
   }
   return currentMessage;
+}
+
+function clearCurrentMessage() {
+  currentMessage = []
+  showCurrentMessage()
 }
