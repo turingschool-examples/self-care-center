@@ -25,8 +25,9 @@ var viewFavoritesButton = document.querySelector('.view-favorites')
 var quoteArea = document.querySelector('.quote-area');
 var favoritesArea = document.querySelector('.favorite-area');
 var mainPage = document.querySelector('.main-page');
-var viewFavoritesPage = document.querySelector('.view-favorites');
+var viewFavoritesPage = document.querySelector('.view-favorites-page');
 var backToMainPageButton = document.querySelector('.back');
+var orderedList = document.querySelector('.saved-quotes')
 
 // event listeners go here👇
 receiveMessageButton.addEventListener('click', function(){
@@ -74,16 +75,8 @@ var mantras = [
   "I am the sky, the rest is weather."
 ];
 
-class Message {
-  constructor(messages) {
-    this.id = Date.now();
-    this.message = messages;
-  }
-}
-var newQuote = new Message(currentQuote)
-
 var favoriteMessages = [];
-var currentQuote = ""
+
 
 // functions and event handlers go here👇
 function getRandomIndex(array) {
@@ -131,33 +124,28 @@ function displayCustomMessage() {
   viewCustomMessage.innerText = customMessage.value;
 };
 
-// //will need to add this for quotes already in the arrays as well
-// function addToFavorites() {
-//   favMessages.push(viewCustomMessage.innerText);
-// }
 function hideMainPage() {
   mainPage.classList.add('hidden');
   viewFavoritesPage.classList.remove('hidden');
 }
 
-function showMainPage() {
-  mainPage.classList.remove('hidden');
-  viewFavoritesPage.classList.add('hidden');
-}
+// function showMainPage() {
+//   mainPage.classList.remove('hidden');
+//   viewFavoritesPage.classList.add('hidden');
+// }
 
 function viewFavorites() {
-  favoritesArea.innerHTML = "";
-  for (i = 0; i < favoriteMessages.length; i++) {
-    favoritesArea.innerHTML += `
-    <ul class="favorite-area">${favoriteMessages[i]}</ul>
-    <li class="saved-mantras">${favoriteMessages[i]}</li>
-    </ul>`
-  }
   hideMainPage();
+  viewFavoritesPage.classList.remove('hidden');
+  for (var i =0; i < favoriteMessages.length; i++) {
+    orderedList.innerHTML += "<li>" + favoriteMessages[i]+ "</li>";
+  }
 }
 
 function addToFavoriteList() {
   event.preventDefault();
-  var newQuote = new Message(currentQuote)
-  favoriteMessages.push(newQuote.innerText);
+  if (!favoriteMessages.includes(message.innerHTML))
+  favoriteMessages.push(message.innerText)
+  // affirmations = new Message(currentQuote)
+  // favoriteMessages.push(newQuote.innerText);
 }
