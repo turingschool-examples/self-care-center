@@ -23,11 +23,7 @@ var radioButtonSelection = document.querySelectorAll('input[name="message-type"]
 var shownMessageBox = document.querySelector('.shown-message-box');
 var meditateIcon = document.querySelector('.meditate-icon');
 var clearButton = document.querySelector('.clear');
-
-
-
 recieveMessageButton.addEventListener('click', getOutput);
-
 clearButton.addEventListener('click', clearMessage);
 
 function getRandomIndex(array) {
@@ -38,16 +34,16 @@ function hideIcon() {
   meditateIcon.classList.add('hidden');
   }
 
+function showIcon() {
+  meditateIcon.classList.remove('hidden');
+}
+
 function showClearButton() {
   clearButton.classList.remove('hidden');
 }
 
 function hideClearButton() {
   clearButton.classList.add('hidden');
-}
-
-function showIcon() {
-  meditateIcon.classList.remove('hidden');
 }
 
 function clearRadioSelection() {
@@ -64,7 +60,6 @@ function clearMessage() {
   hideClearButton();
   clearRadioSelection();
 }
-// console.log(selection);
 
 function getSelection() {
   for (var i = 0; i < radioButtonSelection.length; i++) {
@@ -80,21 +75,19 @@ function getOutput() {
     alert('Error, please select a message type');
   }
   else {
-    doSomething();
+    getAffirmationOrMantra();
   }
 }
 
-function doSomething () {
+function getAffirmationOrMantra() {
   hideIcon();
   showClearButton();
   if (getSelection() === 'affirmation') {
-    var x = getRandomIndex(affirmations);
-    console.log(affirmations[x]);
-    shownMessageBox.innerText = `${affirmations[x]}`;
+    var randomAffirmationsIndex = getRandomIndex(affirmations);
+    shownMessageBox.innerText = `${affirmations[randomAffirmationsIndex]}`;
   }
   if (getSelection() === 'mantra') {
-    var y = getRandomIndex(mantras);
-    shownMessageBox.innerText = `${mantras[y]}`;
-    console.log(mantras[y]);
+    var randomMantrasIndex = getRandomIndex(mantras);
+    shownMessageBox.innerText = `${mantras[randomMantrasIndex]}`;
   }
 }
