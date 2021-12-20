@@ -1,29 +1,40 @@
 # Self Care Center
 
-*Contributors: Katie Toler*
-*Technologies used: Javascript, CSS, HTML*
+#### *Contributors: Katie Toler*  <br /> Follow me on Github [here](https://github.com/KATIETOLER) <br />*Technologies used: Javascript, CSS, HTML*
 
-![Deploy Link](https://katietoler.github.io/self-care-center/)
-![Github Repository](https://github.com/KATIETOLER/self-care-center)
+[Deploy Link](https://katietoler.github.io/self-care-center/) <br />
+[Github Repository](https://github.com/KATIETOLER/self-care-center)
 
 ## Overview
 How can I care for myself? One way is with affirmations and mantras!
-Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are repetitive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
+Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth. <br />
+Mantras are repetitive phrases that are repeated again and again during mindfulness practices. This is an app that helps users remind themselves of their inherent value through humorous phrases from their favorite syndicated television show.
+### What does the Self Care Center do?
+  ---
+  #### Basic Functions
+  The user can select either an affirmation or a mantra using the radio buttons. Once selected, the user can click the 'Receive Message' button and their selected phrase will appear.<br />
+  ![Gif of Message Appearing On Screen](http://www.giphy.com/gifs/8g8wLSUhkWQyU67rDj) <br />
+  ![Gif of Mantra Selection Example](http://www.giphy.com/gifs/EGRTxsY4o6gxc3gpDv) <br />
+  #### Error Handling
+  If the user does not like the provided mantra or affirmation, or simply wishes to read more humorous phrases or perhaps scrutinize whether the given phrase is *in fact* a mantra rather than an affirmation, they may click the clear button. The phrase will then disappear and the Buddha icon will reappear, allowing the user to once again make a selection. The user can not select more than one radio button. The page by default has the 'affirmation' radio button selected so that the user may not continue without having chosen a single option.
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+  ![Gif of Message Being Cleared](http://www.giphy.com/gifs/iF4A78MpWrsRdxHqqG)
+
+---
+#### Future Additions
+  In the next update, the app will allow the user to favorite a message. The message will then be displayed on a 'saved messages' page. Self Care Center may also remove repeated messages and inform the viewer if they have looked through all of the messages.
 
 The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html).
 
-## Learning Goals
+#### Learning Goals
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
+- My goal here was to make this app according to the provided comp with a little extra flair!
 - Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+- Complete at least two extensions (only one extension is available so far)
+- Individualize my programming skill set?!?? Hopefully???
 
-## Setup
-
+#### Setup
+If you would like to create this project yourself, follow the steps below!
 - Fork this project to your own Github account
 - Clone the repository to your local machine
 - `cd` into the project
