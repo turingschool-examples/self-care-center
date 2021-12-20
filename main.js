@@ -87,6 +87,7 @@ function getOutput() {
 }
 
 function getCurrentMessage() {
+  currentMessage = [];
   hideIcon();
   showClearButton();
   if (getSelection() === 'affirmation') {
