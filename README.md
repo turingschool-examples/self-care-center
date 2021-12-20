@@ -13,12 +13,12 @@ Mantras are repetitive phrases that are repeated again and again during mindfuln
   ---
   #### Basic Functions
   The user can select either an affirmation or a mantra using the radio buttons. Once selected, the user can click the 'Receive Message' button and their selected phrase will appear.<br />
-  ![Gif of Message Appearing On Screen](http://www.giphy.com/gifs/8g8wLSUhkWQyU67rDj) <br />
-  ![Gif of Mantra Selection Example](http://www.giphy.com/gifs/EGRTxsY4o6gxc3gpDv) <br />
+  ![Gif of Message Appearing On Screen](https://media1.giphy.com/media/8g8wLSUhkWQyU67rDj/giphy.gif) <br />
+  ![Gif of Mantra Selection Example](https://media2.giphy.com/media/EGRTxsY4o6gxc3gpDv/giphy.gif) <br />
   #### Error Handling
   If the user does not like the provided mantra or affirmation, or simply wishes to read more humorous phrases or perhaps scrutinize whether the given phrase is *in fact* a mantra rather than an affirmation, they may click the clear button. The phrase will then disappear and the Buddha icon will reappear, allowing the user to once again make a selection. The user can not select more than one radio button. The page by default has the 'affirmation' radio button selected so that the user may not continue without having chosen a single option.
 
-  ![Gif of Message Being Cleared](http://www.giphy.com/gifs/iF4A78MpWrsRdxHqqG)
+  ![Gif of Message Being Cleared](https://media4.giphy.com/media/iF4A78MpWrsRdxHqqG/giphy.gif?)
 
 ---
 #### Future Additions
