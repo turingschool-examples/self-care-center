@@ -27,17 +27,19 @@ var currentMessage = [];
 recieveMessageButton.addEventListener('click', getCurrentMessage);
 recieveMessageButton.addEventListener('click', getOutput);
 clearButton.addEventListener('click', clearMessage);
+clearButton.addEventListener('click', showIcon);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
 function hideIcon() {
-  meditateIcon.classList.add('hidden');
+  meditateIcon.style.visibility = 'hidden';
   }
 
 function showIcon() {
-  meditateIcon.classList.remove('hidden');
+  meditateIcon.style.visibility = 'visible';
+  shownMessageBox.innerHTML = "<img class='meditate-icon' src='./assets/meditate.svg' alt='meditate-icon'/>";
 }
 
 function showClearButton() {
@@ -51,14 +53,13 @@ function hideClearButton() {
 function clearRadioSelection() {
   for (var i = 0; i < radioButtonSelection.length; i++) {
     if (radioButtonSelection[i].checked) {
-      radioButtonSelection[i].checked = false
+      radioButtonSelection[i].checked = false;
     }
   }
 }
 
 function clearMessage() {
   clearCurrentMessage();
-  showIcon();
   hideClearButton();
   clearRadioSelection();
 }
@@ -66,7 +67,7 @@ function clearMessage() {
 function getSelection() {
   for (var i = 0; i < radioButtonSelection.length; i++) {
     if (radioButtonSelection[i].checked) {
-      var selection = radioButtonSelection[i].value
+      var selection = radioButtonSelection[i].value;
     }
   }
   return selection;
@@ -78,7 +79,7 @@ function showCurrentMessage() {
 
 function getOutput() {
   if (!getSelection()) {
-    alert('Error, please select a message type');
+    alert('Error: please select a message type');
   }
   else {
     showCurrentMessage();
@@ -90,7 +91,7 @@ function getCurrentMessage() {
   showClearButton();
   if (getSelection() === 'affirmation') {
     var randomAffirmationsIndex = getRandomIndex(affirmations);
-    currentMessage.push(affirmations[randomAffirmationsIndex])
+    currentMessage.push(affirmations[randomAffirmationsIndex]);
   }
   if (getSelection() === 'mantra') {
     var randomMantrasIndex = getRandomIndex(mantras);
@@ -100,6 +101,6 @@ function getCurrentMessage() {
 }
 
 function clearCurrentMessage() {
-  currentMessage = []
-  showCurrentMessage()
+  currentMessage = [];
+  showCurrentMessage();
 }
