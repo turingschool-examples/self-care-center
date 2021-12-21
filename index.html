@@ -8,50 +8,47 @@
 
   <body>
     <wrapper class= 'wrapper'>
-  <header>
-    <h1 class='main-text1' id='title'>✨Self Care Center✨</h1>
-      <br><br>
+    <header>
+      <h1 class='main-text1' id='title'>✨Self Care Center✨</h1>
+        <br><br>
       <h2 class='main-text2' id='choices'>Which Type Of Message?</h2>
-  </header>
+    </header>
 
 
 
-<box class="box1">
-  <forms class='inputs'>
-  <!-- <div> -->
-    <input class='inputs' type='radio'name='choice' class='radio-affirmation'id='radio-affirmation' value='radio-affirmation'>Affirmation</input>
-  <!-- </div> -->
-  <!-- <div> -->
-    <input class='inputs' type='radio'name='choice' class='radio-mantra'id='radio-mantra' value='radio-mantra'>Mantra</input>
-  <!-- </div> -->
-  </forms>
-  <div>
-      <button class='recieve-button hidden' id='recieve-button'>Receive Message</button>
-  </div>
-</box>
+    <box class="box1">
+      <forms class='inputs'>
+        <input class='inputs' type='radio'name='choice' class='radio-affirmation'id='radio-affirmation' value='radio-affirmation'>Affirmation</input>
+        <input class='inputs' type='radio'name='choice' class='radio-mantra'id='radio-mantra' value='radio-mantra'>Mantra</input>
+      </forms>
+      <div>
+        <button class='recieve-button hidden' id='recieve-button'>Receive Message</button>
+      </div>
+    </box>
     <div class="box2"  >
       <img class='buddha' id=img src="./assets/meditate.svg" alt=>
-    <innerText class='textbox' id='give-message'></innerText>
-<div>
+      <innerText class='textbox' id='give-message'></innerText>
+    <div>
   <button class='clear-button hidden' id='clear-button'>Clear Message</button>
-</div>
-<h3 class='main-text3'>💫 Write Your Own 💫<br> Soul Nourishing Message</h3>
-<div>
-  <button class='here-button' id='here-button'> ⇾ Here ⇽ </button>
-</div>
-<drop class='container '>
-<label class='main-text3' for="message-type">Choose Type:</label>
-<select class='dropdown-content'type='dropdown'id="choose" name="choose" size="3">
-<option value="Affirmation">Affirmation</option>
-<option value="Mantra">Mantra</option>
-<input class='input' type="text" placeholder="Message Here" id="fname" name="fname"><b>
-<input class='submit' type="submit" value="Submit">
-</drop>
+  </div>
+    <h3 class='main-text3'>💫 Write Your Own 💫<br> Soul Nourishing Message</h3>
+  <div>
+    <button class='here-button' id='here-button'> ⇾ Here ⇽ </button>
+  </div>
 
-</select>
+  <drop class='container hidden'>
+    <label class='main-text3' for="message-type">Choose:</label>
+    <select class='dropdown-content'type='dropdown'id="choose" name="choose" size="3">
+      <option class='aff-choice'value="affirmation">Affirmation</option>
+      <option class='mantra-choice' value="mantra">Mantra</option>
+      <input class='submit1' type="submit" value="Submit">
+  </drop>
+  <container class='input-message'>
+    <input class='input1 hidden' type="text" placeholder="Message Here" id="message-here" name="message-here"><b>
+    <input class='submit2 hidden' type="submit" value="Submit">
+  </container>
     <script type="text/javascript" src="main.js"></script>
-
-
+  
     </wrapper>
   </body>
 </html>

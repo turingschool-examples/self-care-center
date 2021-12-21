@@ -3,6 +3,14 @@ var recieveBtn = document.querySelector('#recieve-button')
 var radioAffirmation = document.querySelector('#radio-affirmation')
 var radioMantra = document.querySelector('#radio-mantra')
 var clearBtn = document.querySelector('.clear-button')
+var affChoice = document.querySelector('.aff-choice')
+var mantraChoice = document.querySelector('.mantra-choice')
+var inputOne = document.querySelector('.input1')
+var dropdown = document.querySelector('.dropdown-content')
+var submitOne = document.querySelector('.submit1')
+var submitTwo = document.querySelector('.submit2')
+var hereBtn = document.querySelector('.here-button')
+
 //VARIABLES **
 var giveMantra = document.querySelector('#give-message')
 var giveAffirmation = document.querySelector('#give-message')
@@ -11,7 +19,10 @@ var textBox = document.querySelector('.textbox')
 
 // Pseudocode for add own message FUNCTIONS
 // Add variables for drop down, input form, submit button.
-var hereBtn = document.querySelector('click', )
+
+var choiceContainer = document.querySelector('.container')
+var hereBtn = document.querySelector('.here-button')
+
 //STORED DATA **
  affirmations = [
 'I forgive myself and set myself free.', 'banana',
@@ -46,12 +57,15 @@ var mantras = [
 'I am the sky, the rest is weather.'
 ]
 
-
+var tempList = []
 //EVENT LISTENERS HERE **
 recieveBtn.addEventListener('click', sendMessage)
 radioAffirmation.addEventListener('click', showButton)
 radioMantra.addEventListener('click', showButton)
 clearBtn.addEventListener('click', hideMessage)
+hereBtn.addEventListener('click', showChoices)
+submitOne.addEventListener('click', choiceMessageReveal)
+submitTwo.addEventListener('click', addMessage)
 // submit button LISTENER
 
 //FUNCTIONS AND HANDLERS **
@@ -74,12 +88,27 @@ function sendMessage(){
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
-
 };
 //(un)HIDE FUNCTIONS ***
 // un-hide submit when drop down choice made
 // unhide form when hover over message
 // hide inputs when submitted.
+function addMessage(){
+  hideTheBuddha()
+  unHideText()
+tempList.unshift(inputOne.value)
+giveAffirmation.innerText = tempList[0]
+}
+function choiceMessageReveal(){
+    inputOne.classList.remove('hidden')
+    submitTwo.classList.remove('hidden')
+}
+function showChoices(){
+  choiceContainer.classList.remove('hidden')
+}
+function showInput(){
+  inputContainer.classList.remove('hidden')
+}
 function showButton(){
     recieveBtn.classList.remove('hidden')
     textBox.classList.add('hidden')
