@@ -3,8 +3,6 @@ var recieveBtn = document.querySelector('#recieve-button')
 var radioAffirmation = document.querySelector('#radio-affirmation')
 var radioMantra = document.querySelector('#radio-mantra')
 var clearBtn = document.querySelector('.clear-button')
-var affChoice = document.querySelector('.aff-choice')
-var mantraChoice = document.querySelector('.mantra-choice')
 var inputOne = document.querySelector('.input1')
 var dropdown = document.querySelector('.dropdown-content')
 var submitOne = document.querySelector('.submit1')
@@ -25,7 +23,7 @@ var hereBtn = document.querySelector('.here-button')
 
 //STORED DATA **
  affirmations = [
-'I forgive myself and set myself free.', 'banana',
+'I forgive myself and set myself free.',
 'I believe I can be all that I want to be.',
 'I am in the process of becoming the best version of myself.',
 'I have the freedom & power to create the life I desire.',
@@ -56,8 +54,8 @@ var mantras = [
 'Onward and upward.',
 'I am the sky, the rest is weather.'
 ]
-
 var tempList = []
+
 //EVENT LISTENERS HERE **
 recieveBtn.addEventListener('click', sendMessage)
 radioAffirmation.addEventListener('click', showButton)
@@ -66,62 +64,68 @@ clearBtn.addEventListener('click', hideMessage)
 hereBtn.addEventListener('click', showChoices)
 submitOne.addEventListener('click', choiceMessageReveal)
 submitTwo.addEventListener('click', addMessage)
-// submit button LISTENER
 
-//FUNCTIONS AND HANDLERS **
+//HOUSEKEEPING AND RE-ASSIGNMENTS**
 randoMantra = getRandomIndex(mantras)
 randoAffirmation = getRandomIndex(affirmations)
 
+//FUNCTIONS AND HANDLERS **
+
 function sendMessage(){
-    hideTheBuddha()
-    unhideClear()
-    unHideText()
+    hide(imageBuddha)
+    show(clearBtn)
+    show(textBox)
   if (radioMantra.checked){
     giveMantra.innerText = mantras[randoMantra]
   }
   if (radioAffirmation.checked) {
     giveAffirmation.innerText = affirmations[randoAffirmation]
   }
-  // if statement for add own message.
 };
-
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 };
-//(un)HIDE FUNCTIONS ***
-// un-hide submit when drop down choice made
-// unhide form when hover over message
-// hide inputs when submitted.
+
 function addMessage(){
-  hideTheBuddha()
-  unHideText()
+    show(clearBtn)
+    hide(imageBuddha)
+    show(textBox)
+    hide(choiceContainer)
+    hide(dropdown)
+    hide(submitOne)
+  // choiceContainer.classList.add('hidden')
+  // dropdown.classList.add('hidden')
+  // submitOne.classList.add('hidden')
 tempList.unshift(inputOne.value)
 giveAffirmation.innerText = tempList[0]
-}
+};
+
 function choiceMessageReveal(){
-    inputOne.classList.remove('hidden')
-    submitTwo.classList.remove('hidden')
-}
+    show(inputOne)
+    show(submitTwo)
+
+};
+
 function showChoices(){
-  choiceContainer.classList.remove('hidden')
-}
-function showInput(){
-  inputContainer.classList.remove('hidden')
-}
+    show(choiceContainer)
+    show(dropdown)
+    show(submitOne)
+};
+
 function showButton(){
     recieveBtn.classList.remove('hidden')
     textBox.classList.add('hidden')
-}
-function hideTheBuddha(){
-    imageBuddha.classList.add('hidden')
-}
-function unHideText(){
-    textBox.classList.remove('hidden')
-}
-function unhideClear(){
-    clearBtn.classList.remove('hidden')
-}
+};
+
+function hide(item){
+    item.classList.add('hidden')
+};
+
+function show(item){
+    item.classList.remove('hidden')
+};
+//keep as is
 function hideMessage(){
     location.reload()
-}
+};
