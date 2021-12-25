@@ -8,62 +8,40 @@
     <title>Self Care Center</title>
   </head>
   <body>
-
     <h1 class = "heading">✨ Self Care Center ✨</h1>
     <h2 class = "welcome-msg hidden">No name</h2>
-
     <section class = "message-page hidden">
       <h2>Which type of message?</h2>
-
       <section class="form-box">
         <form action="index.html" method="post">
-
           <div class="radio">
             <input type="radio" id="affirmation" name="choice" value="affirmation">
-              <label for="choice-affirmation"> <i>affirmation</i> </label><br>
+            <label for="affirmation"> <i>affirmation</i> </label><br>
           </div>
-
           <div class="radio">
             <input type="radio" id="mantra" name="choice" value="mantra">
-              <label for="choice-mantra"> <i>mantra</i> </label><br>
+            <label for="mantra"> <i>mantra</i> </label><br>
           </div>
-
-          <!-- <input class="recieve-message-button" type="submit" value="Recieve Message"> -->
           <button class="recieve-message-button">Recieve Message</button>
-
         </form>
       </section>
-
-
-
       <section class="view-message-box">
         <p class="view-message hidden"> </p>
         <img class="img-meditate" src="./assets/meditate.svg" alt="">
-        <!-- <form action="index.html" method="post"> -->
-        <!-- </form> -->
+        <button class="delete-button hidden">Delete Message</button>
       </section>
-
-      <button class="delete-button hidden">Delete Message</button>
-
     </section>
-
 <!--  login page -->
-
     <section class = "login-page">
       <h2>Log in for a mood enhancement!</h2>
-
       <form action="index.html" method="post">
-
         <div>
           <label class= "login" for="login"> <h3>Enter Name:</h3> </label><br>
           <input type="text" id="login" name="login" placeholder="John Doe">
         </div>
-
         <button class="login-button">Log In!</button>
-
       </form>
     </section>
-
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>

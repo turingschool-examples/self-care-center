@@ -32,14 +32,11 @@ var mantras = [
 "I am the sky, the rest is weather."
 ]
 
-
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-
 // -------------   Show random message     -----------
-
 
 var viewMessageBox = document.querySelector(".view-message-box");
 var viewMessage = document.querySelector(".view-message");
@@ -55,68 +52,55 @@ var selectedValue;
 
 function viewRandomMessage() {
   event.preventDefault();
+
   viewMessageBox.classList.remove('hidden')
 
   currentAffirmation = affirmations[getRandomIndex(affirmations)];
   currentMantra = mantras[getRandomIndex(mantras)];
 
-
     for (var radioInput of radioInputs) {
         if (radioInput.checked) {
-
             selectedValue = radioInput.value;
-
             viewMessage.classList.remove("hidden");
             imgMeditate.classList.add("hidden");
       }
   }
-
 
   if (selectedValue === "affirmation"){
     if(!affirmations.length){
       viewMessage.innerText = "All affirmations have been deleted." ;
       console.log("nothinggg is there")
     }
+
     else {
       viewMessage.innerText = currentAffirmation ;
       deleteButton.classList.remove("hidden");
-    console.log(currentAffirmation)
     }
-
-
   }
+
   if (selectedValue === "mantra"){
     if(!mantras.length){
       viewMessage.innerText = "All mantras have been deleted." ;
-      console.log("nope")
     }
+
     else {
       viewMessage.innerText = currentMantra;
       deleteButton.classList.remove("hidden");
-      console.log(currentMantra)
     }
-
   }
-
 }
 
-// -------------   Show random message     -----------
-
 // -------------- Delete message -------------------
+
 var deleteButton = document.querySelector(".delete-button");
 
 deleteButton.addEventListener('click', deleteMessage);
 
 function deleteMessage(){
-  // event.preventDefault()
-
   if (selectedValue === "affirmation"){
-
     for (i in affirmations){
       if (affirmations[i] === currentAffirmation){
         affirmations.splice(i, 1);
-        console.log(currentAffirmation)
-        console.log(affirmations.length)
       }
     }
   }
@@ -125,8 +109,6 @@ function deleteMessage(){
     for (i in mantras){
       if (mantras[i] === currentMantra){
           mantras.splice(i, 1);
-          console.log(currentMantra)
-          console.log(mantras.length)
       }
     }
   }
@@ -138,8 +120,6 @@ function deleteMessage(){
   alert("Message has been removed")
 
 }
-
-
 
 // -------------   Login page     -----------
 
@@ -158,5 +138,3 @@ function login(){
   welcomeMsg.classList.remove("hidden");
   loginPage.classList.add("hidden");
 }
-
-// -------------   Login page     -----------
