@@ -6,8 +6,8 @@ var messageButton = document.querySelector('#receive-button');
 var affirmationRadio = document.querySelector('#affirmation');
 var mantraRadio = document.querySelector('#mantra');
 var clearButton = document.querySelector('.clear-btn');
-var favoriteButton = document.querySelector('.favorite-btn');
-var starButton = document.querySelector('.star-btn');
+var emptyHeartButton = document.querySelector('.empty-heart-btn-container');
+var fullHeartButton = document.querySelector('.full-heart-btn-container');
 
 
 // Data here ⛷
@@ -53,8 +53,8 @@ affirmationRadio.addEventListener('click', enableReceiveBtn);
 mantraRadio.addEventListener('click', enableReceiveBtn);
 messageButton.addEventListener('click', pickAMessage);
 clearButton.addEventListener('click', clearMessage);
-
-favoriteButton.addEventListener('click', favoriteMessage);
+emptyHeartButton.addEventListener('click', favoriteMessage);
+fullHeartButton.addEventListener('click', favoriteMessage);
 
 
 // Event handlers/functions here ⛷
@@ -69,12 +69,26 @@ function pickAMessage() {
     } else if (mantraRadio.checked) {
         receiveMantra();
     }
-    showStar();
 };
+
+function displayHeart() {
+    if (!currentMessage.isFavorited) {
+        showItem(emptyHeartButton);
+        hideItem(fullHeartButton);
+    } else if (currentMessage.isFavorited) {
+        showItem(fullHeartButton);
+        hideItem(emptyHeartButton);
+    }
+}
+
+function refreshMessageCenter() {
+    yourMessage.innerText = currentMessage.text;
+    displayHeart();
+}
 
 function enableReceiveBtn() {
     messageButton.disabled = false;
-}
+};
 
 function disableReceiveBtn() {
     messageButton.disabled = true;
@@ -88,7 +102,7 @@ function receiveAffirmation() {
     clearRadio();
     randomAffirmation();
     yourMessage.innerText = currentMessage.text;
-    console.log(currentMessage);
+    displayHeart();
 };
 
 function receiveMantra() {
@@ -99,22 +113,21 @@ function receiveMantra() {
     clearRadio();
     randomMantra();
     yourMessage.innerText = currentMessage.text;
-    console.log(currentMessage);
+    displayHeart();
 };
 
 function randomAffirmation() {
     currentMessage = affirmations[getRandomMessage(affirmations)];
-}
+};
 
 function randomMantra() {
     currentMessage = mantras[getRandomMessage(mantras)];
-}
+};
 
 function clearMessage() {
     hideItem(yourMessage);
     showItem(meditationImage);
     hideItem(clearButton);
-    hideItem(starButton);
     clearRadio();
 };
 
@@ -131,21 +144,15 @@ function hideItem(selectorVariable) {
     selectorVariable.classList.add('hidden')
 };
 
-
-function showStar() {
-    if (currentMessage.isFavorited) {
-        showItem(starButton);
-    }
-};
-
 function favoriteMessage() {
-    removeFavorite();
     if (!currentMessage.isFavorited) {
         currentMessage.isFavorited = true;
         favoriteMessages.push(currentMessage);
-    } 
-    showStar();
-}        
+    } else {
+        removeFavorite();
+    }
+    refreshMessageCenter();
+};        
 
 function removeFavorite() {
     for (i = 0; i < favoriteMessages.length; i ++) {
@@ -154,14 +161,19 @@ function removeFavorite() {
             favoriteMessages.splice(i, 1)
         }
     }
-}
+};
+
+
+// function showStar() {
+//     if (currentMessage.isFavorited) {
+//         showItem(starButton);
+//     }
+// };
 
 
 /* TO DO
 
-- find way to get star to hang out without impacting my message
-
-- find way to remove favorite with same button
+- pulse effects in CSS for heart buttons
 
 - create view favorites button
 
@@ -169,7 +181,5 @@ function removeFavorite() {
 of the favoriteMessages array is displayed
 
 - have button to bring user back to main
-
-
 
 */

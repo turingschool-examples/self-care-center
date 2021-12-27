@@ -82,6 +82,7 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 75%;
     height: 20%;
     background-color: white;
@@ -125,29 +126,20 @@ input {
     margin-top: 20px;
 }
 
-.star-btn-container {
+.empty-heart-btn-container {
     display: flex;
-    margin-right: 0px;
+    flex-direction: row-reverse;
+    width: 90%;
+    font-size: 140%;
 }
 
-#favorite-btn {
-    width: 13%;
-    background-color: #134d71;
-    color: white;
-    font-family: 'Quicksand', sans-serif;
-    border-radius: 3px;
-    border-style: solid;
-    border-color: #134d71;
-    margin-top: 20px;
+.full-heart-btn-container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 90%;
+    font-size: 140%; 
 }
 
-#star-btn {
-    width: 10%;
-    font-size: 25px;
-    background-color: transparent;
-    border-style: none;
-    margin-bottom: 50px;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-right: 150px;
+.fa-heart {
+    height: 25px;
 }

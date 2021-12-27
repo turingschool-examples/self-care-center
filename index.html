@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="./node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
   </head>
   <body>
     <h1 class="header">✨Self Care Center✨</h1>
@@ -17,14 +18,16 @@
       <button type="button" name="receive-button" class="receive-btn" id="receive-button" disabled>Receive Message</button>
     </form>
     <section class="message-center" id="message">
-      <div class="star-btn-container">
-        <button type="button" name="star-btn" class="star-btn hidden" id="star-btn">&#11088</button>
+      <div class="empty-heart-btn-container hidden">
+        <i class="far fa-heart" id="empty-heart"></i>
+      </div>
+      <div class="full-heart-btn-container hidden">
+        <i class="fas fa-heart" id="full-heart"></i>
       </div>
         <img class="meditation-img" src="assets/meditate.svg" />
         <h3 class="your-message hidden">Your Message</h3>
     </section>
     <button type="button" name="clear-button" class="clear-btn hidden" id="clear-button">Clear Message</button>
-    <button type="button" name="fave-btn" class="favorite-btn" id="favorite-btn">Favorite</button>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
