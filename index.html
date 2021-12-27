@@ -11,11 +11,11 @@
       <section class="box selection-box">
         <div class="radio-box">
           <div>
-            <input type="radio" value="affirmation" name="select-radio">
+            <input type="radio" value="affirmation" name="select-radio" id="choice-affirmation">
             <label for="affirmation"><em>affirmation</em></label>
           </div>
           <div>
-            <input type="radio" value="mantra" name="select-radio">
+            <input type="radio" value="mantra" name="select-radio" id="choice-mantra">
             <label for="mantra"><em>mantra</em></label>
           </div>
         </div>
@@ -24,10 +24,11 @@
         </div>
       </section>
       <section class="box results-box">
-        <img class="meditate-svg" src="./assets/meditate.svg" alt="">
+        <img class="meditate-svg" src="./assets/meditate.svg" alt="Buddha" id="buddha-icon">
+        <p class="message-result hidden" id="message-result">Message goes here</p>
       </section>
     </main>
     <script type="text/javascript" src="main.js"></script>
-    <script src="data.js"></script>
+    <script type="text/javascript" src="data.js"></script>
   </body>
 </html>

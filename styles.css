@@ -55,7 +55,6 @@ black - #000000;
   display: flex;
   background-color: white;
   border-radius: 10px;
-  justify-content: space-evenly;
 }
 
 .title-header {
@@ -95,10 +94,23 @@ button {
 }
 
 .results-box {
+  display: flex;
   width: 111vh;
   height: 19vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .meditate-svg {
-    padding: 5vh;
+  padding: 5vh;
+  height: 20vh;
+}
+
+.message-result {
+  color: black;
+}
+
+.hidden {
+  display: none;
 }
