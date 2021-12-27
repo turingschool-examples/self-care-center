@@ -5,6 +5,8 @@ var icon = document.getElementById('meditate-icon');
 var message = document.getElementById('msg');
 var loader = document.getElementById('loading');
 var background = document.querySelector('body');
+var affirmBG = document.querySelector('.background-affirm');
+var mantraBG = document.querySelector('.background-mantra');
 
 var affirmations = [
   "I forgive myself and set myself free.",
@@ -114,12 +116,10 @@ function displayLoading() {
 }
 
 function addAffirmationBG() {
-  background.classList.add('background-affirm');
-  if (background.classList.contains('background-mantra')) {
-    background.classList.remove('background-mantra');
-  }
+  mantraBG.style.opacity = '0';
+  affirmBG.style.opacity = '1';
 };
 
 function addMantraBG() {
-  background.classList.add('background-mantra');
+  mantraBG.style.opacity = '1';
 }
