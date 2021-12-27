@@ -128,11 +128,27 @@ label {
 .background-affirm {
 background: linear-gradient(#50335C, #80668A, #F4E3FB);
 background-attachment: fixed;
+position: absolute;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+opacity: 0;
+z-index: -1;
+transition: opacity 1.5s linear;
 }
 
 .background-mantra {
 background: linear-gradient(#396B3F, #76A17B, #A4C3A8);
 background-attachment: fixed;
+position: absolute;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+opacity: 0;
+z-index: -1;
+transition: opacity 1.5s linear;
 }
 
 @media (max-width: 1024px) {
