@@ -4,6 +4,7 @@ var receiveMsgButton = document.getElementById('receive-btn');
 var icon = document.getElementById('meditate-icon');
 var message = document.getElementById('msg');
 var loader = document.getElementById('loading');
+var background = document.querySelector('body');
 
 var affirmations = [
   "I forgive myself and set myself free.",
@@ -53,6 +54,7 @@ function getRandomIndex(array) {
 
 function getMessage() {
   if (affirmationSelect.checked) {
+    addAffirmationBG();
     if (affirmations.length) {
       var index = getRandomIndex(affirmations);
       message.innerText = affirmations[index];
@@ -66,6 +68,7 @@ function getMessage() {
     }
   }
   if (mantraSelect.checked) {
+    addMantraBG();
     if (mantras.length) {
       var index = getRandomIndex(mantras);
       message.innerText = mantras[index];
@@ -108,4 +111,15 @@ function displayLoading() {
   setTimeout(function() {
     loader.classList.add('hidden');
   }, 2000);
+}
+
+function addAffirmationBG() {
+  background.classList.add('background-affirm');
+  if (background.classList.contains('background-mantra')) {
+    background.classList.remove('background-mantra');
+  }
+};
+
+function addMantraBG() {
+  background.classList.add('background-mantra');
 }

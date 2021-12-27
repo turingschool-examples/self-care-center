@@ -125,6 +125,16 @@ label {
   }
 }
 
+.background-affirm {
+background: linear-gradient(#50335C, #80668A, #F4E3FB);
+background-attachment: fixed;
+}
+
+.background-mantra {
+background: linear-gradient(#396B3F, #76A17B, #A4C3A8);
+background-attachment: fixed;
+}
+
 @media (max-width: 1024px) {
   #selection {
     width: 456px;
