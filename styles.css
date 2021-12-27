@@ -1,3 +1,38 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0px;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(#134d71, #f7e4bf);
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  color: white;
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+/* ~~~~~~~~~~~~~~~~~END RESET~~~~~~~~~~~~~~~~~ */
+
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
@@ -6,3 +41,64 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.box {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  justify-content: space-evenly;
+}
+
+.title-header {
+  margin: 5%;}
+
+.message-header {
+}
+
+.selection-box {
+  display: flex;
+  width: 62vh;
+  height: 11vh;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  margin-bottom: 6%;
+  justify-content: space-evenly;
+}
+.radio-box {
+
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.button-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+button {
+  background-color: #134d71;
+  color: white;
+  border-radius: 5px;
+  width: 24vh;
+}
+
+.results-box {
+  width: 111vh;
+  height: 19vh;
+}
+
+.meditate-svg {
+    padding: 5vh;
+}
