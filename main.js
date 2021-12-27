@@ -7,7 +7,6 @@ var loader = document.getElementById('loading');
 var background = document.querySelector('body');
 var affirmBG = document.querySelector('.background-affirm');
 var mantraBG = document.querySelector('.background-mantra');
-
 var affirmations = [
   "I forgive myself and set myself free.",
   "I believe I can be all that I want to be.",
@@ -40,9 +39,8 @@ var mantras = [
   "Onward and upward.",
   "I am the sky, the rest is weather."
 ];
-
-shownAffirmations = [];
-shownMantras = [];
+var shownAffirmations = [];
+var shownMantras = [];
 
 receiveMsgButton.addEventListener('click', function() {
   displayLoading();
@@ -55,33 +53,29 @@ function getRandomIndex(array) {
 };
 
 function getMessage() {
-  if (affirmationSelect.checked) {
+  if (affirmationSelect.checked && affirmations.length) {
     addAffirmationBG();
-    if (affirmations.length) {
-      var index = getRandomIndex(affirmations);
-      message.innerText = affirmations[index];
-      shownAffirmations.push(affirmations[index]);
-      affirmations.splice(index, 1);
-    }
-    if (!affirmations.length) {
-      alertMsg();
-      affirmations = shownAffirmations.slice();
-      shownAffirmations = [];
-    }
+    var index = getRandomIndex(affirmations);
+    message.innerText = affirmations[index];
+    shownAffirmations.push(affirmations[index]);
+    affirmations.splice(index, 1);
   }
-  if (mantraSelect.checked) {
+  if (affirmationSelect.checked && !affirmations.length) {
+    alertMsg();
+    affirmations = shownAffirmations.slice();
+    shownAffirmations = [];
+  }
+  if (mantraSelect.checked && mantras.length) {
     addMantraBG();
-    if (mantras.length) {
-      var index = getRandomIndex(mantras);
-      message.innerText = mantras[index];
-      shownMantras.push(mantras[index]);
-      mantras.splice(index, 1);
-    }
-    if (!mantras.length) {
-      alertMsg();
-      mantras = shownMantras.slice();
-      shownMantras = [];
-    }
+    var index = getRandomIndex(mantras);
+    message.innerText = mantras[index];
+    shownMantras.push(mantras[index]);
+    mantras.splice(index, 1);
+  }
+  if (mantraSelect.checked && !mantras.length) {
+    alertMsg();
+    mantras = shownMantras.slice();
+    shownMantras = [];
   }
 };
 
@@ -113,7 +107,7 @@ function displayLoading() {
   setTimeout(function() {
     loader.classList.add('hidden');
   }, 2000);
-}
+};
 
 function addAffirmationBG() {
   mantraBG.style.opacity = '0';
@@ -122,4 +116,4 @@ function addAffirmationBG() {
 
 function addMantraBG() {
   mantraBG.style.opacity = '1';
-}
+};
