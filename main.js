@@ -3,6 +3,10 @@ var mantraSelect = document.getElementById('mantras');
 var receiveMsgButton = document.getElementById('receive-btn');
 var icon = document.getElementById('meditate-icon');
 var message = document.getElementById('msg');
+var loader = document.getElementById('loading');
+var background = document.querySelector('body');
+var affirmBG = document.querySelector('.background-affirm');
+var mantraBG = document.querySelector('.background-mantra');
 
 var affirmations = [
   "I forgive myself and set myself free.",
@@ -41,8 +45,9 @@ shownAffirmations = [];
 shownMantras = [];
 
 receiveMsgButton.addEventListener('click', function() {
+  displayLoading();
   getMessage();
-  toggleIcon();
+  displayMessage();
 });
 
 function getRandomIndex(array) {
@@ -51,6 +56,7 @@ function getRandomIndex(array) {
 
 function getMessage() {
   if (affirmationSelect.checked) {
+    addAffirmationBG();
     if (affirmations.length) {
       var index = getRandomIndex(affirmations);
       message.innerText = affirmations[index];
@@ -64,6 +70,7 @@ function getMessage() {
     }
   }
   if (mantraSelect.checked) {
+    addMantraBG();
     if (mantras.length) {
       var index = getRandomIndex(mantras);
       message.innerText = mantras[index];
@@ -78,10 +85,18 @@ function getMessage() {
   }
 };
 
-function toggleIcon() {
+function displayMessage() {
   event.preventDefault();
   icon.classList.add('hidden');
-  message.classList.remove('hidden');
+  setTimeout(function() {
+    message.classList.remove('hidden');
+  }, 2000);
+  if (!message.classList.contains('hidden')) {
+    message.classList.add('hidden');
+    setTimeout(function() {
+      message.classList.remove('hidden');
+    }, 2000);
+  }
 };
 
 function alertMsg() {
@@ -92,3 +107,19 @@ function alertMsg() {
     window.alert("You've received all of the mantras. You will now begin seeing repeats.");
   }
 };
+
+function displayLoading() {
+  loader.classList.remove('hidden');
+  setTimeout(function() {
+    loader.classList.add('hidden');
+  }, 2000);
+}
+
+function addAffirmationBG() {
+  mantraBG.style.opacity = '0';
+  affirmBG.style.opacity = '1';
+};
+
+function addMantraBG() {
+  mantraBG.style.opacity = '1';
+}
