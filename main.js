@@ -10,6 +10,7 @@ var clearButton = document.querySelector('.clear-btn');
 var emptyHeartButton = document.querySelector('.empty-heart-btn-container');
 var fullHeartButton = document.querySelector('.full-heart-btn-container');
 var faveButton = document.querySelector('.fave-btn');
+var backToMainBtn = document.querySelector('.main-btn')
 
 var favoritesPage = document.querySelector('.favorites-page');
 var mainSubHeader = document.querySelector('.sub-header');
@@ -63,6 +64,7 @@ clearButton.addEventListener('click', clearMessage);
 emptyHeartButton.addEventListener('click', favoriteMessage);
 fullHeartButton.addEventListener('click', favoriteMessage);
 faveButton.addEventListener('click', viewFavorites);
+backToMainBtn.addEventListener('click', viewMain);
 
 
 
@@ -172,13 +174,20 @@ function removeFavorite() {
     }
 };
 
-
 function viewFavorites() {
     showItem(favoritesPage);
     hideItem(mainSubHeader);
     hideItem(mainMessageForm);
     hideItem(messageCenter);
     hideItem(faveButton);
+};
+
+function viewMain() {
+    hideItem(favoritesPage);
+    showItem(mainSubHeader);
+    showItem(mainMessageForm);
+    showItem(messageCenter);
+    showItem(faveButton);
 }
 
 
