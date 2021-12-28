@@ -8,18 +8,14 @@ var dropdown = document.querySelector('.dropdown-content')
 var submitOne = document.querySelector('.submit1')
 var submitTwo = document.querySelector('.submit2')
 var hereBtn = document.querySelector('.here-button')
+var hereBtn = document.querySelector('.here-button')
 
 //VARIABLES **
 var giveMantra = document.querySelector('#give-message')
 var giveAffirmation = document.querySelector('#give-message')
 var imageBuddha = document.querySelector('.buddha')
 var textBox = document.querySelector('.textbox')
-
-// Pseudocode for add own message FUNCTIONS
-// Add variables for drop down, input form, submit button.
-
-var choiceContainer = document.querySelector('.container')
-var hereBtn = document.querySelector('.here-button')
+// var choiceContainer = document.querySelector('.container')
 
 //STORED DATA **
  affirmations = [
@@ -66,9 +62,9 @@ submitOne.addEventListener('click', choiceMessageReveal)
 submitTwo.addEventListener('click', addMessage)
 
 //HOUSEKEEPING AND RE-ASSIGNMENTS**
+
 randoMantra = getRandomIndex(mantras)
 randoAffirmation = getRandomIndex(affirmations)
-
 //FUNCTIONS AND HANDLERS **
 
 function sendMessage(){
@@ -94,11 +90,9 @@ function addMessage(){
     hide(choiceContainer)
     hide(dropdown)
     hide(submitOne)
-  // choiceContainer.classList.add('hidden')
-  // dropdown.classList.add('hidden')
-  // submitOne.classList.add('hidden')
-tempList.unshift(inputOne.value)
-giveAffirmation.innerText = tempList[0]
+
+    tempList.unshift(inputOne.value)
+    giveAffirmation.innerText = tempList[0]
 };
 
 function choiceMessageReveal(){
