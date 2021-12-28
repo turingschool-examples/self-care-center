@@ -15,7 +15,7 @@ black - #000000; */
 
 .inputs {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
   font-style:oblique;
