@@ -63,8 +63,8 @@ messageButton.addEventListener('click', pickAMessage);
 clearButton.addEventListener('click', clearMessage);
 emptyHeartButton.addEventListener('click', favoriteMessage);
 fullHeartButton.addEventListener('click', favoriteMessage);
-faveButton.addEventListener('click', viewFavorites);
-backToMainBtn.addEventListener('click', viewMain);
+faveButton.addEventListener('click', viewFavoritesPage);
+backToMainBtn.addEventListener('click', viewMainPage);
 
 
 
@@ -82,36 +82,13 @@ function pickAMessage() {
     }
 };
 
-function displayHeart() {
-    if (!currentMessage.isFavorited) {
-        showItem(emptyHeartButton);
-        hideItem(fullHeartButton);
-    } else if (currentMessage.isFavorited) {
-        showItem(fullHeartButton);
-        hideItem(emptyHeartButton);
-    }
-}
-
-function refreshMessageCenter() {
-    yourMessage.innerText = currentMessage.text;
-    displayHeart();
-}
-
-function enableReceiveBtn() {
-    messageButton.disabled = false;
-};
-
-function disableReceiveBtn() {
-    messageButton.disabled = true;
-};
-
 function receiveAffirmation() {
     showItem(yourMessage);
     hideItem(meditationImage);
     showItem(clearButton);
     disableReceiveBtn()
-    clearRadio();
-    randomAffirmation();
+    clearRadioBtn();
+    getRandomAffirmation();
     yourMessage.innerText = currentMessage.text;
     displayHeart();
 };
@@ -121,17 +98,17 @@ function receiveMantra() {
     hideItem(meditationImage);
     showItem(clearButton);
     disableReceiveBtn()
-    clearRadio();
-    randomMantra();
+    clearRadioBtn();
+    getRandomMantra();
     yourMessage.innerText = currentMessage.text;
     displayHeart();
 };
 
-function randomAffirmation() {
+function getRandomAffirmation() {
     currentMessage = affirmations[getRandomMessage(affirmations)];
 };
 
-function randomMantra() {
+function getRandomMantra() {
     currentMessage = mantras[getRandomMessage(mantras)];
 };
 
@@ -139,20 +116,14 @@ function clearMessage() {
     hideItem(yourMessage);
     showItem(meditationImage);
     hideItem(clearButton);
-    clearRadio();
+    hideItem(fullHeartButton);
+    hideItem(emptyHeartButton);
+    clearRadioBtn();
 };
 
-function clearRadio() {
+function clearRadioBtn() {
     affirmationRadio.checked = false;
     mantraRadio.checked = false;
-};
-
-function showItem(selectorVariable) {
-    selectorVariable.classList.remove('hidden')
-};
-
-function hideItem(selectorVariable) {
-    selectorVariable.classList.add('hidden')
 };
 
 function favoriteMessage() {
@@ -174,32 +145,58 @@ function removeFavorite() {
     }
 };
 
-function viewFavorites() {
+function displayHeart() {
+    if (!currentMessage.isFavorited) {
+        showItem(emptyHeartButton);
+        hideItem(fullHeartButton);
+    } else if (currentMessage.isFavorited) {
+        showItem(fullHeartButton);
+        hideItem(emptyHeartButton);
+    }
+};
+
+function viewFavoritesPage() {
     showItem(favoritesPage);
     hideItem(mainSubHeader);
     hideItem(mainMessageForm);
     hideItem(messageCenter);
     hideItem(faveButton);
+    clearMessage();
 };
 
-function viewMain() {
+function viewMainPage() {
     hideItem(favoritesPage);
     showItem(mainSubHeader);
     showItem(mainMessageForm);
     showItem(messageCenter);
     showItem(faveButton);
+};
+
+function refreshMessageCenter() {
+    yourMessage.innerText = currentMessage.text;
+    displayHeart();
 }
 
+function enableReceiveBtn() {
+    messageButton.disabled = false;
+};
+
+function disableReceiveBtn() {
+    messageButton.disabled = true;
+};
+
+function showItem(selectorVariable) {
+    selectorVariable.classList.remove('hidden')
+};
+
+function hideItem(selectorVariable) {
+    selectorVariable.classList.add('hidden')
+};
 
 /* TO DO
 
 - pulse effects in CSS for heart buttons
-
-- create view favorites button
-
-- create function to move user to favorites page where the contents
-of the favoriteMessages array is displayed
-
-- have button to bring user back to main
+- Create function to display favorites on favorites page
+- find way to display hearts on favorites page
 
 */
