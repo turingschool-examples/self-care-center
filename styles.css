@@ -126,6 +126,17 @@ input {
     margin-top: 20px;
 }
 
+.fave-btn {
+    width: 13%;
+    background-color: #134d71;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #134d71;
+    margin-top: 20px;
+}
+
 .empty-heart-btn-container {
     display: flex;
     flex-direction: row-reverse;
@@ -142,4 +153,36 @@ input {
 
 .fa-heart {
     height: 25px;
+}
+
+.favorites-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 75%;
+    height: 25%;
+    margin: 10%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.fave-sub-header {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.fave-center {
+    margin-top: 300px;
+    justify-content: center;
+}
+
+.main-btn {
+    width: 13%;
+    background-color: #134d71;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #134d71;
 }

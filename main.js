@@ -2,12 +2,19 @@
 
 var meditationImage = document.querySelector('.meditation-img');
 var yourMessage = document.querySelector('.your-message');
+
 var messageButton = document.querySelector('#receive-button');
 var affirmationRadio = document.querySelector('#affirmation');
 var mantraRadio = document.querySelector('#mantra');
 var clearButton = document.querySelector('.clear-btn');
 var emptyHeartButton = document.querySelector('.empty-heart-btn-container');
 var fullHeartButton = document.querySelector('.full-heart-btn-container');
+var faveButton = document.querySelector('.fave-btn');
+
+var favoritesPage = document.querySelector('.favorites-page');
+var mainSubHeader = document.querySelector('.sub-header');
+var mainMessageForm = document.querySelector('.message-form');
+var messageCenter = document.querySelector('.message-center');
 
 
 // Data here ⛷
@@ -55,6 +62,8 @@ messageButton.addEventListener('click', pickAMessage);
 clearButton.addEventListener('click', clearMessage);
 emptyHeartButton.addEventListener('click', favoriteMessage);
 fullHeartButton.addEventListener('click', favoriteMessage);
+faveButton.addEventListener('click', viewFavorites);
+
 
 
 // Event handlers/functions here ⛷
@@ -164,11 +173,13 @@ function removeFavorite() {
 };
 
 
-// function showStar() {
-//     if (currentMessage.isFavorited) {
-//         showItem(starButton);
-//     }
-// };
+function viewFavorites() {
+    showItem(favoritesPage);
+    hideItem(mainSubHeader);
+    hideItem(mainMessageForm);
+    hideItem(messageCenter);
+    hideItem(faveButton);
+}
 
 
 /* TO DO
