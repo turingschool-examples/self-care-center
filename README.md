@@ -38,7 +38,7 @@ The `Clear` button will return the page to it's original state.
 <img width="1147" alt="Screen Shot 2021-12-29 at 3 55 50 PM" src="https://user-images.githubusercontent.com/92649050/147706595-62b9059b-c5a6-4b3e-b5f5-c79b9a134ba0.png">
 
 ## Code Example
-`function sendMessage(){
+```function sendMessage(){
     hide(imageBuddha)
     show(clearBtn)
     show(textBox)
@@ -48,7 +48,7 @@ The `Clear` button will return the page to it's original state.
   if (radioAffirmation.checked) {
     giveAffirmation.innerText = affirmations[randoAffirmation]
   }
-};`
+};```
 
 
 ## Installation
