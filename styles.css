@@ -160,29 +160,39 @@ input {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 75%;
-    height: 35%;
+    column-gap: 20%;
+}
+
+.fave-center {
+    display: flex;
+    width: 1000px;
+    height: 200px;
     margin: 5%;
     background-color: white;
     border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: scroll;
 }
 
 .fave-sub-header {
     color: white;
     font-family: 'Quicksand', sans-serif;
-}
-
-.fave-center {
-    margin-top: 300px;
-    justify-content: center;
+    margin-top: 10%;
 }
 
 .main-btn {
     width: 13%;
+    align-content: space-around;
     background-color: #134d71;
     color: white;
     font-family: 'Quicksand', sans-serif;
     border-radius: 3px;
     border-style: solid;
     border-color: #134d71;
+}
+
+.fave-message {
+    margin: 10px;
 }

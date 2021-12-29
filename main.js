@@ -13,6 +13,7 @@ var faveButton = document.querySelector('.fave-btn');
 var backToMainBtn = document.querySelector('.main-btn')
 
 var favoritesPage = document.querySelector('.favorites-page');
+var favoritesCenter = document.querySelector('.fave-center');
 var mainSubHeader = document.querySelector('.sub-header');
 var mainMessageForm = document.querySelector('.message-form');
 var messageCenter = document.querySelector('.message-center');
@@ -134,6 +135,7 @@ function favoriteMessage() {
         removeFavorite();
     }
     refreshMessageCenter();
+    makeFavoritesList();
 };        
 
 function removeFavorite() {
@@ -192,6 +194,24 @@ function showItem(selectorVariable) {
 function hideItem(selectorVariable) {
     selectorVariable.classList.add('hidden')
 };
+
+
+function makeFavoritesList() {
+    favoritesCenter.innerHTML = ""
+    for (var i = 0; i < favoriteMessages.length; i ++) {
+        favoritesCenter.innerHTML += `
+        <h3 class="fave-message">${favoriteMessages[i].text}</h3>`
+    }
+}
+
+
+
+
+
+
+
+
+
 
 /* TO DO
 
