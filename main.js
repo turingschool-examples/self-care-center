@@ -205,18 +205,8 @@ function makeFavoritesList() {
 }
 
 
-
-
-
-
-
-
-
-
 /* TO DO
 
-- pulse effects in CSS for heart buttons
-- Create function to display favorites on favorites page
 - find way to display hearts on favorites page
 
 */

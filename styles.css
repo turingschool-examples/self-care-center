@@ -11,7 +11,6 @@ black - #000000;
 /* ------ GLOBAL RULES ------- */
 
 * {
-    /* border: 2px solid red; */
     margin: 0px;
     padding: 0px;
 }
@@ -49,6 +48,8 @@ body {
     margin-top: 100px;
 }
 
+/* ------- MESSAGE FORM RULES --------- */
+
 .message-form {
     display: flex;
     flex-direction: column;
@@ -78,6 +79,33 @@ input {
     margin-left: 15px;
 }
 
+#receive-button {
+    width: 28%;
+    background-color: #134d71;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #134d71;
+}
+
+#receive-button:active {
+    transform: translateY(4px);
+}
+
+#receive-button:disabled {
+    width: 28%;
+    background-color: #134d71;
+    opacity: 0.4;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #134d71;
+}
+
+/* ------- MESSAGE CENTER RULES --------- */
+
 .message-center {
     display: flex;
     align-items: center;
@@ -94,27 +122,6 @@ input {
     height: 50%;
 }
 
-#receive-button {
-    width: 28%;
-    background-color: #134d71;
-    color: white;
-    font-family: 'Quicksand', sans-serif;
-    border-radius: 3px;
-    border-style: solid;
-    border-color: #134d71;
-}
-
-#receive-button:disabled {
-    width: 28%;
-    background-color: #134d71;
-    opacity: 0.4;
-    color: white;
-    font-family: 'Quicksand', sans-serif;
-    border-radius: 3px;
-    border-style: solid;
-    border-color: #134d71;
-}
-
 #clear-button {
     width: 13%;
     background-color: #134d71;
@@ -126,6 +133,10 @@ input {
     margin-top: 20px;
 }
 
+#clear-button:active {
+    transform: translateY(4px);
+}
+
 .fave-btn {
     width: 13%;
     background-color: #134d71;
@@ -135,6 +146,10 @@ input {
     border-style: solid;
     border-color: #134d71;
     margin-top: 20px;
+}
+
+.fave-btn:active {
+    transform: translateY(4px);
 }
 
 .empty-heart-btn-container {
@@ -154,6 +169,12 @@ input {
 .fa-heart {
     height: 25px;
 }
+
+.fa-heart:active {
+    transform: translateY(4px);
+}
+
+/* ------- FAVORITES PAGE RULES --------- */
 
 .favorites-page {
     display: flex;
@@ -191,6 +212,10 @@ input {
     border-radius: 3px;
     border-style: solid;
     border-color: #134d71;
+}
+
+.main-btn:active {
+    transform: translateY(4px);
 }
 
 .fave-message {
