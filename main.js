@@ -15,7 +15,7 @@ var giveMantra = document.querySelector('#give-message')
 var giveAffirmation = document.querySelector('#give-message')
 var imageBuddha = document.querySelector('.buddha')
 var textBox = document.querySelector('.textbox')
-// var choiceContainer = document.querySelector('.container')
+var choiceContainer = document.querySelector('.container')
 
 //STORED DATA **
  affirmations = [
