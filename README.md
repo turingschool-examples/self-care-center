@@ -23,7 +23,7 @@ I have built an application where you can choose between a preset Mantra and an 
 ## Features
 * Upon opening index.html from your terminal, you will be greeted with the main page.
 <p align='center'>
-<img width="1364" alt="Screen Shot 2021-12-29 at 3 28 10 PM" src="https://user-images.githubusercontent.com/92649050/147706187-def15448-5e70-4061-981b-e84e6c6c0ec9.png">
+<img width="1200" alt="Screen Shot 2021-12-29 at 3 28 10 PM" src="https://user-images.githubusercontent.com/92649050/147706187-def15448-5e70-4061-981b-e84e6c6c0ec9.png">
 <p>
     
 * You will be prompted to choose between an `Affirmation` and a `Mantra`.
