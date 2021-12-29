@@ -1,24 +1,53 @@
 # Self Care Center
-## Overview
+## Motivation
 How can I care for myself? One way is with affirmations and mantras!
 Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are repetive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
+Mantras are phrases that are repeated again and again during mindfulness practices.
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+I have built an application where you can choose between a preset Mantra and an Affirmation to receive a random message from either category.
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html). 
+*Or* if you would like to write your own message to be displayed, that functionality has been built in as well.
 
-## Learning Goals
+## Build Status
+* Complete
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+## Code style
+* HTML
+* CSS
+* javaScript
 
-## Setup
+## Programs Used
+* Github
+* Atom
 
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
+## Features
+Upon opening index.html from your terminal, you will be greeted with the main page.
 
+You will be prompted to choose between an `**Affirmation**` and a `**Mantra**`.
+
+The `**Recieve Message**` button will then be revealed. Click to see your randomly generated message.
+
+Or if you choose to write your own message, you can do so by clicking `**Here**` beneath the *Write your own soul nourishing message* prompt, then follow the revealed next steps by choosing whether you are writing an `**Affirmation**` or a `**Mantra**`, clicking `**Submit**`, writing your message and submitting once again to see your very own message revealed.
+
+## Code Example
+`function sendMessage(){
+    hide(imageBuddha)
+    show(clearBtn)
+    show(textBox)
+  if (radioMantra.checked){
+    giveMantra.innerText = mantras[randoMantra]
+  }
+  if (radioAffirmation.checked) {
+    giveAffirmation.innerText = affirmations[randoAffirmation]
+  }
+};`
+
+
+## Installation
+Start here. Click the link below.
+https://github.com/Jerry-Vrrr/self-care-center
+To edit this repo
+- fork and clone to local
+- `cd` into repository
+- Open in text editor
+- To view webpage, run the command `open index.html` in your **terminal**
