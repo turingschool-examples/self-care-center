@@ -32,7 +32,7 @@ I have built an application where you can choose between a preset Mantra and an 
 <p align='center'>
 <img width="890" alt="Screen Shot 2021-12-29 at 3 53 59 PM" src="https://user-images.githubusercontent.com/92649050/147706488-6e5c7de2-24e4-41b2-ad89-7930a2ec7baa.png">
 <p>
-The `Clear` button will return the page to it's original state.
+* The `Clear` button will return the page to it's original state.
 
 * *Or* if you choose to write your own message, you can do so by clicking `Here` beneath the *Write your own soul nourishing message* prompt. 
 <p align='center'>
@@ -45,6 +45,7 @@ The `Clear` button will return the page to it's original state.
 <p align='center'>    
 <img width="1147" alt="Screen Shot 2021-12-29 at 3 55 50 PM" src="https://user-images.githubusercontent.com/92649050/147706595-62b9059b-c5a6-4b3e-b5f5-c79b9a134ba0.png">
 <p>
+    
 ## Code Example
 ```
 function sendMessage(){
