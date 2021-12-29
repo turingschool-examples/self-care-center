@@ -22,8 +22,9 @@ I have built an application where you can choose between a preset Mantra and an 
 
 ## Features
 * Upon opening index.html from your terminal, you will be greeted with the main page.
-<img align='center'width="1364" alt="Screen Shot 2021-12-29 at 3 28 10 PM" src="https://user-images.githubusercontent.com/92649050/147706187-def15448-5e70-4061-981b-e84e6c6c0ec9.png">
-
+<p align='center'>
+<img width="1364" alt="Screen Shot 2021-12-29 at 3 28 10 PM" src="https://user-images.githubusercontent.com/92649050/147706187-def15448-5e70-4061-981b-e84e6c6c0ec9.png">
+<p>
 * You will be prompted to choose between an `Affirmation` and a `Mantra`.
 * The `Recieve Message` button will then be revealed. Click to see your randomly generated message.
 <p align='center'>
@@ -32,9 +33,11 @@ I have built an application where you can choose between a preset Mantra and an 
 <p align='center'>
 <img width="890" alt="Screen Shot 2021-12-29 at 3 53 59 PM" src="https://user-images.githubusercontent.com/92649050/147706488-6e5c7de2-24e4-41b2-ad89-7930a2ec7baa.png">
 <p>
+    
 * The `Clear` button will return the page to it's original state.
 
 * *Or* if you choose to write your own message, you can do so by clicking `Here` beneath the *Write your own soul nourishing message* prompt. 
+    
 <p align='center'>
 <img width="421" alt="Screen Shot 2021-12-29 at 3 54 17 PM" src="https://user-images.githubusercontent.com/92649050/147706579-5ea5ef09-0cf6-4413-9174-e3d69bbf6b73.png">
 <p>
