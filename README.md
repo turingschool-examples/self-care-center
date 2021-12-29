@@ -25,7 +25,9 @@ I have built an application where you can choose between a preset Mantra and an 
 <p align='center'>
 <img width="1364" alt="Screen Shot 2021-12-29 at 3 28 10 PM" src="https://user-images.githubusercontent.com/92649050/147706187-def15448-5e70-4061-981b-e84e6c6c0ec9.png">
 <p>
+    
 * You will be prompted to choose between an `Affirmation` and a `Mantra`.
+    
 * The `Recieve Message` button will then be revealed. Click to see your randomly generated message.
 <p align='center'>
 <img width="634" alt="Screen Shot 2021-12-29 at 3 53 25 PM" src="https://user-images.githubusercontent.com/92649050/147706467-041f684d-459c-473e-8563-87daf5943965.png">
