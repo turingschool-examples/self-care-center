@@ -41,6 +41,7 @@ I have built an application where you can choose between a preset Mantra and an 
 <p align='center'>
 <img width="421" alt="Screen Shot 2021-12-29 at 3 54 17 PM" src="https://user-images.githubusercontent.com/92649050/147706579-5ea5ef09-0cf6-4413-9174-e3d69bbf6b73.png">
 <p>
+    
 * Then follow the revealed next steps by choosing whether you are writing an `Affirmation` or a `Mantra`, clicking `Submit`, writing your  message and submitting once again to see your very own message revealed. 
 <p align='center'>
 <img width="619" alt="Screen Shot 2021-12-29 at 3 55 20 PM" src="https://user-images.githubusercontent.com/92649050/147706587-4f6f98d4-c445-410b-a58c-addb87cda62e.png">
