@@ -46,13 +46,11 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 #meditate-icon {
   width: 80px;
-  margin: auto;
-  position: absolute;
-  align-self: center;
 }
 
 #receive-btn {
@@ -88,12 +86,13 @@ label {
   font-size: 16px;
   background: #134d71;
   color: #ffffff;
-  display: block;
   border: 0;
   border-radius: 6px;
   width: 50px;
   height: 28px;
-  align-self: baseline;
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 
 #msg {
