@@ -80,23 +80,28 @@ function getMessage() {
     mantras = shownMantras.slice();
     shownMantras = [];
   }
+  if (!affirmationSelect.checked && !mantraSelect.checked) {
+    window.alert("Please select a message type.");
+  }
 };
 
 function displayMessage() {
   event.preventDefault();
-  icon.classList.add('hidden');
-  setTimeout(function() {
-    message.classList.remove('hidden');
-  }, 2000);
-  if (!message.classList.contains('hidden')) {
-    message.classList.add('hidden');
+  if (affirmationSelect.checked || mantraSelect.checked) {
+    if (!message.classList.contains('hidden')) {
+      message.classList.add('hidden');
+      setTimeout(function() {
+        message.classList.remove('hidden');
+      }, 2000);
+    }
+    icon.classList.add('hidden');
     setTimeout(function() {
       message.classList.remove('hidden');
     }, 2000);
+    setTimeout(function() {
+      clearMsgButton.classList.remove('hidden');
+    }, 2000);
   }
-  setTimeout(function() {
-    clearMsgButton.classList.remove('hidden');
-  }, 2000);
 };
 
 function alertMsg() {
@@ -109,10 +114,12 @@ function alertMsg() {
 };
 
 function displayLoading() {
-  loader.classList.remove('hidden');
-  setTimeout(function() {
-    loader.classList.add('hidden');
-  }, 2000);
+  if (affirmationSelect.checked || mantraSelect.checked) {
+    loader.classList.remove('hidden');
+    setTimeout(function() {
+      loader.classList.add('hidden');
+    }, 2000);
+  }
 };
 
 function addAffirmationBG() {
