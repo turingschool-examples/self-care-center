@@ -93,6 +93,11 @@ label {
   position: absolute;
   top: 5px;
   right: 5px;
+  transition: background .3s;
+}
+
+#clear-btn:hover {
+  background: #86ADC5;
 }
 
 #msg {
