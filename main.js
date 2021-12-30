@@ -88,18 +88,18 @@ function getMessage() {
 function displayMessage() {
   event.preventDefault();
   if (affirmationSelect.checked || mantraSelect.checked) {
-    if (!message.classList.contains('hidden')) {
-      message.classList.add('hidden');
-      setTimeout(function() {
-        message.classList.remove('hidden');
-      }, 2000);
-    }
     icon.classList.add('hidden');
     setTimeout(function() {
       message.classList.remove('hidden');
     }, 2000);
     setTimeout(function() {
       clearMsgButton.classList.remove('hidden');
+    }, 2000);
+  }
+  if (!message.classList.contains('hidden') && affirmationSelect.checked || mantraSelect.checked) {
+    message.classList.add('hidden');
+    setTimeout(function() {
+      message.classList.remove('hidden');
     }, 2000);
   }
 };
