@@ -7,6 +7,7 @@ var loader = document.getElementById('loading');
 var background = document.querySelector('body');
 var affirmBG = document.querySelector('.background-affirm');
 var mantraBG = document.querySelector('.background-mantra');
+var clearMsgButton = document.getElementById('clear-btn');
 var affirmations = [
   "I forgive myself and set myself free.",
   "I believe I can be all that I want to be.",
@@ -48,6 +49,8 @@ receiveMsgButton.addEventListener('click', function() {
   displayMessage();
 });
 
+clearMsgButton.addEventListener('click', clearMessage);
+
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
@@ -77,15 +80,23 @@ function getMessage() {
     mantras = shownMantras.slice();
     shownMantras = [];
   }
+  if (!affirmationSelect.checked && !mantraSelect.checked) {
+    window.alert("Please select a message type.");
+  }
 };
 
 function displayMessage() {
   event.preventDefault();
-  icon.classList.add('hidden');
-  setTimeout(function() {
-    message.classList.remove('hidden');
-  }, 2000);
-  if (!message.classList.contains('hidden')) {
+  if (affirmationSelect.checked || mantraSelect.checked) {
+    icon.classList.add('hidden');
+    setTimeout(function() {
+      message.classList.remove('hidden');
+    }, 2000);
+    setTimeout(function() {
+      clearMsgButton.classList.remove('hidden');
+    }, 2000);
+  }
+  if (!message.classList.contains('hidden') && affirmationSelect.checked || mantraSelect.checked) {
     message.classList.add('hidden');
     setTimeout(function() {
       message.classList.remove('hidden');
@@ -103,10 +114,12 @@ function alertMsg() {
 };
 
 function displayLoading() {
-  loader.classList.remove('hidden');
-  setTimeout(function() {
-    loader.classList.add('hidden');
-  }, 2000);
+  if (affirmationSelect.checked || mantraSelect.checked) {
+    loader.classList.remove('hidden');
+    setTimeout(function() {
+      loader.classList.add('hidden');
+    }, 2000);
+  }
 };
 
 function addAffirmationBG() {
@@ -116,4 +129,10 @@ function addAffirmationBG() {
 
 function addMantraBG() {
   mantraBG.style.opacity = '1';
+};
+
+function clearMessage() {
+  message.classList.add('hidden');
+  icon.classList.remove('hidden');
+  clearMsgButton.classList.add('hidden');
 };
