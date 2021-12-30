@@ -94,6 +94,7 @@ label {
   top: 5px;
   right: 5px;
   transition: background .3s;
+  animation: fade-in 1.0s;
 }
 
 #clear-btn:hover {
