@@ -7,6 +7,7 @@ var loader = document.getElementById('loading');
 var background = document.querySelector('body');
 var affirmBG = document.querySelector('.background-affirm');
 var mantraBG = document.querySelector('.background-mantra');
+var clearMsgButton = document.getElementById('clear-btn');
 var affirmations = [
   "I forgive myself and set myself free.",
   "I believe I can be all that I want to be.",
@@ -47,6 +48,8 @@ receiveMsgButton.addEventListener('click', function() {
   getMessage();
   displayMessage();
 });
+
+clearMsgButton.addEventListener('click', clearMessage);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -91,6 +94,9 @@ function displayMessage() {
       message.classList.remove('hidden');
     }, 2000);
   }
+  setTimeout(function() {
+    clearMsgButton.classList.remove('hidden');
+  }, 2000);
 };
 
 function alertMsg() {
@@ -116,4 +122,10 @@ function addAffirmationBG() {
 
 function addMantraBG() {
   mantraBG.style.opacity = '1';
+};
+
+function clearMessage() {
+  message.classList.add('hidden');
+  icon.classList.remove('hidden');
+  clearMsgButton.classList.add('hidden');
 };
