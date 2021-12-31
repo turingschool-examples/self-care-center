@@ -2,7 +2,7 @@ var affirmationSelect = document.getElementById('affirmations');
 var mantraSelect = document.getElementById('mantras');
 var receiveMsgButton = document.getElementById('receive-btn');
 var icon = document.getElementById('meditate-icon');
-var message = document.getElementById('msg');
+var messageText = document.getElementById('msg');
 var loader = document.getElementById('loading');
 var background = document.querySelector('body');
 var affirmBackground = document.querySelector('.background-affirm');
@@ -66,7 +66,7 @@ function getMessage() {
   if (affirmationSelect.checked && affirmations.length) {
     addAffirmationBackground();
     var index = getRandomIndex(affirmations);
-    message.innerText = affirmations[index];
+    messageText.innerText = affirmations[index];
     shownAffirmations.push(affirmations[index]);
     affirmations.splice(index, 1);
   }
@@ -78,7 +78,7 @@ function getMessage() {
   if (mantraSelect.checked && mantras.length) {
     addMantraBackground();
     var index = getRandomIndex(mantras);
-    message.innerText = mantras[index];
+    messageText.innerText = mantras[index];
     shownMantras.push(mantras[index]);
     mantras.splice(index, 1);
   }
@@ -96,16 +96,16 @@ function displayMessage() {
   event.preventDefault();
   if (affirmationSelect.checked || mantraSelect.checked) {
     setTimeout(function() {
-      message.classList.remove('hidden');
+      messageText.classList.remove('hidden');
     }, 2000);
     setTimeout(function() {
       clearMsgButton.classList.remove('hidden');
     }, 2000);
   }
-  if (!message.classList.contains('hidden') && affirmationSelect.checked || mantraSelect.checked) {
-    message.classList.add('hidden');
+  if (!messageText.classList.contains('hidden') && affirmationSelect.checked || mantraSelect.checked) {
+    messageText.classList.add('hidden');
     setTimeout(function() {
-      message.classList.remove('hidden');
+      messageText.classList.remove('hidden');
     }, 2000);
   }
 };
@@ -138,7 +138,7 @@ function addMantraBackground() {
 };
 
 function clearMessageBox() {
-  message.classList.add('hidden');
+  messageText.classList.add('hidden');
   icon.classList.remove('hidden');
   clearMsgButton.classList.add('hidden');
 };
