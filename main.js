@@ -44,6 +44,7 @@ var shownAffirmations = [];
 var shownMantras = [];
 
 receiveMsgButton.addEventListener('click', function() {
+  hideIcon();
   displayLoading();
   getMessage();
   displayMessage();
@@ -53,6 +54,12 @@ clearMsgButton.addEventListener('click', clearMessage);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
+};
+
+function hideIcon() {
+  if (affirmationSelect.checked || mantraSelect.checked) {
+    icon.classList.add('hidden');
+  }
 };
 
 function getMessage() {
@@ -88,7 +95,6 @@ function getMessage() {
 function displayMessage() {
   event.preventDefault();
   if (affirmationSelect.checked || mantraSelect.checked) {
-    icon.classList.add('hidden');
     setTimeout(function() {
       message.classList.remove('hidden');
     }, 2000);
