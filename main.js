@@ -50,7 +50,7 @@ receiveMsgButton.addEventListener('click', function() {
   displayMessage();
 });
 
-clearMsgButton.addEventListener('click', clearMessage);
+clearMsgButton.addEventListener('click', clearMessageBox);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -137,7 +137,7 @@ function addMantraBG() {
   mantraBG.style.opacity = '1';
 };
 
-function clearMessage() {
+function clearMessageBox() {
   message.classList.add('hidden');
   icon.classList.remove('hidden');
   clearMsgButton.classList.add('hidden');
