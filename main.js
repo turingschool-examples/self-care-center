@@ -5,8 +5,8 @@ var icon = document.getElementById('meditate-icon');
 var message = document.getElementById('msg');
 var loader = document.getElementById('loading');
 var background = document.querySelector('body');
-var affirmBG = document.querySelector('.background-affirm');
-var mantraBG = document.querySelector('.background-mantra');
+var affirmBackground = document.querySelector('.background-affirm');
+var mantraBackground = document.querySelector('.background-mantra');
 var clearMsgButton = document.getElementById('clear-btn');
 var affirmations = [
   "I forgive myself and set myself free.",
@@ -64,7 +64,7 @@ function hideIcon() {
 
 function getMessage() {
   if (affirmationSelect.checked && affirmations.length) {
-    addAffirmationBG();
+    addAffirmationBackground();
     var index = getRandomIndex(affirmations);
     message.innerText = affirmations[index];
     shownAffirmations.push(affirmations[index]);
@@ -76,7 +76,7 @@ function getMessage() {
     shownAffirmations = [];
   }
   if (mantraSelect.checked && mantras.length) {
-    addMantraBG();
+    addMantraBackground();
     var index = getRandomIndex(mantras);
     message.innerText = mantras[index];
     shownMantras.push(mantras[index]);
@@ -128,13 +128,13 @@ function displayLoading() {
   }
 };
 
-function addAffirmationBG() {
-  mantraBG.style.opacity = '0';
-  affirmBG.style.opacity = '1';
+function addAffirmationBackground() {
+  mantraBackground.style.opacity = '0';
+  affirmBackground.style.opacity = '1';
 };
 
-function addMantraBG() {
-  mantraBG.style.opacity = '1';
+function addMantraBackground() {
+  mantraBackground.style.opacity = '1';
 };
 
 function clearMessageBox() {
