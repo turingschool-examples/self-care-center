@@ -44,6 +44,7 @@ var shownAffirmations = [];
 var shownMantras = [];
 
 receiveMsgButton.addEventListener('click', function() {
+  checkSelection();
   hideIcon();
   displayLoading();
   getMessage();
@@ -54,6 +55,12 @@ clearMsgButton.addEventListener('click', clearMessageBox);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
+};
+
+function checkSelection() {
+  if (!affirmationSelect.checked && !mantraSelect.checked) {
+    window.alert("Please select a message type.");
+  }
 };
 
 function hideIcon() {
@@ -86,9 +93,6 @@ function getMessage() {
     alertMsg();
     mantras = shownMantras.slice();
     shownMantras = [];
-  }
-  if (!affirmationSelect.checked && !mantraSelect.checked) {
-    window.alert("Please select a message type.");
   }
 };
 
