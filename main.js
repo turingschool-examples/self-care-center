@@ -99,19 +99,25 @@ function getMessage() {
 function displayMessage() {
   event.preventDefault();
   if (affirmationSelect.checked || mantraSelect.checked) {
-    setTimeout(function() {
-      messageText.classList.remove('hidden');
-    }, 2000);
-    setTimeout(function() {
-      clearMsgButton.classList.remove('hidden');
-    }, 2000);
+    unhideMessage();
+    unhideClearMsgButton();
   }
   if (!messageText.classList.contains('hidden') && affirmationSelect.checked || mantraSelect.checked) {
     messageText.classList.add('hidden');
-    setTimeout(function() {
-      messageText.classList.remove('hidden');
-    }, 2000);
+    unhideMessage();
   }
+};
+
+function unhideMessage() {
+  setTimeout(function() {
+    messageText.classList.remove('hidden');
+  }, 2000);
+};
+
+function unhideClearMsgButton() {
+  setTimeout(function() {
+    clearMsgButton.classList.remove('hidden');
+  }, 2000);
 };
 
 function alertMsg() {
