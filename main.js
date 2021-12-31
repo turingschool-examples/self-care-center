@@ -167,20 +167,12 @@ function displayLoading() {
 
 function changeBackground() {
   if (affirmationSelect.checked && affirmations.length) {
-    addAffirmationBackground();
+    mantraBackground.style.opacity = '0';
+    affirmBackground.style.opacity = '1';
   }
   if (mantraSelect.checked && mantras.length) {
-    addMantraBackground();
+    mantraBackground.style.opacity = '1';
   }
-};
-
-function addAffirmationBackground() {
-  mantraBackground.style.opacity = '0';
-  affirmBackground.style.opacity = '1';
-};
-
-function addMantraBackground() {
-  mantraBackground.style.opacity = '1';
 };
 
 function clearMessageBox() {
