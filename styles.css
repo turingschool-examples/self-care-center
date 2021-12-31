@@ -58,11 +58,11 @@ label {
   font-size: 16px;
   background: #134d71;
   color: #ffffff;
-  display: block;
   border: 0;
   border-radius: 6px;
   width: 180px;
   height: 28px;
+  display: block;
   margin: auto;
   margin-top: 15px;
   transition: background .3s;
@@ -78,7 +78,6 @@ label {
 
 .hidden {
   display: none;
-  visibility: hidden;
 }
 
 #clear-btn {
@@ -102,8 +101,6 @@ label {
 }
 
 #msg {
-  align-self: center;
-  margin: auto;
   font-family: 'Quicksand', sans-serif;
   font-size: 18px;
   text-align: center;
@@ -125,7 +122,6 @@ label {
   height: 25px;
   background-color: #134d71;
   border-radius: 50%;
-  margin: auto;
   animation: pulse 1.0s infinite ease;
   position: absolute;
 }
@@ -142,7 +138,6 @@ label {
 
 .background-affirm {
 background: linear-gradient(#50335C, #80668A, #F4E3FB);
-background-attachment: fixed;
 position: absolute;
 top: 0;
 right: 0;
@@ -155,7 +150,6 @@ transition: opacity 1.5s linear;
 
 .background-mantra {
 background: linear-gradient(#396B3F, #76A17B, #A4C3A8);
-background-attachment: fixed;
 position: absolute;
 top: 0;
 right: 0;
