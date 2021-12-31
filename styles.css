@@ -33,13 +33,13 @@ label {
   background-attachment: fixed;
 }
 
-#selection {
+#selection-box {
   width: 570px;
   margin: auto;
   margin-bottom: 100px;
 }
 
-#message {
+#message-box {
   width: 900px;
   height: 150px;
   margin: auto;
@@ -167,28 +167,28 @@ transition: opacity 1.5s linear;
 }
 
 @media (max-width: 1024px) {
-  #selection {
+  #selection-box {
     width: 456px;
   }
-  #message {
+  #message-box {
     width: 720px;
   }
 }
 
 @media (max-width: 767px) {
-  #selection {
+  #selection-box {
     width: 400px;
   }
-  #message {
+  #message-box {
     width: 600px;
   }
 }
 
 @media (max-width: 480px) {
-  #selection {
+  #selection-box {
     width: 400px;
   }
-  #message {
+  #message-box {
     width: 400px;
     height: 200px;
   }
