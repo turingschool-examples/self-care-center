@@ -103,9 +103,13 @@ function displayMessage() {
     unhideClearMsgButton();
   }
   if (!messageText.classList.contains('hidden') && affirmationSelect.checked || mantraSelect.checked) {
-    messageText.classList.add('hidden');
+    hideMessage();
     unhideMessage();
   }
+};
+
+function hideMessage() {
+  messageText.classList.add('hidden')
 };
 
 function unhideMessage() {
