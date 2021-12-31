@@ -45,6 +45,7 @@ var shownMantras = [];
 
 receiveMsgButton.addEventListener('click', function() {
   checkSelection();
+  checkArrays();
   hideIcon();
   displayLoading();
   getMessage();
@@ -64,6 +65,17 @@ function checkSelection() {
   }
 };
 
+function checkArrays() {
+  if (affirmationSelect.checked && !affirmations.length) {
+    alertMsg();
+    resetAffirmations();
+  }
+  if (mantraSelect.checked && !mantras.length) {
+    alertMsg();
+    resetMantras();
+  }
+};
+
 function hideIcon() {
   if (affirmationSelect.checked || mantraSelect.checked) {
     icon.classList.add('hidden');
@@ -77,21 +89,11 @@ function getMessage() {
     shownAffirmations.push(affirmations[index]);
     affirmations.splice(index, 1);
   }
-  if (affirmationSelect.checked && !affirmations.length) {
-    alertMsg();
-    affirmations = shownAffirmations.slice();
-    shownAffirmations = [];
-  }
   if (mantraSelect.checked && mantras.length) {
     var index = getRandomIndex(mantras);
     messageText.innerText = mantras[index];
     shownMantras.push(mantras[index]);
     mantras.splice(index, 1);
-  }
-  if (mantraSelect.checked && !mantras.length) {
-    alertMsg();
-    mantras = shownMantras.slice();
-    shownMantras = [];
   }
 };
 
@@ -115,6 +117,16 @@ function unhideMessage() {
   setTimeout(function() {
     messageText.classList.remove('hidden');
   }, 2000);
+};
+
+function resetAffirmations() {
+  affirmations = shownAffirmations.slice();
+  shownAffirmations = [];
+};
+
+function resetMantras() {
+  mantras = shownMantras.slice();
+  shownMantras = [];
 };
 
 function unhideClearMsgButton() {
