@@ -48,6 +48,7 @@ receiveMsgButton.addEventListener('click', function() {
   hideIcon();
   displayLoading();
   getMessage();
+  changeBackground();
   displayMessage();
 });
 
@@ -71,7 +72,6 @@ function hideIcon() {
 
 function getMessage() {
   if (affirmationSelect.checked && affirmations.length) {
-    addAffirmationBackground();
     var index = getRandomIndex(affirmations);
     messageText.innerText = affirmations[index];
     shownAffirmations.push(affirmations[index]);
@@ -83,7 +83,6 @@ function getMessage() {
     shownAffirmations = [];
   }
   if (mantraSelect.checked && mantras.length) {
-    addMantraBackground();
     var index = getRandomIndex(mantras);
     messageText.innerText = mantras[index];
     shownMantras.push(mantras[index]);
@@ -139,6 +138,15 @@ function displayLoading() {
     setTimeout(function() {
       loader.classList.add('hidden');
     }, 2000);
+  }
+};
+
+function changeBackground() {
+  if (affirmationSelect.checked && affirmations.length) {
+    addAffirmationBackground();
+  }
+  if (mantraSelect.checked && mantras.length) {
+    addMantraBackground();
   }
 };
 
