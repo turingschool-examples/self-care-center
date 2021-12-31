@@ -85,20 +85,32 @@ function hideIcon() {
 function getMessage() {
   if (affirmationSelect.checked && affirmations.length) {
     var index = getRandomIndex(affirmations);
-    messageText.innerText = affirmations[index];
-    shownAffirmations.push(affirmations[index]);
-    affirmations.splice(index, 1);
+    currentMessage = affirmations[index];
+    markShown(affirmations);
   }
   if (mantraSelect.checked && mantras.length) {
     var index = getRandomIndex(mantras);
-    messageText.innerText = mantras[index];
-    shownMantras.push(mantras[index]);
-    mantras.splice(index, 1);
+    currentMessage = mantras[index];
+    markShown(mantras);
+  }
+};
+
+function markShown(array) {
+  for (var i = 0; i < array.length; i++) {
+    if (array === affirmations && array[i] === currentMessage) {
+      shownAffirmations.push(currentMessage);
+      affirmations.splice(i, 1);
+    }
+    if (array === mantras && array[i] === currentMessage) {
+      shownMantras.push(currentMessage);
+      mantras.splice(i, 1);
+    }
   }
 };
 
 function displayMessage() {
   event.preventDefault();
+  messageText.innerText = currentMessage;
   if (affirmationSelect.checked || mantraSelect.checked) {
     unhideMessage();
     unhideClearMsgButton();
