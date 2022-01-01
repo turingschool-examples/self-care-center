@@ -1,5 +1,3 @@
-// Selector Variables here ⛷
-
 var meditationImage = document.querySelector('.meditation-img');
 var yourMessage = document.querySelector('.your-message');
 
@@ -18,9 +16,6 @@ var mainSubHeader = document.querySelector('.sub-header');
 var mainMessageForm = document.querySelector('.message-form');
 var messageCenter = document.querySelector('.message-center');
 
-
-
-// Data here ⛷
 
 var affirmations = [
     {text: "I forgive myself and set myself free.", type: "affirmation", isFavorited: false, id: 0},
@@ -57,7 +52,6 @@ var affirmations = [
 var favoriteMessages = [];
 var currentMessage;
 
-// Event Listeners here ⛷
 
 affirmationRadio.addEventListener('click', enableReceiveBtn);
 mantraRadio.addEventListener('click', enableReceiveBtn);
@@ -69,9 +63,6 @@ faveButton.addEventListener('click', viewFavoritesPage);
 backToMainBtn.addEventListener('click', viewMainPage);
 favoritesPage.addEventListener('click', removeFromFavorites);
 
-
-
-// Event handlers/functions here ⛷
 
 function getRandomMessage(array) {
     return Math.floor(Math.random() * array.length)
