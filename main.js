@@ -19,38 +19,39 @@ var mainMessageForm = document.querySelector('.message-form');
 var messageCenter = document.querySelector('.message-center');
 
 
+
 // Data here ⛷
 
 var affirmations = [
-    {text: "I forgive myself and set myself free.", type: "affirmation", isFavorited: false, id: Date.now()},
-    {text: "I believe I can be all that I want to be.", type: "affirmation", isFavorited: false, id: Date.now()},
-    {text: "I am in the process of becoming the best version of myself.", type: "affirmation", isFavorited: false, id: Date.now()},
-    {text: "I choose to be kind to myself and love myself unconditionally.", type: "affirmation", isFavorited: false, id: Date.now()},
-    {text: "My possibilities are endless.", type: "affirmation", isFavorited: false, id: Date.now()},
-    {text: "I am worthy of my dreams.", type: "affirmation", isFavorited: false, id: Date.now()},
-    {text: "I am enough.", type: "affirmation", isFavorited: false, id: Date.now()},
-    {text: "I deserve to be healthy and feel good.", type: "affirmation", isFavorited: false, id: Date.now()},
-    {text: "I am full of energy and vitality and my mind is calm and peaceful.", type: "affirmation", isFavorited: false, id: Date.now()},
-    {text: "Every day I am getting healthier and stronger.", type: "affirmation", isFavorited: false, id: Date.now()},
-    {text: "I honor my body by trusting the signals that it sends me.", type: "affirmation", isFavorited: false, id: Date.now()},
-    {text: "I manifest perfect health by making smart choices.", type: "affirmation", isFavorited: false, id: Date.now()},
+    {text: "I forgive myself and set myself free.", type: "affirmation", isFavorited: false, id: 0},
+    {text: "I believe I can be all that I want to be.", type: "affirmation", isFavorited: false, id: 1},
+    {text: "I am in the process of becoming the best version of myself.", type: "affirmation", isFavorited: false, id: 2},
+    {text: "I choose to be kind to myself and love myself unconditionally.", type: "affirmation", isFavorited: false, id: 3},
+    {text: "My possibilities are endless.", type: "affirmation", isFavorited: false, id: 4},
+    {text: "I am worthy of my dreams.", type: "affirmation", isFavorited: false, id: 5},
+    {text: "I am enough.", type: "affirmation", isFavorited: false, id: 6},
+    {text: "I deserve to be healthy and feel good.", type: "affirmation", isFavorited: false, id: 7},
+    {text: "I am full of energy and vitality and my mind is calm and peaceful.", type: "affirmation", isFavorited: false, id: 8},
+    {text: "Every day I am getting healthier and stronger.", type: "affirmation", isFavorited: false, id: 9},
+    {text: "I honor my body by trusting the signals that it sends me.", type: "affirmation", isFavorited: false, id: 10},
+    {text: "I manifest perfect health by making smart choices.", type: "affirmation", isFavorited: false, id: 11},
   ];
   var mantras = [
-    {text: "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.", type: "mantra", isFavorited: false, id: Date.now()},
-    {text: "Don’t let yesterday take up too much of today.", type: "mantra", isFavorited: false, id: Date.now()},
-    {text: "Every day is a second chance.", type: "mantra", isFavorited: false, id: Date.now()},
-    {text: "Tell the truth and love everyone.", type: "mantra", isFavorited: false, id: Date.now()},
-    {text: "I am free from sadness.", type: "mantra", isFavorited: false, id: Date.now()},
-    {text: "I am enough.", type: "mantra", isFavorited: false, id: Date.now()},
-    {text: "In the beginning it is you, in the middle it is you and in the end it is you.", type: "mantra", isFavorited: false, id: Date.now()},
-    {text: "I love myself.", type: "mantra", isFavorited: false, id: Date.now()},
-    {text: "I am present now.", type: "mantra", isFavorited: false, id: Date.now()},
-    {text: "Inhale the future, exhale the past.", type: "mantra", isFavorited: false, id: Date.now()},
-    {text: "This too shall pass.", type: "mantra", isFavorited: false, id: Date.now()},
-    {text: "Yesterday is not today.", type: "mantra", isFavorited: false, id: Date.now()},
-    {text: "The only constant is change.", type: "mantra", isFavorited: false, id: Date.now()},
-    {text: "Onward and upward.", type: "mantra", isFavorited: false, id: Date.now()},
-    {text: "I am the sky, the rest is weather.", type: "mantra", isFavorited: false, id: Date.now()},
+    {text: "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.", type: "mantra", isFavorited: false, id: 12},
+    {text: "Don’t let yesterday take up too much of today.", type: "mantra", isFavorited: false, id: 13},
+    {text: "Every day is a second chance.", type: "mantra", isFavorited: false, id: 14},
+    {text: "Tell the truth and love everyone.", type: "mantra", isFavorited: false, id: 15},
+    {text: "I am free from sadness.", type: "mantra", isFavorited: false, id: 16},
+    {text: "I am enough.", type: "mantra", isFavorited: false, id: 17},
+    {text: "In the beginning it is you, in the middle it is you and in the end it is you.", type: "mantra", isFavorited: false, id: 18},
+    {text: "I love myself.", type: "mantra", isFavorited: false, id: 19},
+    {text: "I am present now.", type: "mantra", isFavorited: false, id: 20},
+    {text: "Inhale the future, exhale the past.", type: "mantra", isFavorited: false, id: 21},
+    {text: "This too shall pass.", type: "mantra", isFavorited: false, id: 22},
+    {text: "Yesterday is not today.", type: "mantra", isFavorited: false, id: 23},
+    {text: "The only constant is change.", type: "mantra", isFavorited: false, id: 24},
+    {text: "Onward and upward.", type: "mantra", isFavorited: false, id: 25},
+    {text: "I am the sky, the rest is weather.", type: "mantra", isFavorited: false, id: 26},
   ];
 
 var favoriteMessages = [];
@@ -66,6 +67,7 @@ emptyHeartButton.addEventListener('click', favoriteMessage);
 fullHeartButton.addEventListener('click', favoriteMessage);
 faveButton.addEventListener('click', viewFavoritesPage);
 backToMainBtn.addEventListener('click', viewMainPage);
+favoritesPage.addEventListener('click', removeFromFavorites);
 
 
 
@@ -195,18 +197,24 @@ function hideItem(selectorVariable) {
     selectorVariable.classList.add('hidden')
 };
 
-
 function makeFavoritesList() {
     favoritesCenter.innerHTML = ""
     for (var i = 0; i < favoriteMessages.length; i ++) {
         favoritesCenter.innerHTML += `
-        <h3 class="fave-message">${favoriteMessages[i].text}</h3>`
+        <div class="fave-with-heart">
+            <h3 class="fave-message">${favoriteMessages[i].text}</h3>
+            <i class="fas fa-heart" id=${favoriteMessages[i].id}></i>
+        </div>`
     }
-}
+};
 
-
-/* TO DO
-
-- find way to display hearts on favorites page
-
-*/
+function removeFromFavorites(e) {
+    if (e.target.closest('.fa-heart')) {
+        for (i = 0; i < favoriteMessages.length; i ++) {
+            if (favoriteMessages[i].id === parseInt(e.target.closest('.fa-heart').id)) {
+                favoriteMessages.splice(i, 1);
+            }
+        }
+    }
+    makeFavoritesList();
+};

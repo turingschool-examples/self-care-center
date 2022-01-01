@@ -187,7 +187,7 @@ input {
 .fave-center {
     display: flex;
     width: 1000px;
-    height: 200px;
+    height: fit-content;
     margin: 5%;
     background-color: white;
     border-radius: 10px;
@@ -220,4 +220,10 @@ input {
 
 .fave-message {
     margin: 10px;
+}
+
+.fave-with-heart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
