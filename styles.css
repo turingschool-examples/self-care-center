@@ -1,17 +1,7 @@
-/* font-family: 'Quicksand', sans-serif;
-COLORS
-light-yellow - #f7e4bf;
-light-blue - #78a7c6;
-dark-blue - #134d71;
-white - #ffffff;
-black - #000000;
-*/
-
 
 /* ------ GLOBAL RULES ------- */
 
 * {
-    /* border: 2px solid red; */
     margin: 0px;
     padding: 0px;
 }
@@ -49,6 +39,8 @@ body {
     margin-top: 100px;
 }
 
+/* ------- MESSAGE FORM RULES --------- */
+
 .message-form {
     display: flex;
     flex-direction: column;
@@ -78,21 +70,6 @@ input {
     margin-left: 15px;
 }
 
-.message-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 75%;
-    height: 20%;
-    background-color: white;
-    margin-top: 10px;
-    border-radius: 10px;
-}
-
-img {
-    height: 50%;
-}
-
 #receive-button {
     width: 28%;
     background-color: #134d71;
@@ -101,6 +78,10 @@ img {
     border-radius: 3px;
     border-style: solid;
     border-color: #134d71;
+}
+
+#receive-button:active {
+    transform: translateY(4px);
 }
 
 #receive-button:disabled {
@@ -114,6 +95,24 @@ img {
     border-color: #134d71;
 }
 
+/* ------- MESSAGE CENTER RULES --------- */
+
+.message-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 75%;
+    height: 20%;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.meditation-img {
+    height: 50%;
+}
+
 #clear-button {
     width: 13%;
     background-color: #134d71;
@@ -123,4 +122,99 @@ img {
     border-style: solid;
     border-color: #134d71;
     margin-top: 20px;
+}
+
+#clear-button:active {
+    transform: translateY(4px);
+}
+
+.fave-btn {
+    width: 13%;
+    background-color: #134d71;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #134d71;
+    margin-top: 20px;
+}
+
+.fave-btn:active {
+    transform: translateY(4px);
+}
+
+.empty-heart-btn-container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 90%;
+    font-size: 140%;
+}
+
+.full-heart-btn-container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 90%;
+    font-size: 140%; 
+}
+
+.fa-heart {
+    height: 25px;
+}
+
+.fa-heart:active {
+    transform: translateY(4px);
+}
+
+/* ------- FAVORITES PAGE RULES --------- */
+
+.favorites-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    column-gap: 20%;
+}
+
+.fave-center {
+    display: flex;
+    width: 1000px;
+    height: fit-content;
+    margin: 5%;
+    background-color: white;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.fave-sub-header {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 10%;
+}
+
+.main-btn {
+    width: 13%;
+    align-content: space-around;
+    background-color: #134d71;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #134d71;
+}
+
+.main-btn:active {
+    transform: translateY(4px);
+}
+
+.fave-message {
+    margin: 10px;
+}
+
+.fave-with-heart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
