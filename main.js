@@ -67,11 +67,11 @@ function checkSelection() {
 
 function checkArrays() {
   if (affirmationSelect.checked && !affirmations.length) {
-    alertMsg();
+    alertEndOfList();
     resetAffirmations();
   }
   if (mantraSelect.checked && !mantras.length) {
-    alertMsg();
+    alertEndOfList();
     resetMantras();
   }
 };
@@ -147,7 +147,7 @@ function unhideClearMsgButton() {
   }, 2000);
 };
 
-function alertMsg() {
+function alertEndOfList() {
   if (affirmationSelect.checked) {
     window.alert("You've received all of the affirmations. You will now begin seeing repeats.");
   }
