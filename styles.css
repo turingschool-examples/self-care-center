@@ -88,9 +88,14 @@ black - #000000;
 
 button {
   background-color: #134d71;
+  border: none;
   color: white;
   border-radius: 5px;
   width: 24vh;
+}
+
+.inactive {
+  background-color: #959595;
 }
 
 .results-box {
@@ -99,7 +104,7 @@ button {
   height: 19vh;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .meditate-svg {
@@ -109,6 +114,11 @@ button {
 
 .message-result {
   color: black;
+  font-size: x-large;
+}
+
+.clear {
+  width: 15vh;
 }
 
 .hidden {

@@ -4,9 +4,14 @@ var choiceMantra = document.getElementById("choice-mantra");
 var buddhaIcon = document.getElementById("buddha-icon");
 var messageResult = document.querySelector(".message-result");
 var messageButton = document.getElementById("receive-message");
+var clearButton = document.querySelector(".clear");
 
 /* ~~~~~~~~~~~~~~~~ Event Listeners ~~~~~~~~~~~~~~~~~*/
 messageButton.addEventListener("click", getMessage);
+clearButton.addEventListener("click", clearMessage);
+choiceAffirmation.addEventListener("change", activateButton);
+choiceMantra.addEventListener("change", activateButton);
+messageButton.disabled = true;
 
 /* ~~~~~~~~~~~~~~~~~~~ Functions ~~~~~~~~~~~~~~~~~~~~*/
 function show(element) {
@@ -31,8 +36,19 @@ function selectChoice() {
 };
 
 function getMessage() {
-  console.log("I pressed it")
-  hide(buddhaIcon);
   selectChoice();
+  hide(buddhaIcon);
   show(messageResult);
+  show(clearButton);
 };
+
+function clearMessage() {
+  hide(messageResult);
+  hide(clearButton);
+  show(buddhaIcon);
+};
+
+function activateButton() {
+  messageButton.classList.remove("inactive")
+  messageButton.disabled = false;
+}
