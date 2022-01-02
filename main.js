@@ -50,6 +50,7 @@ var mantras = [
 'Onward and upward.',
 'I am the sky, the rest is weather.'
 ]
+
 var tempList = []
 
 //EVENT LISTENERS HERE **
@@ -62,11 +63,10 @@ submitOne.addEventListener('click', choiceMessageReveal)
 submitTwo.addEventListener('click', addMessage)
 
 //HOUSEKEEPING AND RE-ASSIGNMENTS**
-
 randoMantra = getRandomIndex(mantras)
 randoAffirmation = getRandomIndex(affirmations)
-//FUNCTIONS AND HANDLERS **
 
+//FUNCTIONS AND HANDLERS **
 function sendMessage(){
     hide(imageBuddha)
     show(clearBtn)
@@ -119,7 +119,7 @@ function hide(item){
 function show(item){
     item.classList.remove('hidden')
 };
-//keep as is
+
 function hideMessage(){
     location.reload()
 };
