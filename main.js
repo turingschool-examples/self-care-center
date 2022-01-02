@@ -20,6 +20,9 @@ var p = document.querySelector('p');
 var addToFavoritesButton = document.querySelector('.add-to-favorites');
 var viewFavoritesButton = document.querySelector('.view-favorites');
 
+//delete from favorites
+var deleteFromFavoritesButton = document.querySelector('.delete-from-favs')
+
 
 var quoteArea = document.querySelector('.quote-area');
 var favoritesArea = document.querySelector('.favorite-area');
@@ -38,6 +41,7 @@ submitButton.addEventListener('click', displayCustomMessage);
 addToFavoritesButton.addEventListener('click', addToFavoriteList);
 viewFavoritesButton.addEventListener('click', viewFavorites);
 backToMainPageButton.addEventListener('click', showMainPage);
+deleteFromFavoritesButton.addEventListener('click', deleteMessage);
 
 //data👇
 var affirmations = [
@@ -145,4 +149,8 @@ function addToFavoriteList() {
   event.preventDefault();
   if (!favoriteMessages.includes(message.innerText))
   favoriteMessages.push(message.innerText)
+}
+
+function deleteMessage() {
+  orderedList.classList.add('hidden')
 }
