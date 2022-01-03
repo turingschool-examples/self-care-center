@@ -44,8 +44,19 @@ section img {
 
 .radio-choice {
   display: inline-block;
-  margin-right: 100px;
+  margin-bottom: 10px;
+}
 
+.radio-choice-m {
+  display: inline-block;
+  margin-left: 86px;
+  margin-bottom: 10px;
+}
+
+
+
+.radio-choice input {
+  margin-left: 20px;
 }
 
 .radio-choice p {
