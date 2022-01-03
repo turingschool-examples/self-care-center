@@ -1,6 +1,6 @@
 # Self Care Center
 
-#### *Contributors: Katie Toler*  <br /> Follow me on Github [here](https://github.com/KATIETOLER) <br />*Technologies used: Javascript, CSS, HTML*
+ *Contributors: Katie Toler*  <br /> ( Follow me on Github [here](https://github.com/KATIETOLER) ) <br />*Technologies used: Javascript, CSS, HTML*
 
 [Deploy Link](https://katietoler.github.io/self-care-center/) <br />
 [Github Repository](https://github.com/KATIETOLER/self-care-center)
@@ -8,7 +8,8 @@
 ## Overview
 How can I care for myself? One way is with affirmations and mantras!
 Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth. <br />
-Mantras are repetitive phrases that are repeated again and again during mindfulness practices. This is an app that helps users remind themselves of their inherent value through humorous phrases from their favorite syndicated television show.
+Mantras are repetitive phrases that are repeated again and again during mindfulness practices. This is an app that helps users remind themselves of their inherent value through humorous phrases from their favorite syndicated television show.<br />
+![Gif of DAYMAN](https://i.kym-cdn.com/photos/images/original/001/430/369/d1f.gif)<br />
 ### What does the Self Care Center do?
   ---
   #### Basic Functions
