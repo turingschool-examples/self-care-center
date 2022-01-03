@@ -6,3 +6,130 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+/*############ Main Styles ############*/
+
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+html {
+  background: linear-gradient(#134d71,#78a7c6,#f7e4bf);
+  background-repeat: no-repeat;
+  height: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 5vh;
+  font-size: 4vh;
+  font-weight: bold;
+  animation: fadeIn ease 5s;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+article {
+  border-radius: 1vh;
+  margin: 10vh;
+  margin-top: 2vh;
+  padding: 5vh;
+  width: 75vh;
+  background-color: #ffffff;
+  color: black;
+}
+
+button {
+  background-color: #134d71;
+  color: #ffffff;
+  border-radius: 0.5vh;
+  width: 25vh;
+  height: 4vh;
+}
+
+p, button, article, header {
+   overflow-wrap: break-word;
+}
+
+p {
+  margin-top: 10vh;
+  margin-bottom: 0vh;
+}
+
+/* ############ Class Styles ############*/
+
+.which-type {
+  font-weight: bold;
+  font-size: 3vh;
+}
+
+.clear-button{
+  width: 12vw;
+  height: 3vw;
+  opacity: 65%;
+  border-style: solid;
+}
+
+.clear-button-align{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.msg-select{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-style: italic;
+  padding: 2vh;
+}
+
+.msg-select:hover{
+  transform: translateY(1px);
+}
+
+.inputs{
+  display: flex;
+  justify-content: space-around;
+  width: 100vh;
+  margin-top: 1vh;
+  margin-bottom: 0vh;
+}
+
+.msg-button{
+  justify-content: space-around;
+}
+
+.msg-button:hover{
+  color:#fffbef;
+}
+
+.icon{
+  width: 8%;
+  height: auto;
+}
+
+.display{
+  width: 75vw;
+}
+
+.message{
+  padding: 3vh;
+}
+
+
+.hidden {
+  display: none;
+}
