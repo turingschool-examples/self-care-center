@@ -18,11 +18,9 @@ main {
   text-align: center;
   align-items: center;
   color: #ffffff;
-  margin-top: -20px;
-  margin-left: -7px;
-  margin-right: -7px;
+  margin: -20px -7px 20px -7px;
   background: linear-gradient(#134d71,#78a7c6,#f7e4bf);
-  height: 100vh;
+  height: 103vh;
   width: 100vw;
   row-gap: 20px;
 }
@@ -33,16 +31,20 @@ section img {
 }
 
 .button {
-  display: flex-box;
+  /* display: flex-box; */
 }
 
 .selection {
   width: 40%;
-  display: flex-box;
+  height: auto;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  /* align-content: space-evenly; */
 }
 
 .radio-choice {
   display: inline-block;
+  margin-right: 100px;
 
 }
 
@@ -53,12 +55,18 @@ section img {
 
 .mantra {
   width: 60%;
+  border-radius: 10px;
 }
 
 button {
+  display: block;
   font-family: inherit;
   background-color: #134d71;
   color: #ffffff;
+  margin: auto;
+  border-radius: 5px;
+  padding: 2px 20px;
+  border-style: none;
 }
 
 section {
