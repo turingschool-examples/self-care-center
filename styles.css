@@ -6,3 +6,95 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+body {
+    background: linear-gradient(#134d71, #78a7c6, #f7e4bf) no-repeat center fixed; 
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    border: red solid 1px;
+
+}
+
+h2 {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 70px;
+    margin-top: 23px;
+}
+
+h3 {
+    color: white;
+   /* justify-self: center ; */
+   font-family: 'Quicksand', sans-serif;
+   text-align: center;
+
+}
+
+.buddha {
+    height: 60px;
+    width: 60px;
+    margin: 20px;
+    /* justify-self: center; */
+}
+
+.message-box {
+    background-color: #ffffff;
+    width: 600px;
+    border-radius: 5px;
+    justify-content: center;
+    display: flex;
+    /* align-items: center; */
+    border: red solid 1px;
+    margin: 75px;
+    padding: 10px;
+
+}
+
+.message-input {
+    background-color: #fff;
+    padding: 8px;
+    width: 390px;
+    border-radius: 5px;
+    border: red solid 1px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.radio-container {
+    display: flex;
+    justify-content: space-around;
+    width: 320px;
+    margin: 0px;
+    padding: 0px;
+    /* background-color: black; */
+    align-self: center;
+    border: red solid 1px;
+    font-style: italic;
+   font-family: 'Quicksand', sans-serif;
+
+
+
+}
+
+.button-receive-message {
+    margin-top: 15px;
+    width: 145px;
+    align-self: center;
+    border: red solid 1px;
+    background-color: #134d71;
+    color: white;
+    border-radius: 3px;
+    padding: 3px;
+
+}
+
+.button-mantra {
+    margin-left: 90px;
+    justify-content: ;
+    border: red solid 1px;
+
+}
