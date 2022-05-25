@@ -6,3 +6,132 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+*{
+  border: 1px;
+  border color: solid red;
+ }
+
+body {
+  background: linear-gradient(to top, #f7e4bf 0%, #78a7c6 50%, #134d71 100%);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  height: 100vh;
+  margin: 30px;
+  padding: 20px;
+
+
+
+}
+.disc {
+  width:100px;
+     height:100px;
+     background-color: yellow;
+     border-radius: 80%;
+     cursor: pointer;
+     display: flex;
+     left:50px;
+     top:50px;
+     line-height: 100px;
+     text-align: center;
+     color: white;
+
+ }
+.wrapper{
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  align-items: center;
+    display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 40%;
+  width: 100%;
+}
+
+
+.box {
+  flex-direction: column;
+}
+
+.welcome-message {
+  font-size: 60px;
+}
+
+
+.project-title {
+  font-size: 40px;
+  height: 40%;
+  width: 100%;
+
+}
+
+
+ .title{
+  font-size: 25px;
+
+}
+
+
+.box-2 {
+  border-color: white
+
+}
+.message-box {
+  width:850px;
+     height:150px;
+     background-color:white;
+     border-radius: 0.5em;
+     position:  sticky;
+     left:75px;
+     top:75px;
+     line-height: 90px;
+     text-align: center;
+     color: white;
+     align-items: center;
+    z-index: 3;
+    top: 40px;
+}
+
+
+.positive-message{
+display: inline;
+font-family: 'Quicksand', sans-serif;
+justify-content: center;
+flex-direction: row;
+
+}
+input {
+  display: inline;
+  color: black;
+  font-size: 15px;
+  font-style: italic;
+  flex-direction: row;
+}
+
+
+.chakra-box {
+    width:850px;
+     height:150px;
+     background-color:white,
+     border-radius: 0.5em;
+     left:100px;
+     top:75px;
+     line-height: 90px;
+     text-align: center;
+     color: white;
+       z-index: 4;
+}
+
+
+ .button {
+  background-color: #134d71;
+  font-family:'Quicksand', sans-serif;
+  padding: 10px;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  transition: 300ms;
+  align-items: center;
+  z-index: 1;
+}
