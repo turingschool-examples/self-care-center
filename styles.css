@@ -6,3 +6,55 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+/* CSS styling for classes */
+
+.headers {
+  color: #ffffff;
+  text-align: center;
+}
+.small-box {
+  width: 700px;
+  height: 140px;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 32%;
+}
+.big-box {
+  width: 1029px;
+  height: 229px;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 24%;
+  margin-top: 5%;
+}
+.zen-icon {
+  height: 150px;
+  width: 130px;
+  margin-left: 39%;
+  margin-top: 5%;
+}
+
+/* CSS styling for ID's */
+
+
+
+
+/* CSS styling for individual elements */
+body {
+  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+}
+h2 {
+  margin-top: 150px;
+}
+button {
+  background-color: #134d71;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 10px;
+  height: 35px;
+  width: 200px;
+  font-size: 18px;
+  margin-left: 34%;
+  margin-top: 14%;
+}
