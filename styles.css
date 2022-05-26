@@ -66,20 +66,24 @@ label {
 
 .affirmation {
   margin-right: 140px;
+  font-style: italic;
+}
 
+.mantra {
+  font-style: italic;
 }
 
 button {
   background-color: #134d71;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-family: 'Quicksand', sans-serif;
   color: #ffffff;
-  height: 40px;
-  width: 220px;
+  height: 70px;
+  width: 180px;
   border: 0;
   font-size:15px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 input {
