@@ -7,10 +7,37 @@ white - #ffffff;
 black - #000000;
 */
 
-.head {
+h1 {
   font-family: 'Quicksand', sans-serif;
-  border: 5px solid red
+  font-size: 24;
+  color: #ffffff;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+  padding: 10px
 }
-.body {
-  border: 5px solid blue
+
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18;
+  color: #ffffff;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+  padding: 100px
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf)
+}
+
+.boxed  {
+  border: 5px solid green
 }
