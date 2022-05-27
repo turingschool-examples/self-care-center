@@ -1,10 +1,12 @@
 * {
+  /* border: solid red; */
   font-family: 'Quicksand', sans-serif;
 }
 
 .hidden {
   display: none;
 }
+
 
 .body {
   background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
@@ -23,16 +25,17 @@
 .box-bigger {
   border-radius: 25px;
   height: 120px;
-  width: 800px;
+  width: 820px;
   background-color: #ffffff;
   border-radius: 25px;
   display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
   margin-bottom: 200px;
+  padding: 0px 50px;
 }
 
 .box-smaller {
@@ -57,6 +60,7 @@
 	justify-content: space-evenly;
 	align-items: center;
   font-size: 20px;
+  width: 100%;
 }
 
 .button-main {
@@ -74,6 +78,12 @@ color: #ffffff;
 padding: 5px 20px;
 border-radius: 10px;
 font-size: 20px;
+cursor: pointer;
+}
+
+.button-receive-message:disabled {
+  background-color: gray;
+  cursor: not-allowed;
 }
 
 .image-meditate {
