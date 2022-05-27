@@ -1,12 +1,10 @@
-// if(document.getElementByID().checked)
-// document.querySelector('input[name="pwd"]')
 
 // Now let's establish variables for querySelectors
 
 var receiveMessageButton = document.querySelector('.button');
 var affirmationRadio = document.querySelector('#affirmation');
 var mantraRadio = document.querySelector('#mantra');
-var bigBox = document.querySelector('.bigBox');
+var bigBox = document.querySelector('.big-box');
 
 
 
@@ -53,8 +51,10 @@ function getRandomIndex(array) {
 }
 
 function showSelfCarePhrase() {
-  bigBox.innerHTML = ""
-  if(document.getElementByID(affirmationRadio).checked === true) {
-    bigBox.innerHTML += `<section text=`${affirmations[getRandomIndex(affirmations)]}`></section>`
+  bigBox.innerHTML ="";
+  if(affirmationRadio.checked) {
+    bigBox.innerHTML = `<p>${affirmations[getRandomIndex(affirmations)]}</p>`;
 } else {
-  bigBox.innerHTML += `<section text=`${mantras[getRandomIndex(mantras)]}`></section>`
+    bigBox.innerHTML = `<p>${mantras[getRandomIndex(mantras)]}</p>`;
+  };
+};

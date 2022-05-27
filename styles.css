@@ -8,7 +8,7 @@ black - #000000;
 */
 
 
-* { border: 1px solid black; }
+/* * { border: 1px solid black; } */
 
 body {
   background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
@@ -45,15 +45,19 @@ body {
   background-color: white;
   border-radius: 10px;
 }
-
+.radio-buttons {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+}
 /* CSS styling for ID's */
 
-#affirmation{
+/* #affirmation{
   padding-right: 10px;
 }
 #mantra{
   padding-left: : 10px;
-}
+} */
 
 /* CSS styling for individual elements */
 
