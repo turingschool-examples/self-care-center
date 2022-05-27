@@ -7,7 +7,7 @@ white - #ffffff;
 black - #000000;
 */
 
-/* CSS styling for classes */
+
 * { border: 1px solid black; }
 
 body {
@@ -18,6 +18,8 @@ body {
   align-items: center;
   height: 100vh;
 }
+
+/* CSS styling for classes */
 
 .headers {
   color: #ffffff;
@@ -44,15 +46,14 @@ body {
   border-radius: 10px;
 }
 
-img{
-  height: 150px;
-  width: 130px;
-}
-
 /* CSS styling for ID's */
 
-
-
+#affirmation{
+  padding-right: 10px;
+}
+#mantra{
+  padding-left: : 10px;
+}
 
 /* CSS styling for individual elements */
 
@@ -64,4 +65,9 @@ button {
   height: 35px;
   width: 200px;
   font-size: 18px;
+  margin-top: 40px;
+}
+img{
+  height: 150px;
+  width: 130px;
 }

@@ -1,5 +1,15 @@
 // if(document.getElementByID().checked)
 // document.querySelector('input[name="pwd"]')
+
+// Now let's establish variables for querySelectors
+
+var receiveMessageButton = document.querySelector('.button');
+var affirmationRadio = document.querySelector('#affirmation');
+var mantraRadio = document.querySelector('#mantra');
+var bigBox = document.querySelector('.bigBox');
+
+
+
 // Let's establish our arrays:
 var affirmations = ['I forgive myself and set myself free.',
 'I believe I can be all that I want to be.',
@@ -29,4 +39,22 @@ var mantras = ['Breathing in, I send myself love. Breathing out, I send love to 
 'Yesterday is not today.',
 'The only constant is change.',
 'Onward and upward.',
-'I am the sky, the rest is weather.',]
+'I am the sky, the rest is weather.',];
+
+// Let's apply an event listener to the button
+
+receiveMessageButton.addEventListener('click', showSelfCarePhrase);
+
+//Okay, now let's get into the JS
+
+//First, our function to pull a random index position from the arrays
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+function showSelfCarePhrase() {
+  bigBox.innerHTML = ""
+  if(document.getElementByID(affirmationRadio).checked === true) {
+    bigBox.innerHTML += `<section text=`${affirmations[getRandomIndex(affirmations)]}`></section>`
+} else {
+  bigBox.innerHTML += `<section text=`${mantras[getRandomIndex(mantras)]}`></section>`
