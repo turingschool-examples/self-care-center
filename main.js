@@ -16,18 +16,18 @@ messageButton.addEventListener('click', selectMessage);
 
 // event handlers and functions:
 // try a conditional using if/else
-// separate the DOM from data model
+// REFACTOR - separate the DOM from data model
 
 function selectMessage() {
   var selectedMessages = document.querySelector("input[name='message-type']:checked").value;
-  var messageText = "";
+  var myMessages = "";
 
   switch (selectedMessages) {
     case "affirmation":
-      messageText = generateAffirmation();
+      myMessages = generateAffirmation();
       break;
     case "mantra":
-      messageText = generateMantra();
+      myMessages = generateMantra();
       break;
     default:
       return;
@@ -38,7 +38,8 @@ function selectMessage() {
   // apply classList.add/remove "hidden" instead
 
   meditateImage.style.visibility = "hidden";
-  messageText.innerText = messageText;
+  messageText.style.visibility = "visible";
+  messageText.innerText = myMessages;
 };
 
 function generateAffirmation() {
@@ -53,10 +54,11 @@ function generateMantra() {
 
 // inline approach
 // apply classList.add/remove "hidden" instead
+
 function clearImage() {
   meditateImage.style.visibility = "visible";
   messageText.style.visibility = "hidden";
-};
+}
 
 
 function getRandomIndex(array) {
