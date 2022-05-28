@@ -1,5 +1,56 @@
+var messageType = document.querySelectorAll('input[name="messageType"]');
+var receiveMessage = document.querySelector('.receive_message');
+var meditateImage = document.querySelector("img[src='./assets/meditate.svg']");
+
+
+// returns the value of selected radio buttons
+function isChecked() {
+  for (var i = 0; i < messageType.length; i++) {
+    if (messageType[i].checked) {
+      return messageType[i].value
+    }
+  }
+}
+
+// this function will check to see if the mantra button was checked using an if statement to confirm the value
+function returnMantra() {
+  var mantraButton= isChecked();
+    if (mantraButton === 'affirmation') {
+      return [mantra[1]]; //this was to see if this was all working properly - funcation returned mantra in the 1 index of the array on the console
+
+    }
+}
+
+
+// this function will check to see if the affirmation button was checked using an if statement to confirm the value
+function returnAffirmation() {
+  var affirmationButton = isChecked();
+    if (affirmationButton === 'affirmation') {
+      return [affirmations[1]];
+
+    }
+}
+
+
+document.addEventListener('submit', receiveMessage)
+
+
+
+// selected value returns a message when receive message is clicked
+// receive message = submit
+// image disappears to display message
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+};
+
+
+
+
+
 // Affirmations & Mantras
-var affirmations = ["I forgive myself and set myself free.",
+var affirmations =
+["I forgive myself and set myself free.",
 "I believe I can be all that I want to be.",
 "I am in the process of becoming the best version of myself.",
 "I have the freedom & power to create the life I desire.",
@@ -12,7 +63,8 @@ var affirmations = ["I forgive myself and set myself free.",
 "I honor my body by trusting the signals that it sends me.",
 "I manifest perfect health by making smart choices."];
 
-var mantras =["Breathing in, I send myself love."
+var mantras =
+["Breathing in, I send myself love.",
 "Breathing out, I send love to someone else who needs it.",
 "Don’t let yesterday take up too much of today.",
 "Every day is a second chance.",
@@ -29,18 +81,3 @@ var mantras =["Breathing in, I send myself love."
 "Be impeccable with your word. Don't take anything personally. Don't make assumptions. Always do your best.",
 "Onward and upward.",
 "I am the sky, the rest is weather."]
-
-// Event Listeners - Functions - Other Code
-var receiveMessage = document.querySelector('.receive_message')
-var affirmation = document.getElementById('affirmation');
-var mantra = document.getElementById('mantra');
-
- button.addEventListener('click', mantraMessage)
- function mantraMessage
-
-
- function getRandomIndex(array) {
-   return Math.floor(Math.random() * array.length);
- };
-// radio button needs to return the selected value
-// selected value returns a message when receive message is clicked
