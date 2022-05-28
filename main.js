@@ -27,9 +27,9 @@ manifestBtn.addEventListener('click', randomize)
 //--->FUNCTIONS
 
 
-function randomize(affirmations){
+function randomize(#affirmations){
  var randomIndex = getRandomIndex(affirmations)
- var randomDetails = affirmations[randomIndex]
+ var randomDetails = #affirmations[randomIndex]
  console.log(randomDetails)
 };
 
