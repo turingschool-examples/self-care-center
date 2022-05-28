@@ -111,3 +111,8 @@ body {
 .meditation {
   visibility: visible;
 }
+
+.clear-button {
+  font-family: 'Quicksand', 'sans-serif';
+  visibility: hidden;
+}
