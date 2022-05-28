@@ -23,11 +23,8 @@ The spec for this project can be found [here](https://frontend.turing.io/project
 ## **Creator Profiles**
 
 - [LinkedIn](https://www.linkedin.com/in/chantalgoethalsgoecha/)
-
 - [GitHub](https://github.com/GOECHA)
-
 - [GOECHA](https://www.goecha.com/)
-
 - [Contact: Chantal Goethals](mailto:chatalgoethals@gmail.com)
 
 ## Setup
