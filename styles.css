@@ -6,132 +6,179 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
-*{
-  border: 1px;
-  border color: solid red;
- }
+
+html {
+    height: 100%;
+    width: 100%;
+}
 
 body {
-  background: linear-gradient(to top, #f7e4bf 0%, #78a7c6 50%, #134d71 100%);
-  background-attachment: fixed;
-  background-position: center;
+  display: flex;
+  background-image: url("assets/1x/lotus2a.png"), url('./assets/background-modmantra.png');
+
+  background-size: cover;
   background-repeat: no-repeat;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
-  margin: 30px;
-  padding: 20px;
-
-
+  border: 2px solid red;
 
 }
-.disc {
-  width:100px;
-     height:100px;
-     background-color: yellow;
-     border-radius: 80%;
-     cursor: pointer;
-     display: flex;
-     left:50px;
-     top:50px;
-     line-height: 100px;
-     text-align: center;
-     color: white;
 
- }
-.wrapper{
+h1 {
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+  border: 2px solid red;
+}
+
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
   font-family: 'Quicksand', sans-serif;
   color: #ffffff;
-  align-items: center;
-    display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 40%;
-  width: 100%;
+  width: 1000px;
+  height: 200px;
+  justify-content: flex-start;
+  border: 2px solid red;
 }
 
-
-.box {
-  flex-direction: column;
-}
-
-.welcome-message {
-  font-size: 60px;
-}
 
 
 .project-title {
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  border: 2px solid red;
+}
+
+
+.title {
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
   font-size: 40px;
-  height: 40%;
-  width: 100%;
-
+  border: 2px solid red;
 }
 
+.box {
+  display: flex;
+  width: 100px;
+  border: 2px solid red;
+}
 
- .title{
+.which-message {
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
   font-size: 25px;
-
+  border: 2px solid red;
+justify-content: center;
 }
-
 
 .box-2 {
-  border-color: white
-
-}
-.message-box {
-  width:850px;
-     height:150px;
-     background-color:white;
-     border-radius: 0.5em;
-     position:  sticky;
-     left:75px;
-     top:75px;
-     line-height: 90px;
-     text-align: center;
-     color: white;
-     align-items: center;
-    z-index: 3;
-    top: 40px;
+  display: flex;
+  justify-content: center;
+  border-color: white;
 }
 
 
-.positive-message{
-display: inline;
-font-family: 'Quicksand', sans-serif;
-justify-content: center;
-flex-direction: row;
-
+section.message-box {
+  display: flex;
+  flex-direction: row;
+  width: 700px;
+  height: 140px;
+  background-color: white;
+  opacity: .7;
+  border-radius: 0.5em;
+  position: sticky;
+  left: 75px;
+  line-height: 90px;
+  text-align: center;
+  color: #787fac;
+  justify-content: center;
+  align-items: center;
+  top: 40px;
+  border-style: dashed;
+  font-size: 20px;
+  font-weight: bold;
 }
+
+legend{
+ display: flex;
+ flex-direction: row;
+ font-size: 24.5px;
+ align-items: center;
+ width: 200px;
+ height: 150px;
+
+ }
+
+
+
+
+.positive-message {
+  display: flex;
+  font-family: 'Quicksand', sans-serif;
+  width 200px;
+  height 50px;
+  justify-content: center;
+  border: 2px solid red;
+}
+
 input {
   display: inline;
   color: black;
   font-size: 15px;
   font-style: italic;
   flex-direction: row;
+  border: 2px solid red;
 }
-
 
 .chakra-box {
-    width:850px;
-     height:150px;
-     background-color:white,
-     border-radius: 0.5em;
-     left:100px;
-     top:75px;
-     line-height: 90px;
-     text-align: center;
-     color: white;
-       z-index: 4;
+  display: flex;
+  width: 850px;
+  height: 150px;
+  background-color: white 60%,
+    border-radius: 0.5em;
+  flex-direction: row;
+  text-align: center;
+  color: white;
+  opacity: .5;
+  border: 2px solid red;
 }
 
-
- .button {
+.button {
   background-color: #134d71;
-  font-family:'Quicksand', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   padding: 10px;
   color: white;
   border: none;
   margin-top: 10px;
   transition: 300ms;
-  align-items: center;
-  z-index: 1;
 }
+.png {
+  cursor: url("./assets/cursor.png"), auto;
+}
+
+.chakra-lady{
+  height: auto;
+  width: auto;
+image: url("./assets/chakra-2.png");
+background-size: contain;
+background-repeat: no-repeat;
+}
+/* .disc {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 80%;
+  cursor: pointer;
+  left: 50px;
+  top: 50px;
+  line-height: 100px;
+  text-align: center;
+  color: white;
+  align-items: center;
+} */
