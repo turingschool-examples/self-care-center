@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <div class="page">
   <head>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
-  <div class="container">
-  <section class="title">
+  <section class="container">
     <header>
       <h1><center> ✨ Self Care Center ✨ </center></h1>
     </header>
-  </div>
+  </section>
   <body>
-    <div class="type-message">
+    <section class="type-message">
       <h2><center> Which type of message? </center></h2>
-    </div>
-    <section class="buttons-and-guy-container">
-    <section class="button-container">
-      <form  class="button-form">
-        <div class="message-buttons">
-          <p><input type="radio" name="message-type-affirmation" value="affirmation"> <i>affirmation</i></p>
-          <p><input type="radio" name="message-type-mantra" value="mantra"> <i>mantra</i></p>
-        </div>
-        <div class="receive-button">
-          <button class="receive-message-button">Receive Message</button>
-        </div>
-      </form>
     </section>
-    <div class="bell-container">
-      <img src="assets/meditate.svg"
-        alt="Meditate"
-        title="Meditation Bell" />
-    </div>
+    <section class="buttons-and-guy-container">
+      <section class="button-container">
+        <form  class="button-form">
+          <section class="message-buttons">
+            <input type="radio" name="message-type"value="affirmations"> <i>affirmation</i>
+            <input type="radio" name="message-type" value="mantras"> <i>mantra</i>
+          </section>
+          <section class="receive-button">
+            <button class="receive-message-button">Receive Message</button>
+          </section>
+        </form>
+      </section>
+    <section class="guy-container">
+      <img src="assets/meditate.svg" alt="Meditate"/>
+      <section class="message-container hidden">
+        <section class="message"></section>
+      </section>
+    </section>
   </section>
 
     <script type="text/javascript" src="main.js"></script>

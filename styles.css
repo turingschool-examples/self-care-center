@@ -69,7 +69,7 @@ font-size: 15pt;
   height: 50%;
 }
 
-.bell-container {
+.message-container {
   background-color: white;
   border-radius: 10px;
   width: 65%;
@@ -79,10 +79,26 @@ font-size: 15pt;
   justify-content: center;
   align-items: center;
 }
+
+.guy-container {
+  background-color: white;
+  border-radius: 10px;
+  width: 65%;
+  height: 75%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 img {
   height: 80px;
   width: 80px;
   padding: 30px 30px;
+}
+
+.hidden {
+  display: none;
 }
 /*
 black - #000000; */
