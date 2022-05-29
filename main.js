@@ -77,6 +77,8 @@ function showRandomMessage(){
   }
 }
 
+//Need to refactor code below and see if it is better than existing code above
+
 // function displayRandomMessage() {
 //   meditationMan.classList.add("hidden");
 //     if (mantraButton.checked === true) {
