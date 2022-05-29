@@ -1,5 +1,5 @@
-* {
-  border: 1px solid red;}
+/* * {
+  border: 1px solid red;} */
 
 
 
@@ -12,7 +12,7 @@ body { font-family: 'Quicksand', sans-serif;
 
 h1, h2 {
   color: white;
-  border-radius: 200px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,47 +27,62 @@ font-size: 15pt;
 
 .button-container {
   background-color: white;
-  border-radius: 100px;
+  width: 30%;
+  height: -15%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.buttons-and-guy-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 20px;
-  /* margin-top: 10px; */
-  padding: 25px 25px 10px 10px;
+  align-items: center;
+  align-content: center;
 }
 
 .message-buttons {
   font-size: 10pt;
+  width: 325px;
   display: flex;
   justify-content: space-evenly;
 }
 
 .receive-button {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .receive-message-button {
   background-color: #134d71;
-  border-radius: 5px;
+  border-radius: 4px;
   color: white;
+  margin-bottom: 10px;
+  width: 40%;
+  height: 50%;
 }
 
 .bell-container {
   background-color: white;
-  border-radius: 75px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
+  border-radius: 10px;
+  width: 65%;
+  height: 75%;
   margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 img {
-  height: 60px;
-  width: 60px;
-  object-fit: contain;
-  padding: 100px 100px;
+  height: 80px;
+  width: 80px;
+  padding: 30px 30px;
 }
 /*
 black - #000000; */
