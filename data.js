@@ -18,7 +18,7 @@ var mantras = [
 
 "I love myself.",
 
-"I am present now."
+"I am present now",
 
 "Inhale the future, exhale the past.",
 
@@ -63,13 +63,3 @@ var affirmations = [
 "I manifest perfect health by making smart choices."
 
 ];
-
-
-
-
-
-
-
-
-
-]
