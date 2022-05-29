@@ -31,12 +31,9 @@ var affirmations = [
 
 //query selectors
 var receiveMessage = document.querySelector('.receive-message-button');
-var radioButtons = document.querySelector('.message-buttons');
 var meditationGuy = document.querySelector('img');
-// var meditationMessage = document.querySelector('.guy-container');
 var message = document.querySelector('.message');
 var messageContainer = document.querySelector('.message-container');
-// var radio = document.querySelector("input[type='radio']:checked");
 
 //event listeners
 receiveMessage.addEventListener('click', displayMessage);
