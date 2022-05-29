@@ -1,15 +1,3 @@
-class Message {
-  constructor(mantra, affirmation) {
-    this.mantra = mantra;
-    this.affirmation = affirmation;
-  }
-}
-
-//Global variable
-// var currentMessage;
-
-
-//Arrays
 var affirmations = [
   "I am in the right place at the right time, doing the right thing. - Louise Hay",
   "Conscious breathing is my anchor. - Thich Nhat Hanh",
@@ -32,44 +20,68 @@ var affirmations = [
   "I am the greatest. I said that even before I knew I was. - Muhammad li",
   "I’m better than I used to be. Better than I was yesterday. But hopefully not as good as I’ll be tomorrow. - Marianne Williamson",
  ];
+
 var mantras = [
-   "My mind is brilliant. My body is healthy. My spirit is tranquil.",
-   "I create my own path and walk it with joy.",
-   "My positive thoughts guide me to new heights.",
-   "I am conquering my fears and becoming stronger each day.",
-   "I will have a good day, because it’s my choice.",
-   "I am not afraid to be wrong.",
-   "My body is a temple. I keep my temple clean.",
-   "I hold the key to better health through eating better and exercise.",
-   "Good health is a practice, and I have patience.",
-   "I listen to my body and give it what it needs.",
-   "Every cell in my body is alive and beautiful.",
-   "My potential is limitless, and I choose where to spend my energy.",
-   "While I support others, I also ask for help when needed.",
-   "I surrender to the flow and have faith in the ultimate good.",
-   "I will speak with confidence and self-assurance.",
-   "My commitment to myself is unbreakable.",
- ];
+    "My mind is brilliant. My body is healthy. My spirit is tranquil.",
+    "I create my own path and walk it with joy.",
+    "My positive thoughts guide me to new heights.",
+    "I am conquering my fears and becoming stronger each day.",
+    "I will have a good day, because it’s my choice.",
+    "I am not afraid to be wrong.",
+    "My body is a temple. I keep my temple clean.",
+    "I hold the key to better health through eating better and exercise.",
+    "Good health is a practice, and I have patience.",
+    "I listen to my body and give it what it needs.",
+    "Every cell in my body is alive and beautiful.",
+    "My potential is limitless, and I choose where to spend my energy.",
+    "While I support others, I also ask for help when needed.",
+    "I surrender to the flow and have faith in the ultimate good.",
+    "I will speak with confidence and self-assurance.”",
+    "My commitment to myself is unbreakable.",
+  ];
+
 
 //variables to query buttons
 var mantraButton = document.querySelector("#mantra-button");
-var affirmationButton = document.querySelector("#affirmation-button");
+var affirmButton = document.querySelector("#affirmation-button");
 var recieveButton = document.querySelector(".recieve-button");
 
+//Variable(s) to query for displaying Message
+var meditationMan = document.querySelector("#meditation-icon");
+var messageBox = document.querySelector(".message-box");
+
 //Recieve messgage event listener
-recieveButton.addEventListener('click', displayRandomMessage);
+recieveButton.addEventListener('click', showRandomMessage);
 
 /*~~~~~~~~~~~~~~~~~ITERATION 1 ~~~~~~~~~~~~~~~~~~~~~~*/
 
-// Global function for randomly indexing goodVibesArrays
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-function displayRandomMessage() {
-  if (mantraButton.checked === true && affirmationButton.checked === false) {
-    return mantras[getRandomIndex(mantras)];
-  } else if (affirmationButton.checked === true && mantraButton.checked === false) {
-    return affirmations[getRandomIndex(affirmations)];
-    }
+function getRandomMantra() {
+  var currentMantra = mantras[getRandomIndex(mantras)];
+  messageBox.innerText = currentMantra;
+}
+
+function getRandomAffirmation() {
+  var currentAffirmation = affirmations[getRandomIndex(affirmations)];
+  messageBox.innerText = currentAffirmation;
+}
+function showRandomMessage(){
+  meditationMan.classList.add("hidden");
+  if (mantraButton.checked === true) {
+    getRandomMantra();
+  } else if (affirmButton.checked === true) {
+    getRandomAffirmation();
   }
+}
+
+// function displayRandomMessage() {
+//   meditationMan.classList.add("hidden");
+//     if (mantraButton.checked === true) {
+//     return messageBox.innerHTML += `<p>${mantras[getRandomIndex(mantras)]}</p>`;
+//     } else if (affirmButton.checked === true) {
+//       return messageBox.innerHTML += `<p>${affirmations[getRandomIndex(affirmations)]}</p>`;
+//       }
+//     }
