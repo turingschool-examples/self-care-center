@@ -162,8 +162,12 @@ img#tacobell {
 
 #enter-message {
   align-self: center;
-
-  width: 50%
+  padding: 10px 20px;
+  margin: 1vh;
+  font-size: 2vw;
+  font-family: 'Quicksand', sans-serif;
+  font-style: italic;
+  width: 80%;
 }
 
 
