@@ -1,5 +1,4 @@
 
-
 var affirmations = [
   "I am in the right place at the right time, doing the right thing. - Louise Hay",
   "Conscious breathing is my anchor. - Thich Nhat Hanh",
