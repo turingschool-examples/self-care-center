@@ -3,11 +3,12 @@ var mantra = document.querySelector("#Mantra");
 var receiveButton = document.querySelector("button");
 var meditationMan = document.querySelector("#mm-image");
 var messageBox = document.querySelector(".text-box");
-// var messageBox = document.querySelector('') /this is needed for the message to go into (whichever one is selected.)
+var clearButton = document.querySelector(".clear-button");
 
 // event listeners below:
 
 receiveButton.addEventListener('click', getMessage);
+clearButton.addEventListener('click', clearMessage);
 
 
 function getMessage(){
@@ -16,11 +17,11 @@ function getMessage(){
     return randomizeAffirmations()
   } else if(mantra.checked === true){
     return randomizeMantras()
-  // } else {
-  //   alert("Oops, it looks like you haven't picked an option!")
-  // }
-  console.log(getMessage());
-}
+  } else {
+    alert("Oops, it looks like you haven't picked an option!")
+    meditationMan.classList.remove('hidden');
+    clearButton.classList.add('hidden');
+  }
 };
 
 function randomizeAffirmations(){
@@ -28,22 +29,24 @@ function randomizeAffirmations(){
   messageBox.innerText = oneAffirmation
 };
 
-// function randomizeAffirmations() {
-//   return affirmations[Math.floor(Math.random()*affiramtions.length)];
-// }
-
 function randomizeMantras(){
   var oneMantra = mantras[Math.floor(Math.random() * mantras.length)];
   messageBox.innerText = oneMantra
 };
 
-
 function switchScreen(){
   meditationMan.classList.add('hidden');
   messageBox.classList.remove('hidden');
+  clearButton.classList.remove('hidden');
 };
-
-
+//
+function clearMessage(){
+  if(messageBox.innerText = ''){
+    document.querySelector('message.wrapper').reset();
+  }
+  meditationMan.classList.remove('hidden');
+  clearButton.classList.add('hidden');
+}
 
 // function randomElement(array){
 //  var randomIndex = getRandomIndex(array)
