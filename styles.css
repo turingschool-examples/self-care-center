@@ -1,7 +1,132 @@
-font-family: 'Quicksand', sans-serif;
+/* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
-black - #000000;
+black - #000000; */
+
+/* *{
+border: 1px solid red;
+} */
+
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  height: 100%;
+  width: 100%;
+  margin: 0
+  font-family: 'Quicksand', sans-serif;
+  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  /* background-repeat:no-repeat; */
+  background-attachment: fixed;
+
+}
+
+/* ~~~~~~page title section~~~~~~~*/
+
+.page-title {
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  font-size: 20px;
+}
+
+/* ~~~message question section ~~~~*/
+
+/* .message-question {
+  margin: 30px;
+} */
+
+h3{
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  align-items: center;
+  padding: 0px 50px;
+
+}
+
+/* ~~~~~~~~~form section~~~~~~~~~~~*/
+
+.message-text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.form-section {
+  background-color: white;
+  border-style: hidden;
+  width: 600px;
+  height:100px;
+  /* margin-bottom: 50px; */
+  border-radius: 20px;
+  /* padding-top: 1px; */
+  /* padding-bottom: 10px; */
+  display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+
+
+}
+
+/* ~~~~~~button div section~~~~~~~ */
+
+.radio-buttons {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 20px;
+
+}
+
+.recieve-button {
+  align-items: center;
+  background-color: #134d71;
+  padding: 5px 10px;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  font-size: 15px;
+  border-radius: 10px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+/* ~~~~~Message output box~~~~~~~*/
+
+.message-box {
+  font-family: 'Quicksand', sans-serif;
+  background-color: white;
+  border-style: hidden;
+  width: 1000px;
+  height: 200px;
+  border-radius: 20px;
+  margin: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.meditation-man {
+
+}
+
+img {
+  height: 70px;
+  width: 70px;
+
+}
+
+.hidden {
+  display: none;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
