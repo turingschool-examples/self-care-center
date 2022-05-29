@@ -4,6 +4,7 @@ var clearButton = document.querySelector('.clear-button');
 var messageButton = document.querySelector('.receive-message');
 var meditateImage = document.querySelector('.meditation');
 var messageText = document.querySelector('.uplifting-message');
+var radioButtons = document.getElementsByClassName("radio");
 
 // data below:
 
@@ -11,38 +12,45 @@ var affirmations = ['I forgive myself and set myself free.', 'I believe I can be
 
 var mantras = ['Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.', 'Don\'t let yesterday take up too much of today.', 'Every day is a second chance.', 'Tell the truth and love everyone.', 'I am enough.', 'In the beginning it is you, in the middle it is you and in the end it is you.', 'Just do it.', 'I am present now.', 'Inhale the future, exhale the past.', 'This too shall pass.', 'Yesterday is not today.', 'The only constant is change.', 'Keep picking them up and putting them down.', 'I will not allow my emotions to control me.', 'I am not afraid to be wrong.'];
 
-// messageButton.disabled = true;
-
 // event listeners:
 
 messageButton.addEventListener('click', selectMessage);
 clearButton.addEventListener('click', clearMessage);
 
+// initializers:
+// performed on every page loag/refresh
+// to set initial page state
+
+for (var i = 0; i < radioButtons.length; i++) {
+  radioButtons[i].addEventListener('click', enableMessageButton);
+  radioButtons[i].checked = false;
+}
+
+messageButton.disabled = true;
+
 // event handlers and functions:
-// try a conditional using if/else
-// REFACTOR - separate the DOM from data model
 
 function selectMessage() {
-  var selectedMessages = document.querySelector("input[name='message-type']:checked").value;
+  var messageType = "";
+  for (var i = 0; i < radioButtons.length; i++) {
+    var button = radioButtons[i];
+    if (button.checked) {
+      messageType = button.value;
+    }
+  }
   var myMessages = "";
 
-  switch (selectedMessages) {
-    case "affirmation":
-      myMessages = generateAffirmation();
-      break;
-    case "mantra":
-      myMessages = generateMantra();
-      break;
-    default:
-      return;
-      break;
+  if (messageType === "affirmation") {
+    myMessages = generateAffirmation();
+  } else if (messageType === "mantra") {
+    myMessages = generateMantra();
+  } else {
+    return;
   }
 
-  // inline approach
-  // apply classList.add/remove "hidden" instead
-  meditateImage.style.visibility = "hidden";
-  clearButton.style.visibility = "visible";
-  messageText.style.visibility = "visible";
+  meditateImage.classList.add("hidden");
+  clearButton.classList.remove("hidden");
+  messageText.classList.remove("hidden");
   messageText.innerText = myMessages;
 };
 
@@ -56,13 +64,14 @@ function generateMantra() {
   return mantras[index];
 };
 
-// inline approach
-// apply classList.add/remove "hidden" instead
+function enableMessageButton() {
+  messageButton.disabled = false;
+};
 
 function clearMessage() {
-  meditateImage.style.visibility = "visible";
-  clearButton.style.visibility = "hidden";
-  messageText.style.visibility = "hidden";
+  meditateImage.classList.remove("hidden");
+  clearButton.classList.add("hidden");
+  messageText.classList.add("hidden");
 };
 
 function getRandomIndex(array) {
