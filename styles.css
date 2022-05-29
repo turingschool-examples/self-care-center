@@ -37,7 +37,7 @@ h2 {
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+
 }
 #what-box{
   font-family: 'Quicksand', sans-serif;
@@ -70,7 +70,11 @@ h2 {
   width: 61.6vw;
   height: 19.6vh;
   background-color: #ffffff;
-  border-radius: 10px
+  border-radius: 10px;
+  align-items: center;
+  align-content: center;
+  flex-direction: row
+
 }
 
 
@@ -108,4 +112,13 @@ transform: scale(1.3);
 img#tacobell {
   height: 52.5%;
   width: auto;
+}
+
+#quote-output {
+  font-family: 'Quicksand', sans-serif;
+  font-style: italic;
+  font-size: 2vw;
+  color: rgba(0, 0, 0, 0.8);
+  align-self: center;
+
 }
