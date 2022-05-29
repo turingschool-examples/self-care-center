@@ -3,9 +3,9 @@ var affirmations =[
   `I believe I can be all that I want to be.`,
   `I am in the process of becoming the best version of myself.`,
   `I have the freedom & power to create the life I desire.`,
-  `I choose to be kind to myself and love myself unconditionally.`
+  `I choose to be kind to myself and love myself unconditionally.`,
   `My possibilities are endless.`,
-  `I am worthy of my dreams.`
+  `I am worthy of my dreams.`,
   `I am enough.`,
   `I deserve to be healthy and feel good.`,
   `I am full of energy and vitality and my mind is calm and peaceful.`,
@@ -17,7 +17,7 @@ var affirmations =[
 
 var mantras = [
   `Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.`,
-  `Don’t let yesterday take up too much of today.`,
+  `Do not let yesterday take up too much of today.`,
   `Every day is a second chance.`,
   `Tell the truth and love everyone.`,
   `I am free from sadness.`,
