@@ -48,7 +48,7 @@ var recieveButton = document.querySelector(".recieve-button");
 
 //Variable(s) to query for displaying Message
 var meditationMan = document.querySelector("#meditation-icon");
-var messageBox = document.querySelector(".message-box");
+var messageBox = document.querySelector(".box-2");
 
 //Recieve messgage event listener
 recieveButton.addEventListener('click', showRandomMessage);
@@ -59,31 +59,31 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-function getRandomMantra() {
-  var currentMantra = mantras[getRandomIndex(mantras)];
-  messageBox.innerText = currentMantra;
-}
-
-function getRandomAffirmation() {
-  var currentAffirmation = affirmations[getRandomIndex(affirmations)];
-  messageBox.innerText = currentAffirmation;
-}
-function showRandomMessage(){
+function showRandomMessage() {
   meditationMan.classList.add("hidden");
-  if (mantraButton.checked === true) {
-    getRandomMantra();
-  } else if (affirmButton.checked === true) {
-    getRandomAffirmation();
-  }
-}
+    if (mantraButton.checked) {
+    return messageBox.innerHTML = `<p>${mantras[getRandomIndex(mantras)]}</p>`;
+    } else if (affirmButton.checked) {
+      return messageBox.innerHTML = `<p>${affirmations[getRandomIndex(affirmations)]}</p>`;
+      }
+    }
 
-//Need to refactor code below and see if it is better than existing code above
+// 
 
-// function displayRandomMessage() {
+// function getRandomMantra() {
+//   var currentMantra = mantras[getRandomIndex(mantras)];
+//   messageBox.innerText = currentMantra;
+// }
+//
+// function getRandomAffirmation() {
+//   var currentAffirmation =       affirmations[getRandomIndex(affirmations)];
+//   messageBox.innerText = currentAffirmation;
+// }
+// function showRandomMessage(){
 //   meditationMan.classList.add("hidden");
-//     if (mantraButton.checked === true) {
-//     return messageBox.innerHTML += `<p>${mantras[getRandomIndex(mantras)]}</p>`;
-//     } else if (affirmButton.checked === true) {
-//       return messageBox.innerHTML += `<p>${affirmations[getRandomIndex(affirmations)]}</p>`;
-//       }
-//     }
+//   if (mantraButton.checked) {
+//     getRandomMantra();
+//   } else if (affirmButton.checked) {
+//     getRandomAffirmation();
+//   }
+// }
