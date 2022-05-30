@@ -35,7 +35,7 @@
 	align-items: center;
 	align-content: center;
   margin-bottom: 200px;
-  padding: 0px 50px;
+  padding: 10px 50px;
 }
 
 .box-smaller {
@@ -86,9 +86,18 @@ cursor: pointer;
   cursor: not-allowed;
 }
 
+.button-clear {
+  background-color: #134d71;
+  color: #ffffff;
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
 .image-meditate {
   height: 70px;
   width: 70px;
+  padding-bottom: 20px;
 }
 
 .second-title {

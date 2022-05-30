@@ -5,7 +5,6 @@
   - [Introduction](#introduction)
   - [Technologies](#technologies)
   - [Features](#features)
-  - [Illustrations](#illustrations)
   - [Deployed Page](#deployed-page)
   - [Possible Future Extensions](#possible-future-extensions)
   - [Set Up](#set-up)
@@ -15,7 +14,7 @@
   - [Project Specs](#project-specs)
 
 ## Introduction
-  -
+  - Visit Self Care Center to find your daily affirmations or mantras.
 
 
 ## Technologies
@@ -24,19 +23,17 @@
   - CSS
 
 ## Features
-  -
-
-
-## Illustrations
-
+  - Users are greeted by a calming page
+  - Users are able to get random affirmations or mantras
 
 
 ## Deployed Page
 
-Visit our published self care center page [here]()
+Visit our published self care center page [here](https://github.com/cleveland231/self-care-center)
 
 ## Possible Future Extensions
-  -
+  - Able add messages
+  - Able to favorite and save messages
 
 
 ## Set Up
