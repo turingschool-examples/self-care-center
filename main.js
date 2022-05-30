@@ -35,33 +35,17 @@ var meditationGuy = document.querySelector('img');
 var message = document.querySelector('.message');
 var messageContainer = document.querySelector('.message-container');
 var clearMessage = document.querySelector('.clear-message-button');
-var clearButtonAppears = document.querySelector('clear-message');
-var mantraInput = document.querySelector('.mantraInput');
-// var affirmInput = document.querySelector('.affirmInput');
+var clearButtonAppears = document.querySelector('.clear-message');
 
 //event listeners
 receiveMessage.addEventListener('click', displayMessage);
-// clearButton = addEventListener('click', clearMessageFunction);
 clearButtonAppears = addEventListener ('click', showClearButton);
-mantraInput = addEventListener ('click', enableButtons);
-// affirmInput = addEventListener ('click', enableButtons);
-receiveMessage.disable = true;
 
 //functions
 function displayMessage(event){
   event.preventDefault();
   hideMeditationGuy();
   showMessage();
-  enableButtons();
-};
-
-function enableButtons(){
-  if(document.querySelector('.mantraInput').value === '') {
-    receiveMessage.disabled = true;
-  } else {
-  receiveMessage.disabled = false;
-  receiveMessage.classList.remove('disable');
-  }
 };
 
 function hideMeditationGuy(){
