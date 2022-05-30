@@ -34,20 +34,29 @@ var receiveMessage = document.querySelector('.receive-message-button');
 var meditationGuy = document.querySelector('img');
 var message = document.querySelector('.message');
 var messageContainer = document.querySelector('.message-container');
+var clearMessage = document.querySelector('.clear-message-button');
+var clearButtonAppears = document.querySelector('clear-message');
 
 //event listeners
 receiveMessage.addEventListener('click', displayMessage);
+clearButton = addEventListener('click', clearMessageFunction);
+clearButtonAppears = addEventListener ('click', showClearButton)
 
 //functions
 function displayMessage(event){
   event.preventDefault();
   hideMeditationGuy();
   showMessage();
+  showClearButton();
 };
 
 function hideMeditationGuy(){
   meditationGuy.classList.add('hidden');
   messageContainer.classList.remove('hidden');
+};
+
+function showClearButton(){
+  clearButtonAppears.classList.remove('hidden');
 };
 
 function getRandomIndex(array) {
@@ -63,6 +72,7 @@ var randomMantra = getRandomIndex(mantras);
   } else {
     message.innerHTML = `<section class"message-type"> ${mantras[randomMantra]} </section>`;
   }
+  // showClearButton();
 };
 
 
