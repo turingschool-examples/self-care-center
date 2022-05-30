@@ -12,8 +12,7 @@ var resetBox = document.querySelector('.cb-3');
 var message = document.querySelector('.message');
 var radMa = document.querySelector('#mantra')
 var radAf = document.querySelector('#affirmation')
-var radios = document.querySelector('.box-2')
-var chngMsg = document.querySelector('.flip-box')
+
 
 
 //---> EVENT LISTENERS
