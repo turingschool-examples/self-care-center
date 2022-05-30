@@ -4,5 +4,117 @@ light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
-black - #000000;
-*/
+black - #000000; */
+
+/* *{
+border: 1px solid red;
+} */
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  height: 100vh;
+  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+}
+
+h1 {
+  font-size: 30px;
+  color: white;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%
+}
+
+.buttons {
+  text-align: center;
+  width: 100%;
+  margin-Center: 60px;
+}
+
+.box-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 40%;
+  margin-bottom: 5%;
+}
+
+.box-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 60%;
+  padding: 50px;
+  font-size: 20px;
+}
+
+h3 {
+  color: white;
+  display: flex;
+  align-items: center;
+  margin: 0%;
+}
+
+#mantra-button, #affirmation-button {
+  margin-top: 20px;
+
+}
+
+#affirmation-button {
+  margin-left: 100px;
+}
+
+label {
+  margin-top: 20px;
+}
+
+.recieve-button {
+  text-align: center;
+  background-color: #134d71;
+  padding: 5px 10px;
+  color: white;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.meditation-man {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+img {
+  height: 70px;
+
+}
+
+.hidden {
+  display: none;
+}
+
+ @media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%;
+    height: 100vh;
+  }
+}
