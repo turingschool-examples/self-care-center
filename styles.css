@@ -11,18 +11,20 @@ black - #000000;
 html {
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: relative;
 }
+
 
 body {
   display: flex;
-  font-family: Zapfino, 'Quicksand', sans-serif;
+  flex-direction: column;
+  align-items: center;
+  font-family: Zapfino;
   background-image: url('./assets/background-modmantra.png');
   background-size: cover;
   background-repeat: no-repeat;
-  flex-direction: column;
-  align-items: center;
-  border: 2px solid red;
+  margin: 30px;
+  /* border: 2px solid red; */
 }
 
 
@@ -34,141 +36,190 @@ body {
 /* ~~~~~~~~~~~~~~HOME PAGE~~~~~~~~~~~~~~~~ */
 
 
-
-h1 {
+div.wrapper {
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  font-kerning: auto;
-  margin: 20px;
-  border: 2px solid red;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  font-size: 30px;
-  color: #ffffff;
-  width: 1000px;
-  height: 200px;
-  justify-content: flex-start;
-  border: 2px solid red;
-}
-
-fieldset {
-    display: block;
-    color: #ffffff;
-    margin-inline-start: 1.5px;
-    margin-inline-end: 1.5px;
-    padding-block-start: 0.35em;
-    padding-inline-start: 0.75em;
-    padding-inline-end: 0.75em;
-    padding-block-end: 0.625em;
-    min-inline-size: min-content;
-    border-width: 2px;
-    border-style: groove;
-    border-color: #787fac;
-    border-image: initial;
-    border-style: dashed;
-}
-
-
-.which-message {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
+  flex-direction: row-reverse;
+  justify-content: center;
   align-items: center;
   color: #ffffff;
-  font-size: 25px;
-  border: 2px solid red;
-
+  width: 1000px;
+  height: 300px;
 }
 
-.box-1 {
-  display: flex;
-  width: 800px;
-  height: 120px;
-  justify-content: center;
-  border-color: white;
+h1 {
+  width: 500px;
+  font-size: 80px;
+  text-shadow: 1.5px 1.5px 2px #787fac;
+  margin: -50px;
 }
 
-section.message-box {
-  display: flex;
-  flex-direction: row;
-  width: 700px;
-  height: 120px;
-  background-color: white;
-  opacity: .7;
-  border-radius: 0.5em;
-  position: sticky;
-  left: 75px;
-  line-height: 90px;
-  text-align: center;
-  color: #787fac;
-  justify-content: space-evenly;
-  top: 40px;
-  font-size: 20px;
-  font-weight: bold;
+.white-lotus{
+  width: 150px;
+  height: 125px;
+  text-shadow: 1.5px 1.5px 2px #787fac;
+}
+
+.symbol-1-b{
+height: 230px;
+text-shadow: 1.5px 1.5px 2px #787fac;
+}
+
+
+fieldset{
+  height:700;
+  width: 850px;
+  border-style: dashed;
+  color: #ffffff;
+  border-width: 3px;
+  border-color: ##feaaaa;
+  border-image: initial;
+}
+
+ .box-1 {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+    opacity: .75;
 }
 
 legend {
-  display: flex;
-  flex-direction: row;
-  font-size: 24.5px;
-  width: 600px;
-  justify-content: space-around;
-  align-items: center;
+  color: white;
+  font-size: 55px;
+  font-family: SignPainter;
+  text-shadow: 1.5px 1.5px 2px #787fac;
 }
 
-.positive-message {
-  display: flex;
-  font-family: 'Quicksand', sans-serif;
-  width 200px;
-  height 50px;
-  justify-content: center;
-  border: 2px solid red;
+.choose-text{
+font-size: 30px;
 }
+
+
+section.message-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 700px;
+  height: 150px;
+  color: #787fac;
+  top: 40px;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 1.5px 1.5px 2px #feaaaa;
+  background-color: white;
+  border-radius: 0.5em;
+  left: 75px;
+  line-height: 90px;
+  padding-top: 30px;
+}
+
 
 input {
+  color: rebeccapurple;
   display: inline;
-  color: black;
   font-size: 15px;
   font-style: italic;
-  flex-direction: row;
-  border: 2px solid red;
 }
 
 .box-2 {
   display: flex;
-  width: 850px;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 800px;
   height: 150px;
+  /* border: 2px solid red; */
+}
+
+section.box-3 {
+  display: flex;
+  justify-content: center;
+  width: 800px;
+  height:200px;
+
+}
+
+
+.box-4 {
+  display: flex;
+  align-items: center;
+  width: 850px;
+  height: 521px;
   border: 2px solid red;
 }
 
 div.chakra-box {
-  display: flex;
-  width: 850px;
-  height: 140px;
-  background-color: white;
-  opacity: .7;
+  height: 250px;
+  width: 800px;
   border-radius: 0.5em;
-  flex-direction: row;
-  text-align: center;
-  color: white;
-  opacity: .5;
-  border-style: dashed;
+}
 
+#cb-1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #787fac;
+  border-radius: 0.5em;
+}
+
+#cb-2{
+  background: white;
+  color: #feaaaa;
+  border-radius: 0.5em;
+}
+
+#cb-3{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background: none;
+  color: #feaaaa;
+  border-radius: 0.5em;
+  border: 2px solid red;
+}
+
+h3.message{
+  color: #787fac;
+  font-size: 15px;
+  font-family: Zapfino;
+  background: white;
+}
+
+
+button.clear-btn{
+  color: #787fac;
+  background: white;
+  text-shadow: 1.5px 1.5px 2px #feaaaa;
+  font-family: Zapfino;
+  font-size:  20px;
+  height: 25 px;
+  width: 400px;
+  border-radius: 0.5em;
+  border-color: #787fac
 
 }
 
+
 .manf-btn{
-  background-color: #134d71;
-  font-family: Zapfino;
-  height: 40px;
-  width:60px:
-  padding: 10px;
+  font-family: SignPainter;
   color: white;
-  border: none;
-  margin-top: 20px;
+  background: #feaaaa;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  border-radius: 7px;
+  border-color: white;
+  text-shadow: 1.5px 1.5px 2px #feaaaa;
+  padding: 20px 30px;
   transition: 300ms;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20)
+}
+button.clear-btn:hover {
+  background: #eca7aaa1;
+}
+.manf-btn:hover {
+  background: white url("assets/peach-lotus-2.png") no-repeat top;
 }
