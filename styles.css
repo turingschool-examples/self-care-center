@@ -6,14 +6,11 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
-
-
 html {
   height: 100%;
   width: 100%;
   position: relative;
 }
-
 
 body {
   display: flex;
@@ -27,12 +24,7 @@ body {
   /* border: 2px solid red; */
 }
 
-
-
-
 /* ~~~~~~~~~~~~~~HEADER~~~~~~~~~~~~~~~ */
-
-
 div.wrapper {
   display: flex;
   flex-direction: row-reverse;
@@ -51,22 +43,20 @@ h1 {
 }
 
 /* ~~~~~~~~~~~~~~IMAGES~~~~~~~~~~~~~~~ */
-
-.white-lotus{
+.white-lotus {
   width: 150px;
   height: 125px;
   text-shadow: 1.5px 1.5px 2px #787fac;
 }
 
-.symbol-1-b{
-height: 200px;
+.symbol-1-b {
+  height: 200px;
 }
 
 /* ~~~~~~~~~~~~~~FLEX-SECTION~~~~~~~~~~~~~~~ */
-fieldset{
+fieldset {
   display: flex;
-  height:300px
-  width: 850px;
+  height: 300px width: 850px;
   border-style: dashed;
   color: #ffffff;
   border-width: 3px;
@@ -74,12 +64,12 @@ fieldset{
   border-image: initial;
 }
 
- .box-1 {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-    opacity: .75;
+.box-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: .75;
 }
 
 legend {
@@ -89,10 +79,9 @@ legend {
   text-shadow: 1.5px 1.5px 2px #787fac;
 }
 
-.choose-text{
-font-size: 30px;
+.choose-text {
+  font-size: 30px;
 }
-
 
 section.message-box {
   display: flex;
@@ -113,7 +102,6 @@ section.message-box {
   padding-top: 30px;
 }
 
-
 input {
   color: rebeccapurple;
   display: inline;
@@ -127,7 +115,6 @@ input {
   justify-content: space-evenly;
   width: 800px;
   height: 150px;
-  /* border: 2px solid red; */
 }
 
 section.box-3 {
@@ -135,9 +122,8 @@ section.box-3 {
   align-items: center;
   justify-content: center;
   width: 800px;
-  height:200px;
+  height: 200px;
 }
-
 
 .box-4 {
   display: flex;
@@ -151,7 +137,7 @@ div.chakra-box {
   border-radius: 0.5em;
 }
 
-#cb-1{
+#cb-1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,14 +146,14 @@ div.chakra-box {
   border-radius: 0.5em;
 }
 
-#cb-2{
+#cb-2 {
   background: white;
   color: #feaaaa;
   border-radius: 0.5em;
 }
 
-#cb-3{
-  display:flex;
+#cb-3 {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -177,10 +163,11 @@ div.chakra-box {
   padding-bottom: 4
 }
 
-.hidden{
-  display:none;
+.hidden {
+  display: none;
 }
-h3.message{
+
+h3.message {
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -191,24 +178,19 @@ h3.message{
 }
 
 /* ~~~~~~~~~~~~~~ CONTROLS ~~~~~~~~~~~~~~~~ */
-
-
-
-button.clear-btn{
+button.clear-btn {
   color: #787fac;
   background: white;
   text-shadow: 1.5px 1.5px 2px #feaaaa;
   font-family: Zapfino;
-  font-size:  20px;
+  font-size: 20px;
   height: 25 px;
   width: 400px;
   border-radius: 0.5em;
   border-color: #787fac
-
 }
 
-
-.manf-btn{
+.manf-btn {
   font-family: SignPainter;
   color: white;
   background: #feaaaa;
@@ -221,11 +203,13 @@ button.clear-btn{
   text-shadow: 1.5px 1.5px 2px #feaaaa;
   padding: 20px 30px;
   transition: 300ms;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.20)
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20)
 }
+
 button.clear-btn:hover {
   background: #eca7aaa1;
 }
+
 .manf-btn:hover {
   background: white url("assets/peach-lotus-2.png") no-repeat top;
 }
