@@ -42,7 +42,11 @@ receiveMessage.addEventListener('click', displayMessage);
 clearButtonAppears = addEventListener ('click', showClearButton);
 
 //functions
+clearMessage.classList.add('hidden');
+
 function displayMessage(event){
+  receiveMessage.classList.add('hidden');
+  clearMessage.classList.remove('hidden');
   event.preventDefault();
   hideMeditationGuy();
   showMessage();
@@ -67,18 +71,9 @@ var randomAffirmation = getRandomIndex(affirmations);
 var randomMantra = getRandomIndex(mantras);
   if(radio.value === "affirmations"){
     message.innerHTML = `<section class"message-type"> ${affirmations[randomAffirmation]} </section>`;
-  } else {
+  } else if (radio.value === "mantras"){
     message.innerHTML = `<section class"message-type"> ${mantras[randomMantra]} </section>`;
+  } else {
+
   }
-  // showClearButton();
 };
-
-
-
-
-
-
-//query selctor is the same,
-//event listener will be similar,
-//the function of the event listener will be different
-//between affirmation and mantra result
