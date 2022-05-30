@@ -1,3 +1,10 @@
+// ****************************************************
+// ****************************************************
+// *****************Self Care Center*******************
+// ****************************************************
+// ****************************************************
+
+// Arrays
 var affirmations = [
   "I am in the right place at the right time, doing the right thing. - Louise Hay",
   "Conscious breathing is my anchor. - Thich Nhat Hanh",
@@ -20,7 +27,6 @@ var affirmations = [
   "I am the greatest. I said that even before I knew I was. - Muhammad li",
   "I’m better than I used to be. Better than I was yesterday. But hopefully not as good as I’ll be tomorrow. - Marianne Williamson",
  ];
-
 var mantras = [
     "My mind is brilliant. My body is healthy. My spirit is tranquil.",
     "I create my own path and walk it with joy.",
@@ -40,13 +46,12 @@ var mantras = [
     "My commitment to myself is unbreakable.",
   ];
 
-
 //variables to query buttons
 var mantraButton = document.querySelector("#mantra-button");
 var affirmButton = document.querySelector("#affirmation-button");
 var recieveButton = document.querySelector(".recieve-button");
 
-//Variable(s) to query for displaying Message
+//Variables to query for displaying Message
 var meditationMan = document.querySelector("#meditation-icon");
 var messageBox = document.querySelector(".box-2");
 
@@ -68,7 +73,9 @@ function showRandomMessage() {
       }
     }
 
-// 
+
+// ******* Alternative Function for displaying a **************
+// *******     random mantra or affirmation      **************
 
 // function getRandomMantra() {
 //   var currentMantra = mantras[getRandomIndex(mantras)];
