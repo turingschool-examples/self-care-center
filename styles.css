@@ -7,6 +7,8 @@ body { font-family: 'Quicksand', sans-serif;
 
 h1, h2 {
   color: white;
+  font-weight: 500;
+  text-shadow: pink 1px 0 10px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -14,10 +16,11 @@ h1, h2 {
 }
 h1 {
   font-size: 25pt;
+  margin-top: 100px;
 }
 
 h2 {
-font-size: 15pt;
+font-size: 12pt;
 }
 
 .button-form {
@@ -27,6 +30,8 @@ font-size: 15pt;
 }
 
 .button-container {
+  text-shadow: blue 1px 0 10px;
+  font-weight: 200;
   background-color: white;
   width: 30%;
   height: -15%;
@@ -59,15 +64,16 @@ font-size: 15pt;
 }
 
 .receive-message-button {
-  background-color: #134d71;
+  background-image: linear-gradient(pink, #78a7c6, #f7e4bf);
   border-radius: 4px;
-  color: white;
+  color: black;
   font-size: 10pt;
   margin-top: 3px;
+  margin-bottom: 10px;
   height: 60%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;}
 }
 
 .clear-message {
@@ -83,16 +89,16 @@ font-size: 15pt;
 }
 
 .clear-message-button {
-  background-color: #134d71;
+  background-image: linear-gradient(pink, #78a7c6, #f7e4bf);
   border-radius: 4px;
-  color: white;
+  color: black;
   margin-bottom: 5px;
   margin-top: 3px;
-  height: 60%;
-  padding: 10px;
+  height: 50%;
+  padding: 5px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;}
 }
 
 .message-container {

@@ -10,7 +10,8 @@ var mantras = [
 'I love myself.',
 'I am present now.',
 'Inhale the future, exhale the past.',
-'This too shall pass.'
+'This too shall pass.',
+'Life is an art.'
 ];
 
 var affirmations = [
@@ -26,7 +27,8 @@ var affirmations = [
 'I am full of energy and vitality and my mind is calm and peaceful.',
 'Every day I am getting healthier and stronger.',
 'I honor my body by trusting the signals that it sends me.',
-'I manifest perfect health by making smart choices.'
+'I manifest perfect health by making smart choices.',
+'My life is full of beautiful moments, and I deserve them.'
 ];
 
 //query selectors
@@ -78,5 +80,6 @@ var affirmInput = document.querySelector('.affirmInput');
     alert('Choose a type of message for ✨ good vibes ✨ , my friend! 🌱 ');
     meditationGuy.classList.remove('hidden');
     receiveMessage.classList.remove('hidden');
+    clearButtonAppears.classList.add('hidden');
   }
 };
