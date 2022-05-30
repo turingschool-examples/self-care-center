@@ -4,9 +4,18 @@
 
 ## - [Deploy Link](https://goecha.github.io/MOD-Mantra/)
 
-![Welcome to MOD Mantra]("assets/Screen Recording 2022-05-30 at 1.01.53 AM.mov")
+![Welcome to MOD Mantra]("/Users/chantalgoethals/dropbox/turing/1module/MOD-Mantra/assets/Screen Recording 2022-05-30 at 1.01.53 AM.mov")
 <br>
- -**index.html**
+
+
+## - **CSS**
+## - **html**
+## - **JavaSctript**
+
+<br>
+
+ - **index.html**
+
 - Line 8 - tab title
 - Line 14 - h1
 - Line 17 - 48 - decorative text box
@@ -14,7 +23,8 @@
 - Line 32 & 43 - buttons
 - Line 36 - 45 - center flex structure & messages
 <br>
- -**styles.css**
+ - **styles.css**
+
 - Line 11 - html
 - Line 18 - body
 - Line 33 - header starts
@@ -22,33 +32,39 @@
 - Line 65 - flex section
 - Line 180 - controls
 <br>
- -**data.js**
+ - **data.js**
+
  - Line 1 - array affirmations
  - Line 19 - array mantras
 <br>
- -**main.js**
+ - **main.js**
+
 - Line 6 - variables
 - Line 19 - event listeners
 - Line 26 - event handlers
 - Line 60 - randomizer functions
 
+
+
+
 ## **Home Page** -
 
-![Home Screen]("assets/readme/homescreen.25.09 AM.png")
+![Home Screen]("https://i.imgur.com/InB8PZO.jpg")
 
-![Error Message]("assets/readme/error-message.25.31 AM.png")
+- **Background image - CAD - designer created**
 
-![radio-mantra]("assets/readme/radio-mantra.25.46 AM.png")
+![Error Message]("https://i.imgur.com/gUhoOtF.jpg")
 
-![radio-affirmation]("assets/readme/radio-affirmation.26.02 AM.png")
+![radio-mantra]("https://i.imgur.com/WuT2DQI.jpg")
 
-![Manifest!]("assets/readme/action-manifest-btn.26.11 AM.png")
+![radio-affirmation]("https://i.imgur.com/4J100ov.jpg")
 
+![Manifest!]("https://i.imgur.com/MQEWMd3.jpg")
+hover button
 
-![Positive-messages]("assets/readme/message-appear.27.26 AM.png")
+![Positive-messages]("https://i.imgur.com/82W3ZUT.jpg")
 
-![reset-screen]("assets/readme/action-reset.27.37 AM.png")
-
+![reset-screen]("https://i.imgur.com/BEFw0dG.jpg")
 
 
 The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html).
