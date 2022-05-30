@@ -45,9 +45,9 @@ clearButtonAppears = addEventListener ('click', showClearButton);
 clearMessage.classList.add('hidden');
 
 function displayMessage(event){
+  event.preventDefault();
   receiveMessage.classList.add('hidden');
   clearMessage.classList.remove('hidden');
-  event.preventDefault();
   hideMeditationGuy();
   showMessage();
 };
@@ -66,14 +66,17 @@ function getRandomIndex(array) {
 };
 
 function showMessage(){
-var radio = document.querySelector("input[type=radio]:checked");
 var randomAffirmation = getRandomIndex(affirmations);
 var randomMantra = getRandomIndex(mantras);
-  if(radio.value === "affirmations"){
+var mantraInput = document.querySelector('.mantraInput');
+var affirmInput = document.querySelector('.affirmInput');
+  if(affirmInput.checked){
     message.innerHTML = `<section class"message-type"> ${affirmations[randomAffirmation]} </section>`;
-  } else if (radio.value === "mantras"){
+  } else if (mantraInput.checked){
     message.innerHTML = `<section class"message-type"> ${mantras[randomMantra]} </section>`;
   } else {
-
+    alert('Choose a type of message for ✨ good vibes ✨ , my friend! 🌱 ');
+    meditationGuy.classList.remove('hidden');
+    receiveMessage.classList.remove('hidden');
   }
 };
