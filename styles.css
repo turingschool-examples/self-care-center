@@ -33,7 +33,7 @@ body {
 
 
 
-/* ~~~~~~~~~~~~~~HOME PAGE~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~HEADER~~~~~~~~~~~~~~~ */
 
 
 div.wrapper {
@@ -53,6 +53,8 @@ h1 {
   margin: -50px;
 }
 
+/* ~~~~~~~~~~~~~~IMAGES~~~~~~~~~~~~~~~ */
+
 .white-lotus{
   width: 150px;
   height: 125px;
@@ -60,13 +62,13 @@ h1 {
 }
 
 .symbol-1-b{
-height: 230px;
-text-shadow: 1.5px 1.5px 2px #787fac;
+height: 200px;
 }
 
-
+/* ~~~~~~~~~~~~~~FLEX-SECTION~~~~~~~~~~~~~~~ */
 fieldset{
-  height:700;
+  display: flex;
+  height:500px
   width: 850px;
   border-style: dashed;
   color: #ffffff;
@@ -133,6 +135,8 @@ input {
 
 section.box-3 {
   display: flex;
+  align-items: center;
+  justify-content: center;
   justify-content: center;
   width: 800px;
   height:200px;
@@ -177,10 +181,16 @@ div.chakra-box {
   background: none;
   color: #feaaaa;
   border-radius: 0.5em;
-  border: 2px solid red;
+  padding-bottom: 4
 }
 
+.hidden{
+  display:none;
+}
 h3.message{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   color: #787fac;
   font-size: 15px;
   font-family: Zapfino;
