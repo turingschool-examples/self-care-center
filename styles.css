@@ -11,10 +11,19 @@ body {
 
 
 #self-care-center-title {
+  font-size: 2em;
+  color: #ffffff;
+  font-weight: 550;
+}
+
+#which-type-of-message-text {
   font-size: 1.5em;
   color: #ffffff;
-  font-weight: 500;
+  font-weight: 520;
+
 }
+
+
 
 /* COLORS
 light-yellow - #f7e4bf;
