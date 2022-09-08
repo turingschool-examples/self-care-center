@@ -63,6 +63,7 @@ section {
 
 label {
   margin-left: -125px;
+  font-size: 12pt;
 }
 
 #recieve-message-button {
@@ -92,6 +93,7 @@ label {
 }
 
 p {
+  margin: 10px;
   color:black;
-  font-size: 12pt;
+  font-size: 18pt;
 }

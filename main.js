@@ -4,18 +4,6 @@ var recieveMessageButton = document.querySelector('#recieve-message-button');
 var meditationImage = document.querySelector('svg');
 var meditationContainer = document.querySelector('#meditate-container');
 
-var affirmations = [
-'I forgive myself and set myself free.',
-'I forgive myself and set myself free.',
-'I believe I can be all that I want to be.'
-];
-
-var mantras = [
-'Breathing in. Breathing out.',
-'Don’t let yesterday take up too much of today.',
-'Every day is a second chance.'
-];
-
 recieveMessageButton.addEventListener('click',giveMessage);
 
 
