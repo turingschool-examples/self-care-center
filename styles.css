@@ -6,3 +6,111 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+html {
+  height: 100%;
+}
+body {
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+justify-content: space-between;
+align-items: stretch;
+align-content: stretch;
+background-size: 100%;
+background-image: linear-gradient(to bottom, #134d71, #295d80, #3c6d90, #4e7ea0, #608fb0, #649fb9, #6daec0, #7abdc5, #90cabd, #b0d5b6, #d4ddb6, #f7e4bf);
+
+
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  height: 140px;
+  width: 500px;
+  font-size: 40px;
+  font-family: 'Quicksand', sans-serif;
+}
+h1, h2 {
+  color: #ffffff;
+}
+
+h2 {
+  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  height: 0px;
+  width: 500px;
+
+}
+
+.main-page {
+  	display: flex;
+  	flex-direction: column;
+  	flex-wrap: nowrap;
+  	justify-content: space-between;
+  	align-items: stretch;
+  	align-content: stretch;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+.choice-box {
+
+  display: flex;
+  margin: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-block: 63px;
+  height: 110px;
+  width: 500px;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0%;
+  position: relative;
+  border-radius: 10px;
+
+}
+
+
+label[for=affirmation] {
+  margin-right: 150px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#affirmation {
+  margin-top: : 20px;
+}
+
+.receive-message {
+  background-color: #134d71;
+  color: #ffffff;
+  border-radius: 5px;
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 30px;
+  width: 200px;
+
+}
+
+.message-output-box {
+  display: flex;
+  margin: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
+  width: 900px;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0%;
+  position: relative;
+  border-radius: 10px;
+}
+.message-photo {
+
+}
