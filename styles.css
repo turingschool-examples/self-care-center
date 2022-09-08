@@ -12,61 +12,77 @@ html {
     background-size: cover;
     background-repeat:no-repeat;
     background: linear-gradient( #134d71, #78a7c6, #f7e4bf);
+    font-family: 'Quicksand', sans-serif;
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
   color: white;
 }
 
-#title {
-  margin: auto;
-  margin-left: 40%;
-  margin-top: 8%;
+.page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 0;
 }
 
-#header {
-  margin: auto;
-  margin-left: 44%;
-  margin-top: 8%;
+h1 {
+  margin-top: 10px;
+  margin-bottom: 60px;
 }
 
-#radio-buttons-container {
+#which-type-of-message {
+  margin-bottom: 10px;
+}
+
+section {
+  margin-top: 10px;
+}
+
+.radio-buttons-container {
   font-style: italic;
   color: black;
   background-color: white;
-  border-radius: 4pt;
-  height: 75pt;
-  width: 400pt;
-  display: flex;
-  position: absolute;
-  margin: auto;
-  margin-left: 33%;
-  margin-top: 1%;
+  border-radius: 6pt;
+  height: 100px;
+  width: 500px;
+  display: inline-block;
 }
 
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 10px;
+  margin-left: 75px;
+  margin-right: 75px;
+  margin-top: 25px;
+}
+
+label {
+  margin-left: -125px;
+}
 
 #recieve-message-button {
   background-color: #134d71;
   border: none;
+  height: 25px;
+  width: 150px;
   border-radius: 2pt;
   color: white;
-  margin: auto;
-  margin-left: 33%;
-  margin-top: %;
+  margin-top: 10px;
+  margin-left: 175px;
 }
 
 #meditate-container {
   background-color: white;
-  justify-content: center;
+  border-radius: 6pt;
+  margin-top: 100px;
   height: 150px;
-  width: 700px;
-  margin-left: 27.5%;
-  margin-top: 15%;
-  border-radius: 4pt;
-}
-
-svg {
-  margin-left: 46%;
-  margin-top: 5%;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
