@@ -9,16 +9,22 @@
       <h1>✨Self Care Center✨</h1>
     </header>
     <h2 class="sub-title">Which type of message?</h2>
-    <div class="button">
-      <!-- <button id="affirm">affirmation</button> -->
-      <input class="affirmation" type="radio" id="html" name="affirmation" value="HTML">
-      <span class="affirmation">Affirmation</span>
-      <input class="mantra" type="radio" id="html" name="mantra" value="HTML">
-      <span class="mantra">Mantra</span>
-      <button id="receive">Receive Message</button>
-    </div>
+    <section class="button">
+      <div class="affirmation">
+        <input type="radio" id="affirm" name="affirmation" value="HTML">
+        <label id="affirmation" for="affirm">Affirmation</label>
+        <input type="radio" id="mantra" name="mantra" value="HTML">
+        <label id="mantra" for="mantra">Mantra</label>
+      </div>
+      <div id="more-space"></div>
+      <div class="receive">
+        <button id="receive-message">Receive Message</button>
+      </div>
+    </section>
+    <div class=space-between></div>
     <div class="meditation-man">
-      <img id="logo" src="#" alt="meditation">
+      <h3 class='message hidden'></h3>
+      <img id="logo" src="" alt="meditation">
     </div>
     <script type="text/javascript" src="main.js"></script>
   </body>
