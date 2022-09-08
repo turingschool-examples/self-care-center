@@ -6,3 +6,67 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+html {
+    height: 100%;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background: linear-gradient( #134d71, #78a7c6, #f7e4bf);
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+#title {
+  margin: auto;
+  margin-left: 40%;
+  margin-top: 8%;
+}
+
+#header {
+  margin: auto;
+  margin-left: 44%;
+  margin-top: 8%;
+}
+
+#radio-buttons-container {
+  font-style: italic;
+  color: black;
+  background-color: white;
+  border-radius: 4pt;
+  height: 75pt;
+  width: 400pt;
+  display: flex;
+  position: absolute;
+  margin: auto;
+  margin-left: 33%;
+  margin-top: 1%;
+}
+
+
+#recieve-message-button {
+  background-color: #134d71;
+  border: none;
+  border-radius: 2pt;
+  color: white;
+  margin: auto;
+  margin-left: 33%;
+  margin-top: %;
+}
+
+#meditate-container {
+  background-color: white;
+  justify-content: center;
+  height: 150px;
+  width: 700px;
+  margin-left: 27.5%;
+  margin-top: 15%;
+  border-radius: 4pt;
+}
+
+svg {
+  margin-left: 46%;
+  margin-top: 5%;
+}
