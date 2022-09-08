@@ -1,6 +1,20 @@
-* {font-family: 'Quicksand', sans-serif;}
+* {font-family: 'Quicksand', sans-serif;
+
+}
+
+body {
+  background: rgb(13,76,97);
+  background: linear-gradient(180deg, rgba(13,76,97,1) 0%, rgba(9,79,121,1) 25%, rgba(223,226,184,1) 96%, rgba(236,236,213,1) 100%);
+  background-repeat: no-repeat;
+}
 
 
+
+#self-care-center-title {
+  font-size: 1.5em;
+  color: #ffffff;
+  font-weight: 500;
+}
 
 /* COLORS
 light-yellow - #f7e4bf;
