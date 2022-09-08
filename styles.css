@@ -49,6 +49,14 @@ button {
   background-color: #134d71;
   border: none;
   font-size: 20px;
+  transition-duration: 500ms;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: white;
+  color: #134d71;
+  border: 1px solid #134d71;
 }
 
 label {
@@ -67,8 +75,18 @@ div {
   padding: 0;
 }
 
+.display-window {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  height: 175px;
+  width: 80%;
+}
+
 #meditation-svg {
-  height: 50px;
+  height: 100px;
   width: auto;
 }
 /* COLORS

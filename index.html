@@ -14,18 +14,18 @@
     <h2>Which type of message?</h2>
     <section class="button-section">
       <div>
-        <input type="radio" id="affirmation" value="affirmation">
+        <input type="radio" id="affirmation" value="affirmation" name="user-choice">
         <label for="affirmation">affirmation</label>
       </div>
       <div>
-        <input type="radio" id="mantra" value="mantra">
+        <input type="radio" id="mantra" value="mantra" name="user-choice">
         <label for="mantra">mantra</label>
       </div>
       <div>
         <button>Receive Message</button>
       </div>
     </section>
-    <section>
+    <section class="display-window" id="display-window">
       <div>
         <svg id="meditation-svg" height="1272pt" viewBox="-94 0 1272 1272.314"
           width="1272pt" xmlns="http://www.w3.org/2000/svg"
@@ -75,6 +75,8 @@
     </section>
   </main>
   <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="class.js"></script>
+  <script type="text/javascript" src="data.js"></script>
 </body>
 
 </html>
