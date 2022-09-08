@@ -11,12 +11,12 @@ body {
   background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  margin: 0;
 }
 
 h1 {
   color: white;
   font-family: 'Quicksand', sans-serif;
+  margin-top: 35px;
   margin-bottom: 100px;
   text-align: center;
 }
@@ -25,4 +25,14 @@ h2 {
   color: white;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
+  margin: 10px;
+}
+
+section {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: auto;
+  height: 65px;
+  width: 545px;
 }
