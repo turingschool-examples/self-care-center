@@ -5,7 +5,7 @@
 body {
   background: rgb(19,77,113);
   background: linear-gradient(180deg, rgba(19,77,113,1) 16%, rgba(120,167,198,1) 57%, rgba(247,228,191,1) 100%);
-  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 
