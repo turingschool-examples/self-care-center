@@ -34,6 +34,7 @@ body {
 #receive-message {
   background-color: #134d71;
   color:#ffffff;
+  padding: 0.25em 1.5em;
 }
 
 #logo-space {
@@ -47,10 +48,6 @@ body {
   min-width: 600px;
   max-height: 100px;
   min-height: 100px;
-
-
-
-
 }
 
 #logo-img {
