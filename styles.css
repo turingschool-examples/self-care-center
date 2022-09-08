@@ -24,7 +24,7 @@ body {
   display: flex;
   justify-content: center;
 }
-section.button {
+.button {
   background-color: white;
   height: 80px;
   width: 500px;
@@ -55,11 +55,19 @@ section.button {
   justify-content: center;
 }
 .affirmation {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-.mantra {
-  text-align: center;
+/* #affirmation {
+  justify-content: flex-start;
 }
+#mantra {
+  justify-content: flex-end;
+} */
 #more-space {
   height: 25px;
+}
+.hidden {
+  display: none;
 }
