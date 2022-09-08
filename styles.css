@@ -28,11 +28,45 @@ h2 {
   margin: 10px;
 }
 
-section {
-  background: white;
+.buttons-box {
+  background: #ffffff;
   border-radius: 10px;
-  padding: 20px;
   margin: auto;
-  height: 65px;
-  width: 545px;
+  padding: 5px;
+  height: 95px;
+  width: 575px;
+  display: grid;
+}
+
+.radars {
+  font-family: 'Quicksand', sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-around;
+}
+
+input {
+  height: 20px;
+  margin: 10px;
+  width: 20px;
+}
+
+.receive-message {
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+button {
+  background-color: #134d71;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  height: 30px;
+  width: 205px;
+
 }
