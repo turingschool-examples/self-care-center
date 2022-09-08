@@ -37,8 +37,19 @@ body {
 }
 
 #logo-space {
-  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 0.25em;
+  margin: 5em;
+  background-color: #ffffff;
+  max-width: 600px;
+  min-width: 600px;
+  max-height: 100px;
+  min-height: 100px;
+
+
+
 
 }
 
