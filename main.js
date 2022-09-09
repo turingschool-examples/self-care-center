@@ -35,3 +35,7 @@ var mantraList = [
 var mantraRadio = document.querySelector('#mantra')
 var affirmationRadio = document.querySelector('#affirmation')
 var receiveMessageButton = document.querySelector('#receive-message')
+
+mantraRadio.addEventListener('click', selectMantra)
+affirmationRadio.addEventListener('click', selectAffirmation)
+receiveMessageButton.addEventListener('click', generateMessage)
