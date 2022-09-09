@@ -31,11 +31,26 @@ var mantraList = [
   'Onward and upward.',
   'I am the sky, the rest is weather.'
 ]
+var currentMessage
 
 var mantraRadio = document.querySelector('#mantra')
 var affirmationRadio = document.querySelector('#affirmation')
 var receiveMessageButton = document.querySelector('#receive-message')
 
-mantraRadio.addEventListener('click', selectMantra)
-affirmationRadio.addEventListener('click', selectAffirmation)
-receiveMessageButton.addEventListener('click', generateMessage)
+mantraRadio.addEventListener('click', generateMantra)
+affirmationRadio.addEventListener('click', generateAffirmation)
+receiveMessageButton.addEventListener('click', displayMessage)
+
+generateMantra() {
+  mantraList
+  currentMessage = Math.floor(Math.random() * mantraList.length)
+}
+
+generateAffirmation() {
+  affirmationList
+  currentMessage =
+}
+
+displayMessage() {
+currentMessage
+}
