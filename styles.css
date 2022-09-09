@@ -46,7 +46,7 @@ label {
   margin: auto;
 }
 
-#message-area {
+#message-box {
     border-radius: 8px;
     background: #FFFFFF;
     color: #000000;
@@ -55,6 +55,10 @@ label {
     margin: 85px auto 150px auto;
     padding: 10px;
     width: 750px;
+  }
+
+  p {
+    margin: 30px auto;
   }
 
   #receive-message-button {

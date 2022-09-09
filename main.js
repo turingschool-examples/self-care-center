@@ -17,7 +17,7 @@ var affirmations = [
   'I have perfect comedy timing...after the fact.',
   'I will always find a way to have fun...usually.'
 ];
-
+var arrayName;
 var requestedMessage;
 var randomIndex;
 
@@ -33,17 +33,21 @@ mantraButton.addEventListener('click', selectMantra);
 receiveMessageButton.addEventListener('click', returnMessage);
 
 // functions here //
+
+function getRandomIndex(arrayName) {
+  randomIndex = Math.floor(Math.random() * arrayName.length);
+}
+
 function selectAffirmation() {
   requestedMessage = 'affirmation';
+  getRandomIndex(affirmations);
 }
 
 function selectMantra() {
   requestedMessage = 'mantra';
+  getRandomIndex(mantras);
 }
 
-// function getRandomIndex(arrayName) {
-//   randomIndex = Math.floor(Math.random() * arrayName.length);
-// }
 
 function returnMessage() {
   if (requestedMessage === 'affirmation') {
@@ -51,11 +55,11 @@ function returnMessage() {
  // look into the affirmation array at index 0 for now (randomize later)
  //  return the string at index 0
  // use it to replace innerHTML inside the p
-    messageBox.innerHTML = '<p>This is an affirmation, yo!</p>'
+    messageBox.innerHTML = `<p>${affirmations[randomIndex]}</p>`
   } 
   
   if (requestedMessage === 'mantra') {
     console.log('Mantra requested')
-    messageBox.innerHTML = '<p>This is a mantra, yo!</p>'
+    messageBox.innerHTML = `<p>${mantras[randomIndex]}</p>`
   }
  }
