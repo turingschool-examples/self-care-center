@@ -30,7 +30,7 @@ body {
 
 .selection-section{
   display: flex;
-  padding: 50px;
+  padding: 30px;
   margin-left: 550px;
   margin-right: 550px;
   border-radius: 10px;
@@ -67,4 +67,20 @@ body {
   margin-top: 10px;
   height: 35px;
   width: 250px;
+}
+
+.output-message-section{
+  display:flex;
+  justify-content: center;
+  padding: 40px;
+  margin-top:100px;
+  margin-left: 400px;
+  margin-right: 400px;
+  border-radius: 10px;
+  background-color:white;
+}
+
+img{
+  height: 100px;
+  width: 100px;
 }
