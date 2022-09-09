@@ -31,3 +31,7 @@ var mantraList = [
   'Onward and upward.',
   'I am the sky, the rest is weather.'
 ]
+
+var mantraRadio = document.querySelector('#mantra')
+var affirmationRadio = document.querySelector('#affirmation')
+var receiveMessageButton = document.querySelector('#receive-message')
