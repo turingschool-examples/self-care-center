@@ -1,48 +1,79 @@
-* {font-family: 'Quicksand', sans-serif;
-
+* {
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: rgb(19,77,113);
   background: linear-gradient(180deg, rgba(19,77,113,1) 16%, rgba(120,167,198,1) 57%, rgba(247,228,191,1) 100%);
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
 
 #self-care-center-title {
-  font-size: 2em;
+  font-size: 3em;
   color: #ffffff;
   font-weight: 550;
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
 
 #which-type-of-message-text {
+  display: flex;
   font-size: 1.5em;
   color: #ffffff;
   font-weight: 520;
-
+  justify-content: center;
 }
 
 #all-type-of-message-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #ffffff;
-  padding: 0.5em;
-  border-radius: 0.25em;
-  max-width: 100%;
-  min-width: 100%;
+  border-radius: 0.5em;
+  width: 26em;
+  height: 5em;
+}
+
+#affirmation-mantra-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 21em;
+}
+
+.radio-and-label {
+  display:flex;
+  justify-content: center;
+  align-content: space-between ;
+  font-style: italic;
 }
 
 #receive-message {
   background-color: #134d71;
   color:#ffffff;
   padding: 0.25em 1.5em;
-  border-radius: 0.25em;
+  border-radius: 0.5em;
+  width: 13em;
+  height: 2em;
+  border: none;
 }
 
 #logo-space {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0.25em;
+  border-radius: 0.5em;
   margin: 5em;
   background-color: #ffffff;
   max-width: 600px;
@@ -54,6 +85,10 @@ body {
 #logo-img {
   width: 4em;
   height: 5em;
+}
+
+.hidden {
+  display: none;
 }
 
 
