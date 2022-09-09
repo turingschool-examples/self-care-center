@@ -10,46 +10,48 @@ black - #000000;
 body {
   height: 100vh;
   width: 100vw;
-  background: rgb(32,66,122);
-  background: linear-gradient(180deg, rgba(32,66,122,1) 0%, rgba(230,203,145,1) 100%);
+  background: #134d71;
+  background: linear-gradient(180deg, #134d71 15%, #78a7c6 60%, #f7e4bf 100%);
 }
 
 #top-title {
-  text-align:center;
+  text-align: center;
   font-family: 'Quicksand', sans-serif;
-  color:white;
+  color: #ffffff;
   padding: 25px;
 }
 
 #question-title{
-  text-align:center;
+  text-align: center;
   font-family: 'Quicksand', sans-serif;
-  color:white;
-  margin-top:50px;
+  color: #ffffff;
+  margin-top: 70px;
+  margin-bottom: 8px;
 }
 
-.selection-section{
+.top-section{
   display: flex;
-  padding: 30px;
-  margin-left: 550px;
-  margin-right: 550px;
+  padding: 15px;
+  margin-left: 440px;
+  margin-right: 440px;
   border-radius: 10px;
-  background-color:white;
+  background-color: #ffffff;
   font-family: 'Quicksand', sans-serif;
   font-style: italic;
-  font-size: 22px;
+  font-size: 18px;
+  color: #000000;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 #radio-collection1, #radio-collection2{
-  display:flex;
+  display: flex;
   justify-content: space-between;
 }
 
 #radio-mantra{
-  margin-left: 300px;
+  margin-left: 250px;
 }
 
 #form{
@@ -60,27 +62,28 @@ body {
 
 #recieve-message-button{
   background-color: #134d71;
-  color: white;
+  color: #ffffff;
+  border: none;
   font-family: 'Quicksand', sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   border-radius: 5px;
   margin-top: 10px;
   height: 35px;
-  width: 250px;
+  width: 210px;
 }
 
-.output-message-section{
-  display:flex;
+.bottom-section{
+  display: flex;
   justify-content: center;
-  padding: 40px;
+  padding: 30px;
   margin-top:100px;
-  margin-left: 400px;
-  margin-right: 400px;
+  margin-left: 300px;
+  margin-right: 300px;
   border-radius: 10px;
-  background-color:white;
+  background-color: #ffffff;
 }
 
 img{
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
 }
