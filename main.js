@@ -15,8 +15,36 @@ affirmations = [
 "All I need is within me right now",
 "I wake up motivated",
 "I am an unstoppable force of nature",
-""
-
+"I am living with abundance",
+"I am having a positive and inspiring impact on the people I come into contact with",
+"I am inspiring people through my work",
+"Today is a phenomenal day",
+"I'm rising above the thoughts that are trying to make me angry or afraid",
+"I am filled with focus",
+"I am not pushed by my problems; I am led by my dreams",
+"I am grateful for everything I have in my life",
+"I can be whatever I want to be",
+"I am independent and self-sufficient",
+"I am not defined by my past; I am driven by my future",
+"I use obstacles to motivate me to learn and grow",
+"Today will be a productive day",
+"I am intelligent and focused",
+"I feel more grateful each day",
+"Through the power of my thoughts and words, incredible transformations are happening in me and within my life right now",
+"I am constantly growing and evolving into a better person",
+"I'm freeing myself from all destructive doubt and fear",
+"I accept myself for who I am and create peace, power and confidence of mind and of heart",
+"I am going to forgive myself and free myself. I deserve to forgive and be forgiven",
+"I am healing and strengthening every day",
+"I've made it through hard time before, and I've come out stronger and better because of them. I'm going to make it through this.",
+"I belong in this world; there are people that care about me and my worth",
+"I have made mistakes but I will not let them define me",
+"My soul radaiates from the inside and warms the souls of others",
+"Note to self: I am going to make you so proud",
+"I finish what matters and let go of what does not",
+"I feed my spirit. I train my body. I focus my mind. This is my time.",
+"My life has meaning. What I do has meaning. My actions are meaningful and inspiring.",
+"What I have done today was the best that I was able to do today. And for that, I am thankful"
 ]
 
 mantras = [
