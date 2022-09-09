@@ -37,6 +37,34 @@ body {
   background-color:white;
   font-family: 'Quicksand', sans-serif;
   font-style: italic;
+  font-size: 22px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#radio-collection1, #radio-collection2{
+  display:flex;
+  justify-content: space-between;
+}
+
+#radio-mantra{
+  margin-left: 300px;
+}
+
+#form{
+  display: flex;
   justify-content: center;
   justify-content: space-around;
+}
+
+#recieve-message-button{
+  background-color: #134d71;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 22px;
+  border-radius: 5px;
+  margin-top: 10px;
+  height: 35px;
+  width: 250px;
 }
