@@ -26,28 +26,51 @@ html {
   justify-content: center;
 }
 
+.h3 {
+  font-size: 24px;
+  margin-top: 70px;
+}
+
 .white-font {
+  align-items: center;
   color: #ffffff;
   font-family: 'Quicksand';
   justify-items: center;
-  align-items: center;
+}
+
+.white-box-parent {
+  align-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.first-white-box {
+  align-content: center;
+  display: flex;
+  justify-content: flex;
+  /* align-items: center;
+  justify-items: center; */
 }
 
 .button-container {
   background-color: #ffffff;
   border-radius: 10px;
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   height: 15vh;
-  justify-content: space-between;
-  margin: 0px 300px 30px 250px;
+  margin-bottom: 30px;
   width: 50vw;
+}
+
+label {
+  font-family: 'Quicksand';
+  font-style: italic;
 }
 
 #affirm {
   align-items: flex-start;
+  flex-basis: 25%;
   justify-items: center;
+  margin-right: 0px;
 }
 
 .affirmation {
@@ -57,7 +80,9 @@ html {
 
 #mantras {
   align-items: flex-start;
+  flex-basis: 25%;
   justify-items: center;
+  margin-right: 0px;
 }
 
 .mantra {
@@ -65,12 +90,25 @@ html {
   justify-items: center;
 }
 
+.submit-container {
+  display: flex;
+ 
+}
+
 .submit {
   align-items: flex-end;
   background-color: #134d71;
   border-radius: 5px;
+  flex-basis: 50%;
   height: 3vh;
+  justify-items: center;
   width: 16vh;
+}
+
+.bottom-container {
+  align-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .bottom-box {
@@ -80,8 +118,8 @@ html {
   display: flex;
   height: 20vh;
   justify-content: center;
-  margin:100px;
-  width: auto;
+  margin: 50px;
+  width: 80vw;
 }
 
 img {
