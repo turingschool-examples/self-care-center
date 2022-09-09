@@ -22,7 +22,7 @@ body {
 #self-care-center-title {
   font-size: 2.5em;
   color: #ffffff;
-  font-weight: 510;
+  font-weight: 505;
   margin-top: 1em;
   margin-bottom: 2em;
 }
@@ -42,15 +42,18 @@ body {
   align-items: center;
   background-color: #ffffff;
   border-radius: 0.5em;
-  width: 49em;
+  margin-top: -0.5em;
+  width: 45em;
   height: 8em;
 }
 
 #affirmation-mantra-buttons {
   display: flex;
   justify-content: space-between;
-  width: 25em;
+  margin-top: 1em;
+  width: 19em;
   font-size: 1.5em;
+
 }
 
 .radio-and-label {
@@ -60,14 +63,27 @@ body {
   font-style: italic;
 }
 
+
+ input[type='radio'] {
+     transform: scale(1.5);
+       border-width: thin;
+       margin-right: 1.5em;
+ }
+
+.button-wrapper {
+  display: flex;
+}
+
 #receive-message {
   background-color: #134d71;
   color:#ffffff;
-  padding: 0.25em 1.5em;
-  border-radius: 0.5em;
-  width: 16em;
-  height: 3em;
+  font-size: 1.3em;
+  font-weight: lighter;
+  border-radius: 0.3em;
+  width: 11em;
+  height: 1.5em;
   border: none;
+  margin-top: 1em;
 }
 
 #logo-space {
