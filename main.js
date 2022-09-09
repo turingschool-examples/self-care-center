@@ -3,6 +3,11 @@ var affirmationsArray = ["I forgive myself and set myself free.", "I believe I c
 var receiveMessageButton = document.querySelector("button")
 var mantraButton = document.getElementById("mantraLabel")
 var affirmationButton = document.getElementById("affirmationLabel")
+var clearButton = document.querySelector(".clearButton")
+var favoriteButton = document.querySelector(".favoriteButton")
+
+clearButton.classList.remove('hidden')
+favoriteButton.classList.remove('hidden')
 
 affirmationButton.addEventListener('click', selectAffirmation)
 
@@ -40,17 +45,23 @@ function receiveMessage() {
             document.querySelector('#receiveMessageButtonId').disabled = false;
             flexBox2.innerText = ""
             flexBox2.innerText += mantrasArray[getRandomNumber()]
-            flexBox2.innerHTML += `<button id="clearButton">Clear</button><button id="favoriteButton">💛</button>`
-            var clearButton = document.getElementById("clearButton")
+            // clearButton.classList.remove('hidden')
+            // favoriteButton.classList.remove('hidden')
+            // flexBox2.innerHTML += `<button id="clearButton">Clear</button><button id="favoriteButton">💛</button>`
+            var clearButton = document.querySelector(".clearButton")
             clearButton.addEventListener('click', clearMessage)
+            var favoriteButton = document.querySelector(".favoriteButton")
+            favoriteButton.addEventListener('click', addToFavorites)
             } else if (affirmationButton.checked) {
                 document.querySelector('#receiveMessageButtonId').disabled = false;
                 flexBox2.innerText = ""
                 flexBox2.innerText += affirmationsArray[getRandomNumber()]
-                flexBox2.innerHTML += `<button id="clearButton">Clear</button><button id="favoriteButton">💛</button>`
-                var clearButton = document.getElementById("clearButton")
+                // flexBox2.innerHTML += `
+                // <button id="clearButton">Clear</button>
+                // <button id="favoriteButton">💛</button>`
+                var clearButton = document.querySelector(".clearButton")
                 clearButton.addEventListener('click', clearMessage)
-                var favoriteButton = document.querySelector("#favoriteButton")
+                var favoriteButton = document.querySelector(".favoriteButton")
                 favoriteButton.addEventListener('click', addToFavorites)
     }
 }
@@ -63,25 +74,74 @@ function clearMessage() {
     mantraButton.checked = false
     affirmationButton.checked = false
 }
-//Variables for favorite and view favorites
-//Listening events for both
-//call back function for favorite pushes the index to an object of favorites that mixes mantras and affirmations
-//call back for view favorites clears out both divs and adds a new one that has a return to home button 
-//insert a new trash icon and click to delete next to each added mantra/affirmation 
 
-// var favoriteButton = document.querySelector("#favoriteButton")
+
 function addToFavorites() {
-    // JSON.stringify(flexBox2.innerText)
-    // localStorage.setItem("🪷", )
-    window.localStorage.setItem("🪷", flexBox2.innerHTML.toString())
+    favoritesArray.push(flexBox2.innerText)
+    alert("Added to favorites!")
+   //push to array
+   //confirmation alert 
 }
 var viewFavoritesButton = document.querySelector("#viewFavoritesButton")
+var flexboxContainer = document.querySelector(".flexbox-container")
+var h2Header = document.querySelector("h2")
+var homeButton = document.querySelector(".homeButton")
+var clearButton2 = document.querySelector(".clearButton2")
+
+
+
+
+
+var favoritesArrayView = document.querySelector(".favoritesArrayView")
+var containerFavoritesPage = document.querySelector(".containerFavoritesPageView")
+
+// favoritesArrayView.classList.add('hidden')
+// containerFavoritesPage.classList.add('hidden')
+var favoriteButton = document.querySelector(".favoriteButton")
+
+
+var favoritesArray = []
 
 viewFavoritesButton.addEventListener('click', goToFavoritesView)
 
 function goToFavoritesView() {
-    flexBox2.innerText = ""
-    flexBox2.innerText = Object.values(localStorage)
+    //hides other pages
+    favoritesArrayView.innerHTML = ""
+    flexboxContainer.classList.add("hidden")
+    containerFavoritesPage.classList.remove('hidden')
+    favoritesArrayView.classList.remove('hidden')
+    homeButton.classList.remove('hidden')
+    clearButton2.classList.remove('hidden')
+    favoriteButton.classList.remove('hidden')
+    h2Header.innerText = "Favorites"
+    //unhide two new buttons home and clear favorites 
+    //changes inner text of h2 to favorites 
+    //shows a new div 
+    //for loop through array adds sparkle emoji
+
+    for (var i = 0; i < favoritesArray.length; i++) {
+        favoritesArrayView.innerHTML += `<div>✨${favoritesArray[i]}✨</div>`
+    }
+    // favoritesArrayView.innerText = "test"
+    //for loop inserts inner text into new div
+    //add listening event to both home and clear button to fire a different function
 }
 
-console.log("LOOK HERE", typeof localStorage)
+homeButton.addEventListener('click', goToHomePage)
+
+function goToHomePage() {
+    flexboxContainer.classList.remove("hidden")
+    containerFavoritesPage.classList.add('hidden')
+    favoritesArrayView.classList.add('hidden')
+    homeButton.classList.add('hidden')
+    clearButton2.classList.add('hidden')
+    favoriteButton.classList.remove('hidden')
+    h2Header.innerText = "Which type of message?"
+}
+
+clearButton2.addEventListener('click', clearFavoritesArray)
+
+function clearFavoritesArray() {
+    favoritesArrayView.innerHTML = ""
+    favoritesArray = []
+}

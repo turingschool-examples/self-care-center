@@ -76,7 +76,7 @@ h2 {
 #flexbox-radio-buttons {
     align-self: center;
 }
-#clearButton {
+.clearButton {
     background-color: #134d71;
     color: white;
     height: 25px;
@@ -92,9 +92,19 @@ h2 {
     width: 125px;
     align-self: center;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
-#favoriteButton {
+.favoriteButton {
+    background-color: #134d71;
+    color: white;
+    height: 25px;
+    width: 125px;
+    align-self: center;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+/* homebutton */
+.homeButton {
     background-color: #134d71;
     color: white;
     height: 25px;
@@ -103,4 +113,39 @@ h2 {
     border-radius: 5px;
     margin-top: 10px;
 }
-
+/* clearbutton */
+.clearButton2 {
+    background-color: #134d71;
+    color: white;
+    height: 25px;
+    width: 125px;
+    align-self: center;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.favoritesArrayView {
+    background-color: white;
+    flex-direction: column;
+    min-height: 100px;
+    height: fit-content;
+    width: 400px;
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    /* flex-grow: 1; */
+   
+}
+.containerFavoritesPageView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.favoritesButtonContainer {
+    flex-direction: row;
+}
+.hidden {
+    display: none;
+}
