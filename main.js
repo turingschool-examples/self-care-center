@@ -1,7 +1,8 @@
 var radioButtons = document.querySelectorAll('.radio-buttons');
 var recieveButton = document.querySelector('#recieve-message-button');
+var image = document.querySelector('.meditate-icon');
 
-recieveButton.addEventListener('click', checkMessageType);
+recieveButton.addEventListener('click', removeImage);
 
 var messageType;
 
@@ -15,4 +16,8 @@ function checkMessageType(){
     }
   }
   console.log(`You selected ${messageType}`);
+}
+
+function removeImage(){
+  image.className += " hidden";
 }
