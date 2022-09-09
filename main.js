@@ -33,24 +33,45 @@ var mantras = [
 var affirmationRadioButton = document.querySelector("#affirmations")
 var mantrasnRadioButton = document.querySelector("#mantras")
 var receiveMessageButton = document.querySelector(".receive-message")
-
+var bellImage = document.querySelector(".bell-picture")
+var textDisplay = document.querySelector("h3")
+var errorMessage = document.querySelector(".error-message")
  //Event Listeners
+affirmationRadioButton.addEventListener('click', selectAffirmation);
+mantrasnRadioButton.addEventListener('click', selectMantra)
 receiveMessageButton.addEventListener('click', displayMessage);
 
-
+var mantraOrAffirmation;
 //Event Handlers
 function getRandomIndex(array) {
   var i = Math.floor(Math.random() * array.length);
   return array[i];
 }
 
-function randomize() {
-
+function selectAffirmation() {
+  mantrasnRadioButton.checked = false
+  mantraOrAffirmation = getRandomIndex(affirmations)
+  return mantraOrAffirmation
 }
-// function displayMessage() {
-//   if(affirmationRadioButton) {
-//     console.log (affirmations[1])
-//   } else if (mantrasnRadioButton) {
-//     console.log(mantras[1]);
-//   }
-// }
+
+function selectMantra() {
+  affirmationRadioButton.checked = false
+  mantraOrAffirmation = getRandomIndex(mantras)
+  return mantraOrAffirmation
+}
+
+
+function displayMessage() {
+  if (!affirmationRadioButton.checked && !mantrasnRadioButton.checked) {
+    errorMessage.innerText = "Please make a selection"
+    bellImage.classList.remove('hidden')
+    textDisplay.innerText =""
+  } else {
+    bellImage.classList.add('hidden')
+    textDisplay.classList.remove('hidden')
+    textDisplay.innerText = mantraOrAffirmation
+    errorMessage.innerText = ''
+    affirmationRadioButton.checked = false
+    mantrasnRadioButton.checked = false
+}
+}
