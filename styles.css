@@ -6,3 +6,71 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+
+body {
+  background: rgb(19,77,113);
+  background: linear-gradient(180deg, rgba(19,77,113,1) 0%, rgba(120,167,198,1) 50%, rgba(247,228,191,1) 100%);
+  height: 100vh;
+  width: 100vw;
+  color: white;
+}
+
+h2 {
+  font-family: Quicksand;
+  height: 5vh;
+}
+
+h3 {
+  font-family: Quicksand;
+}
+.main-flex-container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  align-items: center;
+  align-content: flex-start;
+}
+
+.form-flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 10vh;
+  width: 35vw;
+  background-color: white;
+  color:black;
+  border-radius: 15px;
+}
+
+.radio-flex-container-row {
+  display: flex;
+  justify-content: space-around;
+  font-style: italic;
+}
+
+.receive-message-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.receive-message-button {
+background-color: #134d71;
+color: white;
+width:10vw;
+border-radius: 5px;
+}
+
+.message-flex-container {
+  display:flex;
+  height: 15vh;
+  width: 60vw;
+  background-color: white;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  margin: 50px;
+
+
+}
