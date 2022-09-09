@@ -20,9 +20,9 @@ body {
 
 
 #self-care-center-title {
-  font-size: 3em;
+  font-size: 2.5em;
   color: #ffffff;
-  font-weight: 550;
+  font-weight: 510;
   margin-top: 1em;
   margin-bottom: 2em;
 }
@@ -42,8 +42,8 @@ body {
   align-items: center;
   background-color: #ffffff;
   border-radius: 0.5em;
-  width: 26em;
-  height: 5em;
+  width: 49em;
+  height: 8em;
 }
 
 #affirmation-mantra-buttons {
@@ -64,8 +64,8 @@ body {
   color:#ffffff;
   padding: 0.25em 1.5em;
   border-radius: 0.5em;
-  width: 13em;
-  height: 2em;
+  width: 16em;
+  height: 3em;
   border: none;
 }
 
@@ -74,17 +74,15 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 0.5em;
-  margin: 5em;
+  margin: 8em;
   background-color: #ffffff;
-  max-width: 600px;
-  min-width: 600px;
-  max-height: 100px;
-  min-height: 100px;
+  height: 11em;
+  width: 62em;
 }
 
 #logo-img {
-  width: 4em;
-  height: 5em;
+  width: 7em;
+  height: 6em;
 }
 
 .hidden {
