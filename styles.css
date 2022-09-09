@@ -4,5 +4,103 @@ light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
-black - #000000;
-*/
+/* black - #000000;  */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.background {
+    background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}  
+h1 {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    padding-top: 100px;
+}
+h2 {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+.flexbox-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* align-content: space-between; */
+    align-items: center;
+}
+.flexbox-item-1 {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    min-height: 100px;
+    justify-content: center;
+    width: 275px;
+    border-radius: 5px;
+}
+.flexbox-item-2 {
+    background-color: white;
+    flex-direction: column;
+    min-height: 100px;
+    max-height: 200px;
+    width: 400px;
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+.meditationImage {
+    width: 25%;
+    height: 25%;
+    align-self: center;
+    /* visibility: hidden; */
+}
+.receiveMessageButton {
+    background-color: #134d71;
+    color: white;
+    height: 25px;
+    width: 125px;
+    align-self: center;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+#flexbox-radio-buttons {
+    align-self: center;
+}
+#clearButton {
+    background-color: #134d71;
+    color: white;
+    height: 25px;
+    width: 125px;
+    align-self: center;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+#viewFavoritesButton {
+    background-color: #134d71;
+    color: white;
+    height: 25px;
+    width: 125px;
+    align-self: center;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+#favoriteButton {
+    background-color: #134d71;
+    color: white;
+    height: 25px;
+    width: 125px;
+    align-self: center;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+

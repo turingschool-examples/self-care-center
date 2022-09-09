@@ -4,8 +4,33 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
+  <div class="background">
   <body>
+    <header>
+      <h1>✨Self Care Center✨</h1>
+      <h2>Which type of message?</h2>
+    </header>
+    <div class="flexbox-container">
+      <div class="flexbox-item-1">
+        <div id="flexbox-radio-buttons">
+          <input type="radio" id="affirmationLabel">
+          <label for="affirmationLabel"><em>affirmation</em></label> 
+          <input type="radio" id="mantraLabel">
+          <label for="mantraLabel"><em>mantra</em></label> 
+        </div>
+          <button class="receiveMessageButton" id="receiveMessageButtonId">Receive message</button>
+          <button id="viewFavoritesButton">View favorites</button>
+      </div>
+      <div class="flexbox-item-2">
+        <img class="meditationImage" src="./assets/meditate.svg">
+        <div id="flexbox-item-2-phrase-container">
+          <!-- insert all three buttons here -->
+        </div>
+        <!-- <div id="clearButton"></div> -->
+      </div>
+    </div>
   
     <script type="text/javascript" src="main.js"></script>
   </body>
+</div>
 </html>
