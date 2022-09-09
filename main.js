@@ -19,15 +19,13 @@ var affirmations = [
 ];
 
 var requestedMessage;
-
-//delete all these console.log statements: //
-console.log('These are my affirmations: ', affirmations)
-console.log('These are my mantras: ', mantras)
+var randomIndex;
 
 // query selectors here//
 var affirmationButton = document.querySelector('#affirmation-button');
 var mantraButton = document.querySelector('#mantra-button');
 var receiveMessageButton = document.querySelector('#receive-message-button');
+var messageBox = document.querySelector('p');
 
 // event listeners here //
 affirmationButton.addEventListener('click', selectAffirmation);
@@ -43,12 +41,21 @@ function selectMantra() {
   requestedMessage = 'mantra';
 }
 
+// function getRandomIndex(arrayName) {
+//   randomIndex = Math.floor(Math.random() * arrayName.length);
+// }
+
 function returnMessage() {
   if (requestedMessage === 'affirmation') {
     console.log('Affirmation requested')
+ // look into the affirmation array at index 0 for now (randomize later)
+ //  return the string at index 0
+ // use it to replace innerHTML inside the p
+    messageBox.innerHTML = '<p>This is an affirmation, yo!</p>'
   } 
   
   if (requestedMessage === 'mantra') {
     console.log('Mantra requested')
+    messageBox.innerHTML = '<p>This is a mantra, yo!</p>'
   }
  }
