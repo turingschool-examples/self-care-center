@@ -34,34 +34,37 @@ var hitMeWithThatMessage = document.querySelector('.message');
 var affirmButton = document.querySelector('#affirm');
 var mantraButton = document.querySelector('#mantra')
 
-//add event listener -- selects either mantras or affirmations button -- add a spot for message to be displayed with hidden class, innerHTML
-//add event listener on receive button -- displays message, hides image -- add hidden class to img
-//liftMySpirits, upliftMeGurl
-//call selectMantras or selectAffirmations in displayMessage
-//randomSelector function -- innerText
 
-mantraButton.addEventListener('click', randomMantras);
-function randomMantras() {
-  var index1 = Math.floor(Math.random() * mantras.length)
-    return mantras[index1]
-}
-
-affirmButton.addEventListener('click', randomAffirmations);
-function randomAffirmations() {
-  var index2 = Math.floor(Math.random() * affirmations.length)
-    return affirmations[index2]
-}
-
-receiveMessageButton.addEventListener('click', displayThatMantra);
-function displayThatMantra() {
-  meditationMan.classList.add('hidden');
-  hitMeWithThatMessage.classList.remove('hidden');
-  hitMeWithThatMessage.innerHTML = randomMantras();
+function randomMessage(array) {
+  var index = Math.floor(Math.random() * array.length)
+    return array[index]
   }
-  
-receiveMessageButton.addEventListener('click', affirmMe);
-  function affirmMe() {
+
+receiveMessageButton.addEventListener('click', display);
+function display() {
     meditationMan.classList.add('hidden');
-    hitMeWithThatMessage.classList.remove('hidden');
-    hitMeWithThatMessage.innerHTML = randomAffirmations();
+    if (affirmButton.click = true) {
+      mantraMeUp(affirmations)
+    } else if (mantraButton.click = true) {
+      mantraMeUp(mantras)
+    }
+}
+
+// function displayThatMantra() {
+//   mantraMeUp()
+//   }
+//
+// receiveMessageButton.addEventListener('click', upliftMe);
+// function upliftMe() {
+//   affirmMe()
+//     }
+
+  // function affirmMe() {
+  //   hitMeWithThatMessage.innerHTML = '';
+  //   hitMeWithThatMessage.innerHTML += randomMessage(affirmations)
+  // }
+
+  function mantraMeUp(array) {
+    hitMeWithThatMessage.innerHTML = '';
+    hitMeWithThatMessage.innerHTML += randomMessage(array)
   }
