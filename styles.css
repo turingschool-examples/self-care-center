@@ -81,10 +81,21 @@ body {
   margin-left: 360px;
   border-radius: 10px;
   background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
 }
 
 img{
-  margin-top:20px;
   height: 80px;
   width: 80px;
+}
+
+p{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  color: #000000;
+}
+
+.hidden{
+  display: none;
 }
