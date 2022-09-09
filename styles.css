@@ -49,6 +49,8 @@ label {
 #message-area {
     border-radius: 8px;
     background: #FFFFFF;
+    color: #000000;
+    font-size: 20px; 
     height: 100px;
     margin: 85px auto 150px auto;
     padding: 10px;
