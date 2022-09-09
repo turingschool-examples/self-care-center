@@ -6,10 +6,15 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+  
+/* <!-- Navagation Bar for buttons -->
 
-    h1 {
-        color: red
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
 
     /* <!-- Navagation Bar for buttons -->
 
