@@ -31,8 +31,8 @@ var affirmations = ['I forgive myself and set myself free.',
 var meditationMan = document.querySelector('#logo');
 var receiveMessageButton = document.querySelector('#receive-message');
 var hitMeWithThatMessage = document.querySelector('.message');
-var affirmButton = document.querySelector('#affirm');
-var mantraButton = document.querySelector('#mantra')
+var affirmButton = document.querySelector('.affirmMeNow');
+var mantraButton = document.querySelector('.mantraMe')
 
 
 function randomMessage(array) {
@@ -40,31 +40,25 @@ function randomMessage(array) {
     return array[index]
   }
 
-receiveMessageButton.addEventListener('click', display);
+
+receiveMessageButton.addEventListener('click', display)
 function display() {
-    meditationMan.classList.add('hidden');
-    if (affirmButton.click = true) {
-      mantraMeUp(affirmations)
-    } else if (mantraButton.click = true) {
-      mantraMeUp(mantras)
-    }
+  event.preventDefault();
+  meditationMan.classList.add('hidden');
+  hitMeWithThatMessage.classList.remove('hidden')
+  hitMeWithThatMessage.innerHTML = '';
+  if (affirmButton.checked === true) {hitMeWithThatMessage.innerHTML += affirmMe();
+  } else if (mantraButton.checked === true) {
+  hitMeWithThatMessage.innerHTML += mantraMeUp();
+  }
 }
 
-// function displayThatMantra() {
-//   mantraMeUp()
-//   }
-//
-// receiveMessageButton.addEventListener('click', upliftMe);
-// function upliftMe() {
-//   affirmMe()
-//     }
+affirmButton.addEventListener('click', affirmMe)
+  function affirmMe() {
+    return affirmButton.value = randomMessage(affirmations)
+  }
 
-  // function affirmMe() {
-  //   hitMeWithThatMessage.innerHTML = '';
-  //   hitMeWithThatMessage.innerHTML += randomMessage(affirmations)
-  // }
-
-  function mantraMeUp(array) {
-    hitMeWithThatMessage.innerHTML = '';
-    hitMeWithThatMessage.innerHTML += randomMessage(array)
+mantraButton.addEventListener('click', mantraMeUp)
+  function mantraMeUp() {
+    return mantraButton.value = randomMessage(mantras);
   }
