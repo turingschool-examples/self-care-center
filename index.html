@@ -5,8 +5,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <title>Self Help Solo Project</title>
 
-<!-- Navagation Bar for buttons -->
-
 
 <!-- Center stage for User interaction -->
 
@@ -25,7 +23,30 @@
 
   </head>
   <body>
-  <h1>this is my test header</h1>
+
+<!-- Navagation Bar for buttons -->
+  <nav class="navigationbar"></nav>
+    <div class="navigationbar__container">
+      <a href="/" id="navigationbar__logo">LOGO /*this can be an image*/</a>
+      <div class="navigationbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+        <ul class="navigationbar__menu">
+          <li class="navigationbar__item">
+            <a href="/" class="navigationbar__links">home</a>
+          </li>
+          <li class="navigationbar__item">
+            <a href="/login.html" class="navigationbar__links">login</a>
+          </li>
+          <li class="navigationbar__item">
+            <a href="/favorites.html" class="navigationbar__links">favorites</a>
+          </li>
+          <li class="navigationbar__button">
+            <a href="/" class="button">navigation button</a></li>
+        </ul>
+    </div>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
