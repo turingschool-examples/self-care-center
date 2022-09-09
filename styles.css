@@ -19,9 +19,11 @@ body {
 
 
 #self-care-center-title {
-  font-size: 2em;
+  font-size: 3em;
   color: #ffffff;
   font-weight: 550;
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
 
 #which-type-of-message-text {
@@ -37,8 +39,8 @@ body {
   background-color: #ffffff;
   padding: 0.5em;
   border-radius: 0.25em;
-  max-width: 100%;
-  min-width: 100%;
+  width: 26em;
+  height: 5em;
 }
 
 #receive-message {
@@ -46,6 +48,8 @@ body {
   color:#ffffff;
   padding: 0.25em 1.5em;
   border-radius: 0.25em;
+  width: 13em;
+  height: 2em;
 }
 
 #logo-space {
