@@ -49,7 +49,8 @@ body {
 #affirmation-mantra-buttons {
   display: flex;
   justify-content: space-between;
-  width: 21em;
+  width: 25em;
+  font-size: 1.5em;
 }
 
 .radio-and-label {
