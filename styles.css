@@ -32,43 +32,43 @@ html {
 }
 
 .button-container {
-  align-content: center;
   background-color: #ffffff;
   border-radius: 10px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   height: 15vh;
-  justify-items: center;
+  justify-content: space-between;
   margin: 0px 300px 30px 250px;
   width: 50vw;
-
 }
 
 #affirm {
-  align-items: center;
+  align-items: flex-start;
   justify-items: center;
 }
 
 .affirmation {
-  align-items: center;
-  justify-items: center;
+  align-items: flex-start;
+  justify-items:center
 }
 
 #mantras {
-  align-items: center;
+  align-items: flex-start;
   justify-items: center;
 }
 
 .mantra {
-  align-items: center;
+  align-items: flex-start;
   justify-items: center;
 }
 
-button {
-  align-items: center;
+.submit {
+  align-items: flex-end;
   background-color: #134d71;
-  height: 2vh;
-  justify-items: center;
-  width: 4vh;
+  border-radius: 5px;
+  height: 3vh;
+  width: 16vh;
 }
 
 .bottom-box {
