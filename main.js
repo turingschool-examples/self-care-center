@@ -6,7 +6,9 @@ var outputMessage = document.querySelector('p');
 recieveButton.addEventListener('click', updateMessageBox);
 
 var messageType;
+var randomNumber;
 var affirmationList = ["I am free", "I am good", "I am smart"];
+var affirmationLength = affirmationList.length;
 
 function checkMessageType(){
   for(var i = 0;i<radioButtons.length;i++){
@@ -19,6 +21,11 @@ function checkMessageType(){
 }
 
 function updateMessageBox(){
-  image.className += " hidden";
-  outputMessage.innerText = affirmationList[0];
+  image.className = "meditate-icon hidden";
+  randomNumber = getRandomInt(affirmationLength);
+  outputMessage.innerText = affirmationList[randomNumber];
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
 }
