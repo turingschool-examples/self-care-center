@@ -7,8 +7,12 @@ recieveButton.addEventListener('click', updateMessageBox);
 
 var messageType;
 var randomNumber;
+var currentMessage;
 var affirmationList = ["I am free", "I am good", "I am smart"];
+var mantraList = ["Tell the truth", "I am happy", "I am enough"];
+
 var affirmationLength = affirmationList.length;
+var mantraLength = mantraList.length;
 
 function checkMessageType(){
   for(var i = 0;i<radioButtons.length;i++){
@@ -23,7 +27,8 @@ function checkMessageType(){
 function updateMessageBox(){
   image.className = "meditate-icon hidden";
   randomNumber = getRandomInt(affirmationLength);
-  outputMessage.innerText = affirmationList[randomNumber];
+  currentMessage = mantraList[randomNumber]
+  outputMessage.innerText = currentMessage;
 }
 
 function getRandomInt(max) {
