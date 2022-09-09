@@ -29,6 +29,8 @@ html {
 .white-font {
   color: #ffffff;
   font-family: 'Quicksand';
+  justify-items: center;
+  align-items: center;
 }
 
 .button-container {
