@@ -41,22 +41,43 @@ function randomMessage(array) {
   }
 
 
-receiveMessageButton.addEventListener('click', display)
-function display() {
-  event.preventDefault();
-  meditationMan.classList.add('hidden');
-  hitMeWithThatMessage.classList.remove('hidden')
-  hitMeWithThatMessage.innerHTML = '';
-  if (affirmButton.checked === true) {hitMeWithThatMessage.innerHTML += affirmMe();
-  } else if (mantraButton.checked === true) {
-  hitMeWithThatMessage.innerHTML += mantraMeUp();
+// receiveMessageButton.addEventListener('click', display)
+// function display() {
+//     event.preventDefault();
+//     meditationMan.classList.add('hidden');
+//     hitMeWithThatMessage.classList.remove('hidden')
+//     hitMeWithThatMessage.innerHTML = '';
+//     if (affirmButton.checked === true) {hitMeWithThatMessage.innerHTML += affirmMe();
+//     } else if (mantraButton.checked === true) {
+//     hitMeWithThatMessage.innerHTML += mantraMeUp();
+//   }
+// }
+
+receiveMessageButton.addEventListener('click', function(){setTimeout(display, 3000)})
+  function display() {
+    meditationMan.classList.add('hidden');
+    hitMeWithThatMessage.classList.remove('hidden')
+    hitMeWithThatMessage.innerHTML = '';
+    if (affirmButton.checked === true) {hitMeWithThatMessage.innerHTML += affirmMe();
+    } else if (mantraButton.checked === true) {
+    hitMeWithThatMessage.innerHTML += mantraMeUp();
   }
 }
+
+
+
+
+
+
+
+
 
 affirmButton.addEventListener('click', affirmMe)
   function affirmMe() {
     return affirmButton.value = randomMessage(affirmations)
   }
+
+
 
 mantraButton.addEventListener('click', mantraMeUp)
   function mantraMeUp() {

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
@@ -10,13 +11,14 @@
     </header>
     <h2 class="sub-title">Which type of message?</h2>
     <form class="button">
-      <div class="affirmation">
-        <input class="affirmMeNow" type="radio" id="affirm" name="r-button" value="affirm">
-        <label id="affirmation" for="affirm">Affirmation</label>
-        <input class="mantraMe" type="radio" id="mantra" name="r-button" value="mantra">
-        <label id="mantra" for="mantra">Mantra</label>
-      </div>
-      <div id="more-space"></div>
+      <section class="affirmation">
+        <label id="affirmMeNow">
+          <input class="affirmMeNow" type="radio" id="affirm" name="r-button" value="affirm">
+        Affirmation</label>
+        <label id="mantraMe">
+          <input class="mantraMe" type="radio" id="mantra" name="r-button" value="mantra">
+        Mantra</label>
+      </section>
       <div class="receive">
         <button id="receive-message" type="button">Receive Message</button>
       </div>
