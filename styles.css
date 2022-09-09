@@ -49,7 +49,7 @@ body {
 #affirmation-mantra-buttons {
   display: flex;
   justify-content: space-between;
-  /* This is where I am trying flex */
+  width: 21em;
 }
 
 .radio-and-label {
