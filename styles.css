@@ -71,3 +71,7 @@ body {
 .hidden {
   display: none;
 }
+#logo {
+  height: 50px;
+  align-self: center;
+}
