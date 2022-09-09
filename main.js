@@ -1,7 +1,7 @@
 //querySelectors
 submitButton = document.querySelector('button')
 printMessage = document.querySelector('.print')
-svg = document.querySelector('svg')
+svg = document.getElementById('a')
 //eventListeners
 submitButton.addEventListener('click', displayMessage)
 
@@ -21,7 +21,7 @@ function displayMessage() {
 }
 
 function hideSvg() {
-  svg.classList.add('hidden')
+
 }
 
 
