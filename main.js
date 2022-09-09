@@ -41,16 +41,17 @@ mantraRadio.addEventListener('click', generateMantra)
 affirmationRadio.addEventListener('click', generateAffirmation)
 receiveMessageButton.addEventListener('click', displayMessage)
 
-generateMantra() {
-  mantraList
-  currentMessage = Math.floor(Math.random() * mantraList.length)
+function generateMantra () {
+  console.log('hello')
+  // currentMessage = Math.floor(Math.random() * mantraList.length)
+  // console.log(currentMessage)
 }
 
-generateAffirmation() {
-  affirmationList
-  currentMessage =
+function generateAffirmation () {
+  // affirmationList
+  // currentMessage =
 }
 
-displayMessage() {
-currentMessage
+function displayMessage () {
+  currentMessage
 }
