@@ -1,5 +1,6 @@
-* {font-family: 'Quicksand', sans-serif;
-
+* {
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
 }
 
 body {
@@ -50,6 +51,7 @@ body {
   border-radius: 0.5em;
   width: 13em;
   height: 2em;
+  border: none;
 }
 
 #logo-space {
