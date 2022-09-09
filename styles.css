@@ -37,11 +37,26 @@ body {
 
 #all-type-of-message-buttons {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #ffffff;
-  padding: 0.5em;
   border-radius: 0.5em;
   width: 26em;
   height: 5em;
+}
+
+#affirmation-mantra-buttons {
+  display: flex;
+  justify-content: space-between;
+  /* This is where I am trying flex */
+}
+
+.radio-and-label {
+  display:flex;
+  justify-content: center;
+  align-content: space-between ;
+  font-style: italic;
 }
 
 #receive-message {
@@ -70,6 +85,10 @@ body {
 #logo-img {
   width: 4em;
   height: 5em;
+}
+
+.hidden {
+  display: none;
 }
 
 
