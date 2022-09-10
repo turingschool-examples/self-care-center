@@ -63,22 +63,25 @@ function selectMantra() {
 }
 
 function clearAll() {
-    textDisplay.innerText= ''
+    textDisplay.classList.add('hidden')
     bellImage.classList.remove('hidden')
     affirmationRadioButton.checked = false
     mantrasnRadioButton.checked = false
+    clearButton.classList.add('hidden')
 }
 
 function displayMessage() {
   if (!affirmationRadioButton.checked && !mantrasnRadioButton.checked) {
     errorMessage.innerText = "Please make a selection"
     bellImage.classList.remove('hidden')
+    clearButton.classList.remove('hidden')
     textDisplay.innerText =""
+    clearButton.classList.add('hidden')
   } else {
     bellImage.classList.add('hidden')
     textDisplay.classList.remove('hidden')
     textDisplay.innerText = mantraOrAffirmation
-
+    clearButton.classList.remove('hidden')
     errorMessage.innerText = ''
     affirmationRadioButton.checked = false
     mantrasnRadioButton.checked = false
