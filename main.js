@@ -67,21 +67,30 @@ function checkMessageType(){
 function retrievesList(){
   checkMessageType();
   //console.log(`You selected ${messageType}`);
-  // if(affirmationList.length === 0){
-  //   //message pops up 'you'll see repeated messages"
-  //   currentMessage = "Yay! You have fully meditated"
-  //   outputMessage.innerText = currentMessage;
-  // }
+
     if(messageType === "affirmation"){
       currentList = affirmationList;
-      render();
-      removeElement();
+
+      if(currentList.length === 0){
+        //message pops up 'you'll see repeated messages"
+        currentMessage = "Yay! You have fully meditated"
+        outputMessage.innerText = currentMessage;
+      }
+
+      else {
+        render();
+        removeElement();
+      }
+
     }
+
+    
     else if(messageType === "mantra"){
       currentList = mantraList;
       render();
       removeElement();
     }
+
 }
 
 //Function renders bottom message box by removing meditation image and
