@@ -30,6 +30,7 @@ var mantras = [
   "Onward and upward.",
   "I am the sky, the rest is weather.",
 ]
+
 var affirmationRadioButton = document.querySelector("#affirmations")
 var mantrasnRadioButton = document.querySelector("#mantras")
 var receiveMessageButton = document.querySelector(".receive-message")
@@ -37,14 +38,13 @@ var bellImage = document.querySelector(".bell-picture")
 var textDisplay = document.querySelector("h3")
 var errorMessage = document.querySelector(".error-message")
 var clearButton = document.querySelector(".clear-message")
- //Event Listeners
+var mantraOrAffirmation;
+
 affirmationRadioButton.addEventListener('click', selectAffirmation);
 mantrasnRadioButton.addEventListener('click', selectMantra)
 receiveMessageButton.addEventListener('click', displayMessage);
 clearButton.addEventListener('click', clearAll)
 
-var mantraOrAffirmation;
-//Event Handlers
 function getRandomIndex(array) {
   var i = Math.floor(Math.random() * array.length);
   return array[i];
@@ -62,28 +62,32 @@ function selectMantra() {
   return mantraOrAffirmation
 }
 
+function displayHomePage() {
+  textDisplay.classList.add('hidden')
+  clearButton.classList.add('hidden')
+  bellImage.classList.remove('hidden')
+}
+
+function clearRadioButtons() {
+  affirmationRadioButton.checked = false
+  mantrasnRadioButton.checked = false
+}
+
 function clearAll() {
-    textDisplay.classList.add('hidden')
-    bellImage.classList.remove('hidden')
-    affirmationRadioButton.checked = false
-    mantrasnRadioButton.checked = false
-    clearButton.classList.add('hidden')
+  clearRadioButtons()
+  displayHomePage()
 }
 
 function displayMessage() {
   if (!affirmationRadioButton.checked && !mantrasnRadioButton.checked) {
     errorMessage.innerText = "Please make a selection"
-    bellImage.classList.remove('hidden')
-    clearButton.classList.remove('hidden')
-    textDisplay.innerText =""
-    clearButton.classList.add('hidden')
+    displayHomePage()
   } else {
     bellImage.classList.add('hidden')
     textDisplay.classList.remove('hidden')
     textDisplay.innerText = mantraOrAffirmation
     clearButton.classList.remove('hidden')
     errorMessage.innerText = ''
-    affirmationRadioButton.checked = false
-    mantrasnRadioButton.checked = false
-}
+    clearRadioButtons()
+  }
 }
