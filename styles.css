@@ -48,6 +48,8 @@ input[type="radio"] {
 }
 
 button {
+  all: unset;
+  cursor: pointer;
   font-size: 18px;
   color: #ffffff;
   border: 2px solid none;
@@ -60,6 +62,8 @@ button {
 .message-display{
   border: 2px solid none;
   display: flex;
+  color: #000000;
+  font-size: 24px;
   justify-content: center;
   align-items: center;
   background: #ffffff;
