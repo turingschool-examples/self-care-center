@@ -21,14 +21,24 @@ function checkMessageType(){
       break;
     }
   }
-  console.log(`You selected ${messageType}`);
 }
 
 function updateMessageBox(){
+  checkMessageType();
+  console.log(`You selected ${messageType}`);
+
   image.className = "meditate-icon hidden";
-  randomNumber = getRandomInt(affirmationLength);
-  currentMessage = mantraList[randomNumber]
-  outputMessage.innerText = currentMessage;
+
+  if(messageType === "affirmation"){
+    randomNumber = getRandomInt(affirmationLength);
+    currentMessage = affirmationList[randomNumber]
+    outputMessage.innerText = currentMessage;
+  }
+  else if(messageType === "mantra"){
+    randomNumber = getRandomInt(affirmationLength);
+    currentMessage = mantraList[randomNumber]
+    outputMessage.innerText = currentMessage;
+  }
 }
 
 function getRandomInt(max) {
