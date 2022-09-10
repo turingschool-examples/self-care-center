@@ -90,31 +90,3 @@ mantraButton.addEventListener('click', mantraMeUp)
     }
     return mantraButton.value = randomMessage(mantras);
   }
-
-
-
-
-
-
-
-
-  // receiveMessageButton.addEventListener('click', display)
-  // function display() {
-  //     event.preventDefault();
-  //     // meditationMan.classList.add('hidden');
-  //     // hitMeWithThatMessage.classList.remove('hidden')
-  //     hitMeWithThatMessage.classList.add('fade-in-text');
-  //     hitMeWithThatMessage.innerHTML = '';
-  //     if (affirmButton.checked === true) {hitMeWithThatMessage.innerHTML += affirmMe();
-  //     } else if (mantraButton.checked === true) {
-  //     hitMeWithThatMessage.innerHTML += mantraMeUp();
-  //   }
-  // }
-
-  // function pleaseWait() {
-  //   animation.classList.remove('hidden');
-  //   var timer = setInterval(function () {
-  //     if 9
-  //   }
-  // }
-  // setTimeout(pleaseWait, 2300)
