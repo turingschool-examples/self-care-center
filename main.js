@@ -1,7 +1,3 @@
-//Future Improvement: Refactor CSS code to implement flex box
-//Future Improvement: Remove comment on line 65
-//Future Improvement: Remove top comment in CSS code
-
 //Assigns HTML elements to variables
 var radioButtons = document.querySelectorAll('.radio-buttons');
 var recieveButton = document.querySelector('#recieve-message-button');
@@ -64,10 +60,10 @@ function checkMessageType(){
 }
 
 //Function sets current list according to the radio button result
+//FUTURE NOTE: Refactor this whole function to look more clean when all coding
+//logic is finished!
 function retrievesList(){
   checkMessageType();
-  //console.log(`You selected ${messageType}`);
-
     if(messageType === "affirmation"){
       currentList = affirmationList;
 
