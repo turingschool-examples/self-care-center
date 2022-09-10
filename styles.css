@@ -16,7 +16,7 @@ html {
   justify-content: center;
 }
 
-.title {
+.h1 {
   justify-items: center;
 }
 
@@ -33,33 +33,42 @@ html {
 }
 
 .white-font {
-  align-items: center;
   color: #ffffff;
   font-family: 'Quicksand';
-  justify-items: center;
 }
 
 .white-box-parent {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
+  /* gap: 10px; */
+} 
 
 .first-white-box {
-  align-content: center;
-  display: flex;
-  justify-content: flex;
-  /* align-items: center;
-  justify-items: center; */
-}
-
-.button-container {
   background-color: #ffffff;
   border-radius: 10px;
-  flex-wrap: wrap;
   height: 15vh;
   margin-bottom: 30px;
   width: 50vw;
+}
+
+.radio-container {
+  align-content: space-around;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  justify-content: space-evenly;
+
+}
+
+.group-one-radio {
+  justify-items: center;
+  margin-top: 10px;
+}
+
+.group-second-radio {
+  justify-items: center;
 }
 
 label {
@@ -67,27 +76,8 @@ label {
   font-style: italic;
 }
 
-#affirm {
-  align-items: flex-start;
-  flex-basis: 25%;
-  justify-items: center;
-  margin-right: 0px;
-}
-
-.affirmation {
-  align-items: flex-start;
-  justify-items:center
-}
-
-#mantras {
-  align-items: flex-start;
-  flex-basis: 25%;
-  justify-items: center;
-  margin-right: 0px;
-}
-
-.mantra {
-  align-items: flex-start;
+.radio-alignment {
+  align-items: flex-end;
   justify-items: center;
 }
 
@@ -105,6 +95,36 @@ label {
   justify-items: center;
   width: 16vh;
 }
+
+.all-buttons {
+  align-items: center;
+  flex-wrap: wrap;
+  justify-items: center;
+}
+
+.submit-container {
+  align-items: flex-end;
+  flex-basis: 100%;
+  justify-content: center;
+ 
+}
+
+.submit {
+  align-items: flex-end;
+  background-color: #134d71;
+  border-radius: 5px;
+  flex-basis: 50%;
+  height: 3vh;
+  justify-items: center;
+  width: 45vh;
+}
+
+.all-buttons {
+  align-items: center;
+  flex-wrap: wrap;
+  justify-items: center;
+}
+
 
 .bottom-container {
   align-content: center;
@@ -128,3 +148,27 @@ img {
   height: 10vh;
   width: auto;
 }
+
+/* #affirm {
+  align-items: flex-start;
+  flex-basis: 25%;
+  justify-items: center;
+  margin-right: 0px;
+} */
+
+/* .affirmation {
+  align-items: flex-start;
+  justify-items:center
+} */
+
+/* #mantras {
+  align-items: flex-start;
+  flex-basis: 25%;
+  justify-items: center;
+  margin-right: 0px;
+} */
+
+/* .mantra {
+  align-items: flex-start;
+  justify-items: center;
+} */
