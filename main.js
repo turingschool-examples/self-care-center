@@ -80,6 +80,7 @@ function retrievesList(){
     else if(messageType === "mantra"){
       currentList = mantraList;
       render();
+      removeElement();
     }
 }
 
