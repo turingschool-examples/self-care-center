@@ -72,8 +72,7 @@ function retrievesList(){
       currentList = affirmationList;
 
       if(currentList.length === 0){
-        //message pops up 'you'll see repeated messages"
-        currentMessage = "Yay! You have fully meditated"
+        currentMessage = "Yay! You have fully affirmation meditated"
         outputMessage.innerText = currentMessage;
       }
 
@@ -84,11 +83,21 @@ function retrievesList(){
 
     }
 
-    
+
     else if(messageType === "mantra"){
       currentList = mantraList;
-      render();
-      removeElement();
+
+      if(currentList.length === 0){
+        currentMessage = "Yay! You have fully matra meditated"
+        outputMessage.innerText = currentMessage;
+      }
+
+      else {
+        render();
+        removeElement();
+
+      }
+
     }
 
 }
