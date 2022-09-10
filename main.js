@@ -89,6 +89,8 @@ function render(){
   randomNumber = getRandomInt(currentList.length);
   currentMessage = currentList[randomNumber];
   outputMessage.innerText = currentMessage;
+  outputMessage.style.color = '#000000';
+  outputMessage.style.fontWeight = "normal";
 }
 
 //Function removes element in current list based on the randomized number that was chosen
@@ -101,6 +103,8 @@ function removeElement(){
 function resetList(){
   currentMessage = `Great job! You meditated through all the ${messageType}s. \n ${capFirstLetter(messageType)}s will reset now.`
   outputMessage.innerText = currentMessage;
+  outputMessage.style.color = '#3580cb';
+  outputMessage.style.fontWeight = "bold";
   if(messageType === "affirmation"){
     affirmationList =
     ["I forgive myself and set myself free.",
