@@ -4,8 +4,8 @@ var recieveButton = document.querySelector('#recieve-message-button');
 var image = document.querySelector('.meditate-icon');
 var outputMessage = document.querySelector('p');
 
-//Adds a listener event to 'recieve message' button
-recieveButton.addEventListener('click', retrievesList);
+//Adds a listener event which setListMode when 'recieve message' button is clicked
+recieveButton.addEventListener('click', setListMode);
 
 //Global variables to access later from our Data Model
 var messageType;
@@ -62,15 +62,17 @@ function checkMessageType(){
 //Function sets current list according to the radio button result
 //FUTURE NOTE: Refactor this whole function to look more clean when all coding
 //logic is finished!
-function retrievesList(){
+function setListMode(){
   checkMessageType();
     if(messageType === "affirmation"){
       currentList = affirmationList;
 
       if(currentList.length === 0){
-        currentMessage = "Great job! You meditated through all the affirmations. \n Affirmations will reset now."
-        outputMessage.innerText = currentMessage;
-        affirmationList = ["A", "B", "C", "D"];
+        // currentMessage = `Great job! You meditated through all the ${messageType}s. \n ${capFirstLetter(messageType)}s will reset now.`
+        // outputMessage.innerText = currentMessage;
+        // affirmationList = ["A", "B", "C", "D"];
+
+        resetList();
       }
 
       else {
@@ -85,8 +87,12 @@ function retrievesList(){
       currentList = mantraList;
 
       if(currentList.length === 0){
-        currentMessage = "Great job! You meditated through all the mantras. \n Mantras will reset now."
-        outputMessage.innerText = currentMessage;
+        // currentMessage = `Great job! You meditated through all the ${messageType}s. \n ${capFirstLetter(messageType)}s will reset now.`
+        // outputMessage.innerText = currentMessage;
+        // mantraList = ["a", "b", "c", "d"];
+
+        resetList();
+
       }
 
       else {
@@ -115,9 +121,22 @@ function removeElement(){
   console.log(currentList);
 }
 
-// function repopulateList(){
-//
-// }
+function resetList(){
+  currentMessage = `Great job! You meditated through all the ${messageType}s. \n ${capFirstLetter(messageType)}s will reset now.`
+  outputMessage.innerText = currentMessage;
+
+  if(messageType === "affirmation"){
+    affirmationList = ["A", "B", "C", "D"];
+  }
+  else if(messageType === "mantra"){
+    mantraList = ["a", "b", "c", "d"];
+  }
+
+}
+
+function capFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 //Function generates a random number
 function getRandomInt(max) {
