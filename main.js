@@ -70,6 +70,7 @@ function retrievesList(){
       if(currentList.length === 0){
         currentMessage = "Great job! You meditated through all the affirmations. \n Affirmations will reset now."
         outputMessage.innerText = currentMessage;
+        affirmationList = ["A", "B", "C", "D"];
       }
 
       else {
@@ -113,6 +114,10 @@ function removeElement(){
   console.log(`Random number: ${randomNumber}`);
   console.log(currentList);
 }
+
+// function repopulateList(){
+//
+// }
 
 //Function generates a random number
 function getRandomInt(max) {
