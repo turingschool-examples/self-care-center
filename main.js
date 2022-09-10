@@ -55,9 +55,11 @@ function displayMessage() {
   var userInput = document.querySelector('input[name="selection"]:checked').value;
     if (userInput === "mantra") {
       randomMessage.innerText = randomMantra;
-      return randomMessage;
     } else if (userInput === "affirmation") {
       randomMessage.innerText = randomAffirmation;
-      return randomMessage;
     }
 };
+
+// Add a “View All Messages” button.
+// When that button is clicked, the user is taken to a new pages that displays all messages, sorted by message type.
+// On this page, user should have the ability to add/edit/delete messages.
