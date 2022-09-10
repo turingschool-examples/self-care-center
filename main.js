@@ -49,13 +49,18 @@ function takeItAway() {
 }
 
 function reset() {
-  // // hitMeWithThatMessage.classList.remove('fade-in-text');
   animation.classList.add('hidden');
+}
+
+function doNotRepeat() {
+    hitMeWithThatMessage.classList.remove('fade-in-text');
+    hitMeWithThatMessage.style.animationIterationCount = 1;
 }
 
 receiveMessageButton.addEventListener('click', () => {
   takeItAway();
   {setTimeout(display, 4000)}
+  doNotRepeat()
 });
 
   function display() {

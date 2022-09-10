@@ -134,41 +134,10 @@ label:hover {
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
   justify-content: center;
-  animation: fadeIn 3s;
-  -webkit-animation: fadeIn 3s;
-  -moz-animation: fadeIn 3s;
-  -o-animation: fadeIn 3s;
-  -ms-animation: fadeIn 3s;
+  animation: fadeIn 4s;
+  animation-iteration-count: infinite;
 }
 @keyframes fadeIn {
-  0% {opacity: 0;}
-  25% {opacity: .25;}
-  50% {opacity: .5;}
-  75% {opacity: .75;}
-  100% {opacity: 1;}
-}
-@-moz-keyframes fadeIn {
-  0% {opacity: 0;}
-  25% {opacity: .25;}
-  50% {opacity: .5;}
-  75% {opacity: .75;}
-  100% {opacity: 1;}
-}
-@-webkit-keyframes fadeIn {
-  0% {opacity: 0;}
-  25% {opacity: .25;}
-  50% {opacity: .5;}
-  75% {opacity: .75;}
-  100% {opacity: 1;}
-}
-@-o-keyframes fadeIn {
-  0% {opacity: 0;}
-  25% {opacity: .25;}
-  50% {opacity: .5;}
-  75% {opacity: .75;}
-  100% {opacity: 1;}
-}
-@-ms-keyframes fadeIn {
   0% {opacity: 0;}
   25% {opacity: .25;}
   50% {opacity: .5;}
