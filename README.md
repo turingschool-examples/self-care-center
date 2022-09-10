@@ -37,7 +37,7 @@ ______________________________________________________
 - They will need the link to the gitHub repository. Then, they can clone to their local machine following the instructions on the github site. Once the repo is cloned, they can use the terminal to enter the appropriate directory and run <open> to view the application in their browser. 
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
-
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/110144802/189499011-a97b7c3c-8eee-4fda-a1db-d61aabf6b2ea.png">
 ### Context:
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
 - I was able to complete this project in around 6 hours during the third week of Turing mod1. 
