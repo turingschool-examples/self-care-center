@@ -23,6 +23,8 @@ function checkMessageType(){
   }
 }
 
+//Future note: may want to upgrade this function by creating a render
+//function so you can invoke it instead of repeating the same 3 lines of code
 function updateMessageBox(){
   checkMessageType();
   console.log(`You selected ${messageType}`);
