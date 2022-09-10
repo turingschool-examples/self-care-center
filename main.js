@@ -59,50 +59,29 @@ function checkMessageType(){
   }
 }
 
-//Function sets current list according to the radio button result
-//FUTURE NOTE: Refactor this whole function to look more clean when all coding
-//logic is finished!
+//Function sets current list according to radio button result
 function setListMode(){
   checkMessageType();
     if(messageType === "affirmation"){
       currentList = affirmationList;
-
       if(currentList.length === 0){
-        // currentMessage = `Great job! You meditated through all the ${messageType}s. \n ${capFirstLetter(messageType)}s will reset now.`
-        // outputMessage.innerText = currentMessage;
-        // affirmationList = ["A", "B", "C", "D"];
-
         resetList();
       }
-
       else {
         render();
         removeElement();
       }
-
     }
-
-
     else if(messageType === "mantra"){
       currentList = mantraList;
-
       if(currentList.length === 0){
-        // currentMessage = `Great job! You meditated through all the ${messageType}s. \n ${capFirstLetter(messageType)}s will reset now.`
-        // outputMessage.innerText = currentMessage;
-        // mantraList = ["a", "b", "c", "d"];
-
         resetList();
-
       }
-
       else {
         render();
         removeElement();
-
       }
-
     }
-
 }
 
 //Function renders bottom message box by removing meditation image and
@@ -112,28 +91,27 @@ function render(){
   randomNumber = getRandomInt(currentList.length);
   currentMessage = currentList[randomNumber];
   outputMessage.innerText = currentMessage;
-
 }
 
+//Function removes element in current list based on the randomized number that was chosen
 function removeElement(){
   currentList.splice(randomNumber,1);
-  console.log(`Random number: ${randomNumber}`);
-  console.log(currentList);
 }
 
+//Function generates message to user that they have seen all the quotes from chosen
+//list and resets all elements of that array.
 function resetList(){
   currentMessage = `Great job! You meditated through all the ${messageType}s. \n ${capFirstLetter(messageType)}s will reset now.`
   outputMessage.innerText = currentMessage;
-
   if(messageType === "affirmation"){
     affirmationList = ["A", "B", "C", "D"];
   }
   else if(messageType === "mantra"){
     mantraList = ["a", "b", "c", "d"];
   }
-
 }
 
+//Function capitalizes first letter in string
 function capFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
