@@ -6,13 +6,33 @@
   </head>
   <body>
   <h1>✨ Self Care Center ✨</h1>
-  <div class="parent">
-    <h3> Which Type Of Message? </h3>
-    <div class="child">
+  <div class="grand-parent">
+    <div class="parent">
+      <h3> Which Type Of Message? </h3>
+      <div class="child">
+        <div class="radio-container">
+          <div>
+        <input type="radio" id="affirmation" name="drone" value="affirmation" checked>
+          <label for="affirmation">affirmation</label>
+          </div>
+          <div>
+        <input type="radio" id="mantra" name="drone" value="mantra" checked>
+          <label for="mantra">mantra</label>
+        </div>
+        </div>
+        <button class="submit-button"
+        type="submit">
+    Receive Message
+</button>
+      </div>
+    </div>
+    <div class="image-container">
+      <img class="meditation-image" src="./assets/meditate.svg"/>
     </div>
   </div>
+
+
+
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
-<!-- center the parent div and then give it the appropriate height and width to math the style and spec sheet - SUGGESTION flexbox
-and if you want and easy way to center something, display:flex justify-content: center align-items: center -->

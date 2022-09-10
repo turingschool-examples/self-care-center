@@ -9,10 +9,77 @@ black - #000000;
 
 h1 {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 8vh;
   font-family: 'Quicksand', sans-serif;
   margin: 0;
-  color: #ffffff
+  color: #ffffff;
+}
+
+h3 {
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.grand-parent {
+  height:86vh;
+  width: 100vw;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.parent, .child {
+  width: 40vw;
+
+}
+
+.parent {
+  height: 25vh;
+}
+
+.child {
+  background-color: #ffffff;
+  height: 15vh;
+  display: flex;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.radio-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.meditation-image {
+  height: 10vh;
+  width: 10vw;
+}
+
+.image-container {
+  background-color: #ffffff;
+    width: 75vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.submit-button {
+    color: #ffffff;
+    background-color: #134d71;
+    border-radius: 5px;
+    height: 35px;
+    width: 175px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    border: none;
 }
 
 body {
@@ -21,4 +88,8 @@ body {
   width: 100vw;
   background: rgb(19,77,113);
   background: linear-gradient(180deg, rgba(19,77,113,1) 0%, rgba(120,167,198,1) 35%, rgba(247,228,191,1) 100%);
+}
+
+label {
+  font-family: 'Quicksand', sans-serif;
 }
