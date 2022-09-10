@@ -36,10 +36,12 @@ var receiveMessageButton = document.querySelector(".receive-message")
 var bellImage = document.querySelector(".bell-picture")
 var textDisplay = document.querySelector("h3")
 var errorMessage = document.querySelector(".error-message")
+var clearButton = document.querySelector(".clear-message")
  //Event Listeners
 affirmationRadioButton.addEventListener('click', selectAffirmation);
 mantrasnRadioButton.addEventListener('click', selectMantra)
 receiveMessageButton.addEventListener('click', displayMessage);
+clearButton.addEventListener('click', clearAll)
 
 var mantraOrAffirmation;
 //Event Handlers
@@ -60,6 +62,12 @@ function selectMantra() {
   return mantraOrAffirmation
 }
 
+function clearAll() {
+    textDisplay.innerText= ''
+    bellImage.classList.remove('hidden')
+    affirmationRadioButton.checked = false
+    mantrasnRadioButton.checked = false
+}
 
 function displayMessage() {
   if (!affirmationRadioButton.checked && !mantrasnRadioButton.checked) {
@@ -70,6 +78,7 @@ function displayMessage() {
     bellImage.classList.add('hidden')
     textDisplay.classList.remove('hidden')
     textDisplay.innerText = mantraOrAffirmation
+
     errorMessage.innerText = ''
     affirmationRadioButton.checked = false
     mantrasnRadioButton.checked = false
