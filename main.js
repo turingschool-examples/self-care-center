@@ -60,9 +60,9 @@ function takeItAway() {
   meditationMan.classList.add('hidden');
   // hitMeWithThatMessage.classList.add('fade-in-text');
 }
-function reset() {
-  hitMeWithThatMessage.classList.remove('fade-in-text');
-}
+// function reset() {
+//   // hitMeWithThatMessage.classList.remove('fade-in-text');
+// }
 
 
 receiveMessageButton.addEventListener('click', function(){setTimeout(display, 3000)})
@@ -101,6 +101,6 @@ mantraButton.addEventListener('click', mantraMeUp)
     if (mantraButton.checked === true) {
       body.classList.add('color-change-mantra')
       body.classList.remove('color-change-affirm')
-    } 
+    }
     return mantraButton.value = randomMessage(mantras);
   }

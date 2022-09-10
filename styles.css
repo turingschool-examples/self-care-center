@@ -1,8 +1,7 @@
-* {
-  font-family: 'Quicksand', sans-serif;
-}
 html {
   height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 62.5%;
 }
 
 .body {
@@ -31,12 +30,14 @@ html {
 }
 
 .header {
+  font-size: 1.6rem;
   display: flex;
   justify-content: center;
   color: white;
   height: 150px;
 }
 .sub-title {
+  font-size: 1.8rem;
   color: white;
   display: flex;
   justify-content: center;
@@ -64,6 +65,8 @@ html {
   color: white;
   border-radius: 5px;
   width: 150px;
+  font-size: 1.2rem;
+  font-family: 'Quicksand', sans-serif;
 }
 .space-between {
   height: 100px;
@@ -75,6 +78,11 @@ html {
   border-radius: 5px;
   display: flex;
   justify-content: center;
+}
+label {
+  font-family: 'Quicksand', sans-serif;
+  font-style: italic;
+  font-size: 1.2rem;
 }
 .affirmation {
   display: flex;
