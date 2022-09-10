@@ -39,10 +39,17 @@ var affirmation = document.querySelector("#affirmation");
 var mantra = document.querySelector("#mantra");
 var receiveMessageButton = document.querySelector("#get-message");
 var meditateImage = document.querySelector("#meditate-img");
-var randomMessage = document.querySelector(".random-message")
+var randomMessage = document.querySelector("#random-message");
+var viewAllMessagesButton = document.querySelector("#view-all-messages");
+var inputSection = document.querySelector("#input");
+var messageDisplaySection = document.querySelector("#message-display");
+var backHomeButton = document.querySelector("#back-to-home");
+var viewAllMessagesHeader = document.querySelector("#message-type");
 
 //Event Listeners
 receiveMessageButton.addEventListener("click", displayMessage);
+viewAllMessagesButton.addEventListener("click", viewAllMessages);
+backHomeButton.addEventListener("click", displayHomePage)
 
 //Functions and Event Handlers
 function getRandomIndex(array) {
@@ -50,8 +57,8 @@ function getRandomIndex(array) {
 };
 
 function displayMessage() {
-  meditateImage.classList.add("hidden")
-  randomMessage.classList.remove("hidden")
+  meditateImage.classList.add("hidden");
+  randomMessage.classList.remove("hidden");
   var userInput = document.querySelector('input[name="selection"]:checked').value;
     if (userInput === "mantra") {
       randomMessage.innerText = randomMantra;
@@ -60,6 +67,20 @@ function displayMessage() {
     }
 };
 
-// Add a “View All Messages” button.
+function viewAllMessages() {
+  inputSection.classList.add("hidden");
+  messageDisplaySection.classList.add("hidden");
+  viewAllMessagesButton.classList.add("hidden");
+  backHomeButton.classList.remove("hidden");
+  viewAllMessagesHeader.innerText = "All Messages by Type"
+};
+
+function displayHomePage() {
+  inputSection.classList.remove("hidden");
+  messageDisplaySection.classList.remove("hidden");
+  viewAllMessagesButton.classList.remove("hidden");
+  backHomeButton.classList.add("hidden");
+};
+
 // When that button is clicked, the user is taken to a new pages that displays all messages, sorted by message type.
 // On this page, user should have the ability to add/edit/delete messages.
