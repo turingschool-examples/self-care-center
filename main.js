@@ -64,22 +64,22 @@ function setListMode(){
   checkMessageType();
     if(messageType === "affirmation"){
       currentList = affirmationList;
-      if(currentList.length === 0){
-        resetList();
-      }
-      else {
+      if(currentList.length > 0){
         render();
         removeElement();
+      }
+      else {
+        resetList();
       }
     }
     else if(messageType === "mantra"){
       currentList = mantraList;
-      if(currentList.length === 0){
-        resetList();
-      }
-      else {
+      if(currentList.length > 0){
         render();
         removeElement();
+      }
+      else {
+        resetList();
       }
     }
 }
