@@ -52,11 +52,14 @@ function randomMessage(array) {
 //     hitMeWithThatMessage.innerHTML += mantraMeUp();
 //   }
 // }
+receiveMessageButton.addEventListener('click', takeItAway)
+function takeItAway() {
+  meditationMan.classList.add('hidden');
+  hitMeWithThatMessage.classList.remove('hidden');
+}
 
 receiveMessageButton.addEventListener('click', function(){setTimeout(display, 3000)})
   function display() {
-    meditationMan.classList.add('hidden');
-    hitMeWithThatMessage.classList.remove('hidden');
     hitMeWithThatMessage.innerHTML = '';
     if (affirmButton.checked === true) {hitMeWithThatMessage.innerHTML += affirmMe();
     } else if (mantraButton.checked === true) {
