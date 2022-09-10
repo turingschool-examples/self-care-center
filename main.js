@@ -67,14 +67,20 @@ function checkMessageType(){
 function retrievesList(){
   checkMessageType();
   //console.log(`You selected ${messageType}`);
-  if(messageType === "affirmation"){
-    currentList = affirmationList;
-    render();
-  }
-  else if(messageType === "mantra"){
-    currentList = mantraList;
-    render();
-  }
+  // if(affirmationList.length === 0){
+  //   //message pops up 'you'll see repeated messages"
+  //   currentMessage = "Yay! You have fully meditated"
+  //   outputMessage.innerText = currentMessage;
+  // }
+    if(messageType === "affirmation"){
+      currentList = affirmationList;
+      render();
+      removeElement();
+    }
+    else if(messageType === "mantra"){
+      currentList = mantraList;
+      render();
+    }
 }
 
 //Function renders bottom message box by removing meditation image and
@@ -84,6 +90,13 @@ function render(){
   randomNumber = getRandomInt(currentList.length);
   currentMessage = currentList[randomNumber];
   outputMessage.innerText = currentMessage;
+
+}
+
+function removeElement(){
+  currentList.splice(randomNumber,1);
+  console.log(`Random number: ${randomNumber}`);
+  console.log(currentList);
 }
 
 //Function generates a random number
