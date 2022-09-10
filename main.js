@@ -41,10 +41,12 @@ var receiveMessageButton = document.querySelector("#get-message");
 var meditateImage = document.querySelector("#meditate-img");
 var randomMessage = document.querySelector("#random-message");
 var viewAllMessagesButton = document.querySelector("#view-all-messages");
-var inputSection = document.querySelector("#input");
-var messageDisplaySection = document.querySelector("#message-display");
+var homeView = document.querySelector(".home-view")
 var backHomeButton = document.querySelector("#back-to-home");
-var viewAllMessagesHeader = document.querySelector("#message-type");
+var viewAllMessagesHeader = document.querySelector(".title");
+var allMessagesView = document.querySelector(".all-messages-view")
+var affirmationList = document.querySelector("#affirmation-list")
+var mantraList = document.querySelector("#mantra-list")
 
 //Event Listeners
 receiveMessageButton.addEventListener("click", displayMessage);
@@ -68,18 +70,33 @@ function displayMessage() {
 };
 
 function viewAllMessages() {
-  inputSection.classList.add("hidden");
-  messageDisplaySection.classList.add("hidden");
+  homeView.classList.add("hidden");
   viewAllMessagesButton.classList.add("hidden");
   backHomeButton.classList.remove("hidden");
-  viewAllMessagesHeader.innerText = "All Messages by Type"
+  allMessagesView.classList.remove("hidden");
+  viewAllMessagesHeader.innerText = "✨ All Messages by Type ✨";
+  for (var i = 0; i < affirmations.length; i++) {
+    var li = document.createElement("li");
+    li.innerText = affirmations[i];
+    affirmationList.appendChild(li);
+  }
+  for (var i = 0; i < mantras.length; i++) {
+    if(!mantras[i].includes(mantraList)){
+      var li = document.createElement("li");
+      li.innerText = mantras[i];
+      mantraList.appendChild(li);
+    }
+  }
 };
 
 function displayHomePage() {
-  inputSection.classList.remove("hidden");
-  messageDisplaySection.classList.remove("hidden");
+  homeView.classList.remove("hidden");
   viewAllMessagesButton.classList.remove("hidden");
   backHomeButton.classList.add("hidden");
+  allMessagesView.classList.add("hidden");
+  viewAllMessagesHeader.innerText = "✨ Self-Care Center ✨";
+  affirmationList = "";
+  mantraList = "";
 };
 
 // When that button is clicked, the user is taken to a new pages that displays all messages, sorted by message type.
