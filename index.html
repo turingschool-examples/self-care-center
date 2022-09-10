@@ -10,6 +10,7 @@
       <h1>✨Self Care Center✨</h1>
       <h2>Which type of message?</h2>
     </header>
+    <!-- Beginning of home page flex containers -->
     <div class="flexbox-container">
       <div class="flexbox-item-1">
         <div id="flexbox-radio-buttons">
@@ -18,30 +19,35 @@
           <input type="radio" id="mantraLabel">
           <label for="mantraLabel"><em>mantra</em></label> 
         </div>
-        <button class="receiveMessageButton" id="receiveMessageButtonId">Receive message</button>
-        <button id="viewFavoritesButton">View favorites</button>
+        <div class="receiveMessageAndViewFavButtonsContainer">
+          <button class="receiveMessageButton" id="receiveMessageButtonId">Receive message</button>
+          <button id="viewFavoritesButton">View favorites</button>
+        </div>
       </div>
       <div class="flexbox-item-2">
         <img class="meditationImage" src="./assets/meditate.svg">
         <div id="flexbox-item-2-phrase-container">
-          <!-- insert all three buttons here -->
         </div>
-        <!-- <div id="clearButton"></div> -->
       </div>
       <div class="homePageButtonsContainer"> 
         <button class="clearButton hidden">Clear</button>
         <button class="favoriteButton hidden">💛</button>`
       </div>
     </div>
-
+    <!-- End of home page containers -->
+    <!-- Start of favorites page containers  -->
     <div class="containerFavoritesPageView hidden">
       <div class="favoritesArrayView hidden"></div>
       <div class="favoritesButtonContainer">
-      <button class="homeButton hidden">Home</button>
-      <button class="clearButton2 hidden">Clear</button>
+        <button class="homeButton hidden">Home</button>
+        <button class="clearButton2 hidden">Clear</button>
+      </div>
+      <div>
+        <input class="inputField"></input>
+        <button class="addButton">Add</button>
       </div>
     </div>
-  
+    <!-- End of favorites page containers -->
     <script type="text/javascript" src="main.js"></script>
   </body>
 </div>
