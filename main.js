@@ -53,13 +53,11 @@ function getRandomIndex(array) {
 function selectAffirmation() {
   mantrasnRadioButton.checked = false
   mantraOrAffirmation = getRandomIndex(affirmations)
-  return mantraOrAffirmation
 }
 
 function selectMantra() {
   affirmationRadioButton.checked = false
   mantraOrAffirmation = getRandomIndex(mantras)
-  return mantraOrAffirmation
 }
 
 function displayHomePage() {
