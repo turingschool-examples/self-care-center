@@ -68,7 +68,7 @@ function retrievesList(){
       currentList = affirmationList;
 
       if(currentList.length === 0){
-        currentMessage = "Yay! You have fully affirmation meditated"
+        currentMessage = "Great job! You meditated through all the affirmations. \n Affirmations will reset now."
         outputMessage.innerText = currentMessage;
       }
 
@@ -84,7 +84,7 @@ function retrievesList(){
       currentList = mantraList;
 
       if(currentList.length === 0){
-        currentMessage = "Yay! You have fully matra meditated"
+        currentMessage = "Great job! You meditated through all the mantras. \n Mantras will reset now."
         outputMessage.innerText = currentMessage;
       }
 
