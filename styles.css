@@ -63,23 +63,24 @@ h3 {
 
 .image-container {
   background-color: #ffffff;
-    width: 75vw;
-    height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
+  width: 60vw;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .submit-button {
-    color: #ffffff;
-    background-color: #134d71;
-    border-radius: 5px;
-    height: 35px;
-    width: 175px;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 15px;
-    border: none;
+  color: #ffffff;
+  background-color: #134d71;
+  border-radius: 5px;
+  height: 35px;
+  width: 175px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  border: none;
 }
 
 body {
