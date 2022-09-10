@@ -33,7 +33,9 @@ var receiveMessageButton = document.querySelector('#receive-message');
 var hitMeWithThatMessage = document.querySelector('.message');
 var affirmButton = document.querySelector('.affirmMeNow');
 var mantraButton = document.querySelector('.mantraMe');
+var body = document.querySelector('body');
 // var animation = document.querySelector('.loader');
+var fade = document.querySelector('.fade-in-text');
 
 function randomMessage(array) {
   var index = Math.floor(Math.random() * array.length)
@@ -44,49 +46,61 @@ function randomMessage(array) {
 // receiveMessageButton.addEventListener('click', display)
 // function display() {
 //     event.preventDefault();
-//     meditationMan.classList.add('hidden');
-//     hitMeWithThatMessage.classList.remove('hidden')
+//     // meditationMan.classList.add('hidden');
+//     // hitMeWithThatMessage.classList.remove('hidden')
 //     hitMeWithThatMessage.innerHTML = '';
 //     if (affirmButton.checked === true) {hitMeWithThatMessage.innerHTML += affirmMe();
 //     } else if (mantraButton.checked === true) {
 //     hitMeWithThatMessage.innerHTML += mantraMeUp();
 //   }
 // }
+
 receiveMessageButton.addEventListener('click', takeItAway)
 function takeItAway() {
   meditationMan.classList.add('hidden');
-  hitMeWithThatMessage.classList.remove('hidden');
+  // hitMeWithThatMessage.classList.add('fade-in-text');
 }
+function reset() {
+  hitMeWithThatMessage.classList.remove('fade-in-text');
+}
+
 
 receiveMessageButton.addEventListener('click', function(){setTimeout(display, 3000)})
   function display() {
+    hitMeWithThatMessage.classList.add('fade-in-text');
     hitMeWithThatMessage.innerHTML = '';
-    if (affirmButton.checked === true) {hitMeWithThatMessage.innerHTML += affirmMe();
+    if (affirmButton.checked === true) {
+      hitMeWithThatMessage.innerHTML += affirmMe();
     } else if (mantraButton.checked === true) {
-    hitMeWithThatMessage.innerHTML += mantraMeUp();
+      hitMeWithThatMessage.innerHTML += mantraMeUp();
   }
-  // pleaseWait()
 }
+
 
 // function pleaseWait() {
 //   animation.classList.remove('hidden');
-//   meditationMan.classList.add('hidden');
+//   var timer = setInterval(function () {
+//     if 9
+//   }
 // }
 // setTimeout(pleaseWait, 2300)
 
 
 
-
-
-
 affirmButton.addEventListener('click', affirmMe)
   function affirmMe() {
+    if (affirmButton.checked === true) {
+      body.classList.add('color-change-affirm')
+      body.classList.remove('color-change-mantra')
+    }
     return affirmButton.value = randomMessage(affirmations)
   }
 
-
-
 mantraButton.addEventListener('click', mantraMeUp)
   function mantraMeUp() {
+    if (mantraButton.checked === true) {
+      body.classList.add('color-change-mantra')
+      body.classList.remove('color-change-affirm')
+    } 
     return mantraButton.value = randomMessage(mantras);
   }
