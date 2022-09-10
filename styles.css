@@ -27,6 +27,7 @@ html {
 }
 
 .h3 {
+  justify-items: center;
   font-size: 24px;
   margin-top: 70px;
 }
@@ -39,8 +40,8 @@ html {
 }
 
 .white-box-parent {
-  align-content: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
