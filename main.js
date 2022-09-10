@@ -29,14 +29,14 @@ function updateMessageBox(){
   checkMessageType();
   console.log(`You selected ${messageType}`);
 
-  image.className = "meditate-icon hidden";
-
   if(messageType === "affirmation"){
+    image.className = "meditate-icon hidden";
     randomNumber = getRandomInt(affirmationLength);
     currentMessage = affirmationList[randomNumber]
     outputMessage.innerText = currentMessage;
   }
   else if(messageType === "mantra"){
+    image.className = "meditate-icon hidden";
     randomNumber = getRandomInt(affirmationLength);
     currentMessage = mantraList[randomNumber]
     outputMessage.innerText = currentMessage;
