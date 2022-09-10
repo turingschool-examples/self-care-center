@@ -50,6 +50,7 @@ function takeItAway() {
 
 function reset() {
   animation.classList.add('hidden');
+  meditationMan.classList.add('hidden');
 }
 
 function doNotRepeat() {
