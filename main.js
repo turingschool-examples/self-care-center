@@ -32,8 +32,8 @@ var meditationMan = document.querySelector('#logo');
 var receiveMessageButton = document.querySelector('#receive-message');
 var hitMeWithThatMessage = document.querySelector('.message');
 var affirmButton = document.querySelector('.affirmMeNow');
-var mantraButton = document.querySelector('.mantraMe')
-
+var mantraButton = document.querySelector('.mantraMe');
+// var animation = document.querySelector('.loader');
 
 function randomMessage(array) {
   var index = Math.floor(Math.random() * array.length)
@@ -56,16 +56,20 @@ function randomMessage(array) {
 receiveMessageButton.addEventListener('click', function(){setTimeout(display, 3000)})
   function display() {
     meditationMan.classList.add('hidden');
-    hitMeWithThatMessage.classList.remove('hidden')
+    hitMeWithThatMessage.classList.remove('hidden');
     hitMeWithThatMessage.innerHTML = '';
     if (affirmButton.checked === true) {hitMeWithThatMessage.innerHTML += affirmMe();
     } else if (mantraButton.checked === true) {
     hitMeWithThatMessage.innerHTML += mantraMeUp();
   }
+  // pleaseWait()
 }
 
-
-
+// function pleaseWait() {
+//   animation.classList.remove('hidden');
+//   meditationMan.classList.add('hidden');
+// }
+// setTimeout(pleaseWait, 2300)
 
 
 
