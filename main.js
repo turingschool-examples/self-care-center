@@ -31,6 +31,7 @@ var affirmationButton = document.getElementById("affirmation")
 var mantraButton = document.getElementById("mantra")
 var receiveMessageButton = document.querySelector(".submit-button")
 var imageContainer = document.querySelector(".image-container")
+var deleteMessageButton = document.querySelector(".delete")
 
 function randomNumber(type) {
   if(type === affirmations) {
@@ -41,11 +42,26 @@ function randomNumber(type) {
 }
 
 receiveMessageButton.addEventListener("click", generateRandomMessage)
+deleteMessageButton.addEventListener("click", function() {
+  deleteMessage(imageContainer.innerText)
+  imageContainer.innerText = "This message has been removed!"
+})
 
 function generateRandomMessage() {
   if(affirmationButton.checked === true) {
     imageContainer.innerHTML = affirmations[randomNumber(affirmations)]
+    deleteMessageButton.classList.remove("hidden")
   } else if(mantraButton.checked === true) {
     imageContainer.innerHTML = mantras[randomNumber(mantras)]
+    deleteMessageButton.classList.remove("hidden")
+  }
+}
+
+
+function deleteMessage(message) {
+  if(mantras.includes(message)) {
+    mantras.splice(mantras.indexOf(message), 1)
+  } else {
+    affirmations.splice(affirmations.indexOf(message), 1)
   }
 }

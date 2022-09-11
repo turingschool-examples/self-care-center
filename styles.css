@@ -72,7 +72,7 @@ h3 {
   font-family: 'Quicksand', sans-serif;
 }
 
-.submit-button {
+.submit-button, .delete {
   color: #ffffff;
   background-color: #134d71;
   border-radius: 5px;
@@ -81,6 +81,11 @@ h3 {
   font-family: 'Quicksand', sans-serif;
   font-size: 15px;
   border: none;
+}
+
+.delete {
+  height: 30px;
+  width: 120px;
 }
 
 body {
@@ -94,3 +99,7 @@ body {
 label {
   font-family: 'Quicksand', sans-serif;
 }
+
+ .hidden {
+   display: none;
+ }
