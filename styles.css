@@ -48,11 +48,11 @@ html {
   justify-content: center;
 }
 
-.button {
+.control-center {
   background-color: white;
   height: 10%;
-  width: 40%;
-  border-radius: 5px;
+  width: 45%;
+  border-radius: 2.5%;
   display: flex;
   font-size: 1.4rem;
   flex-direction: column;
@@ -71,7 +71,7 @@ html {
   background-color: #134d71;
   color: white;
   border-radius: 5px;
-  width: 35%;
+  width: 28%;
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -86,13 +86,13 @@ html {
 .meditation-man {
   background-color: white;
   height: 15%;
-  width: 50%;
-  border-radius: 5px;
+  width: 65%;
+  border-radius: 2.5%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  align-content: space-around; 
+  align-content: space-around;
 }
 
 .message {
@@ -105,7 +105,7 @@ label {
   font-style: italic;
 }
 
-.affirmation {
+.radio-buttons {
   display: flex;
   width: 90%;
   justify-content: space-evenly;
@@ -126,7 +126,7 @@ label:hover {
 
 .fade-in-text {
   font-family: 'Quicksand', sans-serif;
-  font-size: 16px;
+  font-size: 1.6rem;
   justify-content: center;
   animation: fadeIn 4s;
   animation-iteration-count: infinite;
