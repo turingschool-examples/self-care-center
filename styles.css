@@ -1,8 +1,110 @@
-/* font-family: 'Quicksand', sans-serif;
-COLORS
-light-yellow - #f7e4bf;
-light-blue - #78a7c6;
-dark-blue - #134d71;
-white - #ffffff;
+{
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+h1 {
+    color: white;    
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(20,77,113);
+  background: linear-gradient(180deg, rgba(20,77,113,1) 16%, rgba(120,167,198,1) 57%, rgba(247,228,191,1) 100%);
+}
+
+.affirmation-container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mantra-spacer {
+  margin-left: 20px;
+}
+
+.mantra-container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper-btns {
+  display: flex;
+  flex-direction: row;
+  width: 58%;
+  align-content: space-between;
+}
+
+.wrapper-input-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.wrapper-tags {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.radio-inputs {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.wrapper-inputs {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.message-space {
+  margin: 1em;
+}
+
+#view-favorite-button {
+background-color: #134d71;
+color: #ffffff;
+font-size: 0.9em;
+font-weight: lighter;
+border-radius: 0.3em;
+width: 10.5em;
+height: 1.5em;
+border-width: thin;
+}
+
+.wrapper-img {
+  align-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+#big-bell {
+  width: 10%;
+  align-items: center;
+  justify-items: center;
+}
+
+h2 {
+    margin-left: 34px;
+    color: white;
+}
+
+/*COLORS
+light-yellow - #f7e4bf; --> gradient/background
+light-blue - #78a7c6; --> gradient/backround
+dark-blue - #134d71; --> button // g/b
+white - #ffffff; --> font
 black - #000000;
-*/
