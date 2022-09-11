@@ -5,7 +5,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-  
+
+    <section class='header'>
+      <h1>&#10024 Self Care Center &#10024</h1>
+    </section>
+
+    <section class='question'>
+      <h4>Which type of message?</h4>
+    </section>
+
+    <section class='form-box'>
+        <section class='button-inputs'>
+          <section class='affirmation-radio'>
+            <input type="radio" id="affirmation"
+            name="message-type" value="affirmation">affirmation
+          </input>
+          </section>
+          <section class='mantra-radio'>
+            <input type="radio" id="mantra"
+            name="message-type" value="mantra">mantra
+          </input>
+          </section>
+          <section class='recieve-button'>
+            <button class="button" id="recieve">Receive Message</button>
+          </section>
+        </section>
+      </form>
+    </section>
+
+  <section class="view-message">
+    <img id="bellIcon" src="./assets/meditate.svg">
+      <section class="paragraph">
+        <p class="message hidden">
+          The quote goes here.
+        </p>
+      </section>
+  </section>
+
+  <section class='clear-button'>
+    <button class="button hidden" id="clear">Clear</button>
+  </section>
+
+  <section class="loader hidden"></section>
+
+
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
