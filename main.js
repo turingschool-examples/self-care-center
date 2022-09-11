@@ -47,6 +47,7 @@ var viewAllMessagesHeader = document.querySelector(".title");
 var allMessagesView = document.querySelector(".all-messages-view")
 var affirmationList = document.querySelector("#affirmation-list")
 var mantraList = document.querySelector("#mantra-list")
+var dropdownMenu = document.querySelector("#update-message-options")
 
 //Event Listeners
 receiveMessageButton.addEventListener("click", displayMessage);
@@ -74,17 +75,18 @@ function viewAllMessages() {
   viewAllMessagesButton.classList.add("hidden");
   backHomeButton.classList.remove("hidden");
   allMessagesView.classList.remove("hidden");
+  dropdownMenu.classList.remove("hidden");
   viewAllMessagesHeader.innerText = "✨ All Messages by Type ✨";
   for (var i = 0; i < affirmations.length; i++) {
-    var li = document.createElement("li");
-    li.innerText = affirmations[i];
-    affirmationList.appendChild(li);
+    var list = document.createElement("li");
+    list.innerText = affirmations[i];
+    affirmationList.appendChild(list);
   }
   for (var i = 0; i < mantras.length; i++) {
     if(!mantras[i].includes(mantraList)){
-      var li = document.createElement("li");
-      li.innerText = mantras[i];
-      mantraList.appendChild(li);
+      var list = document.createElement("li");
+      list.innerText = mantras[i];
+      mantraList.appendChild(list);
     }
   }
 };
@@ -94,10 +96,8 @@ function displayHomePage() {
   viewAllMessagesButton.classList.remove("hidden");
   backHomeButton.classList.add("hidden");
   allMessagesView.classList.add("hidden");
+  dropdownMenu.classList.add("hidden");
   viewAllMessagesHeader.innerText = "✨ Self-Care Center ✨";
   affirmationList = "";
   mantraList = "";
 };
-
-// When that button is clicked, the user is taken to a new pages that displays all messages, sorted by message type.
-// On this page, user should have the ability to add/edit/delete messages.

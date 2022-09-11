@@ -3,10 +3,14 @@
 } */
 
 html, body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
   height: 100%;
+  background-attachment: fixed;
   color: #ffffff;
-  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
   font-family: 'Quicksand', sans-serif;
   text-align: center;
 }
@@ -14,6 +18,11 @@ html, body {
 h1 {
   padding-top: 40px;
   margin: 0;
+}
+
+li {
+  padding-top: 1.5px;
+  padding-bottom: 1.5px;
 }
 
 .message-type {
@@ -34,6 +43,7 @@ h1 {
   margin-left: 425px;
   margin-right: 425px;
   height: 110px;
+  min-width: 400px;
 }
 
 .selection {
@@ -88,26 +98,48 @@ img {
 #back-to-home {
   padding-top: 6px;
   padding-bottom: 6px;
-  margin-top: 60px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .all-messages-view {
   display:flex;
   flex-direction: row;
   color: black;
-  justify-content: space-around;
+  justify-content: center;
   border: 2px solid none;
   background-color: white;
   margin-top: 20px;
-  margin-left: 90px;
-  margin-right: 90px;
+  margin-left: 100px;
+  margin-right: 100px;
   border-radius: 12px;
-  height: 500px;
+  height: 550px;
+}
+
+h2 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.all-affirmations, .all-mantras {
+  width: 50%;
 }
 
 ul {
   list-style-type: none;
   text-align: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+ }
+
+ select {
+   font-size: 18px;
+   color: #ffffff;
+   border: 2px solid none;
+   background: #b4b4b4;
+   border-radius: 10px;
+   padding: 4px 35px 4px 35px;
+   margin: 20px 10px;
  }
 
 .hidden {
