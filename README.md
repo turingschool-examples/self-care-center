@@ -1,51 +1,50 @@
-# Self Care Center
-## Overview
+# Self-Care Center
+
+### Abstract:
 How can I care for myself? One way is with affirmations and mantras!
 Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are repetive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
+Mantras are repetitive phrases that are repeated again and again during mindfulness practices.
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+Using JavaScript in conjunction with CSS and HTML, I designed a website that allows users to choose to receive a randomly generated affirmation or mantra. In addition, users can navigate to a View All Messages page where they can view and customize the list of randomly generated messages.
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html). 
+### Installation Instructions:
+- Clone this repo to your local computer
+- Open in your text editor
+- Read the README.md
+- In the terminal run the command open index.html for initial deployment and interaction with app
 
-## Learning Goals
+### Preview of App:
+You can visit the live site [here](https://jmyacobn.github.io/self-care-center/). See preview below.
+[insert image]
 
+### Context:
+This project was completed during our third week at Turing. It was our second solo project, and we were given four days to complete it. The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html).
+
+### Contributors:
+- Jennifer Yacoubian ([GitHub link](https://github.com/jmyacobn))
+
+### Learning Goals:
 - Gain experience building an application that utilizes HTML, CSS and JavaScript
 - Write HTML and CSS to match a provided comp
 - Understand how to listen to and respond to user events
 - Individualize your programming skill set
 
-## Setup
+###Technology Used
+- Atom
+- HTML
+- CSS
+- Chrome Dev Tools
+- JavaScript
+- Github
 
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
+### Wins:
+- 
 
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
+### Challenges:
 
-# Self-Care Center 
 
-### Abstract:
-[//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
-
-### Installation Instructions:
-[//]: <> (What steps does a person have to take to get your app cloned down and running?)
-
-### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
-
-### Context:
-[//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
-
-### Contributors:
-[//]: <> (Who worked on this application? Link to their GitHubs.)
-
-### Learning Goals:
-[//]: <> (What were the learning goals of this project? What tech did you work with?)
-
-### Wins + Challenges:
-[//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+### Future Features:
+- Add functionality to Edit buttons
+- Add a form for users to add their own messages on the View All Messages page
+- Create local storage
+- Allow users to add messages to a favorites list
