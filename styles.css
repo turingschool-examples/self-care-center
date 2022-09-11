@@ -6,3 +6,94 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+html {
+    height: 100%;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background: linear-gradient( #134d71, #78a7c6, #f7e4bf);
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  color: white;
+}
+
+.page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+#self-care-center {
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+#which-type-of-message {
+  margin-bottom: 10px;
+}
+
+section {
+  margin-top: 10px;
+}
+
+.radio-buttons-container {
+  font-style: italic;
+  color: black;
+  background-color: white;
+  border-radius: 6pt;
+  height: 100px;
+  width: 500px;
+  display: inline-block;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 10px;
+  margin-left: 75px;
+  margin-right: 75px;
+  margin-top: 25px;
+}
+
+label {
+  margin-left: -125px;
+  font-size: 12pt;
+}
+
+#recieve-message-button {
+  background-color: #134d71;
+  border: none;
+  height: 25px;
+  width: 150px;
+  border-radius: 2pt;
+  color: white;
+  margin-top: 10px;
+  margin-left: 175px;
+}
+
+#meditate-container {
+  background-color: white;
+  border-radius: 6pt;
+  margin-top: 100px;
+  height: 150px;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+p {
+  margin: 10px;
+  color:black;
+  font-size: 18pt;
+}
