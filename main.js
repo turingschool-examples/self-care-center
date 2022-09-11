@@ -44,15 +44,14 @@ var viewAllMessagesButton = document.querySelector("#view-all-messages");
 var homeView = document.querySelector(".home-view")
 var backHomeButton = document.querySelector("#back-to-home");
 var viewAllMessagesHeader = document.querySelector(".title");
-var allMessagesView = document.querySelector(".all-messages-view")
+var allMessagesView = document.querySelector(".all-messages-view");
 var affirmationList = document.querySelector("#affirmation-list")
-var mantraList = document.querySelector("#mantra-list")
-var dropdownMenu = document.querySelector("#update-message-options")
+var mantraList = document.querySelector("#mantra-list");
 
 //Event Listeners
 receiveMessageButton.addEventListener("click", displayMessage);
 viewAllMessagesButton.addEventListener("click", viewAllMessages);
-backHomeButton.addEventListener("click", displayHomePage)
+backHomeButton.addEventListener("click", displayHomePage);
 
 //Functions and Event Handlers
 function getRandomIndex(array) {
@@ -62,12 +61,13 @@ function getRandomIndex(array) {
 function displayMessage() {
   meditateImage.classList.add("hidden");
   randomMessage.classList.remove("hidden");
+
   var userInput = document.querySelector('input[name="selection"]:checked').value;
     if (userInput === "mantra") {
       randomMessage.innerText = randomMantra;
     } else if (userInput === "affirmation") {
       randomMessage.innerText = randomAffirmation;
-    }
+    };
 };
 
 function viewAllMessages() {
@@ -75,20 +75,51 @@ function viewAllMessages() {
   viewAllMessagesButton.classList.add("hidden");
   backHomeButton.classList.remove("hidden");
   allMessagesView.classList.remove("hidden");
-  dropdownMenu.classList.remove("hidden");
+
   viewAllMessagesHeader.innerText = "✨ All Messages by Type ✨";
+  affirmationList.innerHTML = "";
+  mantraList.innerHTML = "";
+
   for (var i = 0; i < affirmations.length; i++) {
     var list = document.createElement("li");
+    var deleteButton = document.createElement("button");
+    var editButton = document.createElement("button");
+
     list.innerText = affirmations[i];
+    deleteButton.innerText = "Delete";
+    editButton.innerText = "Edit";
+
+    deleteButton.className = "delete-button";
+    editButton.className = "edit-button";
+    deleteButton.id = affirmations[i];
+
     affirmationList.appendChild(list);
-  }
+    affirmationList.appendChild(editButton);
+    affirmationList.appendChild(deleteButton);
+  };
+
   for (var i = 0; i < mantras.length; i++) {
-    if(!mantras[i].includes(mantraList)){
       var list = document.createElement("li");
+      var deleteButton = document.createElement("button");
+      var editButton = document.createElement("button");
+
+      deleteButton.className = "delete-button";
+      editButton.className = "edit-button";
+      deleteButton.id = mantras[i];
+
       list.innerText = mantras[i];
+      deleteButton.innerText = "Delete";
+      editButton.innerText = "Edit";
+
       mantraList.appendChild(list);
-    }
-  }
+      mantraList.appendChild(editButton);
+      mantraList.appendChild(deleteButton);
+    };
+
+    var deleteButton = document.querySelectorAll(".delete-button")
+    deleteButton.forEach(function (item) {
+      item.addEventListener("click", deleteMessage)
+    });
 };
 
 function displayHomePage() {
@@ -96,8 +127,22 @@ function displayHomePage() {
   viewAllMessagesButton.classList.remove("hidden");
   backHomeButton.classList.add("hidden");
   allMessagesView.classList.add("hidden");
-  dropdownMenu.classList.add("hidden");
+
   viewAllMessagesHeader.innerText = "✨ Self-Care Center ✨";
-  affirmationList = "";
-  mantraList = "";
+  affirmationList.innerHTML = "";
+  mantraList.innerHTML = "";
+};
+
+function deleteMessage(event) {
+    for (var i = 0; i < affirmations.length; i++) {
+      if (affirmations[i] === event.target.id) {
+        affirmations.splice(i, 1);
+      };
+    };
+    for (var i = 0; i < mantras.length; i++) {
+      if (mantras[i] === event.target.id) {
+        mantras.splice(i, 1);
+      };
+    };
+  viewAllMessages();
 };

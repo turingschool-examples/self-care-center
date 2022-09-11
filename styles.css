@@ -7,10 +7,12 @@ html, body {
   flex-direction: column;
   align-items: center;
   margin: 0;
-  height: 100%;
+  min-height: 100vh;
+  background-size: cover;
   background-attachment: fixed;
   color: #ffffff;
   background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  background-repeat: no-repeat;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
 }
@@ -67,6 +69,7 @@ button {
   border-radius: 10px;
   padding: 4px 35px 4px 35px;
   margin-top: 20px;
+  display: inline-block;
 }
 
 .message-display{
@@ -113,7 +116,7 @@ img {
   margin-left: 100px;
   margin-right: 100px;
   border-radius: 12px;
-  height: 550px;
+  height: fit-content;
 }
 
 h2 {
@@ -132,14 +135,31 @@ ul {
   margin-bottom: 5px;
  }
 
+ li {
+  margin-top: 10px;
+ }
+
  select {
    font-size: 18px;
-   color: #ffffff;
+   color: #000000;
    border: 2px solid none;
    background: #b4b4b4;
    border-radius: 10px;
    padding: 4px 35px 4px 35px;
    margin: 20px 10px;
+ }
+
+ .delete-button {
+   margin: 0;
+   font-size: 12px;
+   background: #F1959B;
+ }
+
+ .edit-button {
+   margin: 0;
+   font-size: 12px;
+   background: #CCCCCC;
+   margin-right: 10px;
  }
 
 .hidden {
