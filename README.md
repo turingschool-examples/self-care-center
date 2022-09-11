@@ -14,7 +14,8 @@ Step 2: Clone the repository tolocal machine using git clone and the url
 Step 3: `cd` into the project using the terminal
 Step 4: open it up on a browser by typing 'index.html' into the terminal
 ### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
+[//]: <> 
+![Screen Shot 2022-09-10 at 6 52 39 PM](https://user-images.githubusercontent.com/108101979/189506968-30eff649-b377-4412-907b-b0c66f3ff480.png)
 
 ### Context:
 [//]: <>
