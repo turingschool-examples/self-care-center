@@ -20,9 +20,11 @@ var affirmations = [
 ];
 
 function showMessage() {
-    affirmationButton = document.querySelector("#Affirmation")
+    affirmationButton = document.querySelector("#Affirmation");
+    messageArea = document.querySelector("#message-area");
     if(affirmationButton.checked == true) {
         var randomAffirmation = affirmations [Math.floor(Math.random()*affirmations.length)];
+        messageArea.textContent=randomAffirmation;
         console.log(randomAffirmation)
     }
 }
