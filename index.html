@@ -6,25 +6,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1 class="title">✨ Self-Care Center ✨</h1>
-    <p class="message-type">Which type of message?</p>
-    <section class="input">
-      <form class="selection"/>
-        <div>
-          <input type="radio" id="affirmation" name="selection" value="affirmation"/>
-          <label for="affirmation">affirmation</label>
-        </div>
-        <div>
-          <input type="radio" id="mantra" name="selection" value="mantra"/>
+    <header class="page-header" id="page-header">
+      <h1 class="title">✨ Self-Care Center ✨</h1>
+    </header>
+    <section class="home-view">
+      <p class="message-type" id="message-type">Which type of message?</p>
+      <section class="input" id="input">
+        <form class="selection"/>
+          <div>
+            <input type="radio" id="affirmation" name="selection" value="affirmation"/>
+            <label for="affirmation">affirmation</label>
+          </div>
+          <div>
+            <input type="radio" id="mantra" name="selection" value="mantra"/>
             <label for="mantra">mantra</label>
-        </div>
-      </form>
-      <button id="get-message">Recieve Message</button>
+          </div>
+        </form>
+        <button id="get-message">Recieve Message</button>
+      </section>
+      <section class="message-display" id="message-display">
+        <img id="meditate-img" src="./assets/meditate.svg" alt="picture of person meditating"/>
+        <p class="random-message hidden" id="random-message">Choose message type above to receive message!</p>
+      </section>
     </section>
-    <section class="message-display"/>
-      <img id="meditate-img" src="./assets/meditate.svg" alt="picture of person meditating" />
-      <p class="random-message hidden">Insert random message here!</p>
+    <section class="all-messages-view hidden">
+      <section class="all-affirmations">
+        <h2>Affirmations</h2>
+        <ul id="affirmation-list"></ul>
+      </section>
+      <section class="all-mantras">
+        <h2>Mantras</h2>
+        <ul id="mantra-list"></ul>
+      </section>
     </section>
+      <button id="view-all-messages">View All Messages</button>
+      <button class="back-to-home hidden" id="back-to-home">Back to Home Page</button>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
