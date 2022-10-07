@@ -36,7 +36,8 @@ var animation = document.querySelector('.loader');
 var fade = document.querySelector('.fade-in-text');
 var clearButton = document.querySelector('#clear');
 var clearForm = document.querySelector('#clearIt');
-var addButton = document.queryCommandIndeterm('#add-message');
+var addButton = document.querySelector('#add-message');
+var inputForm = document.querySelector('#create-message');
 
 function randomMessage(array) {
   var index = Math.floor(Math.random() * array.length)
@@ -125,10 +126,11 @@ function changeItBack() {
 
 addButton.addEventListener('click', createYourOwnMessage);
 function createYourOwnMessage() {
-
+  inputForm.classList.remove('hidden');
+  // document.getElementById('create-message').submit();
 }
 
 //goal: when add message button is clicked, input form pops up and user can add message
 //this is dom interacts with data model - add to empty array
-//create global variable for created messages
-//update with 
+//update with innerHTML 
+//push created messages into global variable createdMessages
