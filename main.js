@@ -59,10 +59,14 @@ function doNotRepeat() {
 }
 
 receiveMessageButton.addEventListener('click', () => {
-  takeItAway();
-  {setTimeout(display, 4000)}
-  {setTimeout(clearIt, 4000)}
-  doNotRepeat();
+  if (affirmButton.checked || mantraButton.checked) 
+    {takeItAway();
+    {setTimeout(display, 4000)}
+    {setTimeout(clearIt, 4000)}
+    doNotRepeat();} 
+  else {
+    alert('must choose first!');
+    } 
 });
 
 function display() {
@@ -116,9 +120,4 @@ function changeItBack() {
   mantraButton.checked = false;
   body.classList.remove('color-change-affirm');
   body.classList.remove('color-change-mantra');
-}
-function giveErrorMessage() {
-  if(!affirmButton.checked || !mantraButton.checked) {
-    alert('must choose first!')
-  }
 }
