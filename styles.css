@@ -62,12 +62,13 @@ html {
 }
 
 .receive {
-  width: 100%;
+  width: 90%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-#receive-message {
+#receive-message, #add-message {
   background-color: #134d71;
   color: white;
   border-radius: 5px;
