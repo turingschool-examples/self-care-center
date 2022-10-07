@@ -97,8 +97,13 @@ function clearIt() {
   clearForm.classList.remove('hidden');
 }
 
+window.addEventListener('load', addHiddenClass);
 function addHiddenClass() {
   clearForm.classList.add('hidden');
 }
 
-window.addEventListener('load', addHiddenClass);
+clearButton.addEventListener('click', deleteMessage);
+function deleteMessage() {
+  meditationMan.classList.add('hidden');
+  hitMeWithThatMessage.innerHTML = '';
+}
