@@ -106,4 +106,19 @@ clearButton.addEventListener('click', deleteMessage);
 function deleteMessage() {
   meditationMan.classList.add('hidden');
   hitMeWithThatMessage.innerHTML = '';
+  meditationMan.classList.remove('hidden');
+  addHiddenClass();
+  changeItBack();
+}
+
+function changeItBack() {
+  affirmButton.checked = false;
+  mantraButton.checked = false;
+  body.classList.remove('color-change-affirm');
+  body.classList.remove('color-change-mantra');
+}
+function giveErrorMessage() {
+  if(!affirmButton.checked || !mantraButton.checked) {
+    alert('must choose first!')
+  }
 }
