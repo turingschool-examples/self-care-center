@@ -12,8 +12,7 @@ var mantras = ['Take it one day at a time',
 'This too shall pass',
 'Mid mods got nothing on you',
 'A tired brain does not code well - sleep is important',
-'Make time for you']
-
+'Make time for you'];
 var affirmations = [
 'You will make it through Turing in one piece',
 'You are not supposed to know everything',
@@ -24,7 +23,8 @@ var affirmations = [
 'You are smart enough for this',
 'You can handle this',
 'Take a break, walk away, clear your head - you will get it',
-'Do not let yesterday take up too much of today']
+'Do not let yesterday take up too much of today'];
+var createdMessages = [];
 
 var meditationMan = document.querySelector('#logo');
 var receiveMessageButton = document.querySelector('#receive-message');
@@ -36,6 +36,7 @@ var animation = document.querySelector('.loader');
 var fade = document.querySelector('.fade-in-text');
 var clearButton = document.querySelector('#clear');
 var clearForm = document.querySelector('#clearIt');
+var addButton = document.queryCommandIndeterm('#add-message');
 
 function randomMessage(array) {
   var index = Math.floor(Math.random() * array.length)
@@ -121,3 +122,13 @@ function changeItBack() {
   body.classList.remove('color-change-affirm');
   body.classList.remove('color-change-mantra');
 }
+
+addButton.addEventListener('click', createYourOwnMessage);
+function createYourOwnMessage() {
+
+}
+
+//goal: when add message button is clicked, input form pops up and user can add message
+//this is dom interacts with data model - add to empty array
+//create global variable for created messages
+//update with 
