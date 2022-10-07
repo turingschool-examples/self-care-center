@@ -79,8 +79,11 @@ html {
   cursor: pointer;
 }
 
-.space-between {
-  height: 15%;
+#clear {
+  display: flex;
+  margin: 36% 0;
+  width: 100%;
+  flex-direction: row;
 }
 
 .meditation-man {
