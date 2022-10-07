@@ -83,7 +83,14 @@ html {
   display: flex;
   margin: 36% 0;
   width: 100%;
-  flex-direction: row;
+  background-color: #134d71;
+  color: white;
+  border-radius: 5px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.clear-button {
+  height: 20%;
 }
 
 .meditation-man {
