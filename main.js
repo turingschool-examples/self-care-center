@@ -34,6 +34,8 @@ var mantraButton = document.querySelector('.mantraMe');
 var body = document.querySelector('body');
 var animation = document.querySelector('.loader');
 var fade = document.querySelector('.fade-in-text');
+var clearButton = document.querySelector('#clear');
+var clearForm = document.querySelector('#clearIt');
 
 function randomMessage(array) {
   var index = Math.floor(Math.random() * array.length)
@@ -59,7 +61,8 @@ function doNotRepeat() {
 receiveMessageButton.addEventListener('click', () => {
   takeItAway();
   {setTimeout(display, 4000)}
-  doNotRepeat()
+  {setTimeout(clearIt, 4000)}
+  doNotRepeat();
 });
 
 function display() {
@@ -89,3 +92,13 @@ mantraButton.addEventListener('click', mantraMeUp)
     }
     return mantraButton.value = randomMessage(mantras);
   }
+
+function clearIt() {
+  clearForm.classList.remove('hidden');
+}
+
+function addHiddenClass() {
+  clearForm.classList.add('hidden');
+}
+
+window.addEventListener('load', addHiddenClass);
