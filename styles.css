@@ -79,8 +79,18 @@ html {
   cursor: pointer;
 }
 
-.space-between {
-  height: 15%;
+#clear {
+  display: flex;
+  margin: 36% 0;
+  width: 100%;
+  background-color: #134d71;
+  color: white;
+  border-radius: 5px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.clear-button {
+  height: 20%;
 }
 
 .meditation-man {

@@ -34,6 +34,8 @@ var mantraButton = document.querySelector('.mantraMe');
 var body = document.querySelector('body');
 var animation = document.querySelector('.loader');
 var fade = document.querySelector('.fade-in-text');
+var clearButton = document.querySelector('#clear');
+var clearForm = document.querySelector('#clearIt');
 
 function randomMessage(array) {
   var index = Math.floor(Math.random() * array.length)
@@ -57,9 +59,14 @@ function doNotRepeat() {
 }
 
 receiveMessageButton.addEventListener('click', () => {
-  takeItAway();
-  {setTimeout(display, 4000)}
-  doNotRepeat()
+  if (affirmButton.checked || mantraButton.checked) 
+    {takeItAway();
+    {setTimeout(display, 4000)}
+    {setTimeout(clearIt, 4000)}
+    doNotRepeat();} 
+  else {
+    alert('must choose first!');
+    } 
 });
 
 function display() {
@@ -89,3 +96,28 @@ mantraButton.addEventListener('click', mantraMeUp)
     }
     return mantraButton.value = randomMessage(mantras);
   }
+
+function clearIt() {
+  clearForm.classList.remove('hidden');
+}
+
+window.addEventListener('load', addHiddenClass);
+function addHiddenClass() {
+  clearForm.classList.add('hidden');
+}
+
+clearButton.addEventListener('click', deleteMessage);
+function deleteMessage() {
+  meditationMan.classList.add('hidden');
+  hitMeWithThatMessage.innerHTML = '';
+  meditationMan.classList.remove('hidden');
+  addHiddenClass();
+  changeItBack();
+}
+
+function changeItBack() {
+  affirmButton.checked = false;
+  mantraButton.checked = false;
+  body.classList.remove('color-change-affirm');
+  body.classList.remove('color-change-mantra');
+}
