@@ -1,8 +1,170 @@
-/* font-family: 'Quicksand', sans-serif;
-COLORS
-light-yellow - #f7e4bf;
-light-blue - #78a7c6;
-dark-blue - #134d71;
-white - #ffffff;
-black - #000000;
-*/
+html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 62.5%;
+}
+
+.body {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.color-change-affirm {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(0deg, #22c1c3 0%, #fdbb2d 100%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.color-change-mantra {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  color: white;
+  height: 15%;
+  padding: 2% 0%;
+}
+
+.sub-title {
+  font-size: 2.8rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.control-center {
+  background-color: white;
+  height: 10%;
+  width: 45%;
+  border-radius: 2.5%;
+  display: flex;
+  font-size: 1.4rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+}
+
+.receive {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#receive-message, #add-message, #submit {
+  background-color: #134d71;
+  color: white;
+  border-radius: 5px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#receive-message:hover {
+  cursor: pointer;
+}
+
+#clear {
+  display: flex;
+  margin: 36% 0;
+  width: 100%;
+  background-color: #134d71;
+  color: white;
+  border-radius: 5px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.clear-button {
+  height: 20%;
+}
+
+.meditation-man {
+  background-color: white;
+  height: 15%;
+  width: 65%;
+  border-radius: 2.5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-around;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  font-family: 'Quicksand', sans-serif;
+  font-style: italic;
+}
+
+.radio-buttons {
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+}
+
+label:hover {
+  color: salmon;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#logo {
+  height: 50%;
+}
+
+.fade-in-text {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.6rem;
+  justify-content: center;
+  animation: fadeIn 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  25% {opacity: .25;}
+  50% {opacity: .5;}
+  75% {opacity: .75;}
+  100% {opacity: 1;}
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid salmon;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); opacity: 1;}
+  50% { transform: rotate(180deg); opacity: .5;}
+  100% { transform: rotate(360deg); opacity: 0;}
+}
+
+#hide-me {
+  animation: spin 4s forwards;
+}
