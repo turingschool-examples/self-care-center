@@ -10,27 +10,20 @@ The spec for this project can be found [here](https://frontend.turing.io/project
 
 ## Learning Goals
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
 
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
 
 ______________________________________________________  
 # README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
 
 # Self-Care Center 
 
 ### Abstract:
 [//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
+build an app that helps users remind themselves of their inherent value!
+How can I care for myself? One way is with affirmations and mantras!
+Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
+Mantras are repetive phrases that are repeated again and again during mindfulness practices. 
+
 
 ### Installation Instructions:
 [//]: <> (What steps does a person have to take to get your app cloned down and running?)
@@ -46,6 +39,11 @@ ______________________________________________________
 
 ### Learning Goals:
 [//]: <> (What were the learning goals of this project? What tech did you work with?)
+
+- Gain experience building an application that utilizes HTML, CSS and JavaScript
+- Write HTML and CSS to match a provided comp
+- Understand how to listen to and respond to user events
+- Individualize your programming skill set
 
 ### Wins + Challenges:
 [//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
