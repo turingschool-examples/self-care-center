@@ -7,7 +7,56 @@ white - #ffffff;
 black - #000000;
 */
 
-html, body {
+
+html {
   height: 100%;
   background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+}
+
+.hidden {
+    display: none;
+}
+
+.header {
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+  /* margin: 200px; */
+}
+
+.type-of-box {
+    display: block;
+    text-align: center;
+    height: 100px;
+    width: 33%;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+
+form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submit {
+    border: 0;
+    color: #ffffff;
+    background-color: #134d71;
+}
+
+.display-box {
+    display: block;
+    text-align: center;
+    height: 160px;
+    width: 44%;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.meditation-icon {
+    margin: 20px;
+    width: 70%;
+    height: 70%;
 }
