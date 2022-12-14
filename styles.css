@@ -21,7 +21,7 @@ black - #000000;
     color: black
 }
 
-.first-button {
+/* .first-button {
     text-align:center;
  }
 
@@ -32,4 +32,11 @@ black - #000000;
 
  .message-button {
     text-align: center;
+ } */
+
+ #dude {
+    height: 400px;
+    width: 300px;
+
+    
  }
