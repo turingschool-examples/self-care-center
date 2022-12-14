@@ -14,35 +14,47 @@ black - #000000;
 
 body {
     background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
-    height: 670px;
+    height: 760px;
 }
 
 h1 {
     color: white;
     font-weight: bold;
-    padding: 1em;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 h2 {
     color: white;
     font-weight: bold;
-    padding: 2em;
+    padding-top: 50px;
+    padding-bottom: 0.5px;
 }
 
-div {
+.box {
     background-color: white;
-    width: 35%;
-    border: 5em;
-    padding-top: 5em;
-    margin-left: 25%;
+    width: 600px;
+    padding-top: 15px;
+    margin: auto;
+    border-radius: 5px;
 }
 
-.affirmation-button {
-    display:block;
-    height: 15px;
-    width: 10px;
-    border-radius: 50%;
-    border: 1px solid black;
-    background: white;
+.receive-message {
+    width: 150px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+svg {
+    width: 15%;
+    height: 20%;
+}
+
+.message-box {
+    background-color: white;
+    width: 600px;
+    padding-top: 40px;
+    margin: auto;
+    border-radius: 5px;
 }
 
