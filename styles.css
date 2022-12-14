@@ -4,5 +4,63 @@ light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
-black - #000000;
-*/
+black - #000000; */
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+
+body, html {
+    background: content-box linear-gradient( #134d71, #78a7c6, #f7e4bf);
+    background-size: cover;
+    height: 100%;
+}
+
+.titlefont {
+    color: #ffffff;
+    margin: auto;
+}
+
+.radiodiv {
+    background-color: #ffffff;
+    width: 30%;
+    block-size: 50px;
+    border-radius: 10px;
+    margin: auto;
+    padding: 20px;
+}
+
+.radiofont {
+    font-style: italic;
+}
+
+.button {
+    background-color:#134d71;
+    border: none;
+    padding: 4px 30px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px
+}
+
+.messagediv {
+    background-color: #ffffff;
+    width: 60%;
+    block-size: 125px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.logo {
+    margin: auto;
+    height: 70px;
+    width: 70px;
+}
+
+
+/* for when i figure out how to make a box: border-radius: 30px;
+font-style: italic;
+ */
+
+
