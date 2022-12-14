@@ -20,15 +20,14 @@ body {
 h1 {
     color: white;
     font-weight: bold;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    margin-top: 2em;
+    margin-bottom: 3em;
 }
 
 h2 {
     color: white;
     font-weight: bold;
-    padding-top: 50px;
-    padding-bottom: 0.5px;
+    margin-bottom: 0.5em;
 }
 
 .box {
@@ -36,10 +35,18 @@ h2 {
     width: 600px;
     padding-top: 15px;
     margin: auto;
+    margin-bottom: 8em;
     border-radius: 5px;
 }
 
+.affirmation-option {
+    margin-right: 10em;
+}
+
 .receive-message {
+    color: white;
+    background-color: #134d71; 
+    border-radius: 5px;
     width: 150px;
     margin-top: 15px;
     margin-bottom: 10px;
