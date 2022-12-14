@@ -5,18 +5,20 @@
 }
 
 body {
-    margin: 0;
+    /* margin: 0; */
     background-image: linear-gradient(#134d71, #f7e4bf);
 }
 
 /* ~~~~~~~~~~~~~~~~~text box 1 ~~~~~~~~~~~~~~~~~*/
 
 .header {
+    margin-top: 50px;
     text-align: center;
     color: #ffffff
 }
 
-h3 {
+h2 {
+    margin-top: 80px;
     text-align: center;
     color: #ffffff
     
@@ -24,26 +26,40 @@ h3 {
 
 .textBox1 {
     margin: auto;
-   height: 150px;
-   width: 500px;
+   height: 90px;
+   width: 550px;
    background: #ffffff;
-   border-radius: 25px;
+   border-radius: 10px;
+   margin-bottom: 75px;
 }
 
+
+button {
+    background-color: #134d71;
+    color:#ffffff;
+}
+
+
 .textBox2 {
-    /* display: inline-block; */
+    display: flex;
     margin: auto;
-   height: 150px;
+    margin-bottom: 200px;
+   height: 130px;
+   width: 800px;
    background: #ffffff;
-   border-radius: 25px;
+   border-radius: 10px;
+}
+
+input {
+    display: flex;
+    margin: auto;
 }
 
 img {
 
-height: 20vh;
+height: 80px;
 margin: auto;
-/* position: relative; */
-width: 10vw;
+width: 80px;
 }
 
 
