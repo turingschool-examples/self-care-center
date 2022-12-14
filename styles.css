@@ -14,13 +14,13 @@ body {
     background-image: linear-gradient(#134d71, #f7e4bf);
 }
 
-/* ~~~~~~~~~~~~~~~~~text box 1 ~~~~~~~~~~~~~~~~~*/
-
 .header {
     margin-top: 50px;
     text-align: center;
     color: #ffffff
 }
+
+/* ~~~~~~~~~~~~~~~~~text box 1 ~~~~~~~~~~~~~~~~~*/
 
 h2 {
     margin-top: 80px;
@@ -36,17 +36,6 @@ h2 {
    background: #ffffff;
    border-radius: 10px;
    margin-bottom: 75px;
-}
-
-
-.textBox2 {
-    display: flex;
-    margin: auto;
-    margin-bottom: 200px;
-    height: 130px;
-    width: 800px;
-    background: #ffffff;
-    border-radius: 10px;
 }
 
 form {
@@ -90,13 +79,23 @@ button {
     justify-content: space-around;
 }
 
+/* ~~~~~~~~~~~~~~~~~text box 2 ~~~~~~~~~~~~~~~~~*/
+
+.textBox2 {
+    display: flex;
+    margin: auto;
+    margin-bottom: 200px;
+    height: 130px;
+    width: 800px;
+    background: #ffffff;
+    border-radius: 10px;
+}
 
 .textBox2 > img {
     height: 80px;
     margin: auto;
     width: 80px;
 }
-
 
 
 /* font-family: 'Quicksand', sans-serif;
