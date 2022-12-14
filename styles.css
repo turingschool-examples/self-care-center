@@ -48,12 +48,8 @@ h2 {
 .buttons {
   display: flex;
   height: 40px;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-}
-
-#mantra {
-  margin-left: 180px;
 }
 
 .submit {

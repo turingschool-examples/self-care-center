@@ -27,6 +27,8 @@ function outputRandom() {
         displayedMessage.innerText = affirmations[getRandomIndex(affirmations)];
         affirmButton.checked = false;
     } else {
+        medImg.classList.remove("hidden");
+        displayedMessage.classList.add("hidden");
         return;
     };
 };
