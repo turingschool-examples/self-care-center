@@ -16,18 +16,18 @@ html {
 h1 {
     margin: 25px;
 }
-.white-box1 {
+.white-box1, .white-box2 {
     background-color: #ffffff;
-    border-radius: 4px;
-    width: 50%;
+    border-radius: 8px;
+}
+.white-box1 {
+    width: 40%;
     justify-content: center;
     padding: 10px;
     margin: auto;
     margin-bottom: 100px;;
 }
 .white-box2 {
-    background-color: #ffffff;
-    border-radius: 4px;
     width: 65%;
     justify-content: center;
     margin: 50px;
@@ -55,23 +55,28 @@ img {
 button {
     background: #134d71;
     border: 0;
-    border-radius: 4px;
+    border-radius: 6px;
+    padding: 3px 20px;
+    font-size: large;
 }
 .receive-button {
     display: block;
     padding: 10px;
 }
 .radio-buttons {
+    /* make radio button holes bigger */
     padding-top: 10px;
+    padding-left: 30px;
     padding-bottom: 15px;
+    font-style: italic;
+    font-size: large;
 }
-
 .affirm-selection {
-    margin-right: 20px;
+    margin-right: 40px;
     display: inline-block;
 }
 .mantra-selection {
-    margin-left: 20px;
+    margin-left: 170px;
     display: inline-block;
 }
 h2 {
