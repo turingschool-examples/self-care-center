@@ -4,5 +4,45 @@ light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
-black - #000000;
-*/
+black - #000000; */
+* {
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+
+.white-box {
+    background-color: #ffffff;
+    border-radius: 4px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+input {
+    display: inline-block;  
+}
+
+body {
+    background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+    height: 100%;
+    padding-top: 1px;
+}
+
+img {
+    width: 50px;
+    height: auto; 
+}
+.white-text {
+    color: #ffffff;
+}
+button {
+    background: #134d71;
+    border: 0;
+    border-radius: 4px;
+    display: block;
+
+}
