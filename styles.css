@@ -6,3 +6,43 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+
+body {
+    background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+    height: 670px;
+}
+
+h1 {
+    color: white;
+    font-weight: bold;
+    padding: 1em;
+}
+
+h2 {
+    color: white;
+    font-weight: bold;
+    padding: 2em;
+}
+
+div {
+    background-color: white;
+    width: 35%;
+    border: 5em;
+    padding-top: 5em;
+    margin-left: 25%;
+}
+
+.affirmation-button {
+    display:block;
+    height: 15px;
+    width: 10px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background: white;
+}
+
