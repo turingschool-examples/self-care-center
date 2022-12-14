@@ -88,3 +88,7 @@ h2 {
   width: 60%;
   height: 60%;
 }
+
+.displayed-message {
+  font-size: large;
+}
