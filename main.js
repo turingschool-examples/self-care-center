@@ -1,7 +1,7 @@
 var affirmButton = document.querySelector("#affirmation");
 var mantraButton = document.querySelector("#mantra");
 var submitButton = document.querySelector("#receive-msg");
-var medImg = document.querySelector(".meditation-icon");
+var meditateIcon = document.querySelector(".meditation-icon");
 var displayedMessage = document.querySelector(".displayed-message");
 
 //event listeners
@@ -13,8 +13,13 @@ function getRandomIndex(array) {
 };
 
 function displayMessage() {
-    medImg.classList.add("hidden");
+    meditateIcon.classList.add("hidden");
     displayedMessage.classList.remove("hidden");
+};
+
+function displayIcon() {
+    meditateIcon.classList.remove("hidden");
+    displayedMessage.classList.add("hidden");
 };
 
 function outputRandom() {
@@ -27,8 +32,7 @@ function outputRandom() {
         displayedMessage.innerText = affirmations[getRandomIndex(affirmations)];
         affirmButton.checked = false;
     } else {
-        medImg.classList.remove("hidden");
-        displayedMessage.classList.add("hidden");
+        displayIcon();
         return;
     };
 };
