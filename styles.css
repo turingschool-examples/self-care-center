@@ -9,23 +9,33 @@ black - #000000;
 
 
 
-.header {
+h1 {
     padding: 20 ; 
     text-align: center;
-    color: black ;
+    color: white ;
 }
 
-.question {
+h2 {
     padding: 20;
     text-align: center;
-    color: black
+    color: white
 }
 
  #dude {
     height: 200px;
     width: 200px;
+    
  }
 
- .page{
-   background: linear-gradient(#134d71,#78a7c6,#f7e4bf)
+ .meditate {
+  text-align: center;
+ }
+
+ .page {
+   background: linear-gradient(#134d71,#78a7c6,#f7e4bf);
+
+ }
+
+ .all-buttons {
+  text-align: center;
  }
