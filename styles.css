@@ -12,7 +12,8 @@ black - #000000; */
 }
 
 body, html {
-    background: content-box linear-gradient( #134d71, #78a7c6, #f7e4bf);
+    background: content-box linear-gradient( #134d71, #78a7c6, #f7e4bf); 
+    /* adjust gradient to be more blue at the top than yellow at the bottom */
     background-size: cover;
     height: 100%;
 }
@@ -20,15 +21,16 @@ body, html {
 .titlefont {
     color: #ffffff;
     margin: auto;
+    padding: 10px;
 }
 
 .radiodiv {
     background-color: #ffffff;
-    width: 30%;
-    block-size: 50px;
+    width: 35%;
+    block-size: 80px;
     border-radius: 10px;
     margin: auto;
-    padding: 20px;
+    padding: 10px 0px 0px 0px;
 }
 
 .radiofont {
