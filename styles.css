@@ -6,3 +6,30 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+
+
+.header {
+    padding: 20 ; 
+    text-align: center;
+    color: black ;
+}
+
+.question {
+    padding: 20;
+    text-align: center;
+    color: black
+}
+
+.first-button {
+    text-align:center;
+ }
+
+ .second-button {
+    text-align: center;
+ }
+
+
+ .message-button {
+    text-align: center;
+ }
