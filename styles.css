@@ -4,8 +4,13 @@
     font-family:'Quicksand', sans-serif;
 }
 
+html {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
 body {
-    /* margin: 0; */
     background-image: linear-gradient(#134d71, #f7e4bf);
 }
 
@@ -34,33 +39,64 @@ h2 {
 }
 
 
-button {
-    background-color: #134d71;
-    color:#ffffff;
-}
-
-
 .textBox2 {
     display: flex;
     margin: auto;
     margin-bottom: 200px;
-   height: 130px;
-   width: 800px;
-   background: #ffffff;
-   border-radius: 10px;
+    height: 130px;
+    width: 800px;
+    background: #ffffff;
+    border-radius: 10px;
 }
 
-input {
+form {
+    padding-top: 15px;
+    display:flex;
+    justify-content: center;
+    font-style: italic;
+}
+
+form > input {
     display: flex;
+}
+
+.affirmation-radio {
+    margin-right: 15px;
+}
+
+.affirmation-label {
+    margin-right: 50px;
+}
+
+.mantra-radio {
+    margin-left: 50px;
+}
+
+.mantra-label {
+    margin-left: 15px;
+}
+
+button {
+    width:175px;
+    font-size: 15px;
+    border-width: 0px;
+    background-color: #134d71;
+    color:#ffffff;
+    text-align: center;
     margin: auto;
+    margin-top: 15px;
+    display: flex;
+    border-radius: 5px;
+    justify-content: space-around;
 }
 
-img {
 
-height: 80px;
-margin: auto;
-width: 80px;
+.textBox2 > img {
+    height: 80px;
+    margin: auto;
+    width: 80px;
 }
+
 
 
 /* font-family: 'Quicksand', sans-serif;
