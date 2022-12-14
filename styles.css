@@ -7,6 +7,11 @@ white - #ffffff;
 black - #000000;
 */
 
+/*------------------ Global Styling ------------------ */
+* {
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
 
 html {
   height: 100%;
@@ -14,49 +19,72 @@ html {
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
-.header {
-  text-align: center;
+/*------------------ Body Styling ------------------ */
+h1 {
   color: #ffffff;
-  font-family: 'Quicksand', sans-serif;
-  /* margin: 200px; */
+  margin-top: 50px;
 }
 
-.type-of-box {
-    display: block;
-    text-align: center;
-    height: 100px;
-    width: 33%;
-    margin: 0 auto;
-    background-color: #ffffff;
+h2 {
+  color: #ffffff;
+  margin-top: 100px;
 }
 
+.option-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100px;
+  width: 30%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
 
-form {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
+/*------------------ Button Styling ------------------ */
+.buttons {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+#mantra {
+  margin-left: 180px;
 }
 
 .submit {
-    border: 0;
-    color: #ffffff;
-    background-color: #134d71;
+  display: flex;
+  justify-content: center;
 }
 
-.display-box {
-    display: block;
-    text-align: center;
-    height: 160px;
-    width: 44%;
-    margin: 0 auto;
-    background-color: #ffffff;
+.submit-button {
+  height: 30px;
+  width: 175px;
+  border: 0;
+  color: #ffffff;
+  font-size: medium;
+  background-color: #134d71;
+  border-radius: 5px;
+}
+
+/*------------------ Message Box Styling ------------------ */
+.msg-display-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 45%;
+  margin: 0 auto;
+  margin-top: 10%;
+  background-color: #ffffff;
+  border-radius: 10px;
 }
 
 .meditation-icon {
-    margin: 20px;
-    width: 70%;
-    height: 70%;
+  width: 60%;
+  height: 60%;
 }

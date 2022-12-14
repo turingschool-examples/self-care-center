@@ -4,26 +4,25 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
-  <body><br>
-    <h1 class="header">✨ Self Care Center ✨</h1>
-    <div class="breaks">
-      <br><br><br><br>
-    </div>
-    <h2 class="header">Which type of message?</h2>
-    <section class="type-of-box">
-      <form>
-        <button class="type-of-msg" id="affirmation"></button>
-        <label>affirmation</label>
-        <button class="type-of-msg" id="mantra"></button>
-        <label>mantra</label><br>
-        <button class="submit" id="receive-msg">Receive Message</button>
-      </form>
+  <body>
+    <header>
+      <h1>✨ Self Care Center ✨</h1>
+      <h2>Which type of message?</h2>
+    </header>
+    <section class="option-box">
+      <div class="buttons">
+        <input type="radio" class="type-of-msg" id="affirmation"></button>
+        <label><em>affirmation</em></label>
+        <input type="radio" class="type-of-msg" id="mantra"></button>
+        <label><em>mantra</em></label>
+      </div>
+      <div class="submit">
+        <button class="submit-button" id="receive-msg">Receive Message</button>
+      </div>
     </section>
-    <div class="breaks">
-      <br><br><br><br><br><br><br><br>
-    </div>
-    <section class="display-box">
+    <section class="msg-display-box">
       <img class="meditation-icon" src="./assets/meditate.svg" alt="meditation icon">
+      <p class="chosen-message hidden"></p>
     </section>
     <script type="text/javascript" src="main.js"></script>
   </body>
