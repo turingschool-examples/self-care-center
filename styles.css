@@ -21,22 +21,11 @@ black - #000000;
     color: black
 }
 
-/* .first-button {
-    text-align:center;
- }
-
- .second-button {
-    text-align: center;
- }
-
-
- .message-button {
-    text-align: center;
- } */
-
  #dude {
-    height: 400px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
+ }
 
-    
+ .page{
+   background: linear-gradient(#134d71,#78a7c6,#f7e4bf)
  }
