@@ -21,17 +21,22 @@ html {
 }
 
 .selection-form{ 
-    display: block;
+    display: flex;
     width: 45%;
     height: 70px;
     margin: 4vh auto;
     border-radius: 10px;
     background-color: white;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-.radio-button {
-    margin: 10px;
+.radio-btn {
+    display: flex;
     color:black;
+    margin-left: 75px;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .button {
@@ -44,18 +49,20 @@ html {
 }
 
 .view-box {
-    display: block;
+    display: flex;
     width: 65%;
     height: 90px;
     padding: 15px;
     margin: 8vh auto;
     border-radius: 10px;
     background-color: white; 
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-.view-box > .yogi-img {
-    width: 70px;
-    height: 80px;
+.yogi-img {
+    width: 80px;
+    height: 90px;
 }
 /* 
 mantra box white has rounded edges and size
