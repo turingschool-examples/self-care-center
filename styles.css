@@ -6,3 +6,45 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+}
+
+header{
+  margin: 20px 0px 50px 0px;
+}
+
+.message-container {
+  width: inherit;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.generator-box {
+  width: 35%;
+  min-width: 500px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
+
+.display-box {
+  margin-top: 100px;
+  width: 50%;
+  min-width: 500px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
