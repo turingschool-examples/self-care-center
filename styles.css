@@ -6,3 +6,85 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+/*------------------ Global Styling ------------------ */
+* {
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+html {
+  height: 100%;
+  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+}
+
+.hidden {
+  display: none;
+}
+
+/*------------------ Body Styling ------------------ */
+h1 {
+  color: #ffffff;
+  margin-top: 50px;
+}
+
+h2 {
+  color: #ffffff;
+  margin-top: 100px;
+}
+
+.option-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100px;
+  width: 30%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+/*------------------ Button Styling ------------------ */
+.buttons {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+#mantra {
+  margin-left: 180px;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-button {
+  height: 30px;
+  width: 175px;
+  border: 0;
+  color: #ffffff;
+  font-size: medium;
+  background-color: #134d71;
+  border-radius: 5px;
+}
+
+/*------------------ Message Box Styling ------------------ */
+.msg-display-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 45%;
+  margin: 0 auto;
+  margin-top: 10%;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.meditation-icon {
+  width: 60%;
+  height: 60%;
+}
