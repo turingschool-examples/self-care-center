@@ -42,23 +42,25 @@ var affirmationRadio = document.querySelector('.affirmation-radio')
 var mantraRadio = document.querySelector('.mantra-radio')
 var textBoxTwo = document.querySelector('.textBox2')
 var meditationIcon = document.querySelector('img')
+var messageBox = document.querySelector('.message')
 
 var message;
 
 // Event Listeners -
 
 receiveMessageButton.addEventListener('click', function() {
-   locateSentence()
-   displaySentence(message)
+    show(messageBox)
+    locateSentence()
+    displaySentence(message)
 })
 
-function displaySentence(message) {
-    hideElement(meditationIcon)
-    textBoxTwo.innerHTML = `
-    <p class='message'>${message}</p>`
-}
-
 // Event Handlers -
+
+function displaySentence(message) {
+    hideElement(textBoxTwo)
+    textBoxTwo.innerHTML = `
+    <section class='message'>${message}</section>`
+}
 
 function locateSentence() {
     if (affirmationRadio.checked === true) {
@@ -80,3 +82,7 @@ function getRandomIndex(array) {
 function hideElement(element) {
     element.classList.add('hidden');
 }
+
+function show(element) {
+    element.classList.remove("hidden");
+  };
