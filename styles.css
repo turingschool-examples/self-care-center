@@ -20,7 +20,11 @@ body {
     color: #ffffff
 }
 
-/* ~~~~~~~~~~~~~~~~~text box 1 ~~~~~~~~~~~~~~~~~*/
+.hidden {
+    display: none;
+}
+
+/* ~~~~~~~~~~~~~~~~~ Text Box 1 ~~~~~~~~~~~~~~~~~*/
 
 h2 {
     margin-top: 80px;
@@ -31,8 +35,8 @@ h2 {
 
 .textBox1 {
     margin: auto;
-   height: 90px;
-   width: 550px;
+   height: 100px;
+   width: 530px;
    background: #ffffff;
    border-radius: 10px;
    margin-bottom: 75px;
@@ -41,48 +45,30 @@ h2 {
 form {
     padding-top: 15px;
     display:flex;
-    justify-content: center;
+    justify-content: space-around;
     font-style: italic;
 }
 
-form > input {
-    display: flex;
-}
-
-.affirmation-radio {
-    margin-right: 15px;
-}
-
-.affirmation-label {
-    margin-right: 50px;
-}
-
-.mantra-radio {
-    margin-left: 50px;
-}
-
-.mantra-label {
-    margin-left: 15px;
-}
-
 button {
-    width:175px;
-    font-size: 15px;
+    width:185px;
+    font-size: 17px;
     border-width: 0px;
     background-color: #134d71;
     color:#ffffff;
     text-align: center;
     margin: auto;
-    margin-top: 15px;
+    margin-top: 27px;
     display: flex;
     border-radius: 5px;
     justify-content: space-around;
+    padding: 3.5px;
 }
 
-/* ~~~~~~~~~~~~~~~~~text box 2 ~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~ Text Box 2 ~~~~~~~~~~~~~~~~~*/
 
 .textBox2 {
     display: flex;
+    justify-content: center;
     margin: auto;
     margin-bottom: 200px;
     height: 130px;
@@ -95,6 +81,12 @@ button {
     height: 80px;
     margin: auto;
     width: 80px;
+}
+
+.message {
+    display: flex;
+    font-size: 24px;
+    align-items: center;
 }
 
 
