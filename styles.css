@@ -26,6 +26,11 @@ body {
 
 /* ~~~~~~~~~~~~~~~~~ Text Box 1 ~~~~~~~~~~~~~~~~~*/
 
+#view-saved-messages {
+    background-color: #f7e4bf;
+    color:#134d71
+}
+
 h2 {
     margin-top: 80px;
     text-align: center;
@@ -52,12 +57,12 @@ form {
     margin-left: 15vh;
 }
 
-.receive-message-button {
+.button-format {
     width:185px;
     font-size: 17px;
     border-width: 0px;
     background-color: #134d71;
-    color:#ffffff;
+    color:#f7e4bf;
     text-align: center;
     margin: auto;
     margin-top: 27px;

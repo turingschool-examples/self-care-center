@@ -6,6 +6,8 @@
   </head>
   <body>
     <h1 class = 'header'>✨ Self Care Center ✨</h1>
+    <section id="main-page">
+    <button class="button-format" id="view-saved-messages">View Saved Messages</button>
     <h2>Which type of message?</h2>
     <section class="textBox1">
       <form>
@@ -14,10 +16,15 @@
           <input class="radio" type="radio" id="mantra-selector" name="radio-input">
           <label for="mantra-button" class="radio">mantra</label>
       </form>
-      <button class="receive-message-button">Receive Message</button>
+      <button id="receive-message-button" class="button-format">Receive Message</button>
     </section>
     <section class = "textBox2">
       <img class ="medidation icon" src="./assets/meditate.svg" alt="meditation icon"/>
+    </section>
+  </section>
+
+    <section class="saved-messages hidden">
+      <h1>HELLO</h1>
     </section>
         <script type="text/javascript" src="main.js"></script>
         <script type="text/javascript" src="messages.js"></script>
