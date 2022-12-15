@@ -1,6 +1,9 @@
 var receiveMessageBtn = document.querySelector('#btn-receive-msg');
 var homeBtn = document.querySelector('#btn-home');
 var collectionBtn = document.querySelector('#btn-collection');
+var createBtn = document.querySelector('#btn-create');
+var createAffBtn = document.querySelector('#btn-create-aff');
+var createManBtn = document.querySelector('#btn-create-man');
 var affirmationRb = document.querySelector('#rb-affirmation');
 var mantraRb = document.querySelector('#rb-mantra');
 var messageDisplay = document.querySelector('#message-display');
@@ -8,6 +11,8 @@ var homeSection = document.querySelector('#main-section');
 var collectionSection = document.querySelector('#collection-section');
 var affirmationList = document.querySelector('#affirmation-list');
 var mantraList = document.querySelector('#mantra-list');
+var createMessage = document.querySelector('#create-message-form');
+var createMessageTextArea = document.querySelector('#create-message-ta');
 
 var messages = [
     {type: 'affirmation', msg: "All you need is within you right now", id: 0},
@@ -32,16 +37,19 @@ var messages = [
     {type: 'mantra',msg: "I choose love", id: 19}
 ];
 
+window.addEventListener('load', displayMessages);
 homeBtn.addEventListener('click', goHome);
 collectionBtn.addEventListener('click', goToCollection);
-window.addEventListener('load',displayMessages);
+createAffBtn.addEventListener('click', addNewMessage);
+createManBtn.addEventListener('click', addNewMessage);
+createBtn.addEventListener('click', toggleCreateMessage);
 
 receiveMessageBtn.addEventListener('click', function (event) {
     event.preventDefault();
     if(affirmationRb.checked){
-        messageDisplay.innerHTML = `<p>${getRandomMessage(affirmations)}</p>`;
+        messageDisplay.innerHTML = `<p>${getRandomMessage(messages)}</p>`;
     }else if(mantraRb.checked) {
-        messageDisplay.innerHTML = `<p>${getRandomMessage(mantras)}</p>`;
+        messageDisplay.innerHTML = `<p>${getRandomMessage(messages)}</p>`;
     }
 });
 
@@ -69,6 +77,35 @@ function goHome() {
 function goToCollection() {
     collectionSection.classList.remove('hidden');
     homeSection.classList.add('hidden');
+}
+
+function toggleCreateMessage() {
+    createMessage.classList.toggle('hidden');
+    if(createMessage.classList.contains('hidden')) {
+        createBtn.innerText = '➕';
+    }else{
+        createBtn.innerText = '➖';
+    }
+}
+
+function addNewMessage(event) {
+    event.preventDefault();
+    if(createMessageTextArea.value) {
+        var msgType;
+        if(event.target.id === 'btn-create-aff') {
+            msgType = 'affirmation';
+        }else if(event.target.id === 'btn-create-man'){
+            msgType = 'mantra';
+        }
+        messages.unshift({
+            type: msgType,
+            msg: createMessageTextArea.value,
+            id: Date.now()
+        })
+        createMessageTextArea.value = '';
+        toggleCreateMessage();
+        displayMessages();
+    }
 }
 
 function deleteMessage(idString) {
@@ -110,5 +147,5 @@ function displayMessages() {
 }
 
 function getRandomMessage(messages) {
-    return messages[Math.floor(Math.random() * messages.length)];
+    return messages[Math.floor(Math.random() * messages.length)].msg;
 }

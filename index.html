@@ -33,6 +33,7 @@
       <img src="assets/meditate.svg" alt="meditiate">
     </aside>
   </section>
+
   <section class="collection-section hidden" id="collection-section">
     <aside class="message-list" id="affirmation-list">
     </aside>
@@ -46,8 +47,20 @@
         <h3>👉</h3>
       </div>
       <div>
-        <h3 id="trash-can">🗑️</h3>
+        <h2>Create</h2>
+        <button id="btn-create">➕</button>
+        <form class="create-message-form card hidden" id="create-message-form">
+          <label>New Message</label>
+          <textarea id="create-message-ta"></textarea>
+          <div>
+            <button id="btn-create-aff">←</button>
+            <button id="btn-create-man">→</button>
+          </div>
+        </form>
+      </div>
+      <div>
         <p>Drag to re-arrange or delete.</p>
+        <h3 id="trash-can">🗑️</h3>
       </div>
     </div>
     <aside class="message-list" id="mantra-list">
