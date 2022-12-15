@@ -13,7 +13,6 @@ black - #000000; */
     margin: 20px;
 }
 html {
-    text-align: center;
     margin: auto;
     background: linear-gradient(#134d71, #78a7c6, #f7e4bf );
     background-size: cover;
