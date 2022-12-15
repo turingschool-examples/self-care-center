@@ -45,7 +45,7 @@ h2 {
     margin-top: 12px;
 }
 
-.receive-message {
+.receive-message-btn {
     color: white;
     background-color: #134d71; 
     border-radius: 8px;
@@ -58,6 +58,11 @@ h2 {
 svg {
     width: 40%;
     height: 50%;
+
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 .message-box {
