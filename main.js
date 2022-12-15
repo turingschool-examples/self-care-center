@@ -31,9 +31,10 @@ var mantras = [
 
 receiveMessageBtn.addEventListener('click', function (event) {
     event.preventDefault();
-    
     if(affirmationRb.checked){
-
+        messageDisplay.innerHTML = `<p>${getRandomMessage(affirmations)}</p>`;
+    }else if(mantraRb.checked) {
+        messageDisplay.innerHTML = `<p>${getRandomMessage(mantras)}</p>`;
     }
 });
 
