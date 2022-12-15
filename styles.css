@@ -6,3 +6,92 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+body {
+  background: linear-gradient(#0e4465,#78a7c6, #f7e4bf);
+  background-attachment: fixed;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+h1 {
+ font-family:'Quicksand', sans-serif;
+ color: #ffffff;
+ font-size: 27px;
+ text-align: center;
+ margin-bottom: 85px;
+ margin-top: 35px;
+}
+
+.message-question {
+ font-family:'Quicksand', sans-serif;
+ color: #ffffff;
+ text-align: center;
+ font-size: 20px;
+ margin-bottom: 10px;
+}
+
+.selection-section {
+ background: #ffffff;
+ border-radius: 10px;
+ font-family:'Quicksand', sans-serif;
+ font-style: italic;
+ text-align: center;
+ color: #000000;
+ margin-top: 2px;
+ margin-right: auto;
+ margin-left: auto;
+ margin-bottom: 50px;
+ width: 500px;
+ height: 90px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.radio-button1 {
+  margin: 15px 5px 0px 2px;
+}
+
+.radio-button2 {
+  margin: 15px 5px 0px 140px;
+}
+
+.receive-message-button {
+ font-family:'Quicksand', sans-serif;
+ text-align: center;
+ font-size: small;
+ color: #ffffff;
+ background: #134d71;
+ margin-top: 25px;
+ border-radius: 5px;
+ width: 150px;
+ margin-bottom: 1px;
+ outline: none;
+}
+
+.meditation-image {
+  height: 80px;
+  padding-top: 50px;
+}
+
+.display-message {
+  font-family:'Quicksand', sans-serif;
+  text-align: center;
+  padding-top: 68px;
+  font-size: 22px;
+}
+
+.meditation-section {
+  background: #ffffff;
+  width: 800px;
+  height: 175px;
+  margin-top: 100px;
+  border-radius: 10px;
+}
+
+
