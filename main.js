@@ -31,10 +31,29 @@ var mantras = [
   "I am the sky, the rest is weather.",
 ];
 // Variables to affect DOM elements here!
-var currentAffirm = document.querySelector('h1')
+var choiceButton = document.querySelector('button')
+var selectionValues  = document.querySelectorAll('input[name="man-or-aff"]')
+var dynamicDisplayBox = document.querySelector('.message-expression')
+choiceButton.addEventListener('click', doThing)
 
 
+function doThing() {
+  var selectedVal;
+  for (var value of selectionValues) {
+    if (value.checked) {
+      selectedVal = value.value;
+    }
+  }
+  if (selectedVal === "mantra")
+  dynamicDisplayBox.innerHTML = `<div id="affirm-mantra-styling">${getRandomMantra(mantras)}</div>`
+  else 
+  dynamicDisplayBox.innerHTML = `<div id="affirm-mantra-styling">${getRandomAffirm(affirmations)}</div>`
+}
 
+
+// function getChoice() {
+//   if 
+// }
 
 
 
@@ -42,5 +61,9 @@ function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length)
   }
 function getRandomAffirm() {
+  return affirmations[getRandomIndex(affirmations)]
+}
 
+function getRandomMantra() {
+  return mantras[getRandomIndex(mantras)]
 }
