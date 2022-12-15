@@ -50,7 +50,7 @@ function getRandomIndex(array) {
 }
 
 function selectMessageType(event){
-  event.preventDefault
+  event.preventDefault()
   if(affirmationsRadioButton.checked){
     showAffirmation()
   }else{
