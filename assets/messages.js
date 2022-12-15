@@ -19,7 +19,7 @@ var mantras = [
     "Every day is a second chance.",
     "Tell the truth and love everyone.",
     "I am free from sadness.",
-    "I am enough.",
+    "I am a bad bitch and I know it.",
     "In the beginning it is you, in the middle it is you and in the end it is you.",
     "I love myself.",
     "I am present now.",
