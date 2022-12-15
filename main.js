@@ -1,3 +1,4 @@
+//Arrays
 var affirmations = [
   "I forgive myself and set myself free.",
   "I believe I can be all that I want to be.",
@@ -32,8 +33,13 @@ var mantras = [
   "I am the sky, the rest is weather."
 ]
 
+var currentMessageArray;
+var currentMessageIndex;
 
+
+//Query Seletors
 var messageButton = document.getElementById("message-button");
+var removeButton = document.getElementById("remove-button");
 var affirmationsRadioButton = document.getElementById("affirmation-radio");
 var mantrasRadioButton = document.getElementById("mantra-radio");
 var messageInput = document.getElementById("message-input");
@@ -41,10 +47,12 @@ var imageBox = document.querySelector(".image-box");
 var textBox = document.querySelector(".text-box");
 
 
+//Event Listeners
 messageButton.addEventListener("click", selectMessageType)
+removeButton.addEventListener("click", deleteMessage)
 
 
-
+//Functions
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
@@ -59,17 +67,36 @@ function selectMessageType(event){
 }
 
 function showAffirmation(){
-  var randomAffirmation = affirmations[getRandomIndex(affirmations)];
-  console.log(randomAffirmation)
+  var currentAffirmation = affirmations[getRandomIndex(affirmations)];
+  currentMessageArray = affirmations
+  currentMessageIndex = affirmations.indexOf(currentAffirmation)
   textBox.classList.remove('hidden');
   imageBox.classList.add('hidden');
-  messageInput.innerText = randomAffirmation;
+  messageInput.innerText = currentAffirmation
 }
 
 function showMantra(){
-  var randomMantra = mantras[getRandomIndex(mantras)];
-  console.log(randomMantra)
+  var currentMantra = mantras[getRandomIndex(mantras)];
+  currentMessageArray = mantras
+  currentMessageIndex = mantras.indexOf(currentMantra)
   textBox.classList.remove('hidden');
   imageBox.classList.add('hidden');
-  messageInput.innerText = randomMantra;
+  messageInput.innerText = currentMantra;
+}
+
+function deleteMessage(){
+  currentMessageArray.splice(currentMessageIndex, 1)
+  if(currentMessageArray === affirmations && currentMessageArray.length >= 1){
+    showAffirmation()
+    alert("This message Has Been removed to improve your emotional well-being.")
+  } else if (currentMessageArray === affirmations && currentMessageArray.length === 0){
+    messageInput.innerText = "Have you considered goat yoga instead? 🐐🧘🏽‍♂️"
+    return alert("NO MORE INSPIRATION FOUND.")
+  } else if(currentMessageArray === mantras && currentMessageArray.length >= 1){
+    showMantra()
+    alert("This message Has Been removed to improve your emotional well-being.")
+  } else if (currentMessageArray === mantras && currentMessageArray.length === 0){
+    messageInput.innerText = "I hear scream therapy works wonders. 🙀"
+    return alert("NO MORE INSPIRATION FOUND.")
+  }
 }
