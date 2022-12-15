@@ -1,19 +1,37 @@
-var randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)];
-var randomMantra = mantra[Math.floor(Math.random() * mantras.length)];
+var selectedType;
 
 var messageBox = document.querySelector('.message-pop-up');
-var receiveBtn = document.querySelector('.receive-btn');
+var receiveBtn = document.querySelector('#receive-btn');
 var meditate = document.querySelector('.meditate');
 var affirmRadio = document.querySelector('#affirmation');
 var mantraRadio = document.querySelector('#mantra');
 
 affirmRadio.addEventListener('click', changeSelection);
 mantraRadio.addEventListener('click', changeSelection);
-// receiveBtn.addEventListener('click', hideMeditate);
-function changeSelection() {
-    if (document.getElementById('affirmation')) {
-        messageBox.innerHTML = randomAffirmation;
+receiveBtn.addEventListener('click', changeView);
+
+function changeSelection(event) {
+    selectedType = event.target.value;
+}
+
+function updateMessage() {
+    if (selectedType === "affirmation") {
+        messageBox.innerHTML = affirmations[Math.floor(Math.random() * affirmations.length)];
     } else {
-        messageBox.innerHTML = randomMantra;
+        messageBox.innerHTML = mantras[Math.floor(Math.random() * mantras.length)];
     }
+}
+
+function hideElement(element) {
+    element.classList.add('hidden');
+}
+
+function showElement(element) {
+    element.classList.remove('hidden');
+}
+
+function changeView() {
+    updateMessage();
+    showElement(messageBox);
+    hideElement(meditate);
 }
