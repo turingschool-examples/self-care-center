@@ -7,9 +7,7 @@ white - #ffffff;
 black - #000000;
 */
 
-*,
-*:before,
-*:after {
+* {
     box-sizing: border-box;
     font-family: 'Quicksand', serif;
 }
@@ -26,8 +24,10 @@ body {
 
 /* Header */
 header {
-    padding-top: 20px;
-    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
 }
 
 header h1 {
@@ -37,11 +37,13 @@ header h1 {
 
 /* Sections */
 section { 
-    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
 }
 
 h2 {
-    margin: auto;
     text-align: center;
     color: white;
     margin-bottom: 10px;
@@ -49,20 +51,18 @@ h2 {
 
 /* Main Section */
 .receive-message-form {
-    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: white;
     border-radius: 10px;
     width: 520px;
-    height: 100px;
 }
 
 .radio-group {
     display: flex;
     width: 100%;
-    height: 60%;
+    height: 65px;
     justify-content: space-around;
     align-items: center;
 }
@@ -78,10 +78,11 @@ h2 {
     height: 18px;
 }
 
-.receive-message-form button {
-    height: 30px;
+.receive-message-form button { 
     background-color: #134d71;
     color: white;
+    margin-bottom: 10px;
+    height: 26px;
     font-size: 16px;
     border-radius: 5px;
     border: 0;
@@ -90,7 +91,6 @@ h2 {
 }
 
 aside {
-    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
