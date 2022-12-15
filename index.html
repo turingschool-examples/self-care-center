@@ -3,9 +3,45 @@
   <head>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <title>Self Care Center</title>
   </head>
   <body>
-  
+    <header>
+      <h1>✨ Self Care Center ✨</h1>
+    </header>
+    <section class="message-container" id="message-generator">
+      <h2 class="generator-title">Which type of message?</h2>
+      <form class="generator-box">
+        <div class="selection-options">
+          <div class="first-radio">
+            <input type="radio" id="affirmation-radio" name="message_buttons" value="affirmations">
+            <label for="affirmation-radio">affirmation</label><br>
+          </div>
+          <div class="second-radio">
+            <input type="radio" id="mantra-radio" name="message_buttons" value="mantras">
+            <label for="mantra-radio">mantra</label>
+          </div>
+        </div>
+        <div class="message-button-container">
+          <button id="message-button">Receive Message</button>
+        </div>
+      </form>
+    </section>
+    <section class="message-container">
+      <div class="image-box">
+        <div class="image-container">
+          <img src="assets/meditate.svg" alt="Meditation Image">
+        </div>
+      </div>
+      <div class="text-box hidden">
+        <div class="text-container">
+          <p id="message-input"></p>
+          <div class="remove-button-container">
+            <button id="remove-button">This Doesn't Spark Joy</button>
+          </div>
+        </div>
+      </div>
+    </section>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
