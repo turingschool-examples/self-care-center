@@ -9,19 +9,17 @@
     <h2>Which type of message?</h2>
     <section class="textBox1">
       <form>
-        <div>
-          <input class="affirmation-radio" type="radio" name="radioButton">affirmation
-        </div>
-        <div>
-          <input class="mantra-radio" type="radio" name="radioButton">mantra
-        </div>
+          <input class="radio" type="radio" id="affirmation-selector" name="radio-input">
+          <label for="affirmation-button" id="affirmation-label">affirmation</label>
+          <input class="radio" type="radio" id="mantra-selector" name="radio-input">
+          <label for="mantra-button" class="radio">mantra</label>
       </form>
       <button class="receive-message-button">Receive Message</button>
     </section>
     <section class = "textBox2">
-      <section class="message"></section>
       <img class ="medidation icon" src="./assets/meditate.svg" alt="meditation icon"/>
     </section>
         <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript" src="messages.js"></script>
   </body>
 </html>
