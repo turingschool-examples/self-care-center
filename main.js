@@ -19,6 +19,9 @@ var affirmationBtn = document.querySelector('.affirmation-button');
 var mantraBtn = document.querySelector('.mantra-button');
 var message = document.querySelector('.message-box');
 var icon = document.querySelector('svg');
+var addMessageBtn = document.querySelector('.add-message');
+var form = document.querySelector('form');
+
 
 receiveMessageBtn.addEventListener('click', displayMessage);
 
@@ -27,13 +30,25 @@ function displayMessage() {
     var randomMantraIndex = Math.floor(Math.random() * mantras.length);
     icon.classList.add('hidden');
     if (affirmationBtn.checked && !mantraBtn.checked) {
-        message.innerHTML = `<p>${affirmations[randomAffirmIndex]}</p>`;
+        message.innerHTML = `<p>${affirmations[randomAffirmIndex]}</p>
+        <button class="add-message">Add Message</button>`;
     } else if (mantraBtn.checked && !affirmationBtn.checked) {
-        message.innerHTML = `<p>${mantras[randomMantraIndex]}</p>`;
+        message.innerHTML = `<p>${mantras[randomMantraIndex]}</p>
+        <button class="add-message">Add Message</button>`;
     } else {
         alert("Please select either affirmation or mantra");
     }
 };
+
+addMessageBtn.addEventListener('click', displayForm);
+
+function displayForm() {
+    if (affirmations[randomAffirmIndex] || mantras[randomMantraIndex]) {
+        message.innerHTML = ` `;
+        form.classList.remove('hidden');
+    }  
+}
+
 
 
 
