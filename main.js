@@ -49,7 +49,6 @@ var message;
 // Event Listeners -
 
 receiveMessageButton.addEventListener('click', function() {
-    show(messageBox)
     locateSentence()
     displaySentence(message)
 })
@@ -57,7 +56,6 @@ receiveMessageButton.addEventListener('click', function() {
 // Event Handlers -
 
 function displaySentence(message) {
-    hideElement(textBoxTwo)
     textBoxTwo.innerHTML = `
     <section class='message'>${message}</section>`
 }
@@ -70,6 +68,8 @@ function locateSentence() {
     } else if (mantraRadio.checked === true) {
         message = mantras[getRandomIndex(mantras)];
         return message;
+    } else {
+        message = 'Please select a message option!'
     }
 }
 
@@ -78,11 +78,3 @@ function locateSentence() {
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length)
 }
-
-function hideElement(element) {
-    element.classList.add('hidden');
-}
-
-function show(element) {
-    element.classList.remove("hidden");
-  };
