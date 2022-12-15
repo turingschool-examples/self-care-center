@@ -6,3 +6,68 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+
+body {
+    background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+    height: 750px;
+}
+
+h1 {
+    color: white;
+    font-weight: bold;
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+h2 {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.type-of-message-box {
+    background-color: white;
+    width: 550px;
+    font-size: 18px;
+    padding-top: 15px;
+    margin: auto;
+    margin-bottom: 6em;
+    border-radius: 5px;
+}
+
+.affirmation-option {
+    margin-right: 10em;
+    margin-top: 12px;
+}
+
+.receive-message {
+    color: white;
+    background-color: #134d71; 
+    border-radius: 8px;
+    font-size: 18px;
+    width: 200px;
+    margin-top: 17px;
+    margin-bottom: 10px;
+}
+
+svg {
+    width: 40%;
+    height: 50%;
+}
+
+.message-box {
+    background-color: white;
+    width: 850px;
+    height: 160px;
+    margin: auto;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
