@@ -1,7 +1,11 @@
 var receiveMessageBtn = document.querySelector('#btn-receive-msg');
+var homeBtn = document.querySelector('#btn-home');
+var collectionBtn = document.querySelector('#btn-collection');
 var affirmationRb = document.querySelector('#rb-affirmation');
 var mantraRb = document.querySelector('#rb-mantra');
 var messageDisplay = document.querySelector('#message-display');
+var homeSection = document.querySelector('#main-section');
+var collectionSection = document.querySelector('#collection-section');
 
 var affirmations = [
     "All you need is within you right now.",
@@ -29,6 +33,9 @@ var mantras = [
     "It is all good!"
 ];
 
+homeBtn.addEventListener('click', goHome);
+collectionBtn.addEventListener('click', goToCollection);
+
 receiveMessageBtn.addEventListener('click', function (event) {
     event.preventDefault();
     if(affirmationRb.checked){
@@ -37,6 +44,16 @@ receiveMessageBtn.addEventListener('click', function (event) {
         messageDisplay.innerHTML = `<p>${getRandomMessage(mantras)}</p>`;
     }
 });
+
+function goHome() {
+    collectionSection.classList.add('hidden');
+    homeSection.classList.remove('hidden');
+}
+
+function goToCollection() {
+    collectionSection.classList.remove('hidden');
+    homeSection.classList.add('hidden');
+}
 
 function getRandomMessage(messages) {
     return messages[Math.floor(Math.random() * messages.length)];

@@ -9,10 +9,14 @@
 <body>
   <header>
     <h1>✨ Self Care Center ✨</h1>
+    <nav>
+      <button id="btn-home">Home</button>
+      <button id="btn-collection">Collection</button>
+    </nav>
   </header>
-  <section id="main-section">
+  <section class="main-section" id="main-section">
     <h2>Which type of message?</h2>
-    <form class="receive-message-form">
+    <form class="receive-message-form card">
       <div class="radio-group">
         <div>
           <input type="radio" id="rb-affirmation" name="message-type" checked>
@@ -25,8 +29,28 @@
       </div>
       <button id="btn-receive-msg">Receive Message</button>
     </form>
-    <aside id="message-display">
+    <aside id="message-display" class="message-display card">
       <img src="assets/meditate.svg" alt="meditiate">
+    </aside>
+  </section>
+  <section class="collection-section hidden" id="collection-section">
+    <aside class="message-list">
+      <div draggable="true" class="single-message card"><p>sdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasd</p></div>
+      <div class="single-message card"><p>sdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasd</p></div>
+      <div class="single-message card"><p>sdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasd</p></div>
+      <div class="single-message card"><p>sdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasd</p></div>
+      <div class="single-message card"><p>sdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasd</p></div>
+    </aside>
+    <div class="collection-center">
+      <h2>👈 Affirmations</h2>
+      <h2>Mantras      👉</h2>
+    </div>
+    <aside class="message-list">
+      <div class="single-message card"><p>sdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasd</p></div>
+      <div class="single-message card"><p>sdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasd</p></div>
+      <div class="single-message card"><p>sdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasd</p></div>
+      <div class="single-message card"><p>sdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasd</p></div>
+      <div class="single-message card"><p>sdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasd</p></div>
     </aside>
   </section>
   <script type="text/javascript" src="main.js"></script>
