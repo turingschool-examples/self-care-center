@@ -4,5 +4,82 @@ light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
-black - #000000;
-*/
+black - #000000; */
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+
+html {
+    background: content-box linear-gradient( #134d71 15%, #78a7c6, #f7e4bf); 
+    background-size: cover;
+    height: 100vh;
+}
+
+.titlefont {
+    color: #ffffff;
+}
+
+.radiodiv {
+    background-color: #ffffff;
+    width: 35%;
+    block-size: 80px;
+    border-radius: 10px;
+}
+
+form {
+    font-style: italic;
+    text-align: center;
+    align-items: flex-end;
+    justify-items: center;
+}
+
+.button {
+    background-color:#134d71;
+    border: none;
+    padding: 4px 30px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.affirmations {
+    float: left;
+}
+
+.mantras {
+    float: right;
+    padding: 0px 50px 20px 20px;
+}
+
+main {  /* aligns and centers the two divs and message */
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.messagediv {
+    background-color: #ffffff;
+    width: 60%;
+    block-size: 125px;
+    border-radius: 10px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    height: 70px;
+    width: 70px;
+}
+
+
+
