@@ -2,34 +2,59 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width">
     <title>Self Care App</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <style>
       body {
         background: linear-gradient(#134d71, #78a7c6,#f7e4bf );
+        height:100vh;
       }
+
       header {
         text-align: center;
         font-family: 'Quicksand', sans-serif;
         color: #ffffff;
+        font-weight: 200;
+        padding-bottom: 50px;
       }
-      h2{
+
+      h3{
         text-align: center;
         font-family: 'Quicksand', sans-serif;;
         color:  #ffffff;
-      }
-      ul {
-        list-style: none;
-        padding: 0;
-        text-align: center;
+        font-weight:100; 
+        padding-bottom: 10px;
       }
 
-      li {
-        display: inline;
-        margin: 0 15px;
+      .Affiration-Mantra-Box {
+        text-align: center;
+        background-color: #ffffff;
+        border-radius:10px 10px 10px 10px;
+        width: 250px;
+        height: 75px;
+        border: solid 1px white;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
+      }
+  
+      #receive-message-Butn { 
+        text-align: center;
+        border-radius: 5 px;
+        padding: 5px;
+        background-color: #134d71;
+        font-family: 'Quicksand', sans-serif;
+        color: #ffffff;
+        display: flex;
+        align-self: flex-end;
+
+      } 
+
+      .box1{
+        display:flex;
+        align-items: center;
       }
 
       img {
@@ -43,19 +68,22 @@
     </style>
   </head>
   <body>
-    <header class="header">✨ Self Care Center ✨</header>
-    <section>
-      <h2> Which type of message? </h2>
-    <section>
-      
+    <header> <h2>✨ Self Care Center ✨ </h2>
+    </header>
+    <section class="Question">
+      <h3> Which type of message? </h3>
     </section>
-    <form>
-      <input type="radio" id="button1" value="affirmation"
+    <form class="Affiration-Mantra-Box">
+      <div class="box1">
+        <input type="radio" id="button1-Affirmation" value => affirmation
+        <input type="radio" id="button2-Mantra" value => mantra
+      </div>
+      <br>
+      <button id="receive-message-Butn">Receive Message</button>
     </form>
-    </form>
-    </ul>
-    <button class="Receive Message Butn">Receive Message</button>
-    <img src="assets/meditate.svg" alt="Meditation icon"/>
+    <section class="Meditation-box">
+      <img id= "Buddha hidden" src="assets/meditate.svg" alt="Meditation icon"/>
+    </section>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
