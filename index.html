@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <h1 class="white-text">✨ Self Care Center ✨</h1>
-    </header>
-    <main>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1 class="white-text">✨ Self Care Center ✨</h1>
+  </header>
+  <main>
     <section>
-      <h2 class="white-text">Which type of message?</h1>
-      <section class="white-box1">
-        <div class="radio-buttons">
-          <div class='affirm-selection'>
-            <input type="radio" id='affirmation' name='message-type' value="affirmation"/>
-            <label for="affirmation">affirmation</label>
-          <div class='mantra-selection'>
-            <input type="radio" id='mantra' name="message-type" value="mantra"/>
-            <label for="mantra">mantra</label>
+      <section class="home-view">
+        <h2 class="white-text">Which type of message?</h2>
+        <section class="white-box1">
+          <div class="radio-buttons">
+            <div class='affirm-selection'>
+              <input type="radio" id='affirmation' name='message-type' value="affirmation" />
+              <label for="affirmation">affirmation</label>
+              <div class='mantra-selection'>
+                <input type="radio" id='mantra' name="message-type" value="mantra" />
+                <label for="mantra">mantra</label>
+              </div>
+            </div>
           </div>
+          <div class="receive-message">
+            <button id='receive-btn' class='white-text' type='button'>Receive Message</button>
           </div>
-        </div>
-        <div class="receive-message">
-          <button id='receive-btn' class='white-text' type='button'>Receive Message</button>
-        </div>
+        </section>
+        <section class="white-box2">
+          <img class="meditate-icon" src="assets/meditate.svg" alt="Meditating Emoji/Icon">
+          <p class="message-pop-up hidden"></p>
+          <button type="button" class='white-text hidden' id="favorite-button">Favorite Message</button>
+          <button type="button" class='white-text hidden' id="view-favorites-button">View Favorites</button>
+        </section>
       </section>
     </section>
-    <section class="white-box2">
-      <img class="meditate"src="assets/meditate.svg" alt="Meditating Emoji/Icon">
-      <p class="message-pop-up hidden"></p>
-      <div>
-        <button type="button" class='white-text hidden' id="favorite-button">Favorite Message</button>
-      </div>
+    <section class="favorites-view hidden">
+      <h2 class="white-text">Favorites</h2>
+      <!-- create home button
+        create sub heading "Favorited Messages"
+       -->
     </section>
   </main>
   <script type="text/javascript" src="assets/messages.js"></script>
   <script type="text/javascript" src="main.js"></script>
-  </body>
+</body>
+
 </html>

@@ -15,6 +15,9 @@ html {
 h1 {
     margin: 25px;
 }
+/* #view-favorites-button {
+    display: block; */
+
 .hidden {
     display: none;
 }
@@ -32,7 +35,10 @@ h1 {
 .white-box2 {
     width: 62%;
     padding: 30px;
-
+    /* display: flex;
+    align-items: center;
+    flex-direction:column;
+    justify-content: space-around; */
     margin: auto;
 }
 
@@ -61,10 +67,10 @@ button {
     padding: 3px 20px;
     font-size: large;
 }
-.receive-button, .favorite-button {
+/* #receive-button, #favorite-button, #view-favorites-button {
     display: block;
-    padding: 10px;
-}
+    padding: 10px; */
+/* } */
 .radio-buttons {
     padding-top: 10px;
     padding-left: 30px;
