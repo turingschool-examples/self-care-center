@@ -1,8 +1,66 @@
-/* font-family: 'Quicksand', sans-serif;
-COLORS
-light-yellow - #f7e4bf;
-light-blue - #78a7c6;
-dark-blue - #134d71;
-white - #ffffff;
-black - #000000;
-*/
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    font-family: 'Quicksand', sans-serif;
+    background-image: linear-gradient(#134d71 25%, #78a7c6,  #f7e4bf);
+    height: 100vh;
+}
+
+h1 {
+    color: #ffffff;
+    margin: 10vh;
+}
+
+h2 {
+    color: #ffffff;    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    background-color: white;
+    height: 13vh;
+    width: 40vw;
+    border-radius: 10px;
+}
+
+div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2vh;
+}
+
+.message-button {
+    height: 3vh;
+    width: 3vh;
+}
+
+button {
+    color: white;
+    background-color: #134e73;
+    border: solid 1px black;
+    height: 5vh;
+    width: 20vh;
+    border-radius: 5px;
+}
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 20vh;
+    width: 120vh;
+    border-radius: 10px;
+    margin: 10vh;
+}
+
+.meditate-image {
+    height: 10vh;
+}
