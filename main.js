@@ -4,48 +4,42 @@
 
 // query selectors
 
-var affirmBtn = document.querySelector(".radio-button-A")
 
-var mantraBtn = document.querySelector("radio-button-M")
+var affirmationBtn = document.querySelector(".radio-button-a");
+var mantraBtn = document.querySelector(".radio-button-m");
+var receiveMessageBtn = document.querySelector(".receive-msg-button");
 
-var receiveMsgBtn = document.querySelector(".receive-msg-btn")
-
-var medImage = document.querySelector(".meditation-image")
-
-var message = document.querySelector(".message hidden")
-
-
+var medImage = document.querySelector(".meditation-image");
+var message = document.querySelector(".display-message");
 
 // event listeners
 
-receiveMsgBtn.addEventListener("click", displayRandomMessage)
-
-
-
-// functions/event handlers
+receiveMessageBtn.addEventListener("click", createDisplayMessage);
 
 function getRandomIndex(array) {
-    return Math.floor(Math.random() * array.length)
+  return Math.floor(Math.random() * array.length);
 }
 
-function displayRandomMessage() {
-    var affirmMsg = affirmations[getRandomIndex(affirmations)]
+function createDisplayMessage() {
 
-    var mantraMsg = mantras[getRandomIndex(mantras)]
+  var affirmationMsg = affirmations[getRandomIndex(affirmations)];
+  var mantraMsg = mantras[getRandomIndex(mantras)];
 
-    if (affirmMsg.checked) {
-        message.innerText = affirmMsg
-    } else if (mantraMsg.checked) {
-        message.innerText = mantraMsg
-    }
-    hideImage()
-    unhideMsg()
+    if (affirmationBtn.checked) {
+      message.innerText = affirmationMsg;
+  } else if (mantraBtn.checked) {
+      message.innerText = mantraMsg;
+  }
+
+  hideImg();
+  unhideMsg();
 }
 
-function hideImage() {
-    medImage.classList.add("hidden")
+function hideImg() {
+  medImage.classList.add('hidden');
 }
 
 function unhideMsg() {
-    message.classList.remove('hidden')
+  message.classList.remove('hidden');
 }
+
