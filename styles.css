@@ -90,3 +90,16 @@ svg {
     padding-top: 5px;
 }
 
+.submit {
+    color: white;
+    background-color: #134d71; 
+    border-radius: 10px;
+    font-size: 18px;
+    width: 100px;
+    margin-top: 5px;
+}
+
+.message-input {
+    width: 25em;
+    margin-top: 10px;
+}
