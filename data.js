@@ -13,6 +13,7 @@ var affirmations = [
     "I don't have to search for love when it's where I come from",
     "Trying to control the environment around me is keeping me from being deeply connected to myself"
 ];
+
 var mantras = [
     "I am enough",
     "The only constant is change",
@@ -24,7 +25,7 @@ var mantras = [
     "You have a choice. Find it.",
     "I accept myself as I am, where I am, and who I am",
     "I am supported by the Earth",
-    "I am on my side.",
+    "I am on my side",
     "I keep the promises that I make to myself",
     "I call back all of my energy. I release any energy that does not belong to me. I am safe and supported within myself."
 ];
