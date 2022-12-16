@@ -15,6 +15,9 @@ html {
 h1 {
     margin: 25px;
 }
+.hidden {
+    display: none;
+}
 .white-box1, .white-box2 {
     background-color: #ffffff;
     border-radius: 8px;
@@ -82,10 +85,6 @@ h2 {
     margin-top: 70px;
 }
 
-.message-pop-up {
-
-}
-
-.hidden {
-    display: none;
+p {
+    font-size: larger;
 }
