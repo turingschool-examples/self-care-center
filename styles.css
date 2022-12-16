@@ -80,6 +80,10 @@ svg {
     align-items: center;
 }
 
+.mantra-button-2 {
+    text-align: left;
+}
+
 .add-message {
     color: white;
     background-color: #134d71; 
