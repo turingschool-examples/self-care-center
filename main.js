@@ -20,13 +20,18 @@ var Mantras = ["Breathing in, I send myself love. Breathing out, I send love to 
 
 var receiveMessageButton = document.querySelector(".message-button")
 var yogi = document.querySelector(".dude")
-
-
+var affirmationButton = document.querySelector(".first-button")
+var mantraButton = document.querySelector(".second-button")
+var displaySaying = document.querySelector(".saying")
 
 receiveMessageButton.addEventListener('click', generateMessage)
 
 
 function generateMessage() {
+if (affirmationButton.checked) {
+  //i want to display a random affirmation from the stored array affirmations if this button is clicked //declare a variable set equal to that math function
+ displaySaying.innerText = `${}` //call that variable here
+}    
 yogi.classList.add("hidden")
 }
 
