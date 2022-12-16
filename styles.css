@@ -29,7 +29,6 @@ black - #000000;
       }
 
       .Affiration-Mantra-Box {
-        /* text-align: center; */
         margin: auto;
         background-color: #ffffff;
         border-radius:10px 10px 10px 10px; 
@@ -37,50 +36,52 @@ black - #000000;
         margin-bottom: 100px;
         width: 400px;
         height: 75px;
-        /* border: solid 1px white; */
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-content: center;
         font-family: 'Quicksand';
       }
 
+      .radio-button-box {
+        display: flex;
+        justify-content: space-evenly; 
+      }
+
       #button1-Affirmation {
-        /* display:inline-flex;
-        justify-content: left; */
-        text-align: right;
-        margin-right: 70px;
         font-family: 'Quicksand';
+        float: right;
+        padding-right:70px
+      }
+
+      .radio1{
+        padding-right: 70px;
+      }
+
+      .radio2 {
+        font-family: 'Quicksand';
+        float: left;
+        padding-right: 70px;
       }
 
       #button2-Mantra {
-        /* display:inline-flex;
-        justify-content: right; */
-        /* margin: 10px 5px 15px 20px;
-        line-height: 5px;
-        text-align: left; */
-        /* display:flex;
-        align-items: flex-end;
-        font-family: 'Quicksand'; */
-        margin-left: 70px;
-
+        font-family: 'Quicksand';
+        float: left;
+        padding-right:70px;
       }
   
       #receive-message-Butn { 
-        /* text-align: center; */
         background-color: #134d71;
         font-family: 'Quicksand';
         color: #ffffff;
-        margin-top: 20px;
-        margin-left: -210px;
-        width: 200px;
+        margin-left: 125px;
+        border-radius:5px 5px 5px 5px;
+        width: 150px;
         display: flex;
         justify-content: center;
         align-items: baseline
       } 
 
       .Meditation-box {
-        /* display:inline;
-        text-align: center; */
         margin:auto;
         margin-top: 90px;
         background-color: #ffffff;
