@@ -31,7 +31,9 @@ function showElement(element) {
 }
 
 function changeView() {
+    if (selectedType) {
     updateMessage();
     showElement(messageBox);
     hideElement(meditate);
+    }
 }
