@@ -17,6 +17,10 @@ html {
     height: 100vh;
 }
 
+.hidden {
+    display: none;
+}
+
 .titlefont {
     color: #ffffff;
 }

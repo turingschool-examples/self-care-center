@@ -11,7 +11,8 @@ var affirmations = [
     "I release attachment to by belief that the world should be different than it is right now.",
     "I have the expectation that things should be as they are",
     "I don't have to search for love when it's where I come from",
-    "Trying to control the environment around me is keeping me from being deeply connected to myself"
+    "Trying to control the environment around me is keeping me from being deeply connected to myself",
+    "What other people think of me is none of my business"
 ];
 
 var mantras = [
