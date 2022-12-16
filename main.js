@@ -19,18 +19,18 @@ var affirmationButton = document.querySelector(".first-button")
 var mantraButton = document.querySelector(".second-button")
 var displaySaying = document.querySelector(".saying")
 
-receiveMessageButton.addEventListener('click', generateMessage)
+receiveMessageButton.addEventListener("click", generateMessage)
 
 function getRandomIndex(array) {
-    var randomNumber = Math.floor(Math.random() * array.length);
+    return Math.floor(Math.random() * array.length);
 }
 
 function generateMessage() {
   if (affirmationButton.checked) {
-    displaySaying.innerText = Affirmations                      
+    displaySaying.innerText = Affirmations[getRandomIndex(Affirmations)]                  
     yogi.classList.add("hidden")
   } else if (mantraButton.checked) {
-    displaySaying.innerText = `${Mantras}`
+    displaySaying.innerText = Mantras[getRandomIndex(Mantras)]
     yogi.classList.add("hidden")
     } else {
         return alert("Please choose Affirmation or Mantra. Namaste. 🧘 ");
