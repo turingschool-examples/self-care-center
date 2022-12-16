@@ -1,21 +1,28 @@
-var logo = document.querySelector(".logo");
 var messageDiv = document.querySelector(".messagediv");
-var messageButton = document.querySelector(".button");
+var messageButton = document.querySelector("#recieve");
+var clearButton = document.querySelector("#clear");
 var radioButtons = document.querySelectorAll(".radio");
 
 messageButton.addEventListener("click", preventDefault);
 messageButton.addEventListener("click", displaySentiment);
+clearButton.addEventListener("click", resetView);
 
 function displaySentiment() {
     if(radioButtons[0].checked) {
-        hide(logo);
         randomAff = affirmations[getRandomIndex(affirmations)];
         messageDiv.innerText = randomAff; 
+        show(clearButton);
     } else if (radioButtons[1].checked) {
-        hide(logo);
         randomMantra = mantras[getRandomIndex(mantras)];
-        messageDiv.innerText = randomMantra; 
+        messageDiv.innerText = randomMantra;
+        show(clearButton);
     }
+};
+
+function resetView() {
+    hide(clearButton);
+    messageDiv.innerText = "";
+    messageDiv.innerHTML = `<img id ="logo" class="logo" src="assets/meditate.svg" alt="a pictogram of a person meditating"/>`;
 };
 
 function getRandomIndex(array) {
@@ -23,9 +30,13 @@ function getRandomIndex(array) {
 };
 
 function preventDefault(event) {
-    event.preventDefault()
+    event.preventDefault();
 };
 
 function hide(element){
     element.classList.add("hidden");
+};
+
+function show(element) {
+    element.classList.remove("hidden");
 };
