@@ -16,14 +16,12 @@ function displaySentiment() {
     if(radioButtons[0].checked) {
         randomAff = affirmations[getRandomIndex(affirmations)];
         messageDiv.innerText = randomAff; 
-        show(clearButton);
-        show(deleteButton);
     } else if (radioButtons[1].checked) {
         randomMantra = mantras[getRandomIndex(mantras)];
         messageDiv.innerText = randomMantra;
-        show(clearButton);
-        show(deleteButton);
     }
+    show(clearButton);
+    show(deleteButton);
 };
 
 function resetView() {
@@ -70,5 +68,5 @@ function deleteMessage() {
             mantras.splice(i, 1);
             }
         } 
-    };
+    }
 };
