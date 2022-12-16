@@ -12,13 +12,15 @@ black - #000000;
     font-family: 'Quicksand', serif;
 }
 
+
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 100vh;
     margin: 0;
-    background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+    background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+    background-attachment: fixed;
+    min-height: 100vh;
+    max-height: 100vh;
 }
 
 button {
@@ -35,6 +37,7 @@ button {
 /* Header */
 header {
     display: flex;
+    flex-shrink: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -62,7 +65,6 @@ header button:hover{
 
 /* Sections */
 .main-section { 
-    flex-grow: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,15 +129,11 @@ aside img {
 
 /* Collection Section */
 .collection-section {
-    margin-top: 40px;
     display: flex;
-    justify-items: stretch;
-    padding-left: 70px;
-    padding-right: 70px;
-    padding-bottom: 70px;
-    flex-grow: 2;
-    flex-shrink: 2;
-    /* max-height: 500px; */
+    min-height: 500px;
+    max-height: 1000px;
+    align-content: stretch;
+    padding: 70px;
 }
 
 .message-list {
@@ -146,30 +144,32 @@ aside img {
     gap: 12px;
     padding-left: 12px;
     padding-right: 12px;
-    flex-shrink: 1;
 }
 
 #affirmation-list {
     direction: rtl;
 }
 
+.collection-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 18%;
+}
+
 .single-message {
+    height: 70px;
+    flex-shrink: 0;
+    flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
-    height: 70px;
     cursor: grab; 
-}
-
-.collection-center {
-    display: flex;
-    gap: 80px;
-    flex-direction: column;
-    align-items: center;
-    flex-basis: 18%;
+    direction: ltr;
 }
 
 .collection-center > div {
@@ -181,19 +181,19 @@ aside img {
 .collection-center h2 {
     color: white;
     text-align: center;
+    font-size: 20px;
     margin: 0px;
     margin-bottom: -10px;
 }
 
 .collection-center h3 {
-    font-size: 50px;
+    font-size: 38px;
     text-align: center;
     margin: 0px;
-    margin-bottom: -10px;
 }
 
 .collection-center button {
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
     margin-top: 16px;
 }
@@ -208,7 +208,7 @@ aside img {
 .create-message-form {
     margin-top: 10px;
     padding: 10px;
-    height: 200px;
+    height: 150px;
     width: 100%;
     display: flex;
     flex-direction: column;
