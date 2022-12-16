@@ -3,17 +3,18 @@ var messageButton = document.querySelector("#recieve");
 var clearButton = document.querySelector("#clear");
 var deleteButton = document.querySelector("#delete");
 var radioButtons = document.querySelectorAll(".radio");
+var deleteMessageDiv = document.querySelector(".delete-message");
 
 messageButton.addEventListener("click", preventDefault);
 messageButton.addEventListener("click", displaySentiment);
 clearButton.addEventListener("click", resetView);
-deleteButton.addEventListener("onmouseover", showDeleteMessage);
-deleteButton.addEventListener("click", deleteMessage)
+deleteButton.addEventListener("mouseover", showDeleteMessage);
+deleteButton.addEventListener("mouseout", hideDeleteMessage);
+deleteButton.addEventListener("click", deleteMessage);
 
 function displaySentiment() {
     if(radioButtons[0].checked) {
         randomAff = affirmations[getRandomIndex(affirmations)];
-        
         messageDiv.innerText = randomAff; 
         show(clearButton);
         show(deleteButton);
@@ -27,6 +28,7 @@ function displaySentiment() {
 
 function resetView() {
     hide(clearButton);
+    hide(deleteButton);
     messageDiv.innerText = "";
     messageDiv.innerHTML = `<img id ="logo" class="logo" src="assets/meditate.svg" alt="a pictogram of a person meditating"/>`;
 };
@@ -48,8 +50,12 @@ function show(element) {
 };
 
 function showDeleteMessage() {
-    bottomButtonsDiv.innerText = "testing, testing, 1, 2, 3";
+   show(deleteMessageDiv);
 };
+
+function hideDeleteMessage() {
+    hide(deleteMessageDiv);
+ };
 
 function deleteMessage() {
     if(radioButtons[0].checked) {
