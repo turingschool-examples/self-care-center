@@ -7,10 +7,12 @@ var mantraRadio = document.querySelector('#mantra-selector')
 var textBoxTwo = document.querySelector('.textBox2')
 var meditationIcon = document.querySelector('img')
 var messageBox = document.querySelector('.message')
-var savedMessageSection = document.querySelector('.saved-messages')
+var savedMessageSection = document.querySelector('.view-saved-messages')
 var saveMessageButton = document.querySelector('#view-saved-messages')
 var h2 = document.querySelector('.h2')
 var mainPage = document.querySelector('#main-page')
+var image = document.querySelector('.img')
+var favoriteMessages = document.querySelector('.saved-messages')
 
 var message;
 
@@ -25,6 +27,7 @@ receiveMessageButton.addEventListener('click', function() {
 
 saveMessageButton.addEventListener('click', showSavedMessages)
 
+
 // Event Handlers -
 
 function displayMessage() {
@@ -37,13 +40,13 @@ function displayMessage() {
         textBoxTwo.innerHTML = `
         <p>${message}</p>`
         return
-    } textBoxTwo.innerHTML = `
+    }textBoxTwo.innerHTML = `
     <section>
         <p>${message}</p>
-        <button class='button-format'>Save Message</button>
+        <button class='button-format' id='favorite-button'>Save Message</button>
     </section>`
 
-    var favoriteButton = document.querySelector('.favorite-button')
+    var favoriteButton = document.querySelector('#favorite-button')
     console.log(favoriteButton)
     favoriteButton.addEventListener('click', function() {
         saveMessage(message)})
@@ -51,13 +54,30 @@ function displayMessage() {
 
 function saveMessage(message) {
     savedMessages.push(message)
-}
+    }
 
-var image = document.querySelector('.img')
+function returnHome() {
+    hide(savedMessageSection)
+    show(mainPage)
+}
 
 function showSavedMessages() {
     show(savedMessageSection)
     hide(mainPage)
+    displaySavedMessages()
+    var homeButton = document.querySelector('#home-button')
+    homeButton.addEventListener('click', function(){
+        returnHome()})
+    }
+
+function displaySavedMessages() {
+    favoriteMessages.innerHTML = '';
+    for (var i = 0; i < savedMessages.length; i++) {
+        favoriteMessages.innerHTML += `
+        <p>${savedMessages[i]}</p>`
+        console.log(savedMessages[i])
+        console.log(savedMessages)
+    } show(favoriteMessages)
 }
 
 // Misc. Functions -
