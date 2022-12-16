@@ -13,15 +13,12 @@ black - #000000; */
 
 html {
     background: content-box linear-gradient( #134d71 15%, #78a7c6, #f7e4bf); 
-    /* adjust gradient to be more blue at the top than yellow at the bottom */
     background-size: cover;
     height: 100vh;
 }
 
 .titlefont {
     color: #ffffff;
-    /* margin: auto; */
-    /* padding: 10px; */
 }
 
 .radiodiv {
@@ -29,19 +26,13 @@ html {
     width: 35%;
     block-size: 80px;
     border-radius: 10px;
-    /* margin: auto; */
-    /* padding: 10px 0px 0px 0px; */
-    /* display: flex; */
 }
 
 form {
     font-style: italic;
     text-align: center;
-    /* display: flex; */
     align-items: flex-end;
-    /* align-items: center;  */
     justify-items: center;
-    /* border: solid 10px #134d71; */
 }
 
 .button {
@@ -51,8 +42,9 @@ form {
     border-radius: 5px;
     color: #ffffff;
     font-size: 16px;
-    /* margin-right: 50px; */
     text-align: center;
+    position: relative;
+    margin-top: 30px;
 }
 
 ul {
@@ -61,12 +53,11 @@ ul {
 
 .affirmations {
     float: left;
-    padding: 0px 0px 0px 20px;
 }
 
 .mantras {
     float: right;
-    padding: 0px 20px 20px 20px;
+    padding: 0px 50px 20px 20px;
 }
 
 main {  /* aligns and centers the two divs and message */
@@ -81,20 +72,14 @@ main {  /* aligns and centers the two divs and message */
     block-size: 125px;
     border-radius: 10px;
     padding-top: 50px;
-    /* margin: auto; */
     display: flex;
     justify-content: center;
-    /* align-content: center; */
 }
 
 .logo {
-    /* margin: auto; */
     height: 70px;
     width: 70px;
 }
 
-/* for when i figure out how to make a box: border-radius: 30px;
-font-style: italic;
- */
 
 
