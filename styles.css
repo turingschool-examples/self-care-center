@@ -12,11 +12,10 @@ black - #000000;
   color: white;
 }
 
-
 html {
-  background: linear-gradient(#134d71,#78a7c6,#f7e4bf);
-  height: 940px;
-}
+  background: linear-gradient(180deg,#134d71 13%,#78a7c6 30%,#f7e4bf);
+  height: 950px;
+ }
 
 h1 {
     padding:50px ; 
@@ -27,7 +26,6 @@ h1 {
 label {
   color: black;
 }
-
 
 .small-header { 
   display:flex;
@@ -46,10 +44,10 @@ label {
   align-items: center;
  }
 
- .container-generator {
+ .three-buttons {
   background-color: white;
-  width:25%;
-  height: 90px;
+  width:28%;
+  height: 99px;
   border-radius: 10px;
   display:flex;
   flex-direction: column;
@@ -61,6 +59,7 @@ label {
   display:flex;
   justify-content: space-evenly;
   align-items: center;
+  float: left;
  } 
 
   .receive-message-button {
@@ -79,7 +78,7 @@ label {
   background-color: white;
   width: 55%;
   border-radius: 10px;
-  height:200px;
+  height:175px;
   margin: 100px;
   display:flex;
   justify-content: center;
@@ -87,6 +86,9 @@ label {
  } 
 
 
+.saying {
+  color:black
+}
 
 
  

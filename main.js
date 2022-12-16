@@ -11,24 +11,33 @@ var Mantras = ["Breathing in, I send myself love. Breathing out, I send love to 
 "Onward and upward.", " I am the sky, the rest is weather."]
 
 
-//user chooses option
-//clicks receive message -> eventlistener
-
-//user see random message from correct array --> random generator
-//inside the container of the meditating dude, meditating dude dissapears
 
 
 var receiveMessageButton = document.querySelector(".message-button")
 var yogi = document.querySelector(".dude")
+var affirmationButton = document.querySelector(".first-button")
+var mantraButton = document.querySelector(".second-button")
+var displaySaying = document.querySelector(".saying")
 
+receiveMessageButton.addEventListener("click", generateMessage)
 
-
-receiveMessageButton.addEventListener('click', generateMessage)
-
+function getRandomIndex(array) {
+    return Math.floor(Math.random() * array.length);
+}
 
 function generateMessage() {
-yogi.classList.add("hidden")
-}
+  if (affirmationButton.checked) {
+    displaySaying.innerText = Affirmations[getRandomIndex(Affirmations)]                  
+    yogi.classList.add("hidden")
+  } else if (mantraButton.checked) {
+    displaySaying.innerText = Mantras[getRandomIndex(Mantras)]
+    yogi.classList.add("hidden")
+    } else {
+        return alert("Please choose Affirmation or Mantra. Namaste. 🧘 ");
+    }                                                         
+} 
+
+
 
 //1. Receive button should be locked unless radio dial button has a value
 //2. Research randomized code from romcom. set to a variable. tha variable will be current mantra/affirma
