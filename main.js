@@ -8,15 +8,17 @@ messageButton.addEventListener("click", preventDefault);
 messageButton.addEventListener("click", displaySentiment);
 
 function displaySentiment() {
-    show(clearButton);
+    
     if(radioButtons[0].checked) {
         hide(logo);
         randomAff = affirmations[getRandomIndex(affirmations)];
         messageDiv.innerText = randomAff; 
+        show(clearButton);
     } else if (radioButtons[1].checked) {
         hide(logo);
         randomMantra = mantras[getRandomIndex(mantras)];
-        messageDiv.innerText = randomMantra; 
+        messageDiv.innerText = randomMantra;
+        show(clearButton);
     }
 };
 
