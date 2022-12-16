@@ -21,13 +21,16 @@ favoriteBtn.addEventListener('click', saveMessage);
 viewFavoritesBtn.addEventListener('click', showFavoritesPage);
 
 function showFavoritesPage() {
-    hideElement(homeView);
-    showElement(favoritesView);
-    hideElement(favoriteBtn);
-    hideElement(messageBox);
-    saveMessage();
+    if (favoriteMantras.length || favoriteAffirmations.length) {
+        hideElement(homeView);
+        showElement(favoritesView);
+        hideElement(favoriteBtn);
+        hideElement(messageBox);
+    } else  {
+        alert('💛 You haven\'t favorited any messages yet 💛')
+    }
     //add home button
-    //show meditateIcon?
+    //show meditateIcon at bottom
 }
 
 function saveMessage() {
