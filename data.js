@@ -20,7 +20,7 @@ var mantras = [
     "The only constant is change",
     "I am the sky and the rest is weather",
     "Emotions and thoughts are just passing through",
-    "I commit to my beliefs that support my expansion",
+    "I commit to beliefs that support my expansion",
     "Remember: you have toes. Wiggle them.",
     "There is no wisdom in comparing myself to others",
     "You have a choice. Find it.",
