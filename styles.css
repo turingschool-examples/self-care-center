@@ -12,11 +12,10 @@ black - #000000;
   color: white;
 }
 
-
 html {
-  background: linear-gradient(#134d71,#78a7c6,#f7e4bf);
-  height: 940px;
-}
+  background: linear-gradient(180deg,#134d71 13%,#78a7c6 30%,#f7e4bf);
+  height: 950px;
+ }
 
 h1 {
     padding:50px ; 
@@ -27,7 +26,6 @@ h1 {
 label {
   color: black;
 }
-
 
 .small-header { 
   display:flex;
@@ -46,7 +44,7 @@ label {
   align-items: center;
  }
 
- .container-generator {
+ .three-buttons {
   background-color: white;
   width:25%;
   height: 90px;
@@ -89,6 +87,8 @@ label {
 
 
 
+
+ 
  
 .hidden{
   display: none;
