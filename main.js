@@ -9,7 +9,6 @@ messageButton.addEventListener("click", displaySentiment);
 clearButton.addEventListener("click", resetView);
 
 function displaySentiment() {
-    
     if(radioButtons[0].checked) {
         hide(logo);
         randomAff = affirmations[getRandomIndex(affirmations)];
@@ -24,6 +23,7 @@ function displaySentiment() {
 };
 
 function resetView() {
+    hide(clearButton);
     messageDiv.innerText = "";
     messageDiv.innerHTML = `<img id ="logo" class="logo" src="assets/meditate.svg" alt="a pictogram of a person meditating"/>`
 };
