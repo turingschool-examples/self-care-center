@@ -7,59 +7,60 @@ white - #ffffff;
 black - #000000;
 */
 
+*{
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+
 html {
   background: linear-gradient(#134d71,#78a7c6,#f7e4bf);
-  height: 950px;
+  height: 940px;
 }
 
 h1 {
-    font-family: sans-serif;
     padding:50px ; 
     border:50px;
-    text-align: center;
-    color: white ;
-    
+    text-align: center;    
 }
 
-.small-header {
-    font-family: sans-serif;
-    color: white;
-    display:flex;
-    justify-content: center;
+label {
+  color: black;
 }
 
- #dude {
-    height: 100px;
-    width: 100px;    
+
+.small-header { 
+  display:flex;
+  justify-content: center;
+}
+
+ .dude {
+   height: 100px;
+   width: 100px;    
  }
-
- 
-
 
  .parent {
   display:flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
  }
 
  .container-generator {
   background-color: white;
-  width:38%;
-  height: 130px;
+  width:25%;
+  height: 90px;
   border-radius: 10px;
   display:flex;
   flex-direction: column;
-  justify-content: space-around;
-
+  justify-content: space-evenly;
  }
  
   .two-buttons {
-  font-family: 'Quicksand';
+  font-style: italic;
   display:flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-
  } 
 
   .receive-message-button {
@@ -71,11 +72,8 @@ h1 {
   background-color:#134d71;
   font-size: large;
   color: white; 
-  font-family: 'Quicksand';
   border-radius: 10px;
  }
-
-
 
  .meditate {
   background-color: white;
@@ -89,5 +87,10 @@ h1 {
  } 
 
 
+
+
  
+.hidden{
+  display: none;
+}
 

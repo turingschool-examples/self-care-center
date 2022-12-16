@@ -10,4 +10,29 @@ var Mantras = ["Breathing in, I send myself love. Breathing out, I send love to 
 "I love myself.", "I am present now.", "Inhale the future, exhale the past.", "This too shall pass.", "Yesterday is not today.", "The only constant is change.", 
 "Onward and upward.", " I am the sky, the rest is weather."]
 
-    
+
+//user chooses option
+//clicks receive message -> eventlistener
+
+//user see random message from correct array --> random generator
+//inside the container of the meditating dude, meditating dude dissapears
+
+
+var receiveMessageButton = document.querySelector(".message-button")
+var yogi = document.querySelector(".dude")
+
+
+
+receiveMessageButton.addEventListener('click', generateMessage)
+
+
+function generateMessage() {
+yogi.classList.add("hidden")
+}
+
+//1. Receive button should be locked unless radio dial button has a value
+//2. Research randomized code from romcom. set to a variable. tha variable will be current mantra/affirma
+//3. If (affirmation then choose me a random on button click
+//4. If (mantra then chose me a random on a button click
+// For loop
+//5.will need an anonymous function in the event listener so you can run other functions inside of it. 
