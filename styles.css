@@ -63,7 +63,7 @@ svg {
 }
 
 .hidden {
-    visibility: hidden;
+    display: none;
 }
 
 .message-box {
