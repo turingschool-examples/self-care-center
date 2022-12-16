@@ -1,12 +1,14 @@
 var logo = document.querySelector(".logo");
 var messageDiv = document.querySelector(".messagediv");
-var messageButton = document.querySelector(".button");
+var messageButton = document.querySelector("#recieve");
+var clearButton = document.querySelector("#clear");
 var radioButtons = document.querySelectorAll(".radio");
 
 messageButton.addEventListener("click", preventDefault);
 messageButton.addEventListener("click", displaySentiment);
 
 function displaySentiment() {
+    show(clearButton);
     if(radioButtons[0].checked) {
         hide(logo);
         randomAff = affirmations[getRandomIndex(affirmations)];
@@ -29,3 +31,9 @@ function preventDefault(event) {
 function hide(element){
     element.classList.add("hidden");
 };
+
+function show(element) {
+    element.classList.remove("hidden");
+};
+
+//event listener: when button is clicked the message should disappear and the logo should reappear
