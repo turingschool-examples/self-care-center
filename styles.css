@@ -17,6 +17,10 @@ html {
     height: 100vh;
 }
 
+.hidden {
+    display: none;
+}
+
 .titlefont {
     color: #ffffff;
 }
@@ -71,9 +75,10 @@ main {  /* aligns and centers the two divs and message */
     width: 60%;
     block-size: 125px;
     border-radius: 10px;
-    padding-top: 50px;
+    /* padding-top: 50px; */
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .logo {
