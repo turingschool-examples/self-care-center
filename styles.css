@@ -9,22 +9,56 @@ black - #000000; */
     font-family: 'Quicksand', sans-serif;
     box-sizing: border-box;
 }
+
 html {
     text-align: center;
 }
+
+body {
+    background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+    height: 100vh;
+    margin: 0;
+    padding-top: 1px;
+}
+
 h1 {
     margin: 25px;
 }
-/* #view-favorites-button {
+
+h2 {
+    margin-bottom: 5px;
+    margin-top: 70px;
+}
+
+p {
+    font-size: larger;
+}
+
+input {
+    display: inline-block;
+}
+
+button {
+    background: #134d71;
+    border: 0;
+    border-radius: 6px;
+    padding: 3px 20px;
+    font-size: large;
+}
+
+    /* #view-favorites-button {
     display: block; */
 
 .hidden {
     display: none;
 }
-.white-box1, .white-box2 {
+
+.white-box1,
+.white-box2 {
     background-color: #ffffff;
     border-radius: 8px;
 }
+
 .white-box1 {
     width: 43%;
     padding: 10px;
@@ -32,6 +66,7 @@ h1 {
     margin-bottom: 100px;
     min-width: 474px;
 }
+
 .white-box2 {
     width: 62%;
     padding: 30px;
@@ -42,35 +77,15 @@ h1 {
     margin: auto;
 }
 
-input {
-    display: inline-block;  
-}
-
-body {
-    background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
-    height: 100vh;
-    margin: 0;
-    padding-top: 1px;
-}
-
-img {
-    width: 70px;
-    height: auto; 
-}
 .white-text {
     color: #ffffff;
 }
-button {
-    background: #134d71;
-    border: 0;
-    border-radius: 6px;
-    padding: 3px 20px;
-    font-size: large;
-}
+
 /* #receive-button, #favorite-button, #view-favorites-button {
     display: block;
     padding: 10px; */
 /* } */
+
 .radio-buttons {
     padding-top: 10px;
     padding-left: 30px;
@@ -78,19 +93,19 @@ button {
     font-style: italic;
     font-size: large;
 }
+
 .affirm-selection {
     margin-right: 40px;
     display: inline-block;
 }
+
 .mantra-selection {
     margin-left: 170px;
     display: inline-block;
 }
-h2 {
-    margin-bottom: 5px;
-    margin-top: 70px;
+
+.meditate-icon {
+    width: 70px;
+    height: auto;
 }
 
-p {
-    font-size: larger;
-}
