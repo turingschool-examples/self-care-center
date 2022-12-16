@@ -46,7 +46,7 @@ div {
 }
 
 button {
-    font-size: 3vh;
+    font-size: 2vh;
     color: white;
     background-color: #134e73;
     border: solid 1px black;
@@ -70,4 +70,8 @@ main {
 
 .meditate-image {
     height: 10vh;
+}
+
+.hidden {
+    display: none;
 }
