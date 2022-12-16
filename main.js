@@ -53,7 +53,7 @@ function showDeleteMessage() {
 
 function hideDeleteMessage() {
     hide(deleteMessageDiv);
- };
+};
 
 function deleteMessage() {
     if(radioButtons[0].checked) {
