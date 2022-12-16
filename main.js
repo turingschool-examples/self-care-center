@@ -8,11 +8,11 @@ var favoriteBtn = document.querySelector('#favorite-button');
 var homeView = document.querySelector('.home-view');
 var favoritesView = document.querySelector('.favorites-view');
 var viewFavoritesBtn = document.querySelector('#view-favorites-button');
+var affirmMessage = document.querySelector('.fav-affirm-msg');
+var mantraMessage = document.querySelector('.fav-mantra-msg');
 var currentMessage;
 var favoriteAffirmations = [];
 var favoriteMantras = [];
-//create favorite button var and on html
-//once favoriteBtn has been clicked, viewFavoritesBtn appears
 
 affirmRadio.addEventListener('click', changeSelection);
 mantraRadio.addEventListener('click', changeSelection);
@@ -26,13 +26,30 @@ function showFavoritesPage() {
         showElement(favoritesView);
         hideElement(favoriteBtn);
         hideElement(messageBox);
-    } else  {
+        showFavoriteMessages();
+    } else {
         alert('💛 You haven\'t favorited any messages yet 💛')
     }
-    //add home button
-    //show meditateIcon at bottom
 }
 
+function showFavoriteMessages() {
+    affirmMessage.innerText = '';
+    mantraMessage.innerText = '';
+    if (favoriteAffirmations.length) {
+        showFavAffirmations(affirmMessage, favoriteAffirmations);
+    }
+    if (favoriteMantras.length) {
+        showFavAffirmations(mantraMessage, favoriteMantras);
+    }
+}
+
+function showFavAffirmations(element, favoriteMessages) {
+    for (var i = 0; i < favoriteMessages.length; i++) {
+        element.innerHTML += `<p>${favoriteMessages[i]}</p>`;
+    }
+}
+
+//remove alert when saving message but show some feedback
 function saveMessage() {
     var selectedMessage = document.querySelector('.message-pop-up').innerText;
     if (selectedType === "affirmation") {

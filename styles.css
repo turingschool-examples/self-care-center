@@ -30,10 +30,10 @@ h2 {
     margin-top: 70px;
 }
 
-p {
-    font-size: larger;
-    
+h3 {
+    font-weight: lighter;
 }
+
 
 input {
     display: inline-block;
@@ -87,10 +87,6 @@ button {
     color: #ffffff;
 }
 
-/* #receive-button, #favorite-button, #view-favorites-button {
-    display: block;
-    padding: 10px; */
-/* } */
 
 .radio-buttons {
     padding-top: 10px;
@@ -110,12 +106,22 @@ button {
     display: inline-block;
 }
 
-.fav-affirm-msg {
-  
-}
-
 .meditate-icon {
     width: 70px;
     height: auto;
 }
+
+.meditate-icon-fav {
+    width: 30px;
+    height: auto;
+}
+#home-btn {
+    margin-top: 10px;
+}
+
+.fav-affirm-msg,
+.fav-mantra-msg {
+    font-size: medium;
+}
+
 
