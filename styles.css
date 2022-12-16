@@ -26,35 +26,43 @@ body {
 
 /* ~~~~~~~~~~~~~~~~~ Text Box 1 ~~~~~~~~~~~~~~~~~*/
 
+#view-saved-messages {
+    background-color: #f7e4bf;
+    color:#134d71
+}
+
 h2 {
     margin-top: 80px;
     text-align: center;
     color: #ffffff
-    
 }
 
 .textBox1 {
     margin: auto;
-   height: 100px;
-   width: 530px;
-   background: #ffffff;
-   border-radius: 10px;
-   margin-bottom: 75px;
+    height: 100px;
+    width: 530px;
+    background: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 75px;
 }
 
 form {
     padding-top: 15px;
-    display:flex;
-    justify-content: space-around;
+    display: flex;
+    justify-content: center;
     font-style: italic;
 }
 
-button {
+#mantra-selector {
+    margin-left: 15vh;
+}
+
+.button-format {
     width:185px;
     font-size: 17px;
     border-width: 0px;
     background-color: #134d71;
-    color:#ffffff;
+    color:#f7e4bf;
     text-align: center;
     margin: auto;
     margin-top: 27px;
@@ -75,6 +83,7 @@ button {
     width: 800px;
     background: #ffffff;
     border-radius: 10px;
+    font-size: 24px;
 }
 
 .textBox2 > img {
@@ -83,12 +92,16 @@ button {
     width: 80px;
 }
 
-.message {
+.favorite-button {
     display: flex;
-    font-size: 24px;
-    align-items: center;
+    margin-bottom: 25px;
+    margin: auto;
+    width: 100px;
+    background-color:#f7e4bf;
+    border-radius: 5px;
+    border-width: 0px;
+    color: #134d71;
 }
-
 
 /* font-family: 'Quicksand', sans-serif;
 COLORS

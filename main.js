@@ -1,80 +1,75 @@
-// Step 1: create a way to find a random array element from the data file
-
-var mantras = [
-    'Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.',
-    'Don’t let yesterday take up too much of today.',
-    'Every day is a second chance.',
-    'Tell the truth and love everyone.',
-    'I am free from sadness.',
-    'I am enough.',
-    'In the beginning it is you, in the middle it is you and in the end it is you.',
-    'I love myself.',
-    'I am present now.',
-    'Inhale the future, exhale the past.',
-    'This too shall pass.',
-    'Yesterday is not today.',
-    'The only constant is change.',
-    'Onward and upward.',
-    'I am the sky, the rest is weather.'
-]
-
-var affirmations = [
-    'I forgive myself and set myself free.',
-    'I believe I can be all that I want to be.',
-    'I am in the process of becoming the best version of myself.',
-    'I have the freedom & power to create the life I desire.',
-    'I choose to be kind to myself and love myself unconditionally.',
-    'My possibilities are endless.',
-    'I am worthy of my dreams.',
-    'I am enough.',
-    'I deserve to be healthy and feel good.',
-    'I am full of energy and vitality and my mind is calm and peaceful.',
-    'Every day I am getting healthier and stronger.',
-    'I honor my body by trusting the signals that it sends me.',
-    'I manifest perfect health by making smart choices.'
-]
-
 // Variables -
 
-var receiveMessageButton = document.querySelector('button')
-
-var affirmationRadio = document.querySelector('.affirmation-radio')
-var mantraRadio = document.querySelector('.mantra-radio')
+var receiveMessageButton = document.querySelector('#receive-message-button')
+var textBoxOne = document.querySelector('.textBox1')
+var affirmationRadio = document.querySelector('#affirmation-selector')
+var mantraRadio = document.querySelector('#mantra-selector')
 var textBoxTwo = document.querySelector('.textBox2')
 var meditationIcon = document.querySelector('img')
 var messageBox = document.querySelector('.message')
+var savedMessageSection = document.querySelector('.saved-messages')
+var saveMessageButton = document.querySelector('#view-saved-messages')
+var h2 = document.querySelector('.h2')
+var mainPage = document.querySelector('#main-page')
 
 var message;
+
+var savedMessages= [];
+
 
 // Event Listeners -
 
 receiveMessageButton.addEventListener('click', function() {
-    locateSentence()
-    displaySentence(message)
+    displayMessage()
 })
+
+saveMessageButton.addEventListener('click', showSavedMessages)
 
 // Event Handlers -
 
-function displaySentence(message) {
-    textBoxTwo.innerHTML = `
-    <section class='message'>${message}</section>`
-}
-
-function locateSentence() {
+function displayMessage() {
     if (affirmationRadio.checked === true) {
         message = affirmations[getRandomIndex(affirmations)];
-        console.log(message)
-        return message;
     } else if (mantraRadio.checked === true) {
         message = mantras[getRandomIndex(mantras)];
-        return message;
     } else {
         message = 'Please select a message option!'
-    }
+        textBoxTwo.innerHTML = `
+        <p>${message}</p>`
+        return
+    } textBoxTwo.innerHTML = `
+    <section>
+        <p>${message}</p>
+        <button class='button-format'>Save Message</button>
+    </section>`
+
+    var favoriteButton = document.querySelector('.favorite-button')
+    console.log(favoriteButton)
+    favoriteButton.addEventListener('click', function() {
+        saveMessage(message)})
+}
+
+function saveMessage(message) {
+    savedMessages.push(message)
+}
+
+var image = document.querySelector('.img')
+
+function showSavedMessages() {
+    show(savedMessageSection)
+    hide(mainPage)
 }
 
 // Misc. Functions -
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length)
+}
+
+function show(element) {
+    element.classList.remove('hidden')
+}
+
+function hide(element) {
+    element.classList.add('hidden')
 }
