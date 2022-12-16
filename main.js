@@ -6,6 +6,7 @@ var radioButtons = document.querySelectorAll(".radio");
 
 messageButton.addEventListener("click", preventDefault);
 messageButton.addEventListener("click", displaySentiment);
+clearButton.addEventListener("click", resetView);
 
 function displaySentiment() {
     
@@ -20,6 +21,11 @@ function displaySentiment() {
         messageDiv.innerText = randomMantra;
         show(clearButton);
     }
+};
+
+function resetView() {
+    messageDiv.innerText = "";
+    messageDiv.innerHTML = `<img id ="logo" class="logo" src="assets/meditate.svg" alt="a pictogram of a person meditating"/>`
 };
 
 function getRandomIndex(array) {
