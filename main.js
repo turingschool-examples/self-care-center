@@ -1,10 +1,10 @@
 var selectedType;
-
 var messageBox = document.querySelector('.message-pop-up');
 var receiveBtn = document.querySelector('#receive-btn');
 var meditate = document.querySelector('.meditate');
 var affirmRadio = document.querySelector('#affirmation');
 var mantraRadio = document.querySelector('#mantra');
+var favoriteBtn = document.querySelector('#favorite-button');
 
 affirmRadio.addEventListener('click', changeSelection);
 mantraRadio.addEventListener('click', changeSelection);
@@ -35,5 +35,6 @@ function changeView() {
     updateMessage();
     showElement(messageBox);
     hideElement(meditate);
+    showElement(favoriteBtn);
     }
 }
