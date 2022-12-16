@@ -169,6 +169,7 @@ aside img {
     padding-left: 20px;
     padding-right: 20px;
     cursor: grab; 
+    direction: ltr;
 }
 
 .collection-center > div {
@@ -189,11 +190,11 @@ aside img {
     font-size: 38px;
     text-align: center;
     margin: 0px;
-    margin-bottom: -10px;
 }
 
 .collection-center button {
-    font-size: 20px;
+    font-size: 18px;
+    text-align: center;
     margin-top: 16px;
 }
 
