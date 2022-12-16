@@ -10,16 +10,42 @@ var mantraBtn = document.querySelector("radio-button-M")
 
 var receiveMsgBtn = document.querySelector(".receive-msg-btn")
 
-var meditationImage = document.querySelector("meditation-image")
+var medImage = document.querySelector(".meditation-image")
 
+var message = document.querySelector(".message hidden")
 
 
 
 // event listeners
 
-
-
+receiveMsgBtn.addEventListener("click", displayRandomMessage)
 
 
 
 // functions/event handlers
+
+function getRandomIndex(array) {
+    return Math.floor(Math.random() * array.length)
+}
+
+function displayRandomMessage() {
+    var affirmMsg = affirmations[getRandomIndex(affirmations)]
+
+    var mantraMsg = mantras[getRandomIndex(mantras)]
+
+    if (affirmMsg.checked) {
+        message.innerText = affirmMsg
+    } else if (mantraMsg.checked) {
+        message.innerText = mantraMsg
+    }
+    hideImage()
+    unhideMsg()
+}
+
+function hideImage() {
+    medImage.classList.add("hidden")
+}
+
+function unhideMsg() {
+    message.classList.remove('hidden')
+}
