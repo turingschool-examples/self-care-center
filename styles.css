@@ -9,35 +9,9 @@ black - #000000; */
     font-family: 'Quicksand', sans-serif;
     box-sizing: border-box;
 }
+
 html {
     text-align: center;
-}
-h1 {
-    margin: 25px;
-}
-.hidden {
-    display: none;
-}
-.white-box1, .white-box2 {
-    background-color: #ffffff;
-    border-radius: 8px;
-}
-.white-box1 {
-    width: 43%;
-    padding: 10px;
-    margin: auto;
-    margin-bottom: 100px;
-    min-width: 474px;
-}
-.white-box2 {
-    width: 62%;
-    padding: 30px;
-
-    margin: auto;
-}
-
-input {
-    display: inline-block;  
 }
 
 body {
@@ -47,13 +21,24 @@ body {
     padding-top: 1px;
 }
 
-img {
-    width: 70px;
-    height: auto; 
+h1 {
+    margin: 25px;
 }
-.white-text {
-    color: #ffffff;
+
+h2 {
+    margin-bottom: 5px;
+    margin-top: 70px;
 }
+
+h3 {
+    font-weight: lighter;
+}
+
+
+input {
+    display: inline-block;
+}
+
 button {
     background: #134d71;
     border: 0;
@@ -61,10 +46,48 @@ button {
     padding: 3px 20px;
     font-size: large;
 }
-.receive-button {
-    display: block;
-    padding: 10px;
+
+    /* #view-favorites-button {
+    display: block; */
+
+.hidden {
+    display: none;
 }
+
+.white-box1,
+.white-box2,
+.white-box3 {
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.white-box1 {
+    width: 43%;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 100px;
+    min-width: 474px;
+}
+
+.white-box2 {
+    width: 62%;
+    padding: 30px;
+    margin: auto;
+}
+
+.white-box3 {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   max-width: 75%;
+   margin: auto;
+}
+
+.white-text {
+    color: #ffffff;
+}
+
+
 .radio-buttons {
     padding-top: 10px;
     padding-left: 30px;
@@ -72,19 +95,33 @@ button {
     font-style: italic;
     font-size: large;
 }
+
 .affirm-selection {
     margin-right: 40px;
     display: inline-block;
 }
+
 .mantra-selection {
     margin-left: 170px;
     display: inline-block;
 }
-h2 {
-    margin-bottom: 5px;
-    margin-top: 70px;
+
+.meditate-icon {
+    width: 70px;
+    height: auto;
 }
 
-p {
-    font-size: larger;
+.meditate-icon-fav {
+    width: 30px;
+    height: auto;
 }
+#home-btn {
+    margin-top: 10px;
+}
+
+.fav-affirm-msg,
+.fav-mantra-msg {
+    font-size: medium;
+}
+
+
