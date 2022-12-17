@@ -9,7 +9,6 @@ black - #000000;
 
 *{
   font-family: 'Quicksand', sans-serif;
-  color: white;
 }
 
 html {
@@ -20,7 +19,8 @@ html {
 h1 {
     padding:50px ; 
     border:50px;
-    text-align: center;    
+    text-align: center; 
+    color: white;   
 }
 
 label {
@@ -30,6 +30,7 @@ label {
 .small-header { 
   display:flex;
   justify-content: center;
+  color: white;
 }
 
  .dude {
@@ -77,10 +78,7 @@ label {
  color:white;
  background-color: #134d71;
  border-radius: 10px;
-
  }
-
-
 
   .two-buttons {
   font-style: italic;
@@ -113,12 +111,9 @@ label {
   align-items: center;
  } 
 
-
 .saying {
   color:black
 }
-
-
  
 .hidden{
   display: none;
