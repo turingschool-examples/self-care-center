@@ -1,3 +1,14 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;  
+}
+
+html {
+  height: 100vh;
+  background: linear-gradient( #134d71,#78a7c6, #f7e4bf);
+  
+}
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
