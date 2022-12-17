@@ -74,11 +74,6 @@ function saveMessage() {
             favoriteMantras.push(selectedMessage);
         }
     }
-    showViewFavoritesBtn();
-}
-
-function showViewFavoritesBtn() {
-    showElement(viewFavoritesBtn);
 }
 
 function changeSelection(event) {
@@ -107,5 +102,6 @@ function showMessage() {
         showElement(messageBox);
         hideElement(meditateIcon);
         showElement(favoriteBtn);
+        showElement(viewFavoritesBtn);
     }
 }
