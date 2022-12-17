@@ -6,3 +6,116 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+
+html {
+    height:100%;
+    background: linear-gradient(0deg,#f7e4bf, #78a7c6,#134d71) no-repeat;
+}
+.main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.main-page > h2 {
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 22px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Quicksand';
+    
+}
+.text {
+    margin-top: -178px;
+    font-size: 16px;
+   color: #ffffff;
+   font-family:'Quicksand';
+
+}
+
+ .button {
+    font-size: 10px;
+    background: #134d71;
+    color: white;
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+    font-family: 'Quicksand'; 
+   
+}
+
+label {
+    font-family: 'Quicksand';
+    font-size: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -42px;
+    margin-inline: auto;
+    margin-left: 54px;
+
+}
+.message-type-box {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 96px;
+    height: 75px;
+    width: 425px;
+    border-radius: 10px;
+}
+
+#affirmation-input {
+    margin-top: 0px;
+    margin-top: -40px;
+    margin-left: 50px;
+    margin-right: -44px;
+}
+#mantra-input {
+    margin-top: -40px;
+    margin-right: -43px;
+}
+.recieve-message-button {
+    font-size: 10px;
+    background: #134d71;
+    margin-top: 43px;
+    margin-left: -268px;
+    color: white;
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+    font-family: 'Quicksand';
+    height: 22px;
+    width: 102px
+}
+.display-message-box {
+    height: 140px;
+    width: 760px;
+    background: white;
+    margin-top: 111px;
+    margin-right: 20px;
+    border-radius: 10px;
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Quicksand';
+    padding: 5px;
+}
+
+.meditate-image {
+    height: 75px;
+    width: 655px;
+    display: flex;
+    align-items: center;
+    margin: 45px;
+}
+
+.hidden {
+    display: none;
+  }
