@@ -15,16 +15,19 @@
    
     <body>
       <section class = "message-type-box">  
-        <input type="radio" id="affirmation-input" name="affirmation" value="affirmation">
+        <input type="radio" id="affirmation-input" name="radio" value="affirmations">
         <label for="radio1">affirmation</label><br>
-        <input type="radio" id="mantra-input" name="mantra" value="mantra">
+        <input type="radio" id="mantra-input" name="radio" value="mantras">
         <label for="radio2">mantra</label><br>
         <div class = "recieve-message">
         <button class="recieve-message-button">Recieve Messages</button>
         </div>
-      </section> 
-      <section class = "display-message-box">
-        <img class="buddha hidden" id="buddha" src="assets/meditate.svg" alt="lil buddha">
+      </section>
+      <section class = "display-message-box"> 
+      <p id="mantra-message" name="radio" value="mantras"></p>
+        <div class="buddha">
+        </div>  
+        <img class="meditate-image"src="assets/meditate.svg" alt="lil buddha">
       </section>
     </body>
     <script type="text/javascript" src="main.js"></script>

@@ -31,7 +31,7 @@ h1 {
     
 }
 .text {
-    margin-top: -353px;
+    margin-top: -178px;
     font-size: 16px;
    color: #ffffff;
    font-family:'Quicksand';
@@ -54,8 +54,9 @@ label {
     font-size: 15px;
     display: flex;
     justify-content: space-evenly;
-    margin-top: -44px;
+    margin-top: -42px;
     margin-inline: auto;
+    margin-left: 54px;
 
 }
 .message-type-box {
@@ -82,26 +83,39 @@ label {
 .recieve-message-button {
     font-size: 10px;
     background: #134d71;
-    margin-top: 49px;
-    margin-left: -253px;
+    margin-top: 43px;
+    margin-left: -268px;
     color: white;
     display: flex;
     align-items: baseline;
     justify-content: baseline;
     font-family: 'Quicksand';
+    height: 22px;
+    width: 102px
 }
 .display-message-box {
     height: 140px;
     width: 760px;
     background: white;
-    margin-top: 113px;
+    margin-top: 111px;
+    margin-right: 20px;
     border-radius: 10px;
-
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Quicksand';
+    padding: 5px;
 }
-#buddha {
+
+.meditate-image {
     height: 75px;
     width: 655px;
     display: flex;
     align-items: center;
-    margin: 40px;
+    margin: 45px;
 }
+
+.hidden {
+    display: none;
+  }
