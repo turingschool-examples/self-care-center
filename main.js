@@ -1,3 +1,9 @@
+
+
+
+
+
+
 var affirmations = [
 "I forgive myself and set myself free",
 "I believe I can be all that I want to be.",
@@ -31,3 +37,40 @@ var mantras = [
 "Onward and upward.",
 "I am the sky, the rest is weather."
 ];
+
+// Variable:Query Selectors
+var displayMessageBox = document.querySelector('.display-message-box')
+var recieveMessageButton = document.querySelector('.recieve-message-button')
+var affirmationInput = document.getElementById('affirmation-input')
+var mantraInput = document.getElementById('mantra-input')
+var buddha = document.querySelector('.buddha')
+
+
+
+// EventListeners
+
+recieveMessageButton.addEventListener('click', addMessage)
+
+
+
+
+// Helper Functions
+
+
+function getRandomIndex(array) {
+    return Math.floor(Math.random() * array.length);
+  }
+
+function hideBuddha () {
+    buddha.classList.add('hidden');
+    }
+
+   function addMessage() {
+    buddha.classList.add('hidden')
+    if(affirmationInput.checked= true) {
+        displayMessageBox.innerText= `${mantras[getRandomIndex(mantras)]}`
+    } else if (mantraInput.checked= true) {
+        displayMessageBox.innerText= `${affirmations[getRandomIndex(affirmations)]}`
+        }
+    }
+   
