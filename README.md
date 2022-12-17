@@ -49,3 +49,7 @@ ______________________________________________________
 
 ### Wins + Challenges:
 [//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+- alignment was challenging and overcame with trial and error
+- win: figuring out view logic for receive message (depending on affirm or mantra)
+- win: utilizing pseudocode and a feature branch and only implementing changes that aligned with that branch (which meant saving some features/changes for later while keeping the focus)
+- challenge wrapping my head around how to utilize the data model as the source of truth, i compared and contrasted various approaches or solutions and analyzed them to figure out if it was using the DOM or data model and it began to make sense.
