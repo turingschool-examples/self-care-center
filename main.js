@@ -18,8 +18,12 @@ var yogi = document.querySelector(".dude")
 var affirmationButton = document.querySelector(".first-button")
 var mantraButton = document.querySelector(".second-button")
 var displaySaying = document.querySelector(".saying")
+var ownMessageButton = document.querySelector(".own-message-button")
+
 
 receiveMessageButton.addEventListener("click", generateMessage)
+ownMessageButton.addEventListener("click", createOwnMessage)
+
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
@@ -33,15 +37,11 @@ function generateMessage() {
     displaySaying.innerText = Mantras[getRandomIndex(Mantras)]
     yogi.classList.add("hidden")
     } else {
-        return alert("Please choose Affirmation or Mantra. Namaste. 🧘 ");
+        displaySaying.innerText = ("Please choose Affirmation or Mantra message. Namaste. 🧘 ");
+        yogi.classList.add("hidden")
     }                                                         
 } 
 
-
-
-//1. Receive button should be locked unless radio dial button has a value
-//2. Research randomized code from romcom. set to a variable. tha variable will be current mantra/affirma
-//3. If (affirmation then choose me a random on button click
-//4. If (mantra then chose me a random on a button click
-// For loop
-//5.will need an anonymous function in the event listener so you can run other functions inside of it. 
+function createOwnMessage() {
+  yogi.classList.add("hidden")
+}
