@@ -61,19 +61,17 @@ function showFavAffirmations(element, favoriteMessages) {
     }
 }
 
-//remove alert when saving message but show some feedback
+//show some feedback after saving message
+//add pointer on hover
 function saveMessage() {
     var selectedMessage = document.querySelector('.message-pop-up').innerText;
     if (selectedType === "affirmation") {
         if (!favoriteAffirmations.includes(selectedMessage)) {
             favoriteAffirmations.push(selectedMessage);
-            alert('💛 Your message has been added to favorites 💛');
         }
     } else {
         if (!favoriteMantras.includes(selectedMessage)) {
             favoriteMantras.push(selectedMessage);
-            alert('💛 Your message has been added to favorites 💛');
-            console.log(favoriteMantras);
         }
     }
     showViewFavoritesBtn();
