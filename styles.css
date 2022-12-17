@@ -17,10 +17,10 @@ html {
  }
 
 h1 {
-    padding:50px ; 
-    border:50px;
-    text-align: center; 
-    color: white;   
+  padding:50px ; 
+  border:50px;
+  text-align: center; 
+  color: white;   
 }
 
 label {
@@ -62,9 +62,9 @@ label {
 
  .own-message-button {
   color:white;
- background-color: #134d71;
- border-radius: 10px;
- font-size:smaller
+  background-color: #134d71;
+  border-radius: 10px;
+  font-size:smaller
  }
 
  .submit-button{
@@ -75,12 +75,12 @@ label {
  }
 
  .submit-own-message {
- color:white;
- background-color: #134d71;
- border-radius: 10px;
+  color:white;
+  background-color: #134d71;
+  border-radius: 10px;
  }
 
-  .two-buttons {
+.two-buttons {
   font-style: italic;
   display:flex;
   justify-content: space-evenly;
