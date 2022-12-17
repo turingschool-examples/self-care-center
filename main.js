@@ -10,6 +10,9 @@ var favoritesView = document.querySelector('.favorites-view');
 var viewFavoritesBtn = document.querySelector('#view-favorites-button');
 var affirmMessage = document.querySelector('.fav-affirm-msg');
 var mantraMessage = document.querySelector('.fav-mantra-msg');
+var homeBtn = document.querySelector('#home-btn');
+var mantraHeader = document.querySelector('.mantra-heading');
+var affirmHeader = document.querySelector('.affirm-heading');
 var currentMessage;
 var favoriteAffirmations = [];
 var favoriteMantras = [];
@@ -19,6 +22,13 @@ mantraRadio.addEventListener('click', changeSelection);
 receiveBtn.addEventListener('click', showMessage);
 favoriteBtn.addEventListener('click', saveMessage);
 viewFavoritesBtn.addEventListener('click', showFavoritesPage);
+homeBtn.addEventListener('click', showHomePage);
+
+function showHomePage() {
+    hideElement(favoritesView);
+    showElement(homeView);
+    showElement(meditateIcon);
+}
 
 function showFavoritesPage() {
     if (favoriteMantras.length || favoriteAffirmations.length) {
@@ -36,9 +46,11 @@ function showFavoriteMessages() {
     affirmMessage.innerText = '';
     mantraMessage.innerText = '';
     if (favoriteAffirmations.length) {
+        showElement(affirmHeader);
         showFavAffirmations(affirmMessage, favoriteAffirmations);
     }
     if (favoriteMantras.length) {
+        showElement(mantraHeader);
         showFavAffirmations(mantraMessage, favoriteMantras);
     }
 }
