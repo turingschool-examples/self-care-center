@@ -24,7 +24,8 @@ var hideTopinfo = document.querySelector(".three-buttons")
 var userSubmitButton = document.querySelector(".submit-own-message")
 var userAffirmationSaying = document.querySelector(".user-affirmation")
 var userMantraSaying = document.querySelector(".user-mantra")
-
+var userAffirmationButton = document.querySelector(".user-abutton")
+var UserMantraButton = document.querySelector(".user-mbutton")
 
 receiveMessageButton.addEventListener("click", generateMessage)
 ownMessageButton.addEventListener("click", createOwnMessage)
@@ -44,7 +45,7 @@ function generateMessage() {
     } else {
         displaySaying.innerText = ("Please choose Affirmation or Mantra message. Namaste. 🧘 ");
         yogi.classList.add("hidden")
-    }                                                         
+      }                                                         
 } 
 
 function createOwnMessage() {
@@ -55,6 +56,15 @@ function createOwnMessage() {
 
 function displayUserMessage() {
 event.preventDefault()
-displaySaying.innerText = userAffirmationSaying
-
+  if (userAffirmationButton.checked) {
+    displaySaying.innerText = userAffirmationSaying.value
+    Affirmations.push(userAffirmationSaying.value)
+    userForm.classList.add("hidden")
+  } else if (UserMantraButton.checked) {
+    displaySaying.innerText = userMantraSaying.value
+    Mantras.push(userMantraSaying.value)
+    userForm.classList.add("hidden")
+  } else  {
+    alert("Please choose Affirmation or Mantra message. Namaste. 🧘 ");
+    }
 }
