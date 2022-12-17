@@ -11,7 +11,7 @@ var Mantras = ["Breathing in, I send myself love. Breathing out, I send love to 
 "Onward and upward.", " I am the sky, the rest is weather."]
 
 
-
+var hideTopinfo = document.querySelector(".three-buttons")
 
 var receiveMessageButton = document.querySelector(".message-button")
 var yogi = document.querySelector(".dude")
@@ -19,11 +19,16 @@ var affirmationButton = document.querySelector(".first-button")
 var mantraButton = document.querySelector(".second-button")
 var displaySaying = document.querySelector(".saying")
 var ownMessageButton = document.querySelector(".own-message-button")
+var userForm = document.querySelector(".view-form")
+var hideTopinfo = document.querySelector(".three-buttons")
+var userSubmitButton = document.querySelector(".submit-own-message")
+var userAffirmationSaying = document.querySelector(".user-affirmation")
+var userMantraSaying = document.querySelector(".user-mantra")
 
 
 receiveMessageButton.addEventListener("click", generateMessage)
 ownMessageButton.addEventListener("click", createOwnMessage)
-
+userSubmitButton.addEventListener("click", displayUserMessage)
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
@@ -44,4 +49,12 @@ function generateMessage() {
 
 function createOwnMessage() {
   yogi.classList.add("hidden")
+  userForm.classList.remove("hidden")
+  hideTopinfo.classList.add("hidden")
+}
+
+function displayUserMessage() {
+event.preventDefault()
+displaySaying.innerText = userAffirmationSaying
+
 }

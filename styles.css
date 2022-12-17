@@ -60,10 +60,27 @@ label {
  }
 
  .own-message-button {
+  color:white;
  background-color: #134d71;
  border-radius: 10px;
  font-size:smaller
  }
+
+ .submit-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+ }
+
+ .submit-own-message {
+ color:white;
+ background-color: #134d71;
+ border-radius: 10px;
+
+ }
+
+
 
   .two-buttons {
   font-style: italic;
