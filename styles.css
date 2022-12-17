@@ -54,6 +54,17 @@ label {
   justify-content: space-evenly;
  }
  
+ .add-own-message-button {
+  display:flex;
+  justify-content: center;
+ }
+
+ .own-message-button {
+ background-color: #134d71;
+ border-radius: 10px;
+ font-size:smaller
+ }
+
   .two-buttons {
   font-style: italic;
   display:flex;
