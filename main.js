@@ -13,6 +13,7 @@ var mantraMessage = document.querySelector('.fav-mantra-msg');
 var homeBtn = document.querySelector('#home-btn');
 var mantraHeader = document.querySelector('.mantra-heading');
 var affirmHeader = document.querySelector('.affirm-heading');
+var favoriteMessages = document.querySelector('.white-box3');
 var currentMessage;
 var favoriteAffirmations = [];
 var favoriteMantras = [];
@@ -23,6 +24,31 @@ receiveBtn.addEventListener('click', showMessage);
 favoriteBtn.addEventListener('click', saveMessage);
 viewFavoritesBtn.addEventListener('click', showFavoritesPage);
 homeBtn.addEventListener('click', showHomePage);
+favoriteMessages.addEventListener('dblclick', deleteMessage);
+
+
+function deleteMessage(event) {
+    if (event.target.parentElement.matches('.fav-affirm-msg')) {
+        findMessage(event, favoriteAffirmations);
+    } else if (event.target.parentElement.matches('.fav-mantra-msg')) {
+        findMessage(event, favoriteMantras);
+    }
+
+}
+
+function findMessage(event, favoriteMessages) {
+    if (event.target.parentElement.matches('.fav-affirm-msg, .fav-mantra-msg')) {
+        console.log(event.target.innerText)
+        console.log(favoriteMessages)
+        for (var i = 0; i < favoriteMessages.length; i++) {
+            if (event.target.innerText === favoriteMessages[i]) {
+                favoriteMessages.splice(i, 1);
+            }
+        }
+        showFavoriteMessages();
+    }
+}
+//show message, hide meditate when going back home
 
 function showHomePage() {
     hideElement(favoritesView);
@@ -62,7 +88,6 @@ function showFavAffirmations(element, favoriteMessages) {
 }
 
 //show some feedback after saving message
-//add pointer on hover
 function saveMessage() {
     var selectedMessage = document.querySelector('.message-pop-up').innerText;
     if (selectedType === "affirmation") {
