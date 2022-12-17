@@ -12,7 +12,6 @@ var mantras = ["Breathing in, I send myself love. Breathing out, I send love to 
 
 
 var hideTopinfo = document.querySelector(".three-buttons")
-
 var receiveMessageButton = document.querySelector(".message-button")
 var yogi = document.querySelector(".dude")
 var affirmationButton = document.querySelector(".first-button")
@@ -20,7 +19,6 @@ var mantraButton = document.querySelector(".second-button")
 var displaySaying = document.querySelector(".saying")
 var ownMessageButton = document.querySelector(".own-message-button")
 var userForm = document.querySelector(".view-form")
-var hideTopinfo = document.querySelector(".three-buttons")
 var userSubmitButton = document.querySelector(".submit-own-message")
 var userAffirmationSaying = document.querySelector(".user-affirmation")
 var userMantraSaying = document.querySelector(".user-mantra")
@@ -32,7 +30,7 @@ ownMessageButton.addEventListener("click", createOwnMessage)
 userSubmitButton.addEventListener("click", displayUserMessage)
 
 function getRandomIndex(array) {
-    return Math.floor(Math.random() * array.length);
+  return Math.floor(Math.random() * array.length);
 }
 
 function generateMessage() {
@@ -42,10 +40,10 @@ function generateMessage() {
   } else if (mantraButton.checked) {
     displaySaying.innerText = mantras[getRandomIndex(mantras)]
     yogi.classList.add("hidden")
-    } else {
-        displaySaying.innerText = ("Please choose Affirmation or Mantra message. Namaste. 🧘 ");
-        yogi.classList.add("hidden")
-      }                                                         
+  } else {
+    displaySaying.innerText = ("Please choose Affirmation or Mantra message. Namaste. 🧘 ");
+    yogi.classList.add("hidden")
+  }                                                         
 } 
 
 function createOwnMessage() {
@@ -72,5 +70,5 @@ event.preventDefault()
     hideTopinfo.classList.remove("hidden")
   } else  {
     alert("Please choose Affirmation or Mantra message. Namaste. 🧘 ");
-    }
+  }
 }
