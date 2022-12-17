@@ -48,12 +48,7 @@ function doThing() {
   dynamicDisplayBox.innerHTML = `<div id="affirm-mantra-styling">${getRandomMantra(mantras)}</div>`
   else 
   dynamicDisplayBox.innerHTML = `<div id="affirm-mantra-styling">${getRandomAffirm(affirmations)}</div>`
-}
-
-
-// function getChoice() {
-//   if 
-// }
+}ß
 
 
 
