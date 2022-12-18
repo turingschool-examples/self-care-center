@@ -28,25 +28,19 @@ favoriteMessages.addEventListener('dblclick', deleteMessage);
 
 
 function deleteMessage(event) {
-    if (event.target.parentElement.matches('.fav-affirm-msg')) {
+    if (event.target.parentElement.matches('.fav-msg-div')) {
         findMessage(event, favoriteAffirmations);
-    } else if (event.target.parentElement.matches('.fav-mantra-msg')) {
         findMessage(event, favoriteMantras);
     }
-
 }
 
 function findMessage(event, favoriteMessages) {
-    if (event.target.parentElement.matches('.fav-affirm-msg, .fav-mantra-msg')) {
-        console.log(event.target.innerText)
-        console.log(favoriteMessages)
-        for (var i = 0; i < favoriteMessages.length; i++) {
-            if (event.target.innerText === favoriteMessages[i]) {
-                favoriteMessages.splice(i, 1);
-            }
+    for (var i = 0; i < favoriteMessages.length; i++) {
+        if (event.target.innerText === favoriteMessages[i]) {
+            favoriteMessages.splice(i, 1);
         }
-        showFavoriteMessages();
     }
+    showFavoriteMessages();
 }
 //show message, hide meditate when going back home
 
