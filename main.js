@@ -1,4 +1,8 @@
 var selectedType;
+var currentMessage;
+var favoriteAffirmations = [];
+var favoriteMantras = [];
+
 var messageBox = document.querySelector('.message-pop-up');
 var receiveBtn = document.querySelector('#receive-btn');
 var meditateIcon = document.querySelector('.meditate-icon');
@@ -14,11 +18,7 @@ var homeBtn = document.querySelector('#home-btn');
 var mantraHeader = document.querySelector('.mantra-heading');
 var affirmHeader = document.querySelector('.affirm-heading');
 var favoriteMessages = document.querySelector('.white-box3');
-var currentMessage;
-var favoriteAffirmations = [];
-var favoriteMantras = [];
 
-//add feedback after button click on
 
 affirmRadio.addEventListener('click', changeSelection);
 mantraRadio.addEventListener('click', changeSelection);
@@ -28,11 +28,70 @@ viewFavoritesBtn.addEventListener('click', showFavoritesPage);
 homeBtn.addEventListener('click', showHomePage);
 
 
-function deleteMessage(event) {
-    if (event.target.parentElement.matches('.fav-msg-div')) {
-        unFavorite(event, favoriteAffirmations);
-        unFavorite(event, favoriteMantras);
+function changeSelection(event) {
+    selectedType = event.target.value;
+}
+
+function showMessage() {
+    if (selectedType) {
+        updateMessage();
+        showElement(messageBox);
+        hideElement(meditateIcon);
+        showElement(favoriteBtn);
+        showElement(viewFavoritesBtn);
+    }
+}
+
+function saveMessage() {
+    var selectedMessage = document.querySelector('.message-pop-up').innerText;
+    if (selectedType === "affirmation") {
+        if (!favoriteAffirmations.includes(selectedMessage)) {
+            favoriteAffirmations.push(selectedMessage);
+        }
+    } else {
+        if (!favoriteMantras.includes(selectedMessage)) {
+            favoriteMantras.push(selectedMessage);
+        }
+    }
+}
+
+function showFavoritesPage() {
+    if (favoriteMantras.length || favoriteAffirmations.length) {
+        hideElement(homeView);
+        showElement(favoritesView);
+        hideElement(favoriteBtn);
+        hideElement(messageBox);
         showFavoriteMessages();
+    } else {
+        alert('💛 You haven\'t favorited any messages yet 💛')
+    }
+}
+
+function showHomePage() {
+    hideElement(favoritesView);
+    showElement(homeView);
+    showElement(messageBox);
+    showElement(favoriteBtn);
+}
+
+function updateMessage() {
+    if (selectedType === "affirmation") {
+        messageBox.innerHTML = affirmations[Math.floor(Math.random() * affirmations.length)];
+    } else {
+        messageBox.innerHTML = mantras[Math.floor(Math.random() * mantras.length)];
+    }
+}
+
+function showFavoriteMessages() {
+    affirmMessage.innerText = '';
+    mantraMessage.innerText = '';
+    if (favoriteAffirmations.length) {
+        showElement(affirmHeader);
+        showFavoriteMessages(affirmMessage, favoriteAffirmations);
+    }
+    if (favoriteMantras.length) {
+        showElement(mantraHeader);
+        showFavoriteMessages(mantraMessage, favoriteMantras);
     }
 }
 
@@ -48,39 +107,7 @@ function findMessage(event) {
     return event.target.dataset.msgName;
 }
 
-function showHomePage() {
-    hideElement(favoritesView);
-    showElement(homeView);
-    showElement(messageBox);
-    showElement(favoriteBtn);
-}
-
-function showFavoritesPage() {
-    if (favoriteMantras.length || favoriteAffirmations.length) {
-        hideElement(homeView);
-        showElement(favoritesView);
-        hideElement(favoriteBtn);
-        hideElement(messageBox);
-        showFavoriteMessages();
-    } else {
-        alert('💛 You haven\'t favorited any messages yet 💛')
-    }
-}
-
-function showFavoriteMessages() {
-    affirmMessage.innerText = '';
-    mantraMessage.innerText = '';
-    if (favoriteAffirmations.length) {
-        showElement(affirmHeader);
-        showFavAffirmations(affirmMessage, favoriteAffirmations);
-    }
-    if (favoriteMantras.length) {
-        showElement(mantraHeader);
-        showFavAffirmations(mantraMessage, favoriteMantras);
-    }
-}
-
-function showFavAffirmations(element, favoriteMessages) {
+function showFavoriteMessages(element, favoriteMessages) {
     for (var i = 0; i < favoriteMessages.length; i++) {
         element.innerHTML += `
         <div class='fav-msg-div'>
@@ -93,34 +120,16 @@ function showFavAffirmations(element, favoriteMessages) {
 
 function assignDeleteButton() {
     var deleteButtons = document.querySelectorAll('.delete-btn');
-    for (var i = 0; i < deleteButtons.length; i++){
-    deleteButtons[i].addEventListener('click', deleteMessage);
+    for (var i = 0; i < deleteButtons.length; i++) {
+        deleteButtons[i].addEventListener('click', deleteMessage);
     }
 }
 
-//show some feedback after saving message
-function saveMessage() {
-    var selectedMessage = document.querySelector('.message-pop-up').innerText;
-    if (selectedType === "affirmation") {
-        if (!favoriteAffirmations.includes(selectedMessage)) {
-            favoriteAffirmations.push(selectedMessage);
-        }
-    } else {
-        if (!favoriteMantras.includes(selectedMessage)) {
-            favoriteMantras.push(selectedMessage);
-        }
-    }
-}
-
-function changeSelection(event) {
-    selectedType = event.target.value;
-}
-
-function updateMessage() {
-    if (selectedType === "affirmation") {
-        messageBox.innerHTML = affirmations[Math.floor(Math.random() * affirmations.length)];
-    } else {
-        messageBox.innerHTML = mantras[Math.floor(Math.random() * mantras.length)];
+function deleteMessage(event) {
+    if (event.target.parentElement.matches('.fav-msg-div')) {
+        unFavorite(event, favoriteAffirmations);
+        unFavorite(event, favoriteMantras);
+        showFavoriteMessages();
     }
 }
 
@@ -130,14 +139,4 @@ function hideElement(element) {
 
 function showElement(element) {
     element.classList.remove('hidden');
-}
-
-function showMessage() {
-    if (selectedType) {
-        updateMessage();
-        showElement(messageBox);
-        hideElement(meditateIcon);
-        showElement(favoriteBtn);
-        showElement(viewFavoritesBtn);
-    }
 }
