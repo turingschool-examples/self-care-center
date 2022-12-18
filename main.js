@@ -13,6 +13,7 @@ var mantraMessage = document.querySelector('.fav-mantra-msg');
 var homeBtn = document.querySelector('#home-btn');
 var mantraHeader = document.querySelector('.mantra-heading');
 var affirmHeader = document.querySelector('.affirm-heading');
+var favoriteMessages = document.querySelector('.white-box3');
 var currentMessage;
 var favoriteAffirmations = [];
 var favoriteMantras = [];
@@ -23,6 +24,29 @@ receiveBtn.addEventListener('click', showMessage);
 favoriteBtn.addEventListener('click', saveMessage);
 viewFavoritesBtn.addEventListener('click', showFavoritesPage);
 homeBtn.addEventListener('click', showHomePage);
+
+
+function deleteMessage(event) {
+    if (event.target.parentElement.matches('.fav-msg-div')) {
+        unFavorite(event, favoriteAffirmations);
+        unFavorite(event, favoriteMantras);
+        showFavoriteMessages();
+    }
+}
+
+function unFavorite(event, favoriteMessages) {
+    for (var i = 0; i < favoriteMessages.length; i++) {
+        if (findMessage(event) === favoriteMessages[i]) {
+            favoriteMessages.splice(i, 1);
+        }
+    }
+}
+
+function findMessage(event) {
+    return event.target.dataset.msgName;
+}
+
+//show message, hide meditate when going back home
 
 function showHomePage() {
     hideElement(favoritesView);
@@ -57,12 +81,23 @@ function showFavoriteMessages() {
 
 function showFavAffirmations(element, favoriteMessages) {
     for (var i = 0; i < favoriteMessages.length; i++) {
-        element.innerHTML += `<p>${favoriteMessages[i]}</p>`;
+        element.innerHTML += `
+        <div class='fav-msg-div'>
+            <p>${favoriteMessages[i]}</p>
+            <button type='button' class='white-text delete-btn' data-msg-name='${favoriteMessages[i]}'>Delete</button>
+        </div>`;
+        assignDeleteButton();
+    }
+}
+
+function assignDeleteButton() {
+    var deleteButtons = document.querySelectorAll('.delete-btn');
+    for (var i = 0; i < deleteButtons.length; i++){
+    deleteButtons[i].addEventListener('click', deleteMessage);
     }
 }
 
 //show some feedback after saving message
-//add pointer on hover
 function saveMessage() {
     var selectedMessage = document.querySelector('.message-pop-up').innerText;
     if (selectedType === "affirmation") {
