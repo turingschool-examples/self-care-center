@@ -71,6 +71,7 @@ h2 {
     margin: auto;
     padding: 25px;
     justify-content: center;
+    flex-direction: column;
 }
 .rec-button {
     color : #ffffff;
@@ -112,15 +113,32 @@ h2 {
     margin: auto;
     padding-top: 25px;
     padding-bottom:25px;
-    display: hidden;
+    display: flex;
+    color : #ffffff;
+    flex-direction: column;
 }
 button:hover {
     background-color:  #f7e4bf;
     color: #134d71;
     cursor: pointer;
 }
-#affirm-mantra-styling {
+.affirm-mantra-styling {
     color:#134d71;
     font-style: italic;
     font-weight:600;
+}
+.remove-button {
+    color : #ffffff;
+    background-color: #134d71;
+    border-radius: 5px;
+    height: 25px;
+    width: 35%;
+    margin: auto;
+    font-size: auto;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+.hidden {
+    display : none;
 }
