@@ -1,51 +1,33 @@
-# Self Care Center
-## Overview
-How can I care for myself? One way is with affirmations and mantras!
-Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are repetive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
-
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
-
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html). 
-
-## Learning Goals
-
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
-
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
-
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
-
 # Self-Care Center 
 
 ### Abstract:
 [//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
+Self Care Center is an application that provides the visitor with randomly-generated phrases that remind them of their inherent self worth and provide them with the means of positive self-empowerment through mindfulness. The visitor can recieve a randomly generated message from either an affirmation or mantra list. They can delete a message to prevent it from reappearing during the session. The user can decide to clear the message area and have the page reset to the original view as well. 
 
 ### Installation Instructions:
-[//]: <> (What steps does a person have to take to get your app cloned down and running?)
+[//]: <> 
+1. Fork this repository
+2. Clone down it down to your local machine
+3. Nagivate into the directory
+4. Run `open index.html` on the command line to explore mindfulness in your broswer
 
 ### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
+[//]: <>
+Below you can see the Delete alert message in action which lets the visitor know what the Delete button does when they hover over it. 
+![image of main page](assets/cooper-self-care-center.png)
 
 ### Context:
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
+This project was our Mod 1, week 3 solo project. I worked on Self Care Center for about 16 hours. 
 
 ### Contributors:
 [//]: <> (Who worked on this application? Link to their GitHubs.)
+- Chrissy Cooper [github profile](https://github.com/chrissycooper)
 
 ### Learning Goals:
 [//]: <> (What were the learning goals of this project? What tech did you work with?)
+This project gave me the opportunity to flex my newly growing development muscles in a solo context. I furthered my experience builing an application from scratch that utilizes HTML, CSS, and Javascript. I manipulated HTML and CSS to match a provided design and practised using Javascript to respond to user engagement and to manage the user's experience with error handling. 
 
 ### Wins + Challenges:
 [//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+I am very proud of the simplicity of this application. I focused on refactoring to produce DRY (don't repeat yourself) code that functions well over adding a lot of extra features. A huge win was getting some familiarity with how Flexbox in CSS interacts with other elements in an application. That being said, Flexbox was also a huge challenge. I researched and experiemented with my CSS line by line until I was able to find some balance between flex and traditional CSS elements. Another challenge was learning how to work with radio buttons in a form. I read through the MDN documentation a few times before getting a good night's sleep and then letting curiosity and exploration connect theory to practice. 

@@ -10,7 +10,7 @@ messageButton.addEventListener("click", displaySentiment);
 clearButton.addEventListener("click", resetView);
 deleteButton.addEventListener("mouseover", showDeleteMessage);
 deleteButton.addEventListener("mouseout", hideDeleteMessage);
-deleteButton.addEventListener("click", deleteMessage);
+deleteButton.addEventListener("click", deleteCurrentMessage);
 
 function displaySentiment() {
     if(radioButtons[0].checked) {
@@ -55,7 +55,7 @@ function hideDeleteMessage() {
     hide(deleteMessageDiv);
 };
 
-function deleteMessage() {
+function deleteCurrentMessage() {
     if(radioButtons[0].checked) {
         for (i = 0; i < affirmations.length; i++) {
             if (affirmations[i] === messageDiv.innerText) {
