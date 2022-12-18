@@ -4,6 +4,7 @@ var clearButton = document.querySelector("#clear");
 var deleteButton = document.querySelector("#delete");
 var radioButtons = document.querySelectorAll(".radio");
 var deleteMessageDiv = document.querySelector(".delete-message");
+var repeatMessageDiv = document.querySelector(".repeat-message");
 
 messageButton.addEventListener("click", preventDefault);
 messageButton.addEventListener("click", displaySentiment);
@@ -12,12 +13,29 @@ deleteButton.addEventListener("mouseover", showDeleteMessage);
 deleteButton.addEventListener("mouseout", hideDeleteMessage);
 deleteButton.addEventListener("click", deleteCurrentMessage);
 
+var noRepeatArrayAff = [];
+var noRepeatArrayMantras = [];
+
 function displaySentiment() {
-    if(radioButtons[0].checked) {
-        randomAff = affirmations[getRandomIndex(affirmations)];
+    if(radioButtons[0].checked && affirmations.length) {
+        var randomIndex = getRandomIndex(affirmations);
+        var randomAff = affirmations[randomIndex];
         messageDiv.innerText = randomAff; 
-    } else if (radioButtons[1].checked) {
-        randomMantra = mantras[getRandomIndex(mantras)];
+        affirmations.splice(randomIndex, 1);
+        noRepeatArrayAff.push(randomAff);
+    } else if (radioButtons[0].checked && !affirmations.length) {
+        showRepeatMessage();
+        var randomAff = noRepeatArrayAff[getRandomIndex(noRepeatArrayAff)];
+        messageDiv.innerText = randomAff; 
+    } else if (radioButtons[1].checked && mantras.length) {
+        var randomIndex = getRandomIndex(mantras);
+        var randomMantra = mantras[randomIndex];
+        messageDiv.innerText = randomMantra;
+        mantras.splice(randomIndex, 1);
+        noRepeatArrayMantras.push(randomMantra);
+    } else if (radioButtons[1].checked && !mantras.length) {
+        showRepeatMessage();
+        var randomMantra = noRepeatArrayMantras[getRandomIndex(noRepeatArrayMantras)];
         messageDiv.innerText = randomMantra;
     }
     show(clearButton);
@@ -50,6 +68,10 @@ function show(element) {
 function showDeleteMessage() {
    show(deleteMessageDiv);
 };
+
+function showRepeatMessage() {
+    show(repeatMessageDiv);
+}
 
 function hideDeleteMessage() {
     hide(deleteMessageDiv);
