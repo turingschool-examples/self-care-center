@@ -83,7 +83,7 @@ function showFavoriteMessages() {
 
 function showFavAffirmations(element, favoriteMessages) {
     for (var i = 0; i < favoriteMessages.length; i++) {
-        element.innerHTML += `<p>${favoriteMessages[i]}</p>`;
+        element.innerHTML += `<div class='fav-msg-div'><p>${favoriteMessages[i]}</p><button type='button' class='white-text delete'>Delete</button></div>`;
     }
 }
 
