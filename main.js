@@ -24,24 +24,28 @@ receiveBtn.addEventListener('click', showMessage);
 favoriteBtn.addEventListener('click', saveMessage);
 viewFavoritesBtn.addEventListener('click', showFavoritesPage);
 homeBtn.addEventListener('click', showHomePage);
-favoriteMessages.addEventListener('dblclick', deleteMessage);
 
 
 function deleteMessage(event) {
     if (event.target.parentElement.matches('.fav-msg-div')) {
-        findMessage(event, favoriteAffirmations);
-        findMessage(event, favoriteMantras);
+        unFavorite(event, favoriteAffirmations);
+        unFavorite(event, favoriteMantras);
+        showFavoriteMessages();
     }
 }
 
-function findMessage(event, favoriteMessages) {
+function unFavorite(event, favoriteMessages) {
     for (var i = 0; i < favoriteMessages.length; i++) {
-        if (event.target.innerText === favoriteMessages[i]) {
+        if (findMessage(event) === favoriteMessages[i]) {
             favoriteMessages.splice(i, 1);
         }
     }
-    showFavoriteMessages();
 }
+
+function findMessage(event) {
+    return event.target.dataset.msgName;
+}
+
 //show message, hide meditate when going back home
 
 function showHomePage() {
@@ -77,7 +81,19 @@ function showFavoriteMessages() {
 
 function showFavAffirmations(element, favoriteMessages) {
     for (var i = 0; i < favoriteMessages.length; i++) {
-        element.innerHTML += `<div class='fav-msg-div'><p>${favoriteMessages[i]}</p><button type='button' class='white-text delete'>Delete</button></div>`;
+        element.innerHTML += `
+        <div class='fav-msg-div'>
+            <p>${favoriteMessages[i]}</p>
+            <button type='button' class='white-text delete-btn' data-msg-name='${favoriteMessages[i]}'>Delete</button>
+        </div>`;
+        assignDeleteButton();
+    }
+}
+
+function assignDeleteButton() {
+    var deleteButtons = document.querySelectorAll('.delete-btn');
+    for (var i = 0; i < deleteButtons.length; i++){
+    deleteButtons[i].addEventListener('click', deleteMessage);
     }
 }
 
