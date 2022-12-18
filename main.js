@@ -18,6 +18,8 @@ var currentMessage;
 var favoriteAffirmations = [];
 var favoriteMantras = [];
 
+//add feedback after button click on
+
 affirmRadio.addEventListener('click', changeSelection);
 mantraRadio.addEventListener('click', changeSelection);
 receiveBtn.addEventListener('click', showMessage);
@@ -45,8 +47,6 @@ function unFavorite(event, favoriteMessages) {
 function findMessage(event) {
     return event.target.dataset.msgName;
 }
-
-//show message, hide meditate when going back home
 
 function showHomePage() {
     hideElement(favoritesView);
