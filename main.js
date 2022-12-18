@@ -51,7 +51,8 @@ function findMessage(event) {
 function showHomePage() {
     hideElement(favoritesView);
     showElement(homeView);
-    showElement(meditateIcon);
+    showElement(messageBox);
+    showElement(favoriteBtn);
 }
 
 function showFavoritesPage() {
