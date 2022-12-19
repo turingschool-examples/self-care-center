@@ -41,8 +41,9 @@ var mantras = [
 // Variable:Query Selectors
 var displayMessageBox = document.querySelector('.display-message-box')
 var recieveMessageButton = document.querySelector('.recieve-message-button')
-var affirmationInput = document.getElementById('affirmation-input')
+var deleteMessageButton = document.querySelector(`.delete-message-button`)
 var mantraInput = document.getElementById('mantra-input')
+var affirmationInput = document.getElementById('affirmation-input')
 var buddha = document.querySelector('.buddha')
 
 
@@ -50,7 +51,7 @@ var buddha = document.querySelector('.buddha')
 // EventListeners
 
 recieveMessageButton.addEventListener('click', addMessage)
-
+deleteMessageButton.addEventListener('click', removeMessage)
 
 
 
@@ -67,10 +68,36 @@ function hideBuddha () {
 
    function addMessage() {
     buddha.classList.add('hidden')
-    if(affirmationInput.checked= true) {
-        displayMessageBox.innerText= `${mantras[getRandomIndex(mantras)]}`
-    } else if (mantraInput.checked= true) {
-        displayMessageBox.innerText= `${affirmations[getRandomIndex(affirmations)]}`
+    deleteMessageButton.classList.remove('hidden')
+    if(affirmationInput.checked = true) {
+        displayMessageBox.innerText = `${mantras[getRandomIndex(mantras)]}`
+    } else if (mantraInput.checked = true) {
+        displayMessageBox.innerText = `${affirmations[getRandomIndex(affirmations)]}`
         }
     }
    
+    function removeMantraMessage() {
+        // var thisMantra = event.target.childElement.id;
+        // for (var i = 0; i < mantras.length; i++) {
+        //     if (thisMantra === mantras[i].id.toString())
+        //     mantras.splice(i, 1);
+            alert("The mantra has been removed.")
+        }
+    // }
+    
+    
+    
+    function removeAffirmationMessage() {
+        // for (var i = 0; i < affirmations.length; i++) {
+        //     if (displayMessageBox.innertext === affirmations[i].id.toString()) {
+        //         affirmations.splice(i,1);
+                alert("The affirmation has been removed.")
+            }
+    //     }
+    // }
+
+
+    function removeMessage() {
+        removeMantraMessage()
+        removeAffirmationMessage()
+    }
