@@ -5,6 +5,7 @@ var deleteButton = document.querySelector("#delete");
 var radioButtons = document.querySelectorAll(".radio");
 var deleteMessageDiv = document.querySelector(".delete-message");
 var repeatMessageDiv = document.querySelector(".repeat-message");
+var noRepeatSpace = document.querySelector(".no-repeat")
 
 messageButton.addEventListener("click", preventDefault);
 messageButton.addEventListener("click", displaySentiment);
@@ -71,6 +72,7 @@ function showDeleteMessage() {
 
 function showRepeatMessage() {
     show(repeatMessageDiv);
+    hide(noRepeatSpace);
 }
 
 function hideDeleteMessage() {
