@@ -1,8 +1,54 @@
-/* font-family: 'Quicksand', sans-serif;
-COLORS
-light-yellow - #f7e4bf;
-light-blue - #78a7c6;
-dark-blue - #134d71;
-white - #ffffff;
-black - #000000;
-*/
+html {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    color:#ffffff;
+}
+
+header {
+    font-size: .5em;
+}
+#box1 {
+    font-size: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+}
+
+
+#choose-message {
+    background-color: #ffffff;
+    color: black;
+    font-size: .5em;
+    border-radius: 10px;
+    width: 70vh;
+    height: 20vh;
+    margin: 50px auto;
+}
+
+#buddha {
+    background-color: #ffffff;
+    width: 70vh;
+    height: 20vh;
+    border-radius: 10px;
+    margin: 100px auto;
+}
+
+button {
+    height: 20%;
+    width: 30%;
+    background-color: #134d71;
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    color:#ffffff;
+
+}
