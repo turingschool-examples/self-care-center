@@ -1,17 +1,17 @@
 // DOM variables
-let recieveMsgButton = document.querySelector('#recieve-button');
-let affirmRadio = document.querySelector('#affirmation');
-let mantraRadio = document.querySelector('#mantra');
-let msgBox = document.querySelector('#msg-box');
-let addMsgButton = document.querySelector('#add-msg-button');
-let chooseMsgView = document.querySelector('#choose-msg-view');
-let addMsgView = document.querySelector('#add-msg-view');
-let msgInput = document.querySelector('#msg');
-let selectType = document.querySelector('#select');
-let buddhaView = document.querySelector('#buddha-view');
-let msgView = document.querySelector('#msg-view');
-let submitButton = document.querySelector('#submit');
-let mainPageButton = document.querySelector('#main-page');
+var recieveMsgButton = document.querySelector('#recieve-button');
+var affirmRadio = document.querySelector('#affirmation');
+var mantraRadio = document.querySelector('#mantra');
+var msgBox = document.querySelector('#msg-box');
+var addMsgButton = document.querySelector('#add-msg-button');
+var chooseMsgView = document.querySelector('#choose-msg-view');
+var addMsgView = document.querySelector('#add-msg-view');
+var msgInput = document.querySelector('#msg');
+var selectType = document.querySelector('#select');
+var buddhaView = document.querySelector('#buddha-view');
+var msgView = document.querySelector('#msg-view');
+var submitButton = document.querySelector('#submit');
+var mainPageButton = document.querySelector('#main-page');
 
 // Event Listeners
 recieveMsgButton.addEventListener('click', recieveMsg);
@@ -19,11 +19,7 @@ addMsgButton.addEventListener('click', switchToAddMsg);
 submitButton.addEventListener('click', addMsg);
 mainPageButton.addEventListener('click', switchToMainPage);
 
-// Functions
-function getRandomIndex(type) {
-    return Math.floor(Math.random() * type.length);
-}
-
+// Event Handlers
 function recieveMsg() {
     addMsgButton.classList.remove('hidden');
     submitButton.classList.add('hidden');
@@ -35,6 +31,39 @@ function recieveMsg() {
         displayMsg(getMsg());
         clearRadio();
     }
+}
+
+function addMsg() {
+    addMsgView.classList.remove('hidden');
+    chooseMsgView.classList.add('hidden');
+
+    if (selectType.value === 'default' && msgInput.value){
+        alert('Please select a message type!');
+    } else if (!msgInput.value){
+        alert('Please add a message!');
+    } else {
+        displayMsg(msgInput.value);
+        addMsgData();
+        msgInput.value = '';
+    }
+}
+
+function switchToAddMsg(){
+    addHiddenClass([addMsgButton, msgView, chooseMsgView, recieveMsgButton]);
+
+    removeHiddenClass([submitButton, buddhaView, addMsgView, mainPageButton]);
+
+}
+
+function switchToMainPage() {
+    addHiddenClass([submitButton, mainPageButton, msgView, addMsgView]);
+
+    removeHiddenClass([addMsgButton, recieveMsgButton, buddhaView, chooseMsgView]);
+}
+
+// Functions
+function getRandomIndex(type) {
+    return Math.floor(Math.random() * type.length);
 }
 
 function getMsg() {
@@ -60,20 +89,6 @@ function displayMsg(msg) {
     }
 }
 
-function addMsg() {
-    addMsgView.classList.remove('hidden');
-    chooseMsgView.classList.add('hidden');
-
-    if (selectType.value === 'default' && msgInput.value){
-        alert('Please select a message type!')
-    } else if (!msgInput.value){
-        alert('Please add a message!');
-    } else {
-        displayMsg(msgInput.value);
-        addMsgData();
-        msgInput.value = '';
-    }
-}
 
 function addMsgData() {
     if (selectType.value === 'affirmation'){
@@ -83,32 +98,19 @@ function addMsgData() {
     }
 }
 
-function switchToAddMsg(){
-    addHiddenClass([addMsgButton, msgView, chooseMsgView, recieveMsgButton]);
-
-    removeHiddenClass([submitButton, buddhaView, addMsgView, mainPageButton]);
-
-}
-
-function switchToMainPage() {
-    addHiddenClass([submitButton, mainPageButton, msgView, addMsgView]);
-
-    removeHiddenClass([addMsgButton, recieveMsgButton, buddhaView, chooseMsgView]);
-}
-
 function clearRadio() {
     mantraRadio.checked = false;
     affirmRadio.checked = false;
 }
 
 function addHiddenClass(elements) {
-    for (let i=0; i < elements.length; i++){
+    for (var i=0; i < elements.length; i++){
         elements[i].classList.add('hidden');
     }
 }
 
 function removeHiddenClass(elements) {
-    for (let i=0; i < elements.length; i++){
+    for (var i=0; i < elements.length; i++){
         elements[i].classList.remove('hidden');
     }
 }
