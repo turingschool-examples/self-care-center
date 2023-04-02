@@ -35,12 +35,17 @@ header {
     margin: 0 auto;
 }
 
-#buddha {
+#msg-box {
     background-color: #ffffff;
     width: 600px;
     height: 100px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 100px auto;
+    font-size: .5em;
+    color: black;
 }
 
 button {
