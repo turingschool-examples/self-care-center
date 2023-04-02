@@ -7,6 +7,8 @@ let addMsgButton = document.querySelector('#add-msg-button')
 let chooseMsgView = document.querySelector('#choose-msg-view')
 let addMsgView = document.querySelector('#add-msg-view')
 let msgInput = document.querySelector('#msg')
+let selectType = document.querySelector('#select')
+let buddhaView = document.querySelector('#buddha-view')
 
 // Event Listeners
 recieveMsgButton.addEventListener('click', recieveMsg);
@@ -18,6 +20,9 @@ function getRandomIndex(type) {
 }
 
 function recieveMsg() {
+    if (chooseMsgView.classList.contains('hidden')){
+        toggleChooseViews();
+    }
     displayMsg(getMsg())
     clearRadio()
 }
@@ -31,7 +36,7 @@ function getMsg() {
         return mantra;
     } else if (!mantraRadio.checked && !affirmRadio.checked){
         //hide message view, unhide buddha
-        return msgBox.innerHTML = ''
+        return alert('Please Choose a Message Type!')
     }
 }
 
@@ -43,21 +48,31 @@ function displayMsg(msg) {
 }
 
 function addMsg() {
-    if (!msgInput.value){
-        toggleViews();
+    if (!msgInput.value && addMsgView.classList.contains('hidden')){
+        toggleChooseViews();
         msgBox.innerHTML = ''
         // show buddha
+    } else if (selectType.value === 'default' && msgInput.value){
+        alert('Please select a message type!')
     } else {
-        displayMsg();
+        displayMsg(msgInput.value);
+        addMsgData()
         msgInput.value = ''
     }
 }
 
-// function addMsgData() {
-//     affirmations.push(msgInput.value)
-// }
+function addMsgData() {
+    if (selectType.value === 'affirmation'){
+        affirmations.push(msgInput.value)
+    } else if (selectType.value === 'mantra'){
+        mantras.push(msgInput.value)
+    } else {
+        // come back to this ?
+        return;
+    }
+}
 
-function toggleViews() {
+function toggleChooseViews() {
     chooseMsgView.classList.toggle('hidden')
     addMsgView.classList.toggle('hidden')
 }
