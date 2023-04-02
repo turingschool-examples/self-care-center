@@ -9,6 +9,7 @@ let addMsgView = document.querySelector('#add-msg-view')
 let msgInput = document.querySelector('#msg')
 let selectType = document.querySelector('#select')
 let buddhaView = document.querySelector('#buddha-view')
+let msgView = document.querySelector('#msg-view')
 
 // Event Listeners
 recieveMsgButton.addEventListener('click', recieveMsg);
@@ -22,9 +23,11 @@ function getRandomIndex(type) {
 function recieveMsg() {
     if (chooseMsgView.classList.contains('hidden')){
         toggleChooseViews();
+        msgView.classList.add('hidden')
+    } else {
+        displayMsg(getMsg());
+        clearRadio();
     }
-    displayMsg(getMsg())
-    clearRadio()
 }
 
 function getMsg() {
@@ -41,19 +44,26 @@ function getMsg() {
 }
 
 function displayMsg(msg) {
-    msgBox.innerHTML = ''
-    msgBox.innerHTML += `
+    if (msg){
+    msgView.classList.remove('hidden')
+    buddhaView.classList.add('hidden')
+    msgView.innerHTML = ''
+    msgView.innerHTML += `
     <h3>${msg}</h3>
     `
+    }
 }
 
 function addMsg() {
+    msgView.classList.add('hidden');
+    buddhaView.classList.remove('hidden');
+
     if (!msgInput.value && addMsgView.classList.contains('hidden')){
         toggleChooseViews();
-        msgBox.innerHTML = ''
-        // show buddha
     } else if (selectType.value === 'default' && msgInput.value){
         alert('Please select a message type!')
+    } else if (!msgInput.value){
+        alert('Please add a message!')
     } else {
         displayMsg(msgInput.value);
         addMsgData()
@@ -66,9 +76,6 @@ function addMsgData() {
         affirmations.push(msgInput.value)
     } else if (selectType.value === 'mantra'){
         mantras.push(msgInput.value)
-    } else {
-        // come back to this ?
-        return;
     }
 }
 
