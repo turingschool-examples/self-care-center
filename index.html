@@ -3,29 +3,27 @@
   <head>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-    </style>
   </head>
 
 
   <body>
     <header>
-      <br></br>
-      <h1>✨ Self Care Center ✨</h1>
+      <h1 class="title">✨ Self Care Center ✨</h1>
+      <h2 class="message-type">Which type of message?</h2>
     </header>
-      <section>
-        <div id="message-choice">
-          <h2>Which type of message?</h2>
-            <input type="radio" name="affirmation-radio" value="affirmation" id="affirmations-box">
-            <label>affirmation</label>
-            <input type="radio" name="mantra-radio" value="mantra" id="mantra-box">
-            <label>mantra</label>
-            <button></button>
-             <!-- This button will be the "recieve message button"-->
-        </div>
-      </section>
 
+      <body>
 
+        <section class="choice-box"   id="message-choice">
+            <input type="radio" name="message-choice" value="affirmation" id="affirmation-choice">
+              <label><em>affirmation</em></label>
+            <input type="radio" name="message-choice" value="mantra" id="mantra-choice">
+              <label><em>mantra</em></label>
+            <br></br>
+            <button class="receive-message-button" id="msg-btn">Receive Message</button>
+             
+        </section>
+      
       <section>
         <!-- This is where the text will be displayed-->
       </section>

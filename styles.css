@@ -6,14 +6,35 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000; */
 
-h1 {
-    color: #ffffff;
+* {
     font-family: 'Quicksand', sans-serif;
-    margin: 0 auto;
-    text-align: center;
 }
 
 body {
     background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
     background-attachment: fixed;
+    text-align: center;
+}
+
+h1,
+h2 {
+    color: #ffffff;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 3%;
+}
+
+h2 {
+    margin-top: 4%;
+    font-size: 1.4em;
+    padding-bottom: 1%;
+}
+
+.choice-box {
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 10cm;
+    border-radius: 30px;
+
 }
