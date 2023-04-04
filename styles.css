@@ -6,3 +6,31 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+body { 
+    background: linear-gradient(#134d71, #78a7c6, #ffffff, #f7e4bf) 
+}
+
+h1 {
+    color: #ffffff;
+}
+
+p {
+    color: #ffffff;
+}
+
+.box {
+    /* width: 600px */
+    background-color: #ffffff;
+    margin: 50px;
+    padding: 10px 40px 10px 40px
+}
+
+.radio-buttons {
+    color: #000000;
+}
+
+button {
+    background-color: #134d71;
+    color: #ffffff; 
+}
