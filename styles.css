@@ -47,7 +47,6 @@ header {
     justify-content: center;
     margin: 100px auto;
     font-size: .5em;
-    color: black;
 }
 
 button {
@@ -58,14 +57,12 @@ button {
     border: none;
     border-radius: 5px;
     color:#ffffff;
-}
-
-button:nth-of-type(1){
-    align-self: flex-end;
-}
-
-button:active {
     box-shadow: none;
+}
+
+button:hover {
+    background-color: #f7e4bf;
+    color: black;
 }
 
 .hidden {
