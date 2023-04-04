@@ -18,8 +18,9 @@ header {
 
 #box1 {
     font-size: .5em;
+    height: 150px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     margin: auto;
 }
@@ -57,7 +58,10 @@ button {
     border: none;
     border-radius: 5px;
     color:#ffffff;
+}
 
+button:nth-of-type(1){
+    align-self: flex-end;
 }
 
 button:active {
