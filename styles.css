@@ -1,8 +1,76 @@
 /* font-family: 'Quicksand', sans-serif;
-COLORS
+/* COLORS
 light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
-black - #000000;
-*/
+black - #000000; */
+
+html {
+    height: 100%;
+}
+
+.white-box-1 {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    width: 60%;
+    display: inline-block;
+
+}
+
+
+button {
+    background-color: #134d71;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 8px;
+    width: 220px;
+}
+
+h1 { 
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 35px;
+    padding-top: 20px;
+}
+
+.message-question {
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 22px;
+    padding-top: 80px;
+}
+
+.radio-1 {
+    color: #000000;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    float: left;
+    padding-left: 120px;
+    text-align: center;
+}
+
+.radio-2 {
+    color: #000000;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+}
+
+
+* {
+    text-align: center;
+}
+
+body {
+    background: linear-gradient(#134d71,#78a7c6, #f7e4bf);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
