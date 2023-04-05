@@ -4,5 +4,64 @@ light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
-black - #000000;
-*/
+black - #000000; */
+
+
+* {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    }
+    
+    
+    h1 {
+       font-size: 25px;
+       color: #ffffff; 
+    }
+    
+    
+    p {
+       color: #ffffff;
+    }
+    
+    
+    img {
+       border-radius: 8px;
+       padding: 5px;
+       width: 90px;
+       height: 130px;
+    }
+    
+    
+    html {
+       background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+       height: 100%;
+    }
+    
+    
+    button {
+       font-size: 12px;
+       color: #ffffff;
+       padding: 2px;
+       background-color: #134d71;
+       border-radius: 5px;
+       border: none;
+       margin-top: 15px;
+       width: 140px;
+     }
+    
+    
+    #interactive {
+       background-color: #ffffff;
+       border-radius: 10px;
+       width: 700px;
+       height: 120px;
+       margin: 0 auto;
+       font-style: italic;
+    }
+    
+    
+    #message {
+       background-color: #ffffff;
+       border-radius: 10px;
+       width: 1200px;
+    }
