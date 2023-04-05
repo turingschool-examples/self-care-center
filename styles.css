@@ -6,3 +6,79 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+* {
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+  }
+  
+  html {
+    height: 100%;
+    background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  }
+  
+  h1 {
+    margin-top: 50px;
+    margin-bottom: 80px;
+    color: #ffffff;
+  }
+  
+  h2 {
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-size: 20px;
+  }
+  
+  h1,
+  h2,
+  .container,
+  .message-display,
+  .display-container,
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .call-to-action {
+    background-color: #ffffff;
+    width: 475px;
+    height: 80px;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 100px;
+    text-align: center;
+  }
+  
+  form {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .receive {
+    background-color: #134d71;
+    color: white;
+    margin-top: 18px;
+    padding: 2px 25px;
+    border-radius: 4px;
+    border-style: none;
+  }
+  
+  .display-container {
+    width: 700px;
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  img {
+    height: auto;
+    max-width: 10%;
+  }
+  
