@@ -57,14 +57,22 @@ black - #000000;
   
   form {
     margin-top: 15px;
-    display: flex;
-    justify-content: space-around;
+    /* border: solid */
+  }
+
+  .affirmation-text {
+    margin-right: 110px;
+    padding: 10px;
+  }
+
+  .mantra-text {
+    padding: 10px;
   }
   
   .receive {
     background-color: #134d71;
     color: white;
-    margin-top: 18px;
+    margin-top: 15px;
     padding: 2px 25px;
     border-radius: 4px;
     border-style: none;
