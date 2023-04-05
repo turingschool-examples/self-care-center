@@ -64,4 +64,11 @@ black - #000000; */
        background-color: #ffffff;
        border-radius: 10px;
        width: 1200px;
+       margin: 0 auto;
+       margin-top: 80px;
     }
+
+    #namers {
+      margin-right: 100px;
+   }
+   
