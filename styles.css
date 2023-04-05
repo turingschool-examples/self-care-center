@@ -6,6 +6,10 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000; */
 
+* {
+    text-align: center;
+}
+
 html {
     height: 100%;
 }
@@ -15,7 +19,7 @@ html {
     border-radius: 12px;
     padding-top: 20px;
     padding-bottom: 10px;
-    width: 60%;
+    width: 600px;
     display: inline-block;
 
 }
@@ -27,7 +31,7 @@ button {
     display: inline-block;
     font-size: 20px;
     font-family: 'Quicksand', sans-serif;
-    border-radius: 8px;
+    border-radius: 4px;
     width: 220px;
 }
 
@@ -62,15 +66,30 @@ h1 {
     font-style: italic;
 }
 
-
-* {
-    text-align: center;
-}
-
 body {
     background: linear-gradient(#134d71,#78a7c6, #f7e4bf);
     height: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
 
+
+.white-box-2 {
+    background-color: #ffffff;
+    border-radius: 12px;
+    width: 900px;
+    display: inline-block;
+}
+
+p {
+    color: #000000;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    padding: 40px 0
+}
+
+img {
+    width: 60px;
+    height: 60px;
+    padding: 40px;
 }
