@@ -57,6 +57,7 @@ black - #000000; */
        height: 120px;
        margin: 0 auto;
        font-style: italic;
+       padding-top: 30px;
     }
     
     
@@ -64,4 +65,11 @@ black - #000000; */
        background-color: #ffffff;
        border-radius: 10px;
        width: 1200px;
+       margin: 0 auto;
+       margin-top: 80px;
     }
+
+    #spacer {
+      margin-right: 100px;
+   }
+   
