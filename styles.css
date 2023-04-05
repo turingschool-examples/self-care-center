@@ -30,11 +30,28 @@ h2 {
     padding-bottom: 1%;
 }
 
-.choice-box {
+.selection-box {
     margin: auto;
     background-color: #ffffff;
-    padding: 20px;
-    width: 10cm;
+    padding: 10px;
+    width: 16cm;
     border-radius: 30px;
+    font-size: medium;
+}
 
+.radio-group {
+    margin-top: 10px;
+}
+
+label[for=affirmation-choice] {
+    margin-right: 120px;
+}
+
+#msg-btn {
+    background-color: #134d71;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 16px;
+    width: 5.5cm;
 }
