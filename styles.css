@@ -55,3 +55,20 @@ label[for=affirmation-choice] {
     margin-top: 16px;
     width: 5.5cm;
 }
+
+#icon-display {
+    margin: auto;
+    background-color: #ffffff;
+    margin-top: 80px;
+    height: 100px;
+    padding: 12px;
+    width: 20cm;
+    border-radius: 30px;
+}
+
+#buddha {
+    height: 70px;
+    width: 70px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
