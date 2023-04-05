@@ -5,19 +5,13 @@
 
 body{
     background: linear-gradient(#134d71, #78a7c6,#f7e4bf);
-    padding-bottom: 600px
+    padding-bottom: 35em
 }
 
-/* h1 {
-    font-family: 'Quicksand', sans-serif;
-    background: #134d71
-   }
-   
-   
-   p {
-    font-family: 'Quicksand', sans-serif;
-   } */
-   
+button{
+    color:#ffffff;
+    background-color:#134d71;
+}
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
