@@ -6,6 +6,8 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+/* Overall Body */
 body {
     background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
     display: flex;
@@ -22,11 +24,18 @@ h1, h2 {
 .input-box, .output-box {
     border-radius: 10px;
     background-color: #ffffff;
+    margin-bottom: 16px;
 }
-
+/* Input Box Only */
 .input-box{
     width: 40vw;
     height: 16vh;
+}
+
+.radio-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 16px;
 }
 
 .button {
@@ -37,7 +46,11 @@ h1, h2 {
     padding-left: 24px;
     padding-right: 24px;
 }
-/* .image {
-   height: 200px;
-   width: 200px;
-} */
+
+.message-button {
+    display: flex;
+    justify-content: center;
+    margin: 48px;
+}
+
+/* Output Box Only */
