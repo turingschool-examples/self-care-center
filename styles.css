@@ -4,5 +4,71 @@ light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
-black - #000000;
-*/
+black - #000000; */
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+    background-attachment: fixed;
+    text-align: center;
+}
+
+h1,
+h2 {
+    color: #ffffff;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 3%;
+}
+
+h2 {
+    margin-top: 4%;
+    font-size: 1.4em;
+    padding-bottom: 1%;
+}
+
+.selection-box {
+    margin: auto;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 16cm;
+    border-radius: 30px;
+    font-size: medium;
+}
+
+.radio-group {
+    margin-top: 10px;
+}
+
+label[for=affirmation-choice] {
+    margin-right: 120px;
+}
+
+#msg-btn {
+    background-color: #134d71;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 16px;
+    width: 5.5cm;
+}
+
+#icon-display {
+    margin: auto;
+    background-color: #ffffff;
+    margin-top: 80px;
+    height: 100px;
+    padding: 12px;
+    width: 20cm;
+    border-radius: 30px;
+}
+
+#buddha {
+    height: 70px;
+    width: 70px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

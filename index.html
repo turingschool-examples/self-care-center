@@ -4,7 +4,30 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
+
+
   <body>
+    <header>
+      <h1 class="title">✨ Self Care Center ✨</h1>
+      <h2 class="message-type">Which type of message?</h2>
+    </header>
+
+      <body>
+
+        <section class="selection-box"   id="choice-box">
+          <div class="radio-group">
+            <input type="radio" name="message-choice" value="affirmation" id="affirmation-choice">
+            <label for="affirmation-choice"><em>affirmation</em></label>
+            <input type="radio" name="message-choice" value="mantra" id="mantra-choice">
+              <label for="mantra-choice"><em>mantra</em></label>
+          </div>
+            <button class="receive-message-button" id="msg-btn">Receive Message</button>
+       </section>
+      
+       <section class="message-icon-box" id="icon-display">
+        <img class="buddha-icon" src=assets/meditate.svg id="buddha" alt="meditation-icon">
+       </section>
+   
   
     <script type="text/javascript" src="main.js"></script>
   </body>
