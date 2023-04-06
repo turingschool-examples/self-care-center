@@ -21,7 +21,6 @@ html {
     padding-bottom: 10px;
     width: 600px;
     display: inline-block;
-
 }
 
 
@@ -78,23 +77,37 @@ body {
     background-color: #ffffff;
     border-radius: 12px;
     width: 900px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 135px;
     
 }
+
+.bottom-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 p {
     color: #000000;
     font-family: 'Quicksand', sans-serif;
     font-size: 18px;
-    padding: 40px 0
+    /* width: 60px; */
+    /* height: 60px;
+    padding: 40px; */
 }
 
 img {
     width: 60px;
     height: 60px;
-    padding: 40px;
+    /* padding: 40px;  */
 }
-
-/* .user-random-phrase {
-    /* visibility: hidden */
-/* } */ 
