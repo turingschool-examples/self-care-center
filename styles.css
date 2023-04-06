@@ -8,52 +8,65 @@ black - #000000;
 */
 
 html {
-    height: 100%
+    height: 100%;
+    background-image: linear-gradient(#134d71 15%, #78a7c6, #f7e4bf);
 }
 
 body { 
-    background-image: linear-gradient(#134d71 15%, #78a7c6, #f7e4bf);
     font-family: 'Quicksand', sans-serif;
     text-align: center;
 }
 
 h1 {
     color: #ffffff;
-    font-size: 30px;
+    font-size: 2rem;
     margin: 45px;
+}
+
+.inputs-section {
+    margin: 100px 35px;
 }
 
 .box {
     background-color: #ffffff;
-    padding: 10px 40px 10px 40px;
     border-radius: 8px
-}
-
-.inputs {
-    margin: 100px 35px 0 35px;
 }
 
 p {
     font-weight: bold;
     color: #ffffff;
-    font-size: 23px;
-    padding: 0;
+    font-size: 1.5rem;
+    padding: auto;
     margin: 10px;
 }
 
 #buttons {
     margin: 0 400px 50px;
+    padding: 10px 40px 10px 40px;
 }
 
 .radio-buttons {
-    color: #000000;
-    font-style: italic;
-    font-size: 18px;
-    margin: 0;
-    padding: 13px;
+    margin: auto;
+    padding: 10px 0 20px;
 }
 
-button {
+input {
+    height: 18px;
+    width: 18px;
+}
+
+label {
+    color: #000000;
+    font-style: italic;
+    font-size: 1.15rem;
+    padding-left: 10px
+}
+
+#mantra-button {
+    margin-left: 150px;
+}
+
+.button {
     background-color: #134d71;
     color: #ffffff; 
     font-family: 'Quicksand', sans-serif;
@@ -68,6 +81,7 @@ button {
 }
 
 img {
-    max-width: 75px;
-    padding: 28px;
+    max-width: 9%;
+    padding: 32px;
+    margin: 5px;
 }
