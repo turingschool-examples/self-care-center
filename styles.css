@@ -78,3 +78,25 @@ body {
     padding-block: 5px;
     border: 0px;
 }
+
+.buddha-section {
+    display: flex;
+    justify-content: center;
+}
+.buddha-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    width: 800px;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 10px;
+    margin-top: 130px;
+    border-radius: 10px;
+}
+
+.buddha-icon {
+    height: 65px;
+    width: 65px;
+}
