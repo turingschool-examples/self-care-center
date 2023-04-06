@@ -5,21 +5,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body class="wrapper">
-    <h1 class="mama">Self Care Center</h1>
+    <h1 class="mama">✨Self Care Center✨</h1>
     <header class="wow">What type of message?</header>
-    <div class="container">
-      <div class="child1">
-        <form>
+    <div class="child1"> 
+      <div class="radio-container">
+        <span>
           <input type="radio" id="affirmation" name="desires" value="affirmation">
           <label for="affirmation">affirmation</label>
+        </span>
+        <span>
           <input type="radio" id="mantra" name="desires" value="mantra">
-          <label for="affirmation">mantra</label><br>
-          <button type="submit">Receive Message</button>
-        </form>
+          <label for="affirmation">mantra</label>
       </div>
+        </span>
+        <div class="button-holder">
+          <button type="submit">Receive Message</button>
+        </div>
+    </div>
+        
+      
        <div class="child2">
-        <p>in the beginning it's you</p>
-        <!-- <img src="assets/meditate.svg"> -->
+        <p class="hidden">in the beginning it's you</p>
+        <img class="med-img" src="assets/meditate.svg">
       </div>
     </div>
     <script type="text/javascript" src="main.js"></script>
