@@ -11,3 +11,74 @@ html {
     height: 100%;
     background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
 }
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+    font-size: 35px;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.boxOne {
+    background-color: white;
+    height: 90px;
+    width: 550px;
+    margin:auto;
+    border-radius: 10px;
+    
+}
+
+.boxTwo {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    background-color: white;
+    height: 140px;
+    width: 700px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.buttonArea {
+    text-align: center;
+}
+
+.button {
+    background-color: #134d71;
+    color: white;
+    font-weight: lighter;
+    width: 190px;
+    height: 27px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 7px;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-style: italic;
+}
+
+.individualOption {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.meditateIcon {
+    width: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
