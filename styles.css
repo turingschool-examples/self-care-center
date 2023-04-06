@@ -1,8 +1,166 @@
-/* font-family: 'Quicksand', sans-serif;
-COLORS
+*,
+*:before,
+*:after {
+ box-sizing: border-box;
+ font-family: 'Quicksand', sans-serif;
+ /* border: solid black */
+}
+
+.hidden {
+   display: none
+}
+
+body {
+ height: 100vh;
+ margin:0;
+ background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+}
+
+
+.pageTitle {
+   color: #ffffff;
+   margin-top: 3%;
+}
+
+/* this will clean up the code  */
+.columnCenter {
+   flex-direction: column;
+   justify-content: center;
+}
+
+.headingContainer {
+   display: flex;
+   /* flex-direction: column;
+   justify-content: center; */
+   align-items: center;
+   margin-bottom:3%
+}
+
+
+.radioBtnHeadingContainer{
+   color:#ffffff;
+   font-size: smaller;
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-top: 5%;
+}
+
+
+.radioBtnContainer {
+   background-color:#ffffff;;
+   display:flex;
+   justify-content: space-evenly;
+   align-items: center;
+   height: 6vh;
+   margin-left: 25%;
+   margin-right: 25%;
+   font-style: italic;
+   border-top-left-radius: 7px;
+   border-top-right-radius: 7px;
+}
+
+
+.recieveBtnContainer {
+   background-color: #ffffff;
+   font-size: smaller;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   height: 6vh;
+   margin-left: 25%;
+   margin-right: 25%;
+   border-bottom-left-radius: 7px;
+   border-bottom-right-radius: 7px;
+}
+
+
+.recieveMessageBtn{
+   color:#ffffff;
+   background-color:#134d71;;
+   border-radius: 5px;
+   width: 160px
+}
+
+
+.messageContainer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: #ffffff;
+   margin-top: 10vh;
+   margin-bottom: 20vh;
+   margin-left: 15%;
+   margin-right: 15%;
+   border-radius: 7px;
+   height: 18vh;
+}
+
+
+img {
+   height: 50px;
+   width: 50px
+}
+
+.createMessageBtnContainer {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 50vh;
+}
+
+.createMessageBtn {
+   background-color:#134d71;
+   color:#ffffff;
+   border-radius: 5px;
+   margin-bottom: 10%;
+}
+
+/* making button a heart 
+.createMessageBtn {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background-color: rgba(250,184,66, 1);
+    }
+
+    .createMessageBtn:before,
+    .createMessageBtn:after{
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      content: '';
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      background-color: rgba(250,184,66, 1);
+    }
+    .createMessageBtn:before{
+      bottom: 0px;
+      left: -25px;
+    }
+    .createMessageBtn:after{
+      top: -25px;
+      right: 0px;
+    } */
+
+
+
+/* Given to us  */
+/* /* font-family: 'Quicksand', sans-serif; */
+/* COLORS
 light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+

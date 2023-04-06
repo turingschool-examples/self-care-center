@@ -5,7 +5,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-  
+  <section class = "headingContainer columnCenter" >
+     <h1 class = "pageTitle">✨ Self Care Center ✨ </h1>
+  </section>
+  <section class = "radioBtnHeadingContainer">
+    <h2 class = "messageHeading">Which type of message ?</h2>
+  </section>
+  <form>
+  <div class = "radioBtnContainer">
+        <span>
+          <input type="radio" id ="affirmation" name="choice" value = "affirmation">
+          <label for = "affirmation">affirmation</label>
+        </span>
+      <span>
+        <input type="radio" id ="mantra" name="choice" value = "mantra">
+        <label for = "mantra">mantra</label>
+      </span>
+  </div>
+  </form>
+  <div class= "recieveBtnContainer">
+      <button class = "recieveMessageBtn"> Recieve Message </button>
+  </div>
+  <section class = "messageContainer">
+    <img class = "image" src="./assets/meditate.svg" alt ="yellow figure meditating"> 
+    <p class ="message hidden">this is where the message will go</p>
+  </section>
+  <div class = "createMessageBtnContainer">
+    <button class = "createMessageBtn">Add your own message 💛</button>
+  </div>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
