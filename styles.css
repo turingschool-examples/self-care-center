@@ -48,6 +48,7 @@ h2 {
     width: 700px;
     text-align: center;
     border-radius: 15px;
+
 }
 
 .buttonArea {
@@ -81,4 +82,17 @@ h2 {
     width: 70px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.displayMessage {
+    margin: auto;
+}
+
+.notification {
+    color:silver;
+    font-weight: lighter;
+}
+
+.hidden {
+    display: none;
 }
