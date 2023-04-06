@@ -5,7 +5,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-  <section class = "headingContainer columnCenter" >
+    <section class ="formContainer">
+    <form>
+      <label for = "typeOfMesssage">Type of message:</label>
+      <select id = "messageType">
+        <option value ="affirmationOpt">Affirmation</option>
+        <option value = "mantraOpt">Mantra</option>
+      </select>
+    </form>
+  </section>
+  <div class = "mainPage hidden">
+  <section class = "headingContainer columnCenter hidden" >
      <h1 class = "pageTitle">✨ Self Care Center ✨ </h1>
   </section>
   <section class = "radioBtnHeadingContainer">
@@ -33,6 +43,7 @@
   <div class = "createMessageBtnContainer">
     <button class = "createMessageBtn">Add your own message 💛</button>
   </div>
+</div>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
