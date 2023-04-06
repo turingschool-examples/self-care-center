@@ -79,6 +79,7 @@ body {
     border-radius: 12px;
     width: 900px;
     display: inline-block;
+    
 }
 
 p {
@@ -93,3 +94,7 @@ img {
     height: 60px;
     padding: 40px;
 }
+
+/* .user-random-phrase {
+    /* visibility: hidden */
+/* } */ 
