@@ -6,6 +6,9 @@
  /* border: solid black */
 }
 
+.hidden {
+   display: none
+}
 
 body {
  height: 100vh;
@@ -19,11 +22,16 @@ body {
    margin-top: 3%;
 }
 
-
-.headingContainer{
-   display: flex;
+/* this will clean up the code  */
+.columnCenter {
    flex-direction: column;
    justify-content: center;
+}
+
+.headingContainer {
+   display: flex;
+   /* flex-direction: column;
+   justify-content: center; */
    align-items: center;
    margin-bottom:3%
 }
@@ -40,11 +48,6 @@ body {
 }
 
 
-h2{
-   /* padding:80% */
-}
-
-
 .radioBtnContainer {
    background-color:#ffffff;;
    display:flex;
@@ -56,12 +59,10 @@ h2{
    font-style: italic;
    border-top-left-radius: 7px;
    border-top-right-radius: 7px;
-
-
 }
 
 
-.btnContainer {
+.recieveBtnContainer {
    background-color: #ffffff;
    font-size: smaller;
    display:flex;
@@ -102,6 +103,55 @@ img {
    height: 50px;
    width: 50px
 }
+
+.createMessageBtnContainer {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 50vh;
+}
+
+.createMessageBtn {
+   background-color:#134d71;
+   color:#ffffff;
+   border-radius: 5px;
+   margin-bottom: 10%;
+}
+
+/* making button a heart 
+.createMessageBtn {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background-color: rgba(250,184,66, 1);
+    }
+
+    .createMessageBtn:before,
+    .createMessageBtn:after{
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      content: '';
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      background-color: rgba(250,184,66, 1);
+    }
+    .createMessageBtn:before{
+      bottom: 0px;
+      left: -25px;
+    }
+    .createMessageBtn:after{
+      top: -25px;
+      right: 0px;
+    } */
+
 
 
 /* Given to us  */
