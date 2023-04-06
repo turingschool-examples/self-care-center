@@ -43,3 +43,18 @@ body {
     border-radius: 10px;
 }
 
+.alignment {
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+}
+
+.alignment input {
+    margin-top: 10px
+}
+
+.alignment label {
+    width: 100%;
+    padding: 12px;
+    height: 20px;
+}
