@@ -55,7 +55,7 @@ function printMessage(){
     }
 }
 
-function hideMainPage(){
-    mainPage.classList.add('hidden');
-    formPage.classList.remove('hidden');
-}
+// function hideMainPage(){
+//     mainPage.classList.add('hidden');
+//     formPage.classList.remove('hidden');
+// }
