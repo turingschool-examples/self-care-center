@@ -1,7 +1,7 @@
 var affirmations = [
     "I am love. I am purpose. I was made with divine intention.", 
     "I am worthy of what I desire.", 
-    "I can. I will. End of story.I can. I will. End of story.", 
+    "I can. I will. End of story.", 
     "I am adventurous. I overcome fears by following my dreams.", 
     "I feed my spirit. I train my body. I focus my mind. It's my time.", 
     "I am in charge of my life.", 
@@ -10,7 +10,7 @@ var affirmations = [
     "I believe in the good things coming.", 
     "I claim my desires. I hold great visions. I am ready to receive.", 
     "My presence is my power.", 
-    "I am evolving", 
+    "I am evolving.", 
     "You are the sky. Everything else is just the weather.", 
     "I am grateful for all that is unfolding in my life and all that is yet to come.", 
     "I am fulfilled. I am fearless.", 
@@ -34,31 +34,65 @@ var mantras = [
     "My commitment to myself is unbreakable."
 ];
 var mantraChoice = document.querySelector('#mantra-choice');
-var afffChoice = document.querySelector('#affirmation-choice');
+var affirmationChoice = document.querySelector('#affirmation-choice');
+var showMessage = document.querySelector("#show-message");
+var buddhaIcon = document.querySelector('.buddha-icon');
 
+var message;
 
 //buttons:
 
 var rcvMsgBtn = document.querySelector("#msg-btn");
 var mantra = document.querySelector("#mantra-choice");
 var affirmation = document.querySelector('#affirmation-choice')
-
+var clearMsgBtn = document.querySelector("#clr-btn");
 
 //event listeners:
 
-rcvMsgBtn.addEventListener('click', showMessage);
+rcvMsgBtn.addEventListener('click', function() {
+    createMessage();
+    hideIcon();
+});
 
+// event handlers & functions:
 
-// event handlers:
+function randomizeMessage(array) {
+    return Math.floor(Math.random() * array.length);
+};
 
-function showMessage() {
+function createMessage() {
     if (mantra.checked) {
-        console.log(mantra);
+        message = mantras[randomizeMessage(mantras)];
+        displayMessage();
     }
-        // display (function? display random mantra??) create new variable to hold value of random mantra -- currently an array--- access random index position of array?? -- Math..random()??? -- same for below??? --- 
-    if (affirmation.checked){
-        console.log(affirmation)
+    else if (affirmation.checked) {
+        message = affirmations[randomizeMessage(affirmations)];
+        displayMessage();
+    } else {
+        alert("✨ Please make a selection to display message! ✨")
     }
+}
+
+
+function hideIcon() {
+    if (mantra.checked || affirmation.checked){
+        buddhaIcon.classList.add('hidden');
+    } clearMsgBtn.classList.remove('hidden')
+  }
+
+// function displayClrBtn() {
+//     clearMsgBtn.classList.remove('hidden')
+// }
+
+function displayMessage() {
+    showMessage.innerText = message;
+    return message
+}
+
+
+
+
+
 
     //needs to hide the buddha icon -- line 28 htmlu
     //which means "removve hidden" from random index position of array, based on which radio button is selected...
@@ -66,7 +100,6 @@ function showMessage() {
 
 
     // how can i join the rcvMsgBtn eventListener(aka, click) with the disappearing w/"#icon-display" -- (save it in a variable?) -- need to specify that
-}
 
 
 

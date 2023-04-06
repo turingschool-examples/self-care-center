@@ -15,20 +15,25 @@
       <body>
 
         <section class="selection-box"   id="choice-box">
-          <div class="radio-group">
+          <section class="radio-group">
             <input type="radio" name="message-choice" id="affirmation-choice">
             <label for="affirmation-choice"><em>affirmation</em></label>
-            <input type="radio" name="message-choice" value="mantra" id="mantra-choice">
+            <input type="radio" name="message-choice" value="mantra" id="mantra-choice" >
               <label for="mantra-choice"><em>mantra</em></label>
-          </div>
-          <div>
+          </section>
+          <section>
             <button class="receive-message-button" id="msg-btn">Receive Message</button>
-          </div>
-          
-       </section>
+            <button class="clear-button hidden" id="clr-btn">Clear Message</button>
+          </section>
+        </section>
+
       
-       <section class="message-icon-box" id="icon-display">
-        <img class="buddha-icon" src=assets/meditate.svg id="buddha" alt="meditation-icon">
+       <section class="flex-container message-icon-box" id="icon-message-display">
+
+        <img class="flex-item-1 buddha-icon" src=assets/meditate.svg id="buddha" alt="meditation-icon" height="70px", width="70px">
+
+        <p class="flex-item-2 message-display " id="show-message"></p>
+
        </section>
    
   

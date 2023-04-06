@@ -56,19 +56,32 @@ label[for=affirmation-choice] {
     width: 5.5cm;
 }
 
-#icon-display {
+.flex-container {
     margin: auto;
+    display: flex;
     background-color: #ffffff;
     margin-top: 80px;
     height: 100px;
-    padding: 12px;
     width: 20cm;
     border-radius: 18px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-#buddha {
-    height: 70px;
-    width: 70px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+.clear-button {
+    background-color: #134d71;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 16px;
+    width: 5.5cm;
+}
+
+.hidden {
+    display: none;
+}
+
+#show-message {
+    font-size: larger;
 }
