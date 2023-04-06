@@ -1,8 +1,55 @@
-/* font-family: 'Quicksand', sans-serif;
-COLORS
+* {
+  font-family: 'Quicksand', sans-serif; 
+}
+
+html {
+background-image: linear-gradient(#134d71,#78a7c6,#f7e4bf);
+height: 100%;
+}
+
+  h1 {
+  color: white; 
+  text-align: center;
+ }  
+
+  h2 {
+    text-align: center;
+    color: white;
+    margin:2px;
+    padding-top: 100px;
+  }
+
+
+.message-options {
+  padding: left, 120px;
+  padding: right;
+  margin: 0px;
+  text-align: center;
+}
+
+.receive-message{
+  background-color: #134d71;
+  color: white;
+  border-radius: 10px;
+}
+
+  .box {
+    align-self: center;
+    width: 400px;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    margin:20px;
+    background-color: white;
+  }
+
+
+
+  /* COLORS
 light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+ /* */ 
