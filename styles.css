@@ -3,15 +3,45 @@
     color: #ffffff;
 }
 
+h1{
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 40px;
+}
+
+p{
+    font-size: 30px;
+    font-weight: bold
+}
+
 body{
     background: linear-gradient(#134d71, #78a7c6,#f7e4bf);
-    padding-bottom: 35em
+    padding-bottom: 400px
+}
+
+#display-message-box{
+    background: #ffffff;
+    padding: 20px 20px 40px 20px;
+    border-radius: 10px;
+    /* margin: 100px 200px 10px; */
+}
+
+svg{
+    height: 90px;
+    width: 90px;
 }
 
 button{
     color:#ffffff;
     background-color:#134d71;
+    border: none;
+    padding: 5px 60px 5px;
+    border-radius: 5px;
+    font-size: 25px;
+    /* margin: 100px 380px 0px */
 }
+
+
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
