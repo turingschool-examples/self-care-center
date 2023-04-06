@@ -11,11 +11,11 @@
     <section class="boxOne">
       <div class="options">
         <div class="individualOption">
-          <input type="radio" name="messageType" value="affirmation">
+          <input type="radio" id="affirmation" name="messageType" value="affirmation">
           <label for="affirmation">affirmation</label>
         </div>
         <div class="individualOption">
-          <input type="radio" name="messageType" value="mantra"> 
+          <input type="radio" id="mantra" name="messageType" value="mantra"> 
           <label for="mantra">mantra</label>
         </div>
       </div>
@@ -25,9 +25,12 @@
     </section>
 
     <section class="boxTwo">
-      <img class="meditateIcon" src="assets/meditate.svg" alt="Meditation icon">
+      <img class="meditateIcon hidden" src="assets/meditate.svg" alt="Meditation icon">
+      <section class="displayMessage notification">This is text</section>
     </section>
 
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="data.js"></script>
+
   </body>
 </html>
