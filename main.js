@@ -51,7 +51,6 @@ function showAffirmation() {
     var myText;
     for (i = 0; i < userChosenMessage.length; i++) {
         if (userChosenMessage[i].innerHTML == "test") {
-            // console.log(myText, p[0].innerHTML);
             myText = userChosenMessage[i];
             break;
         }
@@ -71,7 +70,11 @@ function randomAffirmation() {
    return newAffirmations;
 };
 
-console.log(randomAffirmation());
+function randomMantras() {
+    var newMantras = mantras[getRandomIndex(mantras)];
+   return newMantras;
+};
+
 
 function recieveMessage() {
     userChosenMessage.innerHTML = '';
@@ -80,8 +83,11 @@ function recieveMessage() {
             userChosenMessage.innerHTML +=
                 `<p class= "user-random-phrase">${randomAffirmation()}</p>`
                 showAffirmation();
+        } else if (mantraRadio.checked) {
+                userChosenMessage.innerHTML +=
+                    `<p class= "user-random-phrase">${randomMantras()}</p>`
+                    showAffirmation();
         }
-
     }
 
 
