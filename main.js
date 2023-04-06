@@ -14,8 +14,7 @@ function selectMessage() {
 }
 
 function createMessage(messageType) {
-    var messagePosition = getRandomMessage(messageType);
-    return messageType[messagePosition];
+    return messageType[getRandomMessage(messageType)];
 }
 
 function getRandomMessage(messageType) {
