@@ -35,7 +35,7 @@ h2 {
     background-color: #ffffff;
     padding: 10px;
     width: 16cm;
-    border-radius: 30px;
+    border-radius: 18px;
     font-size: medium;
 }
 
@@ -63,7 +63,7 @@ label[for=affirmation-choice] {
     height: 100px;
     padding: 12px;
     width: 20cm;
-    border-radius: 30px;
+    border-radius: 18px;
 }
 
 #buddha {
