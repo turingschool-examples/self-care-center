@@ -13,21 +13,11 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-// Data Model
-function createMessage(quote) {
-  var message = {
-    id: Date.now(),
-    quote: quote,
-  };
-  return message;
-}
-
 function displayMessage() {
   if (radioAffirmation.checked) {
     renderAffirmationMessage();
   } else {
     renderMantraMessage();
-    console.log(renderMantraMessage());
   }
 }
 
@@ -36,7 +26,7 @@ function renderMantraMessage() {
   for (var i = 0; i < affirmations.length; i++) {
     messageDisplaySection.innerHTML = `
       <section class="display-container">
-      <h3>${mantras[getRandomIndex(mantras)]}</h3>
+      <h3>${mantras[getRandomIndex(mantras)].quote}</h3>
       </section>`;
   }
 }
@@ -46,7 +36,7 @@ function renderAffirmationMessage() {
   for (var i = 0; i < affirmations.length; i++) {
     messageDisplaySection.innerHTML = `
     <section class="display-container">
-    <h3>${affirmations[getRandomIndex(affirmations)]}</h3>
+    <h3>${affirmations[getRandomIndex(affirmations)].quote}</h3>
     </section>`;
   }
 }
@@ -59,36 +49,123 @@ function show(element) {
   element.classList.remove("hidden");
 }
 
+// data model
 var affirmations = [
-  "I forgive myself and set myself free.",
-  "I believe I can be all that I want to be.",
-  "I am in the process of becoming the best version of myself.",
-  "I have the freedom & power to create the life I desire.",
-  "I choose to be kind to myself and love myself unconditionally.",
-  "My possibilities are endless.",
-  "I am worthy of my dreams.",
-  "I am enough.",
-  "I deserve to be healthy and feel good.",
-  "I am full of energy and vitality and my mind is calm and peaceful.",
-  "Every day I am getting healthier and stronger.",
-  "I honor my body by trusting the signals that it sends me.",
-  "I manifest perfect health by making smart choices.",
+  {
+    quote: "I forgive myself and set myself free.",
+    id: Date.now(),
+  },
+  {
+    quote: "I forgive myself and set myself free.",
+    id: Date.now(),
+  },
+  {
+    quote: "I believe I can be all that I want to be.",
+    id: Date.now(),
+  },
+  {
+    quote: "I am in the process of becoming the best version of myself.",
+    id: Date.now(),
+  },
+  {
+    quote: "I have the freedom & power to create the life I desire.",
+    id: Date.now(),
+  },
+  {
+    quote: "I choose to be kind to myself and love myself unconditionally.",
+    id: Date.now(),
+  },
+  {
+    quote: "I am enough.",
+    id: Date.now(),
+  },
+  {
+    quote: "I am worthy of my dreams.",
+    id: Date.now(),
+  },
+  {
+    quote: "I deserve to be healthy and feel good.",
+    id: Date.now(),
+  },
+  {
+    quote: "I am full of energy and vitality and my mind is calm and peaceful.",
+    id: Date.now(),
+  },
+  {
+    quote: "Every day I am getting healthier and stronger.",
+    id: Date.now(),
+  },
+  {
+    quote: "I honor my body by trusting the signals that it sends me.",
+    id: Date.now(),
+  },
+  {
+    quote: "I manifest perfect health by making smart choices.",
+    id: Date.now(),
+  },
 ];
 
 var mantras = [
-  "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.",
-  "Don’t let yesterday take up too much of today.",
-  "Every day is a second chance.",
-  "Tell the truth and love everyone",
-  "I am free from sadness.",
-  "I am enough",
-  "In the beginning it is you, in the middle it is you and in the end it is you.",
-  "I love myself.",
-  "I am present now.",
-  "Inhale the future, exhale the past.",
-  "This too shall pass.",
-  "Yesterday is not today.",
-  "The only constant is change.",
-  "Onward and upward.",
-  "I am the sky, the rest is weather.",
+  {
+    quote:
+      "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.",
+    id: Date.now(),
+  },
+  {
+    quote: "Don’t let yesterday take up too much of today.",
+    id: Date.now(),
+  },
+  {
+    quote: "Every day is a second chance.",
+    id: Date.now(),
+  },
+  {
+    quote: "Tell the truth and love everyone",
+    id: Date.now(),
+  },
+  {
+    quote: "I am free from sadness.",
+    id: Date.now(),
+  },
+  {
+    quote: "I am enough",
+    id: Date.now(),
+  },
+  {
+    quote:
+      "In the beginning it is you, in the middle it is you and in the end it is you.",
+    id: Date.now(),
+  },
+  {
+    quote: "I love myself.",
+    id: Date.now(),
+  },
+  {
+    quote: "I am present now.",
+    id: Date.now(),
+  },
+  {
+    quote: "Inhale the future, exhale the past.",
+    id: Date.now(),
+  },
+  {
+    quote: "This too shall pass.",
+    id: Date.now(),
+  },
+  {
+    quote: "Yesterday is not today.",
+    id: Date.now(),
+  },
+  {
+    quote: "The only constant is change.",
+    id: Date.now(),
+  },
+  {
+    quote: "Onward and upward.",
+    id: Date.now(),
+  },
+  {
+    quote: "I am the sky, the rest is weather.",
+    id: Date.now(),
+  },
 ];
