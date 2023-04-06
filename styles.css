@@ -6,3 +6,54 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+body {
+    background: #78a7c6;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1 {
+    background: #134d71;
+}
+
+.box {
+    display: flex;
+    padding: 20px;
+    /* margin: auto; */
+    border: 50px solid black;
+    border-radius: 25px;
+    /* shape-outside: margin-box; */
+    background-color: rgb(249, 248, 248);
+    width: 500px;
+    height: 15px;
+    flex-direction: column;
+    align-items: center;
+};
+.box-quote {
+    background-color: black;
+    height: 50vh;
+    width: 50vw;
+}
+#image { 
+    /* background-color: white; */
+    height: 100px;
+    width: 200px; 
+    /* width: 50%; */
+    /* max-height: 100% */
+};
+.quote-box {
+    text-align: center; 
+    padding-top: 1%;
+    border: 1px solid  rgb(248, 249, 248);
+    background-color: rgb(252, 250, 250);
+    width: 50%;
+    height: 10%;
+    border-radius: 25px;
+    margin: auto;
+};
+
+/* 
+h1 {text-align: center;}
+p {text-align: center;} */
+
