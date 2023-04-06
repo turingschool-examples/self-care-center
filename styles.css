@@ -1,4 +1,6 @@
-*{
+html{
+    background: linear-gradient(#134d71 15%, #78a7c6, #f7e4bf);
+    height: 100%;
     font-family: 'Quicksand', sans-serif;
     color: #ffffff;
 }
@@ -14,23 +16,6 @@ p{
     font-weight: bold
 }
 
-body{
-    background: linear-gradient(#134d71, #78a7c6,#f7e4bf);
-    padding-bottom: 400px
-}
-
-#display-message-box{
-    background: #ffffff;
-    padding: 20px 20px 40px 20px;
-    border-radius: 10px;
-    /* margin: 100px 200px 10px; */
-}
-
-svg{
-    height: 90px;
-    width: 90px;
-}
-
 button{
     color:#ffffff;
     background-color:#134d71;
@@ -38,7 +23,18 @@ button{
     padding: 5px 60px 5px;
     border-radius: 5px;
     font-size: 25px;
-    /* margin: 100px 380px 0px */
+}
+
+.display-box{
+    background: #ffffff;
+    padding: 20px 20px 40px 20px;
+    border-radius: 10px;
+    color: black;
+}
+
+#meditation-pic{
+    height: 90px;
+    width: 90px;
 }
 
 
