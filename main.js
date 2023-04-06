@@ -1,15 +1,15 @@
 var affirmationRadio = document.querySelector('.affirmation-message');
 var mantraRadio = document.querySelector('.mantra-message');
 var createMessageButton = document.querySelector('button');
-
+var createMessageBox = document.querySelector('.message');
 
 createMessageButton.addEventListener('click', selectMessage);
 
 function selectMessage() {
     if (affirmationRadio.checked) {
-       createMessage(affirmations);
+       createMessageBox.innerHTML = `<p>${createMessage(affirmations)}</p>`
     } else if (mantraRadio.checked) {
-       createMessage(mantras);
+       createMessageBox.innerHTML = `<p>${createMessage(mantras)}</p>`
     }
 }
 
