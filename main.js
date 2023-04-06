@@ -13,13 +13,13 @@
 // create a DOM variable for the recieve message button
 var receiveButton = document.querySelector(".receive");
 var radioAffirmation = document.querySelector("#affirmation");
+var radioMantra = document.querySelector("#mantra");
 var meditationImg = document.querySelector("img");
 var messageDisplaySection = document.querySelector(".message-display");
 
 // create an event listener
-receiveButton.addEventListener("click", renderAffirmationMessage);
-
-var currentMessage;
+// receiveButton.addEventListener("click", renderAffirmationMessage);
+receiveButton.addEventListener("click", displayMessage);
 
 // random array index
 function getRandomIndex(array) {
@@ -34,10 +34,22 @@ function createMessage(quote) {
   return message;
 }
 
-// function randomAffirmationMessage() {
-//   currentMessage = createMessage(affirmations[getRandomIndex(affirmations)]);
+// var currentMessage;
+
+// function randomMantraMessage() {
+//   currentMessage = createMessage(mantras[getRandomIndex(mantras)]);
 //   return currentMessage;
 // }
+
+function renderMantraMessage() {
+    hide(meditationImg);
+    for (var i = 0; i < affirmations.length; i++) {
+      messageDisplaySection.innerHTML = `
+      <section class="display-container">
+      <h3>${mantras[getRandomIndex(mantras)]}</h3>
+      </section>`
+    }
+  }
 
 function renderAffirmationMessage() {
   hide(meditationImg);
@@ -47,7 +59,6 @@ function renderAffirmationMessage() {
     <h3>${affirmations[getRandomIndex(affirmations)]}</h3>
     </section>`
   }
-//   console.log(randomAffirmationMessage());
 }
 
 function hide(element) {
@@ -58,7 +69,7 @@ function show(element) {
   element.classList.remove("hidden");
 }
 
-// array data model
+
 var affirmations = [
   "I forgive myself and set myself free.",
   "I believe I can be all that I want to be.",
