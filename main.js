@@ -5,21 +5,23 @@ var saveMessageButton = document.querySelector('.save-message')
 var createMessageBox = document.querySelector('.display-message');
 
 createMessageButton.addEventListener('click', selectMessage);
-
+console.log(createMessageBox.innerHTML === '<img src="./assets/meditate.svg" alt="enlightened buddha">')
 function selectMessage() {
     if (affirmationRadio.checked) {
-       createMessageBox.innerHTML = `<p>${createMessage(affirmations)}</p>`;
+        
+        if (createMessageBox.innerHTML === `<img src="./assets/meditate.svg" alt="enlightened buddha">`) {
+            toggleHiddenButton(saveMessageButton);
+        }
 
-       if (createMessageBox.innerHTML === '<img src="./assets/meditate.svg" alt="enlightened buddha">') {
-           toggleHiddenButton(saveMessageButton);
-       }
+        createMessageBox.innerHTML = `<p>${createMessage(affirmations)}</p>`;
 
     } else if (mantraRadio.checked) {
-       createMessageBox.innerHTML = `<p>${createMessage(mantras)}</p>`;
-       
-       if (createMessageBox.innerHTML === '<img src="./assets/meditate.svg" alt="enlightened buddha">') {
-           toggleHiddenButton(saveMessageButton);
-       }
+        
+        if (createMessageBox.innerHTML === '<img src="./assets/meditate.svg" alt="enlightened buddha">') {
+            toggleHiddenButton(saveMessageButton);
+        }
+        
+        createMessageBox.innerHTML = `<p>${createMessage(mantras)}</p>`;
     }
 }
 
