@@ -17,7 +17,6 @@ body {
     width: 100%;
     margin: 0;
     background-image: linear-gradient(#1a4c70, #ded8c1);
-    justify-content: center;
 }
 
 .title {
@@ -32,29 +31,50 @@ body {
     padding-top: 100px;
 }
 
-.box1 {
+.message-box {
     display: flex;
+    justify-content: center;
+}
+.box1 {
     background-color: #ffffff;
-    margin-right: auto;
-    margin-left: auto;
-    height: 100px;
-    width: 600px;
+    height: 80px;
+    width: 500px;
     padding: 10px;
     border-radius: 10px;
 }
 
-.alignment {
+.radio-btns {
     display: flex;
-    flex-direction: row;
-    height: 20px;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.alignment input {
+.radio-btn {
+    height: 25px;
+}
+
+.radio-btn input {
     margin-top: 10px
 }
 
-.alignment label {
+.radio-btn label {
+    font-size: 18px;
     width: 100%;
-    padding: 12px;
-    height: 20px;
+    padding: 7px;
+}
+
+.receive-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.x {
+    font-family: 'Quicksand', sans-serif; 
+    margin-top: 25px;
+    color: #ffffff;
+    background-color: #134d71;
+    border-radius: 3px;
+    padding-inline: 30px;
+    padding-block: 5px;
+    border: 0px;
 }
