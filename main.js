@@ -1,24 +1,11 @@
-// goal: when user clicks the receive message button, a random message from the list emerges.
-// data:
-// array: storage of mantra and affirmations
-// radio input/value
-// event listener
-// DOM variable
-
-// questions:
-// how do we have the button recieve the input from the radio type?
-// is this based on its value?
-// how do we connect the affirmation values to the affirmation array?
-
-// create a DOM variable for the recieve message button
+// DOM variables
 var receiveButton = document.querySelector(".receive");
 var radioAffirmation = document.querySelector("#affirmation");
 var radioMantra = document.querySelector("#mantra");
 var meditationImg = document.querySelector("img");
 var messageDisplaySection = document.querySelector(".message-display");
 
-// create an event listener
-// receiveButton.addEventListener("click", renderAffirmationMessage);
+// Event Listeners
 receiveButton.addEventListener("click", displayMessage);
 
 // random array index
@@ -26,6 +13,7 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
+// Data Model
 function createMessage(quote) {
   var message = {
     id: Date.now(),
@@ -34,22 +22,24 @@ function createMessage(quote) {
   return message;
 }
 
-// var currentMessage;
-
-// function randomMantraMessage() {
-//   currentMessage = createMessage(mantras[getRandomIndex(mantras)]);
-//   return currentMessage;
-// }
+function displayMessage() {
+  if (radioAffirmation.checked) {
+    renderAffirmationMessage();
+  } else {
+    renderMantraMessage();
+    console.log(renderMantraMessage());
+  }
+}
 
 function renderMantraMessage() {
-    hide(meditationImg);
-    for (var i = 0; i < affirmations.length; i++) {
-      messageDisplaySection.innerHTML = `
+  hide(meditationImg);
+  for (var i = 0; i < affirmations.length; i++) {
+    messageDisplaySection.innerHTML = `
       <section class="display-container">
       <h3>${mantras[getRandomIndex(mantras)]}</h3>
-      </section>`
-    }
+      </section>`;
   }
+}
 
 function renderAffirmationMessage() {
   hide(meditationImg);
@@ -57,7 +47,7 @@ function renderAffirmationMessage() {
     messageDisplaySection.innerHTML = `
     <section class="display-container">
     <h3>${affirmations[getRandomIndex(affirmations)]}</h3>
-    </section>`
+    </section>`;
   }
 }
 
@@ -68,7 +58,6 @@ function hide(element) {
 function show(element) {
   element.classList.remove("hidden");
 }
-
 
 var affirmations = [
   "I forgive myself and set myself free.",
