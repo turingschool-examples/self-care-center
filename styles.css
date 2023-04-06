@@ -42,7 +42,7 @@ p {
     border-radius: 15px;
 }
 
-.message {
+.message-container {
     background: #FFFFFF;
     min-width: 450px;
     min-height: 70px;
@@ -66,4 +66,8 @@ button {
 
 img {
     max-height: 70px;
+}
+
+.hidden {
+    display: none;
 }
