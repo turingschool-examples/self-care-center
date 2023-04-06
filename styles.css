@@ -17,6 +17,7 @@ body {
     width: 100%;
     margin: 0;
     background-image: linear-gradient(#1a4c70, #ded8c1);
+    justify-content: center;
 }
 
 .title {
@@ -30,3 +31,15 @@ body {
     text-align: center;
     padding-top: 100px;
 }
+
+.box1 {
+    display: flex;
+    background-color: #ffffff;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100px;
+    width: 600px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
