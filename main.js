@@ -2,14 +2,46 @@
 var randomButton = document.querySelector(".button");
 var affirmationCheck = document.querySelector("#affirmation");
 var mantraCheck = document.querySelector("#mantra");
+var currentAffirmation;
+var currentMantra;
+var currentMessage;
+var currentArray;
+var safeArray;
 
 // event listeners
-randomButton.addEventListener("click", displayMessage);
+randomButton.addEventListener("click", reassignCurrentMessage);
 
 //functions
 function getRandomIndex(array) {
     return Math.floor(Math.random()*array.length);
 } 
+
+function reassignCurrentArray() {
+    if(affirmationCheck.checked) {
+        currentArray = clonedAffirmations;
+    } else {
+        currentArray = clonedMantras;
+    }
+}
+
+function reassignSafeArray() {
+    if(affirmationCheck.checked) {
+        safeArray = safeAffirmations;
+    } else {
+        safeArray = safeMantras;
+    }
+}
+
+function reassignArrays(){
+    reassignCurrentArray();
+    reassignSafeArray();
+}
+
+
+// function reassignCurrentMessage() {
+//     reassignArrays();
+// }
+
 
 
 /*
