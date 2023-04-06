@@ -29,11 +29,14 @@ body {
     color: black;
 }
 
-.radio {
-    margin: 10%;
+.radios {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-#display {
+
+.show-message-button {
     background-color: #134d71;
     color: white;
     border-radius: 5px;
@@ -49,7 +52,7 @@ body {
     max-height: 15%;
 }
 
-#message-box {
+.message-box {
     padding: 1.125rem;
     max-width: 60%;
     margin: 8% auto;
