@@ -5,17 +5,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <section class ="formContainer">
-    <form>
-      <label for = "typeOfMesssage">Type of message:</label>
+    <section class = "formPage hidden">
+      <div class = "formImg">
+        <img class = "ramDassImg" src = "https://bloximages.newyork1.vip.townnews.com/santafenewmexican.com/content/tncms/assets/v3/editorial/2/5f/25f9219a-82c4-11eb-88a6-6300ca5dbcbf/604aaccb7a321.image.jpg?resize=750%2C500" alt = "ram dass meditating">
+      </div>
+    <form class ="formContainer">
+      <label for = "typeOfMesssage">Type of message:</label> 
+      <br>
       <select id = "messageType">
         <option value ="affirmationOpt">Affirmation</option>
         <option value = "mantraOpt">Mantra</option>
       </select>
+      <label for = "customMessage">Type your message here ...</label> 
+      <input type = "text" id = "customMessage" name ="customMessage">
+      <input class ="submitBtn" type = "submit" value = "Submit">
     </form>
   </section>
-  <div class = "mainPage hidden">
-  <section class = "headingContainer columnCenter hidden" >
+  <div class = "mainPage">
+  <section class = "headingContainer columnCenter" >
      <h1 class = "pageTitle">✨ Self Care Center ✨ </h1>
   </section>
   <section class = "radioBtnHeadingContainer">
@@ -37,7 +44,7 @@
       <button class = "recieveMessageBtn"> Recieve Message </button>
   </div>
   <section class = "messageContainer">
-    <img class = "image" src="./assets/meditate.svg" alt ="yellow figure meditating"> 
+    <img class = "mainImage" src="./assets/meditate.svg" alt ="yellow figure meditating"> 
     <p class ="message hidden">this is where the message will go</p>
   </section>
   <div class = "createMessageBtnContainer">
