@@ -11,16 +11,92 @@ html {
     height: 100%;
 }
 
+body {
+    font-family: 'Quicksand', sans-serif; 
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-image: linear-gradient(#1a4c70, #ded8c1);
+}
+
 .title {
-    font-family: 'Quicksand', sans-serif;
     color: #ffffff;
     text-align: center;
     padding: 20px;
 }
 
-body {
-    height: 100%;
+.message-type {
+    color: #ffffff;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.message-box {
+    display: flex;
+    justify-content: center;
+}
+.box1 {
+    background-color: #ffffff;
+    height: 80px;
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.radio-btns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.radio-btn {
+    height: 25px;
+}
+
+.radio-btn input {
+    margin-top: 10px
+}
+
+.radio-btn label {
+    font-size: 18px;
     width: 100%;
-    margin: 0;
-    background-image: linear-gradient(#1a4c70, #ded8c1);
+    padding: 7px;
+}
+
+.receive-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.x {
+    font-family: 'Quicksand', sans-serif; 
+    margin-top: 25px;
+    color: #ffffff;
+    background-color: #134d71;
+    border-radius: 3px;
+    padding-inline: 30px;
+    padding-block: 5px;
+    border: 0px;
+}
+
+.buddha-section {
+    display: flex;
+    justify-content: center;
+}
+.buddha-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    width: 800px;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 10px;
+    margin-top: 130px;
+    border-radius: 10px;
+}
+
+.buddha-icon {
+    height: 65px;
+    width: 65px;
 }
