@@ -11,16 +11,22 @@ html {
     height: 100%;
 }
 
+body {
+    font-family: 'Quicksand', sans-serif; 
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-image: linear-gradient(#1a4c70, #ded8c1);
+}
+
 .title {
-    font-family: 'Quicksand', sans-serif;
     color: #ffffff;
     text-align: center;
     padding: 20px;
 }
 
-body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    background-image: linear-gradient(#1a4c70, #ded8c1);
+.message-type {
+    color: #ffffff;
+    text-align: center;
+    padding-top: 100px;
 }
