@@ -43,7 +43,6 @@ section {
 form {
     display: flex;
     justify-content: space-evenly;
-    /* width: 50%; */
 }
 
 label {
@@ -59,17 +58,11 @@ label {
     color:white;
 }
 
-.message-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 .hidden {
     display: none;
 }
 
-#msgbtn {
+#msgbtn, #clearbtn {
     font-size: 15px;
     padding: 5px;
     background-color: #134d71;
@@ -80,24 +73,18 @@ label {
     transition: .2s ease all;
 }
 
-#clearbtn {
-    font-size: 15px;
-    padding: 5px;
-    background-color: #134d71;
-    border-radius: 5px;
-    margin-top: 30px;
-    width: 20%;
-    color: white;
-    transition: .2s ease all;
-}
 
-button:hover {
+#clearbtn:hover, #msgbtn:hover {
     background-color: #2f75a1;
     cursor: pointer;
     width: 40%;
 }
 
 .message-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
     background: white;
     padding: 10px;
