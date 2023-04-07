@@ -72,7 +72,6 @@ body {
     background-attachment: fixed;
 }
 
-
 .white-box-2 {
     background-color: #ffffff;
     border-radius: 12px;
@@ -81,7 +80,6 @@ body {
     align-items: center;
     justify-content: center;
     height: 135px;
-    
 }
 
 .bottom-section {
@@ -96,20 +94,15 @@ body {
     justify-content: center;
 }
 
-
 p {
     color: #000000;
     font-family: 'Quicksand', sans-serif;
     font-size: 18px;
-    /* width: 60px; */
-    /* height: 60px;
-    padding: 40px; */
 }
 
 img {
     width: 60px;
     height: 60px;
-    /* padding: 40px;  */
 }
 
 .clear-message-button {
@@ -118,5 +111,4 @@ img {
     margin-top: 10px;
     width: 150px;
     font-style: italic;
-
 }
