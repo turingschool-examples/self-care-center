@@ -12,7 +12,26 @@
         <button id="btn-collection">All Messages</button>
       </nav>
     </header>
-  
+    <section class="main-section" id="main-section">
+      <h2>Which type of message?</h2>
+      <form class="receive-message-form card">
+        <div class="radio-group">
+          <div>
+            <input type="radio" id="rb-affirmation" name="message-type" checked>
+            <label for="rb-affirmation">affirmation</label>
+          </div>
+          <div>
+            <input type="radio" id="rb-mantra" name="message-type">
+            <label for="rb-mantra">mantra</label>
+          </div>
+        </div>
+        <button id="btn-receive-msg">Receive Message</button>
+      </form>
+      <aside id="message-display" class="message-display card">
+        <img src="assets/meditate.svg" alt="meditiate">
+      </aside>
+    </section>
+    
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
