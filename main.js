@@ -66,7 +66,29 @@ function notifyRepeatMessages() {
     }
 }
 
+function reassignCurrentMessage() {
+    if(checkMessageType() === "affirmations") {
+     fetchRelevantMessage(clonedAffirmations);
+    } 
+    if(checkMessageType() === "mantras") {
+     fetchRelevantMessage(clonedMantras);
+    }
+}
 
+function fetchRelevantMessage(activeArray) {
+    if(activeArray.length) {
+        if(displayMessage.classList.contains("notification")) {
+            removeNotificationStyling();
+        }
+        var workingIndex = getRandomIndex(activeArray);
+        currentMessage = activeArray[workingIndex];
+        removeMessageFromArray(activeArray, workingIndex);
+    } else {
+        currentMessage = notifyRepeatMessages();
+        refillArrays();
+        }
+    return currentMessage;
+}
 
 /*
 import the DOM elements
