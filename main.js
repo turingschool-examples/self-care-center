@@ -23,8 +23,13 @@ var displayedMsgs = {
 }
 
 function organizeMsgs(type, array, i) {
-  displayedMsgs[type].push(array[i]);
-  array.splice(i, 1);
+  if (typeof i === "number") {
+    displayedMsgs[type].push(array[i]);
+    array.splice(i, 1);
+  } else {
+    displayedMsgs[type].forEach((msg) => array.push(msg));
+    displayedMsgs[type] = [];
+  }
 }
 
 function displayMsg() {
@@ -46,18 +51,16 @@ function chooseMsg() {
       return true;
     } else {
       alert(`You have seen all the mantras we currently have to offer. You will now start begin seeing repeated mantras.`);
-      affirmations = displayedMsgs.affirmations;
-      displayedMsgs.affirmations = [];
+      organizeMsgs('affirmations', affirmations)
     }
   } else if (mantra.checked) {
     if (mantras.length) {
       message.innerText = mantras[idx.mantras];
-      organizeMsgs('mantras', mantras, idx.mantras)
+      organizeMsgs('mantras', mantras, idx.mantras);
       return true;
     } else {
       alert(`You have seen all the affirmations we currently have to offer. You will now start begin seeing repeated affirmations.`);
-      mantras = displayedMsgs.mantras;
-      displayedMsgs.mantras = [];
+      organizeMsgs('mantras', mantras);
     }
   }
 }
