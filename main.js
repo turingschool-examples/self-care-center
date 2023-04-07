@@ -17,17 +17,14 @@ function getAllIndexs() {
   }
 }
 
-var displayedMantras = [];
-var displayedAffirmations = [];
-
-function organizeAffirmations(i) {
-  displayedAffirmations.push(affirmations[i]);
-  affirmations.splice(i, 1);
+var displayedMsgs = {
+  mantras: [],
+  affirmations: []
 }
 
-function organizeMantras(i) {
-  displayedMantras.push(mantras[i]);
-  mantras.splice(i, 1);
+function organizeMsgs(type, array, i) {
+  displayedMsgs[type].push(array[i]);
+  array.splice(i, 1);
 }
 
 function displayMsg() {
@@ -45,22 +42,22 @@ function chooseMsg() {
   if (affirmation.checked) {
     if (affirmations.length) {
       message.innerText = affirmations[idx.affirmations];
-      organizeAffirmations(idx);
+      organizeMsgs('affirmations', affirmations, idx.affirmations)
       return true;
     } else {
       alert(`You have seen all the mantras we currently have to offer. You will now start begin seeing repeated mantras.`);
-      affirmations = displayedAffirmations;
-      displayedAffirmations = [];
+      affirmations = displayedMsgs.affirmations;
+      displayedMsgs.affirmations = [];
     }
   } else if (mantra.checked) {
     if (mantras.length) {
       message.innerText = mantras[idx.mantras];
-      organizeMantras(idx);
+      organizeMsgs('mantras', mantras, idx.mantras)
       return true;
     } else {
       alert(`You have seen all the affirmations we currently have to offer. You will now start begin seeing repeated affirmations.`);
-      mantras = displayedMantras;
-      displayedMantras = [];
+      mantras = displayedMsgs.mantras;
+      displayedMsgs.mantras = [];
     }
   }
 }
