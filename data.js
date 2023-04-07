@@ -1,4 +1,4 @@
-var mantras = [
+var safeMantras = [
 "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.",
 "Don’t let yesterday take up too much of today.",
 "Every day is a second chance.",
@@ -16,9 +16,9 @@ var mantras = [
 "I am the sky, the rest is weather."
 ]
 
-var clonedMantras = [];
+var clonedMantras = [...safeMantras];
 
-var affirmations = [
+var safeAffirmations = [
 "I forgive myself and set myself free.",
 "I believe I can be all that I want to be.",
 "I am in the process of becoming the best version of myself.",
@@ -34,4 +34,4 @@ var affirmations = [
 "I manifest perfect health by making smart choices."
 ]
 
-var clonedAffirmations = [];
+var clonedAffirmations = [...safeAffirmations];

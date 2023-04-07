@@ -2,15 +2,25 @@
 var randomButton = document.querySelector(".button");
 var affirmationCheck = document.querySelector("#affirmation");
 var mantraCheck = document.querySelector("#mantra");
+var displayMessage = document.querySelector(".displayMessage");
+var meditateIcon = document.querySelector(".meditateIcon");
+var currentMessage;
 
 // event listeners
-randomButton.addEventListener("click", displayMessage);
+randomButton.addEventListener("click", renderCurrentMessage);
 
 //functions
 function getRandomIndex(array) {
     return Math.floor(Math.random()*array.length);
 } 
 
+function hideDomElement(element) {
+    element.classList.add("hidden");
+}
+
+function showDomElement(element) {
+    element.classList.remove("hidden");
+}
 
 /*
 import the DOM elements
