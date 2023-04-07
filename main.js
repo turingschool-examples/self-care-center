@@ -17,6 +17,9 @@ function getRandomIndex(array) {
 function clearMsg() {
     msgBox.innerHTML = `<img src="assets/meditate.svg" alt="Bell Icon">`
     clearBtn.classList.add('hidden');
+    for (var message of messages) {
+        message.checked = false;
+    }
 }
 
 function getRandomMsg(msgArray) {
