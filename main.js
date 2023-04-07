@@ -19,6 +19,7 @@ var favBtn = document.querySelector('.favorite');
 var favoritesPageBtn = document.querySelector('.favorites-page-btn');
 var favoriteSection = document.querySelector('.favorite-section');
 var favoriteMessage = document.querySelector('.favorite-message');
+var homeBtn = document.querySelector('.home-btn');
 // navigation
 var homePage = document.querySelector('.home-page');
 var favoritesPage = document.querySelector('.favorites-page');
@@ -96,6 +97,7 @@ favBtn.addEventListener('click', function() {
 favoritesPageBtn.addEventListener('click', function() {
     homePage.classList.add('hidden');
     favoritesPage.classList.remove('hidden');
+    homeBtn.classList.remove('hidden');
     displayFavMessage() 
 })
 
@@ -107,6 +109,10 @@ function displayFavMessage() {
         </box>`
     }
 }
+
+// Create a home button that is hidden when home and visible when viewing favorites.
+
+// Allow user to delete favorited messages.
 
 
 
