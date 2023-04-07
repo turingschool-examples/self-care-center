@@ -42,6 +42,9 @@ function checkMessageType() {
     return typeOfMessages;
 }
 
+function removeMessageFromArray(array, index) {
+    array.splice(index, 1);
+}
 
 /*
 import the DOM elements
