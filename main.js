@@ -1,20 +1,23 @@
 //DOM elements
 var messageButton = document.querySelector(".receiveMessage");
-var viewFavoritesButton = document.querySelector(".favoriteButton");
+var viewFavoritesButton = document.querySelector(".viewFavoriteButton");
 var homeButton = document.querySelector(".homeButton");
 var affirmationCheck = document.querySelector("#affirmation");
 var mantraCheck = document.querySelector("#mantra");
 var displayMessage = document.querySelector(".displayMessage");
 var meditateIcon = document.querySelector(".meditateIcon");
 var homeView = document.querySelector(".homeView");
-var favoritesView = document.querySelector(".favoritesView")
+var favoritesView = document.querySelector(".favoritesView");
+var favoriteMessage = document.querySelector(".favoriteMessage");
 var currentMessage;
+var favoriteMessages = [];
+
 
 // event listeners
 messageButton.addEventListener("click", renderCurrentMessage);
 viewFavoritesButton.addEventListener("click", showFavorites);
 homeButton.addEventListener("click", showHome);
-
+favoriteMessage.addEventListener("click", addToFavorites);
 
 //functions
 function getRandomIndex(array) {
@@ -102,6 +105,7 @@ function renderCurrentMessage() {
     displayMessage.innerText = currentMessage;
     hideDomElement(meditateIcon);
     showDomElement(displayMessage);
+    showDomElement(favoriteMessage)
 }
 
 function showFavorites() {
@@ -112,4 +116,17 @@ function showFavorites() {
 function showHome() {
     hideDomElement(favoritesView);
     showDomElement(homeView)
+}
+
+function createFavoriteObject(message) {
+    var messageObject = {
+        message: message,
+        id: Date.now(),
+        messageType: checkMessageType()
+    }
+    return messageObject;
+}
+
+function addToFavorites() {
+    favoriteMessages.push(createFavoriteObject(currentMessage));
 }
