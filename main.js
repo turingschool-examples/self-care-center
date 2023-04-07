@@ -64,55 +64,70 @@ function showAffirmation() {
 // };
 
 
-var usedAffirmation= [];
+var usedAffirmation = [];
+var usedMantra = [];
 
-function generateUniqueRandom(array) {
+function generateUniqueAffirmation(array) {
     var random = Math.floor(Math.random() * array.length);
     random = Number(random);
     if (!usedAffirmation.includes(random)) {
         usedAffirmation.push(random);
         return random;
-    } else if (usedAffirmation.includes(random)) {
-         return generateUniqueRandom(array);
-        } else {
-          alert('No more affirmations available. You will now see repeats')
-        }
+    } else if (usedAffirmation.includes(random) && usedAffirmation.length < array.length) {
+        return generateUniqueAffirmation(array);
+    } else {
+        alert('No more affirmations available. You will now see repeats')
+        usedAffirmation =[]
+        return generateUniqueAffirmation(array);
     }
+}
 
+function generateUniqueMantra(array) {
+    var random = Math.floor(Math.random() * array.length);
+    random = Number(random);
+    if (!usedMantra.includes(random)) {
+        usedMantra.push(random);
+        return random;
+    } else if (usedMantra.includes(random) && usedMantra.length < array.length) {
+        return generateUniqueMantra(array);
+    } else {
+        alert('No more mantras available. You will now see repeats')
+        usedMantra =[]
+        return generateUniqueMantra(array);
+    }
+}
 
 
 function randomAffirmation() {
-    var newAffirmations = affirmations[generateUniqueRandom(affirmations)];
+    var newAffirmations = affirmations[generateUniqueAffirmation(affirmations)];
     console.log(newAffirmations);
-   return newAffirmations;
+    return newAffirmations;
 }
 
 
 function randomMantras() {
-    var newMantras = mantras[getRandomIndex(mantras)];
-   return newMantras;
+    var newMantras = mantras[generateUniqueMantra(mantras)];
+    return newMantras;
 };
 
 
 function recieveMessage() {
     userChosenMessage.innerHTML = '';
-        if (affirmationRadio.checked) {
-            userChosenMessage.innerHTML +=
-                `<p class= "user-random-phrase">${randomAffirmation()}</p>`
-                showAffirmation();
-                // usedAffirmations.pop(userChosenMessage.innerText);
-                // console.log(affirmations);
-        } else if (mantraRadio.checked) {
-                userChosenMessage.innerHTML +=
-                    `<p class= "user-random-phrase">${randomMantras()}</p>`
-                    showAffirmation();
-                    // usedMantra.push(userChosenMessage.innerText);
-                    // repeatMantra();
-        }
+    if (affirmationRadio.checked) {
+        userChosenMessage.innerHTML +=
+            `<p class= "user-random-phrase">${randomAffirmation()}</p>`
+        showAffirmation();
+        // usedAffirmations.pop(userChosenMessage.innerText);
+        // console.log(affirmations);
+    } else if (mantraRadio.checked) {
+        userChosenMessage.innerHTML +=
+            `<p class= "user-random-phrase">${randomMantras()}</p>`
+        showAffirmation();
+        // usedMantra.push(userChosenMessage.innerText);
+        // repeatMantra();
     }
+}
 
-    // repeatAffirmation();
-    //     repeatMantra();
+// repeatAffirmation();
+//     repeatMantra();
 
-// var usedAffirmation = ["fuck"];
-var usedMantra = ["shit"];
