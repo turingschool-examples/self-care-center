@@ -20,9 +20,11 @@ var favoritesPageBtn = document.querySelector('.favorites-page-btn');
 var favoriteSection = document.querySelector('.favorite-section');
 var favoriteMessage = document.querySelector('.favorite-message');
 var homeBtn = document.querySelector('.home-btn');
+var removeBtn = document.querySelector('.remove-btn');
 // navigation
 var homePage = document.querySelector('.home-page');
 var favoritesPage = document.querySelector('.favorites-page');
+var favoriteBox = document.querySelector('.favorite-box');
 var favorites = [];
 var currentMessage = [];
 var mantras = [
@@ -105,6 +107,14 @@ homeBtn.addEventListener('click', function() {
     homePage.classList.remove('hidden');
     favoritesPage.classList.add('hidden');
     homeBtn.classList.add('hidden');
+})
+
+favoriteBox.addEventListener('mouseover', function() {
+    removeBtn.classList.remove('hidden');
+})
+
+favoriteBox.addEventListener('mouseout', function() {
+    removeBtn.classList.add('hidden');
 })
 
 function displayFavMessage() {
