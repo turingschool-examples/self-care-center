@@ -62,3 +62,77 @@ header button:hover{
     background-color: #f7e4bf;
     scale: 1.05;
 }
+
+/* Sections 1 */
+.main-section { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Main Section 2*/
+.receive-message-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 520px;
+}
+
+.radio-group {
+    display: flex;
+    width: 100%;
+    height: 65px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.radio-group label {
+    font-style: italic;
+    font-size: 18px;
+    margin-left: 8px;
+}
+
+.radio-group input {
+    width: 18px;
+    height: 18px;
+}
+
+aside img {
+    width: 70px;
+}
+
+.receive-message-form button { 
+    background-color: #134d71;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+    height: 26px;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.receive-message-form button:hover { 
+    background-color: #78a7c6;
+    scale: 1.05;
+}
+
+.message-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    width: 800px;
+    height: 140px;
+}
+
+aside img {
+    width: 70px;
+}
+
