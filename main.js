@@ -13,6 +13,8 @@
 var buddha = document.querySelector('.buddha-icon');
 var message = document.querySelector('.message');
 var receiveBtn = document.querySelector('.receive-btn');
+var affirmationBtn = document.querySelector('.affirmation-btn');
+var mantraBtn = document.querySelector('.mantra-btn');
 
 var mantras = [
     'Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.',
@@ -48,17 +50,24 @@ var mantras = [
     'I manifest perfect health by making smart choices.'
     ];
 
-receiveBtn.addEventListener('click', displayMessage)
+receiveBtn.addEventListener('click', function() {
+    displayMessage();
+    message.innerText = getMessage();
+})
 
 function displayMessage() {
     buddha.classList.add('hidden');
     message.classList.remove('hidden');
 }
 
-function getMessage(messages) {
-    var index = Math.floor(Math.random() * messages.length);
-    return messages[index];
+function getMessage() {
+    if (mantraBtn.checked) {
+        var index = Math.floor(Math.random() * mantras.length);
+        return mantras[index];
+    } else if (affirmationBtn.checked) {
+        var index = Math.floor(Math.random() * affirmations.length);
+        return affirmations[index];
+    }
 }
 
-console.log(getMessage(mantras))
 
