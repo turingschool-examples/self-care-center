@@ -3,24 +3,50 @@ var message = document.querySelector('.message-view');
 var icon = document.querySelector('.icon-view');
 var affirmation = document.getElementById('affirmation-radio');
 var mantra = document.getElementById('mantra-radio');
+var notificationBox = document.getElementById('notification-box');
+var choiceBox = document.getElementById('choice-box');
+var notification = document.querySelector('.notification');
+var question = document.querySelector('.question');
+var acknowledgeBtn = document.querySelector('.acknowledge-notification');
 
 msgBtn.addEventListener('click', displayMsg);
+acknowledgeBtn.addEventListener('click', changeView);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-var displayedMantras = [];
-var displayedAffirmations = [];
-
-function organizeAffirmations(i) {
-  displayedAffirmations.push(affirmations[i]);
-  affirmations.splice(i, 1);
+function getAllIndexs() {
+  return {
+    affirmations: getRandomIndex(affirmations),
+    mantras: getRandomIndex(mantras)
+  }
 }
 
-function organizeMantras(i) {
-  displayedMantras.push(mantras[i]);
-  mantras.splice(i, 1);
+var displayedMsgs = {
+  mantras: [],
+  affirmations: []
+}
+
+function changeView() {
+  question.classList.toggle('hidden');
+  notificationBox.classList.toggle('hidden');
+  choiceBox.classList.toggle('hidden');
+}
+
+function alertUser(msgType) {
+  notification.innerText = `You have seen all the ${msgType} we currently have to offer. You will now begin seeing repeated ${msgType}.`;
+  changeView();
+}
+
+function organizeMsgs(type, array, i) {
+  if (typeof i === "number") {
+    displayedMsgs[type].push(array[i]);
+    array.splice(i, 1);
+  } else {
+    displayedMsgs[type].forEach((msg) => array.push(msg));
+    displayedMsgs[type] = [];
+  }
 }
 
 function displayMsg() {
@@ -34,27 +60,24 @@ function displayMsg() {
 }
 
 function chooseMsg() {
+  var idx = getAllIndexs();
   if (affirmation.checked) {
     if (affirmations.length) {
-      var idx = getRandomIndex(affirmations);
-      message.innerText = affirmations[idx];
-      organizeAffirmations(idx);
+      message.innerText = affirmations[idx.affirmations];
+      organizeMsgs('affirmations', affirmations, idx.affirmations)
       return true;
     } else {
-      alert(`You have seen all the mantras we currently have to offer. You will now start begin seeing repeated mantras.`);
-      affirmations = displayedAffirmations;
-      displayedAffirmations = [];
+      alertUser('affirmations')
+      organizeMsgs('affirmations', affirmations)
     }
   } else if (mantra.checked) {
     if (mantras.length) {
-      var idx = getRandomIndex(mantras);
-      message.innerText = mantras[idx];
-      organizeMantras(idx);
+      message.innerText = mantras[idx.mantras];
+      organizeMsgs('mantras', mantras, idx.mantras);
       return true;
     } else {
-      alert(`You have seen all the affirmations we currently have to offer. You will now start begin seeing repeated affirmations.`);
-      mantras = displayedMantras;
-      displayedMantras = [];
+      alertUser('mantras')
+      organizeMsgs('mantras', mantras);
     }
   }
 }
