@@ -6,7 +6,6 @@ var affirmations = [
     "I choose to be kind to myself and love myself unconditionally.",
     "My possibilities are endless.",
     "I am worthy of my dreams.",
-    "I am enough.",
     "I deserve to be healthy and feel good.",
     "I am full of energy and vitality and my mind is calm and peaceful.",
     "Every day I am getting healthier and stronger.",
@@ -60,15 +59,34 @@ function showAffirmation() {
 };
 
 
-function getRandomIndex(array) {
-    return Math.floor(Math.random() * array.length);
-};
+// function getRandomIndex(array) {
+//    return Math.floor(Math.random() * array.length);
+// };
+
+
+var usedAffirmation= [];
+
+function generateUniqueRandom(array) {
+    var random = Math.floor(Math.random() * array.length);
+    random = Number(random);
+    if (!usedAffirmation.includes(random)) {
+        usedAffirmation.push(random);
+        return random;
+    } else if (usedAffirmation.includes(random)) {
+         return generateUniqueRandom(array);
+        } else {
+          alert('No more affirmations available. You will now see repeats')
+        }
+    }
+
 
 
 function randomAffirmation() {
-    var newAffirmations = affirmations[getRandomIndex(affirmations)];
+    var newAffirmations = affirmations[generateUniqueRandom(affirmations)];
+    console.log(newAffirmations);
    return newAffirmations;
-};
+}
+
 
 function randomMantras() {
     var newMantras = mantras[getRandomIndex(mantras)];
@@ -78,16 +96,23 @@ function randomMantras() {
 
 function recieveMessage() {
     userChosenMessage.innerHTML = '';
-    console.log(affirmationRadio);
         if (affirmationRadio.checked) {
             userChosenMessage.innerHTML +=
                 `<p class= "user-random-phrase">${randomAffirmation()}</p>`
                 showAffirmation();
+                // usedAffirmations.pop(userChosenMessage.innerText);
+                // console.log(affirmations);
         } else if (mantraRadio.checked) {
                 userChosenMessage.innerHTML +=
                     `<p class= "user-random-phrase">${randomMantras()}</p>`
                     showAffirmation();
+                    // usedMantra.push(userChosenMessage.innerText);
+                    // repeatMantra();
         }
     }
 
+    // repeatAffirmation();
+    //     repeatMantra();
 
+// var usedAffirmation = ["fuck"];
+var usedMantra = ["shit"];
