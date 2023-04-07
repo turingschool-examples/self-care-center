@@ -101,7 +101,14 @@ favoritesPageBtn.addEventListener('click', function() {
     displayFavMessage() 
 })
 
+homeBtn.addEventListener('click', function() {
+    homePage.classList.remove('hidden');
+    favoritesPage.classList.add('hidden');
+    homeBtn.classList.add('hidden');
+})
+
 function displayFavMessage() {
+    favoriteSection.innerHTML = '';
     for (var i = 0; i < favorites.length; i++) {
         favoriteSection.innerHTML += 
         `<box class="favorite-box">
@@ -109,8 +116,6 @@ function displayFavMessage() {
         </box>`
     }
 }
-
-// Create a home button that is hidden when home and visible when viewing favorites.
 
 // Allow user to delete favorited messages.
 
