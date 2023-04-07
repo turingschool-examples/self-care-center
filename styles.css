@@ -111,3 +111,22 @@ body {
 .hidden {
     display: none;
 }
+
+.favorite-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #ffffff;
+    height: 80px;
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.favorite-section {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}

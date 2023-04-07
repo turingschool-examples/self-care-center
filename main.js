@@ -17,6 +17,7 @@ var affirmationBtn = document.querySelector('.affirmation-btn');
 var mantraBtn = document.querySelector('.mantra-btn');
 var favBtn = document.querySelector('.favorite');
 var favoritesPageBtn = document.querySelector('.favorites-page-btn');
+var favoriteSection = document.querySelector('.favorite-section');
 // navigation
 var homePage = document.querySelector('.home-page');
 var favoritesPage = document.querySelector('.favorites-page');
