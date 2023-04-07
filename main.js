@@ -12,9 +12,9 @@ var customMessageInput = document.getElementById('customMessage')
 
 //EVENT LISTENERS
 recieveMessageButton.addEventListener('click', function() {
-showMessage();
-getMessage();
-printMessage();
+    showMessage();
+    getMessage();
+// printMessage();
 });
 
 createMessageButton.addEventListener('click', function() {
@@ -36,19 +36,23 @@ var mantraArray =
 ['Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.','Don’t let yesterday take up too much of today.','Every day is a second chance.','Tell the truth and love everyone.','I am free from sadness.','I am enough.','In the beginning it is you, in the middle it is you and in the end it is you.','I love myself.','I am present now.,Inhale the future, exhale the past.','This too shall pass.','Yesterday is not today.','The only constant is change.','Onward and upward.', 'I am the sky, the rest is weather.'];
 
 var pushedMessage = [];
-var affirmations = affirmationArray[getRandomMessage(affirmationArray)];
-var mantras = mantraArray[getRandomMessage(mantraArray)];
 
 //JS-DATA MODEL
 function getRandomMessage(messageArray) {
     return Math.floor(Math.random() * messageArray.length);
-  }
+}
 
 function getMessage(){
+    var affirmations = affirmationArray[getRandomMessage(affirmationArray)];
+    var mantras = mantraArray[getRandomMessage(mantraArray)];
     if(document.getElementById('affirmation').checked){
         pushedMessage.push(affirmations)
+        message.innerText =  affirmations 
+        // document.getElementById('affirmation').checked = false;
     } else if (document.getElementById('mantra').checked)
         pushedMessage.push(mantras)
+        message.innerText = mantras 
+        // document.getElementById('mantra').checked = false;
 }
 
 function addCustomMessage() {
@@ -92,13 +96,13 @@ function showMessage(){
     message.classList.remove('hidden')
     }
 
-function printMessage(){
-   if(pushedMessage.length === 1) {
-        message.innerText = pushedMessage 
-    } else {
-        message.innerText = 'Please refresh the page for a new message or add your own ❤️.'
-    }
-}
+// function printMessage(){
+//    if(pushedMessage.length === 1) {
+//         message.innerText = pushedMessage 
+//     } else {
+//         message.innerText = 'Please refresh the page for a new message or add your own ❤️.'
+//     }
+// }
 
 function showForm() {
     icon.classList.add('hidden');
