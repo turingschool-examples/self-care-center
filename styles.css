@@ -85,6 +85,7 @@ body {
 }
 .buddha-box {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 130px;
@@ -99,4 +100,12 @@ body {
 .buddha-icon {
     height: 65px;
     width: 65px;
+}
+
+.message {
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
 }
