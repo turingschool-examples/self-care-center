@@ -7,27 +7,36 @@
   </head>
   <body>
     <h1> &#x2728; Self Care Center &#x2728;</h1>
-    <h2>Which type of message?</h2>
-    <section class="boxOne">
-      <div class="options">
-        <div class="individualOption">
-          <input type="radio" id="affirmation" name="messageType" value="affirmation">
-          <label for="affirmation">affirmation</label>
+    <section class="homeView">
+      <button class="button favoriteButton" type="button">View Favorites</button> 
+      
+      <h2>Which type of message?</h2>
+      <section class="boxOne">
+        <div class="options">
+          <div class="individualOption">
+            <input type="radio" id="affirmation" name="messageType" value="affirmation">
+            <label for="affirmation">affirmation</label>
+          </div>
+          <div class="individualOption">
+            <input type="radio" id="mantra" name="messageType" value="mantra"> 
+            <label for="mantra">mantra</label>
+          </div>
         </div>
-        <div class="individualOption">
-          <input type="radio" id="mantra" name="messageType" value="mantra"> 
-          <label for="mantra">mantra</label>
-        </div>
-      </div>
-      <section class="buttonArea">
-        <button class="button" type="button">Receive Message</button>     
+        <section class="buttonArea">
+          <button class="button receiveMessage" type="button">Receive Message</button>     
+        </section>
+      </section>
+
+      <section class="boxTwo">
+        <img class="meditateIcon" src="assets/meditate.svg" alt="Meditation icon">
+        <section class="displayMessage notification hidden">This is text</section>
       </section>
     </section>
 
-    <section class="boxTwo">
-      <img class="meditateIcon" src="assets/meditate.svg" alt="Meditation icon">
-      <section class="displayMessage notification hidden">This is text</section>
+    <section class="favoritesView hidden">
+      <button class="button homeButton" type="button">Home</button> 
     </section>
+    
 
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="data.js"></script>
