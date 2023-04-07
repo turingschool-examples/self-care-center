@@ -4,18 +4,26 @@ var mantras = ["Breathing in, I send myself love. Breathing out, I send love to 
 var affirmations = ["I forgive myself and set myself free.", "I believe I can be all that I want to be.", "I am in the process of becoming the best version of myself.", "I have the freedom & power to create the life I desire.", "I choose to be kind to myself and love myself unconditionally.", "My possibilities are endless.", "I am worthy of my dreams.", "I am enough.", "I deserve to be healthy and feel good.", "I am full of energy and vitality and my mind is calm and peaceful.", "Every day I am getting healthier and stronger.", "I honor my body by trusting the signals that it sends me.", "I manifest perfect health by making smart choices."];
 
 //Query Selectors
-var generateMessageButton = document.addQuerySelector('#generate-new-message-button');
-var affirmationCheckbox = document.addQuerySelector('#affirmation');
-var affirmationCheckbox = document.addQuerySelector('#mantra');
+var generateMessageButton = document.querySelector('#generate-new-message-button');
+var affirmationCheckbox = document.querySelector('#affirmation');
+var mantraCheckbox = document.querySelector('#mantra');
+var messageDisplayBox = document.querySelector('#display-message-box')
 
 //Event Listeners
-generateMessageButton.addEventListener('click', generateMessage)
+generateMessageButton.addEventListener('click', function(event) {
+    event.preventDefault()
+    displayRandomMessage()
+  })
 
-//Functions
-function generateMessage(){
-    //if statment
-    //first conditional will be if affirmations is checked (affirmationCheckbox.checked)
-
+  function getRandomIndex(array) {
+    return Math.floor(Math.random() * array.length);
+  };
+  
+function displayRandomMessage(){
+    messageDisplayBox.innerHTML = '';
+    if(affirmationCheckbox.checked){
+        messageDisplayBox.innerHTML = `<p>${affirmations[getRandomIndex(affirmations)]}</p>`
+    } else {
+        messageDisplayBox.innerHTML = `<p>${mantras[getRandomIndex(mantras)]}</p>`
+    }
 }
-
-//event listener for the "submit" (aka button click on recieve messae button) then invokes function that uses the variable that stores the value of the selection to use an if else statement to either display a mantra or a affirmation
