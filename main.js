@@ -18,6 +18,10 @@ function hideDomElement(element) {
     element.classList.add("hidden");
 }
 
+function showDomElement(element) {
+    element.classList.remove("hidden");
+}
+
 /*
 import the DOM elements
 create getRandomIndex
