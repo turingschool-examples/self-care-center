@@ -21,6 +21,9 @@ var displayedMsgs = {
   mantras: [],
   affirmations: []
 }
+function alertUser(msgType) {
+  alert(`You have seen all the ${msgType} we currently have to offer. You will now start begin seeing repeated ${msgType}.`);
+}
 
 function organizeMsgs(type, array, i) {
   if (typeof i === "number") {
@@ -50,7 +53,7 @@ function chooseMsg() {
       organizeMsgs('affirmations', affirmations, idx.affirmations)
       return true;
     } else {
-      alert(`You have seen all the affirmations we currently have to offer. You will now start begin seeing repeated affirmations.`);
+      alertUser('affirmations')
       organizeMsgs('affirmations', affirmations)
     }
   } else if (mantra.checked) {
@@ -59,7 +62,7 @@ function chooseMsg() {
       organizeMsgs('mantras', mantras, idx.mantras);
       return true;
     } else {
-      alert(`You have seen all the mantras we currently have to offer. You will now start begin seeing repeated mantras.`);
+      alertUser('mantras')
       organizeMsgs('mantras', mantras);
     }
   }
