@@ -36,25 +36,18 @@ function getRandomIndex(array) {
 }
 
 function receiveMessage() {
+    var affirmationMessage = affirmations[getRandomIndex(affirmations)];
+    var mantraMessage = mantras[getRandomIndex(mantras)];
     if (document.getElementById('Affirmation').checked){
-        messagePanel.innerText = affirmations[getRandomIndex(affirmations)]
-} else if (document.getElementById('Mantra').checked)
-    messagePanel.innerText = mantras[getRandomIndex(mantras)]
+       message.innerHTML = `<p>${affirmationMessage}</p>`
+    } else if (document.getElementById('Mantra').checked){
+        message.innerHTML = `<p>${mantraMessage}</p>`
+    }    
 }
 
 var receiveMessageButton = document.querySelector('.add-button');
-var affirmationRadio = document.querySelector('#Affirmation');
-var mantraRadio = document.querySelector('#Mantra');
 var interactivePanel = document.querySelector('#interactive');
 var messagePanel = document.querySelector('.message-box');
-var image = document.querySelector('.image')
+var message = document.querySelector('#message')
 
 receiveMessageButton.addEventListener('click', receiveMessage)
-
-
-
-
-
-
-
-var currentMessage;
