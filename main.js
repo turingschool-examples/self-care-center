@@ -15,7 +15,7 @@ var affirmations = [
 var mantras = [
     "Breathing in, I send myself love.",
     "Breathing out, I send love to someone else who needs it.",
-    "Don’t let yesterday take up too much of today.",
+    "Don\'t let yesterday take up too much of today.",
     "Every day is a second chance.",
     "Tell the truth and love everyone.",
     "I am free from sadness.",
@@ -35,9 +35,26 @@ function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 }
 
-var receiveMessageButton = document.querySelector('button');
+function receiveMessage() {
+    if (document.getElementById('Affirmation').checked){
+        messagePanel.innerText = affirmations[getRandomIndex(affirmations)]
+} else if (document.getElementById('Mantra').checked)
+    messagePanel.innerText = mantras[getRandomIndex(mantras)]
+}
+
+var receiveMessageButton = document.querySelector('.add-button');
 var affirmationRadio = document.querySelector('#Affirmation');
 var mantraRadio = document.querySelector('#Mantra');
 var interactivePanel = document.querySelector('#interactive');
-var messagePanel = document.querySelector('#message');
+var messagePanel = document.querySelector('.message-box');
 var image = document.querySelector('.image')
+
+receiveMessageButton.addEventListener('click', receiveMessage)
+
+
+
+
+
+
+
+var currentMessage;
