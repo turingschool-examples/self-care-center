@@ -18,6 +18,7 @@ var mantraBtn = document.querySelector('.mantra-btn');
 var favBtn = document.querySelector('.favorite');
 var favoritesPageBtn = document.querySelector('.favorites-page-btn');
 var favoriteSection = document.querySelector('.favorite-section');
+var favoriteMessage = document.querySelector('.favorite-message');
 // navigation
 var homePage = document.querySelector('.home-page');
 var favoritesPage = document.querySelector('.favorites-page');
@@ -87,7 +88,7 @@ function getMessage() {
 
 favBtn.addEventListener('click', function() {
     var displayedMessage = message.innerText;
-    favorites.push(currentMessage);
+    favorites.push(currentMessage[0]);
     favoritesPageBtn.classList.remove('hidden');
 
 });
@@ -95,13 +96,17 @@ favBtn.addEventListener('click', function() {
 favoritesPageBtn.addEventListener('click', function() {
     homePage.classList.add('hidden');
     favoritesPage.classList.remove('hidden');
+    displayFavMessage() 
 })
-// Favorite button
 
-// Goal 2: Create a nav button that allows the user to see the favorited messages.
-// Steps: Make a button in an asthetic location on the page. Top Left dropdown menu maybe.
-// If the user selects the button it will hide the homepage and display favorited messages.
-    // Favorited messages will be in boxes styled similar to the home page boxes. Aligned in the center.
+function displayFavMessage() {
+    for (var i = 0; i < favorites.length; i++) {
+        favoriteSection.innerHTML += 
+        `<box class="favorite-box">
+            <p class="favorite-message">${favorites[i].message}</p>
+        </box>`
+    }
+}
 
 
 
