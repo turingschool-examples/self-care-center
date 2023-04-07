@@ -46,6 +46,16 @@ function removeMessageFromArray(array, index) {
     array.splice(index, 1);
 }
 
+
+function refillArrays() {
+    if(checkMessageType() === "affirmations") {
+        clonedAffirmations = [...safeAffirmations];
+    }
+    if(checkMessageType() === "mantras") {
+        clonedMantras = [...safeMantras];
+    }
+}
+
 /*
 import the DOM elements
 create getRandomIndex
