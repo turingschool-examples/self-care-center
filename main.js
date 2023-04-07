@@ -7,8 +7,9 @@ var message = document.querySelector('.message');
 var createMessageButton = document.querySelector('.createMessageBtn');
 var form = document.querySelector('.formContainer');
 var submitButton = document.querySelector('.submitBtn');
-submitButton.disabled = true;
+// submitButton.disabled = true;
 var dropDown = document.getElementById('messageType')
+var customMessageInput = document.getElementById('customMessage')
 
 //EVENT LISTENERS
 recieveMessageButton.addEventListener('click', function() {
@@ -21,14 +22,21 @@ createMessageButton.addEventListener('click', function() {
 showForm();
 });
 
-dropDown.addEventListener('change', () => {
-    if(dropDown.value === 'empty') {
-        submitButton.disabled = true;
-    } else {
-        submitButton.disabled = false;
-    }
-});
+// dropDown.addEventListener('change', () => {
+//     if(dropDown.value === 'empty') {
+//         submitButton.disabled = true;
+//         alert('Please select message type!')
+//     } else {
+//         submitButton.disabled = false;
 
+//     }
+// });
+
+submitButton.addEventListener ('click', function(event) {
+    event.preventDefault()
+    dropDownDisable();
+    addCustomMessage();
+});
 
 var affirmationArray = ['I forgive myself and set myself free.','I believe I can be all that I want to be.','I am in the process of becoming the best version of myself.','I have the freedom & power to create the life I desire.','I choose to be kind to myself and love myself unconditionally.','My possibilities are endless.','I am worthy of my dreams.','I am enough.','I deserve to be healthy and feel good.','I am full of energy and vitality and my mind is calm and peaceful.','Every day I am getting healthier and stronger.','I honor my body by trusting the signals that it sends me.','I manifest perfect health by making smart choices.'
 ];
@@ -52,6 +60,13 @@ function getMessage(){
         pushedMessage.push(mantras)
 }
 
+function addCustomMessage() {
+    if(dropDown.value === 'affirmationOpt') {
+        affirmationArray.push(customMessageInput.value)
+    } else if (dropDown.value === 'mantraOpt') {
+        mantraArray.push(customMessageInput.value)
+    }
+}
 // When the user clicks the “Submit” button and that message will be added to the appropriate list of messages.
 //it will push to the mantraArray or affirmationArray
 //if mantra value is selected --> push to mantraArray 
@@ -60,11 +75,20 @@ function getMessage(){
 
 //alert user with error message that they can't submit form if affirmation/mantra isn't selected 
 //if dropdown === select message type, give error and disable the button 
-// function disableSubmit() {
-    
-//     }
-    
-// }
+
+function dropDownDisable (){
+    if(dropDown.value === 'empty'){
+        alert('Please ensure all fields are filled out.');
+        return false;
+      }
+}
+
+
+
+
+
+
+
     // If(IsBlank(Reasons_DD.Selected.Value),DisplayMode.Disabled,DisplayMode.Edit)
 
 
