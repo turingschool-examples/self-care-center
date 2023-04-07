@@ -16,6 +16,20 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+.homeView {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favoritesView {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 h1 {
     color: white;
     text-align: center;

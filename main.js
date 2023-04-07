@@ -1,13 +1,20 @@
 //DOM elements
-var randomButton = document.querySelector(".button");
+var messageButton = document.querySelector(".receiveMessage");
+var viewFavoritesButton = document.querySelector(".favoriteButton");
+var homeButton = document.querySelector(".homeButton");
 var affirmationCheck = document.querySelector("#affirmation");
 var mantraCheck = document.querySelector("#mantra");
 var displayMessage = document.querySelector(".displayMessage");
 var meditateIcon = document.querySelector(".meditateIcon");
+var homeView = document.querySelector(".homeView");
+var favoritesView = document.querySelector(".favoritesView")
 var currentMessage;
 
 // event listeners
-randomButton.addEventListener("click", renderCurrentMessage);
+messageButton.addEventListener("click", renderCurrentMessage);
+viewFavoritesButton.addEventListener("click", showFavorites);
+homeButton.addEventListener("click", showHome);
+
 
 //functions
 function getRandomIndex(array) {
@@ -95,4 +102,14 @@ function renderCurrentMessage() {
     displayMessage.innerText = currentMessage;
     hideDomElement(meditateIcon);
     showDomElement(displayMessage);
+}
+
+function showFavorites() {
+    hideDomElement(homeView);
+    showDomElement(favoritesView);
+}
+
+function showHome() {
+    hideDomElement(favoritesView);
+    showDomElement(homeView)
 }
