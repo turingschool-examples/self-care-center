@@ -24,7 +24,7 @@ body {
     text-align: center;
     border: 1px solid black;
     background: white;
-    border-radius: 15px;
+    border-radius: 0.7rem;
     margin: 10px auto;
     color: black;
 }
@@ -32,7 +32,6 @@ body {
 .radios {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
 }
 
 
