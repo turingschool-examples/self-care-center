@@ -3,8 +3,14 @@ var message = document.querySelector('.message-view');
 var icon = document.querySelector('.icon-view');
 var affirmation = document.getElementById('affirmation-radio');
 var mantra = document.getElementById('mantra-radio');
+var notificationBox = document.getElementById('notification-box');
+var choiceBox = document.getElementById('choice-box');
+var notification = document.querySelector('.notification');
+var question = document.querySelector('.question');
+var acknowledgeBtn = document.querySelector('.acknowledge-notification');
 
 msgBtn.addEventListener('click', displayMsg);
+acknowledgeBtn.addEventListener('click', changeView);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -21,8 +27,16 @@ var displayedMsgs = {
   mantras: [],
   affirmations: []
 }
+
+function changeView() {
+  question.classList.toggle('hidden');
+  notificationBox.classList.toggle('hidden');
+  choiceBox.classList.toggle('hidden');
+}
+
 function alertUser(msgType) {
-  alert(`You have seen all the ${msgType} we currently have to offer. You will now start begin seeing repeated ${msgType}.`);
+  notification.innerText = `You have seen all the ${msgType} we currently have to offer. You will now begin seeing repeated ${msgType}.`;
+  changeView();
 }
 
 function organizeMsgs(type, array, i) {
