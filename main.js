@@ -17,6 +17,9 @@ var affirmationBtn = document.querySelector('.affirmation-btn');
 var mantraBtn = document.querySelector('.mantra-btn');
 var favBtn = document.querySelector('.favorite');
 var favoritesPageBtn = document.querySelector('.favorites-page-btn');
+// navigation
+var homePage = document.querySelector('.home-page');
+var favoritesPage = document.querySelector('.favorites-page');
 var favorites = [];
 var currentMessage = [];
 var mantras = [
@@ -85,7 +88,13 @@ favBtn.addEventListener('click', function() {
     var displayedMessage = message.innerText;
     favorites.push(currentMessage);
     favoritesPageBtn.classList.remove('hidden');
+
 });
+
+favoritesPageBtn.addEventListener('click', function() {
+    homePage.classList.add('hidden');
+    favoritesPage.classList.remove('hidden');
+})
 // Favorite button
 
 // Goal 2: Create a nav button that allows the user to see the favorited messages.
