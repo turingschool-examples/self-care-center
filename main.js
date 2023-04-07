@@ -26,6 +26,9 @@ function addNotificationStyling() {
     displayMessage.classList.add("notification");
 }
 
+function removeNotificationStyling() {
+    displayMessage.classList.remove("notification");
+}
 
 /*
 import the DOM elements
