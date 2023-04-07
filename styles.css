@@ -9,7 +9,7 @@ black - #000000;
 
 /* Overall Body */
 body {
-    background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+    background: linear-gradient(#134d71 15%, #78a7c6, #f7e4bf);
     width: 100vw;
     height: 100vh;
     display: flex;
