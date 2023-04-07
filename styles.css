@@ -42,8 +42,8 @@ section {
 
 form {
     display: flex;
-    justify-content: space-between;
-    width: 50%;
+    justify-content: space-evenly;
+    /* width: 50%; */
 }
 
 label {
@@ -52,20 +52,41 @@ label {
     align-items: center;
 }
 
-article {
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+.message-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.hidden {
+    display: none;
+}
 
-button {
+#msgbtn {
     font-size: 15px;
-    padding: 10px;
+    padding: 5px;
     background-color: #134d71;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-top: 30px;
-    width: 40%;
+    width: 35%;
+    color: white;
+    transition: .2s ease all;
+}
+
+#clearbtn {
+    font-size: 15px;
+    padding: 5px;
+    background-color: #134d71;
+    border-radius: 5px;
+    margin-top: 30px;
+    width: 20%;
     color: white;
     transition: .2s ease all;
 }
@@ -73,7 +94,7 @@ button {
 button:hover {
     background-color: #2f75a1;
     cursor: pointer;
-    width: 60%;
+    width: 40%;
 }
 
 .message-box {
