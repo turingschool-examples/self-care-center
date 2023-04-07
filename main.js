@@ -43,7 +43,7 @@ var clearMessageButton = document.querySelector(".clear-message-button")
 // event listeners:
 
 recieveMessageButton.addEventListener("click", recieveMessage)
-
+clearMessageButton.addEventListener("click", clearMessage);
 
 // functions:
 
@@ -59,7 +59,6 @@ function showAffirmation() {
     userChosenMessage.removeAttribute("hidden");
     meditatingImage.setAttribute("hidden", "");
 };
-
 
 var usedAffirmation = [];
 var usedMantra = [];
@@ -94,7 +93,6 @@ function generateUniqueMantra(array) {
     }
 }
 
-
 function randomAffirmation() {
     var newAffirmations = affirmations[generateUniqueAffirmation(affirmations)];
     console.log(newAffirmations);
@@ -114,17 +112,22 @@ function recieveMessage() {
         userChosenMessage.innerHTML +=
             `<p class= "user-random-phrase">${randomAffirmation()}</p>`
         showAffirmation();
-        // usedAffirmations.pop(userChosenMessage.innerText);
-        // console.log(affirmations);
     } else if (mantraRadio.checked) {
         userChosenMessage.innerHTML +=
             `<p class= "user-random-phrase">${randomMantras()}</p>`
         showAffirmation();
-        // usedMantra.push(userChosenMessage.innerText);
-        // repeatMantra();
     }
 }
 
-// repeatAffirmation();
-//     repeatMantra();
+function clearMessage() {
+    var myText;
+    for (i = 0; i < userChosenMessage.length; i++) {
+        if (userChosenMessage[i].innerHTML == "test") {
+            myText = userChosenMessage[i];
+            break;
+        }
+    }
+    userChosenMessage.setAttribute("hidden", "");
+    meditatingImage.removeAttribute("hidden");
+};
 
