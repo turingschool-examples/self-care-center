@@ -16,7 +16,7 @@ var safeMantras = [
 "I am the sky, the rest is weather."
 ]
 
-var clonedMantras = [];
+var clonedMantras = [...safeMantras];
 
 var safeAffirmations = [
 "I forgive myself and set myself free.",
@@ -34,4 +34,4 @@ var safeAffirmations = [
 "I manifest perfect health by making smart choices."
 ]
 
-var clonedAffirmations = [];
+var clonedAffirmations = [...safeAffirmations];
