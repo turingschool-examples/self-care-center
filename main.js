@@ -30,6 +30,19 @@ function removeNotificationStyling() {
     displayMessage.classList.remove("notification");
 }
 
+function checkMessageType() {
+    if(affirmationCheck.checked) {
+        typeOfMessages = "affirmations";
+    } 
+
+    if(mantraCheck.checked) {
+        typeOfMessages = "mantras";
+    }
+
+    return typeOfMessages;
+}
+
+
 /*
 import the DOM elements
 create getRandomIndex
