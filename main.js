@@ -1,11 +1,11 @@
 // DECLARE VARIABLES //
-var btn = document.querySelector('button')
+var msgBtn = document.querySelector('#msgbtn')
 var msgBox = document.querySelector('.message-box')
 var messages = document.querySelectorAll('input[name="message"]')
 var clearBtn = document.querySelector('#clearbtn')
 
 // EVENT LISTENERS //
-btn.addEventListener('click', showMessage)
+msgBtn.addEventListener('click', showMessage)
 clearBtn.addEventListener('click', clearMsg)
 
 

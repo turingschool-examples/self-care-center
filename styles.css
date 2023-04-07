@@ -6,6 +6,36 @@ html, body {
     height: 100%;
 }
 
+header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+}
+
+#viewall, #faves {
+    font-size: 15px;
+    border: 0px;
+    padding: 7px 4px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-top: 30px;
+    width: 30%;
+    color: #134d71;
+    transition: .2s ease all;
+}
+
+#viewall:hover, #faves:hover {
+    background-color: #faf5eb;
+    color:#468dba;
+    cursor: pointer;
+    width: 33%;
+}
+
 h1 {
     text-align: center;
     color: white;
@@ -65,6 +95,7 @@ label {
 #msgbtn, #clearbtn {
     font-size: 15px;
     padding: 5px;
+    border: 0px;
     background-color: #134d71;
     border-radius: 5px;
     margin-top: 30px;
