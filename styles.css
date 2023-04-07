@@ -58,6 +58,9 @@ h1, h2 {
     margin: 80px;
     background-color: #ffffff;
 }
+.hidden {
+    display: none;
+}
 
 img {
  width: 50%;
