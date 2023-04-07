@@ -86,14 +86,6 @@ favBtn.addEventListener('click', function() {
 });
 // Favorite button
 
-// Goal: Create a button that when clicked adds the displayed message to an array. 
-// Steps: 
-// Add ID to message
-    // make message an object that includes message and ID
-// Create an empty array
-// Access the innerText with message.innerText
-// create an event listener that uses the function to push the innerText into the array.
-
 // Goal 2: Create a nav button that allows the user to see the favorited messages.
 // Steps: Make a button in an asthetic location on the page. Top Left dropdown menu maybe.
 // If the user selects the button it will hide the homepage and display favorited messages.
