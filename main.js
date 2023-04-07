@@ -38,10 +38,12 @@ var affirmationRadio = document.querySelector("#affirmation-radio");
 var mantraRadio = document.querySelector("#mantra-radio");
 var meditatingImage = document.querySelector(".meditating-person");
 var userChosenMessage = document.querySelector(".user-random-phrase");
+var clearMessageButton = document.querySelector(".clear-message-button")
 
 // event listeners:
 
 recieveMessageButton.addEventListener("click", recieveMessage)
+
 
 // functions:
 
@@ -57,11 +59,6 @@ function showAffirmation() {
     userChosenMessage.removeAttribute("hidden");
     meditatingImage.setAttribute("hidden", "");
 };
-
-
-// function getRandomIndex(array) {
-//    return Math.floor(Math.random() * array.length);
-// };
 
 
 var usedAffirmation = [];
