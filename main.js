@@ -5,7 +5,9 @@
 
 // steps:
     // create arrays for affirmations and mantras
-    // create a function
+    // create a function that:
+        // pulls a string from one of the arrays 
+        // displays that to the screen - innerHTML
 
 var affirmations = [
     "I forgive myself and set myself free.",
@@ -41,6 +43,17 @@ var mantras = [
     "I am the sky, the rest is weather."
     ];
 
-// query selectors go here:
+// query selectors:
+var recieveMessageBtn = document.querySelector(".button");
+var affirmationBtn = document.querySelector(".#affirmation");
+var mantraBtn = document.querySelector(".#mantra");
+
+// event listeners:
+recieveMessageBtn.addEventListener('click', showMessage);
 
 // functions:
+function showMessage() {
+    if (affirmationBtn === true){
+        
+    }
+}
