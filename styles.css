@@ -1,10 +1,70 @@
 * {
+    text-align: center;
     font-family: 'Quicksand', sans-serif;
 }
 
-/* body {
-    background: linear-gradient(#134d71, #f7e4bf)
-} */
+body {
+    background: linear-gradient(to bottom, #134d71, #f7e4bf);
+    background-attachment: fixed;
+}
+
+h1, h2 {
+    color: #ffffff;
+    margin-top: 40px;
+}
+
+#message-box {
+    background-color: #ffffff;
+    border-style: solid;
+}
+
+.input-box {
+    width: 450px;
+    height: 80px;
+    background: #ffffff;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: auto;   
+}
+
+
+#affirmation {
+    color: black;
+}
+
+
+#mantra {
+    color: black; 
+}
+
+
+.preference {
+    display: flex;
+    justify-content: space-evenly;
+    font-style: italic; 
+}
+
+.receive-message-button {
+    margin: 20px;
+    color: #ffffff;
+    background-color:#134d71;
+    border-radius: 5px;
+}
+
+.output-box {
+    width: 450px;
+    height: 90px;
+    border-radius: 10px;
+    margin: 80px;
+    background-color: #ffffff;
+}
+
+img {
+ width: 50%;
+ height: 80%;
+}
+
+
 /* COLORS
 light-yellow - #f7e4bf;
 light-blue - #78a7c6;
