@@ -68,15 +68,17 @@ body {
     justify-content: center;
 }
 
-.x {
+.x, .favorites-page-btn {
     font-family: 'Quicksand', sans-serif; 
     margin-top: 25px;
+    margin-inline: 2px;
     color: #ffffff;
     background-color: #134d71;
     border-radius: 3px;
     padding-inline: 30px;
     padding-block: 5px;
-    border: 0px;
+    border: 2px;
+   
 }
 
 .buddha-section {

@@ -15,7 +15,8 @@ var message = document.querySelector('.message');
 var receiveBtn = document.querySelector('.receive-btn');
 var affirmationBtn = document.querySelector('.affirmation-btn');
 var mantraBtn = document.querySelector('.mantra-btn');
-var favBtn = document.querySelector('.favorite')
+var favBtn = document.querySelector('.favorite');
+var favoritesPageBtn = document.querySelector('.favorites-page-btn');
 var favorites = [];
 var currentMessage = [];
 var mantras = [
@@ -83,6 +84,7 @@ function getMessage() {
 favBtn.addEventListener('click', function() {
     var displayedMessage = message.innerText;
     favorites.push(currentMessage);
+    favoritesPageBtn.classList.remove('hidden');
 });
 // Favorite button
 
