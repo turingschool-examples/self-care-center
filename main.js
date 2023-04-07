@@ -16,6 +16,8 @@ var receiveBtn = document.querySelector('.receive-btn');
 var affirmationBtn = document.querySelector('.affirmation-btn');
 var mantraBtn = document.querySelector('.mantra-btn');
 var favBtn = document.querySelector('.favorite')
+var favorites = [];
+var currentMessage = [];
 var mantras = [
     'Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.',
     "Dont let yesterday take up too much of today.",
@@ -52,7 +54,8 @@ var mantras = [
 
 receiveBtn.addEventListener('click', function() {
     displayMessage();
-    message.innerText = getMessage();
+    var displayedMessage = getMessage();
+    message.innerText = displayedMessage.message;
 })
 
 function displayMessage() {
@@ -62,15 +65,39 @@ function displayMessage() {
 }
 
 function getMessage() {
+    var displayedMessage = {
+        message: 'Would you like a mantra or an affirmation?',
+        id: Date.now
+    }
     if (mantraBtn.checked) {
         var index = Math.floor(Math.random() * mantras.length);
-        return mantras[index];
+        displayedMessage.message = mantras[index];
     } else if (affirmationBtn.checked) {
         var index = Math.floor(Math.random() * affirmations.length);
-        return affirmations[index];
-    } else {
-        return 'Would you like a mantra or an affirmation?'
-    }
+        displayedMessage.message = affirmations[index];
+    } 
+    currentMessage.splice(0, 1, displayedMessage)
+    return displayedMessage;
 }
+
+favBtn.addEventListener('click', function() {
+    var displayedMessage = message.innerText;
+    favorites.push(currentMessage);
+});
+// Favorite button
+
+// Goal: Create a button that when clicked adds the displayed message to an array. 
+// Steps: 
+// Add ID to message
+    // make message an object that includes message and ID
+// Create an empty array
+// Access the innerText with message.innerText
+// create an event listener that uses the function to push the innerText into the array.
+
+// Goal 2: Create a nav button that allows the user to see the favorited messages.
+// Steps: Make a button in an asthetic location on the page. Top Left dropdown menu maybe.
+// If the user selects the button it will hide the homepage and display favorited messages.
+    // Favorited messages will be in boxes styled similar to the home page boxes. Aligned in the center.
+
 
 
