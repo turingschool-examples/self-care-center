@@ -56,6 +56,18 @@ function refillArrays() {
     }
 }
 
+function notifyRepeatMessages() {
+    addNotificationStyling();
+    if(checkMessageType() === "mantras") {
+        return `You will now see repeated Mantras...`
+    } 
+    if(checkMessageType() === "affirmations") {
+        return `You will now see repeated Affirmations...`
+    }
+}
+
+
+
 /*
 import the DOM elements
 create getRandomIndex
