@@ -39,6 +39,7 @@ var mantraRadio = document.querySelector("#mantra-radio");
 var meditatingImage = document.querySelector(".meditating-person");
 var userChosenMessage = document.querySelector(".user-random-phrase");
 var clearMessageButton = document.querySelector(".clear-message-button")
+var clearButtonClass = document.querySelector(".user-clear-button")
 
 // event listeners:
 
@@ -58,6 +59,8 @@ function showAffirmation() {
     }
     userChosenMessage.removeAttribute("hidden");
     meditatingImage.setAttribute("hidden", "");
+    clearButtonClass.removeAttribute("hidden");
+
 };
 
 var usedAffirmation = [];
@@ -73,7 +76,7 @@ function generateUniqueAffirmation(array) {
         return generateUniqueAffirmation(array);
     } else {
         alert('No more affirmations available. You will now see repeats')
-        usedAffirmation =[]
+        usedAffirmation = []
         return generateUniqueAffirmation(array);
     }
 }
@@ -88,7 +91,7 @@ function generateUniqueMantra(array) {
         return generateUniqueMantra(array);
     } else {
         alert('No more mantras available. You will now see repeats')
-        usedMantra =[]
+        usedMantra = []
         return generateUniqueMantra(array);
     }
 }
@@ -120,14 +123,10 @@ function recieveMessage() {
 }
 
 function clearMessage() {
-    var myText;
-    for (i = 0; i < userChosenMessage.length; i++) {
-        if (userChosenMessage[i].innerHTML == "test") {
-            myText = userChosenMessage[i];
-            break;
-        }
-    }
     userChosenMessage.setAttribute("hidden", "");
+    alert("Message cleared, you will not see that again!")
     meditatingImage.removeAttribute("hidden");
+    affirmations.splice()
+    clearButtonClass.setAttribute("hidden", "");
 };
 
