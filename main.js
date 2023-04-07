@@ -118,6 +118,16 @@ function showHome() {
     showDomElement(homeView)
 }
 
+function checkFavoriteDuplicates(inputMessage){
+    for (var i = 0; i < favoriteMessages.length; i++) {
+        if(favoriteMessages[i].message === inputMessage) {
+            return true;
+        }
+    }
+    return false;
+}
+    
+
 function createFavoriteObject(message) {
     var messageObject = {
         message: message,
@@ -128,5 +138,7 @@ function createFavoriteObject(message) {
 }
 
 function addToFavorites() {
+    if(!checkFavoriteDuplicates(currentMessage))
     favoriteMessages.push(createFavoriteObject(currentMessage));
+    console.log(favoriteMessages);
 }
