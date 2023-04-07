@@ -10,6 +10,13 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
+function getAllIndexs() {
+  return {
+    affirmations: getRandomIndex(affirmations),
+    mantras: getRandomIndex(mantras)
+  }
+}
+
 var displayedMantras = [];
 var displayedAffirmations = [];
 
@@ -34,10 +41,10 @@ function displayMsg() {
 }
 
 function chooseMsg() {
+  var idx = getAllIndexs();
   if (affirmation.checked) {
     if (affirmations.length) {
-      var idx = getRandomIndex(affirmations);
-      message.innerText = affirmations[idx];
+      message.innerText = affirmations[idx.affirmations];
       organizeAffirmations(idx);
       return true;
     } else {
@@ -47,8 +54,7 @@ function chooseMsg() {
     }
   } else if (mantra.checked) {
     if (mantras.length) {
-      var idx = getRandomIndex(mantras);
-      message.innerText = mantras[idx];
+      message.innerText = mantras[idx.mantras];
       organizeMantras(idx);
       return true;
     } else {
