@@ -22,6 +22,14 @@ function showDomElement(element) {
     element.classList.remove("hidden");
 }
 
+function addNotificationStyling() {
+    displayMessage.classList.add("notification");
+}
+
+function removeNotificationStyling() {
+    displayMessage.classList.remove("notification");
+}
+
 /*
 import the DOM elements
 create getRandomIndex
