@@ -50,7 +50,7 @@ function chooseMsg() {
       organizeMsgs('affirmations', affirmations, idx.affirmations)
       return true;
     } else {
-      alert(`You have seen all the mantras we currently have to offer. You will now start begin seeing repeated mantras.`);
+      alert(`You have seen all the affirmations we currently have to offer. You will now start begin seeing repeated affirmations.`);
       organizeMsgs('affirmations', affirmations)
     }
   } else if (mantra.checked) {
@@ -59,7 +59,7 @@ function chooseMsg() {
       organizeMsgs('mantras', mantras, idx.mantras);
       return true;
     } else {
-      alert(`You have seen all the affirmations we currently have to offer. You will now start begin seeing repeated affirmations.`);
+      alert(`You have seen all the mantras we currently have to offer. You will now start begin seeing repeated mantras.`);
       organizeMsgs('mantras', mantras);
     }
   }
