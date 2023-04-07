@@ -67,6 +67,8 @@ function getMessage() {
     } else if (affirmationBtn.checked) {
         var index = Math.floor(Math.random() * affirmations.length);
         return affirmations[index];
+    } else {
+        return 'Would you like a mantra or an affirmation?'
     }
 }
 
