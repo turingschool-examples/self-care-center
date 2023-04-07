@@ -100,3 +100,11 @@ body {
     height: 65px;
     width: 65px;
 }
+
+.message {
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
+}

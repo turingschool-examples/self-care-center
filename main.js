@@ -6,3 +6,17 @@
     // Make an event listener that responds to click.
     // update HTML to hide the buddha icon and display text
     // update CSS to style text. 
+
+// make a variable that accesses buddha box
+// make variable that accesses message
+
+var buddha = document.querySelector('.buddha-icon');
+var message = document.querySelector('.message');
+var receiveBtn = document.querySelector('.receive-btn');
+
+receiveBtn.addEventListener('click', displayMessage)
+
+function displayMessage() {
+    buddha.classList.add('hidden');
+    message.classList.remove('hidden');
+}
