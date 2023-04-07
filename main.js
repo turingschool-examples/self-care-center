@@ -90,6 +90,13 @@ function fetchRelevantMessage(activeArray) {
     return currentMessage;
 }
 
+function renderCurrentMessage() {
+    reassignCurrentMessage();
+    displayMessage.innerText = currentMessage;
+    hideDomElement(meditateIcon);
+    showDomElement(displayMessage);
+}
+
 /*
 import the DOM elements
 create getRandomIndex
