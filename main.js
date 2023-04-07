@@ -15,7 +15,7 @@ var message = document.querySelector('.message');
 var receiveBtn = document.querySelector('.receive-btn');
 var affirmationBtn = document.querySelector('.affirmation-btn');
 var mantraBtn = document.querySelector('.mantra-btn');
-
+var favBtn = document.querySelector('.favorite')
 var mantras = [
     'Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.',
     "Dont let yesterday take up too much of today.",
@@ -58,6 +58,7 @@ receiveBtn.addEventListener('click', function() {
 function displayMessage() {
     buddha.classList.add('hidden');
     message.classList.remove('hidden');
+    favBtn.classList.remove('hidden');
 }
 
 function getMessage() {
