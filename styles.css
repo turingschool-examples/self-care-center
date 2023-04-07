@@ -44,7 +44,8 @@ body {
     width: 23em;
 }
 
-.display-message {
+.display-message, form
+ {
     color: black;
     background-color: white;
     border-radius: 10px;
@@ -73,7 +74,7 @@ body {
     margin-bottom: 40px;
 }
 
-button {
+button, .login-button {
     background-color: #134d71;
     border-radius: 6px;
     color: white;
@@ -87,4 +88,14 @@ button {
     align-items: center;
     justify-content: space-around;
     padding-top: 20px;
+}
+
+legend {
+    font-style: normal;
+    margin-left: 30%;
+}
+fieldset {
+    border-style: none;
+    border-image: none;
+    font-style: italic;
 }

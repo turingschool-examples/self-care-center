@@ -39,8 +39,12 @@ var mantraInput = document.querySelector('#mantra')
 var affirmationInput = document.querySelector('#affirmation')
 var paragraph = document.querySelector('p')      
 var meditateImage = document.querySelector('.meditate-img')    
+var messagedecisioncontainer = document.querySelector('.message-decision-container')
+var header = document.querySelector('header')
+var displayMessageContainter = document.querySelector('.display-message')
 //EVENTLISTENERS
 receiveMessageButton.addEventListener('click', showMessage)
+window.addEventListener('load', displayLoginForm)
 
 //functions
 function getRandomIndex(array) {
@@ -74,3 +78,9 @@ function decideMessage(array){
   return array[getRandomIndex(array)]
 }
 
+function displayLoginForm(){
+  
+  hide(messagedecisioncontainer)
+  hide(header)
+  hide(displayMessageContainter)
+}
