@@ -42,9 +42,14 @@ var meditateImage = document.querySelector('.meditate-img')
 var messagedecisioncontainer = document.querySelector('.message-decision-container')
 var header = document.querySelector('header')
 var displayMessageContainter = document.querySelector('.display-message')
+var loginButton = document.querySelector('.login-button');
+var userName = document.querySelector('#name')
+var loginformcontainer =document.querySelector(".login-form-container")
+var messagebuttoncontainer =document.querySelector('.message-button-container')
 //EVENTLISTENERS
 receiveMessageButton.addEventListener('click', showMessage)
-window.addEventListener('load', displayLoginForm)
+// window.addEventListener('load', displayLoginForm)
+loginButton.addEventListener('click', greetUser)
 
 //functions
 function getRandomIndex(array) {
@@ -78,9 +83,24 @@ function decideMessage(array){
   return array[getRandomIndex(array)]
 }
 
-function displayLoginForm(){
-  
-  hide(messagedecisioncontainer)
-  hide(header)
-  hide(displayMessageContainter)
+// function displayLoginForm(){
+//   hide(messagedecisioncontainer)
+//   hide(header)
+//   hide(displayMessageContainter)
+// }
+
+// console.log(loginform)
+function greetUser(event) {
+
+  show(messagedecisioncontainer)
+  hide(loginformcontainer)
+  show(displayMessageContainter)
+  show(messagebuttoncontainer)
+  show(header)
+  show (meditateImage)
+// console.log('hello')
+// console.log(userName.value)
+event.preventDefault()
 }
+
+

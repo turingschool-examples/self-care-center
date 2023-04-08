@@ -6,8 +6,8 @@
   </head>
   <body>
     <h1>✨Self Care Center✨</h1>
-    <header>What type of message?</header>
-    <div class="message-decision-container"> 
+    <header class="hidden">What type of message?</header>
+    <div class="message-decision-container hidden"> 
       <div class="radio-button-container">
         <form>
         <span>
@@ -19,27 +19,28 @@
           <label for="affirmation">mantra</label>
       </div>
         </span>
-        <div class="message-button-container">
+        <div class="message-button-container" >
           <button type="submit" name="desires">Receive Message</button>
         </div>
       </form>
     </div>
-    <div class="display-message">
+    <div class="hidden display-message">
       <p class="hidden">in the beginning it's you</p>
       <img class="meditate-img" src="assets/meditate.svg" alt="Person Meditating">
       </div>
     </div>
-    <script type="text/javascript" src="main.js"></script>
-    <form>
-      <img class="meditate-img" src="assets/meditate.svg" alt="Person Meditating">
+    <div class="login-form-container">
+    <form class="login-form">
+      <!-- <img class="meditate-img" src="assets/meditate.svg" alt="Person Meditating"> -->
       <fieldset>
           <legend>Help Yourself</legend>
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" />
-          <input class="login-button" type="submit" value="login">
+          <input type="text" id="name" name='name'/>
+          <button class="login-button" type='submit'>Login</button>
         </fieldset>
         <img class="meditate-img" src="assets/meditate.svg" alt="Person Meditating">
     </form>
-    
+    </div>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>

@@ -44,8 +44,7 @@ body {
     width: 23em;
 }
 
-.display-message, form
- {
+.display-message, .login-form {
     color: black;
     background-color: white;
     border-radius: 10px;
@@ -94,6 +93,7 @@ legend {
     font-style: normal;
     margin-left: 30%;
 }
+
 fieldset {
     border-style: none;
     border-image: none;
