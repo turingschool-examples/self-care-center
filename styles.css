@@ -1,5 +1,6 @@
 * {
   font-family: 'Quicksand', sans-serif; 
+  border: solid 2px black;
 }
 
 html {
@@ -25,6 +26,13 @@ height: 100%;
   padding: right;
   margin: 0px;
   text-align: center;
+  /* display: flex; */
+  /* flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height:120px;
+  border-radius: 90px; */
 }
 
 .receive-message{
@@ -43,6 +51,26 @@ height: 100%;
     background-color: white;
   }
 
+  .message-container {
+    background: white;
+    min-width: 450px;
+    min-height: 70px;
+    width: 60%;
+    margin: 0 auto 20px auto;
+    border-radius:15px;
+    padding: 35px 15px;
+  }
+
+  .display-message {
+    height: 40px;
+    
+  }
+  img {
+    height: 40px;
+    margin: 0;
+    padding: 0%;
+
+  }
 
 
   /* COLORS
