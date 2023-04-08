@@ -8,6 +8,8 @@ var generateMessageButton = document.querySelector('#generate-new-message-button
 var affirmationCheckbox = document.querySelector('#affirmation');
 var mantraCheckbox = document.querySelector('#mantra');
 var messageDisplayBox = document.querySelector('#display-message-box')
+var img = document.querySelector('#meditation-pic')
+var message = document.querySelector('.message')
 
 //Event Listeners
 generateMessageButton.addEventListener('click', function(event) {
@@ -19,11 +21,24 @@ generateMessageButton.addEventListener('click', function(event) {
     return Math.floor(Math.random() * array.length);
   };
   
+// function displayRandomMessage(){
+//     messageDisplayBox.innerHTML = '';
+//     if(affirmationCheckbox.checked){
+//         messageDisplayBox.innerHTML = `<p>${affirmations[getRandomIndex(affirmations)]}</p>`
+//     } else {
+//         messageDisplayBox.innerHTML = `<p>${mantras[getRandomIndex(mantras)]}</p>`
+//     }
+// }
+
 function displayRandomMessage(){
-    messageDisplayBox.innerHTML = '';
-    if(affirmationCheckbox.checked){
-        messageDisplayBox.innerHTML = `<p>${affirmations[getRandomIndex(affirmations)]}</p>`
-    } else {
-        messageDisplayBox.innerHTML = `<p>${mantras[getRandomIndex(mantras)]}</p>`
-    }
+  //hide image -- create a image var
+  img.classList.add('hidden')
+  //display text -- create message var 
+  message.classList.remove('hidden')
+  //use if else to see which box is checked and display message from correct array
+  if (affirmationCheckbox.checked){
+    message.innerText = affirmations[getRandomIndex(affirmations)]
+  } else {
+    message.innerText = mantras[getRandomIndex(mantras)]
+  }
 }
