@@ -28,7 +28,7 @@ h1 {
     color: #ffffff;
 }
 
-p {
+p1 {
     font-family:'Quicksand', sans-serif;
     font-size: 20px;
     color: #ffffff;
@@ -61,15 +61,15 @@ p {
     color: #ffffff;
     background: #134d71;
     border-radius: 4px;
-    width: 150px;    
+    width: 150px; 
     margin-bottom: 500px;
 }
 
-#image { 
+img { 
     float: center;
-    padding: 30px;
-    height: 75px;
-    width: 200px; 
+    padding-top: 30px;
+    height: 50%;
+    max-width: 50%; 
 }
 
 .quote-box {
@@ -84,9 +84,16 @@ p {
 }
 
 .hidden {
-    display:none
+    display:none;
 }
 
+p2 {
+    font-family: 'Quicksand', sans-serif;
+    color: black - #000000;
+    line-height: 125px;
+    text-align: center;
+    align-content: center
+}
 
 
 

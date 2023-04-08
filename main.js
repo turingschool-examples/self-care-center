@@ -1,21 +1,32 @@
 var affirmationBox = document.querySelector('affirmation');
 var mantraBox = document.querySelector('mantras');
 var button = document.querySelector('.button');
-var image = document.querySelector('#image') 
-var selected = document.querySelector('input[name="which-message"]:checked.value')
+var image = document.querySelector('img'); 
+var radioButton = document.querySelectorAll('input[name="which-message"]:checked').value;
+var message = document.querySelector('span');
+
 button.addEventListener('click', createMessage);
+button2.addEventListener('click', clearMessage);
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length)
 }
 
-function createMessage () {
-    image.classList.add('hidden')
+function createMessage() {
+    valid = true;
+    image.classList.add('hidden');
+    message.classList.remove('hidden');
+    console.log(document.getElementById('affirmation').checked)
+    console.log((document.getElementById('mantra').checked))
     if (document.getElementById('affirmation').checked) {
+        console.log(affirmations[getRandomIndex(affirmations)])
         message.innerText = affirmations[getRandomIndex(affirmations)]
-    } else  if (document.getElementById('mantra').checked) { 
-        message.innterText = mantras[getRandomIndex(mantras)]
-    }
+    } else if (document.getElementById('mantra').checked) { 
+        message.innerText = mantras[getRandomIndex(mantras)]
+    } else {
+        valid = false;   
+        message.innerText = "Please seleced an affirmation or mantra!"
+    } 
 }
 
 
@@ -23,13 +34,3 @@ function createMessage () {
 
 
 
-// var affirmationMessage = affirmations[getRandomIndex(affirmations)];
-// var mantraMessage = mantras[getRandomIndex(mantras)]
-
-    //     // quote.classList.remove('hidden')
-//         if (affirmationBox.checked) {
-//         quoteBox.innerHTML = `<p class"message">${affirmations[getRandomIndex(affirmations)]} <p>`
-//     } else {
-    //         quote.innerText = mantra[getRandomIndex(mantras)]
-    // }
-//     }
