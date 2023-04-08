@@ -82,12 +82,12 @@ body {
     padding: 7px;
 }
 
-.receive-btn {
+.receive-btn-section {
     display: flex;
     justify-content: center;
 }
 
-.x, .favorites-page-btn {
+.receive-btn, .favorites-page-btn {
     font-family: 'Quicksand', sans-serif; 
     margin-top: 25px;
     margin-inline: 2px;
