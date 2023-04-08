@@ -131,6 +131,15 @@ body {
     display: none;
 }
 
+.favorite {
+    font-family: 'Quicksand', sans-serif; 
+    border-radius: 10px;
+    border: 4px;
+    color: #ffffff;
+    background-color: #134d71;
+
+}
+
 .favorite-box {
     margin: 5px;
     background-color: #ffffff;

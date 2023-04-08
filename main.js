@@ -127,7 +127,7 @@ function displayFavMessage() {
 }
 
 function removeFavorite(e) {
-    var messageId = e.target.id;
+    var messageId = e.target.closest('.favorite-box').id;
     var clickedMessage = document.getElementById(`${messageId}`);
     clickedMessage.classList.add('hidden');
     for (var i = 0; i < favorites.length; i++) {
