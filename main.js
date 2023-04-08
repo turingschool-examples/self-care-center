@@ -25,13 +25,13 @@ function createMessage() {
         message.innerText = "Please select an affirmation or mantra!!!!!"
     } 
     clearButton.classList.remove('hidden');
-}
+};
     
 function clearMessage() {
     image.classList.remove('hidden');
     message.classList.add('hidden');
     clearButton.classList.add('hidden');
-    }
+};
     
     
     
