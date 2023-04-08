@@ -6,7 +6,6 @@ var affirmations = ["I forgive myself and set myself free.", "I believe I can be
 //Query Selectors
 var generateMessageButton = document.querySelector('#generate-new-message-button');
 var affirmationCheckbox = document.querySelector('#affirmation');
-var mantraCheckbox = document.querySelector('#mantra');
 var messageDisplayBox = document.querySelector('#display-message-box')
 var img = document.querySelector('#meditation-pic')
 var message = document.querySelector('.message')
@@ -36,9 +35,8 @@ function displayRandomMessage() {
 
 //vars
 var createMessageButton = document.querySelector('.create-message-button');
-var userMessageForm = document.querySelector('#create-message-box')
-var userAffirmation;
-var userMantra;
+var userMessageForm = document.querySelector('#create-message-box');
+var userAffirmation = document.querySelector('#user-affirmation');
 var addMessageButton = document.querySelector('#add-message-button');
 
 //event listners
@@ -56,12 +54,17 @@ function displayUserMessageForm(){
 
 function displayUserMessage(){
   var userMessage = document.getElementById('user-message').value;
-  //hide img
-  img.classList.add('hidden')
-  console.log(userMessage)
-  //show message
   message.innerText = userMessage
+  img.classList.add('hidden')
   message.classList.remove('hidden')
-  //if userAffirmation push userMessage value into affirmations array - otherwise push into matra array
-  //reassign message to userMessage.value
+  saveUserMessage(userMessage)
+}
+
+function saveUserMessage(userMessage){
+  if(userAffirmation.checked) {
+    affirmations.push(userMessage)
+  } else {
+    mantras.push(userMessage)
+  }
+  console.log(mantras)
 }
