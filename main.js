@@ -1,36 +1,40 @@
-var affirmationBox = document.querySelector('affirmation');
-var mantraBox = document.querySelector('mantras');
-var button = document.querySelector('.button');
+var affirmationBox = document.getElementById('affirmation');
+var mantraBox = document.getElementById('mantra');
+var messageButton = document.querySelector('.button');
 var image = document.querySelector('img'); 
-var radioButton = document.querySelectorAll('input[name="which-message"]:checked').value;
 var message = document.querySelector('span');
+var clearButton = document.querySelector('.button2');
 
-button.addEventListener('click', createMessage);
-button2.addEventListener('click', clearMessage);
+messageButton.addEventListener('click', createMessage);
+clearButton.addEventListener('click', clearMessage);
+
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length)
-}
+};
 
 function createMessage() {
     valid = true;
     image.classList.add('hidden');
     message.classList.remove('hidden');
-    console.log(document.getElementById('affirmation').checked)
-    console.log((document.getElementById('mantra').checked))
-    if (document.getElementById('affirmation').checked) {
-        console.log(affirmations[getRandomIndex(affirmations)])
+    if (affirmationBox.checked) {
         message.innerText = affirmations[getRandomIndex(affirmations)]
-    } else if (document.getElementById('mantra').checked) { 
+    } else if (mantraBox.checked) { 
         message.innerText = mantras[getRandomIndex(mantras)]
     } else {
         valid = false;   
-        message.innerText = "Please seleced an affirmation or mantra!"
+        message.innerText = "Please select an affirmation or mantra!!!!!"
     } 
+    clearButton.classList.remove('hidden');
 }
-
-
-
-
-
+    
+    function clearMessage() {
+        image.classList.remove('hidden');
+        message.classList.add('hidden');
+        clearButton.classList.add('hidden');
+    }
+    
+    
+    
+   
 
