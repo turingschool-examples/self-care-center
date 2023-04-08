@@ -11,6 +11,7 @@ var favoritesView = document.querySelector(".favoritesView");
 var favoriteMessage = document.querySelector(".favoriteMessage");
 var groupAffirmations = document.querySelector(".groupAffirmations");
 var groupMantras = document.querySelector(".groupMantras");
+var favoriteSection = document.querySelector(".favoriteSection");
 var currentMessage;
 var favoriteMessages = [];
 
@@ -20,6 +21,10 @@ messageButton.addEventListener("click", renderCurrentMessage);
 viewFavoritesButton.addEventListener("click", showFavorites);
 homeButton.addEventListener("click", showHome);
 favoriteMessage.addEventListener("click", addToFavorites);
+favoriteSection.addEventListener("click", function() {
+    deleteFavoriteMessage(event);
+})
+
 
 //functions
 function getRandomIndex(array) {
@@ -165,4 +170,16 @@ function createHTML(inputMessageType) {
 function renderFavorites() {
     groupMantras.innerHTML = createHTML("mantras");
     groupAffirmations.innerHTML = createHTML("affirmations");
+}
+
+function deleteFavoriteMessage(event) {
+    if(event.target.classList.contains("deleteButton")) {
+        var targetID = event.target.closest(".singleQuote").id;
+        for(var i = 0; i < favoriteMessages.length; i++) {
+            if(favoriteMessages[i].id.toString()===targetID) {
+                favoriteMessages.splice(i,1);
+            }
+        }
+    }
+    renderFavorites();
 }
