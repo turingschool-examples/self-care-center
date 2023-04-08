@@ -129,7 +129,7 @@ var removeButton = document.querySelector(".remove");
 
 // Event Listeners
 receiveButton.addEventListener("click", displayMessage);
-removeButton.addEventListener('click', removeMessage);
+removeButton.addEventListener("click", deleteMessage);
 
 // random array index
 function getRandomIndex(array) {
@@ -185,19 +185,20 @@ function renderAffirmationMessage() {
         </section>`;
 }
 
-
-function removeMessage() {
-    for (let i = 0; i < mantras.length; i++) {
-        if (Number(messageDisplaySection.childNodes[1].id) === mantras[i].id) {
-            mantras.splice(i, 1);
-        }
+function removeMessage(array) {
+  for (let i = 0; i < array.length; i++) {
+    if (Number(messageDisplaySection.childNodes[1].id) === array[i].id) {
+      array.splice(i, 1);
     }
+  }
 }
 
-// function removeMessage(array) {
-//     for (let i = 0; i < array.length; i++) {
-//         if (Number(messageDisplaySection.childNodes[1].id) === array[i].id) {
-//             array.splice(i, 1);
-//         }
-//     }
-// }
+function deleteMessage() {
+  if (radioAffirmation.checked) {
+    removeMessage(affirmations);
+    console.log(affirmations);
+  } else {
+    removeMessage(mantras);
+    console.log(mantras);
+  }
+}
