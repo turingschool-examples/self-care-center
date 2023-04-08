@@ -136,55 +136,40 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-var mantraMessage;
-var affirmationMessage;
+var currentMessage;
 
-function currentMantraMessage() {
-  var workingIndex = getRandomIndex(mantras);
-  mantraMessage = mantras[workingIndex];
-  return mantraMessage;
+function getCurrentMessage(dataModelArray) {
+  var workingIndex = getRandomIndex(dataModelArray);
+  message = dataModelArray[workingIndex];
+  return message;
 }
 
-function currentAffirmationMessage() {
-  var workingIndex = getRandomIndex(affirmations);
-  affirmationMessage = affirmations[workingIndex];
-  return affirmationMessage;
-}
-
-function hide(element) {
+function hideDOMElement(element) {
   element.classList.add("hidden");
 }
 
-function show(element) {
+function showDOMElement(element) {
   element.classList.remove("hidden");
 }
 
 function displayMessage() {
-  hide(meditationImg);
-  show(removeButton);
+  hideDOMElement(meditationImg);
+  showDOMElement(removeButton);
   if (radioAffirmation.checked) {
-    renderAffirmationMessage();
+    renderMessage(affirmations);
   } else {
-    renderMantraMessage();
-    console.log(messageDisplaySection.childNodes[1].id);
+    renderMessage(mantras);
   }
 }
 
-function renderMantraMessage() {
-  currentMantraMessage();
-  messageDisplaySection.innerHTML = `
-      <section class="display-container" id="${mantraMessage.id}">
-      <h3>${mantraMessage.quote}</h3>
-      </section>`;
-}
-
-function renderAffirmationMessage() {
-  currentAffirmationMessage();
-  messageDisplaySection.innerHTML = `
-        <section class="display-container" id="${affirmationMessage.id}">
-        <h3>${affirmationMessage.quote}</h3>
+function renderMessage(dataModelArray) {
+    getCurrentMessage(dataModelArray);
+    messageDisplaySection.innerHTML = `
+        <section class="display-container" id="${message.id}">
+        <h3>${message.quote}</h3>
         </section>`;
 }
+
 
 function renderOriginalDisplay() {
   messageDisplaySection.innerHTML = `
@@ -205,11 +190,11 @@ function deleteMessage() {
     removeMessage(affirmations);
     alert("This affirmation has been removed");
     renderOriginalDisplay();
-    hide(removeButton);
+    hideDOMElement(removeButton);
   } else {
     removeMessage(mantras);
     alert("This mantra has been removed");
     renderOriginalDisplay();
-    hide(removeButton);
+    hideDOMElement(removeButton);
   }
 }
