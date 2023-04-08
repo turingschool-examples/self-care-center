@@ -97,10 +97,13 @@ function getMessage() {
 }
 
 function addFavorite() {
-    var displayedMessage = message.innerText;
-    favorites.push(currentMessage[0]);
     favoritesPageBtn.classList.remove('hidden');
-
+    for (var i = 0; i < favorites.length; i++) {
+        if (favorites[i].message === currentMessage[0].message) {
+            return null;
+        }
+    }
+    favorites.push(currentMessage[0]);
 };
 
 function viewFavoritesPage() {
