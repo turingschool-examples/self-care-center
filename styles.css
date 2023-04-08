@@ -45,7 +45,8 @@ p {
     border-radius: 15px;
 }
 
-.message-container {
+.message-container, 
+.display-message-container {
     background: #FFFFFF;
     min-width: 450px;
     min-height: 70px;
