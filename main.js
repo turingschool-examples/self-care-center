@@ -9,6 +9,8 @@ var meditateIcon = document.querySelector(".meditateIcon");
 var homeView = document.querySelector(".homeView");
 var favoritesView = document.querySelector(".favoritesView");
 var favoriteMessage = document.querySelector(".favoriteMessage");
+var groupAffirmations = document.querySelector(".groupAffirmations");
+var groupMantras = document.querySelector(".groupMantras");
 var currentMessage;
 var favoriteMessages = [];
 
@@ -140,5 +142,27 @@ function createFavoriteObject(message) {
 function addToFavorites() {
     if(!checkFavoriteDuplicates(currentMessage))
     favoriteMessages.push(createFavoriteObject(currentMessage));
-    console.log(favoriteMessages);
+    renderFavorites();
+}
+
+function createHTML(inputMessageType) {
+    var htmlCode = '';
+
+    for(var i = 0; i < favoriteMessages.length; i++) {
+        if(favoriteMessages[i].messageType === inputMessageType) {
+            htmlCode += `
+            <section class="singleQuote" 
+            id="${favoriteMessages[i].id}">
+            "${favoriteMessages[i].message}"
+            <button type="button" class="deleteButton">Delete</button>
+            </section> 
+        `;
+        }
+    }
+    return htmlCode;
+}
+
+function renderFavorites() {
+    groupMantras.innerHTML = createHTML("mantras");
+    groupAffirmations.innerHTML = createHTML("affirmations");
 }
