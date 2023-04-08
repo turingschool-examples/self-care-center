@@ -186,6 +186,12 @@ function renderAffirmationMessage() {
         </section>`;
 }
 
+function renderOriginalDisplay() {
+  messageDisplaySection.innerHTML = `
+    <section class="display-container">
+    <img src="assets/meditate.svg" alt="calming meditation icon in orange" />`;
+}
+
 function removeMessage(array) {
   for (let i = 0; i < array.length; i++) {
     if (Number(messageDisplaySection.childNodes[1].id) === array[i].id) {
@@ -197,13 +203,13 @@ function removeMessage(array) {
 function deleteMessage() {
   if (radioAffirmation.checked) {
     removeMessage(affirmations);
-    messageDisplaySection.innerHTML = "";
     alert("This affirmation has been removed");
+    renderOriginalDisplay();
     hide(removeButton);
   } else {
     removeMessage(mantras);
-    messageDisplaySection.innerHTML = "";
     alert("This mantra has been removed");
+    renderOriginalDisplay();
     hide(removeButton);
   }
 }
