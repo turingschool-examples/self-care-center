@@ -6,54 +6,87 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
-
+ 
 body {
-    background: #78a7c6;
+    background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+    background-attachment: fixed;
     height: 100vh;
     width: 100vw;
-}
+    margin-top: -200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+} 
 
 h1 {
-    background: #134d71;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+p {
+    font-family:'Quicksand', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-top:50px;
+    margin-bottom: 5px
 }
 
 .box {
+    font-family: 'Quicksand', sans-serif;
+    font-style: italic;
     display: flex;
-    padding: 20px;
-    /* margin: auto; */
-    border: 50px solid black;
-    border-radius: 25px;
-    /* shape-outside: margin-box; */
-    background-color: rgb(249, 248, 248);
-    width: 500px;
-    height: 15px;
+    border: 50px solid #ffffff;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 450px;
+    height: 3px;
     flex-direction: column;
-    align-items: center;
-};
-.box-quote {
-    background-color: black;
-    height: 50vh;
-    width: 50vw;
+    align-items: center;   
 }
-#image { 
-    /* background-color: white; */
-    height: 100px;
-    width: 200px; 
-    /* width: 50%; */
-    /* max-height: 100% */
-};
-.quote-box {
-    text-align: center; 
-    padding-top: 1%;
-    border: 1px solid  rgb(248, 249, 248);
-    background-color: rgb(252, 250, 250);
-    width: 50%;
-    height: 10%;
-    border-radius: 25px;
-    margin: auto;
-};
 
-/* 
-h1 {text-align: center;}
-p {text-align: center;} */
+.input-buttons {
+    font-family: 'Quicksand', sans-serif;
+    margin-top: -30px;
+    margin-bottom: 30px
+}
+
+.button {
+    font-family: 'Quicksand', sans-serif;
+    color: #ffffff;
+    background: #134d71;
+    border-radius: 4px;
+    width: 150px;    
+    margin-bottom: 500px;
+}
+
+#image { 
+    float: center;
+    padding: 30px;
+    height: 75px;
+    width: 200px; 
+}
+
+.quote-box {
+    text-align: center;
+    padding-top: 1%;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    width: 900px;
+    height: 15%;
+    border-radius: 10px;
+    margin-top: 100px
+}
+
+.hidden {
+    display:none
+}
+
+
+
 
