@@ -5,25 +5,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>✨Self Care Center✨</h1>
-    <button class="hidden view-favourite">View Favourites</button>
-    <button class="home hidden">Home</button>
-    <h3 class="sub-title">Which type of message?</h3>
-    <section class="mantra-select">
-      <div class="radio-container">
-        <input class="affirmation-message" type="radio" name="message">
-        <label class="radio-affirmation">affirmation</label>
-        <input class="mantra-message" type="radio" name="message">
-        <label>mantra</label>
-      </div>
-      <button class="create-message">Receive Message</button>
-    </section>
-    <div class="hidden favourite-box"></div>
-    <div class="receive-messages">
-      <section class="display-message-container">
-        <div class="display-message"><img class="img-buddha" src="./assets/meditate.svg" alt="enlightened buddha"><p class="hidden message"></p></div>
-        <button class="hidden save-message">Favourite</button>
+    <header>
+      <h1>✨Self Care Center✨</h1>
+      
+      <h3 class="sub-title">Which type of message?</h3>
+      <button class="hidden top view-favourite">View Favourites</button>
+      <button class="home hidden top">Home</button>
+    </header>
+    <div class="message-section">
+      <section class="mantra-select">
+        <div class="radio-container">
+          <div>
+            <input class="affirmation-message" type="radio" name="message">
+            <label>affirmation</label>
+          </div>
+          <div>
+            <input class="mantra-message" type="radio" name="message">
+            <label>mantra</label>
+          </div>
+        </div>
+        <button class="create-message">Receive Message</button>
       </section>
+      <div class="hidden favourite-box"></div>
+      <div class="receive-messages">
+        <section class="display-message-container">
+          <div class="display-message"><img class="img-buddha" src="./assets/meditate.svg" alt="enlightened buddha"><p class="hidden message"></p></div>
+          <button class="hidden save-message">Favourite</button>
+        </section>
+      </div>
     </div>
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="data.js"></script>
