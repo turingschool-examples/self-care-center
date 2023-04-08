@@ -6,36 +6,65 @@ var affirmations = ["I forgive myself and set myself free.", "I believe I can be
 //Query Selectors
 var generateMessageButton = document.querySelector('#generate-new-message-button');
 var affirmationCheckbox = document.querySelector('#affirmation');
-var mantraCheckbox = document.querySelector('#mantra');
 var messageDisplayBox = document.querySelector('#display-message-box')
 var img = document.querySelector('#meditation-pic')
 var message = document.querySelector('.message')
 
 //Event Listeners
-generateMessageButton.addEventListener('click', function(event) {
-    event.preventDefault()
-    displayRandomMessage()
-  })
+generateMessageButton.addEventListener('click', function (event) {
+  event.preventDefault()
+  displayRandomMessage()
+})
 
-  function getRandomIndex(array) {
-    return Math.floor(Math.random() * array.length);
-  };
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+};
 
-function displayRandomMessage(){
-  //hide image -- create a image var
+function displayRandomMessage() {
   img.classList.add('hidden')
-  //display text -- create message var 
   message.classList.remove('hidden')
-  //use if else to see which box is checked and display message from correct array
-  if (affirmationCheckbox.checked){
+  if (affirmationCheckbox.checked) {
     message.innerText = affirmations[getRandomIndex(affirmations)]
   } else {
     message.innerText = mantras[getRandomIndex(mantras)]
   }
 }
 
-//button to open form
-//form
-  //radio buttons for type of message
-  //input field for user to write message <input 
-  //submit button
+//add event listener to create message button -- click, invoke funtion to unhide user message form -- var for button
+//add event listener for add message button -- click, invokes function that  -saves message to correct array -displays message in message box(make this a seperate function?) -- var for button, input message, and userAffirmation check and mantra too
+
+//vars
+var createMessageButton = document.querySelector('.create-message-button');
+var userMessageForm = document.querySelector('#create-message-box');
+var userAffirmation = document.querySelector('#user-affirmation');
+var addMessageButton = document.querySelector('#add-message-button');
+
+//event listners
+createMessageButton.addEventListener('click', displayUserMessageForm);
+
+addMessageButton.addEventListener('click', function (event) {
+  event.preventDefault()
+  displayUserMessage()
+});
+
+//Functions
+function displayUserMessageForm(){
+  userMessageForm.classList.remove('hidden')
+}
+
+function displayUserMessage(){
+  var userMessage = document.getElementById('user-message').value;
+  message.innerText = userMessage
+  img.classList.add('hidden')
+  message.classList.remove('hidden')
+  saveUserMessage(userMessage)
+}
+
+function saveUserMessage(userMessage){
+  if(userAffirmation.checked) {
+    affirmations.push(userMessage)
+  } else {
+    mantras.push(userMessage)
+  }
+  console.log(mantras)
+}

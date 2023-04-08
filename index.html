@@ -11,37 +11,36 @@
   <p>Which type of message?</p>
   <form class="display-box" id="random-message-generator-box">
     <div>
-      <span id="affirmation-select">
-        <input type="radio" name="random-message-type" id="affirmation" value="affirmation" class="message-type"
-          checked>
+      <span id="affirmation-select"><input type="radio" name="random-message-type" id="affirmation" value="affirmation"
+          class="message-type" checked>
         <label for="affirmation">affirmation</label>
       </span>
-      <input type="radio" name="random-message-type" id="mantra" value="mantra" class="message-type" checked>
-      <label for="mantra">mantra</label>
+      <input type="radio" name="random-message-type" id="mantra" value="mantra" class="message-type" checked> <label
+        for="mantra">mantra</label>
     </div>
     <div>
       <button id="generate-new-message-button">Recieve Message</button>
     </div>
   </form>
   <button class="create-message-button">Create Message</button>
-  <form class="display-box" id="create-message-box">
-  <div>
-    <span id="affirmation-select">
-      <input type="radio" name="user-message-type" id="user-affirmation" value="affirmation" class="message-type"
-        checked>
-      <label for="affirmation">affirmation</label>
-    </span>
-    <input type="radio" name="user-message-type" id="user-mantra" value="mantra" class="message-type" checked>
-    <label for="mantra">mantra</label>
-  </div>
-  <div>
-    <label for="user-message">Your message:</label>
-    <input type="text" id="user-message" value="">
-  </div>
-  <div>
-    <button id="add-message-button">Add Message</button>
-  </div>
-</form>
+  <form class="display-box hidden" id="create-message-box">
+    <div>
+      <span id="affirmation-select">
+        <input type="radio" name="user-message-type" id="user-affirmation" value="affirmation" class="message-type"
+          checked>
+        <label for="affirmation">affirmation</label>
+      </span>
+      <input type="radio" name="user-message-type" id="user-mantra" value="mantra" class="message-type" checked>
+      <label for="mantra">mantra</label>
+    </div>
+    <div>
+      <label for="user-message">Your message:</label>
+      <input type="text" id="user-message" value="">
+    </div>
+    <div>
+      <button id="add-message-button">Add Message</button>
+    </div>
+  </form>
   <div class="display-box" id="display-message-box">
     <img id="meditation-pic" src="assets/meditate.svg">
     <span class="message hidden"></span>
