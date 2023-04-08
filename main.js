@@ -24,6 +24,18 @@ favoriteMessage.addEventListener("click", addToFavorites);
 favoriteSection.addEventListener("click", function() {
     deleteFavoriteMessage(event);
 })
+favoriteSection.addEventListener("mouseover", function() {
+    enlargeFavoriteMessage(event);
+})
+favoriteSection.addEventListener("mouseout", function() {
+    shrinkFavoriteMessage(event);
+})
+favoriteSection.addEventListener("mouseover", function() {
+    focusDeleteButton(event);
+})
+favoriteSection.addEventListener("mouseout", function() {
+    defocusDeleteButton(event);
+})
 
 
 //functions
@@ -62,7 +74,6 @@ function checkMessageType() {
 function removeMessageFromArray(array, index) {
     array.splice(index, 1);
 }
-
 
 function refillArrays() {
     if(checkMessageType() === "affirmations") {
@@ -173,7 +184,7 @@ function renderFavorites() {
 }
 
 function deleteFavoriteMessage(event) {
-    if(event.target.classList.contains("deleteButton")) {
+    if(event.target.classList.contains("deleteButtonAlt")) {
         var targetID = event.target.closest(".singleQuote").id;
         for(var i = 0; i < favoriteMessages.length; i++) {
             if(favoriteMessages[i].id.toString()===targetID) {
@@ -182,4 +193,40 @@ function deleteFavoriteMessage(event) {
         }
     }
     renderFavorites();
+}
+
+function enlargeFavoriteMessage(event) {
+    if (event.target.classList.contains("singleQuote")) {
+        event.target.classList.remove("singleQuote");
+        event.target.classList.add("singleQuoteAlt");
+    }   
+    if (event.target.classList.contains("deleteButton")) {
+        event.target.closest(".singleQuote").classList.add("singleQuoteAlt");
+        event.target.closest(".singleQuote").classList.remove("singleQuote");
+    }
+}
+
+function shrinkFavoriteMessage(event) {
+    if (event.target.classList.contains("singleQuoteAlt")) {
+        event.target.classList.add("singleQuote");
+        event.target.classList.remove("singleQuoteAlt");
+    }
+    if (event.target.classList.contains("deleteButtonAlt")) {
+        event.target.closest(".singleQuoteAlt").classList.add("singleQuote");
+        event.target.closest(".singleQuoteAlt").classList.remove("singleQuoteAlt");
+    }
+}
+
+function focusDeleteButton(event) {
+    if (event.target.classList.contains("deleteButton")) {
+        event.target.classList.add("deleteButtonAlt");
+        event.target.classList.remove("deleteButton");
+    }
+}
+
+function defocusDeleteButton(event) {
+    if (event.target.classList.contains("deleteButtonAlt")) {
+        event.target.classList.remove("deleteButtonAlt");
+        event.target.classList.add("deleteButton");
+    }
 }
