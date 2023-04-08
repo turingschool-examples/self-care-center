@@ -76,7 +76,7 @@ function displayMessage() {
 function getMessage() {
     var displayedMessage = {
         message: 'Would you like a mantra or an affirmation?',
-        id: Date.now
+        id: Date.now()
     }
     if (mantraBtn.checked) {
         var index = Math.floor(Math.random() * mantras.length);
@@ -109,23 +109,48 @@ homeBtn.addEventListener('click', function() {
     homeBtn.classList.add('hidden');
 })
 
-favoriteBox.addEventListener('mouseover', function() {
-    removeBtn.classList.remove('hidden');
-})
+// favoriteBox.addEventListener('mouseover', function() {
+//     removeBtn.classList.remove('hidden');
+// })
 
-favoriteBox.addEventListener('mouseout', function() {
-    removeBtn.classList.add('hidden');
-})
+// favoriteBox.addEventListener('mouseout', function() {
+//     removeBtn.classList.add('hidden');
+// })
+
+// removeBtn.addEventListener('click', function() {
+//     for (var i = 0; i < favorites.length; i++) {
+//         if (removeBtn.id === favorites[i].id) {
+//             favorites.splice(i, 1);
+//         }
+//     }
+// })
+
+favoriteSection.addEventListener("dblclick", function(e) {
+    var messageId = e.target.id;
+    var clickedMessage = document.getElementById(`${messageId}`);
+    clickedMessage.classList.add('hidden');
+    for (var i = 0; i < favorites.length; i++) {
+      if (favorites[i].id == messageId) {
+        favorites.splice(i, 1);
+      }
+    }
+    return favorites;
+  });
 
 function displayFavMessage() {
     favoriteSection.innerHTML = '';
     for (var i = 0; i < favorites.length; i++) {
         favoriteSection.innerHTML += 
-        `<box class="favorite-box">
+        `<box class="favorite-box" id=${favorites[i].id}>
             <p class="favorite-message">${favorites[i].message}</p>
         </box>`
     }
 }
+
+// function removeFavorite() {
+//     for (var i = 0; i < favorites.length; i++) {
+//         if 
+// }
 
 // Allow user to delete favorited messages.
 

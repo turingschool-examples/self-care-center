@@ -132,10 +132,10 @@ body {
 }
 
 .favorite-box {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     margin: 5px;
     background-color: #ffffff;
     height: 80px;
