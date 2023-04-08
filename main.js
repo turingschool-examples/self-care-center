@@ -21,7 +21,7 @@ var favoritesPageBtn = document.querySelector('.favorites-page-btn');
 var favorites = [];
 var currentMessage = [];
 
-// Event Listeners
+// event listeners
 
 receiveBtn.addEventListener('click', receiveMessage);
 
@@ -33,19 +33,24 @@ homeBtn.addEventListener('click', viewHomePage);
 
 favoriteSection.addEventListener("dblclick", removeFavorite);
 
-// Functions
+// functions
 
 function receiveMessage() {
     displayMessage();
     var displayedMessage = getMessage();
     message.innerText = displayedMessage.message;
-}
+};
 
 function displayMessage() {
     buddha.classList.add('hidden');
     message.classList.remove('hidden');
     favBtn.classList.remove('hidden');
-}
+};
+
+function getRandomIndex(messageType) {
+    var index = Math.floor(Math.random() * messageType.length);
+    return index;
+};
 
 function getMessage() {
     var displayedMessage = {
@@ -53,15 +58,13 @@ function getMessage() {
         id: Date.now()
     }
     if (mantraBtn.checked) {
-        var index = Math.floor(Math.random() * mantras.length);
-        displayedMessage.message = mantras[index];
+        displayedMessage.message = mantras[getRandomIndex(mantras)];
     } else if (affirmationBtn.checked) {
-        var index = Math.floor(Math.random() * affirmations.length);
-        displayedMessage.message = affirmations[index];
+        displayedMessage.message = affirmations[getRandomIndex(affirmations)];
     } 
-    currentMessage.splice(0, 1, displayedMessage)
+    currentMessage.splice(0, 1, displayedMessage);
     return displayedMessage;
-}
+};
 
 function addFavorite() {
     favoritesPageBtn.classList.remove('hidden');
@@ -77,14 +80,14 @@ function viewFavoritesPage() {
     homePage.classList.add('hidden');
     favoritesPage.classList.remove('hidden');
     homeBtn.classList.remove('hidden');
-    displayFavMessage() 
-}
+    displayFavMessage();
+};
 
 function viewHomePage() {
     homePage.classList.remove('hidden');
     favoritesPage.classList.add('hidden');
     homeBtn.classList.add('hidden');
-}
+};
 
 function displayFavMessage() {
     favoriteSection.innerHTML = '';
@@ -94,7 +97,7 @@ function displayFavMessage() {
             <p class="favorite-message">${favorites[i].message}</p>
         </box>`
     }
-}
+};
 
 function removeFavorite(e) {
     var messageId = e.target.closest('.favorite-box').id;
