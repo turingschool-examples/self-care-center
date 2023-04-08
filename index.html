@@ -13,8 +13,15 @@
     <div class="container">
       <section class="call-to-action">
         <form>
-          <input type="radio" id="affirmation" name="select" value="affirmation" />
-          <label class="affirmation-text" for="affirmation"><em>affirmation</em></label>
+          <input
+            type="radio"
+            id="affirmation"
+            name="select"
+            value="affirmation"
+          />
+          <label class="affirmation-text" for="affirmation"
+            ><em>affirmation</em></label
+          >
           <input type="radio" id="mantra" name="select" value="mantra" />
           <label class="mantra-text" for="mantra"><em>mantra</em></label>
         </form>
@@ -23,16 +30,21 @@
         </div>
       </section>
     </div>
-    <section class="flex-remove-message">
-      <h3 class="removed-message hidden">YOUR MESSAGE HAS BEEN REMOVED</h3>
-    </section>
+    <div class="flex-remove-message">
+        <h3 class="error-message hidden">PLEASE MAKE A SELECTION</h3>
+    </div>
     <div class="message-display">
       <section class="display-container">
-        <img src="assets/meditate.svg" alt="calming meditation icon in orange" />
-
+        <img
+          src="assets/meditate.svg"
+          alt="calming meditation icon in orange"
+        />
       </section>
     </div>
-    <div class="flex-button"><button class="remove hidden">Remove Message</button></div>
+    <div class="flex-buttons">
+      <button class="clear hidden">Clear Message</button>
+      <button class="remove hidden">Remove Message</button>
+    </div>
 
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="data.js"></script>

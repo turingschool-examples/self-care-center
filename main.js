@@ -3,12 +3,15 @@ var receiveButton = document.querySelector(".receive");
 var radioAffirmation = document.querySelector("#affirmation");
 var radioMantra = document.querySelector("#mantra");
 var meditationImg = document.querySelector("img");
+var errorAlert = document.querySelector(".error-message");
 var messageDisplaySection = document.querySelector(".message-display");
 var removeButton = document.querySelector(".remove");
+var clearButton = document.querySelector(".clear");
 
 // Event Listeners
 receiveButton.addEventListener("click", displayMessage);
 removeButton.addEventListener("click", deleteMessage);
+clearButton.addEventListener("click", clearMessage);
 
 // random array index
 function getRandomIndex(array) {
@@ -31,29 +34,51 @@ function showDOMElement(element) {
   element.classList.remove("hidden");
 }
 
+function showError() {
+  var unChecked = false;
+  if (!radioAffirmation.checked && !radioMantra.checked) {
+    showDOMElement(errorAlert);
+    unChecked = true;
+  }
+  return unChecked;
+}
+
 function displayMessage() {
-  hideDOMElement(meditationImg);
-  showDOMElement(removeButton);
-  if (radioAffirmation.checked) {
+  if (showError()) {
+    showError();
+  } else if (radioAffirmation.checked) {
+    hideDOMElement(errorAlert);
+    hideDOMElement(meditationImg);
+    showDOMElement(removeButton);
+    showDOMElement(clearButton);
     renderMessage(affirmations);
   } else {
+    hideDOMElement(errorAlert);
+    hideDOMElement(meditationImg);
+    showDOMElement(removeButton);
+    showDOMElement(clearButton);
     renderMessage(mantras);
   }
 }
 
 function renderMessage(dataModelArray) {
-    getCurrentMessage(dataModelArray);
-    messageDisplaySection.innerHTML = `
+  getCurrentMessage(dataModelArray);
+  messageDisplaySection.innerHTML = `
         <section class="display-container" id="${message.id}">
         <h3>${message.quote}</h3>
         </section>`;
 }
 
-
 function renderOriginalDisplay() {
   messageDisplaySection.innerHTML = `
     <section class="display-container">
     <img src="assets/meditate.svg" alt="calming meditation icon in orange" />`;
+}
+
+function clearMessage() {
+  renderOriginalDisplay();
+  hideDOMElement(removeButton);
+  hideDOMElement(clearButton);
 }
 
 function removeMessage(array) {
@@ -70,10 +95,12 @@ function deleteMessage() {
     alert("This affirmation has been removed");
     renderOriginalDisplay();
     hideDOMElement(removeButton);
+    hideDOMElement(clearButton);
   } else {
     removeMessage(mantras);
     alert("This mantra has been removed");
     renderOriginalDisplay();
     hideDOMElement(removeButton);
+    hideDOMElement(clearButton);
   }
 }
