@@ -14,7 +14,6 @@ var customMessageInput = document.getElementById('customMessage')
 recieveMessageButton.addEventListener('click', function() {
     showMessage();
     getMessage();
-// printMessage();
 });
 
 createMessageButton.addEventListener('click', function() {
@@ -24,7 +23,7 @@ disableRecieveMessage();
 
 submitButton.addEventListener ('click', function(event) {
     event.preventDefault()
-    dropDownDisable();
+    // dropDownDisable();
     addCustomMessage();
     displayCustomMessage();
 });
@@ -33,7 +32,7 @@ var affirmationArray = ['I forgive myself and set myself free.','I believe I can
 ];
 
 var mantraArray = 
-['Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.','Don’t let yesterday take up too much of today.','Every day is a second chance.','Tell the truth and love everyone.','I am free from sadness.','I am enough.','In the beginning it is you, in the middle it is you and in the end it is you.','I love myself.','I am present now.,Inhale the future, exhale the past.','This too shall pass.','Yesterday is not today.','The only constant is change.','Onward and upward.', 'I am the sky, the rest is weather.'];
+['Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.','Don’t let yesterday take up too much of today.','Every day is a second chance.','Tell the truth and love everyone.','I am free from sadness.','I am enough.','In the beginning it is you, in the middle it is you and in the end it is you.','I love myself.','I am present now.','Inhale the future, exhale the past.','This too shall pass.','Yesterday is not today.','The only constant is change.','Onward and upward.', 'I am the sky, the rest is weather.'];
 
 var pushedMessage = [];
 
@@ -48,11 +47,10 @@ function getMessage(){
     if(document.getElementById('affirmation').checked){
         pushedMessage.push(affirmations)
         message.innerText =  affirmations 
-        // document.getElementById('affirmation').checked = false;
-    } else if (document.getElementById('mantra').checked)
+    } else if (document.getElementById('mantra').checked) {
         pushedMessage.push(mantras)
         message.innerText = mantras 
-        // document.getElementById('mantra').checked = false;
+    }
 }
 
 function addCustomMessage() {
@@ -65,16 +63,16 @@ function addCustomMessage() {
 
 function dropDownDisable (){
     if(dropDown.value === 'empty'){
-        alert('Please ensure all fields are filled out.');
+        alert('Please select a message type!');
         return false;
       }
 }
 
-function disableRecieveMessage(){
-    if(form != 'hidden') {
-        recieveMessageButton.disabled = true;
-    }
-}
+// function disableRecieveMessage(){
+//     if(form != 'hidden') {
+//         recieveMessageButton.disabled = true;
+//     }
+// }
 
 function displayCustomMessage() {
     if(dropDown.value === 'affirmationOpt'){
@@ -86,7 +84,8 @@ function displayCustomMessage() {
         message.classList.remove('hidden')
         message.innerText = customMessageInput.value
     } else if(dropDown.value === 'empty'){
-        return;
+        alert('Please select a message type!');
+        return false;
     }
 }
 
