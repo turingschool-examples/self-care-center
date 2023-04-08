@@ -6,23 +6,26 @@
   </head>
   <body>
     <h1>✨Self Care Center✨</h1>
-      <h3>Which type of message?</h2>
-      <section class="message-select">
+    <button class="hidden view-favourite">View Favourites</button>
+    <button class="home hidden">Home</button>
+    <h3 class="sub-title">Which type of message?</h3>
+    <section class="mantra-select">
       <div class="radio-container">
         <input class="affirmation-message" type="radio" name="message">
         <label class="radio-affirmation">affirmation</label>
         <input class="mantra-message" type="radio" name="message">
         <label>mantra</label>
       </div>
-      <button class="">Receive Message</button>
+      <button class="create-message">Receive Message</button>
     </section>
-    <section>
-      <p class="message">
-        <img src="./assets/meditate.svg">
-      </p>
-    </section>
+    <div class="hidden favourite-box"></div>
+    <div class="receive-messages">
+      <section class="display-message-container">
+        <div class="display-message"><img class="img-buddha" src="./assets/meditate.svg" alt="enlightened buddha"><p class="hidden message"></p></div>
+        <button class="hidden save-message">Favourite</button>
+      </section>
+    </div>
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="data.js"></script>
   </body>
-</html>
-    
+</html>    
