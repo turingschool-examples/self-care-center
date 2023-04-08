@@ -161,6 +161,7 @@ function show(element) {
 
 function displayMessage() {
   hide(meditationImg);
+  show(removeButton);
   if (radioAffirmation.checked) {
     renderAffirmationMessage();
   } else {
@@ -196,9 +197,13 @@ function removeMessage(array) {
 function deleteMessage() {
   if (radioAffirmation.checked) {
     removeMessage(affirmations);
-    console.log(affirmations);
+    messageDisplaySection.innerHTML = "";
+    alert("This affirmation has been removed");
+    hide(removeButton);
   } else {
     removeMessage(mantras);
-    console.log(mantras);
+    messageDisplaySection.innerHTML = "";
+    alert("This mantra has been removed");
+    hide(removeButton);
   }
 }
