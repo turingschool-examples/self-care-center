@@ -1,6 +1,12 @@
 * {
-  font-family: 'Quicksand', sans-serif; 
-  border: solid 2px black;
+  font-family: 'Quicksand', sans-serif;
+  /* box-sizing: border-box;  */
+  display: flex;
+  align-items: center; 
+  /* justify-content: center; */
+  align-content: center; 
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 html {
@@ -16,29 +22,43 @@ height: 100%;
   h2 {
     text-align: center;
     color: white;
-    margin:2px;
+    margin:8px;
     padding-top: 100px;
   }
 
 
 .message-options {
-  padding: left, 120px;
-  padding: right;
+  /* padding: left, 120px;
+  padding: right; */
   margin: 0px;
   text-align: center;
-  /* display: flex; */
-  /* flex-direction:row;
-  align-items: center;
-  justify-content: center;
   background-color: white;
-  height:120px;
-  border-radius: 90px; */
+  height: 8em;
+  width: 45em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  border-radius: 13px;
+  text-align: center;
 }
 
+.radio-controls {
+display:flex;
+flex-direction: row;
+justify-content: center;
+align-items:center;
+width: 400px;
+}
+
+
+
 .receive-message{
-  background-color: #134d71;
+  background-color: #124d74;
   color: white;
-  border-radius: 10px;
+  border-radius: 3px;
+  width: 150px;
 }
 
   .box {
@@ -53,11 +73,11 @@ height: 100%;
 
   .message-container {
     background: white;
-    min-width: 450px;
-    min-height: 70px;
-    width: 60%;
-    margin: 0 auto 20px auto;
-    border-radius:15px;
+    min-width: 900px;
+    min-height: 100px;
+    width: 100%;
+    margin: 200px 20px auto;
+    border-radius:11px;
     padding: 35px 15px;
   }
 
@@ -66,10 +86,12 @@ height: 100%;
     
   }
   img {
-    height: 40px;
+    height: 85px;
     margin: 0;
     padding: 0%;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 
