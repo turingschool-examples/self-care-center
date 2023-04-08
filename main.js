@@ -128,13 +128,12 @@ function displayFavMessage() {
 
 function removeFavorite(e) {
     var messageId = e.target.closest('.favorite-box').id;
-    var clickedMessage = document.getElementById(`${messageId}`);
-    clickedMessage.classList.add('hidden');
     for (var i = 0; i < favorites.length; i++) {
       if (favorites[i].id == messageId) {
         favorites.splice(i, 1);
       }
     }
+    displayFavMessage();
     return favorites;
   };
 
