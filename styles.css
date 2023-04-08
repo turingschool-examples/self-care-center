@@ -69,6 +69,10 @@ button{
     width: 55%;
 }
 
+.hidden{
+    display:none;
+}
+
 
 /* font-family: 'Quicksand', sans-serif;
 COLORS
