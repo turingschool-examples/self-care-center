@@ -1,30 +1,23 @@
-// Goal: When the user clicks on the receive message button, the corresponding mantra or affirmation will display in place of the meditation icon.
+// Self Care Center
 
-// Steps:
-    // Make a function that returns a random index.
-    // Make a function that checks to see if the mantra or affirmation selector is picked, and then uses the random index function to pick a mantra or affirmation.
-    // Make an event listener that responds to click.
-    // update HTML to hide the buddha icon and display text
-    // update CSS to style text. 
-
-// make a variable that accesses buddha box
-// make variable that accesses message
-
+// variables
 var buddha = document.querySelector('.buddha-icon');
 var message = document.querySelector('.message');
+var favoriteSection = document.querySelector('.favorite-section');
+var favoriteMessage = document.querySelector('.favorite-message');
+var favoriteBox = document.querySelector('.favorite-box');
+// button variables
+var removeBtn = document.querySelector('.remove-btn');
 var receiveBtn = document.querySelector('.receive-btn');
 var affirmationBtn = document.querySelector('.affirmation-btn');
 var mantraBtn = document.querySelector('.mantra-btn');
 var favBtn = document.querySelector('.favorite');
-var favoritesPageBtn = document.querySelector('.favorites-page-btn');
-var favoriteSection = document.querySelector('.favorite-section');
-var favoriteMessage = document.querySelector('.favorite-message');
-var homeBtn = document.querySelector('.home-btn');
-var removeBtn = document.querySelector('.remove-btn');
-// navigation
+// navigation variables
 var homePage = document.querySelector('.home-page');
 var favoritesPage = document.querySelector('.favorites-page');
-var favoriteBox = document.querySelector('.favorite-box');
+var homeBtn = document.querySelector('.home-btn');
+var favoritesPageBtn = document.querySelector('.favorites-page-btn');
+// arrays
 var favorites = [];
 var currentMessage = [];
 var mantras = [
@@ -61,11 +54,25 @@ var mantras = [
     'I manifest perfect health by making smart choices.'
     ];
 
-receiveBtn.addEventListener('click', function() {
+// Event Listeners
+
+receiveBtn.addEventListener('click', receiveMessage);
+
+favBtn.addEventListener('click', addFavorite);
+
+favoritesPageBtn.addEventListener('click', viewFavoritesPage);
+
+homeBtn.addEventListener('click', viewHomePage);
+
+favoriteSection.addEventListener("dblclick", removeFavorite);
+
+// Functions
+
+function receiveMessage() {
     displayMessage();
     var displayedMessage = getMessage();
     message.innerText = displayedMessage.message;
-})
+}
 
 function displayMessage() {
     buddha.classList.add('hidden');
@@ -89,53 +96,25 @@ function getMessage() {
     return displayedMessage;
 }
 
-favBtn.addEventListener('click', function() {
+function addFavorite() {
     var displayedMessage = message.innerText;
     favorites.push(currentMessage[0]);
     favoritesPageBtn.classList.remove('hidden');
 
-});
+};
 
-favoritesPageBtn.addEventListener('click', function() {
+function viewFavoritesPage() {
     homePage.classList.add('hidden');
     favoritesPage.classList.remove('hidden');
     homeBtn.classList.remove('hidden');
     displayFavMessage() 
-})
+}
 
-homeBtn.addEventListener('click', function() {
+function viewHomePage() {
     homePage.classList.remove('hidden');
     favoritesPage.classList.add('hidden');
     homeBtn.classList.add('hidden');
-})
-
-// favoriteBox.addEventListener('mouseover', function() {
-//     removeBtn.classList.remove('hidden');
-// })
-
-// favoriteBox.addEventListener('mouseout', function() {
-//     removeBtn.classList.add('hidden');
-// })
-
-// removeBtn.addEventListener('click', function() {
-//     for (var i = 0; i < favorites.length; i++) {
-//         if (removeBtn.id === favorites[i].id) {
-//             favorites.splice(i, 1);
-//         }
-//     }
-// })
-
-favoriteSection.addEventListener("dblclick", function(e) {
-    var messageId = e.target.id;
-    var clickedMessage = document.getElementById(`${messageId}`);
-    clickedMessage.classList.add('hidden');
-    for (var i = 0; i < favorites.length; i++) {
-      if (favorites[i].id == messageId) {
-        favorites.splice(i, 1);
-      }
-    }
-    return favorites;
-  });
+}
 
 function displayFavMessage() {
     favoriteSection.innerHTML = '';
@@ -147,12 +126,18 @@ function displayFavMessage() {
     }
 }
 
-// function removeFavorite() {
-//     for (var i = 0; i < favorites.length; i++) {
-//         if 
-// }
+function removeFavorite(e) {
+    var messageId = e.target.id;
+    var clickedMessage = document.getElementById(`${messageId}`);
+    clickedMessage.classList.add('hidden');
+    for (var i = 0; i < favorites.length; i++) {
+      if (favorites[i].id == messageId) {
+        favorites.splice(i, 1);
+      }
+    }
+    return favorites;
+  };
 
-// Allow user to delete favorited messages.
 
 
 

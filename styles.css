@@ -132,10 +132,6 @@ body {
 }
 
 .favorite-box {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     margin: 5px;
     background-color: #ffffff;
     height: 80px;
@@ -147,9 +143,7 @@ body {
 .favorite-section {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
-    border: solid 5px black;
     height: 100vh;
 }
 
