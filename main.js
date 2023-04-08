@@ -20,15 +20,6 @@ generateMessageButton.addEventListener('click', function(event) {
   function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
   };
-  
-// function displayRandomMessage(){
-//     messageDisplayBox.innerHTML = '';
-//     if(affirmationCheckbox.checked){
-//         messageDisplayBox.innerHTML = `<p>${affirmations[getRandomIndex(affirmations)]}</p>`
-//     } else {
-//         messageDisplayBox.innerHTML = `<p>${mantras[getRandomIndex(mantras)]}</p>`
-//     }
-// }
 
 function displayRandomMessage(){
   //hide image -- create a image var
@@ -42,3 +33,9 @@ function displayRandomMessage(){
     message.innerText = mantras[getRandomIndex(mantras)]
   }
 }
+
+//button to open form
+//form
+  //radio buttons for type of message
+  //input field for user to write message <input 
+  //submit button
