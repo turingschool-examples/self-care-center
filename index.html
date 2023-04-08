@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body>   
   <section class = "headingContainer columnCenter" >
      <h1 class = "pageTitle">✨ Self Care Center ✨ </h1>
   </section>
@@ -27,12 +27,28 @@
       <button class = "recieveMessageBtn"> Recieve Message </button>
   </div>
   <section class = "messageContainer">
-    <img class = "image" src="./assets/meditate.svg" alt ="yellow figure meditating"> 
-    <p class ="message hidden">this is where the message will go</p>
+    <img class = "icon" src="./assets/meditate.svg" alt ="yellow figure meditating"> 
+    <p class ="message hidden">Please select a message type.</p>
+
+
+    <form class ="formContainer hidden">
+      <label for = "typeOfMesssage">Type of message: &nbsp;</label> 
+      <select id = "messageType" required>
+        <option class ='dropDown' value = "empty"></option>
+        <option class ='dropDown' value ="affirmationOpt">Affirmation</option>
+        <option class ='dropDown' value = "mantraOpt">Mantra</option>
+      </select>
+      <label for = "customMessage">&nbsp;Type your message here: &nbsp;</label> 
+      <input class = "textInput" type = "text" id = "customMessage" name ="customMessage"> &nbsp;&nbsp;
+      <button class ="submitBtn">Submit</button>
+    </form>
   </section>
   <div class = "createMessageBtnContainer">
     <button class = "createMessageBtn">Add your own message 💛</button>
   </div>
+</div>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
+
+<button></button>

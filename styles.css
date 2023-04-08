@@ -6,16 +6,26 @@
  /* border: solid black */
 }
 
-.hidden {
-   display: none
-}
-
 body {
  height: 100vh;
  margin:0;
  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
 }
 
+.formContainer{
+   display:flex;
+   align-items: center; 
+   color:black;
+   font-style: italic;
+}
+
+.submitBtn {
+   background-color:#134d71;
+   color:#ffffff;
+   border-radius: 5px;
+   height: 25px;
+   width: 100px
+}
 
 .pageTitle {
    color: #ffffff;
@@ -99,7 +109,7 @@ body {
 }
 
 
-img {
+.icon {
    height: 50px;
    width: 50px
 }
@@ -116,6 +126,10 @@ img {
    color:#ffffff;
    border-radius: 5px;
    margin-bottom: 10%;
+}
+
+.hidden {
+   display: none
 }
 
 /* making button a heart 
