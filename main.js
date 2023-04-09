@@ -1,14 +1,3 @@
-// goal: When the user clicks "Recieve MEssage" button,
-    // a random message should appear
-
-// data: arrays with strings
-
-// steps:
-    // create arrays for affirmations and mantras
-    // create a function that:
-        // pulls a string from one of the arrays 
-        // displays that to the screen - innerHTML
-
 var affirmations = [
     "I forgive myself and set myself free.",
     "I believe I can be all that I want to be.",
@@ -27,7 +16,7 @@ var affirmations = [
 
 var mantras = [
     "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.",
-    "Don’t let yesterday take up too much of today.",
+    "Don't let yesterday take up too much of today.",
     "Every day is a second chance.",
     "Tell the truth and love everyone.",
     "I am free from sadness.",
@@ -44,9 +33,9 @@ var mantras = [
     ];
 
 // query selectors:
-var recieveMessageBtn = document.querySelector(".button");
-var affirmationBtn = document.querySelector(".#affirmation");
-var mantraBtn = document.querySelector(".#mantra");
+var recieveMessageBtn = document.querySelector(".recieve-message-btn");
+var affirmationBtn = document.querySelector("#affirmation");
+var mantraBtn = document.querySelector("#mantra");
 var image = document.querySelector(".image");
 var outputBox = document.querySelector(".output-box");
 
@@ -58,22 +47,22 @@ function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
   }
 
-function showMessage() {
-    displayMessage = ''
+function showMessage(event) {
+    event.preventDefault();
+    displayMessage = '';
     if (affirmationBtn.checked || mantraBtn.checked) {
         displayMessage = createMessage();
         image.classList.add('hidden');
-        outputBox.innerHTML += `
+        outputBox.innerHTML = `
         <p>${newMessage.message}</p>`
-
     }
 };
 
 function createMessage() {
     newMessage = {
         id: Date.now(),
-        type: 'unknown',
-        message: 'unknown'
+        type: 'undefined',
+        message: 'undefined'
     }
     if (affirmationBtn.checked) {
         newMessage.message = affirmations[getRandomIndex(affirmations)];
