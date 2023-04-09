@@ -57,6 +57,7 @@ function addNotificationStyling() {
 
 function removeNotificationStyling() {
     displayMessage.classList.remove("notification");
+    
 }
 
 function checkMessageType() {
@@ -107,12 +108,14 @@ function fetchRelevantMessage(activeArray) {
     if(activeArray.length) {
         if(displayMessage.classList.contains("notification")) {
             removeNotificationStyling();
+            showDomElement(favoriteMessage);
         }
         var workingIndex = getRandomIndex(activeArray);
         currentMessage = activeArray[workingIndex];
         removeMessageFromArray(activeArray, workingIndex);
     } else {
         currentMessage = notifyRepeatMessages();
+        hideDomElement(favoriteMessage);
         refillArrays();
         }
     return currentMessage;
@@ -123,7 +126,6 @@ function renderCurrentMessage() {
     displayMessage.innerText = currentMessage;
     hideDomElement(meditateIcon);
     showDomElement(displayMessage);
-    showDomElement(favoriteMessage)
 }
 
 function showFavorites() {
