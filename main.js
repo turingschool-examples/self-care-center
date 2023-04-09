@@ -71,25 +71,24 @@ function clearMessage() {
 }
 
 function removeMessage(array) {
+  console.log(array);
   for (let i = 0; i < array.length; i++) {
     if (Number(messageDisplaySection.childNodes[1].id) === array[i].id) {
       array.splice(i, 1);
     }
   }
+  console.log(array);
 }
 
 function deleteMessage() {
   if (radioAffirmation.checked) {
     removeMessage(affirmations);
     alert("This affirmation has been removed");
-    renderOriginalDisplay();
-    hideDOMElement(removeButton);
-    hideDOMElement(clearButton);
   } else {
     removeMessage(mantras);
     alert("This mantra has been removed");
-    renderOriginalDisplay();
-    hideDOMElement(removeButton);
-    hideDOMElement(clearButton);
   }
+  renderOriginalDisplay();
+  hideDOMElement(removeButton);
+  hideDOMElement(clearButton);
 }
