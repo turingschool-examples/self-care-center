@@ -13,15 +13,13 @@ function getRandomIndex(array) {
 };
 
 function createMessage() {
-    // valid = true;
     image.classList.add('hidden');
     message.classList.remove('hidden');
     if (affirmationBox.checked) {
         message.innerText = affirmations[getRandomIndex(affirmations)]
     } else if (mantraBox.checked) { 
         message.innerText = mantras[getRandomIndex(mantras)]
-    } else {
-        // valid = false;   
+    } else {   
         message.innerText = "Please select an affirmation or mantra!!!!!"
     } 
     clearButton.classList.remove('hidden');
