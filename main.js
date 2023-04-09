@@ -34,30 +34,19 @@ function showDOMElement(element) {
   element.classList.remove("hidden");
 }
 
-function showError() {
-  var unChecked = false;
+function displayMessage() {
   if (!radioAffirmation.checked && !radioMantra.checked) {
     showDOMElement(errorAlert);
-    unChecked = true;
-  }
-  return unChecked;
-}
-
-function displayMessage() {
-  if (showError()) {
-    showError();
-  } else if (radioAffirmation.checked) {
-    hideDOMElement(errorAlert);
-    hideDOMElement(meditationImg);
-    showDOMElement(removeButton);
-    showDOMElement(clearButton);
-    renderMessage(affirmations);
   } else {
     hideDOMElement(errorAlert);
     hideDOMElement(meditationImg);
     showDOMElement(removeButton);
     showDOMElement(clearButton);
-    renderMessage(mantras);
+    if (radioAffirmation.checked) {
+      renderMessage(affirmations);
+    } else {
+      renderMessage(mantras);
+    }
   }
 }
 
