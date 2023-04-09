@@ -1,51 +1,35 @@
-# Self Care Center
-## Overview
-How can I care for myself? One way is with affirmations and mantras!
-Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are repetive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
-
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
-
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html). 
-
-## Learning Goals
-
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
-
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
-
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
-
-# Self-Care Center 
+ # Self-Care Center 
 
 ### Abstract:
 [//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
+A website was built to provide users with motivational messages to help with ones mental health. Everyone has different needs, for some, a little inspirational message can be all they need to make their day better. The user can cycle through two different motivational messages, mantras and affirmations. The message will be displayed on the screen where the user then has the option to favourite that message and any other they want. The favourited messages can be viewed on their own page allowing the user to refer to the messages throughout the day when they need a little inspiration boost. The user can also delete some favourited messages so that they display only the ones which provide them what they need for the day. 
 
 ### Installation Instructions:
 [//]: <> (What steps does a person have to take to get your app cloned down and running?)
+1. fork this repository https://github.com/jalbe0076/m1-self-care-center
+2. Clone down your new, forked repo using the generated SSH link in the terminal
+3. cd into the repository
+4. Open it in your text editor
+5. View app in the browser by running open index.html in your terminal
 
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
+![SelfCare SR ](https://user-images.githubusercontent.com/123283073/230784493-d7f52d3f-b318-4332-b029-2b2a35b70081.gif)
 
 ### Context:
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
+The project was assigned on 2023.04.04, all selected features was completed by 2023.04.07, the project worked and responded as intended. The CSS was refactored on 2023.04.08 to use the CSS flexbox layout, a concept that was learned after the styling was complete. The project was issued in the 3rd week of Turing's Mod1. 
 
 ### Contributors:
 [//]: <> (Who worked on this application? Link to their GitHubs.)
+[Jason Alberto](https://github.com/jalbe0076) worked on this application. 
 
 ### Learning Goals:
 [//]: <> (What were the learning goals of this project? What tech did you work with?)
+The learning goals of the project was to gain experience using HTML, CSS and JavaScript.  Some files were provided with the links already written in the HTML skeleton. The styling specifications were commented out in the CSS sheet. The HTML and CSS were written in a way to have JavaScript manipulate it through the DOM to display and respond to user events. VS code was the text editor used to write the HTML, CSS and JavaScript. GitHub was used to store as a hosting platform, although this project was solo, commits were pushed to branches to mimic best practices. Merges into main were completed with clean code, meaning no broken or dead code was merged into the main branch. 
 
 ### Wins + Challenges:
 [//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+Win#1: Having a better understanding of how `event.target.parentNode` operates and finding out about a concept called bubbling. 
+Win#2: Playing around with different CSS properties really helped better understand how elements can be manipulated on the page.
+The biggest challenge on the project was using the `innerHTML` method to manipulate the HTML on the DOM. Using this method was removing the event listeners that were written. The user event would work as intended the first time, but because `innerHTML` was being used to display the HTML, the event listeners would stop working. This was a frustrating challenge to overcome, I originally did not know what to google because I was not aware that `innerHTML` removed event listeners. Once my searches did not help with a solution I tried collaborating with peers, the first few troubleshooting sessions did not provide any information, but after about the 3rd pairing, I was sent an article titled [DOM Manipulation and the Dangers of ‘innerHTML](https://betterprogramming.pub/dom-manipulation-the-dangers-of-innerhtml-602f4119d905). This article lists some issues with using `innerHTML` and one of them was that it removes event listeners. With this I was able to refine my search and come up with a solution. 
