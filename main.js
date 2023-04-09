@@ -1,39 +1,39 @@
 //DOM elements
-var messageButton = document.querySelector(".receiveMessage");
-var viewFavoritesButton = document.querySelector(".viewFavoriteButton");
-var homeButton = document.querySelector(".homeButton");
-var affirmationCheck = document.querySelector("#affirmation");
-var mantraCheck = document.querySelector("#mantra");
-var displayMessage = document.querySelector(".displayMessage");
-var meditateIcon = document.querySelector(".meditateIcon");
-var homeView = document.querySelector(".homeView");
-var favoritesView = document.querySelector(".favoritesView");
-var favoriteMessage = document.querySelector(".favoriteMessage");
-var groupAffirmations = document.querySelector(".groupAffirmations");
-var groupMantras = document.querySelector(".groupMantras");
-var favoriteSection = document.querySelector(".favoriteSection");
+var domRandomMessageBtn = document.querySelector(".receiveMessage");
+var domGoToFavorites = document.querySelector(".viewFavoriteButton");
+var domGoToHome = document.querySelector(".homeButton");
+var domAffirmationCheck = document.querySelector("#affirmation");
+var domMantraCheck = document.querySelector("#mantra");
+var domMessageDisplay = document.querySelector(".displayMessage");
+var domMeditateIcon = document.querySelector(".meditateIcon");
+var domHomeView = document.querySelector(".homeView");
+var domFavoritesView = document.querySelector(".favoritesView");
+var domFavoriteMessageBtn = document.querySelector(".favoriteMessage");
+var domGroupAffirmations = document.querySelector(".groupAffirmations");
+var domGroupMantras = document.querySelector(".groupMantras");
+var domFavoriteSection = document.querySelector(".favoriteSection");
 var currentMessage;
 var favoriteMessages = [];
 
 
 // event listeners
-messageButton.addEventListener("click", renderCurrentMessage);
-viewFavoritesButton.addEventListener("click", showFavorites);
-homeButton.addEventListener("click", showHome);
-favoriteMessage.addEventListener("click", addToFavorites);
-favoriteSection.addEventListener("click", function() {
+domRandomMessageBtn.addEventListener("click", displayRandomMessage);
+domGoToFavorites.addEventListener("click", showFavoritesView);
+domGoToHome.addEventListener("click", showHomeView);
+domFavoriteMessageBtn.addEventListener("click", addToFavorites);
+domFavoriteSection.addEventListener("click", function() {
     deleteFavoriteMessage(event);
 })
-favoriteSection.addEventListener("mouseover", function() {
+domFavoriteSection.addEventListener("mouseover", function() {
     enlargeFavoriteMessage(event);
 })
-favoriteSection.addEventListener("mouseout", function() {
+domFavoriteSection.addEventListener("mouseout", function() {
     shrinkFavoriteMessage(event);
 })
-favoriteSection.addEventListener("mouseover", function() {
+domFavoriteSection.addEventListener("mouseover", function() {
     focusDeleteButton(event);
 })
-favoriteSection.addEventListener("mouseout", function() {
+domFavoriteSection.addEventListener("mouseout", function() {
     defocusDeleteButton(event);
 })
 
@@ -52,23 +52,21 @@ function showDomElement(element) {
 }
 
 function addNotificationStyling() {
-    displayMessage.classList.add("notification");
+    domMessageDisplay.classList.add("notification");
 }
 
 function removeNotificationStyling() {
-    displayMessage.classList.remove("notification");
+    domMessageDisplay.classList.remove("notification");
     
 }
 
 function checkMessageType() {
-    if(affirmationCheck.checked) {
+    var typeOfMessages;
+    if (domAffirmationCheck.checked) {
         typeOfMessages = "affirmations";
-    } 
-
-    if(mantraCheck.checked) {
+    } else if (domMantraCheck.checked) {
         typeOfMessages = "mantras";
     }
-
     return typeOfMessages;
 }
 
@@ -76,77 +74,88 @@ function removeMessageFromArray(array, index) {
     array.splice(index, 1);
 }
 
-function refillArrays() {
-    if(checkMessageType() === "affirmations") {
+function refillClonedArrays() {
+    if (checkMessageType() === "affirmations") {
         clonedAffirmations = [...safeAffirmations];
-    }
-    if(checkMessageType() === "mantras") {
+    } else if (checkMessageType() === "mantras") {
         clonedMantras = [...safeMantras];
     }
 }
 
 function notifyRepeatMessages() {
     addNotificationStyling();
-    if(checkMessageType() === "mantras") {
-        return `You will now see repeated Mantras...`
-    } 
-    if(checkMessageType() === "affirmations") {
-        return `You will now see repeated Affirmations...`
+    if (checkMessageType() === "mantras") {
+        return `You will now see repeated Mantras...`;
+    } else if (checkMessageType() === "affirmations") {
+        return `You will now see repeated Affirmations...`;
     }
 }
 
 function reassignCurrentMessage() {
-    if(checkMessageType() === "affirmations") {
-     fetchRelevantMessage(clonedAffirmations);
-    } 
-    if(checkMessageType() === "mantras") {
-     fetchRelevantMessage(clonedMantras);
+    if (checkMessageType() === "affirmations") {
+        manipulateDisplayDom(clonedAffirmations);
+        fetchRelevantMessage(clonedAffirmations);
+    } else if (checkMessageType() === "mantras") {
+        manipulateDisplayDom(clonedMantras);
+        fetchRelevantMessage(clonedMantras);
     }
 }
 
 function fetchRelevantMessage(activeArray) {
-    if(activeArray.length) {
-        if(displayMessage.classList.contains("notification")) {
-            removeNotificationStyling();
-            showDomElement(favoriteMessage);
-        }
+    if (activeArray.length) {
         var workingIndex = getRandomIndex(activeArray);
         currentMessage = activeArray[workingIndex];
         removeMessageFromArray(activeArray, workingIndex);
     } else {
         currentMessage = notifyRepeatMessages();
-        hideDomElement(favoriteMessage);
-        refillArrays();
-        }
+        refillClonedArrays();
+    }
     return currentMessage;
 }
 
+function manipulateDisplayDom(activeArray) {
+    hideDomElement(domMeditateIcon);
+    showDomElement(domMessageDisplay);
+
+    if (activeArray.length) {
+        if (domMessageDisplay.classList.contains("notification")) {
+            removeNotificationStyling();
+            showDomElement(domFavoriteMessageBtn);
+        }
+    } else {
+        hideDomElement(domFavoriteMessageBtn);
+    }
+}
+
 function renderCurrentMessage() {
+    domMessageDisplay.innerText = currentMessage;
+}
+
+
+function displayRandomMessage() {
     reassignCurrentMessage();
-    displayMessage.innerText = currentMessage;
-    hideDomElement(meditateIcon);
-    showDomElement(displayMessage);
+    renderCurrentMessage();
+}    
+
+function showFavoritesView() {
+    hideDomElement(domHomeView);
+    showDomElement(domFavoritesView);
+    renderFavorites();
 }
 
-function showFavorites() {
-    hideDomElement(homeView);
-    showDomElement(favoritesView);
+function showHomeView() {
+    hideDomElement(domFavoritesView);
+    showDomElement(domHomeView);
 }
 
-function showHome() {
-    hideDomElement(favoritesView);
-    showDomElement(homeView)
-}
-
-function checkFavoriteDuplicates(inputMessage){
+function checkFavoriteDuplicates(inputMessage) {
     for (var i = 0; i < favoriteMessages.length; i++) {
-        if(favoriteMessages[i].message === inputMessage) {
+        if (favoriteMessages[i].message === inputMessage) {
             return true;
         }
     }
     return false;
 }
-    
 
 function createFavoriteObject(message) {
     var messageObject = {
@@ -158,16 +167,16 @@ function createFavoriteObject(message) {
 }
 
 function addToFavorites() {
-    if(!checkFavoriteDuplicates(currentMessage))
-    favoriteMessages.push(createFavoriteObject(currentMessage));
-    renderFavorites();
+    if (!checkFavoriteDuplicates(currentMessage)){
+        favoriteMessages.push(createFavoriteObject(currentMessage));
+    }
 }
 
 function createHTML(inputMessageType) {
     var htmlCode = '';
 
     for(var i = 0; i < favoriteMessages.length; i++) {
-        if(favoriteMessages[i].messageType === inputMessageType) {
+        if (favoriteMessages[i].messageType === inputMessageType) {
             htmlCode += `
             <section class="singleQuote" 
             id="${favoriteMessages[i].id}">
@@ -181,15 +190,15 @@ function createHTML(inputMessageType) {
 }
 
 function renderFavorites() {
-    groupMantras.innerHTML = createHTML("mantras");
-    groupAffirmations.innerHTML = createHTML("affirmations");
+    domGroupMantras.innerHTML = createHTML("mantras");
+    domGroupAffirmations.innerHTML = createHTML("affirmations");
 }
 
 function deleteFavoriteMessage(event) {
-    if(event.target.classList.contains("deleteButtonAlt")) {
+    if (event.target.classList.contains("deleteButtonAlt")) {
         var targetID = event.target.closest(".singleQuote").id;
         for(var i = 0; i < favoriteMessages.length; i++) {
-            if(favoriteMessages[i].id.toString()===targetID) {
+            if (favoriteMessages[i].id.toString() === targetID) {
                 favoriteMessages.splice(i,1);
             }
         }
