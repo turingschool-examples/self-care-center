@@ -103,9 +103,9 @@ function toggleHiddenButton(button) {
     button.classList.toggle('hidden');
 }
 
-function favouriteMessage() {favouriteMessageButton = document.querySelector('.save-message');
+function favouriteMessage() {
     if (!savedMessages.includes(currentMessage)) {
-        savedMessages.push(currentMessage);
+        savedMessages.push(currentMessage)
     }
 }
 
