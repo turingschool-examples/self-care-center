@@ -1,14 +1,12 @@
 //QUERY SELECTORS
-// var affirmationButton = document.getElementById('affirmation');
-// var mantraButton = document.getElementById('mantra');
 var recieveMessageButton = document.querySelector('.recieveMessageBtn');
 var icon = document.querySelector('.icon');
 var message = document.querySelector('.message');
 var createMessageButton = document.querySelector('.createMessageBtn');
 var form = document.querySelector('.formContainer');
 var submitButton = document.querySelector('.submitBtn');
-var dropDown = document.getElementById('messageType')
-var customMessageInput = document.getElementById('customMessage')
+var dropDown = document.getElementById('messageType');
+var customMessageInput = document.getElementById('customMessage');
 
 //EVENT LISTENERS
 recieveMessageButton.addEventListener('click', function() {
@@ -17,8 +15,8 @@ recieveMessageButton.addEventListener('click', function() {
 });
 
 createMessageButton.addEventListener('click', function() {
-showForm();
-disableRecieveMessage();
+    showForm();
+    disableRecieveMessage();
 });
 
 submitButton.addEventListener ('click', function(event) {
@@ -28,7 +26,8 @@ submitButton.addEventListener ('click', function(event) {
 });
 
 //DATA
-var affirmationArray = ['I forgive myself and set myself free.','I believe I can be all that I want to be.','I am in the process of becoming the best version of myself.','I have the freedom & power to create the life I desire.','I choose to be kind to myself and love myself unconditionally.','My possibilities are endless.','I am worthy of my dreams.','I am enough.','I deserve to be healthy and feel good.','I am full of energy and vitality and my mind is calm and peaceful.','Every day I am getting healthier and stronger.','I honor my body by trusting the signals that it sends me.','I manifest perfect health by making smart choices.'
+var affirmationArray = 
+['I forgive myself and set myself free.','I believe I can be all that I want to be.','I am in the process of becoming the best version of myself.','I have the freedom & power to create the life I desire.','I choose to be kind to myself and love myself unconditionally.','My possibilities are endless.','I am worthy of my dreams.','I am enough.','I deserve to be healthy and feel good.','I am full of energy and vitality and my mind is calm and peaceful.','Every day I am getting healthier and stronger.','I honor my body by trusting the signals that it sends me.','I manifest perfect health by making smart choices.'
 ];
 
 var mantraArray = 
@@ -45,31 +44,31 @@ function getMessage(){
     var affirmations = affirmationArray[getRandomMessage(affirmationArray)];
     var mantras = mantraArray[getRandomMessage(mantraArray)];
     if(document.getElementById('affirmation').checked){
-        pushedMessage.push(affirmations)
-        message.innerText = affirmations 
+        pushedMessage.push(affirmations);
+        message.innerText = affirmations ;
     } else if (document.getElementById('mantra').checked) {
-        pushedMessage.push(mantras)
-        message.innerText = mantras 
-    }
+        pushedMessage.push(mantras);
+        message.innerText = mantras;
+    };
 }
 
 function addCustomMessage() {
     if(dropDown.value === 'affirmationOpt') {
-        affirmationArray.push(customMessageInput.value)
+        affirmationArray.push(customMessageInput.value);
     } else if (dropDown.value === 'mantraOpt') {
-        mantraArray.push(customMessageInput.value)
-    }
+        mantraArray.push(customMessageInput.value);
+    };
 }
 
 //JS-DOM 
 function displayCustomMessage() {
     if(dropDown.value === 'affirmationOpt'){
-        form.classList.add('hidden')
-        message.classList.remove('hidden')
+        form.classList.add('hidden');
+        message.classList.remove('hidden');
         message.innerText = customMessageInput.value
     } else if(dropDown.value === 'mantraOpt'){
-        form.classList.add('hidden')
-        message.classList.remove('hidden')
+        form.classList.add('hidden');
+        message.classList.remove('hidden');
         message.innerText = customMessageInput.value
     } else if(dropDown.value === 'empty'){
         alert('Please select a message type!');
@@ -80,12 +79,12 @@ function displayCustomMessage() {
 function disableRecieveMessage(){
     if(form) {
         recieveMessageButton.disabled = true;
-    }
+    };
 }
 
 function showMessage(){
     icon.classList.add('hidden');
-    message.classList.remove('hidden')
+    message.classList.remove('hidden');
     }
 
 function showForm() {
