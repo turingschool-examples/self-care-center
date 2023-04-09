@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-  
+    <h1>✨Self Care Center✨</h1>
+    <h2>Which type of message?</h2>
+    <div class="container">
+      <section class="call-to-action">
+        <form>
+          <input
+            type="radio"
+            id="affirmation"
+            name="select"
+            value="affirmation"
+          />
+          <label class="affirmation-text" for="affirmation"
+            ><em>affirmation</em></label
+          >
+          <input type="radio" id="mantra" name="select" value="mantra" />
+          <label class="mantra-text" for="mantra"><em>mantra</em></label>
+        </form>
+        <div class="center">
+          <button class="receive">Receive Message</button>
+        </div>
+      </section>
+    </div>
+    <div class="flex-remove-message">
+        <h3 class="error-message hidden">PLEASE MAKE A SELECTION</h3>
+    </div>
+    <div class="message-display">
+      <section class="display-container">
+        <img
+          src="assets/meditate.svg"
+          alt="calming meditation icon in orange"
+        />
+      </section>
+    </div>
+    <div class="flex-buttons">
+      <button class="clear hidden">Clear Message</button>
+      <button class="remove hidden">Remove Message</button>
+    </div>
+
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="data.js"></script>
   </body>
 </html>
