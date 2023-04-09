@@ -19,7 +19,7 @@ I built a web application that displays affirmations or mantras, depending on wh
 
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
-![application screenshot](https://user-images.githubusercontent.com/F6CB9B79-A6EE-4CB6-A40C-ED9AF0AB9A88.png)
+![Screenshot 2023-04-09 at 6 00 17 PM](https://user-images.githubusercontent.com/124719454/230798553-60c2c5e3-723f-4ad6-b765-060aa0372a1f.png)
 
 ### Context:
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
