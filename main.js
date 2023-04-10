@@ -33,15 +33,14 @@ var mantras = [
   'I am the sky, the rest is weather.'
 ]
 
-//VARIABLES
 var receiveMessageButton = document.querySelector('button')
 var mantraInput = document.querySelector('#mantra')
 var affirmationInput = document.querySelector('#affirmation')
-var paragraph = document.querySelector('.show-message')      
+var message = document.querySelector('.show-message')      
 var meditateImage = document.querySelector('.meditate-img')    
 var messagedecisioncontainer = document.querySelector('.message-decision-container')
 var header = document.querySelector('header')
-var displayMessageContainter = document.querySelector('.display-message')
+var displayMessageContainer = document.querySelector('.display-message')
 var loginButton = document.querySelector('.login-button');
 var userName = document.querySelector('#name')
 var loginformcontainer =document.querySelector(".login-form-container")
@@ -66,8 +65,8 @@ function showMessage(event) {
   }
   hide(loginformcontainer)
   hide(welcomebanner)
-  show(displayMessageContainter)
-  show(paragraph)
+  show(displayMessageContainer)
+  show(message)
 }
 
 function hide(element) {
@@ -80,8 +79,8 @@ function show(element) {
 
 function displayMessage(array) {
   hide(meditateImage)
-  show(paragraph)
-  paragraph.innerText = decideMessage(array)
+  show(message)
+  message.innerText = decideMessage(array)
 }
 
 function decideMessage(array){
@@ -93,7 +92,7 @@ function greetUser(event) {
   show(welcomebanner)
   show(messagedecisioncontainer)
   hide(loginformcontainer)
-  show(displayMessageContainter)
+  show(displayMessageContainer)
   show(messagebuttoncontainer)
   show(header)
   show (meditateImage)
