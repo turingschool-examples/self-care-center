@@ -12,6 +12,7 @@ var domFavoriteMessageBtn = document.querySelector(".favoriteMessage");
 var domGroupAffirmations = document.querySelector(".groupAffirmations");
 var domGroupMantras = document.querySelector(".groupMantras");
 var domFavoriteSection = document.querySelector(".favoriteSection");
+var domBody = document.querySelector("body");
 var currentMessage;
 var favoriteMessages = [];
 
@@ -36,7 +37,24 @@ domFavoriteSection.addEventListener("mouseover", function() {
 domFavoriteSection.addEventListener("mouseout", function() {
     defocusDeleteButton(event);
 })
-
+domFavoriteSection.addEventListener("mouseover", function() {
+    enlargeFavoriteMessage(event);
+})
+domFavoriteSection.addEventListener("mouseout", function() {
+    shrinkFavoriteMessage(event);
+})
+domBody.addEventListener("mouseover", function() {
+    colorButton(event);
+})
+domBody.addEventListener("mouseout", function() {
+    decolorButton(event);
+})
+domBody.addEventListener("mousedown", function() {
+    boldButton(event);
+})
+domBody.addEventListener("mouseup", function() {
+    unboldButton(event);
+})
 
 //functions
 function getRandomIndex(array) {
@@ -195,8 +213,9 @@ function renderFavorites() {
 }
 
 function deleteFavoriteMessage(event) {
+    console.log(event.target.closest(".singleQuoteAlt"));
     if (event.target.classList.contains("deleteButtonAlt")) {
-        var targetID = event.target.closest(".singleQuote").id;
+        var targetID = event.target.closest(".singleQuoteAlt").id;
         for(var i = 0; i < favoriteMessages.length; i++) {
             if (favoriteMessages[i].id.toString() === targetID) {
                 favoriteMessages.splice(i,1);
@@ -239,5 +258,29 @@ function defocusDeleteButton(event) {
     if (event.target.classList.contains("deleteButtonAlt")) {
         event.target.classList.remove("deleteButtonAlt");
         event.target.classList.add("deleteButton");
+    }
+}
+
+function colorButton(event) {
+    if(event.target.classList.contains("button")) {
+        event.target.classList.add("buttonAlt");
+    }
+}
+
+function decolorButton(event) {
+    if(event.target.classList.contains("buttonAlt")) {
+        event.target.classList.remove("buttonAlt");
+    }
+}
+
+function boldButton(event) {
+    if(event.target.classList.contains("buttonAlt")) {
+        event.target.classList.add("buttonBold");
+    }
+}
+
+function unboldButton(event) {
+    if(event.target.classList.contains("buttonBold")) {
+        event.target.classList.remove("buttonBold");
     }
 }

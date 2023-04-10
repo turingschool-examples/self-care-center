@@ -82,14 +82,15 @@ h2 {
     border-radius: 7px;
 }
 
-.favoriteMessage {
-    background-color: #134d71;
-    color: white;
-    font-weight: lighter;
-    width: 120px;
-    height: 25px;
-    letter-spacing: 1.5px;
-    border-radius: 7px;
+
+
+.buttonAlt {
+    background-color: #ffffff;
+    color: #134d71;
+}
+
+.buttonBold{
+    font-weight: bolder;
 }
 
 .favoriteSection {
