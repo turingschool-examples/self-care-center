@@ -43,7 +43,7 @@ function receiveMessage() {
        message.innerText = affirmations[affirmationsIndex];
     } else if (!affirmations.length) {
         image.classList.remove("hidden")
-        message.innerText = 'You will now begin seeing releated affirmation messages.'
+        message.innerText = 'You will now begin seeing repeated affirmation messages.'
     }
     
     
@@ -51,7 +51,10 @@ function receiveMessage() {
         image.classList.add("hidden");
         var mantrasIndex = getRandomIndex(mantras);
         message.innerText = mantras[mantrasIndex];
-    }    
+    }  else if (!affirmations.length) {
+        image.classList.remove("hidden")
+        message.innerText = 'You will not begin seeing repeated mantra messages.'
+    }
 }
 
 
