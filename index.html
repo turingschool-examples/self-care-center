@@ -5,7 +5,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-  
+    <h1>✨Self Care Center✨</h1>
+    <p class="welcome-banner hidden">Welcome Elise and remember...<br> "If you don't love yourself, how are you gonna love somebody else"
+    ~ RuPaul</p>
+    <header class="hidden header">What type of message?</header>
+    
+    <div class="message-decision-container hidden"> 
+      <div class="radio-button-container">
+        <form>
+        <span>
+          <input type="radio" id="affirmation" name="desires" value="affirmation">
+          <label for="affirmation">affirmation</label>
+        </span>
+        <span>
+          <input type="radio" id="mantra" name="desires" value="mantra">
+          <label for="affirmation">mantra</label>
+      </div>
+        </span>
+        <div class="message-button-container" >
+          <button type="submit" name="desires">Receive Message</button>
+        </div>
+      </form>
+    </div>
+    <div class="hidden display-message">
+      <p class="hidden show-message">in the beginning it's you</p>
+      <img class="meditate-img" src="assets/meditate.svg" alt="Person Meditating">
+      </div>
+    </div>
+    <div class="login-form-container">
+    <form class="login-form">
+      <img class="meditate-img" src="assets/meditate.svg" alt="Person Meditating">
+      <fieldset>
+          <legend>Help Yourself</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name='name'/>
+          <button class="login-button" type='submit'>Login</button>
+        </fieldset>
+        <img class="meditate-img" src="assets/meditate.svg" alt="Person Meditating">
+    </form>
+    </div>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
