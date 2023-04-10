@@ -37,14 +37,20 @@ function getRandomIndex(array) {
 }
 
 function receiveMessage() {
-  
     if (document.getElementById('Affirmation').checked){
         image.classList.add("hidden");
        var affirmationsIndex = getRandomIndex(affirmations);
-       message.innerText = affirmations[affirmationsIndex]
-    } else if (document.getElementById('Mantra').checked){
+       message.innerText = affirmations[affirmationsIndex];
+    } else if (!affirmations.length) {
+        image.classList.remove("hidden")
+        message.innerText = 'You will now begin seeing releated affirmation messages.'
+    }
+    
+    
+    if (document.getElementById('Mantra').checked){
+        image.classList.add("hidden");
         var mantrasIndex = getRandomIndex(mantras);
-        message.innerHTML = `<p>${mantraMessage}</p>`
+        message.innerText = mantras[mantrasIndex];
     }    
 }
 
@@ -61,7 +67,6 @@ function addMessages2(i) {
     shownMantraMessages.push(mantras[i]);
     mantras.splice(i, 1);
 }
-
 
 var image = document.querySelector(".image");
 var receiveMessageButton = document.querySelector(".button");
