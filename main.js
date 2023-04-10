@@ -37,7 +37,7 @@ function getRandomIndex(array) {
 }
 
 function receiveMessage() {
-    if (document.getElementById('Affirmation').checked){
+    if (document.getElementById('Affirmation').checked && affirmations.length){
         image.classList.add("hidden");
        var affirmationsIndex = getRandomIndex(affirmations);
        message.innerText = affirmations[affirmationsIndex];
@@ -48,7 +48,7 @@ function receiveMessage() {
         shownAffirmationMessages = [];
     }
     
-    if (document.getElementById('Mantra').checked){
+    if (document.getElementById('Mantra').checked && mantras.length){
         image.classList.add("hidden");
         var mantrasIndex = getRandomIndex(mantras);
         message.innerText = mantras[mantrasIndex];
