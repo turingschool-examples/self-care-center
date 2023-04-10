@@ -39,8 +39,9 @@ function getRandomIndex(array) {
 function receiveMessage() {
   
     if (document.getElementById('Affirmation').checked){
+        image.classList.add("hidden");
        var affirmationsIndex = getRandomIndex(affirmations);
-       message.innerHTML = `<p>${affirmationMessage}</p>`
+       message.innerText = affirmations[affirmationsIndex]
     } else if (document.getElementById('Mantra').checked){
         var mantrasIndex = getRandomIndex(mantras);
         message.innerHTML = `<p>${mantraMessage}</p>`
@@ -48,10 +49,22 @@ function receiveMessage() {
 }
 
 
+var shownAffirmationMessages = []
+var shownMantraMessages = []
 
-var receiveMessageButton = document.querySelector('.add-button');
-var interactivePanel = document.querySelector('#interactive');
-var messagePanel = document.querySelector('.message-box');
-var message = document.querySelector('#message')
+function addMessages1(i) {
+    shownAffirmationMessages.push(affirmations[i]);
+    affirmations.splice(i, 1);
+}
+
+function addMessages2(i) {
+    shownMantraMessages.push(mantras[i]);
+    mantras.splice(i, 1);
+}
+
+
+var image = document.querySelector(".image");
+var receiveMessageButton = document.querySelector(".button");
+var message = document.querySelector('.message')
 
 receiveMessageButton.addEventListener('click', receiveMessage)
