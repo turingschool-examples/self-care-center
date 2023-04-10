@@ -13,6 +13,8 @@ var domGroupAffirmations = document.querySelector(".groupAffirmations");
 var domGroupMantras = document.querySelector(".groupMantras");
 var domFavoriteSection = document.querySelector(".favoriteSection");
 var domBody = document.querySelector("body");
+
+// variables used as data sources
 var currentMessage;
 var favoriteMessages = [];
 
@@ -36,12 +38,6 @@ domFavoriteSection.addEventListener("mouseover", function() {
 })
 domFavoriteSection.addEventListener("mouseout", function() {
     defocusDeleteButton(event);
-})
-domFavoriteSection.addEventListener("mouseover", function() {
-    enlargeFavoriteMessage(event);
-})
-domFavoriteSection.addEventListener("mouseout", function() {
-    shrinkFavoriteMessage(event);
 })
 domBody.addEventListener("mouseover", function() {
     colorButton(event);
@@ -227,22 +223,18 @@ function deleteFavoriteMessage(event) {
 
 function enlargeFavoriteMessage(event) {
     if (event.target.classList.contains("singleQuote")) {
-        event.target.classList.remove("singleQuote");
         event.target.classList.add("singleQuoteAlt");
     }   
     if (event.target.classList.contains("deleteButton")) {
         event.target.closest(".singleQuote").classList.add("singleQuoteAlt");
-        event.target.closest(".singleQuote").classList.remove("singleQuote");
     }
 }
 
 function shrinkFavoriteMessage(event) {
-    if (event.target.classList.contains("singleQuoteAlt")) {
-        event.target.classList.add("singleQuote");
+    if (event.target.classList.contains("singleQuote")) {
         event.target.classList.remove("singleQuoteAlt");
     }
-    if (event.target.classList.contains("deleteButtonAlt")) {
-        event.target.closest(".singleQuoteAlt").classList.add("singleQuote");
+    if (event.target.classList.contains("deleteButton")) {
         event.target.closest(".singleQuoteAlt").classList.remove("singleQuoteAlt");
     }
 }
@@ -250,14 +242,12 @@ function shrinkFavoriteMessage(event) {
 function focusDeleteButton(event) {
     if (event.target.classList.contains("deleteButton")) {
         event.target.classList.add("deleteButtonAlt");
-        event.target.classList.remove("deleteButton");
     }
 }
 
 function defocusDeleteButton(event) {
-    if (event.target.classList.contains("deleteButtonAlt")) {
+    if (event.target.classList.contains("deleteButton")) {
         event.target.classList.remove("deleteButtonAlt");
-        event.target.classList.add("deleteButton");
     }
 }
 
