@@ -6,3 +6,197 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+html {
+    min-height: 100%;
+    background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    min-height: 100%;
+}
+
+.homeView {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favoritesView {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.boxOne {
+    background-color: white;
+    height: 90px;
+    width: 550px;
+    margin:auto;
+    border-radius: 10px;
+    
+}
+
+.boxTwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 100px;
+    background-color: white;
+    height: 140px;
+    width: 700px;
+    text-align: center;
+    border-radius: 15px;
+
+}
+
+.buttonArea {
+    text-align: center;
+}
+
+.button {
+    background-color: #134d71;
+    color: white;
+    font-weight: lighter;
+    width: 190px;
+    height: 27px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 7px;
+    transition-duration: 0.1s;
+}
+
+.buttonAlt {
+    background-color: #ffffff;
+    color: #134d71;
+    transition-duration: 0.3s;
+}
+
+.buttonBold{
+    font-weight: bolder;
+    transition-duration: 0.1s;
+}
+
+.favoriteSection {
+    margin-top: 40px;
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.groupMantras {
+    width: 30%;
+}
+
+.groupAffirmations {
+    width: 30%;
+}
+
+.groupFavorites {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    text-align: center;
+    overflow: hidden;
+}
+
+.singleQuote {
+    background-color: rgba(255,255,255,0.2);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 17px;
+    width: 80%;
+    color: #134d71;
+    font-size: small;
+    padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 10px;
+    transition-duration: 0.2s;
+}
+
+.singleQuoteAlt{
+    background-color: rgba(255,255,255,0.6);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 17px;
+    width: 82%;
+    color: #134d71;
+    font-size: small;
+    padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 10px;
+    transition-duration: 0.2s;
+} 
+
+.deleteButton {
+    width: 13%;
+    opacity: 10%;
+    font-size: x-small;
+    height: 15px;
+    background-color: #134d71;
+    color: #f7e4bf;
+    align-self: flex-end;
+    transition: 0.1s;
+}
+
+.deleteButtonAlt {
+    width: 13%;
+    opacity: 80%;
+    font-size: x-small;
+    height: 15px;
+    background-color: #134d71;
+    color: #f7e4bf;
+    align-self: flex-end;
+    transition: 0.1s;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-style: italic;
+}
+
+.individualOption {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.meditateIcon {
+    width: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notification {
+    color:silver;
+    font-weight: lighter;
+}
+
+.hidden {
+    display: none;
+}
