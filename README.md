@@ -20,8 +20,7 @@ The project spec & rubric can be found [here](https://frontend.turing.edu/projec
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
 
-![SelfCareCenter](https://user-images.githubusercontent.com/116329342/230794900-6af84051-4089-47be-a06b-e585c65116a9.gif)
-
+![self_care_center](https://user-images.githubusercontent.com/116329342/230812271-471e36d3-9e15-4241-9083-cbb9368c4d2e.gif)
 
 ### Context:
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
