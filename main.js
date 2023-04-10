@@ -41,6 +41,7 @@ function receiveMessage() {
         image.classList.add("hidden");
        var affirmationsIndex = getRandomIndex(affirmations);
        message.innerText = affirmations[affirmationsIndex];
+       addMessages1(affirmationsIndex);
     } else if (!affirmations.length) {
         image.classList.remove("hidden")
         message.innerText = 'You will now begin seeing repeated affirmation messages.'
@@ -52,6 +53,7 @@ function receiveMessage() {
         image.classList.add("hidden");
         var mantrasIndex = getRandomIndex(mantras);
         message.innerText = mantras[mantrasIndex];
+        addMessages2(mantrasIndex)
     }  else if (!affirmations.length) {
         image.classList.remove("hidden")
         message.innerText = 'You will not begin seeing repeated mantra messages.'
