@@ -13,8 +13,12 @@ var imgBuddha = document.querySelector('.img-buddha');
 var displayMessage = document.querySelector('.display-message-container')
 var createMessageBox = document.querySelector('.display-message');
 
-var savedMessages = [];
 var currentMessage;
+var localMessage;
+
+if (Object.keys(localStorage).length) {
+    viewFavouriteButton.classList.remove('hidden');
+}
 
 // EVENT LISTENERS
 
@@ -22,7 +26,7 @@ createMessageButton.addEventListener('click', selectMessage);
 
 favouriteMessageButton.addEventListener('click', function() {
     favouriteMessage();
-    if (savedMessages.length) {
+    if (Object.keys(localStorage).length) {
         viewFavouriteButton.classList.remove('hidden');
     }
 });
@@ -49,14 +53,15 @@ viewFavouriteButton.addEventListener('click', function() {
 viewHomeButton.addEventListener('click', function() {
     toggleHiddenButton(mantraSelectBox);
     toggleHiddenButton(viewHomeButton);
-    toggleHiddenButton(viewFavouriteButton);
     toggleHiddenButton(messageContainer);
     toggleHiddenButton(favouriteBox);
     toggleHiddenButton(displayMessage); 
     swapSubTitle();
 
-    if (!savedMessages.length) {
-        toggleHiddenButton(viewFavouriteButton);
+    if (Object.keys(localStorage).length && viewHomeButton.classList.contains('hidden')) {
+        viewFavouriteButton.classList.remove('hidden');
+    } else if (!Object.keys(localStorage).length) {
+        viewFavouriteButton.classList.add('hidden');
     }
 });
 
@@ -103,26 +108,37 @@ function toggleHiddenButton(button) {
     button.classList.toggle('hidden');
 }
 
-function favouriteMessage() {favouriteMessageButton = document.querySelector('.save-message');
-    if (!savedMessages.includes(currentMessage)) {
-        savedMessages.push(currentMessage);
+function favouriteMessage() {
+    var valueCheck = [];
+    
+    if (!Object.keys(localStorage).length) {
+        valueCheck.push(currentMessage.message);        
+        localStorage.setItem(currentMessage.id, currentMessage.message);
+    } else {
+        for (var i = 0; i < Object.keys(localStorage).length; i++) {
+            var item = localStorage.getItem(localStorage.key(i));
+            valueCheck.push(item);
+        }
+        if (!valueCheck.includes(currentMessage.message)) {
+            localStorage.setItem(currentMessage.id, currentMessage.message);
+        }
     }
 }
 
 function viewFavouriteMessages() {
     favouriteBox.innerHTML = '';
 
-    for (var i = 0; i < savedMessages.length; i++) {
+    for (var i = 0; i < Object.keys(localStorage).length; i++) {
         favouriteBox.innerHTML += `
-            <section class="message-container" id="${savedMessages[i].id}">
-                <p>${savedMessages[i].message}</p>
+            <section class="message-container" id="${localStorage.key(i)}">
+                <p>${localStorage.getItem(localStorage.key(i))}</p>
                 <button class="delete-message">Delete</button>
             </section>`;
     }
 }
 
 function swapSubTitle() {
-    if (viewFavouriteButton.classList.contains('hidden')) {
+    if (messageContainer.classList.contains('hidden')) {
         subTitle.innerText = 'Saved messages';
     } else {
         subTitle.innerText = 'Which type of message?'
@@ -130,15 +146,15 @@ function swapSubTitle() {
 }
 
 function deleteFavourite(event) {
-    for (var i = 0; i < savedMessages.length; i++) {
-        if (savedMessages[i].id === Number(event.target.parentNode.id)) {
-            savedMessages.splice(i, 1);
+    for (var i = 0; i < Object.keys(localStorage).length; i++) {
+        if (localStorage.key(i) === event.target.parentNode.id) {
+            localStorage.removeItem(localStorage.key(i));
         }
     }
 
     viewFavouriteMessages();
 
-    if (!savedMessages.length) {
+    if (!Object.keys(localStorage).length) {
         subTitle.innerText = "All messages deleted";
     }
 }
