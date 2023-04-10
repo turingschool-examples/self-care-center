@@ -62,7 +62,7 @@ black - #000000; */
     }
     
     
-    #message {
+    .message-container {
          color: #000000; 
          font-family: 'Quicksand', sans-serif;
          font-size: 20px;
@@ -79,3 +79,7 @@ black - #000000; */
     #spacer {
       margin-right: 100px;
       }
+
+   .hidden {
+      display: none;
+   }
