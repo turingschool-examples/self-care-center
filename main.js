@@ -48,12 +48,11 @@ function receiveMessage() {
         affirmations = shownAffirmationMessages;
         shownAffirmationMessages = [];
     }
-    
     if (document.getElementById('Mantra').checked && mantras.length){
         image.classList.add("hidden");
         var mantrasIndex = getRandomIndex(mantras);
         message.innerText = mantras[mantrasIndex];
-        addMessages2(mantrasIndex)
+        addMessages2(mantrasIndex);
     }  else if (!mantras.length) {
         image.classList.remove("hidden")
         message.innerText = 'You will now begin seeing repeated mantra messages.'
@@ -61,9 +60,6 @@ function receiveMessage() {
         shownMantraMessages = [];
     }
 }
-
-var shownAffirmationMessages = []
-var shownMantraMessages = []
 
 function addMessages1(i) {
     shownAffirmationMessages.push(affirmations[i]);
@@ -78,5 +74,7 @@ function addMessages2(i) {
 var image = document.querySelector(".image");
 var receiveMessageButton = document.querySelector(".button");
 var message = document.querySelector('.message')
+var shownAffirmationMessages = []
+var shownMantraMessages = []
 
 receiveMessageButton.addEventListener('click', receiveMessage)
