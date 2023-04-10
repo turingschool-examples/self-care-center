@@ -11,7 +11,8 @@ var affirmations = [
     "I am full of energy and vitality and my mind is calm and peaceful.",
     "Every day I am getting healthier and stronger.",
     "I honor my body by trusting the signals that it sends me.",
-    "I manifest perfect health by making smart choices."];
+    "I manifest perfect health by making smart choices."
+    ];
 var mantras = [
     "Breathing in, I send myself love.",
     "Breathing out, I send love to someone else who needs it.",
@@ -29,21 +30,24 @@ var mantras = [
     "The only constant is change.",
     "Onward and upward.",
     "I am the sky, the rest is weather.",
-]
+    ];
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 }
 
 function receiveMessage() {
-    var affirmationMessage = affirmations[getRandomIndex(affirmations)];
-    var mantraMessage = mantras[getRandomIndex(mantras)];
+  
     if (document.getElementById('Affirmation').checked){
+       var affirmationsIndex = getRandomIndex(affirmations);
        message.innerHTML = `<p>${affirmationMessage}</p>`
     } else if (document.getElementById('Mantra').checked){
+        var mantrasIndex = getRandomIndex(mantras);
         message.innerHTML = `<p>${mantraMessage}</p>`
     }    
 }
+
+
 
 var receiveMessageButton = document.querySelector('.add-button');
 var interactivePanel = document.querySelector('#interactive');
