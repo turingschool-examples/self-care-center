@@ -44,8 +44,9 @@ function receiveMessage() {
     } else if (!affirmations.length) {
         image.classList.remove("hidden")
         message.innerText = 'You will now begin seeing repeated affirmation messages.'
+        affirmations = shownAffirmationMessages;
+        shownAffirmationMessages = [];
     }
-    
     
     if (document.getElementById('Mantra').checked){
         image.classList.add("hidden");
@@ -54,9 +55,10 @@ function receiveMessage() {
     }  else if (!affirmations.length) {
         image.classList.remove("hidden")
         message.innerText = 'You will not begin seeing repeated mantra messages.'
+        mantras = shownMantraMessages;
+        shownMantraMessages = [];
     }
 }
-
 
 var shownAffirmationMessages = []
 var shownMantraMessages = []
