@@ -107,6 +107,7 @@ function getRandomMessage(messageType) {
 function toggleHiddenButton(button) {
     button.classList.toggle('hidden');
 }
+
 function favouriteMessage() {
     var valueCheck = [];
     
