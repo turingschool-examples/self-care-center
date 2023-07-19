@@ -48,6 +48,30 @@
         <div class="message-text hidden">Onward and Upward</div>
         <button class="clear-btn hidden">clear</button>
       </section>
+      <section class="add-message">
+        <button class="add-message-btn">Add My Own Message</button>
+        <form class="add-message-form hide-form">
+          <div class="selection">
+            <label for="message-type">Message Type</label>
+            <select
+              name="personalized-message"
+              id="message-category"
+              form="carform"
+            >
+              <option value="choose">choose</option>
+              <option value="affirmation">Affirmation</option>
+              <option value="mantra">Mantra</option>
+            </select>
+          </div>
+          <div class="enter-message">
+            <label for="fname">Enter Your Own Message</label><br />
+            <input type="text" id="message-input" name="message-input" /><br />
+          </div>
+          <div class="submit-msg-btn">
+            <button class="submit-msg-btn">submit my message</button>
+          </div>
+        </form>
+      </section>
     </section>
     <script type="text/javascript" src="main.js"></script>
     <script src="data.js"></script>

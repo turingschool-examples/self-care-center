@@ -17,6 +17,10 @@ black - #000000;
   display: none;
 }
 
+.hide-form {
+  display: none !important;
+}
+
 body {
   font-family: "quicksand";
   background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
@@ -116,4 +120,53 @@ span {
   margin-left: 50px;
   font-family: "Quicksand";
   cursor: pointer;
+}
+
+.add-message-btn {
+  background-color: #78a7c6;
+  font-family: "Quicksand";
+  color: white;
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 0;
+}
+
+.add-message-btn:hover {
+  background-color: #134d71;
+}
+
+.add-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.add-message-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+}
+.selection {
+  display: flex;
+  gap: 10px;
+}
+
+.submit-msg-btn {
+  font-family: "Quicksand";
+  background-color: #78a7c6;
+  color: white;
+  cursor: pointer;
+  border: 0;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.submit-msg-btn:hover {
+  background-color: #134d71;
 }
