@@ -6,3 +6,107 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+/* Reset default margin and padding  */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  font-family: "quicksand";
+  background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  padding: 10px 50px 150px 150px;
+  color: #ffffff;
+}
+.home-page-overall {
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+.choose-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.radio-form-btn {
+  background-color: #ffffff;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 50px;
+  border-radius: 10px;
+}
+
+.radio-form {
+  display: flex;
+  gap: 10px;
+}
+span {
+  width: 150px;
+}
+
+.recieve-message-btn {
+  color: #ffffff;
+  background-color: #134d71;
+  border: 0;
+  font-family: "Quicksand";
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+.display-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 500px;
+  padding: 25px;
+}
+
+.recieve-message-btn {
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.meditation-icon {
+  height: 50px;
+  width: 50px;
+}
+
+.mantra,
+.affirmation {
+  color: #000000;
+  font-style: italic;
+}
+
+.message-text {
+  color: #000000;
+}
