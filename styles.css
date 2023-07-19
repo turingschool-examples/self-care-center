@@ -76,6 +76,15 @@ span {
   font-family: "Quicksand";
   padding: 2px 5px;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.recieve-message-btn:hover {
+  background-color: #78a7c6;
 }
 
 .display-message {
@@ -86,14 +95,6 @@ span {
   border-radius: 10px;
   width: 500px;
   padding: 25px;
-}
-
-.recieve-message-btn {
-  display: flex;
-  justify-content: center;
-  width: 150px;
-  margin-top: 10px;
-  cursor: pointer;
 }
 
 .meditation-icon {
@@ -109,4 +110,10 @@ span {
 
 .message-text {
   color: #000000;
+}
+
+.clear-btn {
+  margin-left: 50px;
+  font-family: "Quicksand";
+  cursor: pointer;
 }

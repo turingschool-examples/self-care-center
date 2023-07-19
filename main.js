@@ -17,20 +17,26 @@ var mantraRadio = document.getElementById("mantra");
 var medIcon = document.querySelector(".meditation-icon");
 //message
 var messageDisplay = document.querySelector(".message-text");
+//hidden btn
+var clearBtn = document.querySelector(".clear-btn");
 
 //EVENT LISTENERS
 messageBtn.addEventListener("click", getMessage);
+clearBtn.addEventListener("click", clearMessage);
 //FUNCTIONS
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
+function clearMessage() {
+  messageDisplay.innerText = "";
+  clearBtn.classList.add("hidden");
 }
 
 function getMessage() {
   var randNumMantras = getRandomIndex(mantrasArr);
   var randNumAffirmations = getRandomIndex(affirmationsArr);
+  clearBtn.classList.remove("hidden");
   if (messageDisplay.classList.contains("hidden")) {
     messageDisplay.classList.remove("hidden");
     medIcon.classList.add("hidden");
+    clearBtn.classList.remove("hidden");
   }
   if (mantraRadio.checked == true) {
     for (var i = 0; i < mantrasArr.length; i++) {
@@ -40,5 +46,17 @@ function getMessage() {
     for (var i = 0; i < affirmationsArr.length; i++) {
       messageDisplay.innerText = affirmationsArr[randNumAffirmations];
     }
+  } else if (
+    affirmationRadio.checked == false &&
+    mantraRadio.checked == false
+  ) {
+    messageDisplay.classList.add("hidden");
+    medIcon.classList.remove("hidden");
+    clearBtn.classList.add("hidden");
+    alert("Please select which type of message you would like to recieve :)");
   }
+}
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
 }
