@@ -1,27 +1,78 @@
-/* font-family: 'Quicksand', sans-serif;
-COLORS
-light-yellow - #f7e4bf;
-light-blue - #78a7c6;
-dark-blue - #134d71;
-white - #ffffff;
-black - #000000;
-*/
-
 body {
     background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
     font-family: 'Quicksand', sans-serif;
     color: #ffffff;
+    height: 680px;
 }
+
 .self-care-center-container {
     display: flex;
     justify-content: center;
+    margin: 50px;
 }
 
-.self-care-center-title {
-   flex-direction: row;
+.message-type-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 
-.select-form > label {
+.form-container {
+    display: flex;
+    margin: 0 auto;
+    background-color: #ffffff;
+    flex-direction: column;
+    width: 500px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 5px auto;
+}
+
+.img-container {
+    display: flex;
+    margin: 20px 10px;
+    background-color: #ffffff;
+    flex-direction: column;
+    width: 800px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 80px auto;
+    align-items: center;
+}
+
+.select-form {
+    margin: 0px auto;
+    padding: 10px;
+}
+
+.select-form >label {
+    margin: 20px;
     font-style: italic;
     color: #000000;
+    width: 100px;
+}
+
+
+.btn-container {
+    margin: 0 auto -10px 20px;
+    padding: 20px;
+}
+
+.btn {
+    background-color: #134d71;
+    color: #ffffff;
+    font-weight: 450;
+    width: 180px;
+    margin: 0 auto;
+    padding: 5px;
+    border: none;
+    letter-spacing: .8px;
+    font-size: 14px;
+    font-variant: common-ligatures;
+    font-family: "Quicksand", sans-serif;
+}
+
+img {
+    width: 80px;
+    height: 200px;
 }
