@@ -29,6 +29,8 @@ var submitMessageBtn = document.querySelector(".submit-msg-btn");
 var messageCategory = document.getElementById("message-category");
 //message input field
 var messageInput = document.getElementById("message-input");
+//heart icon
+var heartIcon = document.querySelector(".heart-icon");
 
 //EVENT LISTENERS
 messageBtn.addEventListener("click", getMessage);
@@ -55,7 +57,6 @@ function submitMessage(event) {
     messageDisplay.innerText = messageInput.value;
     mantrasArr.push(messageInput.value);
   }
-  console.log(mantrasArr);
 }
 
 function openForm() {
@@ -71,13 +72,14 @@ function openForm() {
 function clearMessage() {
   messageDisplay.innerText = "";
   clearBtn.classList.add("hidden");
+  heartIcon.classList.add("hidden");
   medIcon.classList.remove("hidden");
 }
 
 function getMessage() {
   var randNumMantras = getRandomIndex(mantrasArr);
   var randNumAffirmations = getRandomIndex(affirmationsArr);
-  clearBtn.classList.remove("hidden");
+  heartIcon.classList.remove("hidden");
   medIcon.classList.add("hidden");
   clearBtn.classList.remove("hidden");
   if (messageDisplay.classList.contains("hidden")) {
@@ -94,6 +96,7 @@ function getMessage() {
     messageDisplay.classList.add("hidden");
     medIcon.classList.remove("hidden");
     clearBtn.classList.add("hidden");
+    heartIcon.classList.add("hidden");
     alert("Please select which type of message you would like to recieve :)");
   }
 }

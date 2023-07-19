@@ -170,3 +170,17 @@ span {
 .submit-msg-btn:hover {
   background-color: #134d71;
 }
+
+.heart-icon {
+  width: 20px;
+  height: 20px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.heart-icon:hover {
+  width: 20px;
+  height: 20px;
+  padding-left: 20px;
+  fill: rgb(148, 20, 20);
+}
