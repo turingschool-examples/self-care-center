@@ -6,3 +6,22 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+body {
+    background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+    font-family: 'Quicksand', sans-serif;
+    color: #ffffff;
+}
+.self-care-center-container {
+    display: flex;
+    justify-content: center;
+}
+
+.self-care-center-title {
+   flex-direction: row;
+}
+
+.select-form > label {
+    font-style: italic;
+    color: #000000;
+}
