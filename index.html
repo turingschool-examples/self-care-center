@@ -5,25 +5,43 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
       rel="stylesheet"
-      <link
-      rel="stylesheet"
-      href="styles.css"
     />
+    <link rel="stylesheet" href="styles.css" />
     <title>Self Care Center</title>
-    />
   </head>
   <body>
-    <h1>Self Care Center</h1>
-    <section>
-      <!-- Box with radio buttons   -->
-    </section>
-    <section>
-      <!-- Box that shows icon or message -->
-      <!-- radio button for affirmation -->
-      <!-- radio button for mantra -->
-      <!-- button - Recieve Message -->
-    </section>
-
+    <h1>✨Self Care Center✨</h1>
+    <main class="view-home-view">
+      <fieldset>
+        <!-- Box with radio buttons -->
+        <legend>Which type of message?</legend>
+        <input
+          type="radio"
+          id="affirmations"
+          name="motivation"
+          value="affirmations"
+          class="left-align"
+        />
+        <label for="affirmations">Affirmation</label>
+        <input
+          type="radio"
+          id="mantra"
+          name="motivation"
+          value="mantra"
+          class="right-align"
+        />
+        <label for="mantra" class="label-mantra">Mantra</label>
+        <div>
+          <button type="submit">Receive Message</button>
+        </div>
+      </fieldset>
+      <section>
+        <!-- Box that shows icon or message -->
+        <!-- radio button for affirmation -->
+        <!-- radio button for mantra -->
+        <!-- button - Receive Message -->
+      </section>
+    </main>
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="data.js"></script>
   </body>
