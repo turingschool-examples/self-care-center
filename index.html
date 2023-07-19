@@ -11,38 +11,39 @@
   </head>
   <body>
     <h1>✨Self Care Center✨</h1>
-    <main class="view-home-view">
-      <fieldset>
-        <!-- Box with radio buttons -->
-        <legend>Which type of message?</legend>
-        <input
-          type="radio"
-          id="affirmations"
-          name="motivation"
-          value="affirmations"
-          class="left-align"
-        />
-        <label for="affirmations">Affirmation</label>
-        <input
-          type="radio"
-          id="mantra"
-          name="motivation"
-          value="mantra"
-          class="right-align"
-        />
-        <label for="mantra" class="label-mantra">Mantra</label>
-        <div>
-          <button type="submit">Receive Message</button>
-        </div>
-      </fieldset>
-      <section>
-        <!-- Box that shows icon or message -->
+    <div class="message-options">
+      <label>
+        <!--use of the label tag is considered best practice for accesibility-->
         <!-- radio button for affirmation -->
+        <input
+          type="radio"
+          name="messageType"
+          value="affirmation"
+          class="affirmation-option"
+        />
+        affirmation
+      </label>
+      <label>
         <!-- radio button for mantra -->
-        <!-- button - Receive Message -->
-      </section>
-    </main>
-    <script type="text/javascript" src="main.js"></script>
+        <input
+          type="radio"
+          name="messageType"
+          value="mantra"
+          class="mantra-option"
+        />
+        mantra
+      </label>
+      <!-- button - Receive Message -->
+      <button id="receiveButton">Receive Message</button>
+    </div>
+    <!-- Box that shows icon or message -->
+    <div class="message-area">
+      <div class="mediation-icon" id="mediationIcon"></div>
+      <div class="message-content" id="messageContent">
+        <p id="messageText">Message text goes here.</p>
+      </div>
+    </div>
     <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
