@@ -32,13 +32,13 @@ function createDataModel() {
     };
     messages.push(message);
   }
-  console.log(messages);
   return messages;
 }
 
 function displayRandomMessage() {
   currentMessage = randomMessage(messages);
-  console.log(currentMessage);
+  var formSelection = document.querySelector('input[name="formInput"]:checked');
+  console.log(formSelection.value);
 }
 
 function randomMessage(messages) {
