@@ -8,86 +8,138 @@
     />
   </head>
   <body>
-    <section class="home-page-overall">
-      <section class="header">
-        <h1 class="home-header">✨Self Care Center✨</h1>
-      </section>
-      <section class="choose-message">
-        <h2>Which type of message?</h2>
-        <section class="radio-form-btn">
-          <section class="radio-form">
-            <input
-              type="radio"
-              id="affirmation"
-              class="affirmation"
-              name="choose-message"
-            />
-            <label for="affirmation" class="affirmation">affirmation</label
-            ><span></span>
-            <input
-              type="radio"
-              id="mantra"
-              class="mantra"
-              name="choose-message"
-            />
-            <label for="mantra" class="mantra">mantra</label>
-          </section>
-          <button type="submit" class="recieve-message-btn">
-            Recieve Message
-          </button>
-        </section>
-      </section>
-      <section class="display-message">
-        <div class="home-med-image">
-          <img
-            class="meditation-icon"
-            src="assets/meditate.svg"
-            alt="meditation icon"
-          />
+    <!-- START OF PAGE 0 LOGIN-->
+  
+
+    <section class="PAGE0-LOGIN">
+      <div class="home-page">
+        <div class="header">
+          <h1 class="home-header">✨AFFIRMATIONS & MANTRAS✨</h1>
         </div>
-        <div class="message-text hidden">Onward and Upward</div>
-        <button class="clear-btn hidden">clear</button>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="black"
-          class="heart-icon hidden"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+      </div>
+      <div class="login-and-inputs">
+        <form class="login-form login-form-start">
+          <label for="name" class="loginlabel login-email">NAME</label>
+          <input
+            type="name"
+            id="name"
+            class="login-input"
+            placeholder="ENTER PREFERRED NAME..."
           />
-        </svg>
-      </section>
-      <section class="add-message">
-        <button class="add-message-btn">Add My Own Message</button>
-        <form class="add-message-form hide-form">
-          <div class="selection">
-            <label for="message-type">Message Type</label>
-            <select
-              name="personalized-message"
-              id="message-category"
-              form="carform"
-            >
-              <option value="choose">choose</option>
-              <option value="affirmation">Affirmation</option>
-              <option value="mantra">Mantra</option>
-            </select>
-          </div>
-          <div class="enter-message">
-            <label for="fname">Enter Your Own Message</label><br />
-            <input type="text" id="message-input" name="message-input" /><br />
-          </div>
-          <div class="submit-msg-btn">
-            <button class="submit-msg-btn">submit my message</button>
-          </div>
-        </form>
-      </section>
+          <button class="login-sign-in" type="submit">LOG IN</button>
+          </form>
+      </div>
     </section>
-    <script type="text/javascript" src="main.js"></script>
+    <!-- END OF PAGE 2 FAVORITES -->
+    <!-- START OF PAGE 1 HOME -->
+    <section class="PAGE1-HOME hidden">
+      <div class="nav-bar">
+        <p class="welcome"></p>
+        <p class="view-favorites">View My Favourites</p>
+        <p class="sign-out">Sign Out</p>
+      </div>
+      <div class="home-page">
+        <div class="header">
+          <h1 class="home-header">✨Affirmations and Mantras✨</h1>
+        </div>
+        <div class="choose-message">
+          <h2>Which type of message?</h2>
+          <div class="radio-form-btn">
+            <div class="radio-form">
+              <input
+                type="radio"
+                id="affirmation"
+                class="affirmation"
+                name="choose-message"
+              />
+              <label for="affirmation" class="affirmation">affirmation</label
+              ><span></span>
+              <input
+                type="radio"
+                id="mantra"
+                class="mantra"
+                name="choose-message"
+              />
+              <label for="mantra" class="mantra">mantra</label>
+            </div>
+            <button type="submit" class="recieve-message-btn">
+              Recieve Message
+            </button>
+          </div>
+        </div>
+        <div class="display-message">
+          <div class="home-med-image">
+            <img
+              class="meditation-icon"
+              src="assets/meditate.svg"
+              alt="meditation icon"
+            />
+          </div>
+          <div class="message-text hidden">Onward and Upward</div>
+          <button class="clear-btn hidden">clear</button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="black"
+            class="heart-icon hidden"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+            />
+          </svg>
+        </div>
+        <div class="add-message">
+          <button class="add-message-btn">Add My Own Message</button>
+          <form class="add-message-form hide-form">
+            <div class="selection">
+              <label for="message-type">Message Type</label>
+              <select
+                name="personalized-message"
+                id="message-category"
+                form="carform"
+              >
+                <option value="choose">choose</option>
+                <option value="affirmation">Affirmation</option>
+                <option value="mantra">Mantra</option>
+              </select>
+            </div>
+            <div class="enter-message">
+              <label for="fname">Enter Your Own Message</label><br />
+              <input
+                type="text"
+                id="message-input"
+                name="message-input"
+              /><br />
+            </div>
+            <div class="submit-msg-btn">
+              <button class="submit-msg-btn">submit my message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- END OF PAGE 1 HOME -->
+    <!-- START OF PAGE 2 FAVORITES -->
+    <section class="PAGE2-FAVES hidden">
+      <div class="nav-bar">
+        <p class="welcome"></p>
+        <p class="go-home">⬅ Home</p>
+      </div>
+      <div class="home-page">
+        <div class="header">
+          <h1 class="names-favorites"></h1>
+        </div>
+        <div class="fave-display">
+          
+          </div>
+          
+    </section>
+    <!-- END OF PAGE 2 FAVORITES -->
     <script src="data.js"></script>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
