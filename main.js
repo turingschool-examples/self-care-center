@@ -94,7 +94,7 @@ function favoriteMessage() {
   favesArr.push(messageDisplay.innerText);
   var newFavesHtml = "";
   for (var i = 0; i < favesArr.length; i++) {
-    newFavesHtml += `<h2>${favesArr[i]}<span class="delete-fave">X</span></h2>`;
+    newFavesHtml += `<h2>${favesArr[i]}<span class="delete-fave"></span></h2>`;
   }
   faveDisplay.innerHTML = newFavesHtml;
   var deleteFaveX = document.querySelector(".delete-fave");

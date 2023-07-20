@@ -12,7 +12,7 @@
     <section class="PAGE0-LOGIN">
       <div class="home-page">
         <div class="header">
-          <h1 class="home-header">✨AFFIRMATIONS & MANTRAS✨</h1>
+          <h1 class="home-header">✨DAILY MESSAGE✨</h1>
         </div>
       </div>
       <div class="login-and-inputs">
@@ -32,13 +32,15 @@
     <!-- START OF PAGE 1 HOME -->
     <section class="PAGE1-HOME hidden">
       <div class="nav-bar">
+        <div class = "welcome-sign-out">
         <p class="welcome"></p>
-        <p class="view-favorites">View My Favourites</p>
         <p class="sign-out">Sign Out</p>
+      </div>
+        <p class="view-favorites">View My Favourites</p>
       </div>
       <div class="home-page">
         <div class="header">
-          <h1 class="home-header">✨Affirmations and Mantras✨</h1>
+          <h1 class="home-header">✨DAILY MESSAGE✨</h1>
         </div>
         <div class="choose-message">
           <h2>Which type of message?</h2>
@@ -50,7 +52,7 @@
                 class="affirmation"
                 name="choose-message"
               />
-              <label for="affirmation" class="affirmation">affirmation</label
+              <label for="affirmation" class="affirmation-circle">affirmation</label
               ><span></span>
               <input
                 type="radio"
@@ -58,7 +60,7 @@
                 class="mantra"
                 name="choose-message"
               />
-              <label for="mantra" class="mantra">mantra</label>
+              <label for="mantra" class="mantra-circle">pun</label>
             </div>
             <button type="submit" class="recieve-message-btn">
               Recieve Message
@@ -94,24 +96,25 @@
           <button class="add-message-btn">Add My Own Message</button>
           <form class="add-message-form hide-form">
             <div class="selection">
-              <label for="message-type">Message Type</label>
+              <label for="message-type" class="message-type">Message Type</label>
               <select
                 name="personalized-message"
                 id="message-category"
                 form="carform"
               >
-                <option value="choose">choose</option>
+                <option value="choose">Choose</option>
                 <option value="affirmation">Affirmation</option>
-                <option value="mantra">Mantra</option>
+                <option value="mantra">Pun</option>
               </select>
             </div>
             <div class="enter-message">
-              <label for="fname">Enter Your Own Message</label><br />
+              <label for="fname" class="enter-message">Enter Your Own Message</label><br />
               <input
+              class="input-field"
                 type="text"
                 id="message-input"
                 name="message-input"
-              /><br />
+              />
             </div>
             <div class="submit-msg-btn">
               <button class="submit-msg-btn">submit my message</button>
