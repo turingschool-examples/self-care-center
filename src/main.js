@@ -36,12 +36,18 @@ function createDataModel() {
 }
 
 function displayRandomMessage() {
-  currentMessage = randomMessage(messages);
   var formSelection = document.querySelector('input[name="formInput"]:checked');
-  console.log(formSelection.value);
+  currentMessage = randomMessage(messages, formSelection.value);
+  console.log(currentMessage);
 }
 
-function randomMessage(messages) {
-  var random = Math.floor(Math.random() * messages.length + 1);
-  return messages[random];
+function randomMessage(messages, type) {
+  var messageType = [];
+  for (let i = 0; i < messages.length; i++) {
+    if (messages[i].type === type) {
+      messageType.push(messages[i]);
+    }
+  }
+  var random = Math.floor(Math.random() * messageType.length + 1);
+  return messageType[random];
 }
