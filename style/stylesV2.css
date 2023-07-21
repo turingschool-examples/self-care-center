@@ -73,6 +73,7 @@ input[type="radio"]:checked + label {
 
 .meditation-message {
     display:flex;
+    justify-content: center;
     margin: 5rem auto;
     padding: 2rem 5rem;
     width: 50%;
@@ -88,4 +89,8 @@ input[type="radio"]:checked + label {
 
 .hidden {
     visibility: hidden;
+}
+
+.message {
+   font-size:large;
 }

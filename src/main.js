@@ -67,5 +67,5 @@ function hideElement(selector) {
 function displayMessage() {
   // add a paragraph element inside meditation-message
   var message = currentMessage.message;
-  meditationMessage.innerHTML = `<p>${message}</p>`;
+  meditationMessage.innerHTML = `<p class="message">${message}</p>`;
 }
