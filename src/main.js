@@ -1,12 +1,19 @@
 // ===== QUERY SELECTORS =====
 var receiveMessage = document.querySelector(".message-button");
 
+var zenImage = document.querySelector(".meditation-emoji");
+
+var meditationMessage = document.querySelector(".meditation-message");
+
 // ===== EVENT LISTENERS AND DATA MODEL =====
 window.addEventListener("load", createDataModel);
 var currentMessage;
 var messages = [];
 
-receiveMessage.addEventListener("click", displayRandomMessage);
+receiveMessage.addEventListener("click", function () {
+  hideElement(zenImage);
+  displayRandomMessage();
+});
 
 // ===== FUNCTIONS =====
 
@@ -38,7 +45,7 @@ function createDataModel() {
 function displayRandomMessage() {
   var formSelection = document.querySelector('input[name="formInput"]:checked');
   currentMessage = randomMessage(messages, formSelection.value);
-  console.log(currentMessage);
+  displayMessage();
 }
 
 function randomMessage(messages, type) {
@@ -50,4 +57,15 @@ function randomMessage(messages, type) {
   }
   var random = Math.floor(Math.random() * messageType.length + 1);
   return messageType[random];
+}
+
+function hideElement(selector) {
+  selector.classList.toggle("hidden");
+  console.log(selector);
+}
+
+function displayMessage() {
+  // add a paragraph element inside meditation-message
+  var message = currentMessage.message;
+  meditationMessage.innerHTML = `<p>${message}</p>`;
 }
