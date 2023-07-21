@@ -57,8 +57,6 @@ var magicMantras = [
   "We're all human, aren't we? Every human life is worth the same, and worth saving. - Kingsley Shacklebolt",
   "It is a curious thing, Harry, but perhaps those who are best suited to power are those who have never sought it. Those who, like you, have leadership thrust upon them, and take up the mantle because they must, and find to their own surprise that they wear it well. - Albus Dumbledore",
   "It matters not what someone is born, but what they grow to be. - Albus Dumbledore",
-  "You think the dead we loved ever truly leave us? You think that we don/’t recall them more clearly than ever in times of great trouble? - Albus Dumbledore",
-  "It was, he thought, the difference between being dragged into the arena to face a battle to the death and walking into the arena with your head held high. Some people, perhaps, would say that there was little to choose between the two ways, but Dumbledore knew — and so do I, thought Harry, with a rush of fierce pride, and so did my parents — that there was all the difference in the world. - Harry Potter",
   "For in dreams, we enter a world that is entirely our own. - Albus Dumbledore",
   "I am not worried, Harry…I am with you. - Albus Dumbledore",
   "Words are, in my not-so-humble opinion, our most inexhaustible source of magic. Capable of both inflicting injury, and remedying it. - Albus Dumbledore",
@@ -86,20 +84,49 @@ var mantraBox = document.getElementById('mantra');
 var messageButton = document.getElementById('receive-button');
 var meditationIcon = document.getElementById('meditation-icon');
 var message = document.getElementById('message-text');
+var loadingContainer = document.getElementById('loading-container');
 
-  messageButton.addEventListener('click', createMessage);
+messageButton.addEventListener('click', createMessage);
 
-  function getRandomIndex(array) {
-    return Math.floor(Math.random() * array.length);
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+};
+
+function createMessage() {
+  meditationIcon.classList.add("hidden");
+  var messageText = getMessageText();
+  var headingText = "✨ ✨ ✨";
+  var fontFamily = "'Quicksand', sans-serif";
+  if (mantraBox.checked) {
+    headingText = "🪄 ✨ Alohomora ✨ 🪄";
+    fontFamily = "'Harry Potter'";
+    document.documentElement.classList.add("harry-potter");
+  } else {
+    document.documentElement.classList.remove("harry-potter");
   }
+  showMessage(messageText, headingText, fontFamily);
+};
 
-  function createMessage() {
-    meditationIcon.classList.add("hidden");
-    if (affirmationBox.checked) {
-      message.innerText = muggleAffirmations[getRandomIndex(muggleAffirmations)];
-    } else if (mantraBox.checked) {
-      message.innerText = magicMantras[getRandomIndex(magicMantras)];
-    } else {
-      message.innerText = "Please choose a muggle(non magic folk) affirmation or magic mantra!";
-    }
-  };
+function showMessage(messageText, headingText, fontFamily) {
+  message.innerText = messageText;
+  message.style.fontFamily = fontFamily;
+  document.querySelector("h1").innerText = headingText;
+  document.querySelector("h1").style.fontFamily = fontFamily;
+
+  loadingContainer.style.opacity = "1";
+  setTimeout(function () {
+    loadingContainer.style.opacity = "0";
+    message.style.display = "block";
+    message.style.opacity = "1";
+  }, 1000);
+};
+
+function getMessageText() {
+  if (affirmationBox.checked) {
+    return muggleAffirmations[getRandomIndex(muggleAffirmations)];
+  } else if (mantraBox.checked) {
+    return magicMantras[getRandomIndex(magicMantras)];
+  } else {
+    return "";
+  }
+};
