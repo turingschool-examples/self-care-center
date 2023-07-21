@@ -1,3 +1,4 @@
+
 var affirmations = [
 "I am enough. I have enough",
 "I am in the right place, at the right time, doing the right thing",
@@ -42,6 +43,7 @@ var mantras = [
 "The only constant is change",
 "I am the sky, the rest of weather",    
 ]
+
 
 
 
