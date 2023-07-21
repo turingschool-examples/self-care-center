@@ -8,10 +8,10 @@ black - #000000;
 */
 /* 
 html height */
-* {
-    border: 1px solid green;
-}
 
+/* * {
+    border: 1px solid green;
+} */
 
 
 html {
@@ -29,15 +29,20 @@ body {
 }
 
 .header1 {
-    margin-bottom: 150px;
+    margin-bottom: 100px;
+    margin-top: 50px;
 }
+
+
 
 .box1 {
     width: 600px;
     margin: auto;
     background-color: #ffffff;
-    border-radius: 8px;
+    border-radius: 13px;
     font-style: italic;
+    height: 100px;
+    margin-top: 0;
 }
 
 button {
@@ -45,24 +50,46 @@ button {
     margin: auto;
     background-color:#134d71;
     color: #ffffff;
-    margin-top: 50px;
+    margin-top: 18px;
     margin-bottom: 5px;
-    border-radius: 5px;
+    border-radius: 6px;
     width: 200px;
-    padding-left: 50px;
-    padding-right: 0px;
-    padding-top: 8px;
-    padding-bottom: 0px;
     height: 33px;
     font-family: 'Quicksand', sans-serif;;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    
+}
+.buttonFlex1,
+.buttonFlex2 {
+  display: inline-flex;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  justify-content: space-around;
+  
 }
 
+
 #radio1, #radio2 {
-    margin-top: 25px;
+    margin-top: -10px;
+    height: 20px;
+    width: 20px;
+    margin-left: 20px
+    
+}
+
+#radio2 {
+    margin-left: 50px;
+}
+
+label {
+    font-size: 20px;
 }
 
 img {
-    height: 75px;
+    height: 100px;
     width: 75px;
 }
 
@@ -71,8 +98,10 @@ img {
     padding: 50px;
     margin: auto;
     background-color: #ffffff;
-    margin-top: 150px;
-    border-radius: 8px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 13px;
+    height: 75px;
 }
 
 button:hover {
