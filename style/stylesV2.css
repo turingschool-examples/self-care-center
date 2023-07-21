@@ -94,3 +94,9 @@ input[type="radio"]:checked + label {
 .message {
    font-size:large;
 }
+
+.errorMessage {
+    color: coral;
+    font-size: larger;
+    font-weight: 800;
+}

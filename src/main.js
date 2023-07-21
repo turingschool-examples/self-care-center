@@ -11,9 +11,11 @@ var currentMessage;
 var messages = [];
 
 receiveMessage.addEventListener("click", function () {
-  hideElement(zenImage);
-  selectionCheck();
-  displayRandomMessage();
+  var selectionMade = selectionCheck();
+  if (selectionMade === false) {
+    hideElement(zenImage);
+    displayRandomMessage();
+  }
 });
 
 // ===== FUNCTIONS =====
@@ -60,11 +62,6 @@ function randomMessage(messages, type) {
   return messageType[random];
 }
 
-function hideElement(selector) {
-  selector.classList.toggle("hidden");
-  console.log(selector);
-}
-
 function displayMessage() {
   // add a paragraph element inside meditation-message
   var message = currentMessage.message;
@@ -74,8 +71,15 @@ function displayMessage() {
 function selectionCheck() {
   var formSelection = document.querySelector('input[name="formInput"]:checked');
   try {
-    if (formSelection === null) throw "empty";
+    if (formSelection === null) throw "Please make a selection";
+    return false;
   } catch (err) {
-    console.log(err);
+    currentMessage = err;
+    meditationMessage.innerHTML = `<p class="errorMessage">${currentMessage}</p>`;
   }
+}
+
+function hideElement(selector) {
+  selector.classList.toggle("hidden");
+  // console.log(selector);
 }
