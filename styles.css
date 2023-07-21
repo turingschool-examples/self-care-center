@@ -48,7 +48,7 @@ h2 {
 .message-option-label {
   color: #000000;
   font-style: italic;
-  margin: 50px;
+  margin: 30px;
 }
 
 .message-box-section {
@@ -59,7 +59,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 50px;
   border-radius: 10px;
 }
 
@@ -95,4 +95,8 @@ h2 {
 .receive-button:active {
   font-weight: bolder;
   transition-duration: 0.2s;
+}
+
+.hidden {
+  display:none;
 }
