@@ -12,6 +12,7 @@ var messages = [];
 
 receiveMessage.addEventListener("click", function () {
   hideElement(zenImage);
+  selectionCheck();
   displayRandomMessage();
 });
 
@@ -68,4 +69,13 @@ function displayMessage() {
   // add a paragraph element inside meditation-message
   var message = currentMessage.message;
   meditationMessage.innerHTML = `<p class="message">${message}</p>`;
+}
+
+function selectionCheck() {
+  var formSelection = document.querySelector('input[name="formInput"]:checked');
+  try {
+    if (formSelection === null) throw "empty";
+  } catch (err) {
+    console.log(err);
+  }
 }
