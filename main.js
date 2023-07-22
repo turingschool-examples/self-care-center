@@ -1,4 +1,6 @@
+
 //Array of affirmations:
+
 
 var affirmations = [
 "I am enough. I have enough",
@@ -84,3 +86,4 @@ formButton.addEventListener("submit", (e) => {
     e.preventDefault();
     changeElementVisibility();
 })
+
