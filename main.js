@@ -60,7 +60,7 @@ var userMessageForm = document.querySelector('#userMessageForm');
 var affirmationUserButton = document.querySelector('#userOption1');
 var mantraUserButton = document.querySelector('#userOption2');
 var userHiddenBox = document.querySelector('#hiddenBox');
-var userMessage = document.querySelector('#userMessageText');
+// var userMessage = document.querySelector('#userMessageText');
 
 //Queryselectors for user add message//
 var addMessageButton = document.querySelector('#addMessageButton');
@@ -99,6 +99,28 @@ function changeAddMessageVisibility() {
     userHiddenBox.style.display = "block";
 }
 
+//Function for userMessage to appear:
+function userMessage() {
+    var newUserMessage = "";
+
+    if(affirmationUserButton.checked){
+        newUserMessage = document.querySelector('#userMessageText').value
+        affirmations.push(newUserMessage);
+    } else if(mantraUserButton.checked) {
+        newUserMessage = document.querySelector('#userMessageText').value
+        mantras.push(newUserMessage);
+    } else {
+        newUserMessage = `Please select either a mantra or affirmation message.`
+    }
+    return newUserMessage;
+}
+
+function changeUserMessageVisibility() {
+    hiddenMessage.innerText = userMessage();
+    meditationIcon.style.display = "none";
+    hiddenMessage.style.display = "block";
+}
+
 //Event Listener for recieve message button:
 receiveMessageButton.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -114,5 +136,8 @@ addMessageButton.addEventListener("click", (e) => {
 //Event Listener for submit message button:
 userMessageForm.addEventListener("submit", (e) => {
     e.preventDefault();
+    userMessage();
+    changeUserMessageVisibility();
     
 })
+
