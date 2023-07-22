@@ -1,6 +1,4 @@
-
 //Array of affirmations:
-
 
 var affirmations = [
 "I am enough. I have enough",
@@ -48,19 +46,33 @@ var mantras = [
 "I am the sky, the rest of weather",    
 ]
 
-//QuerySelectors:
-var formButton = document.querySelector('#form');
+//QuerySelectors for receiving message: TOP SECTION BOX//
+var receiveMessageButton = document.querySelector('#form');
 var affirmationButton = document.querySelector('#option1');
 var mantraButton = document.querySelector('#option2');
+
+//QuerySelectors for receiving message: MIDDLE SECTION BOX//
 var meditationIcon = document.querySelector('#meditationIcon');
 var hiddenMessage = document.querySelector('#hiddenMessage');
 
+//QuerySelectors for user message: HIDDEN FORM//
+var userMessageForm = document.querySelector('#userMessageForm');
+var affirmationUserButton = document.querySelector('#userOption1');
+var mantraUserButton = document.querySelector('#userOption2');
+var userHiddenBox = document.querySelector('#hiddenBox');
+
+//Queryselectors for user add message//
+var addMessageButton = document.querySelector('#addMessageButton');
+
 //Functions:
+
+//Random message function:
 function getRandomIndex(messages) {
     var randomIndexNumber = Math.floor(Math.random() * messages.length);
     return messages[randomIndexNumber];
 }
 
+//Retrieving message function depending on mantras or affirmations array:
 function createMessage() {
     var newMessage = "";
 
@@ -69,21 +81,32 @@ function createMessage() {
     } else if(mantraButton.checked) {
         newMessage = getRandomIndex(mantras);
     } else {
-        newMessage = `Please select a choice of message above.`
+        newMessage = `Please select either a mantra or affirmation message.`
     }
     return newMessage;
 }
  
+//Sets the message, hide or unhide message for mantra or affirmation message function:
 function changeElementVisibility() {
     hiddenMessage.innerText = createMessage();
     meditationIcon.style.display = "none";
     hiddenMessage.style.display = "block";
-    
 }
 
-//Event Listener
-formButton.addEventListener("submit", (e) => {
+//FUNCTION
+function changeAddMessageVisibility() {
+    userHiddenBox.style.display = "block";
+}
+
+//Event Listener for recieve message button:
+receiveMessageButton.addEventListener("submit", (e) => {
     e.preventDefault();
     changeElementVisibility();
 })
+
+addMessageButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    changeAddMessageVisibility();
+
+} )
 

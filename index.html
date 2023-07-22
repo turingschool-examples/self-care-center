@@ -5,10 +5,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
+<!-- Header -->
     <h1>✨Self Care Center✨</h1>
     <h2>Which type of message?</h2>
-    
-      <section class="sectionTopBox" id="wrapper">
+
+<!-- Top section box -->
+      <section class="sectionTopBox" id="topBox">
         <form id="form">
         <input type="radio" id="option1" value="affirmation" name="radiobutton">
         <label for="option1"><em>affirmation</em></label>
@@ -19,12 +21,26 @@
       </form>
       </section>
 
-    <section class="sectionBottomBox">
+<!-- Section Bottom Box -->
+    <section class="sectionMiddleBox">
       <img src ="/Users/nicole/Turing/mod_1/projects/self-care-center-project/assets/meditate.svg" id="meditationIcon" style="display:block">
       <p style="display:none" id="hiddenMessage">Hidden Message Here</p>
     </section>
 
-    <section class="sectionTopBox" id="wrapper">
+    <!-- UserMessage Section Box -->
+    <section class="sectionHiddenBottomBox" style="display:none" id="hiddenBox">
+      <form id="userMessageForm">
+        <input type="radio" id="userOption1" value="affirmation" name="radiobutton">
+      <label for="userOption1"><em>affirmation</em></label>
+        <input type="radio" id="userOption2" value="mantra" name="radiobutton">
+      <label for="userOption2" id="mantra"><em>mantra</em></label>
+      <br>
+        <button type ="submit" class="receiveMessage-click">Submit</button>
+      </form>
+    </section>
+
+    <!-- User Add Message Box -->
+    <section class="sectionAddButtonBox" id="">
       <button type ="button" class="receiveMessage-click" id="addMessageButton">Add Message</button>
     </section>
 
