@@ -13,7 +13,7 @@ Welcome to the Self Care app, a digital sanctuary dedicated to making your day a
 
 ### Preview of App:
 
-<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/92313277f2e24646b1b7bf91f3b84baa?sid=8b67f54e-5e32-4ed2-8134-a0d425211ce0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+Self Care Center - 22 July 2023 - Watch Video
 
 ### Context:
 
