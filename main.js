@@ -60,6 +60,7 @@ var userMessageForm = document.querySelector('#userMessageForm');
 var affirmationUserButton = document.querySelector('#userOption1');
 var mantraUserButton = document.querySelector('#userOption2');
 var userHiddenBox = document.querySelector('#hiddenBox');
+var userMessage = document.querySelector('#userMessageText');
 
 //Queryselectors for user add message//
 var addMessageButton = document.querySelector('#addMessageButton');
@@ -108,5 +109,10 @@ addMessageButton.addEventListener("click", (e) => {
     e.preventDefault();
     changeAddMessageVisibility();
 
-} )
+})
 
+//Event Listener for submit message button:
+userMessageForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    
+})
