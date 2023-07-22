@@ -64,7 +64,8 @@ p {
   align-items: flex-start;
   padding: 7px;
 }
-button {
+#receiveButton,
+#resetFormButton {
   display: block;
   width: 175px;
   height: 25px;
