@@ -1,6 +1,7 @@
 var affirmationButton = document.querySelector("#radio1");
 var mantraButton = document.querySelector("#radio2");
-var mainButton = document.querySelector("#main button");
+var mainButton = document.querySelector("#mainButton");
+var meditationImage = document.querySelector("#image");
 
 
 
@@ -14,18 +15,23 @@ affirmationButton.addEventListener("click", function(event) {
 // Could we do this as one conditional?
 
 mainButton.addEventListener("click", function(event) {
-    hidePicture();
+    hideImage();
   
     if (affirmationButton.checked === false && mantraButton.checked === false) {
       showErrorMessage();
     }
   
-    if (affirmationButton.checked === true) {
-      showAffirmationMessage();
-    }
+  //   if (affirmationButton.checked === true) {
+  //     showAffirmationMessage();
+  //   }
   
-    if (mantraButton.checked === true) {
-      showMantraMessage();
-    }
+  //   if (mantraButton.checked === true) {
+  //     showMantraMessage();
+  //   }
   });
 // This is an idea for the end goal of the site. None of these are written yet!
+
+
+function hideImage() {
+  meditationImage.hidden = true;
+}
