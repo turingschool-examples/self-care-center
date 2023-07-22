@@ -5,26 +5,50 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
       rel="stylesheet"
-      <link
-      rel="stylesheet"
-      href="styles.css"
     />
+    <link rel="stylesheet" href="styles.css" />
     <title>Self Care Center</title>
-    />
   </head>
   <body>
-    <h1>Self Care Center</h1>
-    <section>
-      <!-- Box with radio buttons   -->
-    </section>
-    <section>
-      <!-- Box that shows icon or message -->
-      <!-- radio button for affirmation -->
-      <!-- radio button for mantra -->
-      <!-- button - Recieve Message -->
-    </section>
-
-    <script type="text/javascript" src="main.js"></script>
+    <h1>✨Self Care Center✨</h1>
+    <div class="message-options-wrapper">
+      <div class="radio-button-options">
+        <label>
+          <!--use of the label tag is considered best practice for accesibility-->
+          <!-- radio button for affirmation -->
+          <input
+            type="radio"
+            name="messageType"
+            value="affirmation"
+            class="affirmation-option"
+          />
+          affirmation
+        </label>
+        <label>
+          <!-- radio button for mantra -->
+          <input
+            type="radio"
+            name="messageType"
+            value="mantra"
+            class="mantra-option"
+          />
+          mantra
+        </label>
+      </div>
+      <div class="recieve-message-button">
+        <!-- button - Receive Message -->
+        <button id="receiveButton">Receive Message</button>
+      </div>
+    </div>
+    <!-- Box that shows icon or message -->
+    <div class="message-area">
+      <div class="mediation-icon" id="mediationIcon"></div>
+      <img src="assets/meditate.svg" class="img" />
+      <div class="message-content hidden" id="messageContent">
+        <p id="messageText">Message text goes here.</p>
+      </div>
+    </div>
     <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
