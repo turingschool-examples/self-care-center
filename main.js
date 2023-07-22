@@ -1,11 +1,9 @@
 //Create variables targeting the relevant DOM elements here👇
 
 //BUTTONS:👇
-//Radio button to select affirmation
+//Radio buttons
 var affirmationBtn = document.querySelector('.affirmation-option');
-//Radio button to select mantra
 var mantraBtn = document.querySelector('.mantra-option');
-//Receive message
 var receiveMessageBtn = document.querySelector('#receiveButton');
 var bellIcon = document.querySelector('img');
 
@@ -24,11 +22,9 @@ var selectedSelfCareOption;
 
 //Add your event listeners here 👇
 affirmationBtn.addEventListener('click', function (event) {
-  //when affirmation button is clicked - pass 'affirmation' on to "receive message" button function
   selectedSelfCareOption = 'affirmation';
 });
 mantraBtn.addEventListener('click', function (event) {
-  //when mantra stereo button is clicked - pass 'mantra' on to "receive message" button function
   selectedSelfCareOption = 'mantra';
 });
 receiveMessageBtn.addEventListener('click', generateMessage);
@@ -36,13 +32,8 @@ receiveMessageBtn.addEventListener('click', generateMessage);
 //Create your event handlers and other functions here👇
 
 function generateMessage(event) {
-  //depending on which stereo button was selected
-  //conditional if affirmation = affirmation array, else mantra array
-  // declare variable for the message array, either affirmation or mantra
-  //get a random index number from the respective array
   event.preventDefault();
   hideBell();
-  messageContent.classList.remove('hidden');
 
   var messageArray = '';
   if (selectedSelfCareOption === 'affirmation') {
@@ -59,8 +50,22 @@ function generateMessage(event) {
 }
 function hideBell() {
   bellIcon.classList.add('hidden');
+  messageContent.classList.remove('hidden');
 }
-//clear the textMessage & reshow the svg icon
+
+///////ITERATION Error Handling & Clear Button
+//1. User should not be able to click the "Recieve Message" button unless they have selected a message option
+//2. The user can click a clear button which clears the page of any message
+//add a Clear Message button to the form
+//function resetMessage()
+//conditional - if messageText.classList=visible
+//messageText.textContent = '' and bell is visible
+//else - message is already hidden
+
+//3. User should only be able to click the clear button if a message is visible
+//4. When the clear button is clicked and the message is removed, the image of the bell should re-appear
+//5. If you've added other buttons or inputs, be sure to add some error handling for them as well.
+
 //Sample from Holiday Card Generator
 // function resetForm() {
 //     toInput.value = '';
