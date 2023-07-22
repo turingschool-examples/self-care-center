@@ -1,4 +1,7 @@
 
+//Array of affirmations:
+
+
 var affirmations = [
 "I am enough. I have enough",
 "I am in the right place, at the right time, doing the right thing",
@@ -21,6 +24,7 @@ var affirmations = [
 "I trust myself to make the right decisions",
 ]
 
+//Array of mantras:
 var mantras = [
 "I am loveable. I am loved",
 "I am destined to find love",
@@ -44,8 +48,42 @@ var mantras = [
 "I am the sky, the rest of weather",    
 ]
 
+//QuerySelectors:
+var formButton = document.querySelector('#form');
+var affirmationButton = document.querySelector('#option1');
+var mantraButton = document.querySelector('#option2');
+var meditationIcon = document.querySelector('#meditationIcon');
+var hiddenMessage = document.querySelector('#hiddenMessage');
 
+//Functions:
+function getRandomIndex(messages) {
+    var randomIndexNumber = Math.floor(Math.random() * messages.length);
+    return messages[randomIndexNumber];
+}
 
+function createMessage() {
+    var newMessage = "";
 
+    if(affirmationButton.checked){
+        newMessage = getRandomIndex(affirmations);
+    } else if(mantraButton.checked) {
+        newMessage = getRandomIndex(mantras);
+    } else {
+        newMessage = `Please select a choice of message above.`
+    }
+    return newMessage;
+}
+ 
+function changeElementVisibility() {
+    hiddenMessage.innerText = createMessage();
+    meditationIcon.style.display = "none";
+    hiddenMessage.style.display = "block";
+    
+}
 
-var button = document.querySelector('.click');
+//Event Listener
+formButton.addEventListener("submit", (e) => {
+    e.preventDefault();
+    changeElementVisibility();
+})
+
