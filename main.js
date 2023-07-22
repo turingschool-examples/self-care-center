@@ -51,11 +51,11 @@ var formButton = document.querySelector('#form');
 var affirmationButton = document.querySelector('#option1');
 var mantraButton = document.querySelector('#option2');
 var meditationIcon = document.querySelector('#meditationIcon');
-var hiddenMessage = document.querySelector('.hiddenMessage');
+var hiddenMessage = document.querySelector('#hiddenMessage');
 
 //Functions:
 function getRandomIndex(messages) {
-    var randomIndexNumber = Math.floor(Math.random() * array.length);
+    var randomIndexNumber = Math.floor(Math.random() * messages.length);
     return messages[randomIndexNumber];
 }
 
@@ -63,9 +63,9 @@ function createMessage() {
     var newMessage = "";
 
     if(affirmationButton.checked){
-        newMessage = getRandomIndex(affirmation);
+        newMessage = getRandomIndex(affirmations);
     } else if(mantraButton.checked) {
-        newMessage = getRandomIndex(mantra);
+        newMessage = getRandomIndex(mantras);
     } else {
         newMessage = `Please select a choice of message above.`
     }
@@ -80,7 +80,7 @@ function changeElementVisibility() {
 }
 
 //Event Listener
-formButton.addEventListener("submit", (e) => {e.preventDefault();
-
-changeElementVisibility();
+formButton.addEventListener("submit", (e) => {
+    e.preventDefault();
+    changeElementVisibility();
 })
