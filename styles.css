@@ -1,7 +1,7 @@
 * {
     text-align: center;
     font-family: 'Quicksand', sans-serif;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 
 }
 
@@ -44,7 +44,7 @@ body {
     margin-right: auto;
   }
 
-  .sectionBottomBox{
+  .sectionMiddleBox{
     width: 800px;
     height: 30px; 
     border: 15px solid white;
@@ -52,6 +52,32 @@ body {
     border-radius: 7px;
     padding: 50px;
     margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sectionHiddenBottomBox {
+    width: 500px;
+    height: 20px; 
+    border: 15px solid white;
+    background: white;
+    border-radius: 7px;
+    padding: 30px;
+    margin-top: 10px;
+    margin-bottom: 85px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sectionAddButtonBox {
+    width: 500px;
+    height: 20px; 
+    border: 15px solid white;
+    background: white;
+    border-radius: 7px;
+    padding: 30px;
+    margin-top: 10px;
+    margin-bottom: 85px;
     margin-left: auto;
     margin-right: auto;
   }
