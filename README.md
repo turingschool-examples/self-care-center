@@ -13,7 +13,7 @@ Welcome to the Self Care app, a digital sanctuary dedicated to making your day a
 
 ### Preview of App:
 
-Self Care Center - 22 July 2023 - Watch Video
+! [Alt text] (Self-Care GIF.gif) / ! [] (Self-Care GIF.gif)
 
 ### Context:
 
