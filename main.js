@@ -3,6 +3,7 @@ var mantraButton = document.querySelector("#radio2");
 var mainButton = document.querySelector("#mainButton");
 var meditationImage = document.querySelector("#image");
 var mainText = document.querySelector("#messageText");
+var clearButton = document.querySelector("#clearButton");
 
 var randomAffirmation = "";
 var randomMantra = "";
@@ -10,7 +11,7 @@ var randomMantra = "";
 affirmationButton.addEventListener("click", function(event) {
     mantraButton.checked = false;
   });
-  
+
   mantraButton.addEventListener("click", function(event) {
     affirmationButton.checked = false;
   });
@@ -19,6 +20,7 @@ affirmationButton.addEventListener("click", function(event) {
 mainButton.addEventListener("click", function(event) {
   hideImage();
   getRandomMessage();
+  showClearButton();
 
   if (affirmationButton.checked === true) {
       showAffirmationMessage();
@@ -41,8 +43,22 @@ mantraButton.addEventListener("click", function(event) {
   mainButton.removeAttribute("disabled");
 });
 
+clearButton.addEventListener("click", function(event) {
+  clearAffirmation();
+  clearMantra();
+  showImage();
+  hideClearButton();
+  mainText.innerText = "";
+  
+});
+
 function hideImage() {
   meditationImage.hidden = true;
+}
+
+function showImage() {
+  meditationImage.hidden = false;
+  
 }
 
 function getRandomIndex(messages) {
@@ -74,4 +90,20 @@ function showAffirmationMessage() {
 
 function showMantraMessage() {
   mainText.innerText = randomMantra;
+}
+
+function showClearButton() {
+  clearButton.hidden = false;
+} 
+
+function hideClearButton() {
+  clearButton.hidden = true;
+}
+
+function clearAffirmation() {
+  randomAffirmation = "";
+}
+
+function clearMantra() {
+  randomMantra = "";
 }
