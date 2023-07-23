@@ -6,7 +6,6 @@ var mainText = document.querySelector("#messageText");
 
 var randomAffirmation = "";
 var randomMantra = "";
-var errorText = "**ERROR: Please select Affirmation or Mantra.**"
 
 affirmationButton.addEventListener("click", function(event) {
     mantraButton.checked = false;
@@ -18,22 +17,18 @@ affirmationButton.addEventListener("click", function(event) {
 // Could we do this as one conditional?
 
 mainButton.addEventListener("click", function(event) {
-    hideImage();
-    getRandomMessage();
+  hideImage();
+  getRandomMessage();
 
-  
-    if (affirmationButton.checked === false && mantraButton.checked === false) {
-      showErrorMessage();
-    }
-  
-    if (affirmationButton.checked === true) {
+  if (affirmationButton.checked === true) {
       showAffirmationMessage();
-    }
-  
-    if (mantraButton.checked === true) {
+  }
+
+  if (mantraButton.checked === true) {
       showMantraMessage();
-    }
-  });
+  }
+});
+
 // This is an idea for the end goal of the site. None of these are written yet!
 
 affirmationButton.addEventListener("click", function(event) {
@@ -75,20 +70,8 @@ function getRandomMessage() {
 
 function showAffirmationMessage() {
   mainText.innerText = randomAffirmation;
-  mainText.classList.remove("error");
 }
 
 function showMantraMessage() {
   mainText.innerText = randomMantra;
-  mainText.classList.remove("error");
-}
-
-function showErrorMessage() {
-  mainText.innerText = errorText;
-  mainText.classList.add("error");
-}
-
-function hideErrorMessage() {
-  mainText.innerText = ""; 
-  mainText.classList.remove("error");
 }
