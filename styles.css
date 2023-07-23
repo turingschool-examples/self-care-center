@@ -104,9 +104,9 @@ img {
     height: 75px;
 }
 
-button:hover {
+button:not([disabled]):hover {
     cursor: pointer;
-}
+  }
 
 #radio2:hover {
     cursor: pointer;

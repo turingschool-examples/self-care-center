@@ -36,6 +36,15 @@ mainButton.addEventListener("click", function(event) {
   });
 // This is an idea for the end goal of the site. None of these are written yet!
 
+affirmationButton.addEventListener("click", function(event) {
+  mantraButton.checked = false;
+  mainButton.removeAttribute("disabled");
+});
+
+mantraButton.addEventListener("click", function(event) {
+  affirmationButton.checked = false;
+  mainButton.removeAttribute("disabled");
+});
 
 function hideImage() {
   meditationImage.hidden = true;
