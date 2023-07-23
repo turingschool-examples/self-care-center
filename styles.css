@@ -115,3 +115,13 @@ button:hover {
 #radio1:hover {
     cursor: pointer;
 }
+
+#messageText {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+
+}
+
+.error {
+    color: red;
+}
