@@ -13,7 +13,7 @@ Welcome to the Self Care app, a digital sanctuary dedicated to making your day a
 
 ### Preview of App:
 
-! [Alt text] (Self-Care GIF.gif) / ! [] (Self-Care GIF.gif)
+![](https://github.com/AHochworter/self-care-center/blob/iter/readme/Self-Care%20GIF.gif)
 
 ### Context:
 
