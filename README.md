@@ -38,10 +38,10 @@ Wins:
 
 - Creating my first HTML and CSS files brought me a wonderful sense of accomplishment, representing a crucial milestone in my journey towards becoming a proficient software developer.
 
-- Connecting JavaScript and HTML to create the DOM marked a significant milestone in my progress as a developer, enhancing the functionality of the application.
+- Connecting JavaScript and HTML to create the DOM also marked a significant moment in my progress. I felt like this concept started to solidify as I worked on this project.
 
 Challenges:
 
-- One of the most significant challenges I faced during this project was conquering the initial obstacle of getting started, grappling with the "empty" page syndrome.
+- One of the most significant challenges I faced during this project was conquering the initial obstacle of getting started. Grappling with the "empty" page syndrome is always the first hurdle for me.
 
 - CSS proved to be a particularly challenging aspect for me.
