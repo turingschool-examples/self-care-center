@@ -43,7 +43,7 @@ function generateMessage(event) {
 
     messageText.textContent = randomMessage;
   } else {
-    window.alert('Please select a message type');
+    console.log('Please select a message type');
   }
 }
 //Helper Functions
