@@ -6,3 +6,102 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+/* * {
+  border: solid 1px green;
+} */
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  height: 100vh;
+  background: #ffffff;
+  background-image: linear-gradient(#134d71, #f7e4bf);
+}
+h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2.35em;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px;
+  margin: 50px;
+}
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2em;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+}
+p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.25em;
+  color: black;
+  /* text-align: center; */
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.hidden {
+  display: none;
+}
+
+.message-options-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  margin: auto;
+  border-radius: 8px;
+  width: 35%;
+  height: 45px;
+  padding: 25px;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+.radio-button-options {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 7px;
+}
+#receiveButton,
+#resetFormButton {
+  display: block;
+  width: 175px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: #134d71;
+  color: #ffffff;
+  padding: 5px;
+  margin: auto;
+  align-items: center;
+}
+
+.message-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 8px;
+  width: 55%;
+  height: 100px;
+  padding: 20px;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  background-color: #ffffff;
+  margin-top: 100px;
+}
+#message-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+}
