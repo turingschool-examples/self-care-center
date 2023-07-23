@@ -7,7 +7,7 @@ var receiveMessageBtn = document.querySelector('#receiveButton');
 var bellIcon = document.querySelector('img');
 var resetFormBtn = document.querySelector('.reset-form-button');
 
-//VIEWS:👇
+//MESSAGE BOX:👇
 var messageContent = document.querySelector('.message-content');
 var messageText = document.querySelector('#messageText');
 
@@ -31,6 +31,7 @@ function generateMessage(event) {
     hideBell();
 
     var messageArray = '';
+
     if (selectedSelfCareOption === 'affirmation') {
       messageArray = affirmations;
     } else {
@@ -39,26 +40,30 @@ function generateMessage(event) {
 
     var randomIndex = getRandomIndex(messageArray);
     var randomMessage = messageArray[randomIndex];
-    console.log('random message:', randomMessage);
 
     messageText.textContent = randomMessage;
-  } else {
-    console.log('Please select a message type');
   }
 }
 //Helper Functions
+//Random index function
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
-function hideBell() {
-  bellIcon.classList.add('hidden');
-  messageContent.classList.remove('hidden');
-  resetFormBtn.classList.remove('hidden');
+//toggle 'hidden' classList function
+function toggleClass(elements) {
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].classList.toggle('hidden');
+  }
 }
+
+var msgAreaElements = [bellIcon, messageContent, resetFormBtn];
+
+function hideBell() {
+  toggleClass(msgAreaElements);
+}
+
 function resetForm() {
-  bellIcon.classList.remove('hidden');
-  messageContent.classList.add('hidden');
-  resetFormBtn.classList.add('hidden');
+  toggleClass(msgAreaElements);
 
   //clear the radio buttons
   radioButtons = document.querySelectorAll('input[type="radio"]');
@@ -66,6 +71,7 @@ function resetForm() {
     radioButtons[i].checked = false;
   }
 }
+
 //be sure a radio button is selected
 function atLeastOneRadio() {
   var selectedRadios = document.querySelectorAll('input[type=radio]:checked');
