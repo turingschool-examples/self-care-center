@@ -15,7 +15,6 @@ affirmationButton.addEventListener("click", function(event) {
   mantraButton.addEventListener("click", function(event) {
     affirmationButton.checked = false;
   });
-// Could we do this as one conditional?
 
 mainButton.addEventListener("click", function(event) {
   hideImage();
@@ -30,8 +29,6 @@ mainButton.addEventListener("click", function(event) {
       showMantraMessage();
   }
 });
-
-// This is an idea for the end goal of the site. None of these are written yet!
 
 affirmationButton.addEventListener("click", function(event) {
   mantraButton.checked = false;

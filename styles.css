@@ -68,15 +68,17 @@ body {
         margin: auto;
         background-color:#134d71;
         color: #ffffff;
-        margin-top: 18px;
-        margin-bottom: 5px;
+        margin-top: 0px;
+        margin-bottom: 100px;
         border-radius: 6px;
         width: 200px;
         height: 33px;
         font-family: 'Quicksand', sans-serif;;
-        justify-content: center;
-        align-items: center;
+        /* justify-content: center;
+        align-items: center; */
         font-size: 18px;
+        position: center;
+        margin-top: 15px;
 }
 
 .buttonFlex1,
@@ -117,7 +119,7 @@ img {
     margin: auto;
     background-color: #ffffff;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
     border-radius: 13px;
     height: 75px;
 }
@@ -137,6 +139,7 @@ button:not([disabled]):hover {
 #messageText {
     font-family: 'Quicksand', sans-serif;
     font-size: 25px;
+    margin:auto;
 
 }
 
