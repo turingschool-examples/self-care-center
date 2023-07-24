@@ -1,51 +1,43 @@
-# Self Care Center
-## Overview
-How can I care for myself? One way is with affirmations and mantras!
-Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are repetive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
-
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
-
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html). 
-
-## Learning Goals
-
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
-
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
-
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
-
 # Self-Care Center 
 
 ### Abstract:
-[//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
+
+This is a motivational website that will display the users choice of random mantras and / or words of affirmation.
 
 ### Installation Instructions:
-[//]: <> (What steps does a person have to take to get your app cloned down and running?)
+
+1. Click this link: https://github.com/pitter3/self-care-center_PE
+2. Click the green < code > button.
+3. Copy SSH to your clipboard.
+4. Open up the terminal.
+5. Change into the directory you wish to clone the app into with the cd command.
+6. Use the git clone command followed by pasting the copied SSH key.
+7. Change into the cloned directory with the cd command.
+8. Run open index.html.
+9. Enjoy!
 
 ### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
+(![Alt text](Untitled.gif))
 
 ### Context:
-[//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
+
+I worked on this project intermittently over 4 days, an estimated 10 hours of time was spent on this project. I am on my third week of Mod 1 at Turing School of Software & Design.
 
 ### Contributors:
-[//]: <> (Who worked on this application? Link to their GitHubs.)
+
+[Patrick Eitel](https://github.com/pitter3).
 
 ### Learning Goals:
-[//]: <> (What were the learning goals of this project? What tech did you work with?)
+The learning goals of this project are to gauge my skills in using CSS, HTML, and JavaScript to create a website from scratch. 
+
+Tech used: MacBook Pro, Git, GitHub, VSCode, MacOS
 
 ### Wins + Challenges:
-[//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+
+Win 1: Using a data model properly to help my overall workflow and make coding much easier.
+
+Win 2: Everything runs as expected, bug free, with my CYOA fully implemented.
+
+Win 3: Code is much cleaner overall than my last project, my new understanding of the Git workflow helped immensely in this regard.
+
+Challenges: Getting CSS to behave the way I wanted was a bit of a challenge since I had just recently learned it. I overcame this by researching and utilizing tricks (such as applying green borders) taught to me by my instructors. Flexboxes were a bit tricky as well as my CSS was already setup before I even knew what a flexbox was, I added a few to learn how to use them, and learned more about them as I progressed through the project.
