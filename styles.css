@@ -6,3 +6,143 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+/* 
+html height */
+
+/* * {
+    border: 1px solid green;
+} */
+
+
+html {
+    height: 100%
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    background: linear-gradient(#134d71, #78a7c6, #f7e4bf)
+}
+
+.header1, .header2 {
+    color: #ffffff
+}
+
+.header1 {
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+
+
+.box1 {
+    width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 13px;
+    font-style: italic;
+    height: 100px;
+    margin-top: 0;
+}
+
+#mainButton {
+    display: flex;
+    margin: auto;
+    background-color:#134d71;
+    color: #ffffff;
+    margin-top: 18px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    width: 200px;
+    height: 33px;
+    font-family: 'Quicksand', sans-serif;;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    
+}
+
+#clearButton {
+    
+        
+        margin: auto;
+        background-color:#134d71;
+        color: #ffffff;
+        margin-top: 0px;
+        margin-bottom: 100px;
+        border-radius: 6px;
+        width: 200px;
+        height: 33px;
+        font-family: 'Quicksand', sans-serif;;
+        /* justify-content: center;
+        align-items: center; */
+        font-size: 18px;
+        position: center;
+        margin-top: 15px;
+}
+
+.buttonFlex1,
+.buttonFlex2 {
+  display: inline-flex;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  justify-content: space-around;
+  
+}
+
+
+#radio1, #radio2 {
+    margin-top: -10px;
+    height: 20px;
+    width: 20px;
+    margin-left: 20px
+    
+}
+
+#radio2 {
+    margin-left: 50px;
+}
+
+label {
+    font-size: 20px;
+}
+
+img {
+    height: 100px;
+    width: 75px;
+}
+
+.box2 {
+    width: 800px;
+    padding: 50px;
+    margin: auto;
+    background-color: #ffffff;
+    margin-top: 100px;
+    margin-bottom: 0px;
+    border-radius: 13px;
+    height: 75px;
+}
+
+button:not([disabled]):hover {
+    cursor: pointer;
+  }
+
+#radio2:hover {
+    cursor: pointer;
+}
+
+#radio1:hover {
+    cursor: pointer;
+}
+
+#messageText {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    margin:auto;
+
+}
+
+.error {
+    color: red;
+}
