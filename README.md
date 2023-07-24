@@ -17,6 +17,7 @@ This is a motivational website that will display the users choice of random mant
 9. Enjoy!
 
 ### Preview of App:
+
 ![Alt text](Untitled.gif)
 
 ### Context:
