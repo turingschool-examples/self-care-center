@@ -9,6 +9,13 @@ affirmationBtn.addEventListener('click', handleRadioClick)
 mantraBtn.addEventListener('click', handleRadioClick)
 
 // Functions
+var randomIndex;
+
+function getRandomIndex(array) {
+    randomIndex = Math.floor(Math.random() * array.length)  
+    return  randomIndex
+  }
+
 var id;
 
 function handleRadioClick(event) {
@@ -19,10 +26,12 @@ function handleRadioClick(event) {
 function createMessage() {
     switch (id) {
         case "affirmation":
-            console.log('affirmation button was clicked');
+            getRandomIndex(affirmations)
+            document.querySelector('.message').innerText = affirmations[randomIndex]
             break;
         case "mantra":
-            console.log('mantra button was clicked');
+            getRandomIndex(mantras)
+            document.querySelector('.message').innerText = mantras[randomIndex];
             break;
         default:
             alert('Error: Please select a radio button.')

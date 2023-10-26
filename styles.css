@@ -31,6 +31,7 @@ h2 {
 
 .radio-button {
     margin: 20px 10px 0px 50px;
+    cursor: pointer;
 }
 
 button {
@@ -44,18 +45,27 @@ button {
     color: white;
     font-size: 1rem;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: black;
 }
 
 .message-board {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin: auto;
     width: 80%;
     margin-top: 80px;
     background-color: #ffffff;
     border-radius: 10px;
     height: 150px;
+}
+img {
+    width: 10%;
 }
 /* font-family: 'Quicksand', sans-serif;
 COLORS
