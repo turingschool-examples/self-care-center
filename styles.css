@@ -2,6 +2,9 @@ body {
     background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf, #ffffff);
     background-attachment: fixed;
     font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
@@ -16,28 +19,30 @@ header {
 .main {
     margin: auto;
     width: 50%;
+    height: 100px;
+    padding: 10px;
     text-align: center;
+    background-color: white;
+    border-radius: 10px;
 }
 
 h2 {
     color:#ffffff;
+    text-align: center;
 }
 
 .message-select {
-    background-color: white;
-    border-radius: 10px;
-    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    padding: 20px;
 }
 
 .radio-button {
-    margin: 20px 10px 0px 50px;
     cursor: pointer;
 }
 
 button {
-    display: block;
-    margin: auto;
-    margin-top: 30px;
     font-family: 'Quicksand', sans-serif;
     background-color: #134d71;
     padding: 5px;
@@ -45,12 +50,15 @@ button {
     color: white;
     font-size: 1rem;
     border-radius: 10px;
+    border-style: inset;
     cursor: pointer;
 }
 
-button:hover {
-    color: black;
-}
+.button-hover:hover {
+    color: #000000;
+    border-style: outset;
+    /* Add any other styles you want to apply on hover */
+  }
 
 .message-board {
     display: flex;
@@ -65,8 +73,18 @@ button:hover {
     height: 150px;
 }
 img {
-    width: 10%;
+    width: 100px;
 }
+
+.clear-btn {
+    margin-top: 20px;
+    width: 15%;
+}
+
+.hidden {
+    display: none;
+  }
+
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
