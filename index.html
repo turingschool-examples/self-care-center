@@ -7,7 +7,7 @@
   <body>
     <header>✨ Self Care Center ✨</header>
     
-    <h2>Which type of message?</h2>
+    <h2 class="main-h2" >Which type of message?</h2>
     <section class="main">
       <div class="message-select">
         <label for="html">
@@ -22,11 +22,21 @@
     </section>
 
     <section class="message-board">
-    <p class="message"><img src="/assets/meditate.svg" alt="meditation emoji"></p>  
+      <p class="message"><img src="/assets/meditate.svg" alt="meditation emoji"></p>  
+
+      <div class="btn-container">
+        <button class="clear-btn hidden button-hover">Clear Message</button>
+        <button class="favorite-btn hidden button-hovergit ">Favorite Message</button>
+      </div>
     </section>
+    <button class="fav-view-btn button-hover">View Favorites</button>
 
-    <button class="clear-btn hidden">Clear Message</button>
+    <section class="fav-section">
+    </section>
+    <button class="home-btn hidden button-hover">Home</button>
+    <button class="delete-btn hidden button-hover">Remove from Favorites</button>
 
+    
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="data.js"></script>
   </body>
