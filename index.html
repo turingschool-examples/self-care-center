@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-  
+    <div class="background">
+      <section class = "title" >      
+        <top>          
+          <h1>✨ Self Care Center ✨</h1>          
+        </top>
+      </section>
+      <section class ="lmessages">
+        <abvBox>
+          <div class="hi">
+            <h4 class="userWelcome"></h4>
+          </div>  
+          <div class="which">
+            <h3>Which type of message?</h3>
+          </div>
+        </abvBox>
+      </section>
+      <section class ="messages">
+        <div class="box">
+          <div class="affirm">
+            <input type="radio" id="affirmation" class="affirmationMantra"> <em>affirmation</em>
+          </div>          
+          <div class="mant">
+            <input type="radio" id="mantra" class="affirmationMantra"> <em>mantra</em>
+          </div>
+        </div>        
+      </section>
+      <section class ="button">
+        <button class="receive"> Receive Message
+        </button>
+      </section>
+      <section class ="login">
+        <h5> Hi, what's your name? </h5>
+        <input class="user" type="text" id="user" />
+        <button class="enter"> Enter
+        </button>
+      </section>
+      <section class="transitional">
+        <div class="box2">
+          <img src="assets/meditate.svg" class="buddha">
+          <p class="message"></p>
+        </div>
+      </section>          
+    </div>
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="assets/arrays.js"></script>
   </body>
 </html>
