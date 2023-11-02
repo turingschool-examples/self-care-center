@@ -5,7 +5,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-  
+<!-- Header -->
+    <h1>✨Self Care Center✨</h1>
+    <h2>Which type of message?</h2>
+
+<!-- Top section box -->
+      <section class="sectionTopBox" id="topBox">
+        <form id="form">
+        <input type="radio" id="option1" value="affirmation" name="radiobutton">
+        <label for="option1"><em>affirmation</em></label>
+        <input type="radio" id="option2" value="mantra" name="radiobutton">
+        <label for="option2" id="mantra"><em>mantra</em></label>
+        <br>
+        <button type ="submit" class="receiveMessage-click">Receive Message</button>
+      </form>
+      </section>
+
+<!-- Section Bottom Box -->
+    <section class="sectionMiddleBox">
+      <img src ="/Users/nicole/Turing/mod_1/projects/self-care-center-project/assets/meditate.svg" id="meditationIcon" style="display:block">
+      <p style="display:none" id="hiddenMessage">Hidden Message Here</p>
+    </section>
+
+    <!-- UserMessage Section Box -->
+    <section class="sectionHiddenBottomBox" style="display:none" id="hiddenBox">
+      <form id="userMessageForm">
+        <input type="radio" id="userOption1" value="affirmation" name="radiobutton">
+      <label for="userOption1"><em>affirmation</em></label>
+        <input type="radio" id="userOption2" value="mantra" name="radiobutton">
+      <label for="userOption2" id="mantra"><em>mantra</em></label>
+      <br>
+      <label for="userMessage">Enter your message here:</label>
+        <input type="text" id="userMessageText" name="userMessage">
+        <button type ="submit" class="receiveMessage-click">Submit Message</button>
+      </form>
+    </section>
+
+    <!-- User Add Message Box -->
+    <section class="sectionAddButtonBox" id="">
+      <button type ="button" class="receiveMessage-click" id="addMessageButton">Add Message</button>
+    </section>
+
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
