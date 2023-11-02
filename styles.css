@@ -1,3 +1,128 @@
+body {
+    background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf, #ffffff);
+    background-attachment: fixed;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 50px;
+}
+
+.main {
+    margin: auto;
+    width: 50%;
+    height: 100px;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+h2 {
+    color:#ffffff;
+    text-align: center;
+}
+
+.message-select {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    padding: 20px;
+}
+
+.radio-button {
+    cursor: pointer;
+}
+
+button {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #134d71;
+    padding: 5px;
+    margin-top: 10px;
+    width: 30%;
+    color: white;
+    font-size: 1rem;
+    border-radius: 10px;
+    border-style: inset;
+    cursor: pointer;
+}
+
+.button-hover:hover {
+    color: #000000;
+    border-style: outset;
+  }
+
+.message-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    margin-top: 80px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    height: 150px;
+}
+
+.message-style {
+    padding: 25px;
+}
+
+img {
+    margin-top: 10px;
+    width: 100px;
+}
+
+.btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.clear-btn {
+    width: 20%;
+}
+
+.favorite-btn {
+    width: 20%;
+}
+
+.fav-section {
+    width: 80%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.fav-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+  }
+
+.fav-msg {
+    cursor: pointer;
+}
+/* .border{
+    border: #134d71 solid;
+} */
+
+
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
