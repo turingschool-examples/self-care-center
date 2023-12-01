@@ -11,5 +11,5 @@ body {
   height: 100vh;
   text-align: center;
   font-family: 'Quicksand', sans-serif;
-  background-image: linear-gradient(#78a7c6, #f7e4bf);
+  background-image: linear-gradient(rgb(99, 192, 99), #f7e4bf);
 }
