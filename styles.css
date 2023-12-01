@@ -17,8 +17,10 @@ body {
 }
 
 .user-choice-section {
-  height: 20vh;
-  width: 50vw;
+  text-align: center;
+  padding: 3rem;
+  height: 5vh;
+  width: 40vw;
   background-color: #ffffff;
   border-radius: 1rem;
 }
