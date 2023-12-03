@@ -13,7 +13,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: 'Quicksand', sans-serif;
-  background-image: linear-gradient(rgb(99, 192, 99), #f7e4bf);
+  background-image: linear-gradient(rgb(99, 192, 99), #B4D435);
 }
 
 .pick-words {
@@ -24,19 +24,23 @@ body {
   text-align: center;
   background-color: #ffffff;
   border-radius: 1rem;
-  padding: 1.1rem;
-  width: 40vw;
+  padding: 1rem;
+  width: 35vw;
+  height: 70vh;
+  box-shadow: -2px 2px 5px darkgreen;
 }
 
+hr {
+  width: 30vw;
+}
 .word-choice-radio-buttons {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 15rem;
+  gap: 10rem;
 }
 
 .receive-message-btn {
-  margin-top: 2.5rem;
   color: white;
   background-color: #134d71;
   border: none;
@@ -46,4 +50,5 @@ body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 18px;
   font-weight: lighter;
+  margin: 2rem 0;
 }
