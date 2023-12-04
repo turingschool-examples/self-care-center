@@ -3,6 +3,8 @@ let mantraRadioButton = document.getElementById('mantra')
 
 let receiveButton = document.getElementById('receive-button')
 let userMessage = document.getElementById('user-message')
+let meditateImage = document.getElementById('meditate-image')
+let clearLink = document.getElementById('clear-link')
 
 let affirmations = 
 ['I alone hold the truth of who I am.', 
@@ -19,15 +21,17 @@ let mantras = [
   "Guide me from ignorance to enlightenment.",
   "That is whole, and this is whole.",
   "May there be peace within and around me.",
-  "May all beings everywhere be happy and free, and may the thoughts, words, and actions of my own life contribute to the happiness and freedom for all."
+  "May all beings everywhere be happy and free, and may the thoughts, words, and actions of my own life contribute to the happiness and freedom for all.",
+  "Expect nothing and appreciate everything."
 ]
 
 const getRandomIndex = (array) => {
   return Math.floor(Math.random() * array.length);
 }
 
-
 const showUserChoice = () => {
+  meditateImage.classList.add('hidden')
+  clearLink.classList.remove('hidden')
   if(affirmRadioButton.checked) {
     userMessage.textContent = `${affirmations[getRandomIndex(affirmations)]}`
   } else if (mantraRadioButton.checked) {
@@ -35,10 +39,12 @@ const showUserChoice = () => {
   }
 }
 
-
-const chooseMantraMessage = () => {
-
+const clearMessage = () => {
+  userMessage.textContent = ''
+  meditateImage.classList.remove('hidden')
+  clearLink.classList.add('hidden')
 }
 
 receiveButton.addEventListener('click', showUserChoice)
+clearLink.addEventListener('click', clearMessage)
 
