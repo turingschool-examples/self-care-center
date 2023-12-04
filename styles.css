@@ -61,4 +61,5 @@ hr {
 .clear-message-link {
   color: lightskyblue;
   text-decoration: underline;
+  cursor: pointer;
 }
