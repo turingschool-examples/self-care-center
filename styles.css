@@ -53,3 +53,12 @@ hr {
   font-size: 18px;
   font-weight: lighter;
 }
+
+.hidden {
+  display: none;
+}
+
+.clear-message-link {
+  color: lightskyblue;
+  text-decoration: underline;
+}
