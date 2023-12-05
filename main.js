@@ -22,7 +22,9 @@ let mantras = [
   "That is whole, and this is whole.",
   "May there be peace within and around me.",
   "May all beings everywhere be happy and free, and may the thoughts, words, and actions of my own life contribute to the happiness and freedom for all.",
-  "Expect nothing and appreciate everything."
+  "Expect nothing and appreciate everything.",
+  "Love and kindness guide my actions, creating a world filled with compassion.",
+  'Divine love flows through me, offering comfort and healing to those in need.'
 ]
 
 const getRandomIndex = (array) => {
@@ -32,10 +34,15 @@ const getRandomIndex = (array) => {
 const showUserChoice = () => {
   meditateImage.classList.add('hidden')
   clearLink.classList.remove('hidden')
+  userMessage.classList.remove('error-message')
+  let noChoiceSelected = !affirmRadioButton.checked || !mantraRadioButton.checked
   if(affirmRadioButton.checked) {
     userMessage.textContent = `${affirmations[getRandomIndex(affirmations)]}`
   } else if (mantraRadioButton.checked) {
     userMessage.textContent = `${mantras[getRandomIndex(mantras)]}`
+  } else if(noChoiceSelected) {
+    userMessage.classList.add('error-message')
+    userMessage.textContent = `You need to choose a message type.`
   }
 }
 
