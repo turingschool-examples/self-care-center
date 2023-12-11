@@ -5,6 +5,10 @@ let receiveButton = document.getElementById('receive-button')
 let userMessage = document.getElementById('user-message')
 let meditateImage = document.getElementById('meditate-image')
 let clearLink = document.getElementById('clear-link')
+let addGem = document.getElementById('add-gem')
+let formTitle = document.getElementById('form-title')
+let userInputField = document.getElementById('user-input-message')
+let submitInputButton = document.getElementById('submit-message')
 
 let affirmations = 
 ['I alone hold the truth of who I am.', 
@@ -52,6 +56,26 @@ const clearMessage = () => {
   clearLink.classList.add('hidden')
 }
 
+const addOwnMessage = () => {
+  formTitle.textContent = "What type of message are you entering?"
+  meditateImage.classList.add('hidden')
+  receiveButton.classList.add('hidden')
+  userInputField.classList.remove('hidden')
+  submitInputButton.classList.remove('hidden')
+
+
+}
+
 receiveButton.addEventListener('click', showUserChoice)
 clearLink.addEventListener('click', clearMessage)
+addGem.addEventListener('click', addOwnMessage)
 
+
+//The add gem button needs to
+//It needs to either hide the receive message button and the
+//Thematic line
+//It needs to show the input field, an "Add message button"
+//It needs to have queried the input field
+//It needs to push the message into the affirmation or mantra array
+//It needs to... show the message immediately, and then iterate again?
+//Local storage?
