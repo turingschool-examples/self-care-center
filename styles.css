@@ -54,10 +54,6 @@ hr {
   font-weight: lighter;
 }
 
-.hidden {
-  display: none;
-}
-
 .clear-message-link {
   color: lightskyblue;
   text-decoration: underline;
@@ -67,4 +63,12 @@ hr {
 .error-message {
   color: red;
   font-size: large;
+}
+
+#user-message {
+  margin-top: 3.8rem;
+}
+
+.hidden {
+  display: none;
 }
