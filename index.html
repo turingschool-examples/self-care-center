@@ -8,7 +8,7 @@
     <h1 class="page-title">Self-Care Center</h1>
     <section class="pick-words">
       <div class="user-choice-section">
-        <h3>What type of messages do you need today?</h3>
+        <h3 id="form-title">What type of messages do you need today?</h3>
         <div class="word-choice-radio-buttons">
           <div>
             <input type="radio" id="affirm" name="self-care" value="affirmation"/>
@@ -22,10 +22,12 @@
         <button id="receive-button" class="receive-message-btn">Receive Message</button>
         <hr>
         <p id="user-message"></p>
+        <input type="text" id="user-input-message" class="user-input-message hidden" placeholder="Enter your gem here..."/>
+        <button>Submit Gem</button>
         <img src="assets/meditate.svg" id="meditate-image" width="140" height="140">
         <p id="clear-link" class="clear-message-link hidden">Clear message?</p>
       </div>
-      <p class="add gem">Got a gem you never want to forget? <br> Add it here.</p>
+      <p id="add-gem" class="add-gem-line">Got a gem you never want to forget? <br> Add it here.</p>
     </section>
     <script type="text/javascript" src="main.js"></script>
   </body>

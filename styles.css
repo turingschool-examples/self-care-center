@@ -69,6 +69,15 @@ hr {
   margin-top: 3.8rem;
 }
 
+.add-gem-line {
+  text-decoration: underline;
+}
+
+.user-input-message {
+  height: 2.5rem;
+  width: 18rem;
+}
+
 .hidden {
   display: none;
 }
