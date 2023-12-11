@@ -8,6 +8,7 @@ let clearLink = document.getElementById('clear-link')
 let addGem = document.getElementById('add-gem')
 let formTitle = document.getElementById('form-title')
 let userInputField = document.getElementById('user-input-message')
+let submitInputButton = document.getElementById('submit-message')
 
 let affirmations = 
 ['I alone hold the truth of who I am.', 
@@ -60,6 +61,7 @@ const addOwnMessage = () => {
   meditateImage.classList.add('hidden')
   receiveButton.classList.add('hidden')
   userInputField.classList.remove('hidden')
+  submitInputButton.classList.remove('hidden')
 
 
 }

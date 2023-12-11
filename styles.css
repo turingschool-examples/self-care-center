@@ -41,7 +41,7 @@ hr {
   gap: 10rem;
 }
 
-.receive-message-btn {
+.submit-receive-message-btn {
   margin: 2rem 0;
   color: white;
   background-color: green;
@@ -73,9 +73,17 @@ hr {
   text-decoration: underline;
 }
 
+.user-gems {
+  display: flex;
+  gap: 1.7rem;
+  flex-direction: column;
+  align-items: center;
+}
+
 .user-input-message {
   height: 2.5rem;
   width: 18rem;
+  border-radius: .5rem;
 }
 
 .hidden {
