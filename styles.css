@@ -6,3 +6,94 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+  background-image: linear-gradient(rgb(99, 192, 99), #B4D435);
+}
+
+.pick-words {
+  text-align: center;
+}
+
+.user-choice-section {
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.1rem;
+  width: 30vw;
+  height: 70vh;
+  box-shadow: -3px 2px 5px darkgreen;
+}
+
+hr {
+  width: 30vw;
+}
+
+.word-choice-radio-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.submit-receive-message-btn {
+  margin: 2rem 0;
+  color: white;
+  background-color: green;
+  border: none;
+  border-radius: .5rem;
+  height: 2.5rem;
+  width: 10rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.clear-message-link {
+  color: lightskyblue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  font-size: large;
+}
+
+#user-message {
+  margin-top: 3.8rem;
+}
+
+.add-gem-line {
+  text-decoration: underline;
+}
+
+.user-gems {
+  display: flex;
+  gap: 1.7rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-input-message {
+  height: 2.5rem;
+  width: 18rem;
+  border-radius: .5rem;
+}
+
+@media (min-width: 1000px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px
+  }
+}
+
+.hidden {
+  display: none;
+}
