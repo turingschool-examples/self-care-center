@@ -6,3 +6,12 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+body {
+    background: linear-gradient(#134d71,#78a7c6,#f7e4bf);
+    min-height: 100vh
+  };
+
+  h1 {
+    background-color: white
+
+  }
