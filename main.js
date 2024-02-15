@@ -14,14 +14,10 @@
 // should I be using display: hidden for the image currently in the output
 // how do I read the value of a radio button? or see if it is checked?
 // Psuedocode:
-// I need 2 arrays that will store the message strings
-// I need a function that will randomly choose a message from the arrays
-// I need a function that will change the innerHTML of the output box
-// I need querySelectors that will target the radio buttons and see if there
-// value is checked
-// I need a querySelector that will target the message button
-// I need a querySelector that willt target the output box
-// I need a class of hidden in css to show and hide the image in the output box
+// I need to disable the button if neither of the radios are selected 
+// I need a clear button to show up when the message appears 
+// when the clear button is clicked, the message and button need to go away
+// how do I diable a button?
 
 //<><>Data Model<><>
 var affiramtions = ["I am worthy of love and respect",
@@ -72,18 +68,28 @@ mantraRadio.addEventListener('click', errorReset);
 //<><>Event Handlers<><>
 function makeNewMessage() {
     if (affrimationRadio.checked) {
+        recieveMessageButton.disabled = false;
         var affirmMessage = randomIndex(affiramtions);
         outputImage.classList.add('hidden');
-        outputSection.innerHTML = `"${affirmMessage}"`;
+        outputSection.innerHTML = `<h4>"${affirmMessage}"</h4>
+        <button type="button" id="clear-button">Clear</button>`;
+        var clearButton = document.querySelector('#clear-button');
+        clearButton.addEventListener('click', clearMessage);
         outputSection.classList.add('output-message');
     } 
     if (mantraRadio.checked) {
+        recieveMessageButton.disabled = false;
         var mantraMessage = randomIndex(mantras);
         outputImage.classList.add('hidden');
-        outputSection.innerHTML = `"${mantraMessage}"`;
+        outputSection.innerHTML = `<h4>"${mantraMessage}"</h4>
+        <button type="button" id="clear-button">Clear</button>`;
+        var clearButton = document.querySelector('#clear-button');
+        clearButton.addEventListener('click', clearMessage);
         outputSection.classList.add('output-message');
     }
     if (!mantraRadio.checked && !affrimationRadio.checked) {
+        recieveMessageButton.disabled = true;
+        recieveMessageButton.classList.add('pointer-handling')
         h3.innerText = '✨PLEASE CHOOSE AN OPTION✨';
         h3.classList.add('error-handling');
     }
@@ -91,13 +97,21 @@ function makeNewMessage() {
 
 function errorReset() {
     if (affrimationRadio.checked) {
+        recieveMessageButton.disabled = false;
+        recieveMessageButton.classList.remove('pointer-handling');
         h3.classList.remove('error-handling');
         h3.innerText = 'Which type of message?';
     }
     if (mantraRadio.checked) {
+        recieveMessageButton.disabled = false;
+        recieveMessageButton.classList.remove('pointer-handling');
         h3.classList.remove('error-handling');
         h3.innerText = 'Which type of message?';
     }
+}
+
+function clearMessage() {
+    outputSection.innerHTML = `<img src="assets/meditate.svg" id="meditation-image"alt="meditation-emoji">`;
 }
 
 //<><>Functions<><>
