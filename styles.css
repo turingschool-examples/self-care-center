@@ -86,4 +86,16 @@ h3 {
     margin-right: 150px;
 }
 
+.output-message {
+    font-size: x-large;
+}
 
+.hidden {
+    display: none;
+}
+
+.error-handling {
+    font-style: italic;
+    font-size: larger;
+    color: rgb(235, 205, 37);
+}
