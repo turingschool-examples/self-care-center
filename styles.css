@@ -1,8 +1,83 @@
-/* font-family: 'Quicksand', sans-serif;
-COLORS
-light-yellow - #f7e4bf;
-light-blue - #78a7c6;
-dark-blue - #134d71;
-white - #ffffff;
-black - #000000;
-*/
+ /* font-family: 'Quicksand', sans-serif; */
+/* COLORS{
+light-yellow: #f7e4bf;
+light-blue: #78a7c6;
+dark-blue: #134d71;
+white: #ffffff;
+black: #000000;
+} */ 
+body {
+    min-height: 100vh;
+    background: linear-gradient(#134d71,#78a7c6,#f7e4bf)
+}
+
+h1 {
+    padding: 60px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  h2 {
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+button {
+  background-color: #134d71;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  line-height: 1;
+  font-size: 15px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: auto; 
+  margin-bottom: 10px;
+}
+
+section {
+  background-color: white;
+  border-radius: 10px;
+  height: 100px;
+  width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#affirmation-button {
+  font-family: 'Quicksand', sans-serif;
+  text-align: flex;
+  margin-top: auto;
+  display: inline;
+  margin-right: 10px;
+}
+
+#mantra-button {
+  font-family: 'Quicksand', sans-serif;
+  text-align: flex;
+  margin-top: auto;
+  display: inline;
+  margin-right: 10px;
+}
+
+svg {
+  height: 50px;
+  width: 50px;
+  margin: auto;
+}
+
+.second-section {
+  color: white;
+  height: 130px;
+  width: 650px;
+  border-radius: 10px;
+  margin-top: 75px;
+}
