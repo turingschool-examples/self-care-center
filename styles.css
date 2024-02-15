@@ -6,3 +6,45 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+body {
+   min-height: 100vh;
+    background-image: linear-gradient(#134d71,  #78a7c6, #f7e4bf); 
+    font-family: 'Quicksand', sans-serif;
+    color: white - #ffffff;
+ }
+
+ h1, h2 {   
+    text-align: center;
+    color: #ffffff;
+ }
+
+ h1 { 
+    font-size: 30px;
+ }
+
+ .healing-choice {
+   background-color: white;
+   border-radius: 10px;
+   height: 150px;
+   width: 650px;
+   margin: auto;
+   display: flex;
+   border: 75px;
+   flex-direction: column;
+   align-items: flex-start;
+   margin-top: 75px;
+ }
+
+ .meditation-image {
+   background-color: white;
+   border-radius: 10px;
+   height: 150px;
+   width: 650px;
+   margin: auto;
+   display: flex;
+   border: 75px;
+   flex-direction: column;
+   align-items: flex-start;
+   margin-top: 75px;
+ }
