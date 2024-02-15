@@ -72,7 +72,7 @@ function makeNewMessage() {
         var affirmMessage = randomIndex(affiramtions);
         outputImage.classList.add('hidden');
         outputSection.innerHTML = `<h4>"${affirmMessage}"</h4>
-        <button type="button" id="clear-button">Clear</button>`;
+        <button type="button" id="clear-button" class="clear">Clear</button>`;
         var clearButton = document.querySelector('#clear-button');
         clearButton.addEventListener('click', clearMessage);
         outputSection.classList.add('output-message');
@@ -82,7 +82,7 @@ function makeNewMessage() {
         var mantraMessage = randomIndex(mantras);
         outputImage.classList.add('hidden');
         outputSection.innerHTML = `<h4>"${mantraMessage}"</h4>
-        <button type="button" id="clear-button">Clear</button>`;
+        <button type="button" id="clear-button" class="clear">Clear</button>`;
         var clearButton = document.querySelector('#clear-button');
         clearButton.addEventListener('click', clearMessage);
         outputSection.classList.add('output-message');
