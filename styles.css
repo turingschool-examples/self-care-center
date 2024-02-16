@@ -91,3 +91,36 @@ h3 {
   margin: auto;
   margin-bottom: 50px;
 }
+
+.view-all {
+  background-color: #f7e4bf;
+  color: #134d71;
+  width: 200px;
+  height: 35px;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-top: 55px;
+  font-size: 20px;
+  flex-direction: column;
+}
+
+.all-messages {
+  flex-direction: row;
+}
+
+h4 {
+  background-color: linear-gradient(#f7e4bf,#78a7c6,#134d71);
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+h5 {
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  font-family: 'Quicksand', sans-serif;
+}
