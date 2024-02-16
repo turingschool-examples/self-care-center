@@ -92,11 +92,15 @@ function makeNewMessage() {
         <h4>"${affirmMessage}"</h4>
         <h2 class="emoji-button" id="clear-button">❌</h2>`;
         var clearButton = document.querySelector('#clear-button');
-        clearButton.addEventListener('click', clearMessage);
+        clearButton.addEventListener('click', () => {
+            clearMessage();
+            removeFavorite(favorites, mantraMessage);
+        });
         var favoriteButton = document.querySelector('#favorite-button');
-        checkFavorites(affirmMessage, favoriteButton);
+        checkFavorites(affirmMessage, favoriteButton, clearButton);
         favoriteButton.addEventListener('click', () => {
             favoriteButton.innerText = '❤️';
+            clearButton.innerText = '🗑️';
             addFavorite(affirmMessage);
         })
         outputSection.classList.add('output-message');
@@ -109,11 +113,15 @@ function makeNewMessage() {
         <h4>"${mantraMessage}"</h4>
         <h2 class="emoji-button" id="clear-button">❌</h2>`;
         var clearButton = document.querySelector('#clear-button');
-        clearButton.addEventListener('click', clearMessage);
+        clearButton.addEventListener('click', () => {
+            clearMessage();
+            removeFavorite(favorites, mantraMessage);
+        });
         var favoriteButton = document.querySelector('#favorite-button');
-        checkFavorites(mantraMessage, favoriteButton);
+        checkFavorites(mantraMessage, favoriteButton, clearButton);
         favoriteButton.addEventListener('click', () => {
             favoriteButton.innerText = '❤️';
+            clearButton.innerText = '🗑️'
             addFavorite(mantraMessage);
         })
         outputSection.classList.add('output-message');
@@ -158,14 +166,19 @@ function addFavorite(message) {
     }
 }
 
-function checkFavorites(message, favoriteButton) {
+function checkFavorites(message, favoriteButton, clearButton) {
     if (favorites.includes(message)) {
-        favoriteButton.innerText = '❤️'
+        favoriteButton.innerText = '❤️';
+        clearButton.innerText = '🗑️'
     }
 }
 
-// function removeFavorite() {
-//     if ()
-// }
+function removeFavorite(favorites, message) {
+    for (var i = 0; i < favorites.length; i++) {
+        if (favorites[i] === message) {
+            favorites.splice(i, 1);
+        }
+    }
+}
 
 
