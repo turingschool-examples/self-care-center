@@ -111,7 +111,6 @@ h3 {
 }
 
 h4 {
-  background-color: linear-gradient(#f7e4bf,#78a7c6,#134d71);
   text-align: center;
   color: white;
   font-size: 17px;
@@ -129,7 +128,58 @@ h5 {
 p {
   text-align: center;
   color: white;
+  font-size: 25px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.mantras-text {
+  text-align: center;
+  color: white;
   font-size: 17px;
   font-family: 'Quicksand', sans-serif;
 }
 
+.affirmations-text {
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.backhome {
+  background-color: #78a7c6;
+  color: #f7e4bf;
+  width: 200px;
+  height: 35px;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-top: 55px;
+  font-size: 20px;
+  flex-direction: column;
+}
+
+.edit {
+  background-color: #f7e4bf;
+  color: #134d71;
+  width: 200px;
+  height: 35px;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-top: 55px;
+  font-size: 20px;
+  flex-direction: column;
+}
+
+.user-input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+}

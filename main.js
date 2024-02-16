@@ -68,9 +68,14 @@ function setMessage(text) {
 }
 
 function showAllMessages(){
+    for (var i = 0; i < mantras.length; i ++){
+        allMantras.innerHTML += `${mantras[i]}</br>`
+    }
+    for (var i = 0; i < affirmations.length; i++){
+        allAffirmations.innerHTML += `${affirmations[i]}</br>`
+    }
+     
     setViewAllMessages();
-    allMantras.innerText = `mantras: ${mantras}`
-    allAffirmations.innerText = `affirmations: ${affirmations}`   
 }
 
 function setViewHome() {
@@ -116,10 +121,10 @@ function editValues(){
     editableAffirmations.innerHTML = ''
     editableMantras.innerHTML = ''
     for (var i = 0; i < affirmations.length; i ++){
-        editableAffirmations.innerHTML += `${affirmations[i]}</br>`
+        editableAffirmations.innerHTML += `${affirmations[i]}<br>`
     }
     for (var i = 0; i < mantras.length; i ++){
-        editableMantras.innerHTML += `${mantras[i]}</br>`
+        editableMantras.innerHTML += `${mantras[i]}<br>`
     }
     setEditView()
 }
