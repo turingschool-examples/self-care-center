@@ -24,8 +24,8 @@ var editableAffirmations = document.querySelector('.affirmations-text')
 var editableMantras = document.querySelector('.mantras-text')
 var doneEditing = document.querySelector('.backhome')
 
-var editedAffirmations = document.querySelector('.affirmations-text');
-var editedMantras = document.querySelector('.mantras-text');
+// var editedAffirmations = document.querySelector('.affirmations-text');
+// var editedMantras = document.querySelector('.mantras-text');
 
 
 messageButton.addEventListener('click', showResult)
@@ -90,22 +90,31 @@ function saveAffirmations(affirmation) {
 }
 
 function addAffirmation() {
-    setMessage(newAffirmation.value);
-    saveAffirmations(newAffirmation.value);
-    setViewHome();
+    var newAffirmationValue = newAffirmation.value.trim();
+    if (!affirmations.includes(newAffirmationValue)) { 
+        setMessage(newAffirmationValue);
+        saveAffirmations(newAffirmationValue);
+        setViewHome();
+    } 
 }
+
 
 function saveMantras(mantra){
     mantras.push(mantra)
 }
 
 function addMantra(){
+    var newMantraValue = newMantra.value.trim();
+    if (!mantras.includes(newMantraValue)) {
     setMessage(newMantra.value);
     saveMantras(newMantra.value);
     setViewHome();
+} 
 }
 
 function editValues(){
+    editableAffirmations.innerHTML = ''
+    editableMantras.innerHTML = ''
     for (var i = 0; i < affirmations.length; i ++){
         editableAffirmations.innerHTML += `${affirmations[i]}</br>`
     }
@@ -122,12 +131,8 @@ function setEditView(){
 }
 
 function pushNewArrays(){
-    var newMantras = editedMantras.innerText.split("\n")
-    var newAffirmations = editableAffirmations.innerText.split("\n")
-    //mantras.splice(0, mantras.length)
-    mantras = newMantras
-    //mantras.push(newMantras)
-    affirmations.splice(0, affirmations.length)
-    //affirmations.push(newAffirmations)
+    mantras = editableMantras.innerText.split("\n")
+    affirmations = editableAffirmations.innerText.split("\n")
+    
     setViewHome()
 }
