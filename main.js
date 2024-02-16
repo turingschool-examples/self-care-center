@@ -14,10 +14,25 @@
 // should I be using display: hidden for the image currently in the output
 // how do I read the value of a radio button? or see if it is checked?
 // Psuedocode:
-// I need to disable the button if neither of the radios are selected 
-// I need a clear button to show up when the message appears 
-// when the clear button is clicked, the message and button need to go away
-// how do I diable a button?
+// I need to add a heart emoji to favorite a message when the quote is rendered
+// do I want to change my delete button to be an X emoji?
+// how do I make a button into an emoji?
+// when a user clicks the favorite icon, the quote needs to be stored in 
+// another array, but still persist in the orginal array
+// the favorited quote needs to have the the heart change colors on favorite
+// if the quote is favorited, should it not show in the random quote generator?
+// or should it just show the favorite icon when it comes up again?
+// should the quotes be objects, so I can add a favorite key to them?
+// I should have a show favorites button? 
+// if I create an object for each element should there be an isFavorited: false key?
+// when the heart is clicked isFavorite: true
+// if isFavorite === true, heart changes to red
+// if there is a show favorite button, I need to loop through the array and 
+// display the indexes with isFavorite: true
+// or is it easier to put the quotes that are clicked on into another array
+// and access that array? 
+// do I loop through the favorite array and check to see if a quote is in there
+// before rendering to the dom? Then set the heart based on that? 
 
 //<><>Data Model<><>
 var affiramtions = ["I am worthy of love and respect",
@@ -34,7 +49,7 @@ var affiramtions = ["I am worthy of love and respect",
 "I am enough just as I am",
 "I am in control of my thoughts and emotions",
 "I attract positivity and opportunities into my life",
-"I am empowered to create the life I desire"]
+"I am empowered to create the life I desire"];
 
 var mantras =["I am at peace",
 "I am here, I am now",
@@ -50,7 +65,9 @@ var mantras =["I am at peace",
 "I am aligned with my purpose",
 "I am guided by intuition",
 "I am grateful for all experiences",
-"I am a beacon of positivity"]
+"I am a beacon of positivity"];
+
+var favorites = [];
 
 //<><>Query Selectors<><>
 var affrimationRadio = document.querySelector('#radio-button-affirmation');
@@ -71,20 +88,34 @@ function makeNewMessage() {
         recieveMessageButton.disabled = false;
         var affirmMessage = randomIndex(affiramtions);
         outputImage.classList.add('hidden');
-        outputSection.innerHTML = `<h4>"${affirmMessage}"</h4>
-        <button type="button" id="clear-button" class="clear">Clear</button>`;
+        outputSection.innerHTML = `<h2 class="emoji-button" id="favorite-button">🤍</h2>
+        <h4>"${affirmMessage}"</h4>
+        <h2 class="emoji-button" id="clear-button">❌</h2>`;
         var clearButton = document.querySelector('#clear-button');
         clearButton.addEventListener('click', clearMessage);
+        var favoriteButton = document.querySelector('#favorite-button');
+        checkFavorites(affirmMessage, favoriteButton);
+        favoriteButton.addEventListener('click', () => {
+            favoriteButton.innerText = '❤️';
+            addFavorite(affirmMessage);
+        })
         outputSection.classList.add('output-message');
     } 
     if (mantraRadio.checked) {
         recieveMessageButton.disabled = false;
         var mantraMessage = randomIndex(mantras);
         outputImage.classList.add('hidden');
-        outputSection.innerHTML = `<h4>"${mantraMessage}"</h4>
-        <button type="button" id="clear-button" class="clear">Clear</button>`;
+        outputSection.innerHTML = `<h2 class="emoji-button" id="favorite-button">🤍</h2>
+        <h4>"${mantraMessage}"</h4>
+        <h2 class="emoji-button" id="clear-button">❌</h2>`;
         var clearButton = document.querySelector('#clear-button');
         clearButton.addEventListener('click', clearMessage);
+        var favoriteButton = document.querySelector('#favorite-button');
+        checkFavorites(mantraMessage, favoriteButton);
+        favoriteButton.addEventListener('click', () => {
+            favoriteButton.innerText = '❤️';
+            addFavorite(mantraMessage);
+        })
         outputSection.classList.add('output-message');
     }
     if (!mantraRadio.checked && !affrimationRadio.checked) {
@@ -120,5 +151,21 @@ function randomIndex(messages) {
     var randMessage = messages[randInd];
     return randMessage;
 }
+
+function addFavorite(message) {
+    if (!favorites.includes(message)) {
+    favorites.push(message);
+    }
+}
+
+function checkFavorites(message, favoriteButton) {
+    if (favorites.includes(message)) {
+        favoriteButton.innerText = '❤️'
+    }
+}
+
+// function removeFavorite() {
+//     if ()
+// }
 
 
