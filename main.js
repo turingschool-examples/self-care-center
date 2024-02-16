@@ -76,6 +76,7 @@ var recieveMessageButton = document.querySelector('#message-button');
 var outputSection = document.querySelector('#message-output-box');
 var outputImage = document.querySelector('#meditation-image');
 var h3 = document.querySelector('h3');
+var showFavoritesButton = document.querySelector('#favorites-button');
 
 //<><>Event Listeners<><>
 recieveMessageButton.addEventListener('click', makeNewMessage);
@@ -93,15 +94,16 @@ function makeNewMessage() {
         <h2 class="emoji-button" id="clear-button">❌</h2>`;
         var clearButton = document.querySelector('#clear-button');
         clearButton.addEventListener('click', () => {
+            removeFavorite(favorites, affirmMessage);
             clearMessage();
-            removeFavorite(favorites, mantraMessage);
+            showFavorites();
         });
         var favoriteButton = document.querySelector('#favorite-button');
         checkFavorites(affirmMessage, favoriteButton, clearButton);
         favoriteButton.addEventListener('click', () => {
-            favoriteButton.innerText = '❤️';
-            clearButton.innerText = '🗑️';
             addFavorite(affirmMessage);
+            showFavorites();
+            changeEmojiButtons(favoriteButton, clearButton);
         })
         outputSection.classList.add('output-message');
     } 
@@ -114,15 +116,16 @@ function makeNewMessage() {
         <h2 class="emoji-button" id="clear-button">❌</h2>`;
         var clearButton = document.querySelector('#clear-button');
         clearButton.addEventListener('click', () => {
+            removeFavorite(favorites, affirmMessage);
             clearMessage();
-            removeFavorite(favorites, mantraMessage);
+            showFavorites();
         });
         var favoriteButton = document.querySelector('#favorite-button');
         checkFavorites(mantraMessage, favoriteButton, clearButton);
         favoriteButton.addEventListener('click', () => {
-            favoriteButton.innerText = '❤️';
-            clearButton.innerText = '🗑️'
-            addFavorite(mantraMessage);
+            addFavorite(affirmMessage);
+            showFavorites();
+            changeEmojiButtons(favoriteButton, clearButton);
         })
         outputSection.classList.add('output-message');
     }
@@ -179,6 +182,24 @@ function removeFavorite(favorites, message) {
             favorites.splice(i, 1);
         }
     }
+    return favorites
 }
+
+function showFavorites() {
+    if (favorites.length >= 1) {
+        showFavoritesButton.classList.remove('hidden');
+        showFavoritesButton.classList.add('recieve-message');
+    } else if (favorites.length === 0) {
+        showFavoritesButton.classList.remove('recieve-message')
+        showFavoritesButton.classList.add('hidden');
+    }
+}
+
+function changeEmojiButtons(heart, clear) {
+    heart.innerText = '❤️';
+    clear.innerText = '🗑️';
+}
+
+
 
 
