@@ -72,16 +72,25 @@ var favorites = [];
 //<><>Query Selectors<><>
 var affrimationRadio = document.querySelector('#radio-button-affirmation');
 var mantraRadio = document.querySelector('#radio-button-mantra');
-var recieveMessageButton = document.querySelector('#message-button');
+
+var inputSection = document.querySelector('#user-input-box');
 var outputSection = document.querySelector('#message-output-box');
 var outputImage = document.querySelector('#meditation-image');
+var favoriteSection = document.querySelector('#favorites-section')
+
 var h3 = document.querySelector('h3');
-var showFavoritesButton = document.querySelector('#favorites-button');
+
+var recieveMessageButton = document.querySelector('#message-button');
+var viewFavoritesButton = document.querySelector('#favorites-button');
+var homeButton = document.querySelector('#home-button');
+
 
 //<><>Event Listeners<><>
 recieveMessageButton.addEventListener('click', makeNewMessage);
 affrimationRadio.addEventListener('click', errorReset);
 mantraRadio.addEventListener('click', errorReset);
+viewFavoritesButton.addEventListener('click', viewFavorites);
+homeButton.addEventListener('click', viewHome);
 
 //<><>Event Handlers<><>
 function makeNewMessage() {
@@ -96,13 +105,13 @@ function makeNewMessage() {
         clearButton.addEventListener('click', () => {
             removeFavorite(favorites, affirmMessage);
             clearMessage();
-            showFavorites();
+            showFavoritesButton();
         });
         var favoriteButton = document.querySelector('#favorite-button');
         checkFavorites(affirmMessage, favoriteButton, clearButton);
         favoriteButton.addEventListener('click', () => {
             addFavorite(affirmMessage);
-            showFavorites();
+            showFavoritesButton();
             changeEmojiButtons(favoriteButton, clearButton);
         })
         outputSection.classList.add('output-message');
@@ -116,15 +125,15 @@ function makeNewMessage() {
         <h2 class="emoji-button" id="clear-button">❌</h2>`;
         var clearButton = document.querySelector('#clear-button');
         clearButton.addEventListener('click', () => {
-            removeFavorite(favorites, affirmMessage);
+            removeFavorite(favorites, mantraMessage);
             clearMessage();
-            showFavorites();
+            showFavoritesButton();
         });
         var favoriteButton = document.querySelector('#favorite-button');
         checkFavorites(mantraMessage, favoriteButton, clearButton);
         favoriteButton.addEventListener('click', () => {
-            addFavorite(affirmMessage);
-            showFavorites();
+            addFavorite(mantraMessage);
+            showFavoritesButton();
             changeEmojiButtons(favoriteButton, clearButton);
         })
         outputSection.classList.add('output-message');
@@ -185,13 +194,13 @@ function removeFavorite(favorites, message) {
     return favorites
 }
 
-function showFavorites() {
+function showFavoritesButton() {
     if (favorites.length >= 1) {
-        showFavoritesButton.classList.remove('hidden');
-        showFavoritesButton.classList.add('recieve-message');
+        viewFavoritesButton.classList.remove('hidden');
+        viewFavoritesButton.classList.add('recieve-message');
     } else if (favorites.length === 0) {
-        showFavoritesButton.classList.remove('recieve-message')
-        showFavoritesButton.classList.add('hidden');
+        viewFavoritesButton.classList.remove('recieve-message')
+        viewFavoritesButton.classList.add('hidden');
     }
 }
 
@@ -199,6 +208,38 @@ function changeEmojiButtons(heart, clear) {
     heart.innerText = '❤️';
     clear.innerText = '🗑️';
 }
+
+function viewFavorites() {
+    favoriteSection.innerHTML = '';
+    inputSection.classList.add('hidden');
+    outputSection.classList.add('hidden');
+    h3.classList.add('hidden');
+    viewFavoritesButton.classList.add('hidden');
+    favoriteSection.classList.remove('hidden');
+    favoriteSection.classList.add('favorites-output');  
+    homeButton.classList.remove('hidden');
+    homeButton.classList.add('recieve-message');
+    getFavorites(favorites);  
+}
+
+function viewHome() {
+    inputSection.classList.remove('hidden');
+    outputSection.classList.remove('hidden');
+    outputSection.classList.add('message-output');
+    h3.classList.remove('hidden');
+    viewFavoritesButton.classList.remove('hidden');
+    favoriteSection.classList.add('hidden');
+    homeButton.classList.add('hidden');
+}
+
+function getFavorites(favorites) {
+    for (var i = 0; i < favorites.length; i++) {
+        favoriteSection.innerHTML += 
+        `<h2 class="favorite-display">"${favorites[i]}"</h2>`
+    }
+}
+
+
 
 
 
