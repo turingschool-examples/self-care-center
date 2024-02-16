@@ -20,31 +20,77 @@ body {
  }
 
  h1 { 
-    font-size: 30px;
+    font-size: 30px; 
+ }
+
+ #button-header {
+   font-size: 18px;
+ }
+
+ .middle-section {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   margin-top: 100px;
  }
 
  .healing-choice {
    background-color: white;
    border-radius: 10px;
-   height: 150px;
-   width: 650px;
+   height: 75px;
+   width: 450px;
    margin: auto;
    display: flex;
-   border: 75px;
+   justify-content: center;
+   align-items: space-evenly;
+ }
+
+ .meditation-box {
+   background-color: white;
+   border-radius: 10px;
+   height: 100px;
+   width: 700px;
+   margin: auto;
+   display: flex;
+   border: 100px;
    flex-direction: column;
    align-items: flex-start;
    margin-top: 75px;
  }
 
- .meditation-image {
-   background-color: white;
-   border-radius: 10px;
-   height: 150px;
-   width: 650px;
-   margin: auto;
+ #receive-message-button {
+      background: #134d71;
+      color: white;
+      height: 20px;
+      width: 150px;
+      font-family: 'Quicksand', sans-serif;
+      border-radius: 5px;
+      margin: auto;
+ }
+
+.radio-button {
+   display:flex;
+   text-align: center;
+   margin-top: auto;
+   justify-content: center
+}
+
+
+
+.top-box{
+   width: 400px;
    display: flex;
-   border: 75px;
    flex-direction: column;
-   align-items: flex-start;
-   margin-top: 75px;
+}
+
+ .meditation-box{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 100px; 
+ }
+
+ #meditation-image {
+   height: 60px;
+   width: 60px;
  }
