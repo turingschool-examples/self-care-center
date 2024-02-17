@@ -18,7 +18,7 @@ body {
     align-items: center;
 }
 
-.choose-care-message {
+.choose-care-message-container {
     background-color: #ffffff;
     border-radius: 8px;
     width: 45%;
@@ -27,23 +27,36 @@ body {
     margin-top: 0;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
 }
 
-.message-output {
+.message-output-container {
     background-color: #ffffff;
     width: 65%;
     height: 15%;
     margin: 25px;
+    margin-bottom: 50px;
     border-radius: 8px;
     margin-top: 60px;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+}
+
+.favorites-output-container {
+    background-color: #ffffff;
+    font-size: smaller;
+    width: 65%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
  .input-buttons {
@@ -53,32 +66,38 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
+    font-style: italicgit;
 }
 
 .radio-button {
    display: inline-block;
    padding: 0;
    margin-right: 5px;
+   cursor: pointer;
 }
 
 .recieve-message {
     background-color: #134d71;
     color: #ffffff;
     border-radius: 8px;
+    cursor: pointer;
 }
 
-h1 {
+.main-header {
     color: #ffffff;
     margin-bottom: 150px;
 }
 
-h3 {
+.sub-heading {
     margin: 15px;
     color: #ffffff;
 }
 
-h4 {
-    margin: 0;
+.random-phrase {
+    color:#000305;
+    font-size: x-large;
+    margin: 10px;
 }
 
 #meditation-image {
@@ -104,13 +123,10 @@ h4 {
     color: rgb(235, 205, 37);
 }
 
-.pointer-handling {
+.error-pointer-handling {
     cursor: not-allowed;
 }
 
-.clear {
-    background-color: #134d71;
-    color: white;
-    border-radius: 8px;
-    width: 20%;
+.button-pointer-handler {
+    cursor: pointer;
 }
