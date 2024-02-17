@@ -1,27 +1,4 @@
 
-// Restate the goal: 
-// I need to build a web app that will allow users to recieve a self care 
-// message. They should be able to select the type of message they want 
-// to recieve, click a button, and then see a randomly generated message
-// Data Types: 
-// I need have a data model - this will be an array or arrays that store the 
-// messages in them
-// I will be working with strings - these will be the messages
-// I will be working with radio buttons
-// Questiions:
-// is it better to use innerHTML or createElement and then appendChild when 
-// displaying something to the DOM?
-// should I be using display: hidden for the image currently in the output
-// how do I read the value of a radio button? or see if it is checked?
-// Psuedocode:
-// I need to make it so when a user clicks the heart icon again it changes back to white and removes
-// the favorited message from the favorites array
-// How do I do another click on the heart?
-// Do I need a conditional saying if the heart is red, execute this?
-// Do I need a conditional on the white heart in the first place to turn it red? 
-
-// How do I get the hear emoji to change in the show favorites page? 
-
 //<><>Data Model<><>
 var affirmations = ["I am worthy of love and respect",
 "I embrace my uniqueness and individuality",

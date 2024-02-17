@@ -1,11 +1,3 @@
-/* font-family: 'Quicksand', sans-serif;
-COLORS
-light-yellow - #f7e4bf;
-light-blue - #78a7c6;
-dark-blue - #134d71;
-white - #ffffff;
-black - #000000;
-*/
 
 body {
     font-family: 'Quicksand', sans-serif;
@@ -100,15 +92,6 @@ body {
     margin: 10px;
 }
 
-#meditation-image {
-    width: 45%;
-    height: 45%;
-}
-
-#affirm-radio {
-    margin-right: 150px;
-}
-
 .output-message {
     font-size: x-large;
 }
@@ -129,4 +112,13 @@ body {
 
 .button-pointer-handler {
     cursor: pointer;
+}
+
+#meditation-image {
+    width: 45%;
+    height: 45%;
+}
+
+#affirm-radio {
+    margin-right: 150px;
 }
