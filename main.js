@@ -14,28 +14,16 @@
 // should I be using display: hidden for the image currently in the output
 // how do I read the value of a radio button? or see if it is checked?
 // Psuedocode:
-// I need to add a heart emoji to favorite a message when the quote is rendered
-// do I want to change my delete button to be an X emoji?
-// how do I make a button into an emoji?
-// when a user clicks the favorite icon, the quote needs to be stored in 
-// another array, but still persist in the orginal array
-// the favorited quote needs to have the the heart change colors on favorite
-// if the quote is favorited, should it not show in the random quote generator?
-// or should it just show the favorite icon when it comes up again?
-// should the quotes be objects, so I can add a favorite key to them?
-// I should have a show favorites button? 
-// if I create an object for each element should there be an isFavorited: false key?
-// when the heart is clicked isFavorite: true
-// if isFavorite === true, heart changes to red
-// if there is a show favorite button, I need to loop through the array and 
-// display the indexes with isFavorite: true
-// or is it easier to put the quotes that are clicked on into another array
-// and access that array? 
-// do I loop through the favorite array and check to see if a quote is in there
-// before rendering to the dom? Then set the heart based on that? 
+// I need to make it so when a user clicks the heart icon again it changes back to white and removes
+// the favorited message from the favorites array
+// How do I do another click on the heart?
+// Do I need a conditional saying if the heart is red, execute this?
+// Do I need a conditional on the white heart in the first place to turn it red? 
+
+// How do I get the hear emoji to change in the show favorites page? 
 
 //<><>Data Model<><>
-var affiramtions = ["I am worthy of love and respect",
+var affirmations = ["I am worthy of love and respect",
 "I embrace my uniqueness and individuality",
 "I radiate positivity and attract abundance",
 "I am confident in my abilities and talents",
@@ -69,100 +57,140 @@ var mantras =["I am at peace",
 
 var favorites = [];
 
+//<><>Variables<><>
+var randomMessage;
+
 //<><>Query Selectors<><>
 var affrimationRadio = document.querySelector('#radio-button-affirmation');
 var mantraRadio = document.querySelector('#radio-button-mantra');
 
 var inputSection = document.querySelector('#user-input-box');
 var outputSection = document.querySelector('#message-output-box');
-var outputImage = document.querySelector('#meditation-image');
+var outputSectionImage = document.querySelector('#meditation-image');
 var favoriteSection = document.querySelector('#favorites-section')
 
-var h3 = document.querySelector('h3');
+var messageOutput = document.querySelector('#random-message');
+var messageTypeHeader = document.querySelector('#message-type');
+var dblClickMessage = document.querySelector('#dbl-click-message');
 
 var recieveMessageButton = document.querySelector('#message-button');
-var viewFavoritesButton = document.querySelector('#favorites-button');
+var favoritesButton = document.querySelector('#favorites-button');
 var homeButton = document.querySelector('#home-button');
-
 
 //<><>Event Listeners<><>
 recieveMessageButton.addEventListener('click', makeNewMessage);
-affrimationRadio.addEventListener('click', errorReset);
-mantraRadio.addEventListener('click', errorReset);
-viewFavoritesButton.addEventListener('click', viewFavorites);
+affrimationRadio.addEventListener('click', radioReset);
+mantraRadio.addEventListener('click', radioReset);
+favoritesButton.addEventListener('click', viewFavoritesPage);
 homeButton.addEventListener('click', viewHome);
+favoriteSection.addEventListener('dblclick', deleteFromFavoritesContainer)
 
 //<><>Event Handlers<><>
 function makeNewMessage() {
     if (affrimationRadio.checked) {
         recieveMessageButton.disabled = false;
-        var affirmMessage = randomIndex(affiramtions);
-        outputImage.classList.add('hidden');
-        outputSection.innerHTML = `<h2 class="emoji-button" id="favorite-button">🤍</h2>
-        <h4>"${affirmMessage}"</h4>
-        <h2 class="emoji-button" id="clear-button">❌</h2>`;
+        randomMessage = randomIndex(affirmations);
+        outputSectionImage.classList.add('hidden');
+        outputSection.innerHTML = `<h2 class="button-pointer-handler" id="favorite-button">🤍</h2>
+        <messageTypeHeader class="random-phrase">"${randomMessage}"</messageTypeHeader>
+        <h2 class="button-pointer-handler" id="clear-button">❌</h2>`;
         var clearButton = document.querySelector('#clear-button');
         clearButton.addEventListener('click', () => {
-            removeFavorite(favorites, affirmMessage);
+            removeFavorite(favorites, randomMessage);
             clearMessage();
             showFavoritesButton();
         });
         var favoriteButton = document.querySelector('#favorite-button');
-        checkFavorites(affirmMessage, favoriteButton, clearButton);
+        checkFavorites(randomMessage, favoriteButton, clearButton);
         favoriteButton.addEventListener('click', () => {
-            addFavorite(affirmMessage);
+            addFavorite(randomMessage);
             showFavoritesButton();
             changeEmojiButtons(favoriteButton, clearButton);
         })
-        outputSection.classList.add('output-message');
+        outputSection.classList.add('output-message-size');
     } 
     if (mantraRadio.checked) {
+        // favoriteButton1.classList.remove('hidden');
         recieveMessageButton.disabled = false;
-        var mantraMessage = randomIndex(mantras);
-        outputImage.classList.add('hidden');
-        outputSection.innerHTML = `<h2 class="emoji-button" id="favorite-button">🤍</h2>
-        <h4>"${mantraMessage}"</h4>
-        <h2 class="emoji-button" id="clear-button">❌</h2>`;
+        randomMessage = randomIndex(mantras);
+        outputSectionImage.classList.add('hidden');
+        outputSection.innerHTML = `<h2 class="button-pointer-handler" id="favorite-button">🤍</h2>
+        <messageTypeHeader class="random-phrase">"${randomMessage}"</messageTypeHeader>
+        <h2 class="button-pointer-handler" id="clear-button">❌</h2>`;
         var clearButton = document.querySelector('#clear-button');
         clearButton.addEventListener('click', () => {
-            removeFavorite(favorites, mantraMessage);
+            removeFavorite(favorites, randomMessage);
             clearMessage();
             showFavoritesButton();
         });
         var favoriteButton = document.querySelector('#favorite-button');
-        checkFavorites(mantraMessage, favoriteButton, clearButton);
+        checkFavorites(randomMessage, favoriteButton, clearButton);
         favoriteButton.addEventListener('click', () => {
-            addFavorite(mantraMessage);
+            addFavorite(randomMessage);
             showFavoritesButton();
             changeEmojiButtons(favoriteButton, clearButton);
         })
-        outputSection.classList.add('output-message');
-    }
+        outputSection.classList.add('output-message-size');
+    } 
     if (!mantraRadio.checked && !affrimationRadio.checked) {
         recieveMessageButton.disabled = true;
-        recieveMessageButton.classList.add('pointer-handling')
-        h3.innerText = '✨PLEASE CHOOSE AN OPTION✨';
-        h3.classList.add('error-handling');
+        recieveMessageButton.classList.add('error-pointer-handling')
+        messageTypeHeader.innerText = '✨PLEASE CHOOSE AN OPTION✨';
+        messageTypeHeader.classList.add('error-handling');
     }
 }
 
-function errorReset() {
+function showFavoritesButton() {
+    if (favorites.length >= 1) {
+        favoritesButton.classList.remove('hidden');
+        favoritesButton.classList.add('recieve-message');
+    } else if (favorites.length === 0) {
+        favoritesButton.classList.remove('recieve-message')
+        favoritesButton.classList.add('hidden');
+    }
+}
+
+function viewFavoritesPage() {
+    favoriteSection.innerHTML = '';
+    inputSection.classList.add('hidden');
+    outputSection.classList.add('hidden');
+    messageTypeHeader.classList.add('hidden');
+    favoritesButton.classList.add('hidden');
+    favoriteSection.classList.remove('hidden');
+    favoriteSection.classList.add('favorites-output-container');  
+    homeButton.classList.remove('hidden');
+    homeButton.classList.add('recieve-message');
+    dblClickMessage.classList.remove('hidden');
+    dblClickMessage.classList.add('sub-heading');
+    retrieveFavorites(favorites);  
+}
+
+function viewHome() {
+    inputSection.classList.remove('hidden');
+    outputSection.classList.remove('hidden');
+    outputSection.classList.add('message-output');
+    messageTypeHeader.classList.remove('hidden');
+    favoritesButton.classList.remove('hidden');
+    favoriteSection.classList.add('hidden');
+    homeButton.classList.add('hidden');
+    dblClickMessage.classList.add('hidden');
+    showFavoritesButton();
+    clearMessage();
+}
+
+function radioReset() {
     if (affrimationRadio.checked) {
         recieveMessageButton.disabled = false;
-        recieveMessageButton.classList.remove('pointer-handling');
-        h3.classList.remove('error-handling');
-        h3.innerText = 'Which type of message?';
+        recieveMessageButton.classList.remove('error-pointer-handling');
+        messageTypeHeader.classList.remove('error-handling');
+        messageTypeHeader.innerText = 'Which type of message?';
     }
     if (mantraRadio.checked) {
         recieveMessageButton.disabled = false;
-        recieveMessageButton.classList.remove('pointer-handling');
-        h3.classList.remove('error-handling');
-        h3.innerText = 'Which type of message?';
+        recieveMessageButton.classList.remove('error-pointer-handling');
+        messageTypeHeader.classList.remove('error-handling');
+        messageTypeHeader.innerText = 'Which type of message?';
     }
-}
-
-function clearMessage() {
-    outputSection.innerHTML = `<img src="assets/meditate.svg" id="meditation-image"alt="meditation-emoji">`;
 }
 
 //<><>Functions<><>
@@ -178,13 +206,6 @@ function addFavorite(message) {
     }
 }
 
-function checkFavorites(message, favoriteButton, clearButton) {
-    if (favorites.includes(message)) {
-        favoriteButton.innerText = '❤️';
-        clearButton.innerText = '🗑️'
-    }
-}
-
 function removeFavorite(favorites, message) {
     for (var i = 0; i < favorites.length; i++) {
         if (favorites[i] === message) {
@@ -194,13 +215,27 @@ function removeFavorite(favorites, message) {
     return favorites
 }
 
-function showFavoritesButton() {
-    if (favorites.length >= 1) {
-        viewFavoritesButton.classList.remove('hidden');
-        viewFavoritesButton.classList.add('recieve-message');
-    } else if (favorites.length === 0) {
-        viewFavoritesButton.classList.remove('recieve-message')
-        viewFavoritesButton.classList.add('hidden');
+function checkFavorites(message, favoriteButton, clearButton) {
+    if (favorites.includes(message)) {
+        favoriteButton.innerText = '❤️';
+        clearButton.innerText = '🗑️'
+    }
+}
+
+function retrieveFavorites(favorites) {
+    for (var i = 0; i < favorites.length; i++) {
+        favoriteSection.innerHTML += 
+        `<h2 class="favorite-display button-pointer-handler">${favorites[i]}</h2>`
+    }
+}
+
+function deleteFromFavoritesContainer(e) {
+    var favoriteMessage = e.target;
+    for (var i = 0; i < favorites.length; i++) {
+        if (favorites[i] === favoriteMessage.innerText) {
+            favorites.splice(i, 1);
+            favoriteMessage.remove();
+        }
     }
 }
 
@@ -209,35 +244,14 @@ function changeEmojiButtons(heart, clear) {
     clear.innerText = '🗑️';
 }
 
-function viewFavorites() {
-    favoriteSection.innerHTML = '';
-    inputSection.classList.add('hidden');
-    outputSection.classList.add('hidden');
-    h3.classList.add('hidden');
-    viewFavoritesButton.classList.add('hidden');
-    favoriteSection.classList.remove('hidden');
-    favoriteSection.classList.add('favorites-output');  
-    homeButton.classList.remove('hidden');
-    homeButton.classList.add('recieve-message');
-    getFavorites(favorites);  
+function clearMessage() {
+    outputSection.innerHTML = `<img src="assets/meditate.svg" id="meditation-image"alt="meditation-emoji">`;
 }
 
-function viewHome() {
-    inputSection.classList.remove('hidden');
-    outputSection.classList.remove('hidden');
-    outputSection.classList.add('message-output');
-    h3.classList.remove('hidden');
-    viewFavoritesButton.classList.remove('hidden');
-    favoriteSection.classList.add('hidden');
-    homeButton.classList.add('hidden');
-}
 
-function getFavorites(favorites) {
-    for (var i = 0; i < favorites.length; i++) {
-        favoriteSection.innerHTML += 
-        `<h2 class="favorite-display">"${favorites[i]}"</h2>`
-    }
-}
+
+
+
 
 
 
