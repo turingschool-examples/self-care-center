@@ -5,7 +5,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-  
+    <h1 class="main-header">✨Self Care Center✨</h1>
+    <h3 class="sub-heading" id="message-type">Which type of message?</h3>
+    <section class="choose-care-message-container" id="user-input-box">
+      <article class="input-buttons">
+        <input type="radio" class="radio-button" id="radio-button-affirmation" name="message" value="affirmation"/>
+        <label for="radio-button-affirmation" id="affirm-radio">affirmation</label>
+        <input type="radio" class="radio-button" id="radio-button-mantra" name="message" value="mantra"/>
+        <label for="radio-button-mantra" id="mantra-radio">mantra</label>
+      </article>
+      <article class="output-button">
+        <button type="button" class="recieve-message" id="message-button">Recieve Message</button>
+      </article>
+    </section>
+    <section class="message-output-container" id="message-output-box">
+      <img src="assets/meditate.svg" id="meditation-image"alt="meditation-emoji">
+    </section>
+    <button class="hidden" id="favorites-button">Show Favorites</button>
+    <button class="hidden" id="home-button">Home</button>
+    <section class="hidden" id="favorites-section">
+    </section>
+    <article class="hidden" id="dbl-click-message">✨DBL Click a Quote to Remove It✨</article>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
