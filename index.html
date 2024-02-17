@@ -9,25 +9,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1 id="title">✨Self Care Center✨</h1>
-      <div class="middle-section">
-        <h2 id="button-header"> What Type of Message</h2>
-      <section class="healing-choice" id="healing choice">
-        <div class="top-box">
-          <p class="radio-button">
-              <label for="radio-affirmation">Affirmation</label>
-              <input type ="radio" id="radio-affirmation" name="input-message">
-              <label for="radio-mantra">Mantra</label>
-              <input type ="radio" id="radio-mantra" name="input-message">
-          </p>
-            <button type="submit" id="receive-message-button">Receive Message</button>
+      <h1 id="title">✨Self Care Center✨</h1>
+        <div class="middle-section">
+          <h2 id="button-header"> What Type of Message</h2>
+        <section class="healing-choice" id="healing choice">
+          <div class="top-box">
+            <p class="radio-button">
+              <span class="radio-pair1">
+                <label for="radio-affirmation">Affirmation</label>
+                <input type ="radio" id="radio-affirmation" value="affirmation" name="input-message">
+              </span>
+              <span class="radio-pair1">
+                <label for="radio-mantra">Mantra</label>
+                <input type ="radio" id="radio-mantra" value="mantra" name="input-message">
+              </span>
+            </p>
+            <div class="button-row">
+              <button type="submit" id="receive-message-button">Receive Message</button>
+            </div class="button-row">
+          </div>
+        </sectio
         </div>
+      <section class="meditation-box">
+        <img src="assets/meditate.svg" id="meditation-image" alt="Image">
       </section>
-      </div>
-    <section class="meditation-box">
-      <img src="assets/meditate.svg" id="meditation-image" alt="Image">
-    </section>
-    <h1 id="block1"> </h1>
+      <h1 id="block1"> </h1>
+      <!-- <section class="view saved-view hidden">
+        <section class="saved-covers-section"></section> -->
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="data.js"></script>
   </body>
 </html>
