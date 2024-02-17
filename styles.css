@@ -72,18 +72,31 @@ body {
    display:flex;
    text-align: center;
    margin-top: auto;
-   justify-content: center
+   justify-content: space-evenly;
 }
 
+.radio-pair1,
+.radio-pair2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
-
-.top-box{
+.top-box {
    width: 400px;
    display: flex;
    flex-direction: column;
+   justify-content: space-evenly;
 }
 
- .meditation-box{
+.button-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+ .meditation-box {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -93,4 +106,8 @@ body {
  #meditation-image {
    height: 60px;
    width: 60px;
+ }
+
+ .meditation-hidden{
+  display: none;
  }
