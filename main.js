@@ -55,7 +55,14 @@ var mantras =["I am at peace",
 "I am grateful for all experiences",
 "I am a beacon of positivity"];
 
+//<><>Favorites Storage<><>
 var favorites = [];
+var storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+//<><>Local Storage<><>
+function saveFavoritesToLocalStorage(favorites) {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+}
 
 //<><>Variables<><>
 var randomMessage;
@@ -77,14 +84,6 @@ var recieveMessageButton = document.querySelector('#message-button');
 var favoritesButton = document.querySelector('#favorites-button');
 var homeButton = document.querySelector('#home-button');
 
-//<><>Event Listeners<><>
-recieveMessageButton.addEventListener('click', makeNewMessage);
-affrimationRadio.addEventListener('click', radioReset);
-mantraRadio.addEventListener('click', radioReset);
-favoritesButton.addEventListener('click', viewFavoritesPage);
-homeButton.addEventListener('click', viewHome);
-favoriteSection.addEventListener('dblclick', deleteFromFavoritesContainer)
-
 //<><>Event Handlers<><>
 function makeNewMessage() {
     if (affrimationRadio.checked) {
@@ -96,7 +95,7 @@ function makeNewMessage() {
         <h2 class="button-pointer-handler" id="clear-button">❌</h2>`;
         var clearButton = document.querySelector('#clear-button');
         clearButton.addEventListener('click', () => {
-            removeFavorite(favorites, randomMessage);
+            removeFavorite(storedFavorites, randomMessage);
             clearMessage();
             showFavoritesButton();
         });
@@ -110,7 +109,6 @@ function makeNewMessage() {
         outputSection.classList.add('output-message-size');
     } 
     if (mantraRadio.checked) {
-        // favoriteButton1.classList.remove('hidden');
         recieveMessageButton.disabled = false;
         randomMessage = randomIndex(mantras);
         outputSectionImage.classList.add('hidden');
@@ -119,7 +117,7 @@ function makeNewMessage() {
         <h2 class="button-pointer-handler" id="clear-button">❌</h2>`;
         var clearButton = document.querySelector('#clear-button');
         clearButton.addEventListener('click', () => {
-            removeFavorite(favorites, randomMessage);
+            removeFavorite(storedFavorites, randomMessage);
             clearMessage();
             showFavoritesButton();
         });
@@ -141,10 +139,10 @@ function makeNewMessage() {
 }
 
 function showFavoritesButton() {
-    if (favorites.length >= 1) {
+    if (storedFavorites.length >= 1) {
         favoritesButton.classList.remove('hidden');
         favoritesButton.classList.add('recieve-message');
-    } else if (favorites.length === 0) {
+    } else if (storedFavorites.length === 0) {
         favoritesButton.classList.remove('recieve-message')
         favoritesButton.classList.add('hidden');
     }
@@ -162,7 +160,7 @@ function viewFavoritesPage() {
     homeButton.classList.add('recieve-message');
     dblClickMessage.classList.remove('hidden');
     dblClickMessage.classList.add('sub-heading');
-    retrieveFavorites(favorites);  
+    retrieveFavorites(storedFavorites);  
 }
 
 function viewHome() {
@@ -201,8 +199,9 @@ function randomIndex(messages) {
 }
 
 function addFavorite(message) {
-    if (!favorites.includes(message)) {
-    favorites.push(message);
+    if (!storedFavorites.includes(message)) {
+        storedFavorites.push(message);
+        saveFavoritesToLocalStorage(storedFavorites);
     }
 }
 
@@ -210,13 +209,14 @@ function removeFavorite(favorites, message) {
     for (var i = 0; i < favorites.length; i++) {
         if (favorites[i] === message) {
             favorites.splice(i, 1);
+            saveFavoritesToLocalStorage(storedFavorites);
         }
     }
     return favorites
 }
 
 function checkFavorites(message, favoriteButton, clearButton) {
-    if (favorites.includes(message)) {
+    if (storedFavorites.includes(message)) {
         favoriteButton.innerText = '❤️';
         clearButton.innerText = '🗑️'
     }
@@ -231,9 +231,9 @@ function retrieveFavorites(favorites) {
 
 function deleteFromFavoritesContainer(e) {
     var favoriteMessage = e.target;
-    for (var i = 0; i < favorites.length; i++) {
-        if (favorites[i] === favoriteMessage.innerText) {
-            favorites.splice(i, 1);
+    for (var i = 0; i < storedFavorites.length; i++) {
+        if (storedFavorites[i] === favoriteMessage.innerText) {
+            storedFavorites.splice(i, 1);
             favoriteMessage.remove();
         }
     }
@@ -247,6 +247,16 @@ function changeEmojiButtons(heart, clear) {
 function clearMessage() {
     outputSection.innerHTML = `<img src="assets/meditate.svg" id="meditation-image"alt="meditation-emoji">`;
 }
+
+//<><>Event Listeners<><>
+recieveMessageButton.addEventListener('click', makeNewMessage);
+affrimationRadio.addEventListener('click', radioReset);
+mantraRadio.addEventListener('click', radioReset);
+favoritesButton.addEventListener('click', viewFavoritesPage);
+homeButton.addEventListener('click', viewHome);
+favoriteSection.addEventListener('dblclick', deleteFromFavoritesContainer);
+
+showFavoritesButton();
 
 
 
