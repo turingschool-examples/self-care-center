@@ -8,21 +8,21 @@ function getRandomIndex(array) {
   var recieveButton = document.querySelector("#receive-message-button");
   var addButton = document.querySelector('#add-message-button');
   var submitButton = document.querySelector("#submit-message-button");
+
   var mantraChoice = document.querySelector("#radio-mantra");
   var affirmationChoice = document.querySelector("#radio-affirmation");
+
   var meditationImage = document.querySelector("#meditation-image");
+
   var meditationBox = document.querySelector(".meditation-box");
   var addMessageForm = document.querySelector('.add-message-form');
   //random variable arrays
-
-  var newMessage = document.querySelector(`.input-box`).value
-
 
 
   //event listeners
   recieveButton.addEventListener('click', displaySelfCare)
   addButton.addEventListener('click', addSelfCare)
-  submitButton.addEventListener('click', submitSelfCare)
+  // submitButton.addEventListener('click', submitSelfCare)
 
 
   //functions
@@ -50,7 +50,5 @@ function getRandomIndex(array) {
 
 
   function submitSelfCare() {
-    meditationImage.classList.add(".meditation-hidden");
-    meditationBox.innerText = newMessage
 
   };
