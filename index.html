@@ -15,11 +15,11 @@
         <section class="healing-choice" id="healing choice">
           <div class="top-box">
             <p class="radio-button">
-              <span class="radio-pair1">
+              <span class="radio-pair">
                 <label for="radio-affirmation">Affirmation</label>
                 <input type ="radio" id="radio-affirmation" value="affirmation" name="input-message">
               </span>
-              <span class="radio-pair1">
+              <span class="radio-pair">
                 <label for="radio-mantra">Mantra</label>
                 <input type ="radio" id="radio-mantra" value="mantra" name="input-message">
               </span>
@@ -32,13 +32,20 @@
         </section>
         </div>
         <form class="add-message-form" style="display: none">
-
-          <!-- <label for="add-message-box">Add Your Own</label> -->
-
-           <!-- <input class="input-box" type="text" id="add-message-box" />
-          <div> 
-             -->
-            <!-- <button type="submit" id="submit-message-button">Submit Message</button> -->
+          <p class="radio-button-submit">
+            <span class="radio-pair">
+              <label for="radio-affirmation-submit">Affirmation</label>
+              <input type ="radio" id="radio-affirmation-submit" value="affirmation" name="input-message">
+            </span>
+            <span class="radio-pair">
+              <label for="radio-mantra-submit">Mantra</label>
+              <input type ="radio" id="radio-mantra-submit" value="mantra" name="input-message">
+            </span>
+          </p>
+          <label for="add-message-box"></label>
+           <input class="input-box" id="add-message-box" type="text">
+          <div>          
+            <button type="submit" id="submit-message-button">Submit Your Message</button>
 
         </form>
       </div>  
