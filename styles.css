@@ -89,7 +89,8 @@ body {
       margin: auto;
  }
 
-.radio-button {
+.radio-button,
+.radio-button-submit {
   font-style: italic;
    display:flex;
    text-align: center;
@@ -97,8 +98,7 @@ body {
    justify-content: space-evenly;
 }
 
-.radio-pair1,
-.radio-pair2 {
+.radio-pair {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -124,6 +124,7 @@ body {
    align-items: center;
    justify-content: center;
    margin-top: 100px; 
+   text-wrap: wrap;
  }
 
  #meditation-image {
